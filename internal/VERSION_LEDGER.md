@@ -282,3 +282,9 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 - 소스 기준 `23ea23a8a7f5d75078644e11363c26a3cf4ffab7`. 공식 고정 CSV와 로컬 551건의 지문·라벨 건수를 확인했다.
 - 원저장소의 고정 README와 파일 목록에서 CSV 재배포 조건을 찾지 못했고, 공식 Zoro-1 실측 리비전의 가중치 LICENSE는 Apache-2.0을 확인했다. [외부 자료 고지](../THIRD_PARTY_NOTICES.md)
+
+
+## 2026-11-20 KST · 연구모형 이미지 포함
+
+- 소스 기준 `13f03d12edb27d2c4285ca0f709f9a0b01029dc3`. 수정된 연구모형 SVG를 `docs/assets/`에 추가하고 README 본문에서 표시한다.
+- 그림의 출처 표기와 피싱 탐지율 집계는 README의 고정 데이터 설명을 따른다.
