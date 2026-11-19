@@ -141,6 +141,10 @@
   };
   let lastModelFailed = false;
   function syncVerdict() {
+    // A typed but not yet evaluated message must never tint the page as if a
+    // new risk determination had already occurred.
+    const panel = $('verdictPanel');
+    if (panel && panel.hidden) { body.dataset.verdict = 'idle'; core.setAccent(); return; }
     const code = action.textContent.trim();
     const v = VERDICT[code];
     const reason = ($('reason').textContent || '').trim();
