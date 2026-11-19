@@ -33,7 +33,7 @@
 ## 공식 사고 대응 근거
 
 - KISA 2026-01-10 정부기관 사칭 큐싱 경고: https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&categoryCode=&menuNo=205023&nttId=71936&pageIndex=1&searchCnd=&searchWrd=
-- FTC 피싱 사기 대응 안내: https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams
+- FTC 피싱 사기 대응 안내: https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
 
 KISA는 '링크 클릭'과 '앱 설치/실행'을 구별할 필요가 있다고 안내합니다. **클릭만으로 감염을 단정하지 않는 것은 안전 보증과 다릅니다.** 앱 설치, 로그인 정보 입력, 실제 송금이 확인되면 각각 다른 대응을 안내합니다. 국내 상담 118(스미싱), 금전 피해 경찰 112 및 해당 금융기관 공식 채널을 사용하되, 사용자의 국가를 임의 추정하여 실제 신고·연락하지 않습니다.
 
