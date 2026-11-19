@@ -5,6 +5,7 @@ Checked 2026-11-19. Root LICENSE covers original project contributions only. A s
 | Component | Location/use | Terms and verification |
 |---|---|---|
 | Trillion Labs Zoro-1 | Operator-configured API / integration | Official model card: Apache-2.0 weights. Download access terms are separate. Actual operator checkpoint/revision and downloaded code/NOTICE require verification. |
+| MessengerPhishingDetection, Korea University Autonomous AI Lab (ku-autoai) | Korean test split, 551 rows in the local benchmark. This repository records the source, checksum and aggregate results. | Checked 2026-11-20 at `438cfbb251410fee791f49d75d928520847030c3`. The source README describes the dataset and labels. A data license or redistribution permission was not found in the checked revision. Confirm usage terms with the source before redistribution. |
 | KoELECTRA, monologg and contributors | models/v46; apps/shared/nlp; apps/dist/web/nlp | Upstream repository Apache-2.0; local assets obtained via npm ONNX bundle, NOT byte-verified against upstream. Recorded changes: fine-tuning, int8 quantization and JSON/JS/base64 conversion. |
 | kakaotalk-chat-analyzer-models@0.2.1, claudianus | Intermediate ONNX source recorded by model card | Version metadata reports MIT. Current upstream MIT copyright text preserved in LICENSES/kakaotalk-chat-analyzer-MIT.txt (Copyright (c) 2026 claudianus). Not proof of the exact historical tarball's complete terms; underlying model rights remain separate. |
 | 3i4k, warnikchow and contributors | tools/nlp/data and training provenance | CC-BY-SA-4.0. Preserve credit/license and source fields. Changes: class filtering, added labels, JSONL conversion, split/combination with synthetic sentences. Existing fine-tuned weight/head CC-BY-SA declarations retained; no automatic legal conclusion about all trained weights. |
@@ -16,6 +17,8 @@ Checked 2026-11-19. Root LICENSE covers original project contributions only. A s
 ## Original sources
 - Apache: https://www.apache.org/licenses/LICENSE-2.0.txt (unchanged root LICENSE)
 - Zoro-1: https://huggingface.co/trillionlabs/Zoro-1
+- MessengerPhishingDetection pinned README: https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/README.md
+- Korean test CSV, same revision: https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/messenger_phishing_dataset/kor/test.csv
 - KoELECTRA: https://github.com/monologg/KoELECTRA/blob/master/LICENSE
 - npm version metadata: https://registry.npmjs.org/kakaotalk-chat-analyzer-models/0.2.1
 - Intermediate MIT: https://github.com/claudianus/kakaotalk-chat-analyzer/blob/main/LICENSE (blob 0e77c1a15d8e50a8fbebd0d141e29c79bad23a39)
