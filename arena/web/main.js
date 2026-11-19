@@ -157,12 +157,12 @@ function renderDecision(d) {
   if (d.action === 'ASK_HUMAN' && d.model_status !== 'FAILED') {
     el('message').textContent += d.reason === 'PRIOR_RISK_UNRESOLVED'
       ? ' 현재 판단은 완료됐으나 이전 위험이 남아 있습니다. 문자 속 연락처 대신 별도의 공식 경로로 직접 확인하세요.'
-      : ' 보류는 안전 판정이 아닙니다. 현재 직접 요청인지 과거 인용·예방 경고인지 확인하고 공식 경로에서 검증하세요.';
+      : ' 보류는 처리 중 상태가 아닙니다. 보류는 안전 판정도 아닙니다. 현재 직접 요청인지 과거 인용·예방 경고인지 확인하고 공식 경로에서 검증하세요.';
   }
   el('currentTurn').textContent = '현재 문장: ' + (labels[d.current_turn_action || d.action] || '확인 불가');
   const pendingTasks = Number.isInteger(d.open_task_count) ? d.open_task_count : 0;
   el('sessionNotice').textContent = (d.reason === 'PRIOR_RISK_UNRESOLVED'
-    ? '이전에 감지한 위험은 아직 해제되지 않았습니다. ' : '') +
+    ? '앞서 감지한 위험은 사용자 확인 보고만으로 해제되지 않습니다. ' : '') +
     (pendingTasks > 0 ? '공식 경로에서 직접 확인할 항목이 ' + pendingTasks + '건 남아 있습니다. 앱이 대신 확인하지는 않습니다.' : '');
 }
 function renderQueue(items) {
