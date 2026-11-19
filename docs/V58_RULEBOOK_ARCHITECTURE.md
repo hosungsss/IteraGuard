@@ -45,3 +45,8 @@ Rulebook can be unused or reverted without replacing existing Arena. Restore dat
 
 ### Arbitrary local domain configuration in CLI
 The CLI supports --book-file path/to/approved_local_book.json, bounded to 64 KiB and strict JSON duplicate-key/nonfinite rejection. New industry models require a matching typed answer JSON and an independent validation plan. The two presets are templates only; introducing custom questions without checking semantic equivalence and customer harm cannot justify an effectiveness claim. The CLI is not a live model adapter or an authorized executor.
+
+
+### Optional existing Zoro HTTP integration (feature-gated)
+rulebook/zoro_bridge.py composes build_questions(book, state) and calls the repository's EXISTING ModelClient.infer(state, question_payload=typed_request). It checks loopback restrictions for real ModelClient and never chooses arbitrary network hosts. tools/rulebook_live_v58.py refuses to run without BOTH DMSG_V58_RULEBOOK_LIVE_ENABLE=1 and --synthetic-only. Synthetic scenario files are bounded. The response goes through the same strict Rulebook decide() and remains PROPOSAL_ONLY. No writable business system is coupled to this adapter.
+Available source labels: NOT_RUN, MODEL_UNAVAILABLE, TEST_DOUBLE_NOT_ZORO, LOCAL_HTTP_MODEL_UNATTESTED. Identity remains false. The unit suite verifies fake client transport and failure paths, not a real Zoro checkpoint. Do not describe mock success as a production integration pass.
