@@ -167,13 +167,13 @@
   const sheet = $('sheet'), scrim = $('scrim'), opener = $('openSheet');
   function openSheet() {
     sheet.classList.add('open'); sheet.setAttribute('aria-hidden', 'false'); scrim.hidden = false;
-    opener.setAttribute('aria-expanded', 'true'); setTimeout(() => $('closeSheet').focus(), 50);
+    opener?.setAttribute('aria-expanded', 'true'); setTimeout(() => $('closeSheet').focus(), 50);
   }
   function closeSheet() {
     sheet.classList.remove('open'); sheet.setAttribute('aria-hidden', 'true'); scrim.hidden = true;
-    opener.setAttribute('aria-expanded', 'false'); opener.focus();
+    opener?.setAttribute('aria-expanded', 'false'); opener?.focus();
   }
-  opener.addEventListener('click', openSheet);
+  opener?.addEventListener('click', openSheet);
   $('closeSheet').addEventListener('click', closeSheet);
   scrim.addEventListener('click', closeSheet);
   document.addEventListener('keydown', e => {

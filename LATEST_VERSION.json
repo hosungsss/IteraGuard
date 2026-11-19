@@ -14,5 +14,6 @@
   "hosted_authenticated_flow_verified": false,
   "arena_ui_version": "5.9",
   "arena_footer_copy": "",
-  "arena_top_runtime_copy_visible": false
+  "arena_top_runtime_copy_visible": false,
+  "arena_topbar_visible": false
 }
