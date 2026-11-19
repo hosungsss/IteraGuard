@@ -20,7 +20,7 @@
   "project_authored_license": "Apache-2.0",
   "license_scope": "LICENSE_SCOPE.md",
   "full_rights_clearance_verified": false,
-  "signal_preview": "LOCAL_ZORO_SINGLE_QUESTION_WEB_PREVIEW",
+  "signal_preview": "LOCAL_ZORO_SINGLE_QUESTION_INLINE_RESULT",
   "ui_state_separation": "CURRENT_TURN_AND_PRIOR_UNRESOLVED_SEPARATE",
   "independent_analysis_start": "PRESERVES_PREVIOUS_SESSION",
   "integration_verified_base": "636f56b4e5e75a01e250c65debbe77cce3f877a1",

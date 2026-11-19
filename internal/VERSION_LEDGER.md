@@ -221,3 +221,6 @@ Verification evidence: CI and main read-back after merge, not guessed; full brow
 
 
 2026-11-19: Integrated origin/main 636f56b by fast-forward, preserving 9ed5dac UI state separation. No conflicts or runtime code edits required. Python 237 passed / 2 skipped, Node 68 passed, Edge 1440/390 controlled session flows passed, licensing 608-file inventory passed. Signal preview HTTP checks included; live model and hosted deployment NOT_RUN in this integration. See docs/MAIN_INTEGRATION_VALIDATION_20261119.md.
+
+## 2026-11-19 · 메인 결과 내 조로 신호등
+기준 main 636f56b. 메인 판단 버튼에서 기존 Arena 평가 뒤 단일 문항 신호등 요청을 실행합니다. 신호등·근거·다음 행동을 같은 결과 카드에서 볼 수 있습니다. 기존 판단 정책과 저장소 스키마는 그대로입니다.

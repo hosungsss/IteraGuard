@@ -57,8 +57,12 @@ class SignalHttpTests(unittest.TestCase):
             conn.close()
 
     def test_assets_and_single_question_without_session_change(self):
-        self.assertIn('href="/signal"', self.request('GET', '/')[1])
-        for path in ('/signal', '/signal.js', '/signal.css'):
+        status, page = self.request('GET', '/')
+        self.assertEqual(status, 200)
+        self.assertIn('id="inlineSignal"', page)
+        self.assertNotIn('href="/signal"', page)
+        self.assertEqual(self.request('GET', '/signal'), (200, page))
+        for path in ('/main.js', '/style.css'):
             self.assertEqual(self.request('GET', path)[0], 200)
         sid = self.arena.start()['session_id']
         before = self.arena.read(sid)

@@ -9,6 +9,12 @@ const labels = {
   CAUTION: '추가 확인 필요', PAUSE_AND_VERIFY: '잠시 멈추고 독립 확인',
   ASK_HUMAN: '판단 보류 · 사람 검토 필요'
 };
+const signalLabels = {
+  red: '빨강 · 피싱 의심 매우 높음',
+  orange: '주황 · 피싱 의심 높음',
+  green: '초록 · 정상 문자로 보임',
+  gray: '회색 · 판단 어려움'
+};
 function conversationSignal(type, detail = {}) {
   // Best-effort UI-only notification; old DOM test shims need not implement
   // EventTarget. No raw transcript is written to storage or sent remotely.
@@ -137,11 +143,33 @@ function renderLifecycle() {
   el('lifecycleNotice').textContent = isClosed() ? '보관은 위험 해제가 아닙니다. 이전 이력을 유지하며 재개할 수 있습니다.' : '확인을 마치지 못해도 미해결 상태로 보관할 수 있습니다. 재개 시 이전 위험과 업무 이력이 유지됩니다.';
 }
 function currentInputRequired(message) {
+  if (el('inlineSignal')) el('inlineSignal').hidden = true;
   if (el('nextAction')) { el('nextAction').textContent = ''; el('nextAction').hidden = true; }
   if (el('verdictPanel')) el('verdictPanel').hidden = false;
   el('executionSource').textContent = '현재 입력의 실행 출처는 재평가 후 확인하세요.';
   el('action').textContent = 'ASK_HUMAN'; el('message').textContent = message;
   for (const id of ['evidence', 'reason', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
+}
+async function showInlineSignal(binding, modelStatus) {
+  const panel = el('inlineSignal');
+  if (!panel) return;
+  let grade = 'gray';
+  let label = '회색 · 조로 신호등 결과를 받지 못했어요';
+  if (modelStatus === 'VALID') {
+    try {
+      const signal = await apiOnce('/api/signal', { text: binding.text, synthetic_only: true });
+      if (Object.hasOwn(signalLabels, signal.grade)) {
+        grade = signal.grade;
+        label = signalLabels[grade];
+      }
+    } catch {
+      // This observation can fail independently of the already saved decision.
+    }
+  }
+  if (lastDecision !== binding || !matchesCurrentInput(binding) || session.version !== binding.version) return;
+  panel.dataset.grade = grade;
+  el('inlineSignalGrade').textContent = label;
+  panel.hidden = false;
 }
 // Display-only projection: do not mutate d or infer that user reports clear risk.
 function decisionCopy(d) {
@@ -340,6 +368,7 @@ el('run').onclick = () => {
     return;
   }
   return serial(async () => {
+  if (el('inlineSignal')) el('inlineSignal').hidden = true;
   if (!session) await start();
   if (isClosed()) throw Error('SESSION_CLOSED_UNRESOLVED');
   el('result').textContent = '';
@@ -373,6 +402,7 @@ el('run').onclick = () => {
   const cp = Array.from(payload.text);
   el('evidence').textContent = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) &&
     e.start >= 0 && e.start < e.end && e.end <= cp.length).map(e => '원문 어휘 근거: “' + cp.slice(e.start, e.end).join('') + '”').join(' / ');
+  await showInlineSignal(lastDecision, d.model_status);
 });
 };
 function invalidateInput() {
