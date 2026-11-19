@@ -9,6 +9,12 @@ const labels = {
   CAUTION: '추가 확인 필요', PAUSE_AND_VERIFY: '잠시 멈추고 독립 확인',
   ASK_HUMAN: '판단 보류 · 사람 검토 필요'
 };
+function conversationSignal(type, detail = {}) {
+  // Best-effort UI-only notification; old DOM test shims need not implement
+  // EventTarget. No raw transcript is written to storage or sent remotely.
+  if (typeof CustomEvent === 'function' && typeof document.dispatchEvent === 'function')
+    document.dispatchEvent(new CustomEvent('iteraguard:' + type, { detail }));
+}
 async function apiOnce(path, body) {
   const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
   const timer = controller && typeof setTimeout !== 'undefined' ? setTimeout(() => controller.abort(), 70000) : null;
@@ -188,6 +194,7 @@ async function serial(fn) {
   busy = true; controls();
   try { await fn(); }
   catch (e) {
+    conversationSignal('invalidate', { reason: 'request_failed' });
     lastDecision = null;
     el('status').textContent = '현재 요청 실패 / CURRENT REQUEST FAILED';
     currentInputRequired('현재 결과를 확정할 수 없습니다. 저장 상태를 재조회해 주세요.');
@@ -209,6 +216,7 @@ async function loadProfile() {
 }
 async function start() {
   session = { ...await api('/api/start', {}), lifecycle: 'OPEN', prior_pause: false };
+  conversationSignal('reset', { session_id: session.session_id, reason: 'new_session' });
   rememberSession(session.session_id);
   task = null; lastDecision = null; editorRevision += 1; renderQueue([]);
   el('executionSource').textContent = '평가 전 · 현재 세션의 모델 실행 기록 없음';
@@ -237,6 +245,7 @@ async function refresh() {
     el('evidence').textContent = '재조회 결과에는 원문 인용을 저장하지 않습니다.';
   } else {
     lastDecision = null;
+    conversationSignal('invalidate', { reason: 'refreshed_or_closed' });
     currentInputRequired(isClosed() ? '미해결 상태로 보관한 기록입니다. 재개 후 현재 문장을 다시 판단할 수 있습니다.' :
       latest ? '저장 기록은 이전 판단입니다. 현재 입력을 다시 판단해 주세요.' : '저장된 판단이 없습니다. 현재 입력을 판단해 주세요.');
   }
@@ -247,6 +256,7 @@ async function transition(path) {
   await api(path, { session_id: sid, version: session.version, request_id: crypto.randomUUID(), synthetic_only: true });
   if (!session || session.session_id !== sid) return;
   lastDecision = null; editorRevision += 1;
+  conversationSignal('invalidate', { reason: 'session_transition' });
 
   // Read current state even for a cached lifecycle response.
   await refresh();
@@ -256,6 +266,7 @@ el('loadSession').onclick = () => serial(async () => {
   const sid = el('sessionHistory').value;
   if (!visitedSessions.includes(sid) || session?.session_id === sid) return;
   session = { session_id: sid, version: 0, lifecycle: 'OPEN', prior_pause: false };
+  conversationSignal('reset', { session_id: sid, reason: 'session_switched' });
   lastDecision = null; editorRevision += 1; el('text').value = '';
 
   await refresh(); rememberSession(sid);
@@ -272,6 +283,7 @@ el('run').onclick = () => serial(async () => {
   const payload = { session_id: session.session_id, version: session.version, request_id: crypto.randomUUID(),
     text: binding.text, synthetic_only: true, observation: el('observation').value, user_review: binding.review };
   if (task) payload.task_id = task;
+  conversationSignal('pending', { session_id: binding.session_id, version: binding.expected_version });
   const d = await api('/api/evaluate', payload);
   if (!session || session.session_id !== binding.session_id || session.version !== binding.expected_version) return;
   session.version = d.version; session.lifecycle = d.lifecycle || 'OPEN'; session.prior_pause = !!d.prior_pause;
@@ -286,11 +298,18 @@ el('run').onclick = () => serial(async () => {
   }
   lastDecision = { ...binding, request_id: d.request_id, version: d.version };
   renderDecision(d);
+  conversationSignal('decision', { session_id: d.session_id, version: d.version,
+    text: binding.text, action: d.action, reason: d.reason,
+    current_turn_action: d.current_turn_action || d.action,
+    model_status: d.model_status, message: d.message,
+    prior_pause: !!d.prior_pause, provenance: d.provenance?.execution_source || 'UNVERIFIED',
+    task_count: d.open_task_count || 0 });
   const cp = Array.from(payload.text);
   el('evidence').textContent = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) &&
     e.start >= 0 && e.start < e.end && e.end <= cp.length).map(e => '원문 어휘 근거: “' + cp.slice(e.start, e.end).join('') + '”').join(' / ');
 });
 function invalidateInput() {
+  conversationSignal('invalidate', { reason: 'input_changed' });
   editorRevision += 1; lastDecision = null;
 
   el('result').textContent = '';
