@@ -10,6 +10,7 @@
   const field = $('followupText');
   const send = $('sendFollowup');
   const info = $('conversationNotice');
+  const panel = $('conversationPanel');
   if (!feed || !field || !send || !info) return;
 
   const SCENARIOS = Object.freeze({
@@ -95,12 +96,14 @@
     field.value = '';
     feed.textContent = '';
     shown = 0;
+    if (panel) panel.hidden = true;
     inflight = false;
     status(message || '원본 합성 문장을 먼저 판단해 주세요.');
     setReady();
   }
   function invalidate(reason) {
     revision += 1;
+    if (panel) panel.hidden = true;
     active = null;
     status(reason === 'input_changed'
       ? '원본 문장이 변경됐습니다. 새 문장을 다시 판단해야 후속 질문을 할 수 있습니다.'
@@ -154,7 +157,7 @@
       }
       append('assistant', result.title,
         result.introduction + '\n\n' + result.risk_notice,
-        '공식 자료 기반 규칙 안내 · Zoro 재추론·생성형 GPT 답변 아님 · 이력 변경 없음',
+        '규칙 기반 안내 · 공식 자료 참고 · Zoro 재추론·생성형 GPT 답변 아님 · 이력 변경 없음',
         result.steps, result.sources);
       status('후속 상황 안내를 확인했습니다. 새로운 행동이 생기면 아래에서 선택하세요.');
       field.value = '';
@@ -176,6 +179,7 @@
         !Number.isInteger(data.version) || typeof data.text !== 'string') return;
     revision += 1;
     active = { session_id: data.session_id, version: data.version };
+    if (panel) panel.hidden = false;
     const failed = data.model_status !== 'VALID';
     const fixture = data.provenance === 'CONTROLLED_CLIENT';
     const source = failed ? '모델 연결/응답 검증 실패 · 실제 추론 결과 없음' :
@@ -186,7 +190,7 @@
     const kept = data.prior_pause ? '\n기존 위험 보류 이력은 유지됩니다.' : '';
     append('assistant', '현재 판단 및 다음 단계',
       action + '\n' + String(data.message || '판단 근거를 확인해 주세요.') +
-      kept + '\n남은 확인 업무: ' + Number(data.task_count || 0) + '건',
+      kept + '\n공식 경로로 직접 확인할 내용: ' + Number(data.task_count || 0) + '건',
       source + ' · 채팅형 요약은 별도 모델 생성이 아님');
     status('지금까지의 판단을 유지하면서 상황별 후속 질문을 할 수 있습니다. 문장형 질문은 제한된 표현만 인식합니다.');
     setReady();
@@ -195,6 +199,7 @@
   document.addEventListener('iteraguard:invalidate', event => invalidate(event?.detail?.reason));
   document.addEventListener('iteraguard:pending', () => {
     revision += 1; active = null;
+    if (panel) panel.hidden = true;
     status('원본 메시지 재판단 중 · 이전 후속 안내는 현재 판단으로 확정되지 않았습니다.');
     setReady();
   });

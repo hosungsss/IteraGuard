@@ -135,11 +135,20 @@ function renderLifecycle() {
   el('lifecycleNotice').textContent = isClosed() ? '보관은 위험 해제가 아닙니다. 이전 이력을 유지하며 재개할 수 있습니다.' : '확인을 마치지 못해도 미해결 상태로 보관할 수 있습니다. 재개 시 이전 위험과 업무 이력이 유지됩니다.';
 }
 function currentInputRequired(message) {
+  if (el('nextAction')) { el('nextAction').textContent = ''; el('nextAction').hidden = true; }
+  if (el('verdictPanel')) el('verdictPanel').hidden = false;
   el('executionSource').textContent = '현재 입력의 실행 출처는 재평가 후 확인하세요.';
   el('action').textContent = 'ASK_HUMAN'; el('message').textContent = message;
   for (const id of ['evidence', 'reason', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
 }
 function renderDecision(d) {
+  if (el('verdictPanel')) el('verdictPanel').hidden = false;
+  const next = d.next_task && d.next_task.status === 'OPEN' && typeof d.next_task.instruction === 'string'
+    ? d.next_task.instruction.trim() : '';
+  if (el('nextAction')) {
+    el('nextAction').textContent = next ? '다음으로 할 일 · ' + next : '';
+    el('nextAction').hidden = !next;
+  }
   el('executionSource').textContent = d.model_status === 'FAILED' ? '판단 출처: 모델 연결 또는 응답 검증 실패' : d.provenance?.execution_source === 'CONTROLLED_CLIENT' ? '판단 출처: 통제 응답 · 실제 모델 추론 아님' : '판단 출처: 모델 응답 · 체크포인트 신원 미인증';
   el('action').textContent = d.action; el('message').textContent = d.message; el('reason').textContent = d.reason;
   const contextNotes = {
@@ -154,11 +163,14 @@ function renderDecision(d) {
     : d.resolved_retry_task_ids?.length ? '모델 응답이 복구되어 같은 입력의 기술 재시도 업무를 정리했습니다.' : '';
   if (d.action === 'ASK_HUMAN' && d.model_status !== 'FAILED') {
     el('message').textContent += d.reason === 'PRIOR_RISK_UNRESOLVED'
-      ? ' 현재 판단은 완료됐으며 이전 위험에 대한 확인이 남아 있습니다. 아래 확인 업무와 저장 기록을 확인하세요.'
-      : ' 보류는 처리 중 상태가 아닙니다. 현재 직접 요청인지 과거 인용·예방 경고인지 확인하고, 확인 업무가 있으면 결과를 기록하세요.';
+      ? ' 현재 판단은 완료됐으나 이전 위험이 남아 있습니다. 문자 속 연락처 대신 별도의 공식 경로로 직접 확인하세요.'
+      : ' 보류는 처리 중 상태가 아닙니다. 보류는 안전 판정도 아닙니다. 현재 직접 요청인지 과거 인용·예방 경고인지 확인하고 공식 경로에서 검증하세요.';
   }
   el('currentTurn').textContent = '현재 문장: ' + (labels[d.current_turn_action || d.action] || '확인 불가');
-  el('sessionNotice').textContent = d.reason === 'PRIOR_RISK_UNRESOLVED' ? '앞서 감지한 위험은 사용자 확인 보고만으로 해제되지 않습니다.' : '';
+  const pendingTasks = Number.isInteger(d.open_task_count) ? d.open_task_count : 0;
+  el('sessionNotice').textContent = (d.reason === 'PRIOR_RISK_UNRESOLVED'
+    ? '앞서 감지한 위험은 사용자 확인 보고만으로 해제되지 않습니다. ' : '') +
+    (pendingTasks > 0 ? '공식 경로에서 직접 확인할 항목이 ' + pendingTasks + '건 남아 있습니다. 앱이 대신 확인하지는 않습니다.' : '');
 }
 function renderQueue(items) {
   const previousSelection = el('taskQueue').value || task;
@@ -222,6 +234,8 @@ async function start() {
   el('executionSource').textContent = '평가 전 · 현재 세션의 모델 실행 기록 없음';
   el('status').textContent = '새 세션 · ' + session.session_id;
   el('action').textContent = '평가 전'; el('message').textContent = '현재 문장을 판단해 주세요.';
+  if (el('verdictPanel')) el('verdictPanel').hidden = true;
+  if (el('nextAction')) { el('nextAction').hidden = true; el('nextAction').textContent = ''; }
   for (const id of ['evidence', 'reason', 'task', 'result', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
 
   el('observation').value = 'NOT_CHECKED'; renderLifecycle();
@@ -274,7 +288,13 @@ el('loadSession').onclick = () => serial(async () => {
 el('refresh').onclick = () => serial(refresh);
 el('close').onclick = () => serial(() => transition('/api/close'));
 el('reopen').onclick = () => serial(() => transition('/api/reopen'));
-el('run').onclick = () => serial(async () => {
+el('run').onclick = () => {
+  if (!el('text').value.trim()) {
+    el('text').focus();
+    if (el('sampleNotice')) { el('sampleNotice').hidden = false; el('sampleNotice').textContent = '먼저 검토할 합성 문자·이메일을 붙여넣어 주세요.'; }
+    return;
+  }
+  return serial(async () => {
   if (!session) await start();
   if (isClosed()) throw Error('SESSION_CLOSED_UNRESOLVED');
   el('result').textContent = '';
@@ -308,12 +328,15 @@ el('run').onclick = () => serial(async () => {
   el('evidence').textContent = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) &&
     e.start >= 0 && e.start < e.end && e.end <= cp.length).map(e => '원문 어휘 근거: “' + cp.slice(e.start, e.end).join('') + '”').join(' / ');
 });
+};
 function invalidateInput() {
   conversationSignal('invalidate', { reason: 'input_changed' });
   editorRevision += 1; lastDecision = null;
 
   el('result').textContent = '';
   currentInputRequired('입력이 변경돼 이전 판단을 현재 문장에 적용할 수 없습니다.');
+  if (el('verdictPanel')) el('verdictPanel').hidden = true;
+  if (el('sampleNotice')) el('sampleNotice').hidden = true;
 }
 el('text').addEventListener('input', invalidateInput);
 el('review').addEventListener('change', invalidateInput);
@@ -340,7 +363,7 @@ el("taskQueue").onchange = () => {
   controls();
 };
 const V58_SYNTHETIC_EXAMPLES = Object.freeze({
-  direct: el('text').defaultValue,
+  direct: '샘플상사 정산 건입니다. 기존 A-01 계좌는 이번 지급에 쓰지 않습니다. 새 계좌 B-02로 오늘 오후 3시까지 대금을 송금해 주세요.',
   warning: '회계팀에 공유합니다. 최근 거래처를 사칭한 메신저에서 계좌 변경과 인증번호 전송을 요구한 사례가 있었습니다. 메신저로 받은 새 계좌로 송금하거나 인증번호를 전달하지 마세요. 변경 여부는 사내 장부에 등록된 대표번호에서 확인하세요.',
   ambiguous: '샘플상사 11월 정산 건 관련 안내입니다. 등록 정보가 달라 추가 확인이 필요하니, 오늘 안으로 안내에 따라 확인 절차를 진행해 주세요. 무엇을 확인해야 하는지와 제출 방법은 아직 안내되지 않았습니다.',
   followup: '샘플상사 11월 정산 진행 상황을 공유합니다. 지급 요청서는 검토 대기 목록에 있으며, 계좌 정보와 결재 담당자는 기존 등록 내용과 같습니다. 다음 상태 업데이트는 내일 오전에 공유하겠습니다.'
