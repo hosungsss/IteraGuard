@@ -1,0 +1,12 @@
+{
+  "answers": {
+    "q_refund": {
+      "type": "noul",
+      "noul": 0.96
+    },
+    "q_order": {
+      "type": "noul",
+      "noul": 0.98
+    }
+  }
+}

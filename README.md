@@ -1,4 +1,4 @@
-# 의심계 · IteraGuard v5.6
+# 의심계 · IteraGuard v5.8 source integration candidate (Arena v5.6 engine)
 
 의심스러운 메시지를 받았을 때 **어떤 확인 행동을 해야 하는지 제안하고, 해결하지 못한 위험을 다음 대화에서도 유지하는** 로컬 실행 프로토타입입니다. Track 1을 위한 Zoro-1 Typed Decision 연동 경로, 결정론적 정책, 확인 업무 큐, SQLite 기록과 웹 화면을 포함합니다.
 
@@ -92,3 +92,14 @@ python -X utf8 tools/redteam_workflow.py
 보완판의 로컬 Zoro-1 연결과 Arena HTTP 경로를 합성 입력으로 검증했습니다. 독립 모델 인증, 보완판의 브라우저 렌더링, Android/NPU 및 독립 사용자 평가는 미검증입니다. 제출 준비 상태는 `NOT_SUBMISSION_READY`입니다. 심사위원 페르소나는 기획 검토용 가설이며 실제 선호·수상 확률의 증거가 아닙니다.
 
 동봉 APK/PWA 5.0·5.1은 과거 보조 자산이며 v5.6 Arena의 업무 큐·증거 기능을 포함한 Android 앱이 아닙니다. 현재 핵심 시연 대상은 Arena 웹 화면입니다. 기존 모델·외부 소스의 권리는 각 원본 조건을 따르며 이 README는 전체 파일에 새 일괄 라이선스를 부여하지 않습니다.
+
+
+## v5.8 GitHub source integration (not a released APK)
+- Rulebook/engine.py adds a *proposal-only* typed decision to configurable industry workflow; zero external side effects. Sample financial-operations account-change and customer-support refund books are in rulebook/presets/.
+- Arena web UX includes three clearly labeled synthetic samples, selected task observation target, and privacy-limited evidence JSON download. Existing v5.6 backend and v5.1 typed source contract are not replaced.
+- Run local fixture preview: python -m tools.rulebook_preview_v58 --book refund_intake --answers tests_rulebook/refund_fixture.json
+- Run rulebook contract checks: python -m unittest discover -s tests_rulebook -v
+- Read AGENTS.md before AI edits, internal/VERSION_LEDGER.md for append-only detailed changes, and HANDOFF_CHANGELOG.md for cumulative resume instructions.
+- See docs/V58_RULEBOOK_ARCHITECTURE.md and docs/V58_AGENT_EVIDENCE_GUIDE.md for business portability constraints and original source hashes.
+- Neither this branch's existence nor a valid Zoro-looking JSON proves real checkpoint identity, independent accuracy, or field-level intervention. The hypothesized 30% to 98% business success gain is NOT MEASURED.
+- Historic APKs, dmsg.skill/dmsg.zip, old manifests and full ZIP assets remain at their original release versions; their contents are not silently upgraded by source edits.

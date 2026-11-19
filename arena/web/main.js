@@ -50,6 +50,7 @@ function controls() {
   el('observation').disabled = busy || closed || !task;
   el('taskQueue').disabled = busy || closed || !openTaskQueue.length;
   el('exportEvidence').disabled = busy || !session;
+  el('downloadEvidence').disabled = busy || !session;
   el('refresh').disabled = busy || !session;
   el('close').disabled = busy || !session || closed;
   el('reopen').disabled = busy || !closed;
@@ -90,17 +91,19 @@ function renderDecision(d) {
   el('sessionNotice').textContent = d.reason === 'PRIOR_RISK_UNRESOLVED' ? '앞서 감지한 위험은 사용자 확인 보고만으로 해제되지 않습니다.' : '';
 }
 function renderQueue(items) {
+  const previousSelection = el('taskQueue').value || task;
   openTaskQueue = (items || []).filter(t => t.status === 'OPEN');
   const select = el('taskQueue'); select.textContent = '';
   for (const t of openTaskQueue) {
     const option = document.createElement('option'); option.value = t.id;
     option.textContent = t.type + ' · ' + t.id.slice(0,8); select.appendChild(option);
   }
-  select.value = openTaskQueue[0]?.id || '';
+  select.value = openTaskQueue.some(t => t.id === previousSelection) ? previousSelection : (openTaskQueue[0]?.id || '');
   el('queueCount').textContent = '미해결 업무 ' + openTaskQueue.length + '건 · 중단 요청 우선';
 }
 function renderTask(item) {
   task = item?.status === 'OPEN' ? item.id : null;
+  if (task && openTaskQueue.some(t => t.id === task)) el('taskQueue').value = task;
   if (task) {
     const observed = item.observation === 'UNRESOLVED' ? ' · 확인했지만 미해결로 보고됨' : '';
     el('task').textContent = '열린 확인 작업' + observed + ' · ' + item.id + '\n' + (item.instruction || '독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.');
@@ -239,4 +242,44 @@ serial(async () => {
 
 el("exportEvidence").onclick = () => serial(async () => { if(session) el("evidenceExport").textContent = JSON.stringify(await api("/api/evidence?session_id="+encodeURIComponent(session.session_id)),null,2); });
 
-el("taskQueue").onchange = () => { if (!busy && !isClosed()) { renderTask(openTaskQueue.find(t => t.id === el("taskQueue").value)); controls(); } };
+el("taskQueue").onchange = () => {
+  if (busy || isClosed()) return;
+  const selected = openTaskQueue.find(t => t.id === el("taskQueue").value);
+  renderTask(selected || null);
+  // Do not attribute an earlier user observation to a newly selected task.
+  invalidateInput();
+  controls();
+};
+const V58_SYNTHETIC_EXAMPLES = Object.freeze({
+  direct: '지금 안전 계좌로 송금하세요. 다른 사람에게 말하지 마세요.',
+  warning: '안내문: 인증번호를 알려주지 마세요. 지금 송금하지 마세요.',
+  ambiguous: '계정 보호를 위해 별도의 확인 절차를 진행해 주세요.'
+});
+for (const button of document.querySelectorAll('[data-sample]')) {
+  button.addEventListener('click', () => {
+    if (busy || isClosed()) return;
+    const sample = V58_SYNTHETIC_EXAMPLES[button.dataset.sample];
+    if (!sample) return;
+    el('text').value = sample;
+    el('review').checked = false;
+    invalidateInput();
+    el('sampleNotice').textContent = '합성 문장을 선택했습니다. 모델을 자동 호출하지 않았습니다.';
+    el('text').focus();
+  });
+}
+el('downloadEvidence').onclick = () => serial(async () => {
+  if (!session) return;
+  const sid = session.session_id;
+  const report = await api('/api/evidence?session_id=' + encodeURIComponent(sid));
+  if (!session || session.session_id !== sid) return;
+  // Server evidence endpoint excludes the original transcript; no audit attestation claim.
+  const blob = new Blob([JSON.stringify(report, null, 2) + '\n'], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  try {
+    const a = document.createElement('a');
+    a.href = url; a.download = 'iteraguard-v58-evidence-' + sid.slice(0, 12) + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    el('evidenceExport').textContent = JSON.stringify(report, null, 2);
+    el('status').textContent = '로컬 증거 파일 다운로드 요청 · 외부 인증 아님';
+  } finally { setTimeout(() => URL.revokeObjectURL(url), 1000); }
+});

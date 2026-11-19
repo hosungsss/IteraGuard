@@ -1,0 +1,31 @@
+{
+  "schema_version": "iteraguard-rulebook/1",
+  "id": "account_change",
+  "version": "1.0",
+  "domain": "financial_operations",
+  "minimum_confidence": 0.85,
+  "questions": {
+    "q_account_change": {
+      "type": "noul",
+      "instructions": "Does this message request changing the beneficiary bank account?"
+    }
+  },
+  "rules": [
+    {
+      "id": "requested_change",
+      "when": {
+        "q_account_change": "yes"
+      },
+      "priority": 100,
+      "action": "OPEN_VERIFICATION_TASK"
+    },
+    {
+      "id": "no_change",
+      "when": {
+        "q_account_change": "no"
+      },
+      "priority": 50,
+      "action": "NO_ACTION"
+    }
+  ]
+}

@@ -101,3 +101,17 @@ stage1 원본/evidence194회, stage2 semantic97회, stage3 raw replay0회, stage
 
 ## 2026-11-19 v5.6
 Added priority task queue with dedup/capacity rollback, guarded digest, source-separated metrics, strict local evidence validator and queue UI. 160 tests passed, 2 optional skipped. Live attempts failed MODEL_NOT_CONFIGURED; no authenticated inference.
+
+
+## 2026-11-19 · v5.8 GitHub source integration candidate (2026-11-19 feature branch)
+Change request: CR-20261119-01. Prior main base SHA 880468eb45988edbda8745c124fe62c67f15bb91. Feature branch feature/v58-rulebook-governance.
+Scope: additive rulebook/engine.py, JSON refund and bank-change profiles, rulebook CLI fixture preview, strict contract tests; v5.8 Arena sample chooser, evidence JSON download and task selection target preservation; agent instructions, evidence guide and CI. Existing v5.6 Arena backend and original v5.1 typed policies remain untouched.
+R58-G-01: strict typed profile + finite probability/allowed choice check -> rulebook/engine.py -> tests_rulebook/test_engine.py -> GitHub CI evidence pending.
+R58-G-02: no model-to-authority escalation, tenant-scoped proposal keys -> same files; idempotency persistence/executor intentionally NOT_IMPLEMENTED.
+R58-G-03: domain reconfiguration -> rulebook/presets/refund_intake.json and account_change.json -> test_account_change_industry_switch; no claim of business-wide generalization.
+R58-G-04: task selection, synthetic examples and evidence export -> arena/web/index.html/main.js/style.css -> node syntax check; browser/device test NOT_RUN at authored time.
+R58-G-05: third-party AI continuity -> AGENTS.md, append-only VERSION_LEDGER and HANDOFF_CHANGELOG + CI guard. Entries are append-only; no deletion of prior documented failures.
+R58-G-06: official evaluation evidence separation -> docs/V58_AGENT_EVIDENCE_GUIDE.md and README/CURRENT_PROJECT_STATE/LATEST_VERSION. Score 30/98 and true checkpoint identity remain NOT_MEASURED/NOT_VERIFIED.
+Safety/limits: NO payments, emails, SMS, bank freezes, auto refunds, unseen user data processing, remote Drive, or automatic public deployment. New rulebook is not wired to Arena live; Zoro adapter integration deferred. Separate release ZIP/APK/skill rebuild NOT_DONE, so published package remains v5.6.
+Rollback: revert this PR in GitHub; stop isolated rulebook preview; do not reset or delete the SQLite sessions. Preserve base commit and source SHA.
+Verification status: GitHub commit/write is not a real runtime test. Check actions/CI + actual main merge SHA, and later an actual authorized Zoro API and browser check before claiming VERIFIED.

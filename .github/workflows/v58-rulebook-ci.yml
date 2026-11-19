@@ -1,0 +1,38 @@
+name: v5.8 rulebook contracts
+on:
+  push:
+    branches: [feature/v58-rulebook-governance]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  static-and-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rulebook contract tests
+        run: python -m unittest discover -s tests_rulebook -v
+      - name: Python and JavaScript syntax
+        run: |
+          python -m compileall -q rulebook tools/rulebook_preview_v58.py
+          node --check arena/web/main.js
+      - name: Append-only ledgers and required docs
+        run: |
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          for path in ('internal/VERSION_LEDGER.md','HANDOFF_CHANGELOG.md'):
+              old=subprocess.run(['git','show',f'origin/main:{path}'],capture_output=True)
+              if old.returncode != 0: raise SystemExit('LEDGER_BASE_UNAVAILABLE '+path)
+              if not Path(path).read_bytes().startswith(old.stdout):
+                  raise SystemExit('LEDGER_NOT_APPEND_ONLY '+path)
+          for path in ('AGENTS.md','docs/V58_RULEBOOK_ARCHITECTURE.md','CURRENT_PROJECT_STATE.md'):
+              if not Path(path).is_file(): raise SystemExit('MISSING_REQUIRED '+path)
+          print('APPEND_ONLY_AND_REQUIRED_DOCS_OK')
+          PY

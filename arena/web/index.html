@@ -4,7 +4,7 @@
 <body><main>
 <p class="eyebrow">ITERAGUARD / DECISION ARENA</p>
 <h1>요청을 이해하고,<br>다음 확인으로 연결합니다.</h1>
-<p>의심계 v5.6 · 합성 문장 전용 · 실은행/실연락 실행 없음 · 모델 신원 미인증</p>
+<p>의심계 v5.8 GitHub 통합 후보 · 핵심 엔진 5.6 · 합성 문장 전용 · 실은행/실연락 실행 없음 · 모델 신원 미인증</p>
 <section class="decision" aria-labelledby="lifecycle">
 <p class="eyebrow">세션 상태</p><h2 id="lifecycle">불러오는 중</h2>
 <p id="riskState"></p><p id="lifecycleNotice">종료는 위험 해제가 아닙니다.</p>
@@ -13,12 +13,17 @@
 <label for="sessionHistory">이 브라우저에서 열었던 기록</label><select id="sessionHistory"></select>
 <button id="loadSession">선택한 기록 불러오기</button>
 <p>다른 기록을 열기 전 현재 세션을 보관하세요. 브라우저에는 원문 없이 세션 식별자만 기억합니다.</p>
-<button id="exportEvidence">현재 세션 증거 조회</button><pre id="evidenceExport"></pre>
+<button id="exportEvidence">현재 세션 증거 조회</button><button type="button" id="downloadEvidence">원문 없는 증거 JSON 내려받기</button><pre id="evidenceExport"></pre>
 <p id="status" role="status">평가 전</p>
 </section>
 <p>입력 출처: 사용자가 작성한 합성 문장. 판단 출처: 모델 응답(신원 미인증) 또는 연결 실패. 예제 문장이라는 이유로 모델 호출을 생략하지 않습니다.</p>
 <label for="text">현재 판단할 합성 문장</label>
 <textarea id="text" rows="5" maxlength="2000">지금 인증번호를 알려주시겠어요?</textarea>
+<div class="v58-examples" role="group" aria-label="합성 시나리오 예시">
+  <button type="button" data-sample="direct">합성: 직접 요청</button>
+  <button type="button" data-sample="warning">합성: 예방 경고</button>
+  <button type="button" data-sample="ambiguous">합성: 모호한 절차</button>
+</div><p id="sampleNotice" role="status">예시를 선택하면 문장만 변경됩니다. 자동 판단은 하지 않습니다.</p>
 <p>입력한 현재 문장만 모델에 전달합니다. 이전 대화나 확인 보고를 기관 검증 사실로 덧붙이지 않습니다.</p>
 <label class="check"><input id="review" type="checkbox"> 사람에게 검토를 요청하고 싶어요</label>
 <section class="decision" aria-labelledby="taskHeading">
@@ -36,4 +41,4 @@
 <p>NO_STRONG_SIGNAL은 안전 보증이 아닙니다. 확률은 모델의 선택 분포이며 실제 사기 확률이 아닙니다.</p>
 <details><summary>판단 근거와 저장 기록</summary><p id="reason"></p><pre id="result"></pre></details>
 <details><summary>실행 계약</summary><p id="temperatureNote"></p><pre id="manifest"></pre></details>
-</main><script src="/main.js"></script></body></html>
+<footer>Rulebook v5.8: PROPOSAL_ONLY · Zoro 실호출 및 업계 성공률 별도 검증 필요</footer></main><script src="/main.js"></script></body></html>
