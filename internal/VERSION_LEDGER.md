@@ -187,3 +187,5 @@ AUDIT59-05 append-only ledger, documented provenance, source hash and CI; final 
 Risks: sample selection/source publication biases, no actual ground-truth, no Zoro fine-tune or demonstrable accuracy change, model mismatch/incomplete network support, provider spending when explicitly enabled, GPU/performance/visual accessibility unmeasured. Rollback PR or cloud-off; sessions unmodified. Input is synthetic-only and declaration alone is not a privacy guarantee.
 
 2026-11-19: User-requested footer copy change: replace both Arena footer paragraphs with IteraGuard. Update the existing markup test to retain contextual explanations without requiring deleted footer text. Model status and runtime behavior unchanged; hosted publication not verified.
+
+2026-11-19: User requested removal of the footer IteraGuard label. Removed the footer element; header brand and page title remain unchanged. Hosted deployment remains unverified.

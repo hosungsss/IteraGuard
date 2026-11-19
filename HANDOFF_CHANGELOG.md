@@ -89,3 +89,5 @@ Implementation: optional read-only Jev 1.14 TypeSafe transport from already-test
 Validation: PR/head and merge CI outcomes to be read back; no live Jev API, no authorized credits, no Zoro model training, no independent accuracy experiment, no real mobile device accessibility test. Rollback by reverting PR or disable Jev via DMSG_JEV_LIVE_ENABLE=0. No SQLite migration. No financial spend or external messages sent.
 
 2026-11-19: User-requested footer copy change: replace both Arena footer paragraphs with IteraGuard. Update the existing markup test to retain contextual explanations without requiring deleted footer text. Model status and runtime behavior unchanged; hosted publication not verified.
+
+2026-11-19: User requested removal of the footer IteraGuard label. Removed the footer element; header brand and page title remain unchanged. Hosted deployment remains unverified.
