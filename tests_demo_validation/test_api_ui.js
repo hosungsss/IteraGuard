@@ -49,10 +49,10 @@ function bootSignalHome(fetch) {
   }
   const elements = Object.fromEntries([
     'signalForm', 'text', 'run', 'inlineSignal', 'inlineSignalGrade', 'inlineSignalScores', 'inlineRequestedAction',
-    'signalStatus', 'charCount', 'sampleNotice', 'signalExplanation'
+    'signalStatus', 'charCount', 'sampleNotice', 'signalExplanation', 'inlineConfirmation', 'inlineConfirmationText'
   ].map(id => {
     const node = element('div');
-    node.hidden = ['inlineSignal', 'inlineSignalScores'].includes(id);
+    node.hidden = ['inlineSignal', 'inlineSignalScores', 'inlineConfirmation'].includes(id);
     return [id, node];
   }));
   const document = {
@@ -113,6 +113,28 @@ test('a failed signal request cannot leave the previous result visible', async (
   await ui.signalForm.trigger('submit');
   assert.ok(ui.inlineSignal.hidden || !ui.inlineSignalGrade.textContent.includes('초록'));
   assert.equal(ui.run.disabled, false);
+});
+
+test('the confirmation excerpt uses original Unicode offsets and clears on input', async () => {
+  const lead = ' 🧪 가상 안내\n';
+  const clause = '인증번호를 알려주세요.';
+  const start = Array.from(lead).length;
+  const end = start + Array.from(clause).length;
+  const ui = bootSignalHome(async () => signalReply(200, {
+    grade: 'orange',
+    requested_action: {id: 'share_auth_secret', label: '비밀번호·인증번호 알려주기'},
+    scores: {red: .20, orange: .60, green: .05, gray: .15},
+    confirmation_excerpt: {start, end}
+  }));
+  ui.text.value = lead + clause + ' ';
+  await ui.signalForm.trigger('submit');
+  assert.equal(ui.inlineConfirmation.hidden, false);
+  assert.equal(ui.inlineConfirmationText.textContent, clause);
+  assert.equal(ui.inlineSignalScores.hidden, false);
+  ui.text.value = '다음 합성 안내';
+  ui.text.trigger('input');
+  assert.equal(ui.inlineConfirmation.hidden, true);
+  assert.equal(ui.inlineConfirmationText.textContent, '');
 });
 
 test('green grade does not endorse a credential request', async () => {
