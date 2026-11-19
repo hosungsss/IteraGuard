@@ -140,3 +140,9 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 - 기존 Zoro-1·v5.1 정책·보류 업무·Rulebook은 그대로 유지합니다. Zoro 모델 가중치는 변경/재학습되지 않았습니다.
 - 확인: python -m unittest discover -s tests_v59 -v && python -m unittest discover -s tests_secondary -v && node --test tests_v59/test_ambient_research_ui.js tests_secondary/test_secondary_ui.js.
 - 실제 Jev/Zoro 신규 추론 성능 향상, 전체 독립 인간라벨 평가, 실기기 렌더링은 미검증입니다.
+
+## 라이선스 / License
+
+직접 작성한 IteraGuard 코드와 문서는 [Apache-2.0](LICENSE)으로 제공합니다. [적용 범위·예외](LICENSE_SCOPE.md), [외부 자료 고지](THIRD_PARTY_NOTICES.md)를 함께 확인하십시오. CC BY-SA 데이터·모델, 외부 자료 및 기존 APK/ZIP/스킬 패키지는 Apache-only로 변경하지 않습니다.
+
+[정비 검증 보고서](docs/licensing/REVIEW_20261119.md)의 잔여 과제를 확인하십시오. `python tools/check_licensing.py`는 고지·분류·해시의 정적 검증이며 권리 전수 인증이 아닙니다.
