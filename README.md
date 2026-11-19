@@ -146,3 +146,13 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 직접 작성한 IteraGuard 코드와 문서는 [Apache-2.0](LICENSE)으로 제공합니다. [적용 범위·예외](LICENSE_SCOPE.md), [외부 자료 고지](THIRD_PARTY_NOTICES.md)를 함께 확인하십시오. CC BY-SA 데이터·모델, 외부 자료 및 기존 APK/ZIP/스킬 패키지는 Apache-only로 변경하지 않습니다.
 
 [정비 검증 보고서](docs/licensing/REVIEW_20261119.md)의 잔여 과제를 확인하십시오. `python tools/check_licensing.py`는 고지·분류·해시의 정적 검증이며 권리 전수 인증이 아닙니다.
+
+
+## 2026-11-19 · v5.9 소비자 화면 단순화 / Rulebook 개선계획 검수
+일반 화면은 **비식별 합성 메시지 붙여넣기 → 판단하기 → 이해하기 쉬운 위험 안내 → 상황별 후속 대화** 순서로 단순화했습니다. 엔진 자체의 Zoro/정책/SQLite Task 처리는 변경하지 않았습니다.
+- 공식 사례 프리셋, 실험용 Jev 클라우드 패널, 내부 확인업무 선택·보고 UI는 기본 화면에서 숨겨져 사용자에게 표시되지 않습니다. 그렇다고 Jev가 자동 호출되거나 기관 확인이 자동으로 실행되는 것은 아닙니다.
+- 판단 과정 패널은 기본적으로 숨기고 **실제 평가 HTTP 요청이 진행될 때만** 화면 상단에 표시합니다. 내부 서버 단계별 실시간 이벤트가 없으므로 임의의 퍼센트·가상 진행 시각을 제공하지 않습니다.
+- 빈 입력은 요청하지 않습니다. 기존 미해결 위험·인간 확인 필요는 결과에 계속 표시합니다. 기존 보류를 안전으로 자동 해제하지 않습니다.
+- 지금은 합성·비식별 테스트 전용이며 실제 SMS 개인정보, 원본 계좌정보, OTP, 비밀번호 전송을 허용하는 제품이라고 주장하지 않습니다. Zoro 실모델/정확도/실브라우저 반응형 완성은 별도 검증해야 합니다.
+- 검수: `docs/reviews/RULEBOOK_ZORO_REMEDIATION_REVIEW_CURRENT_20261119.md`; 동봉 원본 `docs/reviews/RULEBOOK_ZORO_REMEDIATION_PLAN_KO_20261119_SOURCE.md`. RB-1~9/ZP-1~10의 위험 검토를 수록하되 실제 정책 변경/가중치 학습은 수행하지 않았습니다.
+- 테스트: `python -m unittest discover -s tests_consumer -v` 및 `tests_remediation`, 기존 전 회귀검사. '진단 테스트 PASS'는 결함 해결이 아니라 **현행 결함을 재현했다는 뜻**입니다.
