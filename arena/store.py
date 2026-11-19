@@ -123,6 +123,12 @@ class Arena:
 
     def manifest(self):
         manifest = self._execution_manifest()
+        if isinstance(self.client, bridge.ModelClient):
+            status = self.client.status()
+            runtime_model = {'configured': status['configured'], 'timeout_valid': status['timeout_s'] is not None,
+                             'connection_test': 'NOT_RUN', 'identity_verified': False}
+        else:
+            runtime_model = {'configured': False, 'connection_test': 'TEST_DOUBLE', 'identity_verified': False}
         try:
             binding = v51.P.binding(self.profile_id, self.policy_id)
         except (OSError, ValueError, KeyError, TypeError):
@@ -132,6 +138,7 @@ class Arena:
                 'question_binding': binding, 'execution_manifest': manifest,
                 'context_scope': 'CURRENT_TEXT_ONLY', 'observation_authority': 'USER_REPORTED',
                 'lifecycle_states': ['OPEN', 'CLOSED_UNRESOLVED'], 'risk_release_implemented': False,
+                'runtime_model': runtime_model,
                 'arena_sources': {name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest() for name in ('store.py','evidence.py','server.py','web/main.js')}}
 
     @staticmethod

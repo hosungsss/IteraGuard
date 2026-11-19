@@ -9,11 +9,75 @@ const labels = {
   CAUTION: '추가 확인 필요', PAUSE_AND_VERIFY: '잠시 멈추고 독립 확인',
   ASK_HUMAN: '판단 보류 · 사람 검토 필요'
 };
+async function apiOnce(path, body) {
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timer = controller && typeof setTimeout !== 'undefined' ? setTimeout(() => controller.abort(), 70000) : null;
+  try {
+    const options = body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : {};
+    if (controller) options.signal = controller.signal;
+    const r = await fetch(path, options);
+    if (r.status === 401 || r.status === 403) throw Error('접속 인증이 만료되었거나 접근 권한이 없습니다. 시연 접속 화면에서 다시 인증해 주세요.');
+    if (r.status === 429) throw Object.assign(Error('모델이 다른 요청을 처리하고 있습니다. 잠시 후 저장 상태를 확인하고 다시 시도해 주세요.'), { recoverable: true });
+    const type = r.headers?.get('content-type');
+    if (type && !type.toLowerCase().startsWith('application/json')) throw Error('서버가 판단 JSON 대신 다른 페이지를 반환했습니다. 접속 인증과 서버 연결을 확인해 주세요.');
+    let d;
+    try { d = await r.json(); } catch (_) { throw Error('서버 응답 형식을 확인할 수 없습니다. 저장 상태를 재조회해 주세요.'); }
+    if (!r.ok) throw Object.assign(Error(d?.error || 'REQUEST_FAILED'), { recoverable: [502, 504].includes(r.status) });
+    if (!d || typeof d !== 'object' || Array.isArray(d)) throw Error('INVALID_API_RESPONSE');
+    return d;
+  } catch (e) {
+    if (e.name === 'AbortError') throw Object.assign(Error('응답 대기 시간이 초과됐습니다. 서버에서 처리가 완료됐을 수 있으므로 저장 상태를 먼저 재조회해 주세요.'), { recoverable: true });
+    if (e instanceof TypeError) e.recoverable = true;
+    throw e;
+  } finally { if (timer !== null) clearTimeout(timer); }
+}
+function recoveryNotice(message) {
+  const node = typeof document.getElementById === 'function' ? el('recoveryStatus') : null;
+  if (node) node.textContent = message;
+}
 async function api(path, body) {
-  const r = await fetch(path, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : {});
-  const d = await r.json();
-  if (!r.ok) throw Error(d.error || 'REQUEST_FAILED');
-  return d;
+  // Freeze the request: never invent a new ID/version or silently change text.
+  const snapshot = body === undefined ? undefined : JSON.parse(JSON.stringify(body));
+  const canRecover = snapshot === undefined || (path === '/api/evaluate' &&
+    typeof snapshot.session_id === 'string' && typeof snapshot.request_id === 'string' && Number.isInteger(snapshot.version));
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const result = await apiOnce(path, snapshot);
+      if (attempt) recoveryNotice('연결 복구 완료 · 동일 요청의 처리 결과를 확인했습니다.');
+      return result;
+    } catch (error) {
+      if (!canRecover || !error.recoverable || attempt >= 2) {
+        recoveryNotice('자동 복구 중단 · ' + error.message);
+        throw error;
+      }
+      recoveryNotice(`자동 복구 ${attempt + 1}/2 · 저장 상태를 확인합니다.`);
+      if (typeof setTimeout === 'function') await new Promise(resolve => setTimeout(resolve, 400 * (attempt + 1)));
+      if (snapshot) {
+        // A lost response may already be committed. Reconcile before resending.
+        let state;
+        try { state = await apiOnce('/api/state?session_id=' + encodeURIComponent(snapshot.session_id)); }
+        catch (stateError) {
+          recoveryNotice('자동 복구 중단 · 저장 상태를 확인할 수 없어 요청을 다시 보내지 않았습니다.');
+          throw stateError;
+        }
+        if (!Array.isArray(state.events) || !Number.isInteger(state.version)) throw Error('RECOVERY_INVALID_STATE');
+        const saved = state.events.find(event => event.request_id === snapshot.request_id);
+        if (saved) {
+          if (saved.session_id !== snapshot.session_id || saved.version !== snapshot.version + 1 ||
+              state.version !== saved.version || !Object.hasOwn(labels, saved.action)) {
+            recoveryNotice('자동 복구 중단 · 세션이 변경되었습니다. 저장 상태를 재조회해 주세요.');
+            throw Error('RECOVERY_STATE_CHANGED');
+          }
+          recoveryNotice('자동 복구 완료 · 저장된 결과를 복원했습니다. 새 판단은 실행하지 않았습니다.');
+          return saved;
+        }
+        if (state.version !== snapshot.version || state.lifecycle !== 'OPEN') {
+          recoveryNotice('자동 복구 중단 · 세션이 변경되었습니다. 저장 상태를 재조회해 주세요.');
+          throw Error('RECOVERY_STATE_CHANGED');
+        }
+      }
+    }
+  }
 }
 function rememberSession(id) {
   visitedSessions = [...new Set([...visitedSessions, id])];
@@ -133,6 +197,11 @@ async function serial(fn) {
 }
 async function loadProfile() {
   profile = await api('/api/manifest');
+  const model = profile.runtime_model;
+  if (el('connectionStatus')) el('connectionStatus').textContent = !model ? '모델 연결 상태 정보 없음 · 실제 판단으로 확인 필요' :
+    !model.configured ? '모델 미설정 · 현재 실제 Zoro 판단을 사용할 수 없습니다.' :
+    !model.timeout_valid ? '모델 대기 시간 설정 오류 · 운영자 확인 필요' :
+    '모델 설정 있음 · 실제 연결과 모델 신원은 아직 확인되지 않았습니다.';
   el('manifest').textContent = JSON.stringify(profile, null, 2);
   const expected = profile.execution_manifest?.runtime?.expected_temperature;
   el('temperatureNote').textContent = Number.isFinite(expected)
@@ -142,6 +211,7 @@ async function start() {
   session = { ...await api('/api/start', {}), lifecycle: 'OPEN', prior_pause: false };
   rememberSession(session.session_id);
   task = null; lastDecision = null; editorRevision += 1; renderQueue([]);
+  el('executionSource').textContent = '평가 전 · 현재 세션의 모델 실행 기록 없음';
   el('status').textContent = '새 세션 · ' + session.session_id;
   el('action').textContent = '평가 전'; el('message').textContent = '현재 문장을 판단해 주세요.';
   for (const id of ['evidence', 'reason', 'task', 'result', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';

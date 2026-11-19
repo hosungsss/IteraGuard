@@ -1,6 +1,9 @@
 """Loopback-only UI/API, synthetic text; python -m arena.server."""
 import argparse
 import json
+import os
+import sys
+import threading
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit,parse_qs
@@ -12,6 +15,12 @@ from urllib.error import URLError
 
 class Handler(SecureHandler):
     server_version='dmsg-arena/5.6'
+    _inference_slot=threading.BoundedSemaphore(1)
+    def _infer_once(self, call):
+        if not self._inference_slot.acquire(blocking=False):
+            return self.out(429,{'error':'MODEL_BUSY_RETRY_LATER'})
+        try:return self.out(200,call())
+        finally:self._inference_slot.release()
     def do_GET(self):
         if not self._origin_safe():return self.out(403,{'error':'LOCAL_HOST_ONLY'})
         u=urlsplit(self.path)
@@ -55,16 +64,20 @@ class Handler(SecureHandler):
             if self.path=='/api/generation-compare':
                 if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:raise ValueError('SYNTHETIC_ONLY_REQUIRED')
                 if type(body['text']) is not str or not body['text'].strip() or len(body['text'])>300:raise ValueError('INVALID_COMPARISON_TEXT')
-                try:return self.out(200,compare(body['text']))
+                try:return self._infer_once(lambda: compare(body['text']))
                 except URLError:return self.out(503,{'mode':'GENERATION_UNAVAILABLE','error':'LOCAL_GENERATION_NOT_AVAILABLE'})
                 except (ValueError,TypeError,UnicodeError):return self.out(502,{'mode':'GENERATION_UNAVAILABLE','error':'INVALID_GENERATION_RESPONSE'})
-            if self.path=='/api/evaluate':return self.out(200,self.server.arena.evaluate(**body))
+            if self.path=='/api/evaluate':return self._infer_once(lambda: self.server.arena.evaluate(**body))
             return self.out(404,{'error':'NOT_FOUND'})
         except Conflict as e:return self.out(409,{'error':str(e)})
         except bridge.ContractError:return self.out(503,{'error':'EXECUTION_CONTRACT_UNAVAILABLE'})
         except (ValueError,TypeError,UnicodeError):return self.out(400,{'error':'INVALID_REQUEST'})
 
 def main():
+    # Preserve fingerprint-bound legacy policy sources while making Windows
+    # direct module launches use the same UTF-8 mode as run_hackathon.ps1.
+    if not sys.flags.utf8_mode:
+        os.execv(sys.executable,[sys.executable,'-X','utf8','-m','arena.server',*sys.argv[1:]])
     p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8769);p.add_argument('--db',default='runs/arena.sqlite3')
     p.add_argument('--policy',choices=['legacy','dra'],default='legacy');a=p.parse_args()
     from integration import v51

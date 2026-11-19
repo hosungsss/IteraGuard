@@ -9,5 +9,7 @@
   "rulebook_mode": "PROPOSAL_ONLY",
   "rulebook_runtime_Zoro_verified": false,
   "live_identity_verified": false,
-  "submission_ready": false
+  "submission_ready": false,
+  "local_validation_candidate": "PRE_DEMO_NOT_COMMITTED",
+  "hosted_authenticated_flow_verified": false
 }
