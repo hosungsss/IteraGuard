@@ -145,6 +145,7 @@
       if (clock !== revision || !active ||
           snapshot.session_id !== active.session_id || snapshot.version !== active.version) return;
       if (!r.ok || !result || result.schema !== 'iteraguard-guided-conversation/1' ||
+          result.mode !== 'RULE_BASED_FOLLOWUP_NOT_GENERATIVE' ||
           result.session_id !== snapshot.session_id || result.version !== snapshot.version ||
           result.scenario !== scenario || result.decision_changed !== false ||
           result.action_taken !== false || result.task_updated !== false ||
