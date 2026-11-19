@@ -140,3 +140,12 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 - 기존 Zoro-1·v5.1 정책·보류 업무·Rulebook은 그대로 유지합니다. Zoro 모델 가중치는 변경/재학습되지 않았습니다.
 - 확인: python -m unittest discover -s tests_v59 -v && python -m unittest discover -s tests_secondary -v && node --test tests_v59/test_ambient_research_ui.js tests_secondary/test_secondary_ui.js.
 - 실제 Jev/Zoro 신규 추론 성능 향상, 전체 독립 인간라벨 평가, 실기기 렌더링은 미검증입니다.
+
+
+## v5.9 대화형 후속 상담 · Guided Incident Conversation (2026-11-19)
+기존 Zoro-1 Typed Decision 및 독립 정책으로 합성 문자·이메일을 판단한 뒤, 같은 세션에서 **채팅처럼 후속 상황을 질문**할 수 있습니다. 사용자의 링크 클릭, 파일 다운로드, 앱 설치, 인증정보 입력, 송금, 공식 확인 방법을 엄격히 분리해 안내합니다. 화면에서 현재 판정과 원문을 표시할 때 실제 모델 응답, 통제 fixture, 모델 실패를 명확히 구별합니다.
+- **핵심 신뢰 경계:** 원본 판단은 기존 `/api/evaluate`에서만 실행. 후속 질문은 `/api/conversation/followup`의 독립 규칙 기반 read-only 안내. 세션 버전·모델 상태를 확인하며 이전 PAUSE/Task/위험 이력을 변경하지 않습니다.
+- 질문 자유 입력은 제한된 명시적 상황만 인식합니다. 불명확한 질문에는 답변을 꾸미지 않고 유형 버튼을 요구합니다. 질문 원문은 후속 API로 전송하거나 DB/localStorage에 저장하지 않습니다.
+- 앱 외부 행위, 실제 신고/결제/문자 전송, 일반 GPT 수준 자유 생성형 채팅은 하지 않습니다.
+- 구현: `arena/conversation.py`, `arena/web/chat.js`; 아키텍처·공식 근거: `docs/V59_GUIDED_CONVERSATION_ARCHITECTURE.md`.
+- 검증: `python -m unittest discover -s tests_conversation -v`, `node --test tests_conversation/test_guided_chat_ui.js`. 정확한 통과/실패는 merged commit의 CI를 확인하세요.
