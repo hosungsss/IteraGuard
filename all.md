@@ -162,3 +162,8 @@ P2: 사용자 사건 묶음/의미 중복, UI 전체 지연 계측, cold/warm �
 ## 12 기록과 재현
 
 각 버전의 internal/evidence에 실행 로그와 반례 JSON이 있다. v5.6의 tools/run_judge_scenarios.py는 --mode controlled 또는 --mode live를 명시해야 한다. live 실패를 fixture로 채우지 않는다. arena/evidence.py의 검증은 로컬 구조·지문·순서 검사이며 제3자 인증이 아니다. 원본 v5.4 ZIP과 첨부 두 MD를 보존했고 최종 변경 이력은 internal/VERSION_LEDGER.md에 기록한다.
+
+
+## Current GitHub v5.8 source candidate orientation
+The current source integrates a proposal-only business Rulebook next to (not in place of) the existing v5.6 Arena / v5.1 typed Zoro contract. The core technical thesis is that typed proposals, domain policy, authorization, persistent execution and outcome verification are independently measurable layers; changing questions and if-else is not sufficient to guarantee broad industrial success. Two small example books show refund intake and beneficiary bank-change triage; neither triggers an external action.
+A v5.8 web usability layer offers synthetic inputs, selected follow-up target and evidence JSON download. Existing model transport has not been replaced. A real Zoro checkpoint/head, cross-industry locked evaluation, NPU performance, actual refund/bank outcomes and presentation submission remain separate unverified tasks. Detailed diffs belong only to internal/VERSION_LEDGER.md. Future agents begin with AGENTS.md and the cumulative handoff file, then inspect the present repository HEAD and run relevant tests before proposing claims. See docs/V58_RULEBOOK_ARCHITECTURE.md for the threat model and testable follow-up plan.
