@@ -47,3 +47,6 @@ V5.9 source candidate (2026-11-19, branch feature/v59-arena-ui-performance): req
 
 
 2026-11-19 UI state separation: current-turn judgment, previous unresolved risk and next action have distinct display fields. Independent-analysis start preserves prior sessions/tasks; failed start preserves input/result. Consumer internal task-edit controls remain hidden. Python 234 pass/2 skipped; Node 68 pass; Edge 1440/390 controlled browser paths pass. No policy change, real Zoro or hosted deployment claim. See docs/UI_STATE_SEPARATION_VALIDATION.md.
+
+
+2026-11-19 · 문자 신호등 미리보기. Arena 홈에서 /signal을 열 수 있습니다. /api/signal은 합성·비식별 텍스트로 로컬 Zoro의 선택형 질문 한 개를 실행하며 기존 평가, 세션, 확인 업무와 분리됩니다. 실제 로컬 Zoro 호출 6건에서 네 등급을 모두 관찰했습니다. 예방 경고는 초록이었으며, 과거 피싱 인용 신고 한 건은 빨강으로 분류됐습니다. 이 관찰의 정확도 일반화와 독립 평가는 미검증입니다.
