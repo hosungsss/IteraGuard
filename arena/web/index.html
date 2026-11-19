@@ -18,12 +18,13 @@
 </section>
 <p>입력 출처: 사용자가 작성한 합성 문장. 판단 출처: 모델 응답(신원 미인증) 또는 연결 실패. 예제 문장이라는 이유로 모델 호출을 생략하지 않습니다.</p>
 <label for="text">현재 판단할 합성 문장</label>
-<textarea id="text" rows="5" maxlength="2000">지금 인증번호를 알려주시겠어요?</textarea>
+<textarea id="text" rows="6" maxlength="2000">샘플상사 11월 정산 건입니다. 기존에 등록된 A-01 계좌는 이번 지급에 사용하지 않습니다. 수취 계좌가 B-02로 변경됐으니, 오늘 오후 3시 전까지 이번 청구 대금을 새 계좌로 보내 주세요.</textarea>
 <div class="v58-examples" role="group" aria-label="합성 시나리오 예시">
-  <button type="button" data-sample="direct">합성: 직접 요청</button>
-  <button type="button" data-sample="warning">합성: 예방 경고</button>
-  <button type="button" data-sample="ambiguous">합성: 모호한 절차</button>
-</div><p id="sampleNotice" role="status">예시를 선택하면 문장만 변경됩니다. 자동 판단은 하지 않습니다.</p>
+  <button type="button" data-sample="direct">계좌 변경 요청</button>
+  <button type="button" data-sample="warning">보안팀 예방 공지</button>
+  <button type="button" data-sample="ambiguous">방법이 빠진 확인 요청</button>
+  <button type="button" data-sample="followup">정산 진행 보고</button>
+</div><p id="sampleNotice" role="status">예시로 문장을 채운 뒤 판단 버튼을 누르세요. 계좌 변경 요청과 정산 진행 보고를 같은 기록에서 차례로 판단하면 남은 확인 업무를 볼 수 있습니다.</p>
 <p>입력한 현재 문장만 모델에 전달합니다. 이전 대화나 확인 보고를 기관 검증 사실로 덧붙이지 않습니다.</p>
 <label class="check"><input id="review" type="checkbox"> 사람에게 검토를 요청하고 싶어요</label>
 <section class="decision" aria-labelledby="taskHeading">
