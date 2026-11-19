@@ -1,0 +1,1 @@
+Synthetic scenario: Customer requests a refund for order ORDER-123. Do not use any real customer data.
