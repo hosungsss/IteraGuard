@@ -15,5 +15,6 @@
   "arena_ui_version": "5.9",
   "arena_footer_copy": "",
   "arena_top_runtime_copy_visible": false,
-  "arena_topbar_visible": false
+  "arena_topbar_visible": false,
+  "sphere_connection_indicator": "RECENT_VALID_MODEL_RESPONSE_60S"
 }

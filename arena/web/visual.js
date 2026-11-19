@@ -15,6 +15,25 @@
   };
   const SHORT = { NO_STRONG_SIGNAL: '신호 약함', CAUTION: '확인 필요', PAUSE_AND_VERIFY: '멈춤·확인', ASK_HUMAN: '사람 확인' };
 
+  // Connection is a recent validated API response, not checkpoint identity attestation.
+  let connectionTimer;
+  function modelConnection(state) {
+    clearTimeout(connectionTimer);
+    body.dataset.modelConnection = state;
+    const label = $('coreLabel');
+    if (label) {
+      label.textContent = state === 'connected' ? 'ZORO-1 연결 완료' : state === 'failed' ? '연결 확인 필요' : state === 'fixture' ? '테스트 응답' : '대기';
+      label.title = state === 'connected' ? '최근 실제 모델 API 응답 확인 · 모델 신원 미인증 · 60초 후 재확인 필요' : '';
+    }
+    if (state === 'connected') connectionTimer = setTimeout(() => modelConnection('waiting'), 60000);
+  }
+  function observeModelConnection(d) {
+    const p = d && d.provenance;
+    modelConnection(d && d.model_status === 'VALID' && p && p.execution_source === 'LOCAL_HTTP_MODEL_UNATTESTED' &&
+      /^[a-f0-9]{64}$/i.test(p.response_sha256 || '') ? 'connected' :
+      p && p.execution_source === 'CONTROLLED_CLIENT' ? 'fixture' : 'failed');
+  }
+
   // ---------- pipeline ----------
   const stages = {};
   document.querySelectorAll('.stage').forEach(li => { stages[li.dataset.stage] = li; });
@@ -42,6 +61,7 @@
     return src === 'CONTROLLED_CLIENT' ? '통제 응답 · 실제 추론 아님' : 'Zoro-1 응답 · 신원 미인증';
   }
   function pipelineFinish(d) {
+    observeModelConnection(d);
     timers.forEach(clearTimeout); timers = [];
     setStage('input', 'done', Array.from(el('text').value).length + '자 · 원문은 저장하지 않음');
     const failed = d.model_status === 'FAILED';
@@ -75,6 +95,7 @@
     }, 160 * steps.length);
   }
   function pipelineFail(message) {
+    modelConnection('failed');
     timers.forEach(clearTimeout); timers = [];
     const active = ORDER.find(k => stages[k] && stages[k].dataset.state === 'active') || 'model';
     setStage(active, 'fail', '요청 실패 · ' + message);
@@ -122,7 +143,7 @@
       body.dataset.verdict = 'idle';
       $('verdictTitle').textContent = '문장이 바뀌었어요. 다시 판단해 주세요';
       $('verdictKicker').textContent = '현재 안내';
-      $('coreLabel').textContent = '대기';
+
       const h = $('verdictHint'); if (h) { h.textContent = ''; h.hidden = true; }
       core.setAccent();
       return;
@@ -135,7 +156,7 @@
     const hint = $('verdictHint');
     if (hint) { hint.textContent = HINT[code] || ''; hint.hidden = !HINT[code]; }
     $('verdictKicker').textContent = v ? v.kicker : '현재 안내';
-    $('coreLabel').textContent = v ? v.core : '대기';
+
     core.setAccent();
     body.dataset.flash = '0'; void body.offsetWidth; body.dataset.flash = '1';
   }
@@ -288,5 +309,6 @@
     };
   })();
 
+  modelConnection('waiting');
   count();
 })();
