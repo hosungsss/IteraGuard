@@ -118,3 +118,6 @@ Validation: PR/head and merge CI outcomes to be read back; no live Jev API, no a
 기준 main 41461f98deee145200a9ac230ab553341d56a80d. Arena 홈에서 /signal로 연결합니다. POST /api/signal은 합성·비식별 텍스트에 q_signal 선택형 질문 한 개만 로컬 Zoro로 전송하고 공용 응답 계약으로 검증합니다. 기존 Arena 판단, 이전 위험, 확인 업무는 기존 경로에서 처리합니다.
 검증: HTTP·업무 회귀 테스트 17건 통과. 실제 로컬 Zoro의 합성 6건 중 5건은 설정한 기대와 같았고, 과거 인용 신고 1건은 빨강으로 분류됐습니다. 화면은 등급 기준과 대응 안내를 표시합니다. 독립 정확도 평가는 미실행입니다.
 복구: PR을 되돌린 뒤 신호등 웹 경로 연결을 제거합니다. DB 마이그레이션은 없습니다.
+
+
+2026-11-19: Integrated origin/main 636f56b by fast-forward, preserving 9ed5dac UI state separation. No conflicts or runtime code edits required. Python 237 passed / 2 skipped, Node 68 passed, Edge 1440/390 controlled session flows passed, licensing 608-file inventory passed. Signal preview HTTP checks included; live model and hosted deployment NOT_RUN in this integration. See docs/MAIN_INTEGRATION_VALIDATION_20261119.md.
