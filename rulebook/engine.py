@@ -98,7 +98,7 @@ def validate_book(book: dict) -> dict:
         if rule["id"] in ids:
             _fail("DUPLICATE_RULE_ID")
         ids.add(rule["id"])
-        if rule["action"] not in ACTIONS:
+        if type(rule["action"]) is not str or rule["action"] not in ACTIONS:
             _fail("UNAUTHORIZED_ACTION")
         if type(rule["priority"]) is not int or not 0 <= rule["priority"] <= 1000:
             _fail("INVALID_PRIORITY")
@@ -110,7 +110,7 @@ def validate_book(book: dict) -> dict:
                 _fail("UNKNOWN_CONDITION_QUESTION")
             spec = questions[qid]
             allowed = {"yes", "no"} if spec["type"] == "noul" else set(spec["criteria"])
-            if answer not in allowed:
+            if type(answer) is not str or answer not in allowed:
                 _fail("UNKNOWN_CONDITION_OPTION")
         signature = _fingerprint([cond, rule["priority"]])
         if signature in fingerprints:
