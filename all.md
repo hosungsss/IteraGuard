@@ -9,3 +9,5 @@
 이번 검증은 통제 응답을 사용한 회귀·브라우저 검사입니다. 실제 Zoro 연결·체크포인트 신원과 공개 사이트 배포는 확인하지 않았습니다. 제출 준비 완료나 정확도 개선을 주장하지 않습니다. docs/UI_STATE_SEPARATION_SOLUTION.md와 docs/UI_STATE_SEPARATION_VALIDATION.md에 요구사항과 결과를 정리했습니다.
 
 프로젝트 작성 코드의 Apache-2.0 적용 범위와 외부 자료 예외는 LICENSE_SCOPE.md 및 THIRD_PARTY_NOTICES.md를 참조하십시오. 상세 변경 이력을 이 파일에 중복 기록하지 않습니다.
+
+현재 홈은 signal-only 경로입니다. 제한된 예방·과거 보고 문맥 보정과 색상/행동 정합성 검사를 적용한 작업 후보이며, 원 모델 결과를 보존합니다. 광범위한 한국어 이해나 배포 검증 완료를 뜻하지 않습니다. 검증 범위와 잔여 오류는 docs/SIGNAL_CONTEXT_VALIDATION_20261120.md를 참조하십시오.

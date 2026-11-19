@@ -57,3 +57,6 @@ V5.9 source candidate (2026-11-19, branch feature/v59-arena-ui-performance): req
 2026-11-19 · Arena 분석 결과 상단에 현재 문자 조로 신호등을 표시합니다. 합성·비식별 입력을 사용하며 별도 페이지 진입 없이 기존 판단 버튼으로 실행합니다. 조로의 단일 등급 질문과 기존 Arena 분석·세션·업무를 분리합니다. 과거 인용을 위험으로 분류할 수 있습니다.
 
 2026-11-20 · 메인 시연은 신호등과 현재 요청 행동 두 항목을 표시합니다. 합성·비식별 원문과 두 선택형 질문을 한 번에 로컬 Zoro로 보냅니다. 기본 웹 판단은 세션과 확인 업무를 생성하지 않습니다.
+
+
+2026-11-20: Signal-only bounded context reconciliation preserves original model scores/grade/action and reports corrections. Full recognized warning/report clauses distinguish past/negated requests; unknown or sensitive-action + green conflicts defer to gray. Existing Arena policy and shadow remain unchanged. Python 244 pass/2 skipped; Node 71 pass; controlled Edge 390/1440 pass. New 8 actual public responses plus prior 12 replayed locally; not a deployed new-model test. Colloquial warning action and family-impersonation grade remain limitations. See docs/SIGNAL_CONTEXT_VALIDATION_20261120.md.
