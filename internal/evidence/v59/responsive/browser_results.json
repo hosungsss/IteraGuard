@@ -1,0 +1,232 @@
+[
+  {
+    "width": 1440,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 200,
+          "y": 159.203125,
+          "width": 1040,
+          "height": 352
+        },
+        ".composer": {
+          "x": 200,
+          "y": 531.203125,
+          "width": 561,
+          "height": 453.15625
+        },
+        ".pipeline": {
+          "x": 781,
+          "y": 531.203125,
+          "width": 459,
+          "height": 441.390625
+        },
+        ".runtime-notices": {
+          "x": 180,
+          "y": 90.921875,
+          "width": 1080,
+          "height": 44.28125
+        }
+      }
+    },
+    "actions": [
+      "all four samples",
+      "keyboard typing",
+      "actual clipboard paste",
+      "Ctrl+Enter evaluate with controlled fixture",
+      "task selection and unresolved observation",
+      "review toggle and judge button",
+      "refresh evidence export/download",
+      "close reopen new history load",
+      "sheet close Escape scrim"
+    ],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  },
+  {
+    "width": 1024,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 20,
+          "y": 159.203125,
+          "width": 984,
+          "height": 352
+        },
+        ".composer": {
+          "x": 20,
+          "y": 531.203125,
+          "width": 530.1875,
+          "height": 453.15625
+        },
+        ".pipeline": {
+          "x": 570.1875,
+          "y": 531.203125,
+          "width": 433.8125,
+          "height": 441.390625
+        },
+        ".runtime-notices": {
+          "x": 0,
+          "y": 90.921875,
+          "width": 1024,
+          "height": 44.28125
+        }
+      }
+    },
+    "actions": [],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  },
+  {
+    "width": 900,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 20,
+          "y": 159.203125,
+          "width": 860,
+          "height": 219.15625
+        },
+        ".composer": {
+          "x": 20,
+          "y": 398.359375,
+          "width": 860,
+          "height": 396.1875
+        },
+        ".pipeline": {
+          "x": 20,
+          "y": 1059.5,
+          "width": 860,
+          "height": 441.390625
+        },
+        ".runtime-notices": {
+          "x": 0,
+          "y": 90.921875,
+          "width": 900,
+          "height": 44.28125
+        }
+      }
+    },
+    "actions": [],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  },
+  {
+    "width": 768,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 20,
+          "y": 159.203125,
+          "width": 728,
+          "height": 203.1875
+        },
+        ".composer": {
+          "x": 20,
+          "y": 382.390625,
+          "width": 728,
+          "height": 396.1875
+        },
+        ".pipeline": {
+          "x": 20,
+          "y": 1041.78125,
+          "width": 728,
+          "height": 441.390625
+        },
+        ".runtime-notices": {
+          "x": 0,
+          "y": 90.921875,
+          "width": 768,
+          "height": 44.28125
+        }
+      }
+    },
+    "actions": [],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  },
+  {
+    "width": 390,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 14,
+          "y": 169.046875,
+          "width": 362,
+          "height": 175.9375
+        },
+        ".composer": {
+          "x": 14,
+          "y": 364.984375,
+          "width": 362,
+          "height": 521.328125
+        },
+        ".pipeline": {
+          "x": 14,
+          "y": 1137.515625,
+          "width": 362,
+          "height": 433.390625
+        },
+        ".runtime-notices": {
+          "x": 0,
+          "y": 84.921875,
+          "width": 390,
+          "height": 62.125
+        }
+      }
+    },
+    "actions": [
+      "all four samples",
+      "keyboard typing",
+      "actual clipboard paste",
+      "Ctrl+Enter evaluate with controlled fixture",
+      "task selection and unresolved observation",
+      "review toggle and judge button",
+      "refresh evidence export/download",
+      "close reopen new history load",
+      "sheet close Escape scrim"
+    ],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  },
+  {
+    "width": 320,
+    "layout": {
+      "overflow": false,
+      "boxes": {
+        ".hero": {
+          "x": 14,
+          "y": 169.046875,
+          "width": 292,
+          "height": 232
+        },
+        ".composer": {
+          "x": 14,
+          "y": 421.046875,
+          "width": 292,
+          "height": 540.703125
+        },
+        ".pipeline": {
+          "x": 14,
+          "y": 1240.453125,
+          "width": 292,
+          "height": 433.390625
+        },
+        ".runtime-notices": {
+          "x": 0,
+          "y": 84.921875,
+          "width": 320,
+          "height": 62.125
+        }
+      }
+    },
+    "actions": [],
+    "page_errors": [],
+    "mode": "CONTROLLED_FIXTURE_NOT_ZORO"
+  }
+]
