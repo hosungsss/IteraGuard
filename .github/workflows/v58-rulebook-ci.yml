@@ -20,7 +20,7 @@ jobs:
         run: python -m unittest discover -s tests_rulebook -v
       - name: Python and JavaScript syntax
         run: |
-          python -m compileall -q rulebook tools/rulebook_preview_v58.py
+          python -m compileall -q rulebook tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
           node --check arena/web/main.js
       - name: Append-only ledgers and required docs
         run: |
