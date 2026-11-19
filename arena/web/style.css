@@ -237,3 +237,12 @@ body[data-flash="1"] .verdict{animation:arrive .7s cubic-bezier(.2,.8,.2,1)}
 @media(max-width:700px){.secondary-options{grid-template-columns:1fr}.ambient-3d{opacity:.35;filter:blur(5px)}}
 @media(prefers-reduced-motion:reduce){.ambient-3d{opacity:.26;filter:blur(5px)}}
 @media print{.ambient-3d{display:none}}
+
+/* Recent live API response: gentle continuous glow, never a risk/safety indicator. */
+@keyframes zoro-connected-glow {
+  0%,100% {filter:brightness(1) drop-shadow(0 0 8px rgba(130,160,255,.25))}
+  50% {filter:brightness(1.18) drop-shadow(0 0 25px rgba(130,160,255,.65))}
+}
+body[data-model-connection="connected"] #coreCanvas{animation:zoro-connected-glow 3.2s ease-in-out infinite}
+body[data-model-connection="connected"] .core-label{color:#dce9ff;border-color:#91b5ff;box-shadow:0 0 14px #719aff33}
+@media(prefers-reduced-motion:reduce){body[data-model-connection="connected"] #coreCanvas{animation:none;filter:brightness(1.08)}}

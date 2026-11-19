@@ -193,3 +193,5 @@ Risks: sample selection/source publication biases, no actual ground-truth, no Zo
 2026-11-19: Remove visible top runtime copy at user request. Keep hidden status hooks for existing scripts; no connection, retry, authentication or decision behavior changes. Hosted deployment remains unverified.
 
 2026-11-19: User explicitly requested removal of the entire top bar, including logo, mode badge and session/history button. Remove header markup and guard optional sheet opener references to prevent startup errors. Session backend unchanged; header entry point removed. Hosted deployment not verified.
+
+2026-11-19: Sphere connection label/glow follows recent VALID LOCAL_HTTP_MODEL_UNATTESTED responses with response hash. Fixtures never show connected; transport/model failure clears it; expires after 60 seconds. No health polling or checkpoint attestation; first real evaluation required. Reduced motion disables glow animation.
