@@ -17,7 +17,8 @@ jobs:
         with:
           python-version: '3.11'
       - name: Rulebook contract tests
-        run: python -m unittest discover -s tests_rulebook -v
+        run: |
+          python -m unittest discover -s tests_rulebook -v
           python -m unittest discover -s tests_rule_tweak_shadow -v
           python -m unittest discover -s tests_v56 -v
           python -m unittest discover -s tests_v54 -v
