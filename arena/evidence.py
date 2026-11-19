@@ -12,7 +12,8 @@ def export_session(arena,sid):
  events=[]
  for event in state['events']:
   fields=('event_type','request_id','version','current_turn_action','current_turn_reason','action','reason',
-          'prior_pause','model_status','mode','latency_ms','provenance','task_disposition','observed_task_id')
+          'prior_pause','model_status','mode','latency_ms','provenance','task_disposition','observed_task_id',
+          'resolved_retry_task_ids')
   row={k:deepcopy(event[k]) for k in fields if k in event}
   for key in ('next_task','related_task'):
    if key in event:row[key]={k:event[key][k] for k in ('id','type','status','observation')}

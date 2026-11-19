@@ -259,7 +259,7 @@
     "android_device": "NOT_RUN",
     "automatic_risk_release": false
   },
-  "semantic_policy_id": "v54-semantic/1",
+  "semantic_policy_id": "v54-semantic/2",
   "runtime": {
     "model_id": "trillionlabs/Zoro-1",
     "model_repository": "trillionlabs/Zoro-1",
@@ -289,19 +289,19 @@
   "source_hashes": {
     "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
     "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
-    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "integration/v51_policy.py": "e24c3247314a2b0fb013befcfc7683490e0aebfcb7e276ee7bc2ffa21f52a4ce",
     "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
     "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
-    "configs/v51_semantic_rules.json": "ca2887f3f65c10d36cc93a3d7eae7635358412f1bc83d587b5081811350400a9",
+    "configs/v51_semantic_rules.json": "dd107fc0f6a292fbcc8381194378957f2387bf0d6b58f85c73e3821e9ae50763",
     "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
     "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
     "apps/shared/v51-base-engine.js": "479c58e00bd466d3e136df1515bf4cd3ce3a64750fdaedfd144e8f99a072e1e3",
     "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
     "apps/shared/v51-profile-data.js": "77ff1d11d1b2c46a0c58964f55d2fa0bc7c600fb0f38de12bf98e0ea96f5cdcc",
-    "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
-    "apps/shared/v51-semantic-data.js": "b08fef7e5bd5df98406cac995d64c8fe20d1c539bfef409a68277ca657d31814",
+    "apps/shared/v51-semantic.js": "8dc3618e52ebfb39a8c12cea9466a01d1ca0649a810adffadebc46df93c7437b",
+    "apps/shared/v51-semantic-data.js": "fe59369965cfd18f1b4c82ba671871e77594be0a7b69b3cd7291477150665678",
     "apps/shared/v51-evidence.js": "51e0f10f248bb304c9989ab7691454fb317d4d74dffde7c91868db726af8cb88",
     "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33"
   },
-  "manifest_fingerprint": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5"
+  "manifest_fingerprint": "7a6df762ea73e7662f941d6f2d61414b299ed43fbed0c4534721af93487b8e99"
 }

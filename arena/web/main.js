@@ -46,7 +46,7 @@ function rememberedSession() {
 function isClosed() { return session?.lifecycle === 'CLOSED_UNRESOLVED'; }
 function controls() {
   const closed = isClosed();
-  for (const id of ['run', 'compare', 'text', 'review']) el(id).disabled = busy || closed;
+  for (const id of ['run', 'text', 'review']) el(id).disabled = busy || closed;
   el('observation').disabled = busy || closed || !task;
   el('taskQueue').disabled = busy || closed || !openTaskQueue.length;
   el('exportEvidence').disabled = busy || !session;
@@ -66,12 +66,22 @@ function renderLifecycle() {
 function currentInputRequired(message) {
   el('executionSource').textContent = '현재 입력의 실행 출처는 재평가 후 확인하세요.';
   el('action').textContent = 'ASK_HUMAN'; el('message').textContent = message;
-  for (const id of ['evidence', 'reason', 'currentTurn', 'sessionNotice']) el(id).textContent = '';
+  for (const id of ['evidence', 'reason', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
 }
 function renderDecision(d) {
   el('executionSource').textContent = d.model_status === 'FAILED' ? '판단 출처: 모델 연결 또는 응답 검증 실패' : d.provenance?.execution_source === 'CONTROLLED_CLIENT' ? '판단 출처: 통제 응답 · 실제 모델 추론 아님' : '판단 출처: 모델 응답 · 체크포인트 신원 미인증';
   el('action').textContent = d.action; el('message').textContent = d.message; el('reason').textContent = d.reason;
-  if (d.action === 'ASK_HUMAN') {
+  const contextNotes = {
+    V51_EXPLICIT_PROTECTIVE_WARNING: '인증정보를 전달하지 말라는 예방 경고로 해석했습니다.',
+    V51_EXPLICIT_CREDENTIAL_WARNING: '인증정보를 전달하지 말라는 예방 경고로 해석했습니다.',
+    V51_EXPLICIT_PAST_CREDENTIAL_REPORT: '과거 인용에 나온 요청입니다. 현재 전달 요구는 확인되지 않았습니다.'
+  };
+  const contextNote = contextNotes[d.current_turn_reason || d.reason];
+  if (contextNote) el('message').textContent += ' ' + contextNote;
+  el('modelNotice').textContent = d.model_status === 'FAILED'
+    ? '모델 응답을 받지 못했거나 검사에 실패했습니다. 연결 확인 후 같은 문장을 다시 판단해 주세요.'
+    : d.resolved_retry_task_ids?.length ? '모델 응답이 복구되어 같은 입력의 기술 재시도 업무를 정리했습니다.' : '';
+  if (d.action === 'ASK_HUMAN' && d.model_status !== 'FAILED') {
     el('message').textContent += d.reason === 'PRIOR_RISK_UNRESOLVED'
       ? ' 현재 판단은 완료됐으며 이전 위험에 대한 확인이 남아 있습니다. 아래 확인 업무와 저장 기록을 확인하세요.'
       : ' 보류는 처리 중 상태가 아닙니다. 현재 직접 요청인지 과거 인용·예방 경고인지 확인하고, 확인 업무가 있으면 결과를 기록하세요.';
@@ -94,6 +104,8 @@ function renderTask(item) {
   if (task) {
     const observed = item.observation === 'UNRESOLVED' ? ' · 확인했지만 미해결로 보고됨' : '';
     el('task').textContent = '열린 확인 작업' + observed + ' · ' + item.id + '\n' + (item.instruction || '독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.');
+  } else if (item?.status === 'MODEL_RETRY_RESOLVED') {
+    el('task').textContent = '모델 재시도 완료 · ' + item.id;
   } else if (item) {
     el('task').textContent = '확인 보고 보관 · ' + item.id + '\n사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 이전 위험 때문에 같은 확인 작업을 자동으로 반복 생성하지 않습니다.';
   } else el('task').textContent = '현재 확인 작업 없음';
@@ -119,6 +131,9 @@ async function serial(fn) {
 async function loadProfile() {
   profile = await api('/api/manifest');
   el('manifest').textContent = JSON.stringify(profile, null, 2);
+  const expected = profile.execution_manifest?.runtime?.expected_temperature;
+  el('temperatureNote').textContent = Number.isFinite(expected)
+    ? `계약의 기준 온도 ${expected} · 실제 서버 적용값은 서버 모델 정보에서 확인하세요.` : '';
 }
 async function start() {
   session = { ...await api('/api/start', {}), lifecycle: 'OPEN', prior_pause: false };
@@ -126,8 +141,8 @@ async function start() {
   task = null; lastDecision = null; editorRevision += 1; renderQueue([]);
   el('status').textContent = '새 세션 · ' + session.session_id;
   el('action').textContent = '평가 전'; el('message').textContent = '현재 문장을 판단해 주세요.';
-  for (const id of ['evidence', 'reason', 'task', 'result', 'currentTurn', 'sessionNotice']) el(id).textContent = '';
-  el('generation').textContent = '실행 전 / 생성 서버 별도 필요';
+  for (const id of ['evidence', 'reason', 'task', 'result', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
+
   el('observation').value = 'NOT_CHECKED'; renderLifecycle();
 }
 async function refresh() {
@@ -159,7 +174,7 @@ async function transition(path) {
   await api(path, { session_id: sid, version: session.version, request_id: crypto.randomUUID(), synthetic_only: true });
   if (!session || session.session_id !== sid) return;
   lastDecision = null; editorRevision += 1;
-  el('generation').textContent = '세션 상태가 변경됐습니다. 생성 비교는 재개 후 실행하세요.';
+
   // Read current state even for a cached lifecycle response.
   await refresh();
 }
@@ -169,7 +184,7 @@ el('loadSession').onclick = () => serial(async () => {
   if (!visitedSessions.includes(sid) || session?.session_id === sid) return;
   session = { session_id: sid, version: 0, lifecycle: 'OPEN', prior_pause: false };
   lastDecision = null; editorRevision += 1; el('text').value = '';
-  el('generation').textContent = '보관 기록을 불러왔습니다. 생성 비교는 재개 후 실행하세요.';
+
   await refresh(); rememberSession(sid);
 });
 el('refresh').onclick = () => serial(refresh);
@@ -202,23 +217,9 @@ el('run').onclick = () => serial(async () => {
   el('evidence').textContent = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) &&
     e.start >= 0 && e.start < e.end && e.end <= cp.length).map(e => '원문 어휘 근거: “' + cp.slice(e.start, e.end).join('') + '”').join(' / ');
 });
-el('compare').onclick = () => serial(async () => {
-  if (isClosed()) throw Error('SESSION_CLOSED_UNRESOLVED');
-  el('generation').textContent = '실제 공개 Zoro 생성 요청 중...';
-  const binding = { session_id: session?.session_id, revision: editorRevision, text: el('text').value, review: el('review').checked };
-  try {
-    const d = await api('/api/generation-compare', { text: binding.text, synthetic_only: true });
-    if (!matchesCurrentInput(binding)) {
-      el('generation').textContent = '입력 또는 세션이 변경됐습니다. 생성 비교를 다시 실행하세요.'; return;
-    }
-    el('generation').textContent = JSON.stringify(d, null, 2) + '\n생성 레이블은 정책 판단·사기 확률이 아닙니다.';
-  } catch (e) {
-    el('generation').textContent = 'GENERATION_UNAVAILABLE / ' + e.message + '\nfixture로 대체하지 않았습니다.';
-  }
-});
 function invalidateInput() {
   editorRevision += 1; lastDecision = null;
-  el('generation').textContent = '입력 또는 옵션이 변경됐습니다. 생성 비교를 다시 실행하세요.';
+
   el('result').textContent = '';
   currentInputRequired('입력이 변경돼 이전 판단을 현재 문장에 적용할 수 없습니다.');
 }

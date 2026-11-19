@@ -34,6 +34,20 @@ MESSAGES = {
     'ASK_HUMAN': '현재 판단을 확정할 수 없습니다. 사람의 검토와 추가 확인이 필요합니다.',
 }
 TASK_INSTRUCTION = '독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.'
+MODEL_RETRY_RESOLVED = 'MODEL_RETRY_RESOLVED'
+MODEL_RETRY_REASONS = {
+    'MODEL_UNAVAILABLE', 'MODEL_RESPONSE_INVALID', 'MODEL_NOT_CONFIGURED',
+    'INVALID_TIMEOUT_CONFIG', 'INVALID_MODEL_ENDPOINT', 'HTTP_STATUS_NOT_OK',
+    'UNEXPECTED_MODEL_CONTENT_TYPE', 'RESPONSE_TOO_LARGE', 'INVALID_RESPONSE_JSON',
+    'MODEL_ID_MISMATCH', 'MODEL_ID_ECHO_REQUIRED', 'DNS_FAILURE', 'LOCAL_APP_UNREACHABLE',
+    'HTTPS_REQUIRED', 'REMOTE_TEXT_TRANSFER_NOT_CONSENTED', 'REMOTE_HOST_NOT_ALLOWLISTED',
+    'NON_PUBLIC_ENDPOINT_IP', 'REQUEST_TOO_LARGE', 'V50_LOOPBACK_ONLY', 'REMOTE_RELAY_DISABLED_V50',
+    'CONTRACT_INVALID', 'MODEL_OR_CONTRACT_FAILURE',
+}
+
+
+def _is_model_retry(reason):
+    return bool(reason and (reason in MODEL_RETRY_REASONS or reason.startswith('MODEL_TRANSPORT_ERROR_')))
 
 
 class Conflict(ValueError):
@@ -230,13 +244,10 @@ class Arena:
         reason = row['trigger_reason'] or ''
         action = row['trigger_action'] or ''
         kind, instruction = 'INDEPENDENT_CHANNEL_CHECK', TASK_INSTRUCTION
-        if reason in {'MODEL_UNAVAILABLE', 'MODEL_RESPONSE_INVALID', 'MODEL_NOT_CONFIGURED',
-                      'INVALID_TIMEOUT_CONFIG', 'INVALID_MODEL_ENDPOINT', 'HTTP_STATUS_NOT_OK',
-                      'UNEXPECTED_MODEL_CONTENT_TYPE', 'RESPONSE_TOO_LARGE', 'INVALID_RESPONSE_JSON',
-                      'MODEL_ID_MISMATCH', 'MODEL_ID_ECHO_REQUIRED', 'DNS_FAILURE', 'LOCAL_APP_UNREACHABLE',
-                      'HTTPS_REQUIRED', 'REMOTE_TEXT_TRANSFER_NOT_CONSENTED', 'REMOTE_HOST_NOT_ALLOWLISTED',
-                      'NON_PUBLIC_ENDPOINT_IP', 'REQUEST_TOO_LARGE', 'V50_LOOPBACK_ONLY', 'REMOTE_RELAY_DISABLED_V50'} or any(x in reason for x in ('UNAVAILABLE', 'CONTRACT', 'TRANSPORT')):
+        if action == 'ASK_HUMAN' and _is_model_retry(reason):
             kind, instruction = 'MODEL_RETRY', '모델 연결과 응답 계약을 확인한 뒤 같은 입력을 다시 평가하세요. 연결 실패는 안전 판정이 아닙니다.'
+            if row['status'] == MODEL_RETRY_RESOLVED:
+                instruction = '같은 입력에 유효한 모델 응답을 받아 재시도 업무를 완료했습니다.'
         elif action == 'ASK_HUMAN':
             kind, instruction = 'CLARIFY_REQUEST', '누가 무엇을 어디로 요청했는지 확인하세요. 코드·비밀번호 등 비밀정보를 추가 입력하지 말고, 알려진 독립 연락 경로로 요청을 확인하세요.'
         elif action == 'PAUSE_AND_VERIFY':
@@ -347,18 +358,27 @@ class Arena:
                     status = 'OPEN' if observation == 'UNRESOLVED' else 'REPORTED_COMPLETE'
                     c.execute('UPDATE tasks SET observation=?,status=? WHERE id=?', (observation, status, task_id))
                 result['observed_task_id'] = task_id
-            open_task = c.execute('SELECT * FROM tasks WHERE sid=? AND status=? ORDER BY created_version,id LIMIT 1',
-                                  (session_id, 'OPEN')).fetchone()
-            latest_task = c.execute('SELECT * FROM tasks WHERE sid=? ORDER BY created_version DESC,id DESC LIMIT 1',
-                                    (session_id,)).fetchone()
+            # A valid response resolves the matching connection/contract issue.
+            # Human reports and safety tasks have independent lifecycles.
+            if raw_digest is not None:
+                retry_rows = c.execute(
+                    "SELECT id,trigger_reason FROM tasks WHERE sid=? AND trigger_fingerprint=? "
+                    "AND status='OPEN' AND trigger_action='ASK_HUMAN' ORDER BY created_version,id",
+                    (session_id, text_fingerprint)).fetchall()
+                resolved_ids = [row['id'] for row in retry_rows if _is_model_retry(row['trigger_reason'])]
+                if resolved_ids:
+                    c.executemany('UPDATE tasks SET status=? WHERE id=?',
+                                  [(MODEL_RETRY_RESOLVED, tid) for tid in resolved_ids])
+                    result['resolved_retry_task_ids'] = resolved_ids
             # Key each current actionable request by input, action and reason. Past
             # session risk alone cannot create new work. Completed identical work
             # remains a report, not safety clearance.
-            requires_current_task = current_action in {'ASK_HUMAN', 'PAUSE_AND_VERIFY', 'CAUTION'}
+            requires_current_task = (current_action in {'ASK_HUMAN', 'PAUSE_AND_VERIFY', 'CAUTION'}
+                                     and result['current_turn_reason'] != 'V51_EXPLICIT_PAST_CREDENTIAL_REPORT')
             matching_task = c.execute(
                 'SELECT * FROM tasks WHERE sid=? AND trigger_fingerprint=? AND trigger_action=? AND trigger_reason=? ORDER BY created_version DESC LIMIT 1',
                 (session_id,text_fingerprint,current_action,result['current_turn_reason'])).fetchone()
-            if requires_current_task and matching_task is None:
+            if requires_current_task and (matching_task is None or matching_task['status'] == MODEL_RETRY_RESOLVED):
                 count = c.execute("SELECT COUNT(*) FROM tasks WHERE sid=? AND status='OPEN'",(session_id,)).fetchone()[0]
                 if count >= MAX_OPEN_TASKS:
                     raise Conflict('TASK_CAPACITY_REACHED')
@@ -372,11 +392,14 @@ class Arena:
             if open_task:
                 result['next_task'] = self._task_result(open_task)
                 result['task_disposition'] = 'OPEN_TASK_AVAILABLE'
-            elif latest_task:
-                result['related_task'] = self._task_result(latest_task)
-                result['task_disposition'] = 'REPORTED_TASK_RETAINED_NOT_VERIFIED'
             else:
                 result['task_disposition'] = 'NO_TASK'
+                latest_task = c.execute('SELECT * FROM tasks WHERE sid=? ORDER BY created_version DESC,id DESC LIMIT 1',
+                                        (session_id,)).fetchone()
+                if latest_task:
+                    result['related_task'] = self._task_result(latest_task)
+                    result['task_disposition'] = (MODEL_RETRY_RESOLVED if latest_task['status'] == MODEL_RETRY_RESOLVED
+                                                  else 'REPORTED_TASK_RETAINED_NOT_VERIFIED')
             result['provenance'] = {
                 'schema': 'iteraguard-provenance/1', 'received_utc': received_utc,
                 'execution_source': 'LOCAL_HTTP_MODEL_UNATTESTED' if type(self.client) is bridge.ModelClient else 'CONTROLLED_CLIENT',

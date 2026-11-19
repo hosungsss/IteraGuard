@@ -12,6 +12,7 @@
   var anomaly=new RegExp(D.regex.explicit_anomaly,'iu');
   var otherVerb=new RegExp(D.regex.other_request,'u');
   var redirect=new RegExp(D.regex.indirect_redirect,'iu');
+  function fullMatch(pattern,text){return !!pattern&&new RegExp('^(?:'+pattern+')(?![\\s\\S])','u').test(text);}
   function fail(code){var e=new Error(code);e.name='ContractError';e.code=code;throw e;}
   function fold(text){return Array.from(text).map(function(c){return D.casefold_map[c]===undefined?c:D.casefold_map[c];}).join('');}
   function contains(text,terms){var lower=fold(text);return terms.some(function(x){return lower.indexOf(fold(x))>=0;});}
@@ -59,15 +60,24 @@
     var warningClear=label==='no_request'&&ps.no_request>=threshold&&noSensitive&&sufficient
       &&out.selected_speech==='negated_or_warning'&&acts.length>0
       &&acts.every(function(c){return c.flags.warning_cue||c.flags.report_cue;})&&!imperative;
+    var form=fold(text),bounded=rules.bounded_credential_context||{};
+    var contextual=before.action==='ASK_HUMAN'&&noSensitive&&sufficient&&label==='no_request'
+      &&current<threshold&&!flags.pressure_cue&&n.q_pressure.probabilities.yes<threshold;
+    var credentialWarning=contextual&&n.q_speech.probabilities.negated_or_warning>=threshold
+      &&n.q_scam.probabilities.yes<threshold&&fullMatch(bounded.warning,form);
+    var pastReport=contextual&&ps.no_request>=threshold&&out.selected_speech==='reported_or_quoted'
+      &&fullMatch(bounded.report,form);
     var predicates=[['CURRENT_SENSITIVE_EXPOSURE',sensitive],['CURRENT_ANOMALOUS_PAYMENT',anomalousPayment],
       ['SCOPED_SENSITIVE_REQUEST',scopedExposure],['SCOPED_PAYMENT_CORROBORATION',scopedPayment],
-      ['EXPLICIT_OTHER_REQUEST',otherClear],['EXPLICIT_INFORMATION_ONLY',infoClear],['EXPLICIT_PROTECTIVE_WARNING',warningClear]];
+      ['EXPLICIT_OTHER_REQUEST',otherClear],['EXPLICIT_INFORMATION_ONLY',infoClear],['EXPLICIT_PROTECTIVE_WARNING',warningClear],
+      ['EXPLICIT_CREDENTIAL_WARNING',credentialWarning],['EXPLICIT_PAST_CREDENTIAL_REPORT',pastReport]];
     var applied='BASELINE_FALLBACK';
     if(before.action==='PAUSE_AND_VERIFY')applied='PRESERVE_EXISTING_PAUSE';
     else for(var i=0;i<predicates.length;i++){
       var name=predicates[i][0];
       if(predicates[i][1]){
         out.action=['CURRENT_SENSITIVE_EXPOSURE','CURRENT_ANOMALOUS_PAYMENT','SCOPED_SENSITIVE_REQUEST','SCOPED_PAYMENT_CORROBORATION'].indexOf(name)>=0?'PAUSE_AND_VERIFY':'NO_STRONG_SIGNAL';
+        if(name==='EXPLICIT_PAST_CREDENTIAL_REPORT')out.action='CAUTION';
         out.reason='V51_'+name;out.message=E.messages[out.action];applied=name;break;
       }
     }

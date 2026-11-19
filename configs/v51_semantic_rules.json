@@ -1,5 +1,5 @@
 {
-  "version": "v54-semantic/1",
+  "version": "v54-semantic/2",
   "status": "EXPERIMENT_CANDIDATE_NOT_PROMOTED",
   "threshold": 0.7,
   "preserve_existing_pause": true,
@@ -17,6 +17,8 @@
     "EXPLICIT_OTHER_REQUEST",
     "EXPLICIT_INFORMATION_ONLY",
     "EXPLICIT_PROTECTIVE_WARNING",
+    "EXPLICIT_CREDENTIAL_WARNING",
+    "EXPLICIT_PAST_CREDENTIAL_REPORT",
     "BASELINE_FALLBACK"
   ],
   "clearance_requirements": "Only explicit supported scope with evidence sufficient and no conflicting current sensitive/pressure indications. No identity or safety certification.",
@@ -81,5 +83,9 @@
   "decision_is_model_and_lexical_corrob_not_semantic_proof": true,
   "evidence_use": "VALID_PRESENT_AND_NOT_STRONG_INSUFFICIENT_NO_0.70; scope is independently required",
   "ordinary_request_specificity": "NEW_REQUIRED_HEAD_IN_V51_SPECIFIC_PROFILE; absent never authorizes its extra route",
-  "specified_ordinary_guard": "scope argmax must be other_request; no indirect destination/navigation clue"
+  "specified_ordinary_guard": "scope argmax must be other_request; no indirect destination/navigation clue",
+  "bounded_credential_context": {
+    "warning": "[ \\t]*(?:본인[ \\t]+확인을[ \\t]+하더라도[ \\t]+|누가[ \\t]+요청하더라도[ \\t]+)?(?:(?:지금[ \\t]+)?받은[ \\t]+)?(?:otp(?:[ \\t]+인증번호)?|인증[ \\t]*번호|일회용[ \\t]+(?:확인|인증)[ \\t]*코드)(?:를|을|는|은)?(?:[ \\t]+(?:이[ \\t]+채팅(?:방)?으로|이[ \\t]+대화에|누구에게도|다른[ \\t]+사람에게))?[ \\t]+(?:절대[ \\t]+)?(?:보내지|전송하지|전달하지|입력하지|알려[ \\t]*주지)[ \\t]+(?:마세요|마십시오|말아[ \\t]*주세요)[.!]?[ \\t]*",
+    "report": "[ \\t]*(?:어제|예전에|지난번에|지난주에)[ \\t]+(?:(?:누군가가|상대가|누가)[ \\t]+)?(?:‘(?:(?:지금[ \\t]+)?받은[ \\t]+)?(?:otp(?:[ \\t]+인증번호)?|인증[ \\t]*번호|일회용[ \\t]+(?:확인|인증)[ \\t]*코드)(?:를|을|는|은)?(?:[ \\t]+(?:이[ \\t]+채팅(?:방)?으로|이[ \\t]+대화에|누구에게도|다른[ \\t]+사람에게))?[ \\t]+(?:보내|전달해|알려|입력해)[ \\t]*주세요’|“(?:(?:지금[ \\t]+)?받은[ \\t]+)?(?:otp(?:[ \\t]+인증번호)?|인증[ \\t]*번호|일회용[ \\t]+(?:확인|인증)[ \\t]*코드)(?:를|을|는|은)?(?:[ \\t]+(?:이[ \\t]+채팅(?:방)?으로|이[ \\t]+대화에|누구에게도|다른[ \\t]+사람에게))?[ \\t]+(?:보내|전달해|알려|입력해)[ \\t]*주세요”|\"(?:(?:지금[ \\t]+)?받은[ \\t]+)?(?:otp(?:[ \\t]+인증번호)?|인증[ \\t]*번호|일회용[ \\t]+(?:확인|인증)[ \\t]*코드)(?:를|을|는|은)?(?:[ \\t]+(?:이[ \\t]+채팅(?:방)?으로|이[ \\t]+대화에|누구에게도|다른[ \\t]+사람에게))?[ \\t]+(?:보내|전달해|알려|입력해)[ \\t]*주세요\"|'(?:(?:지금[ \\t]+)?받은[ \\t]+)?(?:otp(?:[ \\t]+인증번호)?|인증[ \\t]*번호|일회용[ \\t]+(?:확인|인증)[ \\t]*코드)(?:를|을|는|은)?(?:[ \\t]+(?:이[ \\t]+채팅(?:방)?으로|이[ \\t]+대화에|누구에게도|다른[ \\t]+사람에게))?[ \\t]+(?:보내|전달해|알려|입력해)[ \\t]*주세요')[ \\t]*라고[ \\t]*(?:말했다고[ \\t]+들었어요|들었어요|말했어요|말했습니다|했어요|했습니다)[.!]?[ \\t]*"
+  }
 }

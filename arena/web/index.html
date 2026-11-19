@@ -31,12 +31,9 @@
 <button id="run">현재 문장 판단 및 확인 보고 저장</button>
 <section class="decision" aria-labelledby="action">
 <p class="eyebrow">현재 안내</p><h2 id="action">평가 전</h2>
-<p id="message">모델 미연결 시 사람 검토를 안내합니다.</p><p id="executionSource"></p><p id="currentTurn"></p><p id="sessionNotice"></p><p id="evidence"></p>
+<p id="message">모델 미연결 시 사람 검토를 안내합니다.</p><p id="executionSource"></p><p id="currentTurn"></p><p id="modelNotice" role="status"></p><p id="sessionNotice"></p><p id="evidence"></p>
 </section>
 <p>NO_STRONG_SIGNAL은 안전 보증이 아닙니다. 확률은 모델의 선택 분포이며 실제 사기 확률이 아닙니다.</p>
 <details><summary>판단 근거와 저장 기록</summary><p id="reason"></p><pre id="result"></pre></details>
-<details><summary>실행 계약과 비교 정책</summary><pre id="manifest"></pre></details>
-<section class="decision"><p class="eyebrow">공개 ZORO / 생성 비교 실험</p>
-<h2>같은 문장을 생성 모델로 비교</h2><p>Zoro-1 판단 헤드와 별도 경로입니다. 생성 레이블은 위 안내·작업·확률에 적용하지 않습니다. 최대 300자 합성 문장만 사용합니다.</p>
-<button id="compare">공개 Zoro 생성 비교 실행</button><pre id="generation">실행 전 / 생성 서버 별도 필요</pre></section>
+<details><summary>실행 계약</summary><p id="temperatureNote"></p><pre id="manifest"></pre></details>
 </main><script src="/main.js"></script></body></html>

@@ -2,7 +2,19 @@
   "package_version": "5.6",
   "original_files": 956,
   "modified_original_files": [
-    "README.md"
+    "README.md",
+    "apps/shared/v51-contract-data.js",
+    "apps/shared/v51-semantic-data.js",
+    "apps/shared/v51-semantic.js",
+    "arena/evidence.py",
+    "arena/store.py",
+    "arena/web/index.html",
+    "arena/web/main.js",
+    "configs/v51_contract.json",
+    "configs/v51_semantic_rules.json",
+    "integration/v51_policy.py",
+    "tests_v50/test_session_ui.js",
+    "tests_v56/test_evidence_queue.py"
   ],
   "files": {
     ".env.example": {
@@ -138,8 +150,8 @@
       "bytes": 2863
     },
     "README.md": {
-      "sha256": "7fe4a81bde9121abee15684712c8c80067576251d7451848d49c64a2a7c3be5f",
-      "bytes": 6614
+      "sha256": "3e4de1e0002699cb216090f474b603015b6518a10f21078dac3756517803049e",
+      "bytes": 6651
     },
     "requirements-generation.txt": {
       "sha256": "3a6903b2c3657df6db662604f88eca5ae9c47413b8e565e0aa1af7797521e5f3",
@@ -170,8 +182,8 @@
       "bytes": 1734
     },
     "arena/evidence.py": {
-      "sha256": "7ae1df54ec09e81f73438452a6070eac947df84acac9c237378265b6187972b3",
-      "bytes": 4654
+      "sha256": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+      "bytes": 4691
     },
     "arena/generation_client.py": {
       "sha256": "499cc2bfcea2dd53346dd58e3bd8bed18c21eadba0c8b8eb70bf89ccd092c053",
@@ -198,8 +210,8 @@
       "bytes": 5072
     },
     "arena/store.py": {
-      "sha256": "4b0497a36f8458166fd7f9887c746e633fd3c72388bd51493b747b37792d89db",
-      "bytes": 25709
+      "sha256": "2a3bd997769b1405efa2be7f29cd4d5d84a24b7af9ac715dabefd7fee20989aa",
+      "bytes": 27047
     },
     "arena/__init__.py": {
       "sha256": "9151e9e2cec246cac260b8fc0be47277ba75e8c23420e4f2a108240dcba05477",
@@ -222,7 +234,7 @@
       "bytes": 7390
     },
     "configs/v51_contract.json": {
-      "sha256": "92433c8bc060a9504bc03ffcd533d6dd16ece3d52bd9d534be7bc32d6ee3634c",
+      "sha256": "d8b2c9ec4d5afe380e326d2fe85bdadda826c1fa5cf4c2b626342e464dd18048",
       "bytes": 11710
     },
     "configs/v51_profiles.json": {
@@ -234,8 +246,8 @@
       "bytes": 475
     },
     "configs/v51_semantic_rules.json": {
-      "sha256": "ca2887f3f65c10d36cc93a3d7eae7635358412f1bc83d587b5081811350400a9",
-      "bytes": 2213
+      "sha256": "dd107fc0f6a292fbcc8381194378957f2387bf0d6b58f85c73e3821e9ae50763",
+      "bytes": 4444
     },
     "data/development.jsonl": {
       "sha256": "7cff94a8ab424d36622cf290632069711bb4fa30e2e57753b4a60d4d6242c955",
@@ -562,8 +574,8 @@
       "bytes": 12679
     },
     "integration/v51_policy.py": {
-      "sha256": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
-      "bytes": 7081
+      "sha256": "e24c3247314a2b0fb013befcfc7683490e0aebfcb7e276ee7bc2ffa21f52a4ce",
+      "bytes": 8211
     },
     "integration/v51_profiles.py": {
       "sha256": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
@@ -678,8 +690,8 @@
       "bytes": 18617
     },
     "tests_v50/test_session_ui.js": {
-      "sha256": "619f99b69c86408a4b9f81b60ed06fe35854154f1bbab6ae44ebb0a4eac8e91c",
-      "bytes": 8971
+      "sha256": "07b7e531386f294ce7e22c4aef9f8ed7c5555d5c2f6d03b5a2318308560662a4",
+      "bytes": 10183
     },
     "tests_v51/evidence_js_test.js": {
       "sha256": "b5530394c9e358d9f041f0db1435fd5501c2469d37ca46e85df40f3c0fc22b2b",
@@ -730,8 +742,8 @@
       "bytes": 4259
     },
     "tests_v56/test_evidence_queue.py": {
-      "sha256": "b3da0e781c9b6d8e107cd92e677657ff17967c8b9fc7b90e522001f099f3731f",
-      "bytes": 4382
+      "sha256": "14397b566c5e62c4144542ece8a263cc97dd7f35faf90be57b2e18b006749dca",
+      "bytes": 7616
     },
     "tools/app_smoke.py": {
       "sha256": "4de4c708d8740bc9cf45e18c4ae38b221701db2355818fc837833c71a6ff2e97",
@@ -1034,7 +1046,7 @@
       "bytes": 41048
     },
     "apps/shared/v51-contract-data.js": {
-      "sha256": "3bfd28127c9fc54034de472504d5ce76be3d900fc3ddfa8d2d31ed129dd58cd2",
+      "sha256": "12a49a2111108b761e7d9f6dd0f74211b06966741de3971763bea99fea5208b5",
       "bytes": 9226
     },
     "apps/shared/v51-contract.js": {
@@ -1050,12 +1062,12 @@
       "bytes": 29890
     },
     "apps/shared/v51-semantic-data.js": {
-      "sha256": "b08fef7e5bd5df98406cac995d64c8fe20d1c539bfef409a68277ca657d31814",
-      "bytes": 38232
+      "sha256": "fe59369965cfd18f1b4c82ba671871e77594be0a7b69b3cd7291477150665678",
+      "bytes": 40428
     },
     "apps/shared/v51-semantic.js": {
-      "sha256": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
-      "bytes": 6800
+      "sha256": "8dc3618e52ebfb39a8c12cea9466a01d1ca0649a810adffadebc46df93c7437b",
+      "bytes": 7657
     },
     "apps/web/app.js": {
       "sha256": "51875ce7f78401aaf213b0f6ec70dbee1576eb47b3ddadf6f156874a173d5bea",
@@ -1266,12 +1278,12 @@
       "bytes": 1468
     },
     "arena/web/index.html": {
-      "sha256": "34b4db5dc9afb39fcfb4ab54d1b2a094c014e4e5c1d226ef6e2732af4ef5cb78",
-      "bytes": 4101
+      "sha256": "7fa861791ec9db5697acf7c719dd2da2a99693f7a9e68a2671bdb427902e94c7",
+      "bytes": 3694
     },
     "arena/web/main.js": {
-      "sha256": "bcef015a626a5bf7ceeefe70252f442b19b148f38846274410ad6e0f6b3df3b4",
-      "bytes": 15136
+      "sha256": "3af99e804aaeb63f38b9c45978434f18350a9b273b53447fc806cca536a22d97",
+      "bytes": 15141
     },
     "arena/web/style.css": {
       "sha256": "fe6ead617bae7471e18abdf96f71d1ea6fdcf544e51137c170f9e94adf53de10",
@@ -3844,6 +3856,18 @@
     "수정기록/v5.1_구현기록_20261104/verification/attempt1_unsafe_fixture/source_inventory_before.json": {
       "sha256": "6df716e82db464f3c7fdcf7ab2e5beecc68eef3ece4b288e04dbbe333fea03db",
       "bytes": 122202
+    },
+    "docs/V56_ARENA_DEMO_UPDATE.md": {
+      "sha256": "6921635c6113209e6d403111d640db174c6b954dee041c5574f5dd595fc276e9",
+      "bytes": 2518
+    },
+    "tests_v56/synthetic_credential_cases.json": {
+      "sha256": "20fec079c2f8fef455145182f535f8e15c0ad8397087983cfabf59f709f9d3f4",
+      "bytes": 10211
+    },
+    "tests_v56/test_credential_context.py": {
+      "sha256": "44aed72c798efd5ac52af208a200f8fe845aa3a88da8ee298b990bd304ecdfce",
+      "bytes": 3579
     }
   }
 }

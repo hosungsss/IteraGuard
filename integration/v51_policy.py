@@ -64,15 +64,31 @@ def advisory(text,raw,profile):
                 and ev_sufficient and out.get('selected_speech')=='negated_or_warning'
                 and bool(acts) and all(c.flags.warning_cue or c.flags.report_cue for c in acts)
                 and not any(c.clean_imperative for c in clauses))
+ # Use whole-text forms so a quoted or negated segment cannot hide a new request
+ # in the same sentence. These added branches only refine baseline abstention.
+ text_form=text.casefold()
+ bounded=rules.get('bounded_credential_context',{})
+ contextual=(before['action']=='ASK_HUMAN' and no_current_sensitive and ev_sufficient
+             and scope_label=='no_request' and current<threshold and not flags.pressure_cue
+             and normalized['q_pressure']['probabilities']['yes']<threshold)
+ credential_warning=bool(contextual and bounded.get('warning')
+     and normalized['q_speech']['probabilities']['negated_or_warning']>=threshold
+     and normalized['q_scam']['probabilities']['yes']<threshold
+     and re.fullmatch(bounded['warning'],text_form))
+ past_report=bool(contextual and bounded.get('report') and ps['no_request']>=threshold
+     and out.get('selected_speech')=='reported_or_quoted'
+     and re.fullmatch(bounded['report'],text_form))
  predicates=[('CURRENT_SENSITIVE_EXPOSURE',current_sensitive),('CURRENT_ANOMALOUS_PAYMENT',current_payment),
              ('SCOPED_SENSITIVE_REQUEST',scoped_exposure),('SCOPED_PAYMENT_CORROBORATION',scoped_payment),
-             ('EXPLICIT_OTHER_REQUEST',other_clear),('EXPLICIT_INFORMATION_ONLY',info_clear),('EXPLICIT_PROTECTIVE_WARNING',warning_clear)]
+             ('EXPLICIT_OTHER_REQUEST',other_clear),('EXPLICIT_INFORMATION_ONLY',info_clear),('EXPLICIT_PROTECTIVE_WARNING',warning_clear),
+             ('EXPLICIT_CREDENTIAL_WARNING',credential_warning),('EXPLICIT_PAST_CREDENTIAL_REPORT',past_report)]
  applied='BASELINE_FALLBACK'
  if before['action']=='PAUSE_AND_VERIFY':applied='PRESERVE_EXISTING_PAUSE'
  else:
   for name,condition in predicates:
    if condition:
     action='PAUSE_AND_VERIFY' if name in ['CURRENT_SENSITIVE_EXPOSURE','CURRENT_ANOMALOUS_PAYMENT','SCOPED_SENSITIVE_REQUEST','SCOPED_PAYMENT_CORROBORATION'] else 'NO_STRONG_SIGNAL'
+    if name=='EXPLICIT_PAST_CREDENTIAL_REPORT':action='CAUTION'
     out.update(action=action,reason='V51_'+name,message=bridge.MESSAGES[bridge.Action(action)]);applied=name;break
  out.update(policy_id='legacy',semantic_policy_id=rules['version'],semantic_baseline=before,
    semantic_trace={'schema_version':'dmsg-v51-semantic/1','baseline_action':before['action'],'baseline_reason':before['reason'],

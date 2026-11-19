@@ -133,3 +133,23 @@ test('reported task disables new observation and displays current-turn vs retain
   assert.equal(a.get('observation').disabled, true); assert.match(a.get('task').textContent, /기관에서 검증한 결과가 아닙니다/);
   assert.match(a.get('currentTurn').textContent, /미감지/); assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
 });
+
+
+test('model failure and recovery remain distinct from unresolved session risk', async () => {
+  const a = await app({ deferEvaluation: true });
+  const submit = async override => {
+    const inflight = a.get('run').dispatch('click'); await settle();
+    a.pending.shift()(override); await inflight;
+  };
+  const retained = { action: 'ASK_HUMAN', reason: 'PRIOR_RISK_UNRESOLVED' };
+  await submit({ ...retained, model_status: 'FAILED', current_turn_action: 'ASK_HUMAN' });
+  assert.match(a.get('modelNotice').textContent, /연결 확인 후 같은 문장/);
+  assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
+  assert.doesNotMatch(a.get('message').textContent, /현재 판단은 완료/);
+  await submit({ ...retained, model_status: 'VALID', current_turn_action: 'NO_STRONG_SIGNAL',
+    resolved_retry_task_ids: ['retry'], next_task: undefined,
+    related_task: { id: TID, status: 'MODEL_RETRY_RESOLVED', observation: 'NOT_CHECKED' } });
+  assert.match(a.get('modelNotice').textContent, /기술 재시도 업무를 정리/);
+  assert.match(a.get('task').textContent, /모델 재시도 완료/);
+  assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
+});
