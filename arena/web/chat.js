@@ -154,7 +154,7 @@
       }
       append('assistant', result.title,
         result.introduction + '\n\n' + result.risk_notice,
-        '공식 자료 기반 규칙 안내 · Zoro 재추론·생성형 GPT 답변 아님 · 이력 변경 없음',
+        '규칙 기반 안내 · 공식 자료 참고 · Zoro 재추론·생성형 GPT 답변 아님 · 이력 변경 없음',
         result.steps, result.sources);
       status('후속 상황 안내를 확인했습니다. 새로운 행동이 생기면 아래에서 선택하세요.');
       field.value = '';
