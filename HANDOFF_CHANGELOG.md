@@ -150,3 +150,7 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 
 2026-11-20 KST | Signal prompt comparison on 1af8d50. Server-selected baseline, short and verify profiles, identical two-question output contract. New paired local evaluator checks pinned valid/test CSVs and authored counterexamples; validation-only score threshold is offline. Local Python 431/431 across default and supplemental runs, Node 143/143, 2538 controlled HTTP calls. Baseline is still the default. Real candidate inference NOT_RUN (no configured model here). Reproduction and rollback: docs/SIGNAL_PAIRED_EVALUATION_KO.md.
+
+
+## 2026-11-20 KST · 로컬 조로 551건 재측정
+성능검증에서 고정 CSV 551건을 다시 실행해 피싱 탐지율과 정확도를 갱신한다. 로컬 Arena 실행 옵션, 집계 기준, 실측 결과는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 기록했다. 운영용 투영에는 평가 CLI가 포함되지 않으므로 CLI 시험은 전체 소스 CI의 tests_v59에서 실행한다.

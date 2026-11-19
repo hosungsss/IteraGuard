@@ -7,6 +7,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from threading import Thread
 import unittest
+from unittest.mock import Mock
 
 from arena.server import Handler
 from arena.signal import ACTION_QUESTION
@@ -127,3 +128,22 @@ class SignalHttpTests(unittest.TestCase):
         status, raw = self.request('POST', '/api/signal', {'text': '가상 문자', 'synthetic_only': True})
         self.assertEqual(status, 503)
         self.assertEqual(json.loads(raw), {'error': 'SIGNAL_MODEL_UNAVAILABLE'})
+
+    def test_benchmark_requires_operator_configuration_and_empty_same_origin_start(self):
+        path = '/api/signal/benchmark'
+        for method, payload in (('GET', None), ('POST', {})):
+            status, raw = self.request(method, path, payload)
+            self.assertEqual((status, json.loads(raw)), (404, {'error': 'BENCHMARK_DISABLED'}))
+
+        benchmark = self.server.signal_benchmark = Mock()
+        benchmark.snapshot.return_value = {'status': 'idle'}
+        benchmark.start.return_value = {'status': 'running'}
+        status, raw = self.request('GET', path)
+        self.assertEqual((status, json.loads(raw)), (200, {'status': 'idle'}))
+        self.assertEqual(self.request('POST', path, {}, 'https://other.example')[0], 403)
+        self.assertEqual(self.request('POST', path, {'csv': 'arbitrary.csv'})[0], 400)
+        benchmark.start.assert_not_called()
+        benchmark.snapshot.assert_called_once_with()
+        status, raw = self.request('POST', path, {})
+        self.assertEqual((status, json.loads(raw)), (202, {'status': 'running'}))
+        benchmark.start.assert_called_once_with()

@@ -1,4 +1,4 @@
-"""Loopback-only UI/API, synthetic text; python -m arena.server."""
+"""Loopback-only UI/API; python -m arena.server."""
 import argparse
 import json
 import os
@@ -14,6 +14,7 @@ from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
 from .signal import PROFILES, evaluate_signal
+from .signal_benchmark import SignalBenchmark
 from .link_review import LinkReviewer
 from urllib.error import URLError
 
@@ -28,6 +29,10 @@ class Handler(SecureHandler):
     def do_GET(self):
         if not self._origin_safe():return self.out(403,{'error':'LOCAL_HOST_ONLY'})
         u=urlsplit(self.path)
+        if u.path=='/api/signal/benchmark':
+            benchmark=getattr(self.server,'signal_benchmark',None)
+            if benchmark is None:return self.out(404,{'error':'BENCHMARK_DISABLED'})
+            return self.out(200,benchmark.snapshot())
         if u.path=='/api/secondary/capabilities':return self.out(200,capabilities())
         if u.path=='/api/manifest':
             try:return self.out(200,self.server.arena.manifest())
@@ -62,6 +67,11 @@ class Handler(SecureHandler):
                 return d
             body=json.loads(self.rfile.read(length),object_pairs_hook=unique)
             if type(body) is not dict:raise ValueError('OBJECT_REQUIRED')
+            if self.path=='/api/signal/benchmark':
+                if body:return self.out(400,{'error':'BENCHMARK_TAKES_NO_ARGS'})
+                benchmark=getattr(self.server,'signal_benchmark',None)
+                if benchmark is None:return self.out(404,{'error':'BENCHMARK_DISABLED'})
+                return self.out(202,benchmark.start())
             if self.path=='/api/link-review':
                 if set(body) != {'text','synthetic_only','share_host','local_zoro'} or body['synthetic_only'] is not True:
                     return self.out(400,{'error':'INVALID_REVIEW'})
@@ -119,12 +129,17 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8769);p.add_argument('--db',default='runs/arena.sqlite3')
     p.add_argument('--policy',choices=['legacy','dra'],default='legacy')
     p.add_argument('--signal-profile', choices=PROFILES, default='baseline')
+    p.add_argument('--signal-benchmark-csv', type=Path,
+                   help='Enable local reruns using the pinned Korean test CSV')
     a=p.parse_args()
     from integration import v51
     arena=Arena(a.db,policy_id=a.policy,profile_id=v51.selected_profile(a.policy))
     with ThreadingHTTPServer(('127.0.0.1',a.port),Handler) as server:
         server.arena=arena
         server.signal_profile=a.signal_profile
+        if a.signal_benchmark_csv and arena.client.status()['configured']:
+            server.signal_benchmark=SignalBenchmark(
+                a.signal_benchmark_csv,arena.client,Handler._inference_slot,profile=a.signal_profile)
         server.jev_shadow=JevShadow()
         server.link_reviewer=LinkReviewer()
         print(f'http://127.0.0.1:{a.port} - SYNTHETIC ONLY / model identity UNATTESTED',flush=True)

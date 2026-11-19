@@ -31,6 +31,7 @@
   "signal_review_instructions": "four-perspectives/1",
   "signal_choice_scores_display": "ORIGINAL_MODEL_CHOICE_PERCENTAGES",
   "signal_benchmark_display": "KOREAN_MESSENGER_TEST_551_RECORDED_20261120",
+  "signal_benchmark_rerun": "LOCAL_CONFIGURED_ZORO_551",
   "signal_prompt_profiles": [
     "baseline",
     "short",
