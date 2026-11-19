@@ -127,3 +127,14 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 - Review: docs/V58_RULE_TWEAK_SHADOW_REVIEW.md
 - Checks: python -m unittest discover -s tests_rule_tweak_shadow -v
 - Original 12-case replay was derived from past development data and does not measure improvement on this main or actual Zoro. Track 1 evidence and existing Rulebook are distinct.
+
+
+## Text Decision Studio — Jev 1.14 선택형 보조 관측 (2026-11-19)
+
+문자·텍스트에 초점을 맞춘 반응형 Arena UI를 추가했습니다. 기존 Zoro-1, v5.1 정책, 세션·Task, Rulebook은 그대로 유지됩니다.
+
+- **무료 로컬 점검:** 문자에서 계좌·OTP·URL·압박 같은 표현의 존재만 검출합니다. 모델 추론이나 사기 판정이 **아닙니다**.
+- **Jev 1.14 Shadow:** TypeSafe 공식 클라우드 API를 호출하는 선택형 연결을 구현했습니다. 무료 제공 크레딧이 확인되지 않아 **기본 비활성화 및 과금 승인 필수**입니다. 사용자가 승인한 합성 메시지에 한해 수동 실행하며, Zoro 판단이나 확인업무는 변경하지 않습니다.
+- 설정/안전 근거: docs/V58_JEV_CLOUD_TEXT_STUDIO.md
+- 검증: python -m unittest discover -s tests_secondary -v / node --test tests_secondary/test_secondary_ui.js
+- 실 모델 Jev 호출·독립 정확도·실브라우저 검증은 미실행. 라이브 Jev를 검증했다고 주장하지 않습니다.
