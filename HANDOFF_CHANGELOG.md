@@ -143,3 +143,7 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 
 2026-11-20 KST | Integrated audit candidate from 7f48096 with main 695afc8 (PR #29). Two typed questions now use four internal review perspectives. Existing response keys, choice IDs, context reconciliation and score provenance retained. Separate optional link observations and explicit follow-up self-reports. Requirements, counterexamples, settings and rollback: docs/SIGNAL_REVIEW_PERSPECTIVES_KO.md. Live checkpoint effect, comprehension and provider quality unmeasured.
 Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138; exact controlled response equality 240/240 vs 695afc8 (4 grades x 20 actions x 3 contexts). License inventory 608. Local model not configured; new live inference and real provider lookup not verified.
+
+
+## 2026-11-20 KST · 성능검증과 실시간 선택 점수
+551건 저장 결과를 메인 성능검증에서 조회할 수 있다. 원본 링크와 브라우저 내 파일 지문 비교를 제공한다. 기존 신호등 결과 카드에 실제 조로 응답의 네 색 점수와 최종 등급을 표시한다. 로컬 실제 모델 브라우저 확인, Python·Node·라이선스 검증 결과는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 기록했다.

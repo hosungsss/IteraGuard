@@ -402,5 +402,79 @@ main>*{min-width:0}
 .inline-signal .eyebrow{margin:0 0 5px}
 .inline-signal-grade{display:flex;align-items:center;gap:9px;margin:0;font-size:1.05rem;font-weight:750}
 .inline-signal-grade::before{content:'';width:13px;height:13px;flex:none;border-radius:50%;background:var(--signal-color)}
+.signal-choice-scores{margin-top:14px;padding:12px 14px;border-radius:12px;background:#17212c}
+.signal-score-heading{margin:0 0 8px;color:var(--ink);font-size:.88rem;font-weight:700}
+.signal-score-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.signal-score-row{display:grid;grid-template-columns:clamp(3.25rem,13vw,5rem) minmax(0,1fr) 6.5ch;gap:10px;align-items:center;font-size:.9rem;--score-color:#bac6d8}
+.signal-score-row[data-color="red"]{--score-color:#ff9b99}
+.signal-score-row[data-color="orange"]{--score-color:#ffc889}
+.signal-score-row[data-color="green"]{--score-color:#9de6ae}
+.signal-score-label{display:flex;align-items:center;gap:7px;color:var(--score-color)}
+.signal-score-label::before{content:'';width:9px;height:9px;flex:none;border-radius:50%;background:var(--score-color)}
+.signal-score-bar{appearance:none;display:block;width:100%;height:6px;border:0;background:#2a394b;color:var(--score-color)}
+.signal-score-bar::-webkit-progress-bar{background:#2a394b}
+.signal-score-bar::-webkit-progress-value{background:var(--score-color)}
+.signal-score-bar::-moz-progress-bar{background:var(--score-color)}
+.signal-score-value{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.signal-score-note{margin:8px 0 0;font-size:.82rem}
 .inline-request{display:grid;gap:4px;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
 .inline-request strong{font-size:.875rem;color:var(--ink-2);font-weight:600}
+
+
+.signal-aux-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+}
+.signal-aux-actions a, .benchmark-source a { color: #a8caff; }
+.signal-benchmark {
+  width: min(42rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: clamp(16px, 3vw, 26px);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: #111b2d;
+  box-shadow: var(--shadow);
+}
+.signal-benchmark::backdrop { background: rgba(4, 8, 16, .75); }
+.benchmark-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.benchmark-heading h2 { font-size: 1.25rem; }
+.benchmark-meta { margin: 8px 0 0; color: var(--ink-2); font-size: .8125rem; }
+.benchmark-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.25rem, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+.benchmark-metrics > div {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--glass-2);
+}
+.benchmark-metrics dt { color: var(--ink-2); font-size: .8125rem; }
+.benchmark-metrics dd { margin: 4px 0 0; font-variant-numeric: tabular-nums; }
+.benchmark-metrics strong { font-size: 1.1875rem; }
+.benchmark-metrics span { font-size: .75rem; color: var(--ink-2); }
+.benchmark-table-scroll { overflow-x: auto; }
+.benchmark-table { width: 100%; border-collapse: collapse; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.benchmark-table caption { text-align: left; margin-bottom: 6px; font-weight: 600; }
+.benchmark-table :is(th, td) {
+  padding: 7px clamp(4px, 1.1vw, 10px);
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+.benchmark-table :is(th, td):first-child { text-align: left; }
+.benchmark-table thead th { color: var(--ink-2); }
+.benchmark-source { display: grid; gap: 6px; margin-top: 16px; }
+.benchmark-source label { margin-top: 5px; font-size: .875rem; }
+.benchmark-source input { max-width: 100%; font: inherit; font-size: .875rem; }
+.benchmark-source .benchmark-meta, .benchmark-csv-status { margin: 0; }
+.benchmark-csv-status { font-size: .875rem; }
+.benchmark-csv-status[data-state="match"] { color: #9de6ae; }
+.benchmark-csv-status[data-state="mismatch"], .benchmark-csv-status[data-state="error"] { color: #ffbd79; }

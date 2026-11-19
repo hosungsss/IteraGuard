@@ -144,6 +144,7 @@ function renderLifecycle() {
 }
 function currentInputRequired(message) {
   if (el('inlineSignal')) el('inlineSignal').hidden = true;
+  globalThis.renderSignalChoiceScores?.();
   if (el('nextAction')) { el('nextAction').textContent = ''; el('nextAction').hidden = true; }
   if (el('verdictPanel')) el('verdictPanel').hidden = false;
   el('executionSource').textContent = '현재 입력의 실행 출처는 재평가 후 확인하세요.';
@@ -155,10 +156,12 @@ async function showInlineSignal(binding, modelStatus, currentAction) {
   if (!panel) return;
   let grade = 'gray';
   let label = '회색 · 조로 신호등 결과를 받지 못했어요';
+  let scoreResponse;
   if (modelStatus === 'VALID') {
     try {
       const signal = await apiOnce('/api/signal', { text: binding.text, synthetic_only: true });
       if (Object.hasOwn(signalLabels, signal.grade)) {
+        scoreResponse = signal;
         grade = signal.grade;
         label = signalLabels[grade];
         if ((grade === 'green' && currentAction !== 'NO_STRONG_SIGNAL') ||
@@ -173,6 +176,7 @@ async function showInlineSignal(binding, modelStatus, currentAction) {
   if (lastDecision !== binding || !matchesCurrentInput(binding) || session.version !== binding.version) return;
   panel.dataset.grade = grade;
   el('inlineSignalGrade').textContent = label;
+  globalThis.renderSignalChoiceScores?.(scoreResponse?.scores, grade, scoreResponse?.context_review?.original?.grade);
   panel.hidden = false;
 }
 // Display-only projection: do not mutate d or infer that user reports clear risk.
@@ -373,6 +377,7 @@ el('run').onclick = () => {
   }
   return serial(async () => {
   if (el('inlineSignal')) el('inlineSignal').hidden = true;
+  globalThis.renderSignalChoiceScores?.();
   if (!session) await start();
   if (isClosed()) throw Error('SESSION_CLOSED_UNRESOLVED');
   el('result').textContent = '';

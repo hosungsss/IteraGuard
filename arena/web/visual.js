@@ -4,6 +4,51 @@
 (function () {
   const $ = id => document.getElementById(id);
   const el = $;
+  const signalScoreLabels = [['red', '빨강'], ['orange', '주황'], ['green', '초록'], ['gray', '회색']];
+  globalThis.renderSignalChoiceScores = function (scores, grade, originalGrade) {
+    const panel = $('inlineSignalScores');
+    if (!panel) return;
+    panel.hidden = true;
+    panel.replaceChildren();
+    const values = signalScoreLabels.map(([color]) => scores?.[color]);
+    if (!values.every(score => Number.isFinite(score) && score >= 0 && score <= 1)) return;
+
+    const title = document.createElement('p');
+    title.className = 'signal-score-heading';
+    title.textContent = '조로 선택 점수';
+    const list = document.createElement('ul');
+    list.className = 'signal-score-list';
+    signalScoreLabels.forEach(([color, label], index) => {
+      const score = values[index];
+      const percentage = (score * 100).toFixed(1) + '%';
+      const row = document.createElement('li');
+      row.className = 'signal-score-row';
+      row.dataset.color = color;
+      const name = document.createElement('span');
+      name.className = 'signal-score-label';
+      name.textContent = label;
+      const bar = document.createElement('progress');
+      bar.className = 'signal-score-bar';
+      bar.setAttribute('max', '1');
+      bar.setAttribute('value', String(score));
+      bar.setAttribute('aria-label', label + ' 선택 점수');
+      bar.setAttribute('aria-valuetext', percentage);
+      const amount = document.createElement('span');
+      amount.className = 'signal-score-value';
+      amount.setAttribute('aria-hidden', 'true');
+      amount.textContent = percentage;
+      row.append(name, bar, amount);
+      list.append(row);
+    });
+    const note = document.createElement('p');
+    note.className = 'signal-score-note hint';
+    const originalLabel = signalScoreLabels.find(([color]) => color === originalGrade)?.[1];
+    note.textContent = originalLabel && originalGrade !== grade
+      ? '모델이 고른 등급은 ' + originalLabel + '이에요. 화면 등급에는 맥락 보정이 적용됐어요.'
+      : '모델의 등급 선택에 대한 상대 점수예요.';
+    panel.replaceChildren(title, list, note);
+    panel.hidden = false;
+  };
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const body = document.body;
   if (body.dataset.signalOnly === 'true') {

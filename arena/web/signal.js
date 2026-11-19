@@ -19,6 +19,7 @@ let signalRevision = 0;
 signalText.addEventListener('input', () => {
   signalRevision += 1;
   signalResult.hidden = true;
+  globalThis.renderSignalChoiceScores?.();
   signalStatus.textContent = '';
   signalCount.textContent = Array.from(signalText.value).length + ' / 2000';
 });
@@ -35,6 +36,7 @@ signalForm.addEventListener('submit', async (event) => {
   const revision = signalRevision;
   const isCurrent = () => revision === signalRevision && text === signalText.value;
   signalResult.hidden = true;
+  globalThis.renderSignalChoiceScores?.();
   signalRun.disabled = true;
   signalStatus.textContent = '조로가 문장을 판단 중이에요.';
 
@@ -69,6 +71,7 @@ signalForm.addEventListener('submit', async (event) => {
       requestedAction.textContent = action.label;
       const note = document.getElementById('signalExplanation');
       if (note) note.textContent = typeof explanation === 'string' ? explanation : '본문 기반 판단이며 신원과 안전은 확인되지 않았습니다.';
+      globalThis.renderSignalChoiceScores?.(scores, grade, context_review?.original?.grade);
       signalResult.hidden = false;
       const sensitive = ['share_auth_secret', 'grant_remote_access', 'pay_to_changed_account', 'pay_unlock_fee'];
       signalStatus.textContent = grade === 'green' && sensitive.includes(action.id)
@@ -86,3 +89,50 @@ signalForm.addEventListener('submit', async (event) => {
     signalRun.disabled = false;
   }
 });
+
+
+(() => {
+  const opener = document.getElementById('openSignalBenchmark');
+  const dialog = document.getElementById('signalBenchmark');
+  const input = document.getElementById('signalBenchmarkCsv');
+  const status = document.getElementById('benchmarkCsvStatus');
+  if (!opener || !dialog || !input || !status) return;
+
+  opener.addEventListener('click', () => {
+    if (!dialog.open) dialog.showModal();
+  });
+
+  let selection = 0;
+  function showStatus(message, state = '') {
+    status.textContent = message;
+    status.dataset.state = state;
+  }
+
+  input.addEventListener('change', async () => {
+    const revision = ++selection;
+    const file = input.files[0];
+    if (!file) {
+      showStatus('');
+      return;
+    }
+    const mismatch = '2026-11-20 측정에 사용한 원본 CSV와 다른 파일이에요.';
+    if (file.size !== Number(input.dataset.bytes)) {
+      showStatus(mismatch, 'mismatch');
+      return;
+    }
+    showStatus('선택한 CSV의 지문을 확인하고 있어요.');
+    try {
+      const bytes = await file.arrayBuffer();
+      const hash = await globalThis.crypto.subtle.digest('SHA-256', bytes);
+      const hex = Array.from(new Uint8Array(hash), (byte) => byte.toString(16).padStart(2, '0')).join('');
+      if (revision !== selection) return;
+      if (hex === input.dataset.sha256) {
+        showStatus('저장된 551건 결과에 사용한 원본 CSV와 일치해요.', 'match');
+      } else {
+        showStatus(mismatch, 'mismatch');
+      }
+    } catch {
+      if (revision === selection) showStatus('이 브라우저에서 파일 지문을 확인하지 못했어요.', 'error');
+    }
+  });
+})();

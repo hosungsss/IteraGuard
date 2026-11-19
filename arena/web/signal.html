@@ -39,14 +39,51 @@
       <p id="sampleNotice" class="hint"></p>
       <p id="signalStatus" class="hint" role="status"></p>
     </form>
-    <p><a href="/link-review">링크 평판 따로 확인하기</a></p>
+    <div class="signal-aux-actions">
+      <a href="/link-review">링크 평판 따로 확인하기</a>
+      <button id="openSignalBenchmark" class="secondary" type="button" aria-haspopup="dialog" aria-controls="signalBenchmark">성능검증</button>
+    </div>
 
     <section class="verdict glass inline-signal" id="inlineSignal" aria-label="분석 결과" aria-live="polite" hidden>
       <h2 id="inlineSignalGrade" class="inline-signal-grade"></h2>
       <p class="inline-request"><strong>발신자가 지금 뭘 해달라고 하나요?</strong>
         <span id="inlineRequestedAction"></span></p>
+      <div class="signal-choice-scores" id="inlineSignalScores" hidden></div>
       <p id="signalExplanation" class="hint"></p>
     </section>
   </main>
+
+  <dialog id="signalBenchmark" class="signal-benchmark" aria-labelledby="benchmarkTitle">
+    <div class="benchmark-heading">
+      <h2 id="benchmarkTitle">성능검증</h2>
+      <form method="dialog"><button class="ghost" type="submit" autofocus>닫기</button></form>
+    </div>
+    <p class="benchmark-meta">한국어 메신저피싱 테스트 CSV 551건 · 2026-11-20 저장 결과</p>
+    <dl class="benchmark-metrics">
+      <div><dt>피싱 탐지율</dt><dd><strong>34.0%</strong> <span>(17/50)</span></dd></div>
+      <div><dt>정상 오탐률</dt><dd><strong>9.2%</strong> <span>(46/501)</span></dd></div>
+      <div><dt>엄격 일치율</dt><dd><strong>63.2%</strong> <span>(348/551)</span></dd></div>
+    </dl>
+    <div class="benchmark-table-scroll">
+      <table class="benchmark-table">
+        <caption>정답 라벨별 실제 표시 색</caption>
+        <thead><tr><th scope="col">정답</th><th scope="col">빨강</th><th scope="col">주황</th><th scope="col">초록</th><th scope="col">회색</th><th scope="col">합계</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">정상</th><td>28</td><td>18</td><td>331</td><td>124</td><td>501</td></tr>
+          <tr><th scope="row">피싱</th><td>8</td><td>9</td><td>12</td><td>21</td><td>50</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="benchmark-meta">빨강·주황을 경보로 집계했어요. 엄격 일치율은 정상의 초록과 피싱의 경보를 정답으로 세었어요.</p>
+    <p class="benchmark-meta">Arena <code>0f2aeaa</code> · 로컬 Zoro-1 <code>bf1b76b9</code> · 온도 1.59</p>
+    <div class="benchmark-source">
+      <a href="https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/messenger_phishing_dataset/kor/test.csv" target="_blank" rel="noopener noreferrer">측정에 사용한 원본 CSV</a>
+      <label for="signalBenchmarkCsv">내 CSV가 이 결과의 원본인지 확인</label>
+      <input id="signalBenchmarkCsv" type="file" accept=".csv,text/csv" aria-describedby="benchmarkCsvHelp benchmarkCsvStatus"
+             data-bytes="299076" data-sha256="31bed1a63581de43b1c81b84c8714873199ace1f92a4d93830478842df5443bf">
+      <p id="benchmarkCsvHelp" class="benchmark-meta">브라우저에서 파일의 SHA-256 지문을 비교해요.</p>
+      <p id="benchmarkCsvStatus" class="benchmark-csv-status" role="status"></p>
+    </div>
+  </dialog>
 </body>
 </html>
