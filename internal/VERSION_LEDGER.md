@@ -213,3 +213,8 @@ Verification evidence: CI and main read-back after merge, not guessed; full brow
 
 
 2026-11-19 UI state separation: current-turn judgment, previous unresolved risk and next action have distinct display fields. Independent-analysis start preserves prior sessions/tasks; failed start preserves input/result. Consumer internal task-edit controls remain hidden. Python 234 pass/2 skipped; Node 68 pass; Edge 1440/390 controlled browser paths pass. No policy change, real Zoro or hosted deployment claim. See docs/UI_STATE_SEPARATION_VALIDATION.md.
+
+
+## 2026-11-19 · Arena 문자 신호등 미리보기
+기준 main 41461f98deee145200a9ac230ab553341d56a80d. /signal과 /api/signal을 추가했습니다. 모델 요청에는 현재 문자와 빨강·주황·초록·회색을 고르는 q_signal 한 문항이 들어갑니다. 기존 11문항과 세션 처리의 호출 경로를 유지합니다.
+검증: 통제 HTTP 및 업무 테스트 17건, 실제 로컬 합성 호출 6건. 인용·신고 한 건은 빨강으로 분류됐습니다. 독립 정확도, 모델 신원 인증은 미검증입니다.

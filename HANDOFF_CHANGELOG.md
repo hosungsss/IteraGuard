@@ -112,3 +112,9 @@ Validation: PR/head and merge CI outcomes to be read back; no live Jev API, no a
 
 
 2026-11-19 UI state separation: current-turn judgment, previous unresolved risk and next action have distinct display fields. Independent-analysis start preserves prior sessions/tasks; failed start preserves input/result. Consumer internal task-edit controls remain hidden. Python 234 pass/2 skipped; Node 68 pass; Edge 1440/390 controlled browser paths pass. No policy change, real Zoro or hosted deployment claim. See docs/UI_STATE_SEPARATION_VALIDATION.md.
+
+
+## 2026-11-19 · 문자 신호등 웹 미리보기
+기준 main 41461f98deee145200a9ac230ab553341d56a80d. Arena 홈에서 /signal로 연결합니다. POST /api/signal은 합성·비식별 텍스트에 q_signal 선택형 질문 한 개만 로컬 Zoro로 전송하고 공용 응답 계약으로 검증합니다. 기존 Arena 판단, 이전 위험, 확인 업무는 기존 경로에서 처리합니다.
+검증: HTTP·업무 회귀 테스트 17건 통과. 실제 로컬 Zoro의 합성 6건 중 5건은 설정한 기대와 같았고, 과거 인용 신고 1건은 빨강으로 분류됐습니다. 화면은 등급 기준과 대응 안내를 표시합니다. 독립 정확도 평가는 미실행입니다.
+복구: PR을 되돌린 뒤 신호등 웹 경로 연결을 제거합니다. DB 마이그레이션은 없습니다.

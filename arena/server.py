@@ -13,6 +13,7 @@ from .store import Arena,Conflict
 from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
+from .signal import evaluate_signal
 from urllib.error import URLError
 
 class Handler(SecureHandler):
@@ -41,6 +42,7 @@ class Handler(SecureHandler):
             except Conflict as e:return self.out(404,{'error':str(e)})
             except ValueError:return self.out(400,{'error':'INVALID_REQUEST'})
         names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js','/chat.js':'chat.js'}
+        names.update({'/signal':'signal.html','/signal.js':'signal.js','/signal.css':'signal.css'})
         if u.path not in names:return self.out(404,{'error':'NOT_FOUND'})
         data=(Path(__file__).parent/'web'/names[u.path]).read_bytes()
         self.send_response(200);self.headers_safe('text/javascript; charset=utf-8' if u.path.endswith('.js') else 'text/css; charset=utf-8' if u.path.endswith('.css') else 'text/html; charset=utf-8')
@@ -59,6 +61,13 @@ class Handler(SecureHandler):
                 return d
             body=json.loads(self.rfile.read(length),object_pairs_hook=unique)
             if type(body) is not dict:raise ValueError('OBJECT_REQUIRED')
+            if self.path=='/api/signal':
+                if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:
+                    return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
+                try:
+                    return self._infer_once(lambda: evaluate_signal(self.server.arena.client,body['text']))
+                except (bridge.ModelUnavailable,bridge.ContractError):
+                    return self.out(503,{'error':'SIGNAL_MODEL_UNAVAILABLE'})
             if self.path=='/api/secondary/check':
                 if not set(body)<= {'text','synthetic_only','mode','consent_external'} or not {'text','synthetic_only','mode'}<=set(body):raise ValueError('SECONDARY_CONTRACT_INVALID')
                 if body['mode']=='offline':
