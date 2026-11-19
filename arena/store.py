@@ -20,7 +20,7 @@ from uuid import uuid4
 from urllib.parse import urlsplit
 
 from integration.v48 import bridge
-from integration import v50, v51
+from integration import v50, v51, rule_tweak_shadow
 
 SCHEMA_VERSION = 1
 MAX_OPEN_TASKS = 64
@@ -325,6 +325,12 @@ class Arena:
             outcome = v51.unavailable_current(str(exc), policy_id=self.policy_id, profile_id=self.profile_id)
             ms = None
         outcome = v51.apply_local_layers(text, outcome, user_review=user_review, consent=consent)
+        # Observational extension only. No new model call and no effect on policy,
+        # session hold, task idempotency, user review, or retry recovery.
+        if ms is not None:
+            outcome = rule_tweak_shadow.observe(
+                text, raw, outcome, profile_id=self.profile_id, policy_id=self.policy_id)
+
         result = {k: deepcopy(outcome[k]) for k in ('action', 'reason', 'policy_id', 'manifest_fingerprint',
                   'model_status', 'execution_trace', 'abstention', 'error_code', 'link_summary',
                   'question_profile_id', 'question_binding', 'semantic_policy_id', 'evidence_display_trace') if k in outcome}
