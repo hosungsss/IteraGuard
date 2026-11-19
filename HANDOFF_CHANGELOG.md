@@ -34,3 +34,12 @@ Purpose: connect industry question books to existing installed Arena ModelClient
 Added: rulebook/zoro_bridge.py, tools/rulebook_live_v58.py, synthetic text fixture, mock-only tests and source guide. Explicit opt-in is required; no external business side effects.
 Source: locally configured /v1/systemone only; response modes distinguish test double, unavailable and unverified model. Real model/checkpoint validation NOT_RUN here.
 Read-back: check corresponding PR/CI/main SHA and an independently authorized real synthetic Zoro probe before claiming live success. Rollback by stopping opt-in CLI; existing Arena unaffected.
+
+
+## 2026-11-19 / v5.8 Rule Tweak Candidate 1 shadow-only integration (append-only)
+**Purpose:** adopt measurable bounded Korean warning/report hypotheses without destroying v5.8 Arena v5.6 retry/task state and without treating past replay as a new model improvement.
+**Provenance:** user-uploaded IteraGuard_v56_RuleTweak_Candidate1.zip SHA-256 c82708fc31ca6825991099e53a1ccf9c71dfd6cd9b4ee514c0159d7fc115dc9d, derived from historical 17e3bf5b1dbf7288254c7950bce991e81419fb42; GitHub integration base main 7e43d6afbc5fa720d83fa72921c7c09520e27cd8. Separate setup guide matched ZIP README.
+**Change:** integration/rule_tweak_shadow.py, configs/rule_tweak_shadow.json, tests_rule_tweak_shadow, minimal hook in arena/store.py, test CI additions, .gitignore, docs, README, AGENTS and state updates. Did NOT overwrite old store.py, contract generator, application builds, or model/head.
+**Safety:** default SHADOW, off supported, enforce blocked. Preserve decision/task/retry, no external calls or raw messages in added trace. Trace includes candidate/baseline, local source/config hashes and explicit evidence caveat.
+**Verification:** source/CI tests are attributable to exact PR and commit only; historic 12-case replay is development-derived, not independently replicated here. Actual Zoro inference, desktop/mobile browser, independent locked labels, NPU and production rollout NOT_RUN.
+**Rollback:** revert PR or set DMSG_RULE_TWEAK_MODE=off and restart; no SQLite migration. Do not import historical installer/backups to public Git. Full detail docs/V58_RULE_TWEAK_SHADOW_REVIEW.md; canonical version history internal/VERSION_LEDGER.md.
