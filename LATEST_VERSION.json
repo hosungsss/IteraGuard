@@ -46,5 +46,6 @@
   "pointerhead_multi_lookup_architecture": "README_DESIGN_WITH_LOCAL_SMOKE_TEST",
   "scenario_execution_evidence": "AB_LOCAL_ZORO_62c0acf_C_BROWSER_RECOVERY_d1a8664",
   "arena_retry_recovery_ui": "LOCAL_ZORO_BROWSER_SCENARIO_C_VERIFIED",
-  "signal_material_review": "LIVE_ZORO_CONFIRMATION_15_PAIRED"
+  "signal_material_review": "LIVE_ZORO_CONFIRMATION_15_PAIRED",
+  "readme_public_demo_top": true
 }

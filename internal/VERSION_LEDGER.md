@@ -320,3 +320,7 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 - 기준 main `39e2d78`. `q_action`의 기존 ID `check_content_or_link` 설명에 명확한 업무 자료 검토를 추가했다. 선택지 20개와 신호등 규칙은 기존 계약을 따른다.
 - 실제 Zoro로 확인용 문자 15건 및 합성 반례 4건을 검토했다. 회의 자료는 회색에서 초록으로 바뀌었고 허용 기준 9/15건은 같았다. 정확한 색상 일치는 5/15건에서 6/15건으로 늘었다. [사례별 실행 기록](../docs/SIGNAL_MATERIAL_REVIEW_20261120.json)
+
+## 2026-11-20 KST · README 공개 시연과 기술 소개
+
+- 기준 main `a4c9bc3`. [README](../README.md) 상단에 공개 시연 링크와 Zoro 선택형 판단, 원문 구절 강조, 로컬 회계 절차 조회를 소개한다. README에 고정 로컬 주소를 두는 대신 터미널 출력 경로를 안내한다.
