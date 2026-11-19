@@ -14,3 +14,7 @@ v5.8 optional Rulebook System One bridge: rulebook/zoro_bridge.py can call the e
 
 
 V5.8 Rule Tweak Candidate 1 (2026-11-19): an independent bounded Korean warning/report observer is now attached to the Python Arena response path in SHADOW mode only. The original published v5.6/v5.1 semantic policy, persistent task processing, model transport, and optional industry Rulebook remain authoritative and unmodified. Enforce is blocked; optional DMSG_RULE_TWEAK_MODE=off disables observation. New independent evaluation, actual Zoro re-inference, browser/device/NPU validation and general accuracy gains remain NOT_VERIFIED. See docs/V58_RULE_TWEAK_SHADOW_REVIEW.md and exact commit CI.
+
+
+## 2026-11-19 — v5.8 Text Decision Studio Jev Shadow source candidate
+A text/SMS-first standalone Arena secondary workspace has been added to current main development work. Free mode is a local lexical indicator only. Jev 1.14 is pinned to the official TypeSafe API but is strictly off by default until separately configured billing authorization (server-side key + LIVE_ENABLE=1 + SPEND_ACK), plus per-message browser consent. No real Jev API invocation, no authorized cost, no commercial free route, no independent Jev-vs-Zoro accuracy evidence. No existing Zoro policy/task/risk semantics are intentionally changed. New high-contrast responsive UI and CI tests are source level; device/browser visual verification remains NOT_RUN. See docs/V58_JEV_CLOUD_TEXT_STUDIO.md.
