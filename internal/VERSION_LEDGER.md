@@ -145,3 +145,15 @@ CR-20261119-04. User authorized source upgrade/merge/push following prior code a
 첫 입력과 예시 버튼에 거래처 계좌 변경, 보안팀 예방 공지, 방법이 빠진 확인 요청, 정산 진행 보고를 담았다. 같은 기록에서 확인 요청, 계좌 변경, 진행 보고를 차례대로 판단해 업무 보존을 시연할 수 있다.
 브라우저 스크립트 회귀는 각 예시가 편집기 값을 채우고, 사용자가 판단을 눌렀을 때만 해당 문장이 평가로 전달되는지 확인한다.
 별도 SQLite에서 실제 로컬 Zoro-1의 응답 4건을 받았다. 사전 기대와 일치한 확인 요청, 계좌 변경, 진행 보고는 같은 기록에서 두 확인 업무를 보존했다. 새 기록에서 평가한 예방 공지는 `MODEL_NONE_BUT_ACTION_TERMS_PRESENT` 이유로 사람 검토와 추가 업무를 만들었다. 이 결과는 시연에 쓰는 합성 예시에 대한 점검이다.
+
+
+## 2026-11-19 pre-demo validation, uncommitted
+Base 046feef; branch fix/pre-demo-validation. Added model configuration-only status, UI auth/busy/non-JSON/timeout errors, reset new-session source label, per-process inference slot, UTF-8 server re-exec. Policy fingerprints unchanged. Original UI new regressions: 1 pass/4 fail; modified selected suites total 168 pass/2 skipped including added timeout test. Actual model attempt MODEL_NOT_CONFIGURED. Hosted site PowerShell root 200/API401; Python403; authenticated flow/model identity/mobile NOT_RUN. No commit/push/deploy; temporary server stopped. Full report outputs/demo_fix_20261119/IteraGuard_Latest_Validation_and_Fixes.md outside source root. Rollback local changes only; no migration.
+
+
+## 2026-11-19 bounded automatic recovery, uncommitted
+User requested self-recovery during execution. Added browser transport recovery, max two retries, exact frozen request identity, stored-state reconciliation before inference resend, stop on auth/state/contract ambiguity. Existing policy and model status unchanged. UI reports recovery. Mock-network/minimal-DOM tests total 37 pass; live Zoro/hosted authenticated/mobile NOT_RUN. No commit/push/deploy. See docs/AUTO_RECOVERY_KO.md.
+
+
+## 2026-11-19 PR publication authorized
+User authorized commit/push and PR/Actions. Rebased recovery changes onto main 05103c7; preserved both append-only ledgers and contextual demo UI. Local Node 38 passed and runtime tests 2 passed after integration. GitHub Actions result must be checked on PR HEAD. Actual Zoro and hosted authenticated demo remain unverified. No main merge or site deployment included.

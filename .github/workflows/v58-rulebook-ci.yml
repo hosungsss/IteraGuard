@@ -23,6 +23,9 @@ jobs:
           python -m unittest discover -s tests_v56 -v
           python -m unittest discover -s tests_v54 -v
           python -m unittest discover -s tests_v51 -v
+          python -m unittest discover -s tests_demo_validation -v
+          node --test tests_demo_validation/test_api_ui.js
+          node --test tests_demo_validation/test_recovery.js
           node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js
       - name: Python and JavaScript syntax
         run: |
