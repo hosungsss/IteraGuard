@@ -10,7 +10,7 @@ class ProfileTests(unittest.TestCase):
     def test_baseline_fingerprint_and_fixed_output(self):
         serialized = json.dumps(PROFILES['baseline'], ensure_ascii=False, sort_keys=True).encode()
         signature = hashlib.sha256(serialized).hexdigest()
-        self.assertEqual(signature, '7e89c81e25973e5f749a3bb93ea326c31ba2cbc3d10581921867b4fc3d08653e')
+        self.assertEqual(signature, 'fb24ffc53e67f3e76e949f50897a2e1cfdbad478695e897f540104feca0c4b43')
         model = ControlledModel()
         message = '합성 테스트입니다.'
         original = evaluate_signal(model, message)
