@@ -43,5 +43,6 @@
   "signal_high_recall_local_evaluation": "PINNED_KOREAN_TEST_551_MODEL_RESPONSE_UNATTESTED",
   "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN",
   "signal_accounting_procedure_display": "OPTIONAL_LOCAL_ZORO_CATALOG_LOOKUP",
-  "pointerhead_multi_lookup_architecture": "README_DESIGN_WITH_LOCAL_SMOKE_TEST"
+  "pointerhead_multi_lookup_architecture": "README_DESIGN_WITH_LOCAL_SMOKE_TEST",
+  "scenario_execution_evidence": "ABC_LOCAL_HTTP_ZORO_RUN_62c0acf"
 }

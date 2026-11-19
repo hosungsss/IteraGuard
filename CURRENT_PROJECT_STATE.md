@@ -101,3 +101,8 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 ## PointerHead를 활용한 조회 확장 구상 · 2026-11-20 KST
 
 회계 확인 절차가 적용된 main 00bc93b를 기준으로, 위험 등급·공개 사례 ID·사내 매뉴얼 ID를 한 요청에서 함께 읽는 구조를 [README](README.md#확장-아이디어--pointerhead를-검색-엔진으로-활용)에 기록했다. 합성 요청 한 건에서 세 응답을 확인했다.
+
+
+## 최신 소스에서 실제 Zoro로 A·B·C 실행 · 2026-11-20 KST
+
+소스 62c0acf에서 인증번호 요구와 경고 비교, 미해결 송금 위험 보존, 격리 연결 단절과 복구를 실행했다. 실제 응답 지문과 Arena 내보내기를 대조한 [실행 로그 3종](docs/execution-logs/2026-11-20/README.md)을 별도로 기록했다.
