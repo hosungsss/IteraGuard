@@ -6,7 +6,7 @@
 
 ## Zoro-1을 어떻게 활용했나요?
 
-의심계는 Zoro-1의 **PointerHead**로 등급과 행동을 판단하고, 원문 구절을 비교하고, 상황에 맞는 확인 절차를 찾습니다. [Zoro-1 모델 설명](https://huggingface.co/trillionlabs/Zoro-1)
+핵심 분석은 **외부 AI API 호출 없이 직접 구동한 Zoro-1**으로 처리합니다. 조로가 원문에 대해 정해진 보기 중에서 고르는 기능인 **PointerHead**를 활용해 위험 등급과 요청 행동을 판단하고, 확인할 원문 구절을 비교하고, 상황에 맞는 회계 절차 ID를 찾습니다. [Zoro-1 모델 설명](https://huggingface.co/trillionlabs/Zoro-1)
 
 | 기술 | 실제 작동 방식 |
 | --- | --- |
