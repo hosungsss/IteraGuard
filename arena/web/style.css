@@ -444,6 +444,8 @@ main>*{min-width:0}
 .benchmark-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .benchmark-heading h2 { font-size: 1.25rem; }
 .benchmark-meta { margin: 8px 0 0; color: var(--ink-2); font-size: .8125rem; }
+.benchmark-run { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 14px; }
+.benchmark-run .benchmark-meta { flex: 1 1 12rem; margin: 0; }
 .benchmark-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8.25rem, 1fr));

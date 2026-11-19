@@ -98,9 +98,134 @@ signalForm.addEventListener('submit', async (event) => {
   const status = document.getElementById('benchmarkCsvStatus');
   if (!opener || !dialog || !input || !status) return;
 
+  const run = document.getElementById('runSignalBenchmark');
+  const runStatus = document.getElementById('benchmarkRunStatus');
+  const local = ['localhost', '127.0.0.1', '[::1]'].includes(globalThis.location?.hostname);
+  let requestPending = false;
+  let running = false;
+  let refreshOnly = false;
+  let poll;
+
+  function showBenchmarkResult(result) {
+    const grades = ['red', 'orange', 'green', 'gray'];
+    const normal = result.counts?.normal;
+    const phishing = result.counts?.phishing;
+    const finish = new Date(result.finished_at);
+    const valid = (row, total) => grades.every(grade => Number.isInteger(row?.[grade]) && row[grade] >= 0) &&
+      grades.reduce((sum, grade) => sum + row[grade], 0) === total;
+    if (!valid(normal, 501) || !valid(phishing, 50) ||
+        typeof result.finished_at !== 'string' || !Number.isFinite(finish.getTime()) ||
+        !Number.isInteger(result.elapsed_ms) || result.elapsed_ms < 0) {
+      throw new Error('INVALID_BENCHMARK_RESULT');
+    }
+
+    for (const [id, row] of [['benchmarkNormal', normal], ['benchmarkPhishing', phishing]]) {
+      const { cells } = document.getElementById(id);
+      grades.forEach((grade, index) => { cells[index + 1].textContent = String(row[grade]); });
+    }
+    const detected = phishing.red + phishing.orange;
+    const falselyFlagged = normal.red + normal.orange;
+    const metrics = [
+      ['benchmarkRecall', detected, 50],
+      ['benchmarkFpr', falselyFlagged, 501],
+      ['benchmarkStrict', normal.green + detected, 551],
+      ['benchmarkBinary', normal.green + normal.gray + detected, 551]
+    ];
+    for (const [id, numerator, denominator] of metrics) {
+      const node = document.getElementById(id);
+      node.querySelector('strong').textContent = (100 * numerator / denominator).toFixed(1) + '%';
+      node.querySelector('span').textContent = '(' + numerator + '/' + denominator + ')';
+    }
+    const date = new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short' }).format(finish);
+    document.getElementById('benchmarkResultMeta').textContent =
+      '한국어 메신저피싱 테스트 CSV 551건 · ' + date + ' 측정 결과';
+    const profile = ['baseline', 'short', 'verify'].includes(result.profile) ? ' · 프로필 ' + result.profile : '';
+    document.getElementById('benchmarkModelMeta').textContent =
+      '로컬 Arena' + profile + ' · 실행 ' + (result.elapsed_ms / 1000).toFixed(1) + '초';
+  }
+
+  function showBenchmarkDisabled() {
+    running = false;
+    refreshOnly = false;
+    run.disabled = true;
+    run.textContent = '재측정 시작';
+    runStatus.textContent = '로컬 조로를 연결하고 Arena를 --signal-benchmark-csv 옵션으로 시작하면 재측정할 수 있어요.';
+  }
+
+  async function requestBenchmark(method = 'GET') {
+    if (requestPending) return;
+    clearTimeout(poll);
+    requestPending = true;
+    run.disabled = true;
+    if (method === 'POST') runStatus.textContent = '로컬 Arena에 재측정을 요청하고 있어요.';
+    try {
+      const options = { method };
+      if (method === 'POST') {
+        options.headers = { 'Content-Type': 'application/json' };
+        options.body = '{}';
+      }
+      if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
+        options.signal = AbortSignal.timeout(10000);
+      }
+      const response = await fetch('/api/signal/benchmark', options);
+      const state = await response.json();
+      if (response.status === 404 && state?.error === 'BENCHMARK_DISABLED') {
+        showBenchmarkDisabled();
+        return;
+      }
+      if (!response.ok || typeof state?.available !== 'boolean' ||
+          !['idle', 'running', 'completed', 'failed'].includes(state.status) ||
+          state.total !== 551 || !Number.isInteger(state.completed) ||
+          state.completed < 0 || state.completed > state.total ||
+          (state.status === 'completed' && (state.completed !== state.total || !state.result))) {
+        throw new Error('INVALID_BENCHMARK_STATE');
+      }
+      if (state.result) showBenchmarkResult(state.result);
+      if (!state.available) {
+        showBenchmarkDisabled();
+        return;
+      }
+      running = state.status === 'running';
+      refreshOnly = false;
+      run.disabled = running;
+      run.textContent = '재측정 시작';
+      if (running) {
+        runStatus.textContent = '재측정 중 · ' + state.completed + '/' + state.total + '건 완료';
+      } else if (state.status === 'failed') {
+        if (state.error === 'BENCHMARK_CSV_INVALID') {
+          runStatus.textContent = '설정한 CSV 원본을 확인하지 못했어요. Arena의 CSV 경로를 확인하고 다시 측정해 주세요.';
+        } else if (state.error === 'BENCHMARK_MODEL_UNAVAILABLE') {
+          runStatus.textContent = '조로 응답을 확인하지 못했어요. 로컬 모델 연결 상태를 확인하고 다시 측정해 주세요.';
+        } else {
+          runStatus.textContent = '재측정을 마치지 못했어요. 잠시 후 다시 측정해 주세요.';
+        }
+      } else {
+        runStatus.textContent = state.status === 'completed' ? '551건 재측정을 완료했어요.' : '원본 CSV 551건을 로컬 조로로 측정해요.';
+      }
+    } catch {
+      refreshOnly = true;
+      run.disabled = running;
+      run.textContent = '상태 다시 확인';
+      runStatus.textContent = running ? '진행 상태를 다시 확인하고 있어요.' : '로컬 Arena 상태를 확인하지 못했어요. 상태를 다시 확인해 주세요.';
+    } finally {
+      requestPending = false;
+      if (running && dialog.open) poll = setTimeout(() => requestBenchmark(), 1500);
+    }
+  }
+
   opener.addEventListener('click', () => {
-    if (!dialog.open) dialog.showModal();
+    if (dialog.open) return;
+    dialog.showModal();
+    if (!local || !run || !runStatus) return;
+    runStatus.textContent = '로컬 Arena 상태를 확인하고 있어요.';
+    return requestBenchmark();
   });
+  if (local && run && runStatus) {
+    run.addEventListener('click', () => {
+      if (!run.disabled) return requestBenchmark(refreshOnly ? 'GET' : 'POST');
+    });
+    dialog.addEventListener('close', () => clearTimeout(poll));
+  }
 
   let selection = 0;
   function showStatus(message, state = '') {

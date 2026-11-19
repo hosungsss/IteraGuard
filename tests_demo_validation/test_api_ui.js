@@ -217,28 +217,50 @@ test('an out-of-range score set clears bars while preserving a valid result', as
   const script = fs.readFileSync(path.join(WEB, 'signal.js'), 'utf8');
   const csv = Buffer.from('label,text\n0,synthetic example\n');
 
-  function setup(crypto = webcrypto) {
+  function setup(crypto = webcrypto, { hostname, respond } = {}) {
     const handlers = {};
     const node = (id) => ({
       dataset: {},
       textContent: '',
-      addEventListener(name, handler) { handlers[id + ':' + name] = handler; }
+      children: {},
+      addEventListener(name, handler) { handlers[id + ':' + name] = handler; },
+      querySelector(selector) { return this.children[selector] ||= node(id + ':' + selector); }
     });
     const nodes = Object.fromEntries([
       'text', 'signalForm', 'run', 'signalStatus', 'inlineSignal', 'inlineSignalGrade',
       'inlineRequestedAction', 'inlineSignalScores', 'charCount', 'openSignalBenchmark',
-      'signalBenchmark', 'signalBenchmarkCsv', 'benchmarkCsvStatus'
+      'signalBenchmark', 'signalBenchmarkCsv', 'benchmarkCsvStatus', 'runSignalBenchmark',
+      'benchmarkRunStatus', 'benchmarkResultMeta', 'benchmarkModelMeta', 'benchmarkNormal',
+      'benchmarkPhishing', 'benchmarkRecall', 'benchmarkFpr', 'benchmarkStrict', 'benchmarkBinary'
     ].map((id) => [id, node(id)]));
+    nodes.runSignalBenchmark.disabled = true;
+    nodes.benchmarkRecall.querySelector('strong').textContent = '34.0%';
+    nodes.benchmarkNormal.cells = Array.from({ length: 6 }, (_, i) => node('normal:' + i));
+    nodes.benchmarkPhishing.cells = Array.from({ length: 6 }, (_, i) => node('phishing:' + i));
     const input = nodes.signalBenchmarkCsv;
     input.dataset.bytes = String(csv.length);
     input.dataset.sha256 = createHash('sha256').update(csv).digest('hex');
     const dialog = nodes.signalBenchmark;
     const opens = [];
     dialog.showModal = () => { dialog.open = true; opens.push(true); };
+    const requests = [];
+    const timers = new Map();
+    let nextTimer = 0;
     const context = {
       document: { getElementById(id) { return nodes[id] || null; } },
       crypto,
-      fetch() { assert.fail('CSV verification must not make a network request'); }
+      location: { hostname },
+      async fetch(url, options) {
+        requests.push([url, options.method, options.body, options.headers?.['Content-Type']]);
+        assert.ok(respond, 'CSV verification and the public dialog must not make a network request');
+        return respond();
+      },
+      setTimeout(handler, ms) {
+        assert.equal(ms, 1500);
+        timers.set(++nextTimer, handler);
+        return nextTimer;
+      },
+      clearTimeout(id) { timers.delete(id); }
     };
     context.window = context;
     vm.runInNewContext(script, context);
@@ -246,7 +268,11 @@ test('an out-of-range score set clears bars while preserving a valid result', as
       input.files = file ? [file] : [];
       return handlers['signalBenchmarkCsv:change']();
     };
-    return { opens, open: handlers['openSignalBenchmark:click'], choose, status: nodes.benchmarkCsvStatus };
+    const close = () => { dialog.open = false; return handlers['signalBenchmark:close'](); };
+    return {
+      nodes, opens, open: handlers['openSignalBenchmark:click'], close, choose,
+      run: handlers['runSignalBenchmark:click'], requests, timers, status: nodes.benchmarkCsvStatus
+    };
   }
 
   function fileFrom(bytes) {
@@ -256,7 +282,7 @@ test('an out-of-range score set clears bars while preserving a valid result', as
   test('benchmark dialog presents the fixed run and identifies its source CSV', () => {
     assert.match(html, /aria-haspopup="dialog" aria-controls="signalBenchmark">성능검증<\/button>/);
     assert.match(html, /<dialog id="signalBenchmark"[^>]* aria-labelledby="benchmarkTitle">/);
-    assert.match(html, /2026-11-20 저장 결과/);
+    assert.match(html, /2026-11-20 02:34 KST 재측정 결과/);
     assert.match(html, /<th scope="row">정상<\/th><td>28<\/td><td>18<\/td><td>331<\/td><td>124<\/td><td>501<\/td>/);
     assert.match(html, /<th scope="row">피싱<\/th><td>8<\/td><td>9<\/td><td>12<\/td><td>21<\/td><td>50<\/td>/);
     assert.match(html, /blob\/438cfbb251410fee791f49d75d928520847030c3\/messenger_phishing_dataset\/kor\/test\.csv/);
@@ -294,5 +320,93 @@ test('an out-of-range score set clears bars while preserving a valid result', as
     resolve(Uint8Array.from(csv).buffer);
     await pending;
     assert.equal(ui.status.dataset.state, 'mismatch');
+  });
+
+  const snapshot = (change = {}) => ({
+    available: true, status: 'idle', completed: 0, total: 551, error: null, result: null, ...change
+  });
+  const measurement = {
+    counts: { normal: { red: 6, orange: 4, green: 451, gray: 40 }, phishing: { red: 18, orange: 22, green: 5, gray: 5 } },
+    finished_at: '2026-11-20T12:00:00Z', elapsed_ms: 3210, profile: 'verify'
+  };
+  const reply = (status, state) => ({ status, ok: status >= 200 && status < 300, json: async () => state });
+
+  test('a local benchmark requests an empty JSON start and updates metrics only from a finished result', async () => {
+    const responses = [
+      reply(200, snapshot()),
+      reply(202, snapshot({ status: 'running', completed: 7 })),
+      reply(200, snapshot({ status: 'completed', completed: 551, result: measurement }))
+    ];
+    const ui = setup(webcrypto, { hostname: '127.0.0.1', respond: () => responses.shift() });
+    await ui.open();
+    assert.equal(ui.nodes.runSignalBenchmark.disabled, false);
+    await ui.run();
+    assert.deepEqual(ui.requests, [
+      ['/api/signal/benchmark', 'GET', undefined, undefined],
+      ['/api/signal/benchmark', 'POST', '{}', 'application/json']
+    ]);
+    assert.equal(ui.nodes.runSignalBenchmark.disabled, true);
+    assert.match(ui.nodes.benchmarkRunStatus.textContent, /7\/551/);
+    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '34.0%');
+    assert.equal(ui.timers.size, 1);
+    await [...ui.timers.values()][0]();
+    assert.equal(ui.timers.size, 0);
+    assert.equal(ui.nodes.runSignalBenchmark.disabled, false);
+    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '80.0%');
+    assert.equal(ui.nodes.benchmarkFpr.querySelector('span').textContent, '(10/501)');
+    assert.equal(ui.nodes.benchmarkStrict.querySelector('span').textContent, '(491/551)');
+    assert.equal(ui.nodes.benchmarkBinary.querySelector('span').textContent, '(531/551)');
+    assert.equal(ui.nodes.benchmarkPhishing.cells[2].textContent, '22');
+    assert.match(ui.nodes.benchmarkModelMeta.textContent, /verify.*3\.2초/);
+  });
+
+  test('reopening a running benchmark resynchronizes progress and a failure preserves its last complete result', async () => {
+    const responses = [
+      reply(200, snapshot({ status: 'running', completed: 7, result: measurement })),
+      reply(200, snapshot({ status: 'running', completed: 25, result: measurement })),
+      reply(200, snapshot({ status: 'failed', completed: 25, error: 'BENCHMARK_MODEL_UNAVAILABLE', result: measurement }))
+    ];
+    const ui = setup(webcrypto, { hostname: 'localhost', respond: () => responses.shift() });
+    await ui.open();
+    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '80.0%');
+    ui.close();
+    assert.equal(ui.timers.size, 0);
+    await ui.open();
+    assert.match(ui.nodes.benchmarkRunStatus.textContent, /25\/551/);
+    await [...ui.timers.values()][0]();
+    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '80.0%');
+    assert.equal(ui.nodes.runSignalBenchmark.disabled, false);
+    assert.match(ui.nodes.benchmarkRunStatus.textContent, /모델 연결 상태/);
+  });
+
+  test('public and unconfigured local views retain the saved benchmark with a disabled rerun', async () => {
+    const publicView = setup(webcrypto, { hostname: 'arena.example' });
+    await publicView.open();
+    assert.equal(publicView.requests.length, 0);
+    assert.equal(publicView.nodes.runSignalBenchmark.disabled, true);
+    assert.match(html, /재측정은 로컬 Arena에서 실행할 수 있습니다/);
+    const disabled = setup(webcrypto, {
+      hostname: '127.0.0.1', respond: () => reply(404, { error: 'BENCHMARK_DISABLED' })
+    });
+    await disabled.open();
+    assert.equal(disabled.nodes.runSignalBenchmark.disabled, true);
+    assert.match(disabled.nodes.benchmarkRunStatus.textContent, /--signal-benchmark-csv/);
+    assert.equal(disabled.nodes.benchmarkRecall.querySelector('strong').textContent, '34.0%');
+  });
+
+  test('a disconnected status check retries with GET and never starts a run automatically', async () => {
+    let failed = false;
+    const ui = setup(webcrypto, { hostname: 'localhost', respond: () => {
+      if (!failed) {
+        failed = true;
+        throw new Error('disconnected');
+      }
+      return reply(200, snapshot());
+    } });
+    await ui.open();
+    assert.match(ui.nodes.runSignalBenchmark.textContent, /상태 다시 확인/);
+    await ui.run();
+    assert.deepEqual(ui.requests.map(request => request[1]), ['GET', 'GET']);
+    assert.equal(ui.nodes.runSignalBenchmark.textContent, '재측정 시작');
   });
 }
