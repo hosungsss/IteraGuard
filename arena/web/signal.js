@@ -16,7 +16,43 @@ const requestedAction = document.getElementById('inlineRequestedAction');
 const signalConfirmation = document.getElementById('inlineConfirmation');
 const signalConfirmationText = document.getElementById('inlineConfirmationText');
 const signalCount = document.getElementById('charCount');
+const accountingProcedure = document.getElementById('accountingProcedure');
+const accountingTitle = document.getElementById('accountingTitle');
+const accountingAccount = document.getElementById('accountingAccount');
+const accountingAccountLabel = document.getElementById('accountingAccountLabel');
+const accountingAccountNumber = document.getElementById('accountingAccountNumber');
+const accountingSteps = document.getElementById('accountingSteps');
 let signalRevision = 0;
+
+function clearAccountingProcedure() {
+  if (!accountingProcedure) return;
+  accountingProcedure.hidden = true;
+  accountingTitle.textContent = '';
+  accountingAccount.hidden = true;
+  accountingAccountLabel.textContent = '';
+  accountingAccountNumber.textContent = '';
+  accountingSteps.replaceChildren();
+}
+
+function renderAccountingProcedure(result) {
+  if (!accountingProcedure) return;
+  const hasText = value => typeof value === 'string' && value.trim() !== '';
+  if (result?.selected === 'none' || !hasText(result?.selected) || !hasText(result?.title) ||
+      !Array.isArray(result.steps) || !result.steps.length || !result.steps.every(hasText)) return;
+
+  accountingTitle.textContent = result.title;
+  if (hasText(result.account?.label) && hasText(result.account?.number)) {
+    accountingAccountLabel.textContent = result.account.label;
+    accountingAccountNumber.textContent = result.account.number;
+    accountingAccount.hidden = false;
+  }
+  accountingSteps.replaceChildren(...result.steps.map(text => {
+    const step = document.createElement('li');
+    step.textContent = text;
+    return step;
+  }));
+  accountingProcedure.hidden = false;
+}
 
 function clearConfirmationExcerpt() {
   if (!signalConfirmation || !signalConfirmationText) return;
@@ -41,6 +77,7 @@ signalText.addEventListener('input', () => {
   signalRevision += 1;
   signalResult.hidden = true;
   clearConfirmationExcerpt();
+  clearAccountingProcedure();
   globalThis.renderSignalChoiceScores?.();
   signalStatus.textContent = '';
   signalCount.textContent = Array.from(signalText.value).length + ' / 2000';
@@ -59,6 +96,7 @@ signalForm.addEventListener('submit', async (event) => {
   const isCurrent = () => revision === signalRevision && text === signalText.value;
   signalResult.hidden = true;
   clearConfirmationExcerpt();
+  clearAccountingProcedure();
   globalThis.renderSignalChoiceScores?.();
   signalRun.disabled = true;
   signalStatus.textContent = '조로가 문장을 판단 중이에요.';
@@ -84,8 +122,9 @@ signalForm.addEventListener('submit', async (event) => {
       }
       return;
     }
-    const { grade, scores, requested_action: action, explanation, context_review, confirmation_excerpt } =
-      await response.json();
+    const {
+      grade, scores, requested_action: action, explanation, context_review, confirmation_excerpt, accounting_procedure
+    } = await response.json();
     if (!Object.hasOwn(signalLabels, grade) || typeof action?.label !== 'string' || !action.label.trim()) {
       throw new Error('INVALID_SIGNAL_RESULT');
     }
@@ -98,6 +137,7 @@ signalForm.addEventListener('submit', async (event) => {
       if (note) note.textContent = typeof explanation === 'string' ? explanation : '본문 기반 판단이며 신원과 안전은 확인되지 않았습니다.';
       globalThis.renderSignalChoiceScores?.(scores, grade, context_review?.original?.grade);
       signalResult.hidden = false;
+      renderAccountingProcedure(accounting_procedure);
       const sensitive = ['share_auth_secret', 'grant_remote_access', 'pay_to_changed_account', 'pay_unlock_fee'];
       signalStatus.textContent = grade === 'green' && sensitive.includes(action.id)
         ? '두 답이 엇갈립니다. 민감한 행동은 보류하고 평소 사용하던 공식 연락처에서 요청을 확인하세요.'

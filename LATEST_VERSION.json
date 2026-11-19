@@ -41,5 +41,6 @@
   "signal_profile_default": "high-recall",
   "signal_profile_candidate_live_evaluation": "NOT_RUN",
   "signal_high_recall_local_evaluation": "PINNED_KOREAN_TEST_551_MODEL_RESPONSE_UNATTESTED",
-  "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN"
+  "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN",
+  "signal_accounting_procedure_display": "OPTIONAL_LOCAL_ZORO_CATALOG_LOOKUP"
 }
