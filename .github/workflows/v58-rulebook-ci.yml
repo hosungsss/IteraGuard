@@ -23,18 +23,21 @@ jobs:
           python -m unittest discover -s tests_v56 -v
           python -m unittest discover -s tests_v54 -v
           python -m unittest discover -s tests_v51 -v
-          node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js
+          python -m unittest discover -s tests_secondary -v
+          node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js tests_secondary/test_secondary_ui.js
       - name: Python and JavaScript syntax
         run: |
           python -m compileall -q rulebook arena integration/rule_tweak_shadow.py tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
           node --check arena/web/main.js
+          node --check arena/web/secondary.js
       - name: Append-only ledgers and required docs
         run: |
           python - <<'PY'
           import subprocess
           from pathlib import Path
           for path in ('internal/VERSION_LEDGER.md','HANDOFF_CHANGELOG.md'):
-              old=subprocess.run(['git','show',f'origin/main:{path}'],capture_output=True)
+              base=('origin/main' if __import__('os').environ.get('GITHUB_EVENT_NAME') == 'pull_request' else 'HEAD^1')
+              old=subprocess.run(['git','show',f'{base}:{path}'],capture_output=True)
               if old.returncode != 0: raise SystemExit('LEDGER_BASE_UNAVAILABLE '+path)
               if not Path(path).read_bytes().startswith(old.stdout):
                   raise SystemExit('LEDGER_NOT_APPEND_ONLY '+path)
