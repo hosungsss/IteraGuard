@@ -35,3 +35,6 @@ V5.9 source candidate (2026-11-19, branch feature/v59-arena-ui-performance): req
 2026-11-19: User requested removal of the footer IteraGuard label. Removed the footer element; header brand and page title remain unchanged. Hosted deployment remains unverified.
 
 2026-11-19: Remove visible top runtime copy at user request. Keep hidden status hooks for existing scripts; no connection, retry, authentication or decision behavior changes. Hosted deployment remains unverified.
+
+
+2026-11-19 guided conversation source candidate: an in-memory chat-style surface now follows each accepted Zoro/independent-policy evaluation. Read-only server POST /api/conversation/followup checks matching session/version, OPEN lifecycle and last accepted EVALUATE before returning one of 9 conservative KISA/FTC-sourced incident-response scenario instructions. Never treats follow-up questions as new suspect SMS, never calls Zoro/Jev/GPT for follow-up, never updates Tasks or cleared-risk, and does not transmit raw follow-up question or persist chat transcript. Freeform Korean text is a bounded intent matcher, not unrestricted assistant generation. Fixture and model-failure provenance remain visible. Preserve all v5.9 3D UI and existing flow. Reference docs/V59_GUIDED_CONVERSATION_ARCHITECTURE.md; actual CI and browser/live Zoro tests separately.
