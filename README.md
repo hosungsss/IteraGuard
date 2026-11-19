@@ -131,3 +131,12 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 - Review: docs/V58_RULE_TWEAK_SHADOW_REVIEW.md
 - Checks: python -m unittest discover -s tests_rule_tweak_shadow -v
 - Original 12-case replay was derived from past development data and does not measure improvement on this main or actual Zoro. Track 1 evidence and existing Rulebook are distinct.
+
+
+## v5.9 공식 사기 유형·Jev Shadow·Ambient 3D 확장 (2026-11-19)
+- 실제 공개기관 KISA·FTC·FBI IC3 등의 **사기 유형 자료 15건**에서 30종의 재구성 합성 메시지와 12종의 오탐 방지 반례를 수록했습니다. docs/research/SCAM_EVIDENCE_ATLAS_2026_KO.md. **실제 피해 문자 원문도, 정답 라벨도, fine-tuning 결과도 아닙니다.**
+- TypeSafe Jev 1.14.0 선택형 보조 클라우드: 별도 과금 운영자 설정 + API 키 + 입력별 외부전송 동의가 필요합니다. 기본적으로 꺼져 있습니다. **무료 API가 아닙니다.** 로컬 무료 어휘 점검은 모델 추론이 아닙니다. docs/V58_JEV_CLOUD_TEXT_STUDIO.md.
+- 기존 v5.9 유리 구체·5단계 판단 UI를 유지하면서 배경에 흐릿한 절차적 3D 토러스 매듭, 반례 샘플 버튼, 보조 관측 패널을 추가했습니다. 감소 모션·숨김 탭에서는 애니메이션을 줄이거나 정지합니다.
+- 기존 Zoro-1·v5.1 정책·보류 업무·Rulebook은 그대로 유지합니다. Zoro 모델 가중치는 변경/재학습되지 않았습니다.
+- 확인: python -m unittest discover -s tests_v59 -v && python -m unittest discover -s tests_secondary -v && node --test tests_v59/test_ambient_research_ui.js tests_secondary/test_secondary_ui.js.
+- 실제 Jev/Zoro 신규 추론 성능 향상, 전체 독립 인간라벨 평가, 실기기 렌더링은 미검증입니다.

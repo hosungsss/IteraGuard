@@ -210,3 +210,30 @@ body[data-flash="1"] .verdict{animation:arrive .7s cubic-bezier(.2,.8,.2,1)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .glass{background:rgba(20,25,37,.96)}
 }
+
+
+/* V5.9 additive visual depth: atmospheric projected 3D, never on top of controls. */
+.ambient-3d{position:fixed;inset:0;display:block;z-index:0;pointer-events:none;opacity:.64;filter:blur(2.6px);mix-blend-mode:screen;transform:translateZ(0)}
+/* Preserve existing sticky header and fixed modal layering. */
+.topbar,.runtime-notices,main{z-index:1}
+.topbar{z-index:20}.sheet{z-index:31}.scrim{z-index:30}
+.reference-panel,.secondary-lab{margin:23px 0 30px;padding:clamp(20px,3vw,30px);border:1px solid rgba(174,194,226,.17);border-radius:22px}
+.reference-panel h2,.secondary-lab h2{font-size:clamp(19px,2.6vw,26px)}
+.reference-list{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 11px}
+.reference-list button{min-height:44px;padding:10px 14px;color:#dce6fb;border:1px solid rgba(156,174,218,.35);background:rgba(24,38,61,.67);border-radius:999px;font-weight:700;font-size:12px;cursor:pointer}
+.reference-list button:hover:not(:disabled){background:rgba(58,80,131,.52);border-color:rgba(154,206,247,.6)}
+.secondary-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:19px 0}
+.secondary-option{display:flex;flex-direction:column;gap:8px;min-width:0;padding:23px;border:1px solid rgba(179,201,233,.19);border-radius:17px;background:rgba(15,27,46,.5)}
+.secondary-option h3{font-size:18px;color:#f3f8ff;margin:0}
+.secondary-option .hint{font-size:12px;line-height:1.75;flex:1}
+.secondary-option .secondary{min-height:44px;align-self:stretch}
+.external-consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.6;color:#c4d0e3}
+.external-consent input{width:20px;height:20px;flex-shrink:0;margin:2px 0 0;accent-color:#8eaaff}
+.secondary-output{background:rgba(6,14,25,.6);border:1px solid rgba(151,174,220,.2);border-radius:15px;padding:19px}
+.secondary-output strong{display:block;color:#e9f3ff;font-size:13px;margin-bottom:9px}
+.secondary-output p{white-space:pre-line;overflow-wrap:anywhere;color:#d3dfef;font-size:12px}
+.secondary-output small{color:#a4b7d3;font-size:11px}
+.secondary-lab button:focus-visible,.reference-list button:focus-visible{outline:3px solid #bcecff;outline-offset:3px}
+@media(max-width:700px){.secondary-options{grid-template-columns:1fr}.ambient-3d{opacity:.35;filter:blur(5px)}}
+@media(prefers-reduced-motion:reduce){.ambient-3d{opacity:.26;filter:blur(5px)}}
+@media print{.ambient-3d{display:none}}

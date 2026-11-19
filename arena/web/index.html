@@ -9,6 +9,7 @@
 </head>
 <body data-verdict="idle" data-phase="idle">
 <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="ambient3d" class="ambient-3d" aria-hidden="true"></canvas>
 
 <header class="topbar glass">
   <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span><b>의심계</b><small>IteraGuard</small></span></div>
@@ -118,6 +119,47 @@
     <p class="hint">보고는 사용자가 입력한 결과이며 기관이 검증한 결과가 아니에요. 보고만으로 위험이 해제되지 않아요.</p>
   </section>
 
+
+  <section class="reference-panel glass" aria-labelledby="referenceTitle">
+    <div class="section-head"><h2 id="referenceTitle">공식 사례 기반 시나리오</h2><p class="pipe-meta">출처가 검증된 유형 · 문장 자체는 재구성</p></div>
+    <p class="hint">KISA·FTC·FBI 공개 자료에 근거한 유형입니다. 버튼은 테스트용 합성 문장만 불러오며, 판정이나 학습을 자동으로 실행하지 않습니다.</p>
+    <div class="reference-list" role="group" aria-label="공식 유형 기반 합성 SMS 및 이메일">
+      <button type="button" data-research="delivery">택배 주소 오류</button>
+      <button type="button" data-research="wedding">청첩장 사칭</button>
+      <button type="button" data-research="card">카드발급 원격앱</button>
+      <button type="button" data-research="invoice">이메일 수취계좌 변경</button>
+      <button type="button" data-research="toll">미납 과태료</button>
+      <button type="button" data-research="safety">보안 예방 경고</button>
+    </div>
+    <p id="researchNotice" role="status" class="hint">유형별 근거와 검증 상태: docs/research/SCAM_EVIDENCE_ATLAS_2026_KO.md</p>
+  </section>
+
+  <section class="secondary-lab glass" aria-labelledby="secondaryHeading">
+    <div class="section-head"><h2 id="secondaryHeading">두 번째 관측 · 별도 실험</h2><p class="pipe-meta">Zoro 판단에 영향 없음</p></div>
+    <p class="hint">무료 로컬 어휘 점검 또는 선택형 TypeSafe Jev 1.14를 비교할 수 있습니다. 무료 점검은 AI가 아니며 실제 사기 여부를 판정하지 않습니다.</p>
+    <div class="secondary-options">
+      <div class="secondary-option">
+        <p class="eyebrow">LOCAL · NO COST</p>
+        <h3>무료 문자 패턴 점검</h3>
+        <p class="hint">위험 어휘와 인용·경고 표현의 존재만 확인합니다.</p>
+        <button id="offlineCheck" type="button" class="secondary">로컬 표현 점검</button>
+      </div>
+      <div class="secondary-option">
+        <p class="eyebrow">REMOTE · PAID / OPT-IN</p>
+        <h3>Jev 1.14 Shadow</h3>
+        <p class="hint">공식 API는 무료가 아닙니다. 서버의 별도 과금 승인과 매 요청 동의가 필요합니다.</p>
+        <label class="external-consent"><input id="jevConsent" type="checkbox"><span>합성 문장을 외부 TypeSafe에 전송하며 과금 가능성을 이해합니다.</span></label>
+        <button id="jevCheck" type="button" class="secondary" disabled>Jev 별도 관측</button>
+      </div>
+    </div>
+    <p id="secondaryCapability" role="status" class="hint">Jev 상태 확인 전 · 기본 비활성화</p>
+    <div class="secondary-output">
+      <strong id="secondaryStatus" role="status">보조 관측을 실행하지 않았습니다.</strong>
+      <p id="secondaryResult"></p>
+      <small id="secondarySource">모델 출처 · 무료 어휘 점검 · 판단 결과를 혼동하지 않습니다.</small>
+    </div>
+  </section>
+
   <footer class="foot">
     <p>합성 문장 전용 · 실제 송금·연락·차단 없음 · 모델 신원 미인증 · 결과는 안전 보증이 아닙니다.</p>
     <p>Rulebook v5.8 PROPOSAL_ONLY · 엔진 5.6 · 계약 5.1</p>
@@ -158,7 +200,10 @@
   </details>
 </aside>
 
+<script src="/ambient3d.js"></script>
 <script src="/visual.js"></script>
 <script src="/main.js"></script>
+<script src="/secondary.js"></script>
+<script src="/research.js"></script>
 </body>
 </html>

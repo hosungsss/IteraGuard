@@ -39,3 +39,7 @@ Revert the new Git commit through a separate PR. Back up and restore SQLite only
 
 ## Rule Tweak Candidate 1 integration (v5.8)
 Before editing Korean warning/report normalization, read docs/V58_RULE_TWEAK_SHADOW_REVIEW.md. Candidate ZIP is a historical v5.6 source, NOT a drop-in patch for current main. Preserve current arena/store.py retry/task behavior; never run the old installer against main. DMSG_RULE_TWEAK_MODE defaults to shadow; enforce is blocked. The observer must never alter actions, probability distributions, session risk, or user authority. Add independent locked counterexamples and a separately approved PR before proposing an enforcement migration. Always record the reason for an omitted/failed shadow evaluation.
+
+
+## v5.9 source-based fraud atlas and Jev optional observer
+Read docs/research/SCAM_EVIDENCE_ATLAS_2026_KO.md before writing fraud datasets or examples. Source-documented *campaign types* are NOT independently proven labels for reconstructed messages. Do not train on the file, change Zoro weights, or present accuracy improvements as measured without separately authorized dataset, training hardware and independent locked evaluation. Read docs/V58_JEV_CLOUD_TEXT_STUDIO.md before any Jev changes. Do not bypass TypeSafe billing or send private text externally. Preserve coreCanvas, v5.9 visual.js and Zoro primary authority; ambient3d.js is purely decorative with reduced-motion and hidden-tab safety. Append-only ledgers and reverse evidence links remain mandatory.
