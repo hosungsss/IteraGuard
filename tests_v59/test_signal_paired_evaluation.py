@@ -23,7 +23,8 @@ class PairedEvaluationTests(unittest.TestCase):
         with TemporaryDirectory() as tmp:
             out = Path(tmp) / 'complete'
             summary = bench.run(model, data, out, 'TEST_DOUBLE')
-            self.assertEqual(len(model.requests), 18)
+            self.assertEqual(len(model.requests), 24)
+            self.assertEqual(summary['test']['high-recall']['display']['n'], 2)
             self.assertEqual(summary['test']['verify']['display']['n'], 2)
             self.assertTrue(all(n == 0 for n in summary['test']['verify']['paired_vs_baseline'].values()))
             self.assertNotIn('합성 평문', (out / 'predictions.jsonl').read_text(encoding='utf8'))

@@ -30,14 +30,16 @@
   "link_evidence_candidate": "LOCAL_REVIEW_ONLY_UNATTESTED",
   "signal_review_instructions": "four-perspectives/1",
   "signal_choice_scores_display": "ORIGINAL_MODEL_CHOICE_PERCENTAGES",
-  "signal_benchmark_display": "KOREAN_MESSENGER_TEST_551_RECORDED_20261120",
+  "signal_benchmark_display": "KOREAN_MESSENGER_TEST_551_HIGH_RECALL_RECORDED_20261120",
   "signal_benchmark_rerun": "LOCAL_CONFIGURED_ZORO_551",
   "signal_prompt_profiles": [
     "baseline",
     "short",
-    "verify"
+    "verify",
+    "high-recall"
   ],
-  "signal_profile_default": "baseline",
+  "signal_profile_default": "high-recall",
   "signal_profile_candidate_live_evaluation": "NOT_RUN",
+  "signal_high_recall_local_evaluation": "PINNED_KOREAN_TEST_551_MODEL_RESPONSE_UNATTESTED",
   "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN"
 }

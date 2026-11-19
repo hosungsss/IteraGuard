@@ -11,7 +11,7 @@ from time import monotonic, sleep
 
 from integration.v48 import bridge
 
-from .signal import evaluate_signal
+from .signal import DEFAULT_PROFILE, evaluate_signal
 
 
 CSV_SHA256 = '31bed1a63581de43b1c81b84c8714873199ace1f92a4d93830478842df5443bf'
@@ -50,7 +50,7 @@ def load_cases(path):
 class SignalBenchmark:
     """One background run per Arena instance. Publish aggregates after completion."""
 
-    def __init__(self, csv_path, client, inference_slot, *, profile='baseline'):
+    def __init__(self, csv_path, client, inference_slot, *, profile=DEFAULT_PROFILE):
         self.csv_path = csv_path
         self.client = client
         self.inference_slot = inference_slot

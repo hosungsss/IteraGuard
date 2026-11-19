@@ -13,7 +13,7 @@ from .store import Arena,Conflict
 from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
-from .signal import PROFILES
+from .signal import DEFAULT_PROFILE, PROFILES
 from .signal_excerpt import evaluate_signal_card
 from .signal_benchmark import SignalBenchmark
 from .link_review import LinkReviewer
@@ -83,7 +83,7 @@ class Handler(SecureHandler):
                 if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:
                     return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
                 try:
-                    profile = getattr(self.server, 'signal_profile', 'baseline')
+                    profile = getattr(self.server, 'signal_profile', DEFAULT_PROFILE)
                     return self._infer_once(lambda: evaluate_signal_card(self.server.arena.client, body['text'], profile=profile))
                 except (bridge.ModelUnavailable,bridge.ContractError):
                     return self.out(503,{'error':'SIGNAL_MODEL_UNAVAILABLE'})
@@ -129,7 +129,7 @@ def main():
         os.execv(sys.executable,[sys.executable,'-X','utf8','-m','arena.server',*sys.argv[1:]])
     p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8769);p.add_argument('--db',default='runs/arena.sqlite3')
     p.add_argument('--policy',choices=['legacy','dra'],default='legacy')
-    p.add_argument('--signal-profile', choices=PROFILES, default='baseline')
+    p.add_argument('--signal-profile', choices=PROFILES, default=DEFAULT_PROFILE)
     p.add_argument('--signal-benchmark-csv', type=Path,
                    help='Enable local reruns using the pinned Korean test CSV')
     a=p.parse_args()

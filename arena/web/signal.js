@@ -149,12 +149,12 @@ signalForm.addEventListener('submit', async (event) => {
       grades.forEach((grade, index) => { cells[index + 1].textContent = String(row[grade]); });
     }
     const detected = phishing.red + phishing.orange;
-    const falselyFlagged = normal.red + normal.orange;
+    const normalWithoutAlert = normal.green + normal.gray;
     const metrics = [
       ['benchmarkRecall', detected, 50],
-      ['benchmarkFpr', falselyFlagged, 501],
+      ['benchmarkNormalRate', normalWithoutAlert, 501],
       ['benchmarkStrict', normal.green + detected, 551],
-      ['benchmarkBinary', normal.green + normal.gray + detected, 551]
+      ['benchmarkBinary', normalWithoutAlert + detected, 551]
     ];
     for (const [id, numerator, denominator] of metrics) {
       const node = document.getElementById(id);
@@ -164,7 +164,7 @@ signalForm.addEventListener('submit', async (event) => {
     const date = new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short' }).format(finish);
     document.getElementById('benchmarkResultMeta').textContent =
       '한국어 메신저피싱 테스트 CSV 551건 · ' + date + ' 측정 결과';
-    const profile = ['baseline', 'short', 'verify'].includes(result.profile) ? ' · 프로필 ' + result.profile : '';
+    const profile = ['baseline', 'short', 'verify', 'high-recall'].includes(result.profile) ? ' · 프로필 ' + result.profile : '';
     document.getElementById('benchmarkModelMeta').textContent =
       '로컬 Arena' + profile + ' · 실행 ' + (result.elapsed_ms / 1000).toFixed(1) + '초';
   }
