@@ -50,3 +50,13 @@ Read-back: check corresponding PR/CI/main SHA and an independently authorized re
 ## 2026-11-19 / Arena 웹 합성 예시
 계좌 변경을 첫 입력으로 표시하고 상황 중심 예시 네 개를 제공한다. 방법이 빠진 요청을 먼저 판단한 다음, 같은 기록에서 계좌 변경과 정산 진행 보고를 판단하면 확인 업무 두 건을 보존하는 흐름을 재현할 수 있다.
 실제 조로에서 이 세 판단은 사전 기대와 일치했다. 별도 보안 공지는 사람 검토와 추가 확인 업무를 만들었다. 브라우저 스크립트 회귀에서 예시 선택과 명시적 판단의 요청 수를 확인한다.
+
+
+## 2026-11-19 — Jev 1.14 optional cloud shadow + premium text studio (append-only)
+**Objective:** add a truthful free text-only local-check workflow and a dormant opt-in Jev 1.14 shadow cloud integration to support Korean SMS/message analysis, improve presentation hierarchy, and preserve Zoro's existing independent policy and durable session/task behavior.
+**Base:** GitHub main 05103c762395221b4473dcd94aede13d9f5829b9, after teammate contextual synthetic-message enhancement. No force-push, history replacement, or reset.
+**Sources:** TypeSafe official models/system-one and free-credit help center; Vercel AI Gateway pricing and public staff clarification. Details in docs/V58_JEV_CLOUD_TEXT_STUDIO.md.
+**Files:** new arena/secondary.py, arena/web/secondary.js, tests_secondary/*, docs/V58_JEV_CLOUD_TEXT_STUDIO.md; updated arena/server.py, arena/web/index.html, arena/web/style.css, .github/workflows/v58-rulebook-ci.yml, README, CURRENT_PROJECT_STATE, AGENTS and example environment configuration.
+**Architecture:** fixed TypeSafe HTTPS endpoint and pinned jev-1.14.0; default cloud off; operator paid-call authorization, key and user synthetic-message consent; 12 calls per process, no retry, bounded response, sanitized error, check-only advisory output; free offline lexical patterns are clearly non-model. Existing Arena store/policy/model client and Rulebook source remain separate.
+**Validation:** pending PR/main CI execution; exact tests and outcomes must be confirmed from Actions before declaring success. Real provider Jev inference, provider credits/entitlements, independent human labels, full browser visual/device QA and package release rebuilding NOT_RUN.
+**Rollback:** revert the feature PR or set DMSG_JEV_LIVE_ENABLE=0 to block paid Jev calls; no DB migration. External provider spending controls must be set separately.
