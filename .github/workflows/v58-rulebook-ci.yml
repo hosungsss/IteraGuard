@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Rulebook contract tests
         run: |
           python -m unittest discover -s tests_rulebook -v
