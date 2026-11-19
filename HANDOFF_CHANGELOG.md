@@ -52,6 +52,18 @@ Read-back: check corresponding PR/CI/main SHA and an independently authorized re
 실제 조로에서 이 세 판단은 사전 기대와 일치했다. 별도 보안 공지는 사람 검토와 추가 확인 업무를 만들었다. 브라우저 스크립트 회귀에서 예시 선택과 명시적 판단의 요청 수를 확인한다.
 
 
+## 2026-11-19 pre-demo validation, uncommitted
+Base 046feef; branch fix/pre-demo-validation. Added model configuration-only status, UI auth/busy/non-JSON/timeout errors, reset new-session source label, per-process inference slot, UTF-8 server re-exec. Policy fingerprints unchanged. Original UI new regressions: 1 pass/4 fail; modified selected suites total 168 pass/2 skipped including added timeout test. Actual model attempt MODEL_NOT_CONFIGURED. Hosted site PowerShell root 200/API401; Python403; authenticated flow/model identity/mobile NOT_RUN. No commit/push/deploy; temporary server stopped. Full report outputs/demo_fix_20261119/IteraGuard_Latest_Validation_and_Fixes.md outside source root. Rollback local changes only; no migration.
+
+
+## 2026-11-19 bounded automatic recovery, uncommitted
+User requested self-recovery during execution. Added browser transport recovery, max two retries, exact frozen request identity, stored-state reconciliation before inference resend, stop on auth/state/contract ambiguity. Existing policy and model status unchanged. UI reports recovery. Mock-network/minimal-DOM tests total 37 pass; live Zoro/hosted authenticated/mobile NOT_RUN. No commit/push/deploy. See docs/AUTO_RECOVERY_KO.md.
+
+
+## 2026-11-19 PR publication authorized
+User authorized commit/push and PR/Actions. Rebased recovery changes onto main 05103c7; preserved both append-only ledgers and contextual demo UI. Local Node 38 passed and runtime tests 2 passed after integration. GitHub Actions result must be checked on PR HEAD. Actual Zoro and hosted authenticated demo remain unverified. No main merge or site deployment included.
+
+
 ## 2026-11-19 / v5.9 source candidate — faster verified evaluate path and redesigned Arena UI (append-only)
 **Purpose:** cut Arena request latency without changing any decision, and make the demo screen simple and readable (decision process visible, advanced controls in a side sheet).
 **Base:** main 046feef. Branch feature/v59-arena-ui-performance.
@@ -59,3 +71,6 @@ Read-back: check corresponding PR/CI/main SHA and an independently authorized re
 **Evidence:** internal/evidence/v59 (benchmarks before/after, UI browser check with replayed fixtures and screenshots). Results equal to base for 60 normalized objects.
 **Next AI:** do not treat the UI pipeline animation as a server-side stage trace; it is reconstructed from response fields. Do not claim model accuracy gains from this version. Real Zoro run, deployed-site check and independent evaluation remain open.
 **Rollback:** revert PR; no DB migration.
+
+
+2026-11-19: Resolve v5.9/main conflicts preserving UI, verification scopes, runtime diagnostics and bounded recovery. No main merge or deployment.

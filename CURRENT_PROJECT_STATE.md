@@ -1,5 +1,9 @@
 # IteraGuard — Current project state (2026-11-19 KST)
 
+Bounded client recovery candidate: transient transport retry with saved-state reconciliation, exact request identity reuse, max two retries, visible recovery status. No semantic policy correction, automatic model startup, auth bypass, or hosted deployment. See docs/AUTO_RECOVERY_KO.md.
+
+Uncommitted pre-demo validation candidate: model configuration (not connectivity) exposed in manifest/UI; actionable auth/busy/non-JSON/timeout messages; per-process inference serialization; direct server startup selects UTF-8. Actual configured Zoro and authenticated hosted-site flow remain required. No hosted deployment is performed by this local change.
+
 Source candidate: v5.8 (GitHub integration); previously published Arena engine: v5.6; typed contract: v5.1.
 Primary entrypoint remains python -m arena.server. Existing v5.6 Zoro transport remains unchanged and must be verified against the currently configured model server.
 New separate domain rulebook: proposal-only, no network/business effects; refund and account-change books. Source UI v5.8 additions: four contextual synthetic messages, selected task binding, redacted evidence JSON export. In an isolated local Zoro-1 demo rehearsal, the unclear request, account-change payment request, and normal follow-up matched the expected current-turn outcomes. The two open tasks survived the follow-up. The standalone preventive notice produced an extra review task.

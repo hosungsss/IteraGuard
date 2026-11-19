@@ -10,5 +10,7 @@
   "rulebook_runtime_Zoro_verified": false,
   "live_identity_verified": false,
   "submission_ready": false,
+  "local_validation_candidate": "V59_RECOVERY_INTEGRATION",
+  "hosted_authenticated_flow_verified": false,
   "arena_ui_version": "5.9"
 }

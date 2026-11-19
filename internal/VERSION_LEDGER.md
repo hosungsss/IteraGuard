@@ -147,6 +147,18 @@ CR-20261119-04. User authorized source upgrade/merge/push following prior code a
 별도 SQLite에서 실제 로컬 Zoro-1의 응답 4건을 받았다. 사전 기대와 일치한 확인 요청, 계좌 변경, 진행 보고는 같은 기록에서 두 확인 업무를 보존했다. 새 기록에서 평가한 예방 공지는 `MODEL_NONE_BUT_ACTION_TERMS_PRESENT` 이유로 사람 검토와 추가 업무를 만들었다. 이 결과는 시연에 쓰는 합성 예시에 대한 점검이다.
 
 
+## 2026-11-19 pre-demo validation, uncommitted
+Base 046feef; branch fix/pre-demo-validation. Added model configuration-only status, UI auth/busy/non-JSON/timeout errors, reset new-session source label, per-process inference slot, UTF-8 server re-exec. Policy fingerprints unchanged. Original UI new regressions: 1 pass/4 fail; modified selected suites total 168 pass/2 skipped including added timeout test. Actual model attempt MODEL_NOT_CONFIGURED. Hosted site PowerShell root 200/API401; Python403; authenticated flow/model identity/mobile NOT_RUN. No commit/push/deploy; temporary server stopped. Full report outputs/demo_fix_20261119/IteraGuard_Latest_Validation_and_Fixes.md outside source root. Rollback local changes only; no migration.
+
+
+## 2026-11-19 bounded automatic recovery, uncommitted
+User requested self-recovery during execution. Added browser transport recovery, max two retries, exact frozen request identity, stored-state reconciliation before inference resend, stop on auth/state/contract ambiguity. Existing policy and model status unchanged. UI reports recovery. Mock-network/minimal-DOM tests total 37 pass; live Zoro/hosted authenticated/mobile NOT_RUN. No commit/push/deploy. See docs/AUTO_RECOVERY_KO.md.
+
+
+## 2026-11-19 PR publication authorized
+User authorized commit/push and PR/Actions. Rebased recovery changes onto main 05103c7; preserved both append-only ledgers and contextual demo UI. Local Node 38 passed and runtime tests 2 passed after integration. GitHub Actions result must be checked on PR HEAD. Actual Zoro and hosted authenticated demo remain unverified. No main merge or site deployment included.
+
+
 ## 2026-11-19 · v5.9 source candidate: request-scoped contract verification + Arena UI redesign
 CR-20261119-05. User request: review current main (046feef), raise real performance and operability, redesign the Arena UI (simple, premium, liquid glass, subtle 3D, visible decision process), then merge and push.
 **Root cause (performance):** cProfile showed one Arena evaluate rebuilt and re-verified the full v51 question-profile registry 12 times (build_registry ~78% of request time). **Change:** integration/v51_profiles.verification_scope()/scope_cached()/refresh_scope() and v51.execution_manifest() cached per thread-local scope; arena/store.py verifies once before and once after the model call. Outside a scope every call still verifies from scratch. Measured (controlled responses, 10 fixture cases x 300, Python 3.12, same machine): evaluate p50 53.99 -> 19.59 ms, p95 70.43 -> 28.85 ms; pipeline_ms p50 42.33 -> 16.63 ms. Normalized results for 10 single-turn and 10 multi-turn sequences (60 objects) are byte-identical to 046feef (sha256 2162b9d7...e9fb).
@@ -155,3 +167,6 @@ CR-20261119-05. User request: review current main (046feef), raise real performa
 **Tests:** new tests_v59 (15) added to CI; existing suites pass on Python 3.12; Node 24/24. Python 3.13 still shows the pre-existing v51 Unicode-version check difference (also at base).
 **Not done / NOT_RUN:** real Zoro-1 inference, deployed chatgpt.site check (robots-blocked), Safari/Firefox, devices, NPU, independent evaluation. Decision policy intentionally unchanged (AGENTS: no tuning without a new locked set). APK/PWA/desktop assets not rebuilt.
 **Rollback:** revert the PR; no SQLite migration. Details docs/V59_ARENA_UI_AND_PERFORMANCE.md.
+
+
+2026-11-19: Resolve v5.9/main conflicts preserving UI, verification scopes, runtime diagnostics and bounded recovery. No main merge or deployment.
