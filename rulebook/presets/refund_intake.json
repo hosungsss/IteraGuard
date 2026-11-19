@@ -1,0 +1,45 @@
+{
+  "schema_version": "iteraguard-rulebook/1",
+  "id": "refund_intake",
+  "version": "1.0",
+  "domain": "customer_support",
+  "minimum_confidence": 0.8,
+  "questions": {
+    "q_refund": {
+      "type": "noul",
+      "instructions": "Does the customer explicitly request a refund in the current message?"
+    },
+    "q_order": {
+      "type": "noul",
+      "instructions": "Does the current message contain a usable order reference?"
+    }
+  },
+  "rules": [
+    {
+      "id": "refund_with_order",
+      "when": {
+        "q_refund": "yes",
+        "q_order": "yes"
+      },
+      "priority": 100,
+      "action": "OPEN_REVIEW_TASK"
+    },
+    {
+      "id": "refund_without_order",
+      "when": {
+        "q_refund": "yes",
+        "q_order": "no"
+      },
+      "priority": 100,
+      "action": "REQUEST_INFORMATION"
+    },
+    {
+      "id": "not_refund",
+      "when": {
+        "q_refund": "no"
+      },
+      "priority": 50,
+      "action": "NO_ACTION"
+    }
+  ]
+}
