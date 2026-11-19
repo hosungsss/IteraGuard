@@ -7,7 +7,7 @@ A follow-up is not a new incoming SMS and MUST NOT be sent to /api/evaluate.
 from __future__ import annotations
 
 KISA = "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&categoryCode=&menuNo=205023&nttId=71936&pageIndex=1&searchCnd=&searchWrd="
-FTC = "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+FTC = "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams"
 SOURCES = [
     {"name": "KISA 스미싱 대응 공식 권고", "url": KISA},
     {"name": "FTC 피싱 대응 소비자 안내", "url": FTC},
