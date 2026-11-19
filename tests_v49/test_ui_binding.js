@@ -166,7 +166,7 @@ test('arena explains current-turn no-signal separately from a prior-risk hold, i
   assert.equal(a.get('action').textContent, 'ASK_HUMAN');
   assert.equal(a.get('reason').textContent, 'PRIOR_RISK_UNRESOLVED');
   assert.match(a.get('currentTurn').textContent, /현재 문장:.*위험 행동 요청 미감지.*안전 보증 아님/);
-  assert.match(a.get('sessionNotice').textContent, /앞서 감지한 위험.*사용자 확인 보고만으로 해제되지 않습니다/);
+  assert.match(a.get('sessionNotice').textContent, /이전 요청.*사용자 완료 보고만으로 이전 위험이 해제되지 않습니다/);
   const current = a.get('currentTurn').textContent, notice = a.get('sessionNotice').textContent;
   await a.get('refresh').dispatch('click');
   assert.equal(a.get('currentTurn').textContent, current); assert.equal(a.get('sessionNotice').textContent, notice);

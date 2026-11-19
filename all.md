@@ -11,3 +11,6 @@
 프로젝트 작성 코드의 Apache-2.0 적용 범위와 외부 자료 예외는 LICENSE_SCOPE.md 및 THIRD_PARTY_NOTICES.md를 참조하십시오. 상세 변경 이력을 이 파일에 중복 기록하지 않습니다.
 
 현재 홈은 signal-only 경로입니다. 제한된 예방·과거 보고 문맥 보정과 색상/행동 정합성 검사를 적용한 작업 후보이며, 원 모델 결과를 보존합니다. 광범위한 한국어 이해나 배포 검증 완료를 뜻하지 않습니다. 검증 범위와 잔여 오류는 docs/SIGNAL_CONTEXT_VALIDATION_20261120.md를 참조하십시오.
+
+
+2026-11-20 KST | Integrated audit candidate from 7f48096 with main 695afc8 (PR #29). Two typed questions now use four internal review perspectives. Existing response keys, choice IDs, context reconciliation and score provenance retained. Separate optional link observations and explicit follow-up self-reports. Requirements, counterexamples, settings and rollback: docs/SIGNAL_REVIEW_PERSPECTIVES_KO.md. Live checkpoint effect, comprehension and provider quality unmeasured.

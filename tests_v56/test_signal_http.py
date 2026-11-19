@@ -92,6 +92,13 @@ class SignalHttpTests(unittest.TestCase):
         self.assertEqual(payload['state'], text)
         self.assertEqual(list(payload['questions']), ['q_action', 'q_signal'])
         self.assertEqual(len(payload['questions']['q_action']['criteria']), 20)
+        action = payload['questions']['q_action']['instructions']
+        signal = payload['questions']['q_signal']['instructions']
+        self.assertIn('누가 누구에게', action)
+        for cue in ('접근 권한', '기억을 부정', '약관', '나이·장애'):
+            self.assertIn(cue, signal)
+        self.assertEqual(set(result), {'grade', 'scores', 'requested_action', 'context_review', 'explanation'})
+        self.assertEqual(set(result['scores']), {'red', 'orange', 'green', 'gray'})
         self.assertEqual(self.arena.read(sid), before)
 
     def test_rejects_invalid_or_cross_origin_inputs_before_inference(self):

@@ -14,6 +14,7 @@ from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
 from .signal import evaluate_signal
+from .link_review import LinkReviewer
 from urllib.error import URLError
 
 class Handler(SecureHandler):
@@ -42,6 +43,7 @@ class Handler(SecureHandler):
             except Conflict as e:return self.out(404,{'error':str(e)})
             except ValueError:return self.out(400,{'error':'INVALID_REQUEST'})
         names={'/':'signal.html','/signal':'signal.html','/signal.js':'signal.js','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js','/chat.js':'chat.js'}
+        names.update({'/arena':'index.html','/link-review':'link-review.html','/link-review.js':'link-review.js'})
         if u.path not in names:return self.out(404,{'error':'NOT_FOUND'})
         data=(Path(__file__).parent/'web'/names[u.path]).read_bytes()
         self.send_response(200);self.headers_safe('text/javascript; charset=utf-8' if u.path.endswith('.js') else 'text/css; charset=utf-8' if u.path.endswith('.css') else 'text/html; charset=utf-8')
@@ -60,6 +62,12 @@ class Handler(SecureHandler):
                 return d
             body=json.loads(self.rfile.read(length),object_pairs_hook=unique)
             if type(body) is not dict:raise ValueError('OBJECT_REQUIRED')
+            if self.path=='/api/link-review':
+                if set(body) != {'text','synthetic_only','share_host','local_zoro'} or body['synthetic_only'] is not True:
+                    return self.out(400,{'error':'INVALID_REVIEW'})
+                result=self.server.link_reviewer.review(body['text'],body['share_host'],body['local_zoro'],
+                                                       self.server.arena.client,self._inference_slot)
+                return self.out(200,result)
             if self.path=='/api/signal':
                 if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:
                     return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
@@ -114,6 +122,7 @@ def main():
     with ThreadingHTTPServer(('127.0.0.1',a.port),Handler) as server:
         server.arena=arena
         server.jev_shadow=JevShadow()
+        server.link_reviewer=LinkReviewer()
         print(f'http://127.0.0.1:{a.port} - SYNTHETIC ONLY / model identity UNATTESTED',flush=True)
         server.serve_forever()
 if __name__=='__main__':main()

@@ -115,11 +115,15 @@
     if (!q || q.length > 300) return null;
     // Respond only when wording unambiguously refers to a bounded situation.
     // This is not semantic inference or a general language-model conversation.
-    if (/송금했|이체했|입금했|결제했|돈을?\s*보냈|돈\s*보내버렸/.test(q)) return 'paid';
-    if (/(인증번호|비밀번호|OTP|인증\s*코드|패스워드).{0,18}(입력했|보냈|알려줬|전달했|공유했)/i.test(q) ||
-        /(입력했|보냈|알려줬|공유했).{0,18}(인증번호|비밀번호|OTP|인증\s*코드)/i.test(q)) return 'entered_secret';
-    if (/설치했|앱\s*깔았|프로그램\s*실행했|원격.{0,8}허용했/.test(q)) return 'installed';
-    if (/다운로드했|내려받았|파일을?\s*받았/.test(q)) return 'downloaded';
+    // Completed harm needs a direct self-report. Ask the user to choose a
+    // situation when the actor, polarity, or timing cannot be resolved.
+    const direct = q.replace(/[.!。]+$/, '').trim()
+      .replace(/^(?:(?:제가|저는|나는|내가|저|나|방금|이미|실수로)\s+)+/, '');
+    if (/^(?:(?:송금|이체|입금|결제)(?:을|를)?\s*했|돈을?\s*보냈)(?:어|어요|습니다|다)$/.test(direct)) return 'paid';
+    if (/^(?:인증번호|비밀번호|OTP|인증\s*코드|패스워드)(?:를|을)?\s*(?:입력했|보냈|알려줬|전달했|공유했)(?:어|어요|습니다|다)$/i.test(direct)) return 'entered_secret';
+    if (/^(?:(?:앱|프로그램)(?:을|를)?\s*(?:설치했|깔았|실행했)|원격\s*(?:제어|접속)를?\s*허용했)(?:어|어요|습니다|다)$/.test(direct)) return 'installed';
+    if (/^(?:파일(?:을)?\s*)?(?:다운로드했|내려받았|받았)(?:어|어요|습니다|다)$/.test(direct) && /파일|다운로드|내려받/.test(direct)) return 'downloaded';
+    if (/송금|이체|입금|결제|보냈|설치|다운로드|내려받|입력했|알려줬|전달했|공유했/.test(q)) return null;
     if (/(링크|주소|사이트).{0,20}(안\s*눌렀|안\s*열었|클릭하지\s*않았|누르지\s*않았)/.test(q)) return 'not_clicked';
     if (/(이미|방금|실수로).{0,18}(링크|주소|사이트).{0,20}(눌렀|클릭했|열었|접속했)/.test(q) ||
         /(링크|주소|사이트).{0,18}(눌렀어|눌렀어요|클릭했어|클릭했어요|열었어|접속했어)/.test(q)) return 'clicked';
