@@ -7,7 +7,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const SID = 'a'.repeat(32), OLD = 'b'.repeat(32), TID = 'c'.repeat(32);
 class Element {
-  constructor() { this.value = ''; this.checked = false; this.disabled = false; this.listeners = {}; this.children = []; this._text = ''; }
+  constructor() { this.value = ''; this.checked = false; this.disabled = false; this.listeners = {}; this.children = []; this.dataset = {}; this._text = ''; }
   set textContent(v) { this._text = String(v); this.children = []; }
   get textContent() { return this._text; }
   focus() {}
@@ -20,7 +20,7 @@ class Element {
   }
 }
 const settle = async () => { await new Promise(setImmediate); await new Promise(setImmediate); };
-async function app({ remembered = null, closed = false, deferEvaluation = false, rememberedHistory = [], policy = 'legacy' } = {}) {
+async function app({ remembered = null, closed = false, deferEvaluation = false, rememberedHistory = [], policy = 'legacy', signalGrade } = {}) {
   const elements = {}, calls = [], pending = [], storage = new Map(); let seq = 0;
   if (remembered) storage.set('dmsg-arena-v5-session', remembered);
   storage.set('dmsg-arena-v5-session-ids', JSON.stringify(rememberedHistory));
@@ -41,7 +41,8 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
     const d = { action: 'PAUSE_AND_VERIFY', current_turn_action: 'PAUSE_AND_VERIFY', reason: 'DIRECT',
       message: '확인하세요.', policy_id: policy, session_id: state.id, version: state.version,
       request_id: payload.request_id, lifecycle: 'OPEN', prior_pause: true, evidence: [], mode: 'MODEL_RESPONSE_UNATTESTED',
-      next_task: { id: TID, status: 'OPEN', observation: 'NOT_CHECKED', instruction: '확인' }, ...override };
+      next_task: { id: TID, status: 'OPEN', observation: 'NOT_CHECKED', instruction: '확인' },
+      ...(signalGrade && { model_status: 'VALID' }), ...override };
     state.events.push(d); state.tasks = [d.next_task || d.related_task].filter(Boolean); return d;
   };
   const fetch = async (url, options = {}) => {
@@ -54,6 +55,8 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
     else if (url === '/api/evaluate') {
       if (deferEvaluation) return new Promise(resolve => pending.push(override => resolve({ ok: true, json: async () => makeEvaluation(body, override) })));
       data = makeEvaluation(body);
+    } else if (url === '/api/signal' && signalGrade) {
+      data = { grade: signalGrade, scores: { red: .9, orange: .05, green: .04, gray: .01 } };
     } else if (url === '/api/close' || url === '/api/reopen') {
       state.version += 1; state.lifecycle = url.endsWith('close') ? 'CLOSED_UNRESOLVED' : 'OPEN';
       data = { event_type: url.endsWith('close') ? 'CLOSE_UNRESOLVED' : 'REOPEN', version: state.version, lifecycle: state.lifecycle, prior_pause: !!state.prior_pause };
@@ -67,6 +70,23 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../arena/web/main.js'), 'utf8'), context);
   await settle(); return { get, calls, pending, state, storage, context, samples };
 }
+
+test('single-question signal follows the main evaluation and clears on the next edit', async () => {
+  const a = await app({ signalGrade: 'red' });
+  const text = '가상 문자\n받은 인증번호를 보내주세요.';
+  a.get('text').value = text;
+  const before = a.calls.length;
+  await a.get('run').dispatch('click');
+  await settle();
+  const calls = a.calls.slice(before);
+  assert.deepEqual(calls.map(call => call.url), ['/api/evaluate', '/api/signal']);
+  assert.equal(calls[0].body.text, text);
+  assert.deepEqual(calls[1].body, { text, synthetic_only: true });
+  assert.equal(a.get('inlineSignal').hidden, false);
+  a.get('text').value = '다른 가상 문자';
+  await a.get('text').dispatch('input');
+  assert.equal(a.get('inlineSignal').hidden, true);
+});
 
 test('each synthetic example fills the editor and waits for an explicit evaluation', async () => {
   const a = await app();
