@@ -311,3 +311,7 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 - 기준 main 778eed8. Arena UI에 같은 문장 분석 복구와 이전 요청 확인 대기를 따로 표시한다. 전체 미해결 업무 수에는 모델 재시도도 포함한다.
 - 실제 로컬 Zoro로 분석 실패와 재시도를 브라우저에서 재실행했다. 실패 시 업무 2건, 복구 시 기술 재시도만 해결되고 송금 확인 1건이 계속 열려 있었다. [실행 JSON](../docs/execution-logs/2026-11-20/C_transport_failure_recovery_ui.json)
+
+## 2026-11-20 KST · 시나리오 C 제출 파일 정리
+
+- C는 기존 브라우저 재실행 JSON 한 개로 정리했다. README와 제출 로그 목록을 해당 파일에 연결했다.
