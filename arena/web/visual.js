@@ -206,6 +206,7 @@
     function resize() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2), s = cv.getBoundingClientRect();
       cv.width = Math.max(1, Math.round(s.width * dpr)); cv.height = Math.max(1, Math.round(s.height * dpr));
+      if (reduce) { state.running = true; frame(); }
     }
     const rings = [{ tilt: 1.15, spin: .0055, phase: 0, r: .43 }, { tilt: .55, spin: -.0038, phase: 1.7, r: .47 }, { tilt: 1.45, spin: .0029, phase: 3.1, r: .38 }];
     function project(theta, ring, R, cx, cy) {
@@ -216,6 +217,8 @@
     }
     function frame() {
       if (!state.running) return;
+      // Hidden mobile decoration has no drawable area; resume on resize/intersection.
+      if (cv.width < 8 || cv.height < 8) { state.running = false; return; }
       const W = cv.width, H = cv.height, cx = W / 2, cy = H / 2, R = Math.min(W, H) * .30;
       const speed = state.busy ? 3.2 : 1;
       state.t += 16 * speed;
@@ -249,7 +252,8 @@
       // highlight
       ctx.beginPath(); ctx.ellipse(cx - r * .38, cy - r * .5, r * .28, r * .14, -.6, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,255,255,.28)'; ctx.fill();
       drawRings(cx, cy, R, true);
-      if (state.visible && !document.hidden) requestAnimationFrame(frame); else state.running = false;
+      if (reduce) state.running = false;
+      else if (state.visible && !document.hidden) requestAnimationFrame(frame); else state.running = false;
     }
     function drawRings(cx, cy, R, front) {
       rings.forEach((ring, k) => {
