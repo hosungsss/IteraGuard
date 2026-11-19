@@ -127,3 +127,6 @@ Validation: PR/head and merge CI outcomes to be read back; no live Jev API, no a
 
 ## 2026-11-20 · 공개 메인 시연의 두 가지 조로 답변
 기준 main 20652f0. 메인 입력과 실제 사례 불러오기 동작을 연결하는 폼은 /api/signal을 한 번 호출합니다. config의 사용자 제공 행동 후보 20개(q_action)와 신호등(q_signal)을 한 요청에 담습니다. 결과 카드에는 등급과 요청 행동 답변을 표시합니다. 이전 기록을 읽고 유지하는 Arena API는 호환 경로로 둡니다.
+
+
+2026-11-20: Signal-only bounded context reconciliation preserves original model scores/grade/action and reports corrections. Full recognized warning/report clauses distinguish past/negated requests; unknown or sensitive-action + green conflicts defer to gray. Existing Arena policy and shadow remain unchanged. Python 244 pass/2 skipped; Node 71 pass; controlled Edge 390/1440 pass. New 8 actual public responses plus prior 12 replayed locally; not a deployed new-model test. Colloquial warning action and family-impersonation grade remain limitations. See docs/SIGNAL_CONTEXT_VALIDATION_20261120.md.

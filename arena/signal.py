@@ -6,6 +6,7 @@ from pathlib import Path
 from integration.v48 import bridge, normalize_response
 
 from .store import check_loopback_endpoint
+from .signal_context import reconcile
 
 
 QUESTION = {
@@ -50,11 +51,11 @@ def evaluate_signal(client, text):
     answers = normalize_response(raw, SPEC)
     signal = answers['q_signal']
     action = selected_or_fallback(answers['q_action'], 'unknown')
-    return {
+    return reconcile(text, {
         'grade': selected_or_fallback(signal, 'gray'),
         'scores': signal['probabilities'],
         'requested_action': {
             'id': action,
             'label': ACTION_QUESTION['criteria'][action].partition('. ')[0],
         },
-    }
+    })

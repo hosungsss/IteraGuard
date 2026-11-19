@@ -24,5 +24,7 @@
   "ui_state_separation": "CURRENT_TURN_AND_PRIOR_UNRESOLVED_SEPARATE",
   "independent_analysis_start": "PRESERVES_PREVIOUS_SESSION",
   "integration_verified_base": "636f56b4e5e75a01e250c65debbe77cce3f877a1",
-  "integration_validation": "CONTROLLED_REGRESSION_AND_BROWSER_PASS"
+  "integration_validation": "CONTROLLED_REGRESSION_AND_BROWSER_PASS",
+  "signal_context_guard": "signal-context/1",
+  "signal_context_live_deployed_verified": false
 }

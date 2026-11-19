@@ -227,3 +227,6 @@ Verification evidence: CI and main read-back after merge, not guessed; full brow
 
 ## 2026-11-20 · 메인 결과를 신호등과 요청 행동으로 간소화
 기준 main 20652f0. signal.html과 signal.js가 메인 폼을 담당합니다. 사용자가 준 q_action.json을 configs/zoro_action_choices.json으로 가져와 행동 후보 20개를 사용합니다. 정확한 원문과 q_action, q_signal만 로컬 Zoro 요청에 담고, 등급과 행동의 응답을 동일 카드에 표시합니다. 독립 정확도 평가는 미검증입니다.
+
+
+2026-11-20: Signal-only bounded context reconciliation preserves original model scores/grade/action and reports corrections. Full recognized warning/report clauses distinguish past/negated requests; unknown or sensitive-action + green conflicts defer to gray. Existing Arena policy and shadow remain unchanged. Python 244 pass/2 skipped; Node 71 pass; controlled Edge 390/1440 pass. New 8 actual public responses plus prior 12 replayed locally; not a deployed new-model test. Colloquial warning action and family-impersonation grade remain limitations. See docs/SIGNAL_CONTEXT_VALIDATION_20261120.md.

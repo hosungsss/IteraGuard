@@ -3,7 +3,7 @@
 const signalLabels = {
   red: '빨강 · 피싱 의심 매우 높음',
   orange: '주황 · 피싱 의심 높음',
-  green: '초록 · 정상 문자로 보임',
+  green: '초록 · 뚜렷한 위험 신호 미감지',
   gray: '회색 · 판단 어려움'
 };
 const signalForm = document.getElementById('signalForm');
@@ -49,7 +49,7 @@ signalForm.addEventListener('submit', async (event) => {
     }
     const response = await fetch('/api/signal', options);
     if (!response.ok) throw new Error('SIGNAL_REQUEST_FAILED');
-    const { grade, requested_action: action } = await response.json();
+    const { grade, requested_action: action, explanation } = await response.json();
     if (!Object.hasOwn(signalLabels, grade) || typeof action?.label !== 'string' || !action.label.trim()) {
       throw new Error('INVALID_SIGNAL_RESULT');
     }
@@ -57,6 +57,8 @@ signalForm.addEventListener('submit', async (event) => {
       signalResult.dataset.grade = grade;
       signalGrade.textContent = signalLabels[grade];
       requestedAction.textContent = action.label;
+      const note = document.getElementById('signalExplanation');
+      if (note) note.textContent = typeof explanation === 'string' ? explanation : '본문 기반 판단이며 신원과 안전은 확인되지 않았습니다.';
       signalResult.hidden = false;
       signalStatus.textContent = '';
     }
