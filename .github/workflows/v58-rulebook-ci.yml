@@ -15,12 +15,18 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Rulebook contract tests
-        run: python -m unittest discover -s tests_rulebook -v
+        run: |
+          python -m unittest discover -s tests_rulebook -v
+          python -m unittest discover -s tests_rule_tweak_shadow -v
+          python -m unittest discover -s tests_v56 -v
+          python -m unittest discover -s tests_v54 -v
+          python -m unittest discover -s tests_v51 -v
+          node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js
       - name: Python and JavaScript syntax
         run: |
-          python -m compileall -q rulebook tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
+          python -m compileall -q rulebook arena integration/rule_tweak_shadow.py tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
           node --check arena/web/main.js
       - name: Append-only ledgers and required docs
         run: |

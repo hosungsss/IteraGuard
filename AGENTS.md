@@ -35,3 +35,7 @@ Do not publish event credentials, live customer data, internal tokens, private m
 
 ## Recovery
 Revert the new Git commit through a separate PR. Back up and restore SQLite only under a controlled migration procedure. Do not force-push main or fabricate a successful test.
+
+
+## Rule Tweak Candidate 1 integration (v5.8)
+Before editing Korean warning/report normalization, read docs/V58_RULE_TWEAK_SHADOW_REVIEW.md. Candidate ZIP is a historical v5.6 source, NOT a drop-in patch for current main. Preserve current arena/store.py retry/task behavior; never run the old installer against main. DMSG_RULE_TWEAK_MODE defaults to shadow; enforce is blocked. The observer must never alter actions, probability distributions, session risk, or user authority. Add independent locked counterexamples and a separately approved PR before proposing an enforcement migration. Always record the reason for an omitted/failed shadow evaluation.

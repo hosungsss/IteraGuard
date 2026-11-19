@@ -118,3 +118,12 @@ Example for a local, synthetic scenario (requires the existing local model serve
 DMSG_V58_RULEBOOK_LIVE_ENABLE=1 python -m tools.rulebook_live_v58 --book refund_intake --state-file tests_rulebook/refund_synthetic_message.txt --synthetic-only
 
 A network response remains LOCAL_HTTP_MODEL_UNATTESTED unless the exact model/checkpoint/head is verified independently. If disabled, invalid, disconnected or unconfigured, no fixture is silently substituted. Use python -m unittest discover -s tests_rulebook -v for unit tests (test doubles are NOT a live model test).
+
+
+### v5.8 Rule Tweak Candidate 1 — shadow-only integration
+The team's historical v5.6 bounded Korean warning/report candidate has been adapted as a **read-only observer** next to the existing Arena v5.6/v5.8 source, NOT installed as a destructive v5.6 patch. By default, DMSG_RULE_TWEAK_MODE=shadow adds a strictly advisory trace to successful typed model judgments, including a proposed action but never changing the actual policy result, session risk or task. DMSG_RULE_TWEAK_MODE=off disables it. Enforce is intentionally blocked until independent safety evaluation and explicit new authorization.
+
+- Source: integration/rule_tweak_shadow.py and configs/rule_tweak_shadow.json
+- Review: docs/V58_RULE_TWEAK_SHADOW_REVIEW.md
+- Checks: python -m unittest discover -s tests_rule_tweak_shadow -v
+- Original 12-case replay was derived from past development data and does not measure improvement on this main or actual Zoro. Track 1 evidence and existing Rulebook are distinct.
