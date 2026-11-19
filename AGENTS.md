@@ -39,3 +39,7 @@ Revert the new Git commit through a separate PR. Back up and restore SQLite only
 
 ## Rule Tweak Candidate 1 integration (v5.8)
 Before editing Korean warning/report normalization, read docs/V58_RULE_TWEAK_SHADOW_REVIEW.md. Candidate ZIP is a historical v5.6 source, NOT a drop-in patch for current main. Preserve current arena/store.py retry/task behavior; never run the old installer against main. DMSG_RULE_TWEAK_MODE defaults to shadow; enforce is blocked. The observer must never alter actions, probability distributions, session risk, or user authority. Add independent locked counterexamples and a separately approved PR before proposing an enforcement migration. Always record the reason for an omitted/failed shadow evaluation.
+
+
+## Text-first Jev 1.14 integration contract (2026-11-19)
+Read docs/V58_JEV_CLOUD_TEXT_STUDIO.md before adding second-opinion models or changing arena/server.py. The official Jev API is billed; do NOT claim it is free or attempt unauthorized credit bypass. Offline lexical patterns are not Jev, Zoro, a scam predictor, or a safety clearance. Preserve absolute separation from existing Zoro /v1/systemone, risk hold, Task and Rulebook. No automatic Jev calls; per-message consent, server operator charge acknowledgment and key are mandatory. Never commit key or customer message. Never falsely attest model identity or browser/device QA from static tests. Keep exact version echo validation, source-separated error paths and rollback.
