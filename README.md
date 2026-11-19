@@ -103,3 +103,9 @@ python -X utf8 tools/redteam_workflow.py
 - See docs/V58_RULEBOOK_ARCHITECTURE.md and docs/V58_AGENT_EVIDENCE_GUIDE.md for business portability constraints and original source hashes.
 - Neither this branch's existence nor a valid Zoro-looking JSON proves real checkpoint identity, independent accuracy, or field-level intervention. The hypothesized 30% to 98% business success gain is NOT MEASURED.
 - Historic APKs, dmsg.skill/dmsg.zip, old manifests and full ZIP assets remain at their original release versions; their contents are not silently upgraded by source edits.
+
+
+### Reconfigure another industry (local-only)
+Duplicate one of the versioned rulebook/presets/*.json files, change question instructions/criteria and when/action rules, then save it as a local JSON file. No model retraining or business API credentials are needed for a synthetic preview:
+python -m tools.rulebook_preview_v58 --book-file path/to/company_rules.json --answers tests_rulebook/refund_fixture.json
+This command only evaluates an already supplied typed answer envelope. If the question set differs, supply a matching synthetic answers file. It never contacts Zoro or executes any business action.

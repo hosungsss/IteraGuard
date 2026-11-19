@@ -115,3 +115,10 @@ R58-G-06: official evaluation evidence separation -> docs/V58_AGENT_EVIDENCE_GUI
 Safety/limits: NO payments, emails, SMS, bank freezes, auto refunds, unseen user data processing, remote Drive, or automatic public deployment. New rulebook is not wired to Arena live; Zoro adapter integration deferred. Separate release ZIP/APK/skill rebuild NOT_DONE, so published package remains v5.6.
 Rollback: revert this PR in GitHub; stop isolated rulebook preview; do not reset or delete the SQLite sessions. Preserve base commit and source SHA.
 Verification status: GitHub commit/write is not a real runtime test. Check actions/CI + actual main merge SHA, and later an actual authorized Zoro API and browser check before claiming VERIFIED.
+
+
+## 2026-11-19 · v5.8 follow-up: generic company JSON override
+CR-20261119-02. Add custom --book-file to tools/rulebook_preview_v58.py so a business owner or future AI can adjust question profile and deterministic rules through a local versioned schema. Strict duplicate-key, nonfinite, suffix and size validation; no network/side effects.
+Requirements R58-G-07 source edit: CLI arbitrary JSON parsing; test_cli local custom, duplicate keys and >64KiB rejection; new docs and input limitations.
+Risk: rulebook still not connected to live Zoro service or independent business authorization; sample confidence remains uncalibrated. Scope does not add actual transaction APIs, NPU or performance promises. CI log must be checked against HEAD after PR; developer-authored correctness cannot substitute for user or business validation.
+Rollback: revert PR on top of merged v5.8 base; no DB migration.
