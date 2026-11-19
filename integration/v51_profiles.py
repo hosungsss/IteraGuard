@@ -3,10 +3,12 @@
 The wire envelope stays exactly {state, questions}. Binding metadata belongs to
 the trusted caller, never to model instructions or untrusted model assertions.
 """
+from contextlib import contextmanager
 from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path
+import threading
 
 from integration import v50
 
@@ -141,8 +143,51 @@ def build_registry():
     return result
 
 
+# v5.9: request-scoped verification. One Arena request used to rebuild and
+# re-verify the full registry twelve times. Inside verification_scope() the first
+# call performs the complete fail-closed check; later calls in the same thread and
+# scope reuse that verified snapshot (callers always receive copies). Outside a
+# scope every call still verifies from scratch, exactly as before.
+_SCOPE = threading.local()
+
+
+@contextmanager
+def verification_scope():
+    if getattr(_SCOPE, "active", False):
+        yield
+        return
+    _SCOPE.active, _SCOPE.cache = True, {}
+    try:
+        yield
+    finally:
+        _SCOPE.active, _SCOPE.cache = False, {}
+
+
+def refresh_scope():
+    """Drop verified values so the next call in this scope verifies again (e.g. after a network call)."""
+    if getattr(_SCOPE, "active", False):
+        _SCOPE.cache = {}
+
+
+def scope_cached(key, compute):
+    """Memoize a verified value for the current scope only; outside a scope compute every time."""
+    if not getattr(_SCOPE, "active", False):
+        return compute()
+    if key not in _SCOPE.cache:
+        _SCOPE.cache[key] = compute()
+    return _SCOPE.cache[key]
+
+
+def _verified_registry():
+    return scope_cached("registry", _verify_registry)
+
+
 def registry():
     """Verify source, baseline manifest, full content and all insertion orders."""
+    return deepcopy(_verified_registry())
+
+
+def _verify_registry():
     stored = _read_json(REGISTRY_PATH)
     if type(stored) is not dict:
         raise ContractError("PROFILE_REGISTRY_INVALID")
@@ -152,7 +197,7 @@ def registry():
     expected = build_registry()
     if wire_bytes(stored) != wire_bytes(expected):
         raise ContractError("PROFILE_REGISTRY_DRIFT")
-    return deepcopy(stored)
+    return stored
 
 
 def _selected(data, profile_id, policy_id):
@@ -167,7 +212,7 @@ def _selected(data, profile_id, policy_id):
 
 
 def profile(profile_id=BASELINE, policy_id="legacy"):
-    return deepcopy(_selected(registry(), profile_id, policy_id))
+    return deepcopy(_selected(_verified_registry(), profile_id, policy_id))
 
 
 def questions(text, profile_id=BASELINE, policy_id="legacy"):
@@ -177,7 +222,7 @@ def questions(text, profile_id=BASELINE, policy_id="legacy"):
 
 
 def binding(profile_id=BASELINE, policy_id="legacy"):
-    data = registry()
+    data = _verified_registry()
     selected = _selected(data, profile_id, policy_id)
     return {"profile_id": profile_id, "policy_id": policy_id,
             "question_contract_sha256": selected["question_contract_sha256"],

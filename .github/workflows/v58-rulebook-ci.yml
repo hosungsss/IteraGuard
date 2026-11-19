@@ -20,14 +20,16 @@ jobs:
         run: |
           python -m unittest discover -s tests_rulebook -v
           python -m unittest discover -s tests_rule_tweak_shadow -v
+          python -m unittest discover -s tests_v59 -v
           python -m unittest discover -s tests_v56 -v
           python -m unittest discover -s tests_v54 -v
           python -m unittest discover -s tests_v51 -v
           node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js
       - name: Python and JavaScript syntax
         run: |
-          python -m compileall -q rulebook arena integration/rule_tweak_shadow.py tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
+          python -m compileall -q rulebook arena integration/rule_tweak_shadow.py integration/v51.py integration/v51_profiles.py tools/v59 tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
           node --check arena/web/main.js
+          node --check arena/web/visual.js
       - name: Append-only ledgers and required docs
         run: |
           python - <<'PY'

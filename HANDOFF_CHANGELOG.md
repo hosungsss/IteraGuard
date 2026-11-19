@@ -50,3 +50,12 @@ Read-back: check corresponding PR/CI/main SHA and an independently authorized re
 ## 2026-11-19 / Arena 웹 합성 예시
 계좌 변경을 첫 입력으로 표시하고 상황 중심 예시 네 개를 제공한다. 방법이 빠진 요청을 먼저 판단한 다음, 같은 기록에서 계좌 변경과 정산 진행 보고를 판단하면 확인 업무 두 건을 보존하는 흐름을 재현할 수 있다.
 실제 조로에서 이 세 판단은 사전 기대와 일치했다. 별도 보안 공지는 사람 검토와 추가 확인 업무를 만들었다. 브라우저 스크립트 회귀에서 예시 선택과 명시적 판단의 요청 수를 확인한다.
+
+
+## 2026-11-19 / v5.9 source candidate — faster verified evaluate path and redesigned Arena UI (append-only)
+**Purpose:** cut Arena request latency without changing any decision, and make the demo screen simple and readable (decision process visible, advanced controls in a side sheet).
+**Base:** main 046feef. Branch feature/v59-arena-ui-performance.
+**Changed:** integration/v51_profiles.py, integration/v51.py (request-scoped verification), regenerated configs/v51_profiles.json, configs/v51_contract.json, apps/shared/v51-profile-data.js, apps/shared/v51-contract-data.js; arena/store.py (two verification scopes), arena/server.py (/visual.js), arena/web/{index.html,style.css,visual.js,main.js}; tests_v59; tools/v59; CI; docs/V59_ARENA_UI_AND_PERFORMANCE.md; ledger/state/README.
+**Evidence:** internal/evidence/v59 (benchmarks before/after, UI browser check with replayed fixtures and screenshots). Results equal to base for 60 normalized objects.
+**Next AI:** do not treat the UI pipeline animation as a server-side stage trace; it is reconstructed from response fields. Do not claim model accuracy gains from this version. Real Zoro run, deployed-site check and independent evaluation remain open.
+**Rollback:** revert PR; no DB migration.

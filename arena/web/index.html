@@ -1,45 +1,159 @@
 <!doctype html>
-<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>의심계 · 확인과 재개</title><link rel="stylesheet" href="/style.css">
-<body><main>
-<p class="eyebrow">ITERAGUARD / DECISION ARENA</p>
-<h1>요청을 이해하고,<br>다음 확인으로 연결합니다.</h1>
-<p>의심계 v5.8 GitHub 통합 후보 · 핵심 엔진 5.6 · 합성 문장 전용 · 실은행/실연락 실행 없음 · 모델 신원 미인증</p>
-<section class="decision" aria-labelledby="lifecycle">
-<p class="eyebrow">세션 상태</p><h2 id="lifecycle">불러오는 중</h2>
-<p id="riskState"></p><p id="lifecycleNotice">종료는 위험 해제가 아닙니다.</p>
-<button id="close">미해결 상태로 보관</button><button id="reopen">이전 이력 유지하고 재개</button>
-<button id="new">별도 새 세션</button><button id="refresh">저장 상태 재조회</button>
-<label for="sessionHistory">이 브라우저에서 열었던 기록</label><select id="sessionHistory"></select>
-<button id="loadSession">선택한 기록 불러오기</button>
-<p>다른 기록을 열기 전 현재 세션을 보관하세요. 브라우저에는 원문 없이 세션 식별자만 기억합니다.</p>
-<button id="exportEvidence">현재 세션 증거 조회</button><button type="button" id="downloadEvidence">원문 없는 증거 JSON 내려받기</button><pre id="evidenceExport"></pre>
-<p id="status" role="status">평가 전</p>
-</section>
-<p>입력 출처: 사용자가 작성한 합성 문장. 판단 출처: 모델 응답(신원 미인증) 또는 연결 실패. 예제 문장이라는 이유로 모델 호출을 생략하지 않습니다.</p>
-<label for="text">현재 판단할 합성 문장</label>
-<textarea id="text" rows="6" maxlength="2000">샘플상사 11월 정산 건입니다. 기존에 등록된 A-01 계좌는 이번 지급에 사용하지 않습니다. 수취 계좌가 B-02로 변경됐으니, 오늘 오후 3시 전까지 이번 청구 대금을 새 계좌로 보내 주세요.</textarea>
-<div class="v58-examples" role="group" aria-label="합성 시나리오 예시">
-  <button type="button" data-sample="direct">계좌 변경 요청</button>
-  <button type="button" data-sample="warning">보안팀 예방 공지</button>
-  <button type="button" data-sample="ambiguous">방법이 빠진 확인 요청</button>
-  <button type="button" data-sample="followup">정산 진행 보고</button>
-</div><p id="sampleNotice" role="status">예시로 문장을 채운 뒤 판단 버튼을 누르세요. 계좌 변경 요청과 정산 진행 보고를 같은 기록에서 차례로 판단하면 남은 확인 업무를 볼 수 있습니다.</p>
-<p>입력한 현재 문장만 모델에 전달합니다. 이전 대화나 확인 보고를 기관 검증 사실로 덧붙이지 않습니다.</p>
-<label class="check"><input id="review" type="checkbox"> 사람에게 검토를 요청하고 싶어요</label>
-<section class="decision" aria-labelledby="taskHeading">
-<p class="eyebrow">확인 업무</p><h2 id="taskHeading">사용자 확인 보고</h2><p id="task">현재 확인 작업 없음</p>
-<label for="taskQueue">미해결 확인업무 선택</label><select id="taskQueue"></select><p id="queueCount"></p>
-<label for="observation">열린 확인 작업의 새 관측</label>
-<select id="observation"><option value="NOT_CHECKED">새 확인 보고 없음</option><option value="USER_REPORTS_CONFIRMED">확인했다고 보고</option><option value="USER_REPORTS_DENIED">사실이 아니라고 보고</option><option value="UNRESOLVED">확인했지만 미해결</option></select>
-<p>사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 새 보고가 없으면 이전 미해결 보고를 유지합니다.</p>
-</section>
-<button id="run">현재 문장 판단 및 확인 보고 저장</button>
-<section class="decision" aria-labelledby="action">
-<p class="eyebrow">현재 안내</p><h2 id="action">평가 전</h2>
-<p id="message">모델 미연결 시 사람 검토를 안내합니다.</p><p id="executionSource"></p><p id="currentTurn"></p><p id="modelNotice" role="status"></p><p id="sessionNotice"></p><p id="evidence"></p>
-</section>
-<p>NO_STRONG_SIGNAL은 안전 보증이 아닙니다. 확률은 모델의 선택 분포이며 실제 사기 확률이 아닙니다.</p>
-<details><summary>판단 근거와 저장 기록</summary><p id="reason"></p><pre id="result"></pre></details>
-<details><summary>실행 계약</summary><p id="temperatureNote"></p><pre id="manifest"></pre></details>
-<footer>Rulebook v5.8: PROPOSAL_ONLY · Zoro 실호출 및 업계 성공률 별도 검증 필요</footer></main><script src="/main.js"></script></body></html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>의심계 · IteraGuard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-verdict="idle" data-phase="idle">
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="topbar glass">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span><b>의심계</b><small>IteraGuard</small></span></div>
+  <p class="mode-pill" id="modePill" aria-live="polite">연결 확인 중</p>
+  <button type="button" class="ghost" id="openSheet" aria-controls="sheet" aria-expanded="false">세션 · 기록</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">ZORO-1 TYPED DECISION · LOCAL</p>
+      <h1>받은 메시지,<br>행동하기 전에 확인하세요.</h1>
+      <p class="lede">문장을 넣으면 모델의 제안을 계약과 독립 정책으로 다시 검사하고, 필요한 확인 행동만 알려 드립니다.</p>
+    </div>
+    <div class="core" aria-hidden="true">
+      <canvas id="coreCanvas" width="360" height="360"></canvas>
+      <span class="core-label" id="coreLabel">대기</span>
+    </div>
+  </section>
+
+  <section class="composer glass tilt" aria-labelledby="composerTitle">
+    <h2 id="composerTitle" class="sr-only">판단할 문장</h2>
+    <label for="text" class="field-label">판단할 합성 문장</label>
+    <textarea id="text" rows="5" maxlength="2000" placeholder="받은 메시지를 붙여 넣으세요 (합성 문장)">샘플상사 11월 정산 건입니다. 기존에 등록된 A-01 계좌는 이번 지급에 사용하지 않습니다. 수취 계좌가 B-02로 변경됐으니, 오늘 오후 3시 전까지 이번 청구 대금을 새 계좌로 보내 주세요.</textarea>
+    <div class="composer-row">
+      <div class="chips" role="group" aria-label="합성 예시 문장">
+        <button type="button" class="chip" data-sample="direct">계좌 변경 요청</button>
+        <button type="button" class="chip" data-sample="warning">보안팀 예방 공지</button>
+        <button type="button" class="chip" data-sample="ambiguous">방법이 빠진 확인 요청</button>
+        <button type="button" class="chip" data-sample="followup">정산 진행 보고</button>
+      </div>
+      <span class="counter" id="charCount" aria-live="off">0 / 2000</span>
+    </div>
+    <div class="composer-foot">
+      <label class="toggle"><input id="review" type="checkbox"><span class="track" aria-hidden="true"><span class="knob"></span></span><span>사람 검토도 요청</span></label>
+      <button id="run" class="primary">판단하기</button>
+    </div>
+    <p id="sampleNotice" class="hint" role="status">예시는 문장만 채워요. 계좌 변경 요청 → 정산 진행 보고 순서로 판단하면 남은 확인 업무가 유지되는 걸 볼 수 있어요.</p>
+  </section>
+
+  <section class="pipeline glass" aria-labelledby="pipeTitle">
+    <div class="section-head">
+      <h2 id="pipeTitle">판단 과정</h2>
+      <p class="pipe-meta" id="pipeMeta">아직 실행하지 않았어요</p>
+    </div>
+    <ol class="stages" id="stages">
+      <li class="stage" data-stage="input"><span class="node" aria-hidden="true"></span><b>입력</b><small data-detail>현재 문장만 사용</small></li>
+      <li class="stage" data-stage="model"><span class="node" aria-hidden="true"></span><b>Zoro-1 제안</b><small data-detail>typed 응답</small></li>
+      <li class="stage" data-stage="contract"><span class="node" aria-hidden="true"></span><b>계약 검증</b><small data-detail>질문·형식·지문</small></li>
+      <li class="stage" data-stage="policy"><span class="node" aria-hidden="true"></span><b>독립 정책</b><small data-detail>모델과 분리된 규칙</small></li>
+      <li class="stage" data-stage="task"><span class="node" aria-hidden="true"></span><b>확인 업무</b><small data-detail>실행 없이 안내만</small></li>
+    </ol>
+    <details class="how">
+      <summary>어떻게 작동하나요?</summary>
+      <ol>
+        <li><b>입력</b> — 지금 입력한 문장만 모델로 보냅니다. 원문은 저장하지 않습니다.</li>
+        <li><b>Zoro-1 제안</b> — 모델이 요청 행동·화행 같은 질문에 확률로 답합니다. 이 확률은 사기 확률이 아닙니다.</li>
+        <li><b>계약 검증</b> — 질문 목록, 응답 형식, 계약 지문이 맞지 않으면 판단하지 않고 사람 확인으로 넘깁니다.</li>
+        <li><b>독립 정책</b> — 모델과 분리된 규칙이 원문 단서와 함께 안내를 정합니다. 앞서 감지한 위험은 다음 문장이 평범해도 유지됩니다.</li>
+        <li><b>확인 업무</b> — 송금·문자 발송 같은 실제 행동은 하지 않고, 공식 경로로 확인할 일만 남깁니다.</li>
+      </ol>
+    </details>
+  </section>
+
+  <section class="verdict glass" aria-labelledby="action" aria-live="polite">
+    <div class="verdict-head">
+      <span class="verdict-dot" aria-hidden="true"></span>
+      <div>
+        <p class="eyebrow" id="verdictKicker">현재 안내</p>
+        <p class="verdict-title" id="verdictTitle">문장을 넣고 판단을 시작하세요</p>
+        <h2 id="action" class="code">평가 전</h2>
+      </div>
+    </div>
+    <p id="message" class="verdict-message">모델 미연결 시 사람 검토를 안내합니다.</p>
+    <p id="verdictHint" class="verdict-hint" hidden></p>
+    <p id="evidence" class="evidence"></p>
+    <div class="notes">
+      <p id="currentTurn"></p>
+      <p id="sessionNotice"></p>
+      <p id="modelNotice" role="status"></p>
+      <p id="executionSource" class="muted"></p>
+    </div>
+    <details class="fold">
+      <summary>판단 근거와 저장 기록</summary>
+      <p id="reason" class="mono"></p>
+      <pre id="result"></pre>
+    </details>
+  </section>
+
+  <section class="tasks glass" id="taskPanel" aria-labelledby="taskHeading" data-empty="true">
+    <div class="section-head">
+      <h2 id="taskHeading">확인 업무</h2>
+      <p id="queueCount" class="pipe-meta"></p>
+    </div>
+    <p id="task">현재 확인 작업 없음</p>
+    <div class="task-grid">
+      <label><span class="field-label">업무 선택</span><select id="taskQueue"></select></label>
+      <label><span class="field-label">확인 결과 보고</span>
+        <select id="observation"><option value="NOT_CHECKED">새 확인 보고 없음</option><option value="USER_REPORTS_CONFIRMED">확인했다고 보고</option><option value="USER_REPORTS_DENIED">사실이 아니라고 보고</option><option value="UNRESOLVED">확인했지만 미해결</option></select>
+      </label>
+    </div>
+    <p class="hint">보고는 사용자가 입력한 결과이며 기관이 검증한 결과가 아니에요. 보고만으로 위험이 해제되지 않아요.</p>
+  </section>
+
+  <footer class="foot">
+    <p>합성 문장 전용 · 실제 송금·연락·차단 없음 · 모델 신원 미인증 · 결과는 안전 보증이 아닙니다.</p>
+    <p>Rulebook v5.8 PROPOSAL_ONLY · 엔진 5.6 · 계약 5.1</p>
+  </footer>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet glass" id="sheet" aria-labelledby="sheetTitle" aria-hidden="true">
+  <div class="sheet-head">
+    <h2 id="sheetTitle">세션 · 기록</h2>
+    <button type="button" class="ghost icon" id="closeSheet" aria-label="닫기">✕</button>
+  </div>
+  <div class="session-card">
+    <p class="eyebrow">세션 상태</p>
+    <p class="session-state" id="lifecycle">불러오는 중</p>
+    <p id="riskState"></p>
+    <p id="lifecycleNotice" class="hint">종료는 위험 해제가 아닙니다.</p>
+    <p id="status" class="mono" role="status">평가 전</p>
+  </div>
+  <div class="btn-grid">
+    <button id="close" class="secondary">미해결로 보관</button>
+    <button id="reopen" class="secondary">이력 유지하고 재개</button>
+    <button id="new" class="secondary">새 세션</button>
+    <button id="refresh" class="secondary">저장 상태 재조회</button>
+  </div>
+  <label><span class="field-label">이 브라우저에서 연 기록</span><select id="sessionHistory"></select></label>
+  <button id="loadSession" class="secondary wide">선택한 기록 불러오기</button>
+  <p class="hint">다른 기록을 열기 전에 현재 세션을 보관하세요. 브라우저에는 원문 없이 세션 식별자만 남습니다.</p>
+  <div class="btn-grid">
+    <button id="exportEvidence" class="secondary">증거 조회</button>
+    <button type="button" id="downloadEvidence" class="secondary">증거 JSON 받기</button>
+  </div>
+  <pre id="evidenceExport"></pre>
+  <details class="fold">
+    <summary>실행 계약</summary>
+    <p id="temperatureNote" class="hint"></p>
+    <pre id="manifest"></pre>
+  </details>
+</aside>
+
+<script src="/visual.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>

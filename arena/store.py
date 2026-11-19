@@ -21,6 +21,7 @@ from urllib.parse import urlsplit
 
 from integration.v48 import bridge
 from integration import v50, v51, rule_tweak_shadow
+from integration import v51_profiles as _profiles
 
 SCHEMA_VERSION = 1
 MAX_OPEN_TASKS = 64
@@ -303,6 +304,16 @@ class Arena:
             cached, _ = check(c)
             if cached is not None:
                 return cached
+        # v5.9: the contract is fully verified once before the model call and once
+        # again after it (two scopes), instead of twelve rebuilds per request.
+        with _profiles.verification_scope():
+            return self._evaluate_verified(session_id, version, request_id, text, task_id, observation,
+                                           user_review, consent, started, received_utc, digest,
+                                           text_fingerprint, check)
+
+    def _evaluate_verified(self, session_id, version, request_id, text, task_id, observation,
+                           user_review, consent, started, received_utc, digest, text_fingerprint, check):
+        raw_digest = None
         # Reject a broken question/policy contract before sending any model input.
         # A manifest failure has no valid trace and is handled as static HTTP 503.
         self._execution_manifest()
@@ -314,9 +325,15 @@ class Arena:
             bound_profile, bound_policy = self.profile_id, self.policy_id
             bound_request = v51.request_binding(bound_profile, bound_policy)
             if bound_profile == 'v50-baseline':
+                payload = None
+            else:
+                payload = v51.question_payload(text, bound_profile, bound_policy)
+            # Close the pre-model scope: a contract changed during the network call is caught below.
+            _profiles.refresh_scope()
+            if payload is None:
                 raw, ms = self.client.infer(text)
             else:
-                raw, ms = self.client.infer(text, question_payload=v51.question_payload(text, bound_profile, bound_policy))
+                raw, ms = self.client.infer(text, question_payload=payload)
             outcome = v51.evaluate_current(text, raw, policy_id=bound_policy, profile_id=bound_profile, binding=bound_request)
             if type(ms) not in (int,float) or not math.isfinite(ms) or ms < 0:
                 raise bridge.ContractError('INVALID_LATENCY')

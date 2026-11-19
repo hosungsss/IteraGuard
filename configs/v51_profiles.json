@@ -18,7 +18,7 @@
     "copied_question": "q_evidence"
   },
   "source_hashes": {
-    "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+    "integration/v51_profiles.py": "f04036220431b317e04f5e22e7bdb3d85c24f5c2d4cf04308984b1e0b84a4598",
     "tools/export_v51_profiles.py": "4a68277aa1081aa924ff286b4235854c618ef62dfdf5117679598d60c82629fb",
     "configs/v50_contract.json": "e0defed95e1dbafbb8ba94c247a0e98ffd10a224fcbc63a544981faf3cb9c682",
     "internal/evidence/v50/question_ablation/replay_inputs/previous_inputs/candidate_questions.json": "d30bdcddaf6214e262db13418fe8cb2a3a832ce52dbf367a9d6f8f4d07e11f77"
@@ -1135,5 +1135,5 @@
     }
   },
   "scope": "QUESTION_SELECTION_AND_DECLARED_RESPONSE_SCHEMA_ONLY; NO_POLICY_EVALUATION_OR_MODEL_ATTESTATION",
-  "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd"
+  "registry_fingerprint": "f122a5e664ba86ab79918888b7d0e69d9fab2c99874771926706f772d0a9ab8f"
 }

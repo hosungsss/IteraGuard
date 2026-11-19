@@ -1,4 +1,6 @@
-# 의심계 · IteraGuard v5.8 source integration candidate (Arena v5.6 engine)
+# 의심계 · IteraGuard v5.9 source candidate (Arena v5.6 engine)
+
+> **v5.9 (2026-11-19):** 판단 결정은 그대로 두고 요청당 계약 재검증을 12회에서 3회 이하로 줄여, 통제 응답 기준 evaluate p50이 53.99ms에서 19.59ms로 빨라졌습니다. Arena 화면은 판단 과정 5단계가 보이는 단순한 구조로 다시 만들었습니다(세션·기록은 오른쪽 시트). 실제 Zoro-1 추론, 기기, 독립 평가는 미검증입니다. → [v5.9 문서](docs/V59_ARENA_UI_AND_PERFORMANCE.md)
 
 의심스러운 메시지를 받았을 때 **어떤 확인 행동을 해야 하는지 제안하고, 해결하지 못한 위험을 다음 대화에서도 유지하는** 로컬 실행 프로토타입입니다. Track 1을 위한 Zoro-1 Typed Decision 연동 경로, 결정론적 정책, 확인 업무 큐, SQLite 기록과 웹 화면을 포함합니다.
 

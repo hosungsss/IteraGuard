@@ -15,6 +15,10 @@ def selected_profile(policy_id='legacy'):
  value=_selection()['default_profile_by_policy'][policy_id];P.profile(value,policy_id);return value
 
 def execution_manifest():
+ # v5.9: verified once per P.verification_scope(); outside a scope every call verifies again.
+ return deepcopy(P.scope_cached('v51_execution_manifest',_verify_execution_manifest))
+
+def _verify_execution_manifest():
  manifest=json.loads((ROOT/'configs/v51_contract.json').read_text());fingerprint=manifest.pop('manifest_fingerprint')
  if _hash(manifest)!=fingerprint:raise ContractError('V51_MANIFEST_FINGERPRINT_MISMATCH')
  base=v50.execution_manifest();reg=P.registry()
