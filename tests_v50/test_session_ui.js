@@ -71,13 +71,15 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
 test('each synthetic example fills the editor and waits for an explicit evaluation', async () => {
   const a = await app();
   const seen = new Set();
+  // Paste-first consumer UX begins empty; internal fixtures are still useful in tests.
+  assert.equal(a.get('text').defaultValue, '');
   assert.deepEqual(Object.keys(a.samples), ['direct', 'warning', 'ambiguous', 'followup']);
   for (const [name, button] of Object.entries(a.samples)) {
     const before = a.calls.length;
     await button.dispatch('click');
     const value = a.get('text').value;
     assert.ok(value.length > 0 && !seen.has(value));
-    if (name === 'direct') assert.equal(value, a.get('text').defaultValue);
+    if (name === 'direct') assert.match(value, /샘플상사.*A-01.*B-02/);
     seen.add(value);
     assert.equal(a.calls.length, before);
   }
