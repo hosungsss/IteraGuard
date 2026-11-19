@@ -166,7 +166,7 @@ test('arena explains current-turn no-signal separately from a prior-risk hold, i
   assert.equal(a.get('action').textContent, 'ASK_HUMAN');
   assert.equal(a.get('reason').textContent, 'PRIOR_RISK_UNRESOLVED');
   assert.match(a.get('currentTurn').textContent, /현재 문장:.*위험 행동 요청 미감지.*안전 보증 아님/);
-  assert.match(a.get('sessionNotice').textContent, /앞서 감지한 위험.*사용자 확인 보고만으로 해제되지 않습니다/);
+  assert.match(a.get('sessionNotice').textContent, /이전 요청.*사용자 완료 보고만으로 이전 위험이 해제되지 않습니다/);
   const current = a.get('currentTurn').textContent, notice = a.get('sessionNotice').textContent;
   await a.get('refresh').dispatch('click');
   assert.equal(a.get('currentTurn').textContent, current); assert.equal(a.get('sessionNotice').textContent, notice);
@@ -211,7 +211,7 @@ test('v53 arena hold is explicitly complete, including retained prior risk',asyn
   for (const reason of ['MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS','PRIOR_RISK_UNRESOLVED']) {
     const a=await arena({action:'ASK_HUMAN',current_turn_action:'ASK_HUMAN',reason});
     await a.get('run').dispatch('click');
-    assert.match(a.get('message').textContent,/처리 중 상태가 아닙니다|현재 판단은 완료/);
+    assert.match(a.get('message').textContent,/이번 요청.*추가 확인/);
     assert.equal(a.get('run').disabled,false);
   }
 });

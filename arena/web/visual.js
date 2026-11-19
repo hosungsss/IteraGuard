@@ -134,11 +134,6 @@
   // ---------- verdict presentation (mirrors #action set by main.js) ----------
   const action = $('action');
   // Protective "what not to do yet" line. Presentation only: the server decision is unchanged.
-  const HINT = {
-    PAUSE_AND_VERIFY: '확인이 끝나기 전에는 송금·인증번호 전달·앱 설치·링크 로그인을 하지 마세요.',
-    ASK_HUMAN: '판단이 보류된 동안에도 송금·인증번호 전달·앱 설치는 미뤄 두세요.',
-    CAUTION: '메시지 속 연락처가 아니라, 원래 알고 있던 공식 경로로 확인하세요.'
-  };
   let lastModelFailed = false;
   function syncVerdict() {
     // A typed but not yet evaluated message must never tint the page as if a
@@ -160,13 +155,9 @@
       return;
     }
     body.dataset.verdict = v ? code : 'idle';
-    let title = v ? v.title : (code === '평가 전' ? '문장을 넣고 판단을 시작하세요' : '판단 결과를 다시 확인하세요');
-    if (code === 'ASK_HUMAN' && reason === 'PRIOR_RISK_UNRESOLVED') title = '앞서 감지한 위험이 아직 남아 있어요';
-    else if (code === 'ASK_HUMAN' && lastModelFailed) title = '모델 응답을 받지 못해 판단을 보류했어요';
-    $('verdictTitle').textContent = title;
-    const hint = $('verdictHint');
-    if (hint) { hint.textContent = HINT[code] || ''; hint.hidden = !HINT[code]; }
-    $('verdictKicker').textContent = v ? v.kicker : '현재 안내';
+    // main.js owns the complete, current-turn/session-separated explanation.
+    if (!v) { $('verdictTitle').textContent = '문장을 넣고 판단을 시작하세요'; $('verdictKicker').textContent = '현재 안내'; }
+    const hint = $('verdictHint'); if (hint) { hint.textContent = ''; hint.hidden = true; }
 
     core.setAccent();
     body.dataset.flash = '0'; void body.offsetWidth; body.dataset.flash = '1';

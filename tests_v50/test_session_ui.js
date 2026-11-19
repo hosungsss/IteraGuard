@@ -171,7 +171,8 @@ test('model failure and recovery remain distinct from unresolved session risk', 
   };
   const retained = { action: 'ASK_HUMAN', reason: 'PRIOR_RISK_UNRESOLVED' };
   await submit({ ...retained, model_status: 'FAILED', current_turn_action: 'ASK_HUMAN' });
-  assert.match(a.get('modelNotice').textContent, /연결 확인 후 같은 문장/);
+  assert.match(a.get('nextAction').textContent, /연결 상태.*같은 문장/);
+  assert.match(a.get('message').textContent, /판단하지 못했습니다/);
   assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
   assert.doesNotMatch(a.get('message').textContent, /현재 판단은 완료/);
   await submit({ ...retained, model_status: 'VALID', current_turn_action: 'NO_STRONG_SIGNAL',
@@ -180,4 +181,57 @@ test('model failure and recovery remain distinct from unresolved session risk', 
   assert.match(a.get('modelNotice').textContent, /기술 재시도 업무를 정리/);
   assert.match(a.get('task').textContent, /모델 재시도 완료/);
   assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
+});
+
+
+test('separate analysis clears the editor only after start succeeds and never resolves old tasks', async () => {
+  const a = await app();
+  await a.get('run').dispatch('click');
+  a.get('text').value = 'old input';
+  const calls = a.calls.length;
+  await a.get('newAnalysis').dispatch('click');
+  assert.equal(a.get('text').value, '');
+  assert.equal(a.get('review').checked, false);
+  assert.deepEqual(a.calls.slice(calls).map(c => c.url), ['/api/start']);
+  assert.match(a.get('sampleNotice').textContent, /이전 기록과 미해결 업무/);
+});
+
+test('failed independent start preserves old input, result and session binding', async () => {
+  const a = await app(); await a.get('run').dispatch('click');
+  a.get('text').value = 'keep this input';
+  const previous = vm.runInContext('JSON.stringify({session,lastDecision})', a.context);
+  const message = a.get('message').textContent;
+  a.context.fetch = async () => { throw Error('START_UNAVAILABLE'); };
+  await a.get('newAnalysis').dispatch('click');
+  assert.equal(a.get('text').value, 'keep this input');
+  assert.equal(a.get('message').textContent, message);
+  assert.equal(vm.runInContext('JSON.stringify({session,lastDecision})', a.context), previous);
+  assert.match(a.get('sampleNotice').textContent, /시작하지 못했습니다/);
+});
+
+test('explanation separates old task counts and keeps response fields unchanged', async () => {
+  const a = await app();
+  const d = {action:'ASK_HUMAN',current_turn_action:'NO_STRONG_SIGNAL',reason:'PRIOR_RISK_UNRESOLVED',model_status:'VALID',version:3,open_task_count:2,
+    open_tasks:[{id:'old',created_version:1},{id:'new',created_version:3}]};
+  a.context.responseForTest = d;
+  const before = JSON.stringify(d);
+  vm.runInContext('renderDecision(responseForTest)',a.context);
+  assert.equal(JSON.stringify(d),before);
+  assert.match(a.get('message').textContent,/감지되지 않았습니다/);
+  assert.match(a.get('sessionNotice').textContent,/이전에 생성된 미해결 업무 1건/);
+  assert.match(a.get('sessionNotice').textContent,/총 2건/);
+  assert.equal(a.get('action').textContent,'ASK_HUMAN');
+  assert.equal(a.get('verdictHint').hidden,true);
+  assert.doesNotMatch(a.get('nextAction').textContent,/인증번호|앱 설치|원격접속/);
+});
+
+test('a pending judgment prevents independent-analysis and history navigation', async () => {
+  const a = await app({deferEvaluation:true});
+  const pending = a.get('run').dispatch('click');await settle();
+  assert.equal(a.get('newAnalysis').disabled,true);
+  assert.equal(a.get('loadSession').disabled,true);
+  const starts=a.calls.filter(x=>x.url==='/api/start').length;
+  await a.get('newAnalysis').dispatch('click');
+  assert.equal(a.calls.filter(x=>x.url==='/api/start').length,starts);
+  a.pending.shift()({});await pending;
 });

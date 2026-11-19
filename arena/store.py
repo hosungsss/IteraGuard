@@ -261,6 +261,7 @@ class Arena:
         elif action == 'PAUSE_AND_VERIFY':
             kind, instruction = 'PAUSE_AND_INDEPENDENT_CHECK', '송금·코드 전달·원격접속을 멈추고, 메시지 속 연락처가 아닌 기존 공식 경로로 요청을 확인하세요. 완료 보고만으로 위험이 해제되지 않습니다.'
         return {'id': row['id'], 'type': kind, 'status': row['status'],
+                'created_version': row['created_version'],
                 'observation': row['observation'], 'observation_provenance': 'USER_REPORTED',
                 'instruction': instruction}
 
