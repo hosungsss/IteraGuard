@@ -162,3 +162,19 @@ test('failed inference is not displayed as a completed current judgment',()=>{
   const a=app();a.decision({model_status:'FAILED',action:'ASK_HUMAN'});
   assert.match(a.get('conversationFeed').textContent,/분석 실패 · 판단 불가/);
 });
+
+for (const [question, expected] of [
+  ['인증번호를 안 보냈어요.', null], ['인증번호를 보냈어요.', 'entered_secret'],
+  ['아직 송금했는지 모르겠어요.', null], ['제가 아니라 친구가 송금했어요.', null],
+  ['앱을 설치했을 때는 어떻게 하나요?', null], ['제가 방금 송금했어요.', 'paid'],
+  ['앱을 설치했어요.', 'installed'], ['제가 파일을 내려받았습니다.', 'downloaded'],
+  ['입금했어요? 제가 확인해야 하나요?', null],
+]) {
+  test('follow-up preserves actor, polarity and timing: ' + question, async () => {
+    const a = app(); a.decision();
+    a.get('followupText').value = question; a.get('sendFollowup').click(); await settle();
+    assert.equal(a.calls.length, expected === null ? 0 : 1);
+    if (expected) assert.equal(a.calls[0].payload.scenario, expected);
+    else assert.match(a.get('conversationNotice').textContent, /상황을 확정할 수 없습니다/);
+  });
+}

@@ -230,3 +230,16 @@ Verification evidence: CI and main read-back after merge, not guessed; full brow
 
 
 2026-11-20: Signal-only bounded context reconciliation preserves original model scores/grade/action and reports corrections. Full recognized warning/report clauses distinguish past/negated requests; unknown or sensitive-action + green conflicts defer to gray. Existing Arena policy and shadow remain unchanged. Python 244 pass/2 skipped; Node 71 pass; controlled Edge 390/1440 pass. New 8 actual public responses plus prior 12 replayed locally; not a deployed new-model test. Colloquial warning action and family-impersonation grade remain limitations. See docs/SIGNAL_CONTEXT_VALIDATION_20261120.md.
+
+
+## 2026-11-20 KST · Zoro audit and optional link evidence candidate
+
+Base 7f48096bbfca03e4d5ac1b16f112920771c68e6c. Local review candidate only.
+The two-question home retains the original typed choices. The UI reports grade/action conflicts and rounded near ties, distinguishes busy/unavailable, and offers a separate /link-review screen. /arena serves the detailed session interface. Explicit self-reports gate high-impact follow-up guidance.
+Read-only evidence options: operator-supplied, time-bounded PhishTank CSV for exact URL matching, or an explicitly shared hostname via the official ScamAdviser cache with a server key. Structured evidence can be passed to an optional local shadow choice. No case adjudication or authority follows from the result.
+Python top-level suites: 417 passed, 2 skipped of 419. Node: 137 passed of 137. Saved model output replay: 48 case/profile pairs; 11-question guidance matched allowed labels in 18/24 under current policy, with 1/7 required pauses missed and 5/12 unnecessary benign holds. No independent human labels. This is not a score for the two-question home.
+Actual provider credentials, actual Zoro checkpoint/head, hardware inference, production deployment, and pixel verification: not established. Chromium launch stopped by process socket permission. Rollback: reverse this isolated patch; no DB migration. Reproduce: python -m tools.zoro.replay_locked_audit; python -m unittest discover -s tests_v56; node --test tests*/test_*.js.
+
+
+2026-11-20 KST | Integrated audit candidate from 7f48096 with main 695afc8 (PR #29). Two typed questions now use four internal review perspectives. Existing response keys, choice IDs, context reconciliation and score provenance retained. Separate optional link observations and explicit follow-up self-reports. Requirements, counterexamples, settings and rollback: docs/SIGNAL_REVIEW_PERSPECTIVES_KO.md. Live checkpoint effect, comprehension and provider quality unmeasured.
+Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138; exact controlled response equality 240/240 vs 695afc8 (4 grades x 20 actions x 3 contexts). License inventory 608. Local model not configured; new live inference and real provider lookup not verified.

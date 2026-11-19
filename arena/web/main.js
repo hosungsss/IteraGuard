@@ -12,7 +12,7 @@ const labels = {
 const signalLabels = {
   red: '빨강 · 피싱 의심 매우 높음',
   orange: '주황 · 피싱 의심 높음',
-  green: '초록 · 정상 문자로 보임',
+  green: '초록 · 문구에서 뚜렷한 피싱 신호를 찾지 못했어요',
   gray: '회색 · 판단 어려움'
 };
 function conversationSignal(type, detail = {}) {
@@ -150,7 +150,7 @@ function currentInputRequired(message) {
   el('action').textContent = 'ASK_HUMAN'; el('message').textContent = message;
   for (const id of ['evidence', 'reason', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
 }
-async function showInlineSignal(binding, modelStatus) {
+async function showInlineSignal(binding, modelStatus, currentAction) {
   const panel = el('inlineSignal');
   if (!panel) return;
   let grade = 'gray';
@@ -161,6 +161,10 @@ async function showInlineSignal(binding, modelStatus) {
       if (Object.hasOwn(signalLabels, signal.grade)) {
         grade = signal.grade;
         label = signalLabels[grade];
+        if ((grade === 'green' && currentAction !== 'NO_STRONG_SIGNAL') ||
+            (['red', 'orange'].includes(grade) && currentAction === 'NO_STRONG_SIGNAL')) {
+          label += ' · 두 결과가 다릅니다. 아래 행동 안내를 확인하세요.';
+        }
       }
     } catch {
       // This observation can fail independently of the already saved decision.
@@ -402,7 +406,7 @@ el('run').onclick = () => {
   const cp = Array.from(payload.text);
   el('evidence').textContent = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) &&
     e.start >= 0 && e.start < e.end && e.end <= cp.length).map(e => '원문 어휘 근거: “' + cp.slice(e.start, e.end).join('') + '”').join(' / ');
-  await showInlineSignal(lastDecision, d.model_status);
+  await showInlineSignal(lastDecision, d.model_status, d.current_turn_action || d.action);
 });
 };
 function invalidateInput() {

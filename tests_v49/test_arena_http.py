@@ -36,7 +36,10 @@ class HttpTests(unittest.TestCase):
     def test_ui_external_assets_and_no_inline_script(self):
         code,headers,data=self.call('/');self.assertEqual(code,200)
         self.assertIn('frame-ancestors',headers['Content-Security-Policy'])
-        self.assertIn(b'src="/main.js"',data)
+        self.assertIn(b'src="/signal.js"',data)
+        self.assertEqual(self.call('/signal.js')[0],200)
+        self.assertIn(b'src="/main.js"',self.call('/arena')[2])
+        self.assertNotIn(b'<script>',data)
         self.assertEqual(self.call('/main.js')[0],200)
         self.assertEqual(self.call('/../store.py')[0],404)
     def test_bad_generation_backend_is_502_not_a_valid_label(self):
