@@ -50,3 +50,6 @@ V5.9 source candidate (2026-11-19, branch feature/v59-arena-ui-performance): req
 
 
 2026-11-19 · 문자 신호등 미리보기. Arena 홈에서 /signal을 열 수 있습니다. /api/signal은 합성·비식별 텍스트로 로컬 Zoro의 선택형 질문 한 개를 실행하며 기존 평가, 세션, 확인 업무와 분리됩니다. 실제 로컬 Zoro 호출 6건에서 네 등급을 모두 관찰했습니다. 예방 경고는 초록이었으며, 과거 피싱 인용 신고 한 건은 빨강으로 분류됐습니다. 이 관찰의 정확도 일반화와 독립 평가는 미검증입니다.
+
+
+2026-11-19: Integrated origin/main 636f56b by fast-forward, preserving 9ed5dac UI state separation. No conflicts or runtime code edits required. Python 237 passed / 2 skipped, Node 68 passed, Edge 1440/390 controlled session flows passed, licensing 608-file inventory passed. Signal preview HTTP checks included; live model and hosted deployment NOT_RUN in this integration. See docs/MAIN_INTEGRATION_VALIDATION_20261119.md.
