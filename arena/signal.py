@@ -1,4 +1,7 @@
-"""One-question local model observation, without Arena session state."""
+"""Local phishing grade and requested action, without Arena session state."""
+
+import json
+from pathlib import Path
 
 from integration.v48 import bridge, normalize_response
 
@@ -19,21 +22,39 @@ QUESTION = {
         'gray': '모르겠음. 문자 내용이 너무 짧거나 맥락과 요청 대상이 부족해 위 등급을 고르기 어려움.',
     },
 }
-SPEC = {'q_signal': {'type': 'choice', 'options': list(QUESTION['criteria'])}}
+ACTION_CONFIG = Path(__file__).resolve().parents[1] / 'configs' / 'zoro_action_choices.json'
+ACTION_QUESTION = json.loads(ACTION_CONFIG.read_text(encoding='utf-8'))['questions']['q_action']
+QUESTIONS = {'q_action': ACTION_QUESTION, 'q_signal': QUESTION}
+SPEC = {
+    name: {'type': question['type'], 'options': list(question['criteria'])}
+    for name, question in QUESTIONS.items()
+}
+
+
+def selected_or_fallback(answer, fallback):
+    scores = answer['probabilities']
+    best = max(scores.values())
+    return fallback if sum(score == best for score in scores.values()) > 1 else answer['choice']
 
 
 def evaluate_signal(client, text):
-    """Return a normalized color and scores from a single local model call."""
+    """Return two typed answers from one local model call."""
     if type(text) is not str or not text.strip() or len(text) > 2000:
         raise ValueError('INVALID_TEXT')
     text.encode('utf-8')
     if isinstance(client, bridge.ModelClient):
         check_loopback_endpoint(client.endpoint)
 
-    payload = {'state': text, 'questions': {'q_signal': QUESTION}}
+    payload = {'state': text, 'questions': QUESTIONS}
     raw, _ = client.infer(text, question_payload=payload)
-    answer = normalize_response(raw, SPEC)['q_signal']
-    scores = answer['probabilities']
-    best = max(scores.values())
-    tied = sum(score == best for score in scores.values()) > 1
-    return {'grade': 'gray' if tied else answer['choice'], 'scores': scores}
+    answers = normalize_response(raw, SPEC)
+    signal = answers['q_signal']
+    action = selected_or_fallback(answers['q_action'], 'unknown')
+    return {
+        'grade': selected_or_fallback(signal, 'gray'),
+        'scores': signal['probabilities'],
+        'requested_action': {
+            'id': action,
+            'label': ACTION_QUESTION['criteria'][action].partition('. ')[0],
+        },
+    }

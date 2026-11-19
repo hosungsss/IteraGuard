@@ -1,4 +1,4 @@
-"""Single-question route with a controlled model and isolated Arena state."""
+"""Two-question route with a controlled model and isolated Arena state."""
 
 from http.client import HTTPConnection
 from http.server import ThreadingHTTPServer
@@ -9,6 +9,7 @@ from threading import Thread
 import unittest
 
 from arena.server import Handler
+from arena.signal import ACTION_QUESTION
 from arena.store import Arena
 
 
@@ -16,6 +17,13 @@ class ControlledModel:
     def __init__(self):
         self.requests = []
         self.answers = {
+            'q_action': {
+                'type': 'choice',
+                'choice': 'share_auth_secret',
+                'probabilities': {
+                    key: float(key == 'share_auth_secret') for key in ACTION_QUESTION['criteria']
+                },
+            },
             'q_signal': {
                 'type': 'choice',
                 'choice': 'red',
@@ -56,25 +64,34 @@ class SignalHttpTests(unittest.TestCase):
         finally:
             conn.close()
 
-    def test_assets_and_single_question_without_session_change(self):
+    def test_assets_and_two_questions_without_session_change(self):
         status, page = self.request('GET', '/')
         self.assertEqual(status, 200)
         self.assertIn('id="inlineSignal"', page)
+        self.assertIn('id="inlineRequestedAction"', page)
+        self.assertIn('src="/signal.js"', page)
+        self.assertNotIn('src="/main.js"', page)
+        self.assertNotIn('id="nextAction"', page)
         self.assertNotIn('href="/signal"', page)
         self.assertEqual(self.request('GET', '/signal'), (200, page))
-        for path in ('/main.js', '/style.css'):
+        for path in ('/signal.js', '/main.js', '/style.css'):
             self.assertEqual(self.request('GET', path)[0], 200)
         sid = self.arena.start()['session_id']
         before = self.arena.read(sid)
         text = ' 가상 문자\n인증번호를 보내주세요. '
         status, raw = self.request('POST', '/api/signal', {'text': text, 'synthetic_only': True})
         self.assertEqual(status, 200)
-        self.assertEqual(json.loads(raw)['grade'], 'red')
+        result = json.loads(raw)
+        self.assertEqual(result['grade'], 'red')
+        self.assertEqual(result['requested_action'], {
+            'id': 'share_auth_secret', 'label': '비밀번호·인증번호 알려주기',
+        })
         self.assertEqual(len(self.model.requests), 1)
         received, payload = self.model.requests[0]
         self.assertEqual(received, text)
         self.assertEqual(payload['state'], text)
-        self.assertEqual(set(payload['questions']), {'q_signal'})
+        self.assertEqual(list(payload['questions']), ['q_action', 'q_signal'])
+        self.assertEqual(len(payload['questions']['q_action']['criteria']), 20)
         self.assertEqual(self.arena.read(sid), before)
 
     def test_rejects_invalid_or_cross_origin_inputs_before_inference(self):

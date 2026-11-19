@@ -6,6 +6,10 @@
   const el = $;
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const body = document.body;
+  if (body.dataset.signalOnly === 'true') {
+    makeCore();
+    return;
+  }
 
   const VERDICT = {
     NO_STRONG_SIGNAL: { title: '뚜렷한 위험 요청은 보이지 않아요', core: '신호 약함', kicker: '현재 안내 · 안전 보증은 아니에요' },
@@ -215,7 +219,7 @@
   }
 
   // ---------- "doubt core": a lit glass sphere with orbiting rings (canvas, no libraries) ----------
-  const core = (function () {
+  function makeCore() {
     const cv = $('coreCanvas'), ctx = cv && cv.getContext('2d');
     const state = { busy: false, rgb: [124, 156, 255], rgb2: [155, 123, 255], t: 0, running: true, visible: true };
     function css(name) {
@@ -309,7 +313,8 @@
       setAccent() { setAccent(); if (reduce) { state.running = true; frame(); state.running = false; } },
       get busy() { return state.busy; }, set busy(v) { state.busy = !!v; start(); }
     };
-  })();
+  }
+  const core = makeCore();
 
   modelConnection('waiting');
   count();
