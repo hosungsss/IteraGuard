@@ -13,12 +13,34 @@ const signalStatus = document.getElementById('signalStatus');
 const signalResult = document.getElementById('inlineSignal');
 const signalGrade = document.getElementById('inlineSignalGrade');
 const requestedAction = document.getElementById('inlineRequestedAction');
+const signalConfirmation = document.getElementById('inlineConfirmation');
+const signalConfirmationText = document.getElementById('inlineConfirmationText');
 const signalCount = document.getElementById('charCount');
 let signalRevision = 0;
+
+function clearConfirmationExcerpt() {
+  if (!signalConfirmation || !signalConfirmationText) return;
+  signalConfirmation.hidden = true;
+  signalConfirmationText.textContent = '';
+}
+
+function renderConfirmationExcerpt(text, excerpt) {
+  if (!signalConfirmation || !signalConfirmationText) return;
+  const start = excerpt?.start;
+  const end = excerpt?.end;
+  if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || start >= end) return;
+  const characters = Array.from(text);
+  if (end > characters.length) return;
+  const original = characters.slice(start, end).join('');
+  if (!original.trim()) return;
+  signalConfirmationText.textContent = original;
+  signalConfirmation.hidden = false;
+}
 
 signalText.addEventListener('input', () => {
   signalRevision += 1;
   signalResult.hidden = true;
+  clearConfirmationExcerpt();
   globalThis.renderSignalChoiceScores?.();
   signalStatus.textContent = '';
   signalCount.textContent = Array.from(signalText.value).length + ' / 2000';
@@ -36,6 +58,7 @@ signalForm.addEventListener('submit', async (event) => {
   const revision = signalRevision;
   const isCurrent = () => revision === signalRevision && text === signalText.value;
   signalResult.hidden = true;
+  clearConfirmationExcerpt();
   globalThis.renderSignalChoiceScores?.();
   signalRun.disabled = true;
   signalStatus.textContent = '조로가 문장을 판단 중이에요.';
@@ -61,7 +84,8 @@ signalForm.addEventListener('submit', async (event) => {
       }
       return;
     }
-    const { grade, scores, requested_action: action, explanation, context_review } = await response.json();
+    const { grade, scores, requested_action: action, explanation, context_review, confirmation_excerpt } =
+      await response.json();
     if (!Object.hasOwn(signalLabels, grade) || typeof action?.label !== 'string' || !action.label.trim()) {
       throw new Error('INVALID_SIGNAL_RESULT');
     }
@@ -69,6 +93,7 @@ signalForm.addEventListener('submit', async (event) => {
       signalResult.dataset.grade = grade;
       signalGrade.textContent = signalLabels[grade];
       requestedAction.textContent = action.label;
+      if (grade === 'red' || grade === 'orange') renderConfirmationExcerpt(text, confirmation_excerpt);
       const note = document.getElementById('signalExplanation');
       if (note) note.textContent = typeof explanation === 'string' ? explanation : '본문 기반 판단이며 신원과 안전은 확인되지 않았습니다.';
       globalThis.renderSignalChoiceScores?.(scores, grade, context_review?.original?.grade);

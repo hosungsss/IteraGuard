@@ -81,3 +81,6 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 
 
 2026-11-20 KST · 성능검증에서 로컬 Zoro와 원본 CSV를 연결한 Arena의 551건 재측정을 실행할 수 있다. 진행 건수를 표시하고 전량 판단 후 피싱 탐지율과 정확도를 갱신한다. 방법과 결과는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 있다.
+
+
+2026-11-20 KST · 신호등 결과 카드의 요청 행동 아래 기존 네 색 점수 위에 `확인이 필요한 부분`을 표시한다. 표시 가능한 경우 로컬 Zoro로 따로 평가한 원문 구절 하나의 문자 위치를 사용하며, 기존 신호등과 네 색 점수는 기존 모델 응답을 따른다. 표시 품질의 독립 평가는 아직 이뤄지지 않았다.

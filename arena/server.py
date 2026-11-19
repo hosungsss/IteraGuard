@@ -13,7 +13,8 @@ from .store import Arena,Conflict
 from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
-from .signal import PROFILES, evaluate_signal
+from .signal import PROFILES
+from .signal_excerpt import evaluate_signal_card
 from .signal_benchmark import SignalBenchmark
 from .link_review import LinkReviewer
 from urllib.error import URLError
@@ -83,7 +84,7 @@ class Handler(SecureHandler):
                     return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
                 try:
                     profile = getattr(self.server, 'signal_profile', 'baseline')
-                    return self._infer_once(lambda: evaluate_signal(self.server.arena.client, body['text'], profile=profile))
+                    return self._infer_once(lambda: evaluate_signal_card(self.server.arena.client, body['text'], profile=profile))
                 except (bridge.ModelUnavailable,bridge.ContractError):
                     return self.out(503,{'error':'SIGNAL_MODEL_UNAVAILABLE'})
             if self.path=='/api/secondary/check':

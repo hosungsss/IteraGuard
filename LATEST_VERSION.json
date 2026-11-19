@@ -38,5 +38,6 @@
     "verify"
   ],
   "signal_profile_default": "baseline",
-  "signal_profile_candidate_live_evaluation": "NOT_RUN"
+  "signal_profile_candidate_live_evaluation": "NOT_RUN",
+  "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN"
 }

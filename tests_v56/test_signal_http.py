@@ -12,6 +12,7 @@ from unittest.mock import Mock
 from arena.server import Handler
 from arena.signal import ACTION_QUESTION
 from arena.store import Arena
+from integration.v48 import bridge
 
 
 class ControlledModel:
@@ -35,6 +36,15 @@ class ControlledModel:
 
     def infer(self, text, *, question_payload):
         self.requests.append((text, question_payload))
+        questions = question_payload['questions']
+        if list(questions) == ['q_signal'] and self.answers:
+            if getattr(self, 'fail_excerpt', False):
+                raise bridge.ModelUnavailable('TEST_EXCERPT_UNAVAILABLE')
+            answer = self.answers['q_signal']
+            scores = getattr(self, 'excerpt_scores', {}).get(text)
+            if scores is not None:
+                answer = {**answer, 'choice': max(scores, key=scores.get), 'probabilities': scores}
+            return {'answers': {'q_signal': answer}}, .1
         return {'answers': self.answers}, .1
 
 
@@ -79,7 +89,7 @@ class SignalHttpTests(unittest.TestCase):
             self.assertEqual(self.request('GET', path)[0], 200)
         sid = self.arena.start()['session_id']
         before = self.arena.read(sid)
-        text = ' 가상 문자\n인증번호를 보내주세요. '
+        text = ' 🧪 가상 문자\n인증번호를 보내주세요. '
         status, raw = self.request('POST', '/api/signal', {'text': text, 'synthetic_only': True})
         self.assertEqual(status, 200)
         result = json.loads(raw)
@@ -87,7 +97,7 @@ class SignalHttpTests(unittest.TestCase):
         self.assertEqual(result['requested_action'], {
             'id': 'share_auth_secret', 'label': '비밀번호·인증번호 알려주기',
         })
-        self.assertEqual(len(self.model.requests), 1)
+        self.assertEqual(len(self.model.requests), 2)
         received, payload = self.model.requests[0]
         self.assertEqual(received, text)
         self.assertEqual(payload['state'], text)
@@ -98,9 +108,49 @@ class SignalHttpTests(unittest.TestCase):
         self.assertIn('누가 누구에게', action)
         for cue in ('접근 권한', '기억을 부정', '약관', '나이·장애'):
             self.assertIn(cue, signal)
-        self.assertEqual(set(result), {'grade', 'scores', 'requested_action', 'context_review', 'explanation'})
+        self.assertEqual(set(result), {'grade', 'scores', 'requested_action', 'context_review',
+                                       'explanation', 'confirmation_excerpt'})
+        excerpt = result['confirmation_excerpt']
+        start, end = excerpt['start'], excerpt['end']
+        self.assertEqual(text[start:end], '인증번호를 보내주세요.')
+        self.assertEqual(self.model.requests[1], (text[start:end], {
+            'state': text[start:end], 'questions': {'q_signal': payload['questions']['q_signal']},
+        }))
+        self.assertEqual(result['scores'], self.model.answers['q_signal']['probabilities'])
         self.assertEqual(set(result['scores']), {'red', 'orange', 'green', 'gray'})
         self.assertEqual(self.arena.read(sid), before)
+
+    def test_excerpt_ranks_current_clauses_by_red_and_orange_and_keeps_original_scores(self):
+        less = '이전 번호로도 연락해 주세요.'
+        best = '인증번호를 보내 주세요.'
+        quote = '“인증번호를 알려 주세요”라고 들었어요.'
+        text = f'{less}\n네.\n안녕하세요.\n{quote}\n{best}'
+        self.model.excerpt_scores = {
+            less: {'red': .60, 'orange': .05, 'green': .05, 'gray': .30},
+            best: {'red': .46, 'orange': .43, 'green': .01, 'gray': .10},
+        }
+        status, raw = self.request('POST', '/api/signal', {'text': text, 'synthetic_only': True})
+        result = json.loads(raw)
+        self.assertEqual(status, 200)
+        self.assertEqual(result['confirmation_excerpt'], {'start': text.index(best), 'end': len(text)})
+        self.assertEqual({call[0] for call in self.model.requests[1:]}, {less, best})
+        self.assertEqual(result['scores'], self.model.answers['q_signal']['probabilities'])
+
+    def test_warning_and_excerpt_failure_leave_signal_available(self):
+        warning = '보안 안내입니다. 인증번호를 알려주지 마세요.'
+        data = {'text': warning, 'synthetic_only': True}
+        status, raw = self.request('POST', '/api/signal', data)
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(raw)['grade'], 'gray')
+        self.assertNotIn('confirmation_excerpt', json.loads(raw))
+        self.assertEqual(len(self.model.requests), 1)
+
+        self.model.fail_excerpt = True
+        status, raw = self.request('POST', '/api/signal', dict(data, text='인증번호를 보내주세요.'))
+        result = json.loads(raw)
+        self.assertEqual((status, result['grade']), (200, 'red'))
+        self.assertEqual(result['scores'], self.model.answers['q_signal']['probabilities'])
+        self.assertNotIn('confirmation_excerpt', result)
 
     def test_verify_profile_is_selected_by_server_only(self):
         from arena.signal import PROFILES

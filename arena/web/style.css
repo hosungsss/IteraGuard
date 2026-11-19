@@ -419,6 +419,10 @@ main>*{min-width:0}
 .signal-score-note{margin:8px 0 0;font-size:.82rem}
 .inline-request{display:grid;gap:4px;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
 .inline-request strong{font-size:.875rem;color:var(--ink-2);font-weight:600}
+.inline-confirmation{margin:12px 0 0;line-height:1.65}
+.inline-confirmation strong{display:block;margin-bottom:3px;font-size:.875rem;color:var(--ink-2);font-weight:600}
+.inline-confirmation q{color:var(--ink-2);overflow-wrap:anywhere;quotes:"“" "”";white-space:pre-wrap}
+.inline-confirmation mark{background:#4a3821;color:#ffe4b6;padding-inline:.2em;border-radius:.2em;box-decoration-break:clone}
 
 
 .signal-aux-actions {
