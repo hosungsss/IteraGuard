@@ -1,4 +1,4 @@
-"""Compare the three signal prompts on the same pinned Korean examples, locally."""
+"""Compare Arena signal profiles on the same pinned Korean examples, locally."""
 import argparse
 import csv
 import hashlib

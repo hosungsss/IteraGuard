@@ -44,7 +44,7 @@
     note.className = 'signal-score-note hint';
     const originalLabel = signalScoreLabels.find(([color]) => color === originalGrade)?.[1];
     note.textContent = originalLabel && originalGrade !== grade
-      ? '모델이 고른 등급은 ' + originalLabel + '이에요. 화면 등급에는 맥락 보정이 적용됐어요.'
+      ? '모델이 고른 등급은 ' + originalLabel + '이에요. 화면 등급에는 별도의 표시 규칙을 반영했어요.'
       : '모델의 등급 선택에 대한 상대 점수예요.';
     panel.replaceChildren(title, list, note);
     panel.hidden = false;

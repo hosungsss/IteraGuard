@@ -62,29 +62,29 @@
       <h2 id="benchmarkTitle">성능검증</h2>
       <form method="dialog"><button class="ghost" type="submit" autofocus>닫기</button></form>
     </div>
-    <p id="benchmarkResultMeta" class="benchmark-meta">한국어 메신저피싱 테스트 CSV 551건 · 2026-11-20 02:34 KST 재측정 결과</p>
+    <p id="benchmarkResultMeta" class="benchmark-meta">한국어 메신저피싱 테스트 CSV 551건 · 2026-11-20 04:39 KST 재측정 결과</p>
     <div class="benchmark-run">
       <button id="runSignalBenchmark" class="secondary" type="button" aria-describedby="benchmarkRunStatus" disabled>재측정 시작</button>
       <p id="benchmarkRunStatus" class="benchmark-meta" role="status">재측정은 로컬 Arena에서 실행할 수 있습니다.</p>
     </div>
     <dl class="benchmark-metrics">
-      <div><dt>피싱 탐지율</dt><dd id="benchmarkRecall"><strong>34.0%</strong> <span>(17/50)</span></dd></div>
-      <div><dt>정상 오탐률</dt><dd id="benchmarkFpr"><strong>9.2%</strong> <span>(46/501)</span></dd></div>
-      <div><dt>엄격 일치율</dt><dd id="benchmarkStrict"><strong>63.2%</strong> <span>(348/551)</span></dd></div>
-      <div><dt>이진 정확도</dt><dd id="benchmarkBinary"><strong>85.7%</strong> <span>(472/551)</span></dd></div>
+      <div><dt>피싱 탐지율</dt><dd id="benchmarkRecall"><strong>84.0%</strong> <span>(42/50)</span></dd></div>
+      <div><dt>정상 탐지율</dt><dd id="benchmarkNormalRate"><strong>84.8%</strong> <span>(425/501)</span></dd></div>
+      <div><dt>엄격 일치율</dt><dd id="benchmarkStrict"><strong>66.6%</strong> <span>(367/551)</span></dd></div>
+      <div><dt>이진 정확도</dt><dd id="benchmarkBinary"><strong>84.8%</strong> <span>(467/551)</span></dd></div>
     </dl>
     <div class="benchmark-table-scroll">
       <table class="benchmark-table">
         <caption>정답 라벨별 실제 표시 색</caption>
         <thead><tr><th scope="col">정답</th><th scope="col">빨강</th><th scope="col">주황</th><th scope="col">초록</th><th scope="col">회색</th><th scope="col">합계</th></tr></thead>
         <tbody>
-          <tr id="benchmarkNormal"><th scope="row">정상</th><td>28</td><td>18</td><td>331</td><td>124</td><td>501</td></tr>
-          <tr id="benchmarkPhishing"><th scope="row">피싱</th><td>8</td><td>9</td><td>12</td><td>21</td><td>50</td></tr>
+          <tr id="benchmarkNormal"><th scope="row">정상</th><td>48</td><td>28</td><td>325</td><td>100</td><td>501</td></tr>
+          <tr id="benchmarkPhishing"><th scope="row">피싱</th><td>18</td><td>24</td><td>3</td><td>5</td><td>50</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="benchmark-meta">빨강·주황을 경보로 집계했어요. 엄격 일치율은 정상의 초록과 피싱의 경보를, 이진 정확도는 정상의 초록·회색과 피싱의 경보를 정답으로 세었어요.</p>
-    <p id="benchmarkModelMeta" class="benchmark-meta">Arena <code>a7b7ef5</code> 기반 · baseline · 로컬 Zoro-1 <code>bf1b76b9</code> · 온도 1.59 · 214.9초</p>
+    <p class="benchmark-meta">정상 탐지율은 정상 문자 중 빨강·주황 경보가 없었던 비율로, 초록과 회색을 포함해요. 엄격 일치율은 정상의 초록과 피싱의 경보를, 이진 정확도는 정상의 초록·회색과 피싱의 경보를 정답으로 세었어요.</p>
+    <p id="benchmarkModelMeta" class="benchmark-meta">Arena <code>299abf1</code> 기반 · high-recall · 로컬 Zoro-1 <code>bf1b76b9</code> · 온도 1.59 · 209.4초</p>
     <div class="benchmark-source">
       <a href="https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/messenger_phishing_dataset/kor/test.csv" target="_blank" rel="noopener noreferrer">측정에 사용한 원본 CSV</a>
       <label for="signalBenchmarkCsv">내 CSV가 이 결과의 원본인지 확인</label>

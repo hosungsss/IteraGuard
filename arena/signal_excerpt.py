@@ -5,7 +5,7 @@ from time import monotonic
 
 from integration.v48 import bridge, normalize_response
 
-from .signal import PROFILES, SPEC, evaluate_signal, selected_or_fallback
+from .signal import DEFAULT_PROFILE, PROFILES, SPEC, evaluate_signal, selected_or_fallback
 
 
 _ALERTS = {'red', 'orange'}
@@ -60,7 +60,7 @@ def _candidates(text):
     return sorted(candidates, key=lambda span: (-span[2], -span[3], -span[0]))[:_MAX_CANDIDATES]
 
 
-def evaluate_signal_card(client, text, *, profile='baseline'):
+def evaluate_signal_card(client, text, *, profile=DEFAULT_PROFILE):
     result = evaluate_signal(client, text, profile=profile)
     if (result['grade'] not in _ALERTS
             or result['requested_action']['id'] in {'no_request', 'unknown'}

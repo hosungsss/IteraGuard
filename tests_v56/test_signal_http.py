@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import Mock
 
 from arena.server import Handler
-from arena.signal import ACTION_QUESTION
+from arena.signal import ACTION_QUESTION, PROFILES
 from arena.store import Arena
 from integration.v48 import bridge
 
@@ -104,10 +104,8 @@ class SignalHttpTests(unittest.TestCase):
         self.assertEqual(list(payload['questions']), ['q_action', 'q_signal'])
         self.assertEqual(len(payload['questions']['q_action']['criteria']), 20)
         action = payload['questions']['q_action']['instructions']
-        signal = payload['questions']['q_signal']['instructions']
         self.assertIn('누가 누구에게', action)
-        for cue in ('접근 권한', '기억을 부정', '약관', '나이·장애'):
-            self.assertIn(cue, signal)
+        self.assertEqual(payload['questions'], PROFILES['high-recall'])
         self.assertEqual(set(result), {'grade', 'scores', 'requested_action', 'context_review',
                                        'explanation', 'confirmation_excerpt'})
         excerpt = result['confirmation_excerpt']
@@ -153,7 +151,6 @@ class SignalHttpTests(unittest.TestCase):
         self.assertNotIn('confirmation_excerpt', result)
 
     def test_verify_profile_is_selected_by_server_only(self):
-        from arena.signal import PROFILES
         self.server.signal_profile = 'verify'
         body = {'text': '합성 안내', 'synthetic_only': True}
         status, raw = self.request('POST', '/api/signal', body)

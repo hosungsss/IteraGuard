@@ -253,10 +253,10 @@ test('an out-of-range score set clears bars while preserving a valid result', as
       'inlineRequestedAction', 'inlineSignalScores', 'charCount', 'openSignalBenchmark',
       'signalBenchmark', 'signalBenchmarkCsv', 'benchmarkCsvStatus', 'runSignalBenchmark',
       'benchmarkRunStatus', 'benchmarkResultMeta', 'benchmarkModelMeta', 'benchmarkNormal',
-      'benchmarkPhishing', 'benchmarkRecall', 'benchmarkFpr', 'benchmarkStrict', 'benchmarkBinary'
+      'benchmarkPhishing', 'benchmarkRecall', 'benchmarkNormalRate', 'benchmarkStrict', 'benchmarkBinary'
     ].map((id) => [id, node(id)]));
     nodes.runSignalBenchmark.disabled = true;
-    nodes.benchmarkRecall.querySelector('strong').textContent = '34.0%';
+    nodes.benchmarkRecall.querySelector('strong').textContent = '84.0%';
     nodes.benchmarkNormal.cells = Array.from({ length: 6 }, (_, i) => node('normal:' + i));
     nodes.benchmarkPhishing.cells = Array.from({ length: 6 }, (_, i) => node('phishing:' + i));
     const input = nodes.signalBenchmarkCsv;
@@ -304,9 +304,11 @@ test('an out-of-range score set clears bars while preserving a valid result', as
   test('benchmark dialog presents the fixed run and identifies its source CSV', () => {
     assert.match(html, /aria-haspopup="dialog" aria-controls="signalBenchmark">성능검증<\/button>/);
     assert.match(html, /<dialog id="signalBenchmark"[^>]* aria-labelledby="benchmarkTitle">/);
-    assert.match(html, /2026-11-20 02:34 KST 재측정 결과/);
-    assert.match(html, /<th scope="row">정상<\/th><td>28<\/td><td>18<\/td><td>331<\/td><td>124<\/td><td>501<\/td>/);
-    assert.match(html, /<th scope="row">피싱<\/th><td>8<\/td><td>9<\/td><td>12<\/td><td>21<\/td><td>50<\/td>/);
+    assert.match(html, /2026-11-20 04:39 KST 재측정 결과/);
+    assert.match(html, /<dt>정상 탐지율<\/dt><dd id="benchmarkNormalRate"><strong>84\.8%<\/strong> <span>\(425\/501\)<\/span>/);
+    assert.match(html, /정상 문자 중 빨강·주황 경보가 없었던 비율로, 초록과 회색을 포함/);
+    assert.match(html, /<th scope="row">정상<\/th><td>48<\/td><td>28<\/td><td>325<\/td><td>100<\/td><td>501<\/td>/);
+    assert.match(html, /<th scope="row">피싱<\/th><td>18<\/td><td>24<\/td><td>3<\/td><td>5<\/td><td>50<\/td>/);
     assert.match(html, /blob\/438cfbb251410fee791f49d75d928520847030c3\/messenger_phishing_dataset\/kor\/test\.csv/);
     assert.match(html, /data-bytes="299076" data-sha256="31bed1a63581de43b1c81b84c8714873199ace1f92a4d93830478842df5443bf"/);
     assert.match(html, /<form method="dialog">/);
@@ -349,7 +351,7 @@ test('an out-of-range score set clears bars while preserving a valid result', as
   });
   const measurement = {
     counts: { normal: { red: 6, orange: 4, green: 451, gray: 40 }, phishing: { red: 18, orange: 22, green: 5, gray: 5 } },
-    finished_at: '2026-11-20T12:00:00Z', elapsed_ms: 3210, profile: 'verify'
+    finished_at: '2026-11-20T12:00:00Z', elapsed_ms: 3210, profile: 'high-recall'
   };
   const reply = (status, state) => ({ status, ok: status >= 200 && status < 300, json: async () => state });
 
@@ -369,17 +371,18 @@ test('an out-of-range score set clears bars while preserving a valid result', as
     ]);
     assert.equal(ui.nodes.runSignalBenchmark.disabled, true);
     assert.match(ui.nodes.benchmarkRunStatus.textContent, /7\/551/);
-    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '34.0%');
+    assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '84.0%');
     assert.equal(ui.timers.size, 1);
     await [...ui.timers.values()][0]();
     assert.equal(ui.timers.size, 0);
     assert.equal(ui.nodes.runSignalBenchmark.disabled, false);
     assert.equal(ui.nodes.benchmarkRecall.querySelector('strong').textContent, '80.0%');
-    assert.equal(ui.nodes.benchmarkFpr.querySelector('span').textContent, '(10/501)');
+    assert.equal(ui.nodes.benchmarkNormalRate.querySelector('strong').textContent, '98.0%');
+    assert.equal(ui.nodes.benchmarkNormalRate.querySelector('span').textContent, '(491/501)');
     assert.equal(ui.nodes.benchmarkStrict.querySelector('span').textContent, '(491/551)');
     assert.equal(ui.nodes.benchmarkBinary.querySelector('span').textContent, '(531/551)');
     assert.equal(ui.nodes.benchmarkPhishing.cells[2].textContent, '22');
-    assert.match(ui.nodes.benchmarkModelMeta.textContent, /verify.*3\.2초/);
+    assert.match(ui.nodes.benchmarkModelMeta.textContent, /high-recall.*3\.2초/);
   });
 
   test('reopening a running benchmark resynchronizes progress and a failure preserves its last complete result', async () => {
@@ -413,7 +416,7 @@ test('an out-of-range score set clears bars while preserving a valid result', as
     await disabled.open();
     assert.equal(disabled.nodes.runSignalBenchmark.disabled, true);
     assert.match(disabled.nodes.benchmarkRunStatus.textContent, /--signal-benchmark-csv/);
-    assert.equal(disabled.nodes.benchmarkRecall.querySelector('strong').textContent, '34.0%');
+    assert.equal(disabled.nodes.benchmarkRecall.querySelector('strong').textContent, '84.0%');
   });
 
   test('a disconnected status check retries with GET and never starts a run automatically', async () => {
