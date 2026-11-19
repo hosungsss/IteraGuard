@@ -16,6 +16,7 @@ from .conversation import GuidanceError, guide
 from .signal import DEFAULT_PROFILE, PROFILES
 from .signal_excerpt import evaluate_signal_card
 from .signal_benchmark import SignalBenchmark
+from .accounting_procedure import attach_accounting_procedure
 from .link_review import LinkReviewer
 from urllib.error import URLError
 
@@ -27,6 +28,11 @@ class Handler(SecureHandler):
             return self.out(429,{'error':'MODEL_BUSY_RETRY_LATER'})
         try:return self.out(200,call())
         finally:self._inference_slot.release()
+    def _signal_with_accounting(self, text):
+        client = self.server.arena.client
+        profile = getattr(self.server, 'signal_profile', DEFAULT_PROFILE)
+        result = evaluate_signal_card(client, text, profile=profile)
+        return attach_accounting_procedure(client, text, result)
     def do_GET(self):
         if not self._origin_safe():return self.out(403,{'error':'LOCAL_HOST_ONLY'})
         u=urlsplit(self.path)
@@ -83,8 +89,7 @@ class Handler(SecureHandler):
                 if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:
                     return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
                 try:
-                    profile = getattr(self.server, 'signal_profile', DEFAULT_PROFILE)
-                    return self._infer_once(lambda: evaluate_signal_card(self.server.arena.client, body['text'], profile=profile))
+                    return self._infer_once(lambda: self._signal_with_accounting(body['text']))
                 except (bridge.ModelUnavailable,bridge.ContractError):
                     return self.out(503,{'error':'SIGNAL_MODEL_UNAVAILABLE'})
             if self.path=='/api/secondary/check':

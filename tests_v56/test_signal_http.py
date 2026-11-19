@@ -37,6 +37,14 @@ class ControlledModel:
     def infer(self, text, *, question_payload):
         self.requests.append((text, question_payload))
         questions = question_payload['questions']
+        if list(questions) == ['q_procedure']:
+            if getattr(self, 'fail_accounting', False):
+                raise bridge.ModelUnavailable('TEST_ACCOUNTING_UNAVAILABLE')
+            choice = getattr(self, 'accounting_choice', 'none')
+            return {'answers': {'q_procedure': {
+                'type': 'choice', 'choice': choice,
+                'probabilities': {key: float(key == choice) for key in questions['q_procedure']['criteria']},
+            }}}, .1
         if list(questions) == ['q_signal'] and self.answers:
             if getattr(self, 'fail_excerpt', False):
                 raise bridge.ModelUnavailable('TEST_EXCERPT_UNAVAILABLE')
@@ -149,6 +157,55 @@ class SignalHttpTests(unittest.TestCase):
         self.assertEqual((status, result['grade']), (200, 'red'))
         self.assertEqual(result['scores'], self.model.answers['q_signal']['probabilities'])
         self.assertNotIn('confirmation_excerpt', result)
+
+    def test_accounting_lookup_adds_catalog_steps_and_only_the_mock_registered_account(self):
+        cases = (
+            ('지급 전에 등록된 계좌를 다시 확인해 주세요.', 'confirm_payment_account',
+             'existing_account', 'FIN-01 · 은행 계좌정보 재확인'),
+            ('이번 대금은 새 수취 계좌로 송금해 주세요.', 'pay_to_changed_account',
+             'changed_account', 'FIN-02 · 새 계좌 송금 전 이중 확인'),
+        )
+        for message, action, selection, title in cases:
+            with self.subTest(selection=selection):
+                self.model.requests.clear()
+                self.model.answers['q_action'].update(
+                    choice=action,
+                    probabilities={key: float(key == action) for key in ACTION_QUESTION['criteria']},
+                )
+                self.model.accounting_choice = selection
+                status, raw = self.request('POST', '/api/signal', {'text': message, 'synthetic_only': True})
+                self.assertEqual(status, 200)
+                result = json.loads(raw)
+                self.assertEqual(result['grade'], 'red')
+                self.assertEqual(result['requested_action']['id'], action)
+                self.assertEqual(result['scores'], self.model.answers['q_signal']['probabilities'])
+                procedure = result['accounting_procedure']
+                self.assertEqual(procedure['selected'], selection)
+                self.assertEqual(procedure['title'], title)
+                self.assertEqual(procedure['reference']['id'], title.partition(' · ')[0])
+                self.assertEqual(procedure['account'], {'label': '등록 계좌 · 가상 예시', 'number': '000-0000-0000'})
+                self.assertEqual(len(procedure['steps']), 3 if selection == 'existing_account' else 4)
+                if selection == 'changed_account':
+                    self.assertIn('보류', procedure['steps'][0])
+                lookups = [payload for _, payload in self.model.requests if 'q_procedure' in payload['questions']]
+                self.assertEqual(len(lookups), 1)
+                self.assertEqual(lookups[0]['state'], message)
+
+    def test_accounting_lookup_failure_or_no_match_preserves_signal(self):
+        action = 'confirm_payment_account'
+        self.model.answers['q_action'].update(
+            choice=action,
+            probabilities={key: float(key == action) for key in ACTION_QUESTION['criteria']},
+        )
+        payload = {'text': '지급 전에 등록된 계좌를 다시 확인해 주세요.', 'synthetic_only': True}
+        status, no_match = self.request('POST', '/api/signal', payload)
+        self.assertEqual(status, 200)
+        self.assertNotIn('accounting_procedure', json.loads(no_match))
+
+        self.model.accounting_choice = 'invented_procedure'
+        self.assertEqual(self.request('POST', '/api/signal', payload), (200, no_match))
+        self.model.fail_accounting = True
+        self.assertEqual(self.request('POST', '/api/signal', payload), (200, no_match))
 
     def test_verify_profile_is_selected_by_server_only(self):
         self.server.signal_profile = 'verify'
