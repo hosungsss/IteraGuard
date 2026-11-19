@@ -72,3 +72,6 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 
 
 2026-11-20 KST | Integrated audit candidate from 7f48096 with main 695afc8 (PR #29). Two typed questions now use four internal review perspectives. Existing response keys, choice IDs, context reconciliation and score provenance retained. Separate optional link observations and explicit follow-up self-reports. Requirements, counterexamples, settings and rollback: docs/SIGNAL_REVIEW_PERSPECTIVES_KO.md. Live checkpoint effect, comprehension and provider quality unmeasured.
+
+
+2026-11-20 KST · 문자 신호등 결과 카드에 네 색의 Zoro 선택 점수를 표시하고, 메인 성능검증에서 551건의 저장 결과와 원본 CSV 지문 확인을 제공한다. 증거와 테스트는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 있다.

@@ -35,25 +35,35 @@ test('timeout warns to read saved state before retrying',async()=>{
 });
 
 function bootSignalHome(fetch) {
+  function element(tagName) {
+    const listeners = {};
+    return {
+      tagName, textContent: '', value: '', hidden: false, disabled: false, dataset: {}, attributes: {}, children: [],
+      addEventListener(type, callback) { listeners[type] = callback; },
+      setAttribute(name, value) { this.attributes[name] = value; },
+      replaceChildren(...children) { this.children = children; },
+      append(...children) { this.children.push(...children); },
+      focus() {},
+      trigger(type) { return (listeners[type] || this['on' + type])?.({preventDefault() {}}); }
+    };
+  }
   const elements = Object.fromEntries([
-    'signalForm', 'text', 'run', 'inlineSignal', 'inlineSignalGrade', 'inlineRequestedAction',
+    'signalForm', 'text', 'run', 'inlineSignal', 'inlineSignalGrade', 'inlineSignalScores', 'inlineRequestedAction',
     'signalStatus', 'charCount', 'sampleNotice', 'signalExplanation'
   ].map(id => {
-    const listeners = {};
-    return [id, {
-      textContent: '', value: '', hidden: id === 'inlineSignal', disabled: false, dataset: {},
-      addEventListener(type, callback) { listeners[type] = callback; },
-      setAttribute() {}, removeAttribute() {}, focus() {},
-      trigger(type) { return (listeners[type] || this['on' + type])?.({preventDefault() {}}); }
-    }];
+    const node = element('div');
+    node.hidden = ['inlineSignal', 'inlineSignalScores'].includes(id);
+    return [id, node];
   }));
   const document = {
-    body: {dataset: {}},
-    getElementById: id => elements[id]
+    body: {dataset: {signalOnly: 'true'}},
+    getElementById: id => elements[id],
+    createElement: element
   };
-  const context = vm.createContext({document, fetch, AbortController, setTimeout, clearTimeout});
-  const code = fs.readFileSync(path.join(root, 'arena/web/signal.js'), 'utf8');
-  vm.runInContext(code, context);
+  const context = vm.createContext({document, window: {}, fetch, AbortController, setTimeout, clearTimeout});
+  for (const script of ['visual.js', 'signal.js']) {
+    vm.runInContext(fs.readFileSync(path.join(root, 'arena/web', script), 'utf8'), context);
+  }
   return elements;
 }
 
@@ -84,6 +94,7 @@ test('the home form sends one request and shows its grade and requested action',
   assert.equal(ui.inlineSignal.dataset.grade, 'red');
   assert.match(ui.inlineSignalGrade.textContent, /빨강/);
   assert.equal(ui.inlineRequestedAction.textContent, '비밀번호·인증번호 알려주기');
+  assert.equal(ui.inlineSignalScores.hidden, true);
   ui.text.value = '다음 가상 문자';
   ui.text.trigger('input');
   assert.equal(ui.inlineSignal.hidden, true);
@@ -153,11 +164,135 @@ test('a reconciled grade keeps its explanation and does not reinterpret original
   const ui = bootSignalHome(async () => signalReply(200, {
     grade: 'gray', requested_action: {id: 'unknown', label: '불명확'}, explanation,
     scores: {green: .251, gray: .250, red: .250, orange: .249},
-    context_review: {adjusted: true}
+    context_review: {adjusted: true, original: {grade: 'green'}}
   }));
   ui.text.value = '그 일 좀 해줘요.';
   await ui.signalForm.trigger('submit');
   assert.equal(ui.inlineSignal.dataset.grade, 'gray');
   assert.equal(ui.signalExplanation.textContent, explanation);
   assert.equal(ui.signalStatus.textContent, '');
+  assert.match(ui.inlineSignalScores.children[2].textContent, /모델이 고른 등급은 초록/);
+  const greenRow = ui.inlineSignalScores.children[1].children[2];
+  assert.equal(greenRow.children[2].textContent, '25.1%');
 });
+
+test('the score card shows the four verified values to one decimal and clears on input', async () => {
+  const ui = bootSignalHome(async () => signalReply(200, {
+    grade: 'red', requested_action: {id: 'share_auth_secret', label: '인증정보 전달'},
+    scores: {red: .718, orange: .092, green: .044, gray: .146}
+  }));
+  ui.text.value = '합성 예시';
+  await ui.signalForm.trigger('submit');
+  assert.equal(ui.inlineSignalScores.hidden, false);
+  const list = ui.inlineSignalScores.children[1].children;
+  assert.deepEqual(list.map(row => row.dataset.color), ['red', 'orange', 'green', 'gray']);
+  assert.deepEqual(list.map(row => row.children[2].textContent), ['71.8%', '9.2%', '4.4%', '14.6%']);
+  assert.equal(list[0].children[1].tagName, 'progress');
+  assert.equal(list[0].children[1].attributes['aria-label'], '빨강 선택 점수');
+  assert.equal(list[0].children[1].attributes.value, '0.718');
+  ui.text.trigger('input');
+  assert.equal(ui.inlineSignalScores.hidden, true);
+  assert.equal(ui.inlineSignalScores.children.length, 0);
+});
+
+test('an out-of-range score set clears bars while preserving a valid result', async () => {
+  const response = {grade: 'gray', requested_action: {id: 'unknown', label: '불명확'},
+    scores: {red: .1, orange: .1, green: .2, gray: .6}};
+  const ui = bootSignalHome(async () => signalReply(200, response));
+  ui.text.value = '합성 예시';
+  await ui.signalForm.trigger('submit');
+  assert.equal(ui.inlineSignalScores.hidden, false);
+  response.scores.gray = 1.6;
+  await ui.signalForm.trigger('submit');
+  assert.equal(ui.inlineSignalScores.hidden, true);
+  assert.equal(ui.inlineSignalScores.children.length, 0);
+  assert.equal(ui.inlineSignal.hidden, false);
+  assert.equal(ui.inlineSignal.dataset.grade, 'gray');
+});
+
+{
+  const { createHash, webcrypto } = require('node:crypto');
+  const WEB = path.join(root, 'arena/web');
+  const html = fs.readFileSync(path.join(WEB, 'signal.html'), 'utf8');
+  const script = fs.readFileSync(path.join(WEB, 'signal.js'), 'utf8');
+  const csv = Buffer.from('label,text\n0,synthetic example\n');
+
+  function setup(crypto = webcrypto) {
+    const handlers = {};
+    const node = (id) => ({
+      dataset: {},
+      textContent: '',
+      addEventListener(name, handler) { handlers[id + ':' + name] = handler; }
+    });
+    const nodes = Object.fromEntries([
+      'text', 'signalForm', 'run', 'signalStatus', 'inlineSignal', 'inlineSignalGrade',
+      'inlineRequestedAction', 'inlineSignalScores', 'charCount', 'openSignalBenchmark',
+      'signalBenchmark', 'signalBenchmarkCsv', 'benchmarkCsvStatus'
+    ].map((id) => [id, node(id)]));
+    const input = nodes.signalBenchmarkCsv;
+    input.dataset.bytes = String(csv.length);
+    input.dataset.sha256 = createHash('sha256').update(csv).digest('hex');
+    const dialog = nodes.signalBenchmark;
+    const opens = [];
+    dialog.showModal = () => { dialog.open = true; opens.push(true); };
+    const context = {
+      document: { getElementById(id) { return nodes[id] || null; } },
+      crypto,
+      fetch() { assert.fail('CSV verification must not make a network request'); }
+    };
+    context.window = context;
+    vm.runInNewContext(script, context);
+    const choose = (file) => {
+      input.files = file ? [file] : [];
+      return handlers['signalBenchmarkCsv:change']();
+    };
+    return { opens, open: handlers['openSignalBenchmark:click'], choose, status: nodes.benchmarkCsvStatus };
+  }
+
+  function fileFrom(bytes) {
+    return { size: bytes.length, async arrayBuffer() { return Uint8Array.from(bytes).buffer; } };
+  }
+
+  test('benchmark dialog presents the fixed run and identifies its source CSV', () => {
+    assert.match(html, /aria-haspopup="dialog" aria-controls="signalBenchmark">성능검증<\/button>/);
+    assert.match(html, /<dialog id="signalBenchmark"[^>]* aria-labelledby="benchmarkTitle">/);
+    assert.match(html, /2026-11-20 저장 결과/);
+    assert.match(html, /<th scope="row">정상<\/th><td>28<\/td><td>18<\/td><td>331<\/td><td>124<\/td><td>501<\/td>/);
+    assert.match(html, /<th scope="row">피싱<\/th><td>8<\/td><td>9<\/td><td>12<\/td><td>21<\/td><td>50<\/td>/);
+    assert.match(html, /blob\/438cfbb251410fee791f49d75d928520847030c3\/messenger_phishing_dataset\/kor\/test\.csv/);
+    assert.match(html, /data-bytes="299076" data-sha256="31bed1a63581de43b1c81b84c8714873199ace1f92a4d93830478842df5443bf"/);
+    assert.match(html, /<form method="dialog">/);
+    const ui = setup();
+    ui.open();
+    ui.open();
+    assert.equal(ui.opens.length, 1);
+  });
+
+  test('browser verification hashes local bytes and flags a same-size different file', async () => {
+    const ui = setup();
+    await ui.choose(fileFrom(csv));
+    assert.equal(ui.status.dataset.state, 'match');
+    const different = Buffer.from(csv);
+    different[different.length - 2] = 65;
+    await ui.choose(fileFrom(different));
+    assert.equal(ui.status.dataset.state, 'mismatch');
+    await ui.choose(null);
+    assert.equal(ui.status.textContent, '');
+  });
+
+  test('a late hash cannot replace the status for a more recent file selection', async () => {
+    const ui = setup();
+    let resolve;
+    const pending = ui.choose({
+      size: csv.length,
+      arrayBuffer() { return new Promise((done) => { resolve = done; }); }
+    });
+    await ui.choose({
+      size: 1,
+      arrayBuffer() { assert.fail('A different-size file should be rejected without reading it'); }
+    });
+    resolve(Uint8Array.from(csv).buffer);
+    await pending;
+    assert.equal(ui.status.dataset.state, 'mismatch');
+  });
+}

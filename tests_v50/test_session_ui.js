@@ -21,7 +21,7 @@ class Element {
 }
 const settle = async () => { await new Promise(setImmediate); await new Promise(setImmediate); };
 async function app({ remembered = null, closed = false, deferEvaluation = false, rememberedHistory = [], policy = 'legacy', signalGrade } = {}) {
-  const elements = {}, calls = [], pending = [], storage = new Map(); let seq = 0;
+  const elements = {}, calls = [], pending = [], scoreRenders = [], storage = new Map(); let seq = 0;
   if (remembered) storage.set('dmsg-arena-v5-session', remembered);
   storage.set('dmsg-arena-v5-session-ids', JSON.stringify(rememberedHistory));
   const get = id => elements[id] ||= new Element();
@@ -65,10 +65,11 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
     return { ok: true, json: async () => JSON.parse(JSON.stringify(data)) };
   };
   const context = { document: { getElementById: get, createElement: () => new Element(), querySelectorAll: () => Object.values(samples) }, fetch,
+    renderSignalChoiceScores: (...input) => scoreRenders.push(input),
     crypto: { randomUUID: () => 'request-' + ++seq }, localStorage: { getItem: k => storage.get(k) ?? null, setItem: (k,v) => storage.set(k,v) }, console };
   vm.createContext(context);
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../arena/web/main.js'), 'utf8'), context);
-  await settle(); return { get, calls, pending, state, storage, context, samples };
+  await settle(); return { get, calls, pending, state, storage, context, samples, scoreRenders };
 }
 
 test('single-question signal follows the main evaluation and clears on the next edit', async () => {
@@ -83,9 +84,11 @@ test('single-question signal follows the main evaluation and clears on the next 
   assert.equal(calls[0].body.text, text);
   assert.deepEqual(calls[1].body, { text, synthetic_only: true });
   assert.equal(a.get('inlineSignal').hidden, false);
+  assert.deepEqual(a.scoreRenders.at(-1), [{red: .9, orange: .05, green: .04, gray: .01}, 'red', undefined]);
   a.get('text').value = '다른 가상 문자';
   await a.get('text').dispatch('input');
   assert.equal(a.get('inlineSignal').hidden, true);
+  assert.deepEqual(a.scoreRenders.at(-1), []);
 });
 
 test('each synthetic example fills the editor and waits for an explicit evaluation', async () => {
