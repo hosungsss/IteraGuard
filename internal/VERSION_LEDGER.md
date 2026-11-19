@@ -153,3 +153,7 @@ Base 046feef; branch fix/pre-demo-validation. Added model configuration-only sta
 
 ## 2026-11-19 bounded automatic recovery, uncommitted
 User requested self-recovery during execution. Added browser transport recovery, max two retries, exact frozen request identity, stored-state reconciliation before inference resend, stop on auth/state/contract ambiguity. Existing policy and model status unchanged. UI reports recovery. Mock-network/minimal-DOM tests total 37 pass; live Zoro/hosted authenticated/mobile NOT_RUN. No commit/push/deploy. See docs/AUTO_RECOVERY_KO.md.
+
+
+## 2026-11-19 PR publication authorized
+User authorized commit/push and PR/Actions. Rebased recovery changes onto main 05103c7; preserved both append-only ledgers and contextual demo UI. Local Node 38 passed and runtime tests 2 passed after integration. GitHub Actions result must be checked on PR HEAD. Actual Zoro and hosted authenticated demo remain unverified. No main merge or site deployment included.
