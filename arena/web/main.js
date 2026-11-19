@@ -255,7 +255,7 @@ const V58_SYNTHETIC_EXAMPLES = Object.freeze({
   warning: '안내문: 인증번호를 알려주지 마세요. 지금 송금하지 마세요.',
   ambiguous: '계정 보호를 위해 별도의 확인 절차를 진행해 주세요.'
 });
-for (const button of document.querySelectorAll('[data-sample]')) {
+for (const button of (document.querySelectorAll?.('[data-sample]') || [])) {
   button.addEventListener('click', () => {
     if (busy || isClosed()) return;
     const sample = V58_SYNTHETIC_EXAMPLES[button.dataset.sample];
