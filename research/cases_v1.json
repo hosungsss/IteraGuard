@@ -1,0 +1,558 @@
+{
+  "schema": "iteraguard-research-cases/1",
+  "as_of": "2026-11-19",
+  "training_status": "NOT_TRAINED",
+  "scope": "SELECTED_OFFICIAL_ADVISORIES_NOT_ALL_MESSAGES",
+  "case_count": 34,
+  "licensed_for_training": "NOT_ESTABLISHED_FOR_ORIGINAL_SOURCE_TEXT",
+  "sources": [
+    {
+      "id": "KISA-01",
+      "org": "KISA",
+      "title": "스미싱 관련 118 상담 민원 사례 — 택배 및 부고",
+      "url": "https://boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=71280"
+    },
+    {
+      "id": "KISA-02",
+      "org": "KISA",
+      "title": "청첩장 등 지인 사칭 스미싱 주의 권고",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=71676"
+    },
+    {
+      "id": "KISA-03",
+      "org": "KISA",
+      "title": "과태료, 범칙금 등 행정처분 스미싱 주의 권고",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=71846"
+    },
+    {
+      "id": "KISA-04",
+      "org": "KISA",
+      "title": "고유가 지원금 사칭 스미싱·피싱",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72060"
+    },
+    {
+      "id": "KISA-05",
+      "org": "KISA",
+      "title": "계정 탈취 유형 스미싱·피싱 주의 권고 (2026-07)",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72139"
+    },
+    {
+      "id": "KISA-06",
+      "org": "KISA",
+      "title": "특정 카드사 사칭 스미싱 주의 권고",
+      "url": "https://boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72131"
+    },
+    {
+      "id": "KISA-07",
+      "org": "KISA",
+      "title": "공공기관 사칭 해킹메일을 통한 악성 앱 유포",
+      "url": "https://www.krcert.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72202"
+    },
+    {
+      "id": "KISA-08",
+      "org": "KISA",
+      "title": "코인 지갑 보상금 사칭 스미싱 주의",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205023&nttId=72219"
+    },
+    {
+      "id": "KISA-09",
+      "org": "KISA",
+      "title": "QR코드 촬영 유도 큐싱 주의 권고",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205021&nttId=71936"
+    },
+    {
+      "id": "KISA-10",
+      "org": "KISA",
+      "title": "OTT 플랫폼 개인정보 유출 사고 악용 스미싱",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205021&nttId=72078"
+    },
+    {
+      "id": "FTC-01",
+      "org": "FTC",
+      "title": "Top Text Message Scams of 2024 (2025 report)",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2025/04/new-ftc-data-show-top-text-message-scams-2024-overall-losses-text-scams-hit-470-million"
+    },
+    {
+      "id": "FTC-02",
+      "org": "FTC",
+      "title": "Got a text about unpaid tolls?",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam"
+    },
+    {
+      "id": "FTC-03",
+      "org": "FTC",
+      "title": "Protect yourself from phishing scams",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2025/04/protect-yourself-phishing-scams"
+    },
+    {
+      "id": "FTC-04",
+      "org": "FTC",
+      "title": "Fake party invite asks for email login",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/asked-enter-your-email-address-and-password-open-party-invite-thats-scam"
+    },
+    {
+      "id": "FTC-05",
+      "org": "FTC",
+      "title": "Run a small business? Pay your bills, not scammers",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+    },
+    {
+      "id": "FBI-01",
+      "org": "FBI IC3",
+      "title": "Business Email Compromise",
+      "url": "https://www.ic3.gov/CrimeInfo/BEC"
+    },
+    {
+      "id": "FBI-02",
+      "org": "FBI IC3",
+      "title": "Government planning/zoning permit phishing emails (2026-03)",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260309"
+    },
+    {
+      "id": "FBI-03",
+      "org": "FBI IC3",
+      "title": "OAuth consent phishing via emails or personal messages (2026-09)",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260901"
+    },
+    {
+      "id": "FBI-04",
+      "org": "FBI IC3",
+      "title": "Senior US officials impersonated via messages",
+      "url": "https://www.ic3.gov/PSA/2025/PSA250515"
+    },
+    {
+      "id": "FBI-05",
+      "org": "FBI IC3",
+      "title": "Employee self-service phishing websites (2025-04)",
+      "url": "https://www.ic3.gov/PSA/2025/PSA250424"
+    },
+    {
+      "id": "FBI-06",
+      "org": "FBI IC3",
+      "title": "Scammers impersonating IC3 (2026-07)",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260720"
+    },
+    {
+      "id": "FBI-07",
+      "org": "FBI IC3",
+      "title": "Government/law enforcement impersonation (2026-09)",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260917"
+    },
+    {
+      "id": "FBI-08",
+      "org": "FBI IC3",
+      "title": "BEC through breached cloud email",
+      "url": "https://www.ic3.gov/PSA/2020/PSA200406"
+    }
+  ],
+  "cases": [
+    {
+      "id": "K-SMS-01",
+      "channel": "SMS",
+      "title": "택배 주소 오류",
+      "synthetic_text": "배송 주소가 달라 배송이 보류되었습니다. [안전하지 않은 링크 생략]에서 수정하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-01",
+      "method": "링크를 통한 배송정보 입력 유도",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-02",
+      "channel": "SMS",
+      "title": "부고장 앱 설치",
+      "synthetic_text": "지인의 부고 안내입니다. 모바일 부고장 보기를 누르고 앱 설치를 진행해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-01",
+      "method": "부고와 악성 앱 링크 결합",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-03",
+      "channel": "SMS",
+      "title": "가짜 청첩장",
+      "synthetic_text": "동창의 모바일 청첩장입니다. 행사 확인을 위해 앱 설치가 필요합니다.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-02",
+      "method": "지인 사칭 초대장",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-04",
+      "channel": "SMS",
+      "title": "과태료 납부",
+      "synthetic_text": "교통 범칙금 미납 안내입니다. 본인확인을 위해 링크에 인증번호를 입력해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-03",
+      "method": "공공기관 사칭·인증번호 요구",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-05",
+      "channel": "SMS",
+      "title": "고유가 지원금 사칭",
+      "synthetic_text": "지원금 신청 기한이 오늘 끝납니다. 정부24 확인용 PDF 뷰어 앱을 설치해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-04",
+      "method": "가짜 뷰어 악성 앱 유도",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-06",
+      "channel": "SMS",
+      "title": "메신저 계정 탈취",
+      "synthetic_text": "메신저 계정이 정지됩니다. 받은 인증코드를 복사하여 이 채팅으로 보내주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-05",
+      "method": "OTP 탈취",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-07",
+      "channel": "SMS",
+      "title": "카드 계정 검증",
+      "synthetic_text": "카드 사용이 제한되었습니다. 안내된 링크에서 카드번호와 비밀번호를 확인해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-06",
+      "method": "카드사 사칭",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-MAIL-08",
+      "channel": "EMAIL",
+      "title": "공공기관 이용정지 사칭",
+      "synthetic_text": "[긴급] 공공기관 이용정지 예정. 유예 신청을 위해 지금 링크에서 인증번호를 입력해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-07",
+      "method": "정부기관 사칭 해킹메일",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-MAIL-09",
+      "channel": "EMAIL",
+      "title": "수사기관 출석 요구",
+      "synthetic_text": "귀하는 금융사기 사건 조사대상입니다. 출석요구서 파일을 내려받아 앱을 설치해 제출하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-07",
+      "method": "공포·권위 사칭",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-MAIL-10",
+      "channel": "EMAIL",
+      "title": "개인정보 보상금",
+      "synthetic_text": "개인정보 유출 피해 보상 대상입니다. 보상 신청 링크에서 계좌와 비밀번호를 입력하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-07",
+      "method": "가짜 보상·개인정보 탈취",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-11",
+      "channel": "SMS",
+      "title": "코인 보상금 사칭",
+      "synthetic_text": "가상자산 보상금이 지급됩니다. 복구를 위해 지갑 복구 문구를 입력하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-08",
+      "method": "지갑 비밀문구 탈취",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-MAIL-12",
+      "channel": "EMAIL",
+      "title": "큐싱 로그인 유도",
+      "synthetic_text": "설문 참여를 위해 첨부된 QR코드를 촬영하고 SNS 계정으로 로그인하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-09",
+      "method": "QR 기반 피싱",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "K-SMS-13",
+      "channel": "SMS",
+      "title": "OTT 유출 사고 사칭",
+      "synthetic_text": "OTT 개인정보 유출 보상 신청이 열렸습니다. 링크에서 본인정보를 등록하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "KISA-10",
+      "method": "유출 사고 불안 악용",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-14",
+      "channel": "SMS",
+      "title": "배송 재결제",
+      "synthetic_text": "소포 배송에 문제가 발생했습니다. 재배송 수수료를 결제해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-01",
+      "method": "가짜 배송 수수료",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-15",
+      "channel": "SMS",
+      "title": "온라인 작업 부업",
+      "synthetic_text": "집에서 리뷰 업무를 하면 수익을 드립니다. 수익을 출금하려면 예치금부터 보내세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-01",
+      "method": "태스크 스캠 예치금",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-16",
+      "channel": "SMS",
+      "title": "가짜 은행 보안 문자",
+      "synthetic_text": "계좌에서 이상 결제가 감지됐습니다. 예방을 위해 다른 안전 계좌로 자금을 이체하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-01",
+      "method": "사기 경고 악용 및 안전 계좌",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-17",
+      "channel": "SMS",
+      "title": "통행료 미납",
+      "synthetic_text": "고속도로 통행료가 미납됐습니다. 오늘 중 링크를 열고 카드 정보로 납부해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-02",
+      "method": "허위 통행료 링크",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-18",
+      "channel": "SMS",
+      "title": "잘못 보낸 문자 신뢰유도",
+      "synthetic_text": "안녕하세요, 약속 장소를 잘못 보낸 것 같네요. 혹시 대화를 이어가실래요?",
+      "provisional_behavior_label": "SOCIAL_ENGINEERING_CONTACT",
+      "source_id": "FTC-01",
+      "method": "관계 형성형 잘못 보낸 번호 (즉시 사기 단정 금지)",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-19",
+      "channel": "EMAIL",
+      "title": "허위 청구서",
+      "synthetic_text": "미지급 청구서가 발생했습니다. 첨부 양식을 열고 새로운 결제정보를 등록해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-03",
+      "method": "가짜 청구서·결제정보",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-20",
+      "channel": "EMAIL",
+      "title": "가짜 초대장",
+      "synthetic_text": "모임 초대장이 도착했습니다. 초대장을 열려면 이메일 로그인 정보와 코드를 입력해 주세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FTC-04",
+      "method": "초대장 계정 탈취",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-21",
+      "channel": "EMAIL",
+      "title": "공급업체 계좌 변경 BEC",
+      "synthetic_text": "이번 공급대금부터 수취 계좌가 변경되었습니다. 기존 계좌 대신 새 계좌로 오늘 송금 바랍니다.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-01",
+      "method": "거래처 BEC 계좌 바꿔치기",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-22",
+      "channel": "EMAIL",
+      "title": "지자체 허가 수수료 사칭",
+      "synthetic_text": "건축 허가 심사 비용을 지급해야 합니다. 안내된 외부 계좌로 수수료를 입금하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-02",
+      "method": "도시·카운티 인허가 부서 사칭",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-23",
+      "channel": "EMAIL",
+      "title": "OAuth 문서 동의 피싱",
+      "synthetic_text": "요청하신 기사 원고를 검토해 주세요. 공유 문서 접근 권한에 동의해야 열람됩니다.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-03",
+      "method": "제3자 계정 접근 권한 유도",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-24",
+      "channel": "EMAIL",
+      "title": "직원 급여 포털 사칭",
+      "synthetic_text": "급여 명세서 확인을 위해 직원 셀프서비스 페이지에 다시 로그인하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-05",
+      "method": "직원 포털 모조 사이트",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-25",
+      "channel": "SMS",
+      "title": "FBI IC3 사칭 환불",
+      "synthetic_text": "사기 피해 복구 담당자입니다. 피해금 반환을 위해 신청 수수료를 먼저 납부하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-06",
+      "method": "2차 회복 사기",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-26",
+      "channel": "EMAIL",
+      "title": "정부기관 조사 사칭",
+      "synthetic_text": "법 집행기관의 조사 대상입니다. 오늘까지 수사 협조비를 납부하지 않으면 처벌됩니다.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-07",
+      "method": "권위와 처벌 위협",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-MAIL-27",
+      "channel": "EMAIL",
+      "title": "클라우드 이메일 침해 BEC",
+      "synthetic_text": "평소 거래처 담당자입니다. 결제 계좌가 바뀌어 정산을 새 계좌로 부탁드립니다.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-08",
+      "method": "진짜 계정 침해도 송신자를 믿으면 안 됨",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "US-SMS-28",
+      "channel": "SMS",
+      "title": "고위 공무원 사칭",
+      "synthetic_text": "공식 정책 회의 담당자입니다. 부서 연결을 위해 비공개 문서를 메신저로 전달하세요.",
+      "provisional_behavior_label": "CURRENT_SENSITIVE_REQUEST",
+      "source_id": "FBI-04",
+      "method": "고위 관계자 사칭",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-29",
+      "channel": "SMS",
+      "title": "예방 경고",
+      "synthetic_text": "보안 공지: 인증번호를 누구에게도 보내지 마세요. 이상하면 공식 번호로 확인하세요.",
+      "provisional_behavior_label": "PROTECTIVE_WARNING",
+      "source_id": "KISA-05",
+      "method": "사기 유형 관련 보호 경고, 정상 합성 대조",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-30",
+      "channel": "EMAIL",
+      "title": "과거 요청 인용",
+      "synthetic_text": "어제 거래처가 새 계좌로 보내 달라고 했는데, 아직 확인하지 않았습니다.",
+      "provisional_behavior_label": "PAST_REPORT_NOT_CURRENT_REQUEST",
+      "source_id": "FBI-01",
+      "method": "과거 보고이며 현재 이체 명령 아님",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-31",
+      "channel": "EMAIL",
+      "title": "정상 정산 진행보고",
+      "synthetic_text": "오늘의 정산내역은 이전과 같습니다. 새 계좌로 송금하라는 안내는 없습니다.",
+      "provisional_behavior_label": "ORDINARY_INFORMATION",
+      "source_id": "FBI-01",
+      "method": "정상 합성 대조; 진실 인증 아님",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-32",
+      "channel": "SMS",
+      "title": "링크 없는 일정",
+      "synthetic_text": "내일 11시에 회의실에서 회의를 시작합니다. 자료는 미리 준비해 주세요.",
+      "provisional_behavior_label": "ORDINARY_INFORMATION",
+      "source_id": "FTC-03",
+      "method": "일반 일정 안내. 출처는 유형의 대비 목적",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-33",
+      "channel": "EMAIL",
+      "title": "주의 공지에 공격 구문 인용",
+      "synthetic_text": "이메일 보안 교육입니다. '송금하세요'라는 문구가 오면 실제 송금하기 전에 거래처 대표번호로 확인하세요.",
+      "provisional_behavior_label": "PROTECTIVE_WARNING",
+      "source_id": "FBI-01",
+      "method": "인용이 현재 행동 요구 아님",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    },
+    {
+      "id": "CTRL-34",
+      "channel": "SMS",
+      "title": "과거 사칭 사례 설명",
+      "synthetic_text": "최근 가짜 범칙금 납부 링크가 돌았다는 소식을 들었습니다. 주소는 클릭하지 마세요.",
+      "provisional_behavior_label": "PAST_REPORT_NOT_CURRENT_REQUEST",
+      "source_id": "KISA-03",
+      "method": "허위 과태료 수법의 설명·예방",
+      "source_evidence_level": "OFFICIAL_DOCUMENTED_PATTERN",
+      "text_evidence_level": "RESEARCHER_SYNTHETIC_PARAPHRASE_NOT_ORIGINAL",
+      "independent_ground_truth": false
+    }
+  ]
+}
