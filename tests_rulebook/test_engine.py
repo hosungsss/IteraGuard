@@ -84,6 +84,26 @@ class RulebookContracts(unittest.TestCase):
         with self.assertRaises(RulebookError):
             validate_book(b)
 
+    def test_non_string_action_fails_closed_at_validation(self):
+        b = deepcopy(self.b)
+        b["rules"][0]["action"] = ["WIRE_TRANSFER"]
+        with self.assertRaises(RulebookError):
+            validate_book(b)
+
+    def test_non_string_condition_fails_closed_at_validation(self):
+        b = deepcopy(self.b)
+        b["rules"][0]["when"]["q_refund"] = ["yes"]
+        with self.assertRaises(RulebookError):
+            validate_book(b)
+
+    def test_non_string_choice_is_review(self):
+        b = book("account_change.json")
+        # Only noul configured in this preset; an arbitrary choice must be rejected.
+        raw = {"answers": {"q_account_change": {"type": "choice", "choice": ["yes"], "probabilities": {}}}}
+        result = self.evaluate(raw, b)
+        self.assertEqual(result["status"], "REVIEW_REQUIRED")
+        self.assertFalse(result["effects_executed"])
+
     def test_stable_idempotency_and_tenant_scope(self):
         a = self.evaluate()
         b = self.evaluate()
