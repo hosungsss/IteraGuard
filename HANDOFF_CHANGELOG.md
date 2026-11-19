@@ -173,3 +173,8 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 ## 2026-11-20 KST · 평가 데이터와 라이선스 안내
 
 고려대학교 Autonomous AI Lab 평가 CSV의 고정 리비전, 라벨 분포, SHA-256과 확인 가능한 이용 조건을 README에 적었다. 피싱 탐지율과 전체 이진 정확도의 계산 범위를 설명했다. 프로젝트 원저작물, Zoro-1 가중치, 외부 데이터의 적용 조건은 [외부 자료 고지](THIRD_PARTY_NOTICES.md)에서 확인한다.
+
+
+## 2026-11-20 KST · README에 연구모형 표시
+
+README의 연구모형에 PPT용 수정본과 동일한 SVG를 표시한다. 신호등의 두 모델 응답, 교차 확인, 결과 표시 및 551건 피싱 탐지율을 담았다.

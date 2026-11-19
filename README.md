@@ -4,6 +4,10 @@
 
 현재 소스는 **v5.9**, Arena 엔진은 **v5.6**, Zoro 응답 계약은 **v5.1**입니다. [버전 정보](LATEST_VERSION.json)
 
+## 연구모형
+
+![IteraGuard 연구모형. 입력 메시지, Zoro-1의 두 응답, 경보 교차 확인, 결과 카드와 551건 피싱 탐지율](docs/assets/iteraguard-research-model.svg)
+
 ## 현재 시연에서 할 수 있는 일
 
 | 화면 | 기능 |
