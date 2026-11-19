@@ -1,0 +1,126 @@
+{
+  "source_product_version": "4.8",
+  "wire_questions": {
+    "q_action": {
+      "type": "choice",
+      "instructions": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+      "criteria": {
+        "transfer": "transfer money",
+        "otp": "disclose one-time credential",
+        "remote_install": "install or grant remote access",
+        "personal_data": "disclose personal data",
+        "link": "open link",
+        "secrecy": "conceal from others",
+        "none": "no requested action",
+        "unclear": "unclear"
+      }
+    },
+    "q_speech": {
+      "type": "choice",
+      "instructions": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+      "criteria": {
+        "direct_request": "speaker directly asks listener to do it",
+        "reported_or_quoted": "someone reports or quotes it",
+        "negated_or_warning": "speaker warns not to do it",
+        "unclear": "insufficient context",
+        "informational": "speaker only states or reports information and asks for no action"
+      }
+    },
+    "q_scam": {
+      "type": "noul",
+      "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+    },
+    "q_claim": {
+      "type": "noul",
+      "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+    },
+    "q_pressure": {
+      "type": "noul",
+      "instructions": "Does the speaker pressure urgency or secrecy?"
+    },
+    "q_risk": {
+      "type": "score",
+      "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+      "criteria": [
+        "none",
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
+    "q_evidence": {
+      "type": "noul",
+      "instructions": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers."
+    }
+  },
+  "spec": {
+    "q_action": {
+      "type": "choice",
+      "options": [
+        "transfer",
+        "otp",
+        "remote_install",
+        "personal_data",
+        "link",
+        "secrecy",
+        "none",
+        "unclear"
+      ]
+    },
+    "q_speech": {
+      "type": "choice",
+      "options": [
+        "direct_request",
+        "reported_or_quoted",
+        "negated_or_warning",
+        "unclear",
+        "informational"
+      ]
+    },
+    "q_scam": {
+      "type": "noul"
+    },
+    "q_claim": {
+      "type": "noul"
+    },
+    "q_pressure": {
+      "type": "noul"
+    },
+    "q_risk": {
+      "type": "score",
+      "options": [
+        "none",
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
+    "q_evidence": {
+      "type": "noul"
+    }
+  },
+  "optional": [
+    "q_claim",
+    "q_evidence",
+    "q_risk"
+  ],
+  "action_mapping": {
+    "transfer": "money_transfer",
+    "otp": "credential_or_otp",
+    "remote_install": "remote_app_install",
+    "personal_data": "personal_data",
+    "link": "verification_link",
+    "secrecy": "secrecy",
+    "none": "none",
+    "unclear": "other_unclear"
+  },
+  "speech_mapping": {
+    "direct_request": "direct_request",
+    "reported_or_quoted": "quoted_or_reported",
+    "negated_or_warning": "negated_or_warning",
+    "informational": "information",
+    "unclear": "unclear"
+  },
+  "threshold": 0.7,
+  "notice": "Extracted from bundled source; not a live server handshake or model attestation."
+}

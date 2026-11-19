@@ -1,0 +1,33 @@
+{
+  "mode": "OFFLINE_CONTROLLED_TYPED_RESPONSES",
+  "actual_model_calls": 0,
+  "manifest_verified": true,
+  "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+  "active_profile": "v51-specific-candidate",
+  "checks": [
+    {
+      "id": "NEW_UNCERTAIN_INPUT_NO_NEW_TASK",
+      "status": "REPRODUCED",
+      "first_action": "ASK_HUMAN",
+      "second_action": "ASK_HUMAN",
+      "second_reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+      "second_disposition": "REPORTED_TASK_RETAINED_NOT_VERIFIED",
+      "open_task_count": 0,
+      "different_inputs": true,
+      "fixture_injection_count": 2,
+      "all_model_states_are_current_text_only": true
+    },
+    {
+      "id": "NEW_DECIDE_ENDPOINT_PREFLIGHT",
+      "status": "REPRODUCED",
+      "error": "INVALID_MODEL_ENDPOINT",
+      "network_calls": 0
+    }
+  ],
+  "source_sha256": {
+    "arena/store.py": "814e9540ca9f3ba48c1d298b39bab699fcac196973cd94262b7b601cc12768aa",
+    "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "vendor/dmsg/prototype/model_bridge.py": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1"
+  }
+}

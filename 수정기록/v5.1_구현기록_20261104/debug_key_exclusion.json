@@ -1,0 +1,10 @@
+{
+  "reason": "Inherited public-development signing-key copy removed from v5.1 delivery source; current v5.1 APK signed by ephemeral in-memory key. v5.0 original unchanged",
+  "source_relative": "apps/mobile/debug-key",
+  "preserved_outside_delivery": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/private_baseline_debug_key_NOT_FOR_DELIVERY",
+  "files": {
+    "debug_key_DO_NOT_USE_FOR_RELEASE.pem": "220f576c8f609fd55a7c88cf62e8fff030068c95b1553a0d9ffbb5bff155b98f",
+    "debug_cert.der": "d1d473f8a7808b416b6f555ec310287f2c028865e3af9a4188a44e91ed17f449",
+    "README.txt": "51941e805b7a3d8ad4b45ef66598fc8168050da21e2ff7537aa04a1f8c87151d"
+  }
+}

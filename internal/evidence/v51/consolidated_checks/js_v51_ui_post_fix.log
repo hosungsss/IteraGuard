@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: arbiter buttons do not hide or change the source controls
+ok 1 - arbiter buttons do not hide or change the source controls
+  ---
+  duration_ms: 15.200137
+  type: 'test'
+  ...
+# Subtest: human review applies to a valid Zoro no-signal result
+ok 2 - human review applies to a valid Zoro no-signal result
+  ---
+  duration_ms: 39.718566
+  type: 'test'
+  ...
+# Subtest: human review never weakens a Zoro pause
+ok 3 - human review never weakens a Zoro pause
+  ---
+  duration_ms: 4.296041
+  type: 'test'
+  ...
+# Subtest: edited text rejects a late model response even if edited back
+ok 4 - edited text rejects a late model response even if edited back
+  ---
+  duration_ms: 1.842279
+  type: 'test'
+  ...
+# Subtest: policy change rejects an in-flight response
+ok 5 - policy change rejects an in-flight response
+  ---
+  duration_ms: 2.059114
+  type: 'test'
+  ...
+# Subtest: session advancement rejects an in-flight response
+ok 6 - session advancement rejects an in-flight response
+  ---
+  duration_ms: 1.531076
+  type: 'test'
+  ...
+# Subtest: changing review option rejects an in-flight response
+ok 7 - changing review option rejects an in-flight response
+  ---
+  duration_ms: 2.056565
+  type: 'test'
+  ...
+# Subtest: clear hides a completed result
+ok 8 - clear hides a completed result
+  ---
+  duration_ms: 1.568498
+  type: 'test'
+  ...
+# Subtest: desktop results and history explicitly remain per-text analysis, not session risk clearance
+ok 9 - desktop results and history explicitly remain per-text analysis, not session risk clearance
+  ---
+  duration_ms: 3.191025
+  type: 'test'
+  ...
+# Subtest: selected profile/policy and its seven-field binding accompany the response evaluation
+ok 10 - selected profile/policy and its seven-field binding accompany the response evaluation
+  ---
+  duration_ms: 2.348379
+  type: 'test'
+  ...
+# Subtest: missing or mismatched response binding produces an explicit hold without evaluating raw data
+ok 11 - missing or mismatched response binding produces an explicit hold without evaluating raw data
+  ---
+  duration_ms: 5.107056
+  type: 'test'
+  ...
+# Subtest: profile registry changes discard an in-flight result
+ok 12 - profile registry changes discard an in-flight result
+  ---
+  duration_ms: 1.273696
+  type: 'test'
+  ...
+# Subtest: source, consent and endpoint settings changes each discard an in-flight result
+ok 13 - source, consent and endpoint settings changes each discard an in-flight result
+  ---
+  duration_ms: 4.701063
+  type: 'test'
+  ...
+# Subtest: Zoro selected while unconfigured/offline gives ASK_HUMAN and never falls back to NLP or local rules
+ok 14 - Zoro selected while unconfigured/offline gives ASK_HUMAN and never falls back to NLP or local rules
+  ---
+  duration_ms: 2.271873
+  type: 'test'
+  ...
+# Subtest: simulated model failure and server failure remain explicit holds
+ok 15 - simulated model failure and server failure remain explicit holds
+  ---
+  duration_ms: 2.14398
+  type: 'test'
+  ...
+# Subtest: missing, invalid, or failed local contract remains an explicit visible hold
+ok 16 - missing, invalid, or failed local contract remains an explicit visible hold
+  ---
+  duration_ms: 4.217153
+  type: 'test'
+  ...
+# Subtest: evidence context and unresolved reasons are visible without claiming verified semantics
+ok 17 - evidence context and unresolved reasons are visible without claiming verified semantics
+  ---
+  duration_ms: 1.553507
+  type: 'test'
+  ...
+# Subtest: shell retains old assets and loads all eight v5.1 assets in dependency order
+ok 18 - shell retains old assets and loads all eight v5.1 assets in dependency order
+  ---
+  duration_ms: 0.343544
+  type: 'test'
+  ...
+# Subtest: actual bundled v5.1 scripts load in browser order and produce matching question bindings
+ok 19 - actual bundled v5.1 scripts load in browser order and produce matching question bindings
+  ---
+  duration_ms: 8.937903
+  type: 'test'
+  ...
+# Subtest: actual selected profile is used end to end without hardcoding a fingerprint
+ok 20 - actual selected profile is used end to end without hardcoding a fingerprint
+  ---
+  duration_ms: 13.132244
+  type: 'test'
+  ...
+# Subtest: eleven-question candidate validates required fields; missing answers show ASK_HUMAN
+ok 21 - eleven-question candidate validates required fields; missing answers show ASK_HUMAN
+  ---
+  duration_ms: 15.567855
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2689.16709

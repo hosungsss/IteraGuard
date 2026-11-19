@@ -1,0 +1,17 @@
+{
+  "registered_utc": "2026-11-04T10:07:36.625501+00:00",
+  "scope": "NEW_CANDIDATE_AFTER_DEVELOPMENT36_ONLY",
+  "validation24_opened": false,
+  "question_addition": "q_request_specified appended; all old questions unchanged",
+  "new_calls_planned": 133,
+  "rules_changes": [
+    "ontology-local exposure anchoring instead of legacy action-token list",
+    "present request plus explicit exposure target/verb and no strong contradiction",
+    "specific ordinary request confirmed by required typed head; all coercion/sensitive/URL exclusions remain"
+  ],
+  "sources": {
+    "integration/v51_policy.py": "6a5789993f602731c43d463376225ce50c9ff8cb9dd0d54592c3cad49774669c",
+    "configs/v51_semantic_rules.json": "7aaea18699c4c703daf991d15a6ebab128b8c492e8c01fa6e5576126e3fffb93"
+  },
+  "hard_gate": "No newly risky/unknown clear, benign paused, required pause missed or lost allowed outcome; reduce unnecessary ASK and pause misses. Final24 remains unopened."
+}

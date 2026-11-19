@@ -1,0 +1,37 @@
+{
+ "criterion": "max mean(C speech/intent/req_action macro-F1, C indicator micro-F1); tie-break D1 expected-action rate. Locked sets W/V2/G/F not used.",
+ "candidates": {
+  "c0": {
+   "calib_mean": 0.6102,
+   "D1_expected": 0.889,
+   "D1_fa": 0.278
+  },
+  "b4h": {
+   "calib_mean": 0.618,
+   "D1_expected": 0.911,
+   "D1_fa": 0.222
+  },
+  "b4n": {
+   "calib_mean": 0.6048,
+   "D1_expected": 0.889,
+   "D1_fa": 0.222
+  },
+  "b2h": {
+   "calib_mean": 0.6172,
+   "D1_expected": 0.867,
+   "D1_fa": 0.222
+  },
+  "b8n": {
+   "calib_mean": 0.6402,
+   "D1_expected": 0.911,
+   "D1_fa": 0.222
+  },
+  "b4hl": {
+   "calib_mean": 0.6218,
+   "D1_expected": 0.867,
+   "D1_fa": 0.278
+  }
+ },
+ "selected": "b8n",
+ "topic_head": "v4.5 n-gram action head (encoder-independent); new joint topic head rejected on dev (D1 topic macro-F1 0.553 vs 0.797)"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "expected": "ACCEPT_VALID",
+      "status": "PASS"
+    },
+    {
+      "expected": "UNSAFE_PATH",
+      "status": "PASS"
+    },
+    {
+      "expected": "ARCHIVE_DUPLICATE_OR_TYPE_COLLISION",
+      "status": "PASS"
+    },
+    {
+      "expected": "ARCHIVE_LINK_OR_SPECIAL_FILE",
+      "status": "PASS"
+    },
+    {
+      "expected": "ARCHIVE_FILE_PARENT_COLLISION",
+      "status": "PASS"
+    },
+    {
+      "expected": "ARCHIVE_MEMBER_BOUND_BEFORE_READ",
+      "status": "PASS"
+    }
+  ],
+  "archive_accessed": false,
+  "actual_model_calls": 0,
+  "source_changed": false
+}

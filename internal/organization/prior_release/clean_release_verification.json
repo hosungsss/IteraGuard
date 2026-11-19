@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-11-04T08:56:16.591914+00:00",
+  "archive": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/delivery/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+  "archive_sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+  "expected_sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+  "expected_file_count": 465,
+  "archive_pre_extraction_checks": {
+    "path_duplicate_symlink_size": "PASS",
+    "crc": "PASS"
+  },
+  "source_verification": {
+    "pass": true,
+    "file_count": 465,
+    "issues": [],
+    "log": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_verify_source_archive.log"
+  },
+  "clean_extract_root": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_extract/IteraGuard_DoubtMeter_v5.0",
+  "checks": [
+    {
+      "name": "clean_tests_v50",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v50",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_extract/IteraGuard_DoubtMeter_v5.0",
+      "exit_code": 0,
+      "elapsed_seconds": 6.831,
+      "unittest_count": 42,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_tests_v50.log",
+      "log_sha256": "e1e6213426c5476b7f16610e84767dc142e200cc7f4ebec1900b5f6426ca1787"
+    },
+    {
+      "name": "clean_tests_v49",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v49",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_extract/IteraGuard_DoubtMeter_v5.0",
+      "exit_code": 0,
+      "elapsed_seconds": 4.569,
+      "unittest_count": 64,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_tests_v49.log",
+      "log_sha256": "9a69d21631ef41e71c02ffd6a47d8fd2a4139f96e88973a2e20ce2c46fcc7629"
+    },
+    {
+      "name": "clean_verify_release",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python3",
+        "tools/verify_release.py",
+        "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/delivery/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_extract/IteraGuard_DoubtMeter_v5.0",
+      "exit_code": 0,
+      "elapsed_seconds": 1.439,
+      "unittest_count": null,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_verify_release.log",
+      "log_sha256": "953c4668897f94b51e568f67e808bad660938951ecc6db9ac8f4e4e914cc6bbd"
+    }
+  ],
+  "clean_final_verification": {
+    "pass": true,
+    "file_count": 465,
+    "issues": [],
+    "source_to_app_freshness": {
+      "status": "PASS",
+      "copied_asset_count": 22,
+      "missing_source": [],
+      "missing_assets": [],
+      "extra_assets": [],
+      "changed_assets": [],
+      "apk_pwa_equivalence": {
+        "status": "PASS_ASSETS_ONLY",
+        "assets_equal_web_bundle": true,
+        "zip_crc": true,
+        "expected_asset_count": 23,
+        "actual_asset_count": 23,
+        "bundle": {
+          "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_web_pwa.zip",
+          "sha256": "f5d20e6ff03e5f19c6192ed7c22bd976a5a37f24b61e3e5d6d313d76bfe2afca",
+          "source": "PACKAGED_PWA_NOT_STAGING"
+        },
+        "missing_assets": [],
+        "extra_assets": [],
+        "changed_assets": [],
+        "signature_validation": "NOT_RUN_IN_ASSETS_ONLY_MODE",
+        "device_install_and_run": "NOT_RUN",
+        "note": "APK/PWA artifact equality only; edited source requires a separate rebuild and release verification."
+      },
+      "scope": "Current copied source bytes -> PWA -> APK web assets. No binary/device execution claim.",
+      "generated_assets_excluded_from_source_comparison": [
+        "build-info.js",
+        "sw.js"
+      ]
+    }
+  },
+  "model_calls": 0,
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "original_source_modified": false,
+  "manifest_regenerated": false,
+  "limitations": [
+    "No physical Android/Windows/macOS device installation or independent accuracy evaluation.",
+    "Loopback listeners used only by mocked transport tests; no live model inference."
+  ]
+}

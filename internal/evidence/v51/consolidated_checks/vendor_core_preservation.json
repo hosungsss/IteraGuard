@@ -1,0 +1,169 @@
+{
+  "name": "vendor_core_preservation",
+  "command": "Read-only SHA256 comparison of every *.py in vendor/dmsg/prototype and dmsg/prototype against organized v5.0",
+  "v51_root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "reference_root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.0] IteraGuard_DoubtMeter",
+  "files": [
+    {
+      "path": "vendor/dmsg/prototype/__init__.py",
+      "v51_sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+      "v50_sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/context_guard.py",
+      "v51_sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+      "v50_sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/core.py",
+      "v51_sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+      "v50_sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/decision_oracle.py",
+      "v51_sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+      "v50_sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/evaluation_gate.py",
+      "v51_sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+      "v50_sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/fixtures.py",
+      "v51_sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+      "v50_sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/model_bridge.py",
+      "v51_sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+      "v50_sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/ontology.py",
+      "v51_sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+      "v50_sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/paylock.py",
+      "v51_sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+      "v50_sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/paylock_model.py",
+      "v51_sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+      "v50_sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/server.py",
+      "v51_sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+      "v50_sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/session.py",
+      "v51_sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+      "v50_sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/dmsg/prototype/typed_contract.py",
+      "v51_sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+      "v50_sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/__init__.py",
+      "v51_sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+      "v50_sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/context_guard.py",
+      "v51_sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+      "v50_sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/core.py",
+      "v51_sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+      "v50_sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/decision_oracle.py",
+      "v51_sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+      "v50_sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/evaluation_gate.py",
+      "v51_sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+      "v50_sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/fixtures.py",
+      "v51_sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+      "v50_sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/model_bridge.py",
+      "v51_sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+      "v50_sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/ontology.py",
+      "v51_sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+      "v50_sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/paylock.py",
+      "v51_sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+      "v50_sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/paylock_model.py",
+      "v51_sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+      "v50_sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/server.py",
+      "v51_sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+      "v50_sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/session.py",
+      "v51_sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+      "v50_sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+      "unchanged": true
+    },
+    {
+      "path": "dmsg/prototype/typed_contract.py",
+      "v51_sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+      "v50_sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+      "unchanged": true
+    }
+  ],
+  "file_count": 26,
+  "changed": [],
+  "status": "PASS",
+  "real_model_calls": 0,
+  "validation24_accessed": false
+}

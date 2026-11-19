@@ -1,0 +1,51 @@
+{
+  "status": "EXACT_COPIES_OF_FROZEN_INPUTS",
+  "model_weights_included": false,
+  "files": [
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/model_bridge.py",
+      "copy": "replay_inputs/source/vendor/dmsg/prototype/model_bridge.py",
+      "sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/typed_contract.py",
+      "copy": "replay_inputs/source/vendor/dmsg/prototype/typed_contract.py",
+      "sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/context_guard.py",
+      "copy": "replay_inputs/source/vendor/dmsg/prototype/context_guard.py",
+      "sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/core.py",
+      "copy": "replay_inputs/source/vendor/dmsg/prototype/core.py",
+      "sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/experiments/v50_ablation.py",
+      "copy": "replay_inputs/source/experiments/v50_ablation.py",
+      "sha256": "48708ff732d13a5e6086d84e5fe5d8c15b09d7e36feea4c42d56d50f1c0f3fde"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/candidate_questions.json",
+      "copy": "replay_inputs/previous_inputs/candidate_questions.json",
+      "sha256": "d30bdcddaf6214e262db13418fe8cb2a3a832ce52dbf367a9d6f8f4d07e11f77"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl",
+      "copy": "replay_inputs/previous_inputs/V2_48.jsonl",
+      "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl",
+      "copy": "replay_inputs/previous_inputs/AI25.jsonl",
+      "sha256": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a"
+    },
+    {
+      "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/data/v50_ai_development25.jsonl",
+      "copy": "replay_inputs/source/data/v50_ai_development25.jsonl",
+      "sha256": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68"
+    }
+  ]
+}

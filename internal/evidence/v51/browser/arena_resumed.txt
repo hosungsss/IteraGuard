@@ -1,0 +1,64 @@
+Browser tab: 6, Title: "의심계 · 확인과 재개", URL: "http://127.0.0.1:8781/".
+1 AXWebArea 의심계 · 확인과 재개, URL: 127.0.0.1:8781/
+	2 container
+		3 text ITERAGUARD / DECISION ARENA
+		4 heading 요청을 이해하고, 다음 확인으로 연결합니다., Value: 1
+			5 text 요청을 이해하고,
+			6 text 다음 확인으로 연결합니다.
+		7 text 의심계 v5.1 · 합성 문장 전용 · 실은행/실연락 실행 없음 · 모델 신원 미인증
+		8 container 확인 진행 중
+			9 text 세션 상태
+			10 heading 확인 진행 중, Value: 2, ID: lifecycle
+				66 text 확인 진행 중
+			67 text 세션: 앞서 감지한 위험이 미해결 상태로 남아 있습니다.
+			68 text 확인을 마치지 못해도 미해결 상태로 보관할 수 있습니다. 재개 시 이전 위험과 업무 이력이 유지됩니다.
+			14 button 미해결 상태로 보관, ID: close
+			15 button (disabled) 이전 이력 유지하고 재개, ID: reopen
+			16 button (disabled) 별도 새 세션, ID: new
+			17 button 저장 상태 재조회, ID: refresh
+			18 text 이 브라우저에서 열었던 기록
+			19 pop up button (disabled, collapsed, settable) 이 브라우저에서 열었던 기록, Value: 기록 1 · 381492f2 · 현재, ID: sessionHistory, Secondary Actions: Expand
+				20 menu
+					21 (selected) 기록 1 · 381492f2 · 현재
+			22 button (disabled) 선택한 기록 불러오기, ID: loadSession
+			23 text 다른 기록을 열기 전 현재 세션을 보관하세요. 브라우저에는 원문 없이 세션 식별자만 기억합니다.
+			69 text MODEL_RESPONSE_UNATTESTED · version 5
+		25 text 현재 판단할 합성 문장
+		26 text entry area (settable) 현재 판단할 합성 문장, Value: 내일 회의에 노트북과 충전기를 가져와 주세요., ID: text
+		27 text 입력한 현재 문장만 모델에 전달합니다. 이전 대화나 확인 보고를 기관 검증 사실로 덧붙이지 않습니다.
+		28 checkbox (settable, integer) Description: 사람에게 검토를 요청하고 싶어요, Value: 0, ID: review
+		29 container 사용자 확인 보고
+			30 text 확인 업무
+			31 heading 사용자 확인 보고, Value: 2, ID: taskHeading
+				32 text 사용자 확인 보고
+			70 text 확인 보고 보관 · 658d2ae2cec74f5abd0f01f898ea1070
+사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 이전 위험 때문에 같은 확인 작업을 자동으로 반복 생성하지 않습니다.
+			34 text 열린 확인 작업의 새 관측
+			35 pop up button (disabled, collapsed, settable) 열린 확인 작업의 새 관측, Value: 새 확인 보고 없음, ID: observation, Secondary Actions: Expand
+				36 menu
+					37 (disabled) 새 확인 보고 없음
+					38 (disabled) 확인했다고 보고
+					39 (disabled) 사실이 아니라고 보고
+					40 (disabled) 확인했지만 미해결
+			41 text 사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 새 보고가 없으면 이전 미해결 보고를 유지합니다.
+		42 button 현재 문장 판단 및 확인 보고 저장, ID: run
+		43 container ASK_HUMAN
+			44 text 현재 안내
+			45 heading ASK_HUMAN, Value: 2, ID: action
+				71 text ASK_HUMAN
+			72 text 현재 판단을 확정할 수 없습니다. 사람의 검토와 추가 확인이 필요합니다.
+			73 text 현재 문장: 뚜렷한 위험 행동 요청 미감지 (안전 보증 아님)
+			74 text 앞서 감지한 위험은 사용자 확인 보고만으로 해제되지 않습니다.
+		48 text NO_STRONG_SIGNAL은 안전 보증이 아닙니다. 확률은 모델의 선택 분포이며 실제 사기 확률이 아닙니다.
+		49 button (collapsed) 판단 근거와 저장 기록, Secondary Actions: Expand
+			50 text 판단 근거와 저장 기록
+		51 button (collapsed) 실행 계약과 비교 정책, Secondary Actions: Expand
+			52 text 실행 계약과 비교 정책
+		53 text 공개 ZORO / 생성 비교 실험
+		54 heading 같은 문장을 생성 모델로 비교, Value: 2
+			55 text 같은 문장을 생성 모델로 비교
+		56 text Zoro-1 판단 헤드와 별도 경로입니다. 생성 레이블은 위 안내·작업·확률에 적용하지 않습니다. 최대 300자 합성 문장만 사용합니다.
+		57 button 공개 Zoro 생성 비교 실행, ID: compare
+		65 text 입력 또는 옵션이 변경됐습니다. 생성 비교를 다시 실행하세요.
+
+The focused UI element is 1 AXWebArea 의심계 · 확인과 재개, URL: 127.0.0.1:8781/

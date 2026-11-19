@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "source_drift": {
+      "total": 7,
+      "pass": 7
+    },
+    "turns": {
+      "total": 216,
+      "pass": 216
+    },
+    "spans": {
+      "total": 168,
+      "pass": 168
+    },
+    "guard": {
+      "total": 440,
+      "pass": 440
+    },
+    "advisory": {
+      "total": 17520,
+      "pass": 17520
+    },
+    "anchor": {
+      "total": 3282,
+      "pass": 3282
+    },
+    "structural": {
+      "total": 176,
+      "pass": 176
+    },
+    "indicator": {
+      "total": 1568,
+      "pass": 1568
+    },
+    "dra": {
+      "total": 468,
+      "pass": 468
+    },
+    "normalize": {
+      "total": 24,
+      "pass": 24
+    },
+    "json": {
+      "total": 13,
+      "pass": 13
+    },
+    "paylock": {
+      "total": 166,
+      "pass": 166
+    },
+    "external": {
+      "total": 440,
+      "pass": 440
+    }
+  },
+  "mismatches": [],
+  "total": 24488,
+  "pass": 24488,
+  "status": "PASS",
+  "scope": "Python reference vs JS port on synthetic vectors; implementation equality only, not detection accuracy."
+}

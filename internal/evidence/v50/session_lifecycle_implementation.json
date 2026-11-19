@@ -1,0 +1,200 @@
+{
+  "scope": "v5.0 Arena session lifecycle implementation; isolated workspace only",
+  "workspace": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0",
+  "date": "2026-11-04",
+  "source_files": [
+    {
+      "path": "arena/store.py",
+      "sha256": "9a9eeb29b997313521a646753e4df5499d6afc9e39ad3d14cf460edcc3ae25ce",
+      "bytes": 19995
+    },
+    {
+      "path": "arena/server.py",
+      "sha256": "817766604ae165f3d3e2ac83bca5e93b2c50199c9da5c575e76581adcbe27081",
+      "bytes": 4532
+    },
+    {
+      "path": "arena/web/main.js",
+      "sha256": "b7b8804653733c1270df9203dd521026f1b5972c34eb26b11b51224ed8065e0a",
+      "bytes": 12895
+    },
+    {
+      "path": "arena/web/index.html",
+      "sha256": "ecc58be1aa17046be9a38fbbbf9ea21d3f4498b79713f4041562d18449ded8ef",
+      "bytes": 3613
+    },
+    {
+      "path": "arena/web/style.css",
+      "sha256": "fe6ead617bae7471e18abdf96f71d1ea6fdcf544e51137c170f9e94adf53de10",
+      "bytes": 1539
+    },
+    {
+      "path": "tests_v50/test_session_lifecycle.py",
+      "sha256": "3c01375b810b545f434717325cf6e748d72d0df2d97c598b1670542d4a34fbd3",
+      "bytes": 18207
+    },
+    {
+      "path": "tests_v50/test_session_http.py",
+      "sha256": "072a3584604f064e0c8dbaa7513f7fdd875bdb3d6620ad3c51e8edbf40221321",
+      "bytes": 6346
+    },
+    {
+      "path": "tests_v50/test_session_ui.js",
+      "sha256": "cb6117e42038556119734b8cb448e1d76ea6de2f2d11fbf37861b59dd337d602",
+      "bytes": 8212
+    }
+  ],
+  "also_changed": {
+    "path": "tests_v49/test_ui_binding.js",
+    "ownership": "only Arena fake /api/manifest response; parent owns concurrent app tests"
+  },
+  "architecture": [
+    "ModelClient receives current text only. No previous transcript or user-reported observation is inserted into model input.",
+    "execution manifest validation occurs before inference; evaluate_current + local user-review/LinkGuard layers execute before session prior_pause policy.",
+    "default server policy legacy; --policy dra is explicit comparison. Request body cannot choose policy.",
+    "execution_trace current-turn conditions/rules remain separate from execution_trace.session. Condition observed is not automatically a rule applied.",
+    "prior_pause remains latched after a PAUSE. A later non-PAUSE current turn yields session ASK_HUMAN/PRIOR_RISK_UNRESOLVED.",
+    "OPEN -> CLOSED_UNRESOLVED -> OPEN changes lifecycle/version, never clears risk or deletes history. No clearance operation exists.",
+    "close/reopen/evaluate share request ID namespace and optimistic session version. Exact cached retries return their historical event, not the current session state.",
+    "model inference occurs outside the SQLite write transaction. A close or competing update during inference invalidates late commit.",
+    "read envelope, task list and events use one SQLite read transaction snapshot.",
+    "open tasks are reused; completed user reports remain related_task when only prior-risk hold persists. Identical PAUSE text after its completed report does not create duplicate task. New risk text or stronger CAUTION->PAUSE creates a new task.",
+    "NOT_CHECKED means no new report and does not overwrite UNRESOLVED.",
+    "UI shows session lifecycle/risk, current-text action and user-reported task separately; closure/reload/input changes invalidate current result binding.",
+    "browser stores only visited opaque session identifiers and current identifier; selection can restore previously opened retained records without inference."
+  ],
+  "api": {
+    "GET /api/manifest": "active server policy, versioned execution contract, lifecycle capabilities",
+    "POST /api/start": "backward-compatible {session_id,version,mode} envelope",
+    "GET /api/state?session_id=...": "consistent session/tasks/events snapshot; no raw text, quoted evidence or full URLs",
+    "POST /api/close": "{session_id,version,request_id,synthetic_only:true} -> CLOSED_UNRESOLVED and model_called:false",
+    "POST /api/reopen": "same controls -> OPEN with prior risk/tasks retained",
+    "POST /api/evaluate": "existing controls and current text + optional user_review/consent; closed new evaluations return409 before inference",
+    "broken_manifest": "static503 EXECUTION_CONTRACT_UNAVAILABLE for ContractError/OSError/ValueError/KeyError/TypeError in preflight; no user text/error details reflected"
+  },
+  "database": {
+    "schema_user_version": 1,
+    "migration": "transactional additive migration from v4.9 user_version=0: sessions.lifecycle, tasks.trigger_fingerprint, tasks.trigger_action. Original events/digests remain exact. Future schema rejected. Failed migration rolls back DDL and version.",
+    "default_path": "runs/arena.sqlite3; --db can select an isolated database",
+    "backup": "Stop only the instance using the chosen DB and back up that SQLite database before operator reuse/migration. No backup of or deletion from existing user databases was performed by this agent.",
+    "retention": "close is retention, never deletion. No delete HTTP endpoint. Browser localStorage cleanup removes navigation IDs only, not SQLite records.",
+    "deletion": "Operator-managed DB/file deletion after stopping the specific instance, if separately desired; not performed. SQLite data is not encrypted/tamper-proof and user reports are not independently verified.",
+    "new_persistence": "decision probabilities, offset/kind evidence, safe execution trace, local link summary, keyed HMACs and user report enum only. Detailed LinkGuard payload, raw input, model response, quote, URLs excluded.",
+    "legacy_limits": "Migration preserves historical events exactly and cannot retroactively add v5 traces or prove past data hygiene. No model recalculation during migration."
+  },
+  "loopback_scope": {
+    "real_model_client": "validated on construction and immediately before infer; only localhost/127.0.0.1 HTTP(S) /v1/systemone paths. Userinfo/query/hash/invalid port rejected before host scope. Remote allowlist/consent environment flags cannot broaden v5 release scope. Vendor bridge unchanged.",
+    "test_clients": "explicit synthetic clients bypass transport validation; zero actual model calls by this agent",
+    "public_generation": "separate existing fixed localhost generation comparison route, never applied as policy/session decision"
+  },
+  "validation": {
+    "total_count": 55,
+    "passed": 55,
+    "suites": [
+      {
+        "suite": "tests_v50.test_session_lifecycle",
+        "count": 17,
+        "passed": 17,
+        "kind": "synthetic clients / SQLite unit and concurrency tests"
+      },
+      {
+        "suite": "tests_v50.test_session_http",
+        "count": 4,
+        "passed": 4,
+        "kind": "actual temporary loopback HTTP, synthetic inference"
+      },
+      {
+        "suite": "tests_v50/test_session_ui.js",
+        "count": 6,
+        "passed": 6,
+        "kind": "production JS in minimal Node DOM stub; no browser rendering"
+      },
+      {
+        "suite": "tests_v49: test_arena, test_arena_http, test_observation_preservation",
+        "count": 14,
+        "passed": 14,
+        "kind": "backward regression, temporary HTTP, synthetic inference"
+      },
+      {
+        "suite": "tests_v49/test_ui_binding.js",
+        "count": 14,
+        "passed": 14,
+        "kind": "production app/Arena JS in Node DOM stub; includes parent-owned app changes"
+      }
+    ],
+    "live_model_calls": 0,
+    "browser_render_validation_by_this_agent": false,
+    "test_http": "Temporary random loopback ports and temporary DBs cleaned up; existing 8008/8766/8767/8768 unchanged.",
+    "initial_failures": [
+      {
+        "kind": "test fixture typo",
+        "detail": "one_time_code was not a valid synthetic q_action alias; corrected to credential_or_otp. No production failure was attributed to this."
+      },
+      {
+        "kind": "sandbox environment",
+        "detail": "initial HTTP bind denied by sandbox; rerun with approved loopback escalation passed all four tests."
+      }
+    ],
+    "specific_evidence": [
+      "closed eval rejects before synthetic infer count increments",
+      "late inference after close fails STALE_VERSION with no late event",
+      "concurrent identical close across two Arena connections commits one event",
+      "v4.9 exact cached retry survives additive migration and Arena reopen",
+      "future schema leaves file bytes unchanged; corrupt key rolls back added tables/columns",
+      "HTTP server recreated using same DB preserves latch/task/history; this is in-process server reconstruction, not an OS process restart claim",
+      "manifest failure classes produce static HTTP503, infer count zero, version unchanged",
+      "synthetic unique text/token/URL not present in state JSON or SQLite bytes",
+      "Node tests cover closure controls, reload without new session, prior record selection, input/review/policy stale response, and reported task presentation"
+    ],
+    "additional_full_v49_regression": {
+      "count": 64,
+      "passed": 64,
+      "log": "validation/v49_fixed.log",
+      "overlap": "Includes 14 earlier narrow Python regressions; do not sum with55 as independent tests."
+    }
+  },
+  "limitations": [
+    "New model quality/calibration is not established by lifecycle tests; independent real-model experiments are coordinated separately.",
+    "No independent institution verification or risk clearance is implemented; user reports remain USER_REPORTED.",
+    "Historical events remain distinct from current-input guidance. Browser ID history belongs to that browser/origin; clearing storage removes convenient retrieval IDs, not server history.",
+    "All work is synthetic-only and advisory. No calls, money transfer, browser generation, external reputation, or remote model request was performed by this agent."
+  ],
+  "trace_fingerprints": {
+    "execution_trace.session.input_fingerprint": "Historical field name: HMAC of the complete normalized request (version, text, task ID, observation and any effective local review/consent options), NOT text-only.",
+    "tasks.trigger_fingerprint": "Separate keyed text-only fingerprint used internally for task deduplication; excluded from GET task objects.",
+    "clarification": "No claim of cross-request identical-text equality is made for input_fingerprint; unchanged text with a new version produces a different request HMAC."
+  },
+  "broader_regression_followup": {
+    "status": "FIXED_AND_VERIFIED",
+    "log": "validation/v49.log",
+    "failure": "test_new_observation_recomputes_but_does_not_clear_risk current_turn_action ASK_HUMAN vs expected NO_STRONG_SIGNAL",
+    "cause": "Full unittest discovery imports release tools that prepend tools/ to global sys.path. Lazy import linkguard then resolves tools/linkguard/ instead of product linkguard/. apply_local_layers follows its intentional LOCAL_LINKGUARD_NOT_AVAILABLE fail-closed path. Reproduced by full discovery then isolated case; narrow session suites passed because tools were not imported.",
+    "fix_recommendation": "Release tool imports should use package-relative imports when imported and avoid globally prepending tools/; no policy threshold or manifest change needed. Root informed; no out-of-owner source edit made.",
+    "fix": "verify_release,delivery_gate,verify_apk use package-relative imports when imported, bare sibling imports for direct CLI whose script directory is already on sys.path. No global sys.path mutation. Product/contract source unchanged.",
+    "fixed_log": "validation/v49_fixed.log",
+    "validation": {
+      "count": 64,
+      "passed": 64,
+      "new_test": "test_imports_preserve_product_linkguard_and_cli_entrypoints",
+      "test_boundary": "Fresh Python subprocess preserves sys.path and resolves product linkguard. verify_release/verify_apk --help plus delivery_gate usage work through script and -m entrypoints. Existing release fail-closed fixture tests remain included."
+    },
+    "source_files": [
+      {
+        "path": "tools/verify_release.py",
+        "sha256": "b81bbff6c25730c436733d70882d13fd7202a6d2ce0be6ba23deac82f148fe05"
+      },
+      {
+        "path": "tools/delivery_gate.py",
+        "sha256": "040f2a1141d930b9e33f421589bc3a42163677be0f81a873d57b00b4bdefff6a"
+      },
+      {
+        "path": "tools/verify_apk.py",
+        "sha256": "4bd0451711d0420f1492322684e92579dca7782267fc01e798fd35844ad38467"
+      },
+      {
+        "path": "tests_v49/test_release_reproducibility.py",
+        "sha256": "8e04b8f2d24675a42f7f0af7854c8ef279871be4277f1d1b456b1eaecce1afa8"
+      }
+    ]
+  }
+}

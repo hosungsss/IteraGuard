@@ -1,0 +1,760 @@
+TAP version 13
+# Subtest: arbiter buttons do not hide or change the source controls
+ok 1 - arbiter buttons do not hide or change the source controls
+  ---
+  duration_ms: 17.4847
+  type: 'test'
+  ...
+# Subtest: human review applies to a valid Zoro no-signal result
+ok 2 - human review applies to a valid Zoro no-signal result
+  ---
+  duration_ms: 33.444
+  type: 'test'
+  ...
+# Subtest: human review never weakens a Zoro pause
+ok 3 - human review never weakens a Zoro pause
+  ---
+  duration_ms: 5.1717
+  type: 'test'
+  ...
+# Subtest: edited text rejects a late model response even if edited back
+ok 4 - edited text rejects a late model response even if edited back
+  ---
+  duration_ms: 3.3028
+  type: 'test'
+  ...
+# Subtest: policy change rejects an in-flight response
+ok 5 - policy change rejects an in-flight response
+  ---
+  duration_ms: 2.909
+  type: 'test'
+  ...
+# Subtest: session advancement rejects an in-flight response
+ok 6 - session advancement rejects an in-flight response
+  ---
+  duration_ms: 3.167
+  type: 'test'
+  ...
+# Subtest: changing review option rejects an in-flight response
+ok 7 - changing review option rejects an in-flight response
+  ---
+  duration_ms: 3.3124
+  type: 'test'
+  ...
+# Subtest: clear hides a completed result
+ok 8 - clear hides a completed result
+  ---
+  duration_ms: 3.2853
+  type: 'test'
+  ...
+# Subtest: desktop results and history explicitly remain per-text analysis, not session risk clearance
+ok 9 - desktop results and history explicitly remain per-text analysis, not session risk clearance
+  ---
+  duration_ms: 6.7376
+  type: 'test'
+  ...
+# Subtest: arena refresh does not restore a result after input editing
+ok 10 - arena refresh does not restore a result after input editing
+  ---
+  duration_ms: 2.3716
+  type: 'test'
+  ...
+# Subtest: arena refresh can show the unchanged input result
+ok 11 - arena refresh can show the unchanged input result
+  ---
+  duration_ms: 1.3216
+  type: 'test'
+  ...
+# Subtest: arena explains current-turn no-signal separately from a prior-risk hold, including refresh
+ok 12 - arena explains current-turn no-signal separately from a prior-risk hold, including refresh
+  ---
+  duration_ms: 1.3411
+  type: 'test'
+  ...
+# Subtest: arena prior-risk explanation follows the actual current-turn action
+ok 13 - arena prior-risk explanation follows the actual current-turn action
+  ---
+  duration_ms: 1.2188
+  type: 'test'
+  ...
+# Subtest: arena clears prior-risk explanation after edits, stale refresh, and a new session
+ok 14 - arena clears prior-risk explanation after edits, stale refresh, and a new session
+  ---
+  duration_ms: 1.3924
+  type: 'test'
+  ...
+# Subtest: v53 separate action and speech probabilities and finish hold visibly
+not ok 15 - v53 separate action and speech probabilities and finish hold visibly
+  ---
+  duration_ms: 5.0937
+  type: 'test'
+  location: 'C:\\Users\\hosun\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\outputs\\20261112_choice_diagnosis\\[v5.3] IteraGuard_DoubtMeter\\tests_v53\\test_choice_ui.js:194:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /모델의 행동 선택/. Input:
+    
+    '         정상적인 은행 방문 안내  정상적인 피해 예방 안내  송금 압박  원격제어 설치 강요  일회용 인증번호 요구  모호한 전달 요청  확인되지 않은 링크  신고자의 제3자 발화 인용  합법적인 송금 지시 가능성  기관 신분 사칭 여부 불명  간접적인 행동 압박  인증번호 요구 신고 인용  인증번호 제공 금지  상담 비밀 유지 지시  고객님, 예금 만기일이 다가옵니다. 자세한 사항은 은행 공식 앱이나 지점에서 직접 확인해 주세요. 합성 시나리오 · 안전 판정이 아닌, 위험 요청 부재를 표시                           가상 알파부품 (V-ALPHA)  가상 베타설비 (V-BETA)  미등록 거래처   INV-A101 · 80,000,000원  INV-A102 · 12,000,000원  INV-B201 · 5,400,000원   HN  KB  NH  SH  WR   정상 참조자료와 일치 — 내부 승인 검토  거래처 계좌 변경 통지 — 보류  발신 주소 불일치 — 보류  청구 금액 변경 — 보류  계좌는 같지만 긴급 압박 — 보류  외부 메일의 정책 우회 문장 — 보류               송금 · transfer  인증번호 제공 · otp  원격제어 설치 · remote_install  개인정보 제공 · personal_data  링크 열기 · link  비밀 유지 · secrecy  요청 없음 · none  불분명 · unclear   직접 요청 · direct_request  인용·전달 · reported_or_quoted  경고·부정 · negated_or_warning  불분명 · unclear  informational · informational              판단 엔진: Python 정본과 JS 이식본 일치 (합성 벡터)  빌드 정보 없음   합성 시나리오·지급 예시 정책 동작  확인   온디바이스 NLP: JS ↔ Python 일치 (토큰·특징·라벨·판단)  빌드 정보 없음   온디바이스 NLP: 고정 49문장 회귀 (작성자 데이터)  검증 기록 없음   이 빌드의 실제 Zoro-1 모델 호출  검증 기록 없음   한국어 사기 문장 정확도 (독립·실사용 평가)  미측정   NPU 실행  미실행   Windows·macOS 실제 기기 실행  미검증   Android·iOS 실제 기기 설치  미검증  제품 5.1 개발 후보 · 기준 엔진 4.7      (모델 준비 전)  데스크톱  데스크톱 앱 · 모델 설정됨 (127.0.0.1, 진품 미인증)            (로컬 조로 우선 사용 · 연결 실패 시 판단 보류)    아레나와 같은 기준 정책으로 판단해요.  분석하기    판단 보류: 신뢰할 수 있는 경로로 확인하세요  ASK_HUMAN · MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS  자동 판단을 보류했어요.  판단 근거가 불충분합니다. 지금 중요한 행동을 실행하지 말고 신뢰할 수 있는 사람이나 공식 창구에서 확인하세요.  현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.      인증번호를 알려주세요  .  밑줄은 원문에서 찾은 행동 맥락입니다. 모델의 판단 근거나 의미가 검증됐다는 뜻은 아닙니다.  표시 가능한 구간 1/1 · 확인하지 못한 구간 0개     이유  모델의 확신이 기준보다 낮거나 판단을 보류했어요.  실행 방식   MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED  모델 응답 진품 미인증  모델 답  otp / direct_request · 확신 0.75 (보정 안 됨)  지연  1 ms  판단 방식  기준 정책 · 0.70 (보정 미확립)  {\n' +
+      '  "profile": {\n' +
+      '    "mode": "MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED",\n' +
+      '    "policy_id": "legacy",\n' +
+      '    "profile_id": "v50-baseline",\n' +
+      '    "profile_binding": {\n' +
+      '      "profile_id": "v50-baseline",\n' +
+      '      "policy_id": "legacy",\n' +
+      '      "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",\n' +
+      '      "questions_sha256": "e2d6959f72b901db94932a3eff8879770986436e995fb807f5cf8cad9511b484",\n' +
+      '      "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",\n' +
+      '      "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",\n' +
+      '      "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"\n' +
+      '    },\n' +
+      '    "analysis_scope": "CURRENT_TEXT_ONLY_NO_SESSION_RISK",\n' +
+      '    "indicator": "NOT_APPLIED",\n' +
+      '    "linkguard": "OFFLINE_ONLY",\n' +
+      '    "external_lookup": "NOT_RUN"\n' +
+      '  },\n' +
+      '  "trace": {\n' +
+      '    "schema_version": "dmsg-v51-execution-trace/1",\n' +
+      '    "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",\n' +
+      '    "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",\n' +
+      '    "policy_id": "legacy",\n' +
+      '    "model_status": "VALID",\n' +
+      '    "inference_source": "MODEL_RESPONSE_UNATTESTED",\n' +
+      '    "runtime": {\n' +
+      '      "expected_temperature": 1.52,\n' +
+      '      "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",\n' +
+      '      "temperature_observed_by_this_evaluator": false,\n' +
+      '      "model_attested": false,\n' +
+      '      "domain_calibration": "NOT_ESTABLISHED",\n' +
+      '      "client_probability_recalibration": "NONE",\n' +
+      '      "model_echo_status": "ABSENT"\n' +
+      '    },\n' +
+      '    "predicates": [\n' +
+      '      {\n' +
+      '        "id": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "NONE_DIRECT_REQUEST_CONFLICT",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "DIRECT_REQUEST_CONTRADICTS_CONTEXT",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "WARNING_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "UNSUPPORTED_WARNING_LABEL",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "REPORT_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "UNSUPPORTED_QUOTATION_LABEL",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "LOW_ACTION_PROBABILITY",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "LOW_SPEECH_PROBABILITY",\n' +
+      '        "condition_met": true,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "UNCLEAR_ACTION_LABEL",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "UNCLEAR_SPEECH_LABEL",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",\n' +
+      '        "condition_met": true,\n' +
+      '        "eligible": true\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "CONFLICTING_MODEL_QUESTIONS",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "AUX_COERCION_BLOCKS_INFORMATIONAL_CLEARANCE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_INFORMATIONAL_NOT_REQUEST",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "NO_ACTION_CANDIDATE_NOT_SAFETY_CLEARANCE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "NO_GROUNDED_ACTION_ANCHOR",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "AUX_COERCION_BLOCKS_WARNING_CLEARANCE",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_WARNING_NOT_REQUEST",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_REPORTED_REQUEST",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_DIRECT_ACTION_ADVISORY",\n' +
+      '        "condition_met": true,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_DIRECT_CAUTION_ADVISORY",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "MODEL_EVIDENCE_INSUFFICIENT",\n' +
+      '        "condition_met": false,\n' +
+      '        "eligible": false\n' +
+      '      }\n' +
+      '    ],\n' +
+      '    "condition_ids": [\n' +
+      '      "LOW_SPEECH_PROBABILITY",\n' +
+      '      "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",\n' +
+      '      "MODEL_DIRECT_ACTION_ADVISORY"\n' +
+      '    ],\n' +
+      '    "applied_rule_ids": [\n' +
+      '      "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS"\n' +
+      '    ],\n' +
+      '    "final_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",\n' +
+      '    "final_action": "ASK_HUMAN",\n' +
+      '    "normalized_probabilities": {\n' +
+      '      "q_action": {\n' +
+      '        "transfer": 0.03571428571428571,\n' +
+      '        "otp": 0.75,\n' +
+      '        "remote_install": 0.03571428571428571,\n' +
+      '        "personal_data": 0.03571428571428571,\n' +
+      '        "link": 0.03571428571428571,\n' +
+      '        "secrecy": 0.03571428571428571,\n' +
+      '        "none": 0.03571428571428571,\n' +
+      '        "unclear": 0.03571428571428571\n' +
+      '      },\n' +
+      '      "q_speech": {\n' +
+      '        "direct_request": 0.6666666666666666,\n' +
+      '        "reported_or_quoted": 0.08333333333333334,\n' +
+      '        "negated_or_warning": 0.08333333333333334,\n' +
+      '        "unclear": 0.08333333333333334,\n' +
+      '        "informational": 0.08333333333333334\n' +
+      '      },\n' +
+      '      "q_scam": {\n' +
+      '        "yes": 0.02,\n' +
+      '        "no": 0.98\n' +
+      '      },\n' +
+      '      "q_claim": {\n' +
+      '        "yes": 0.02,\n' +
+      '        "no": 0.98\n' +
+      '      },\n' +
+      '      "q_pressure": {\n' +
+      '        "yes": 0.02,\n' +
+      '        "no": 0.98\n' +
+      '      },\n' +
+      '      "q_risk": {\n' +
+      '        "none": 0.97,\n' +
+      '        "low": 0.01,\n' +
+      '        "moderate": 0.01,\n' +
+      '        "high": 0.01\n' +
+      '      },\n' +
+      '      "q_evidence": {\n' +
+      '        "yes": 0.98,\n' +
+      '        "no": 0.020000000000000018\n' +
+      '      }\n' +
+      '    },\n' +
+      '    "dropped_optional_questions": [],\n' +
+      '    "evidence_spans": [],\n' +
+      '    "predicate_semantics": "CONDITION_TRUE_IS_NOT_RULE_APPLIED; eligibility is layer-local and respects rule priority",\n' +
+      '    "trace_scope": "CURRENT_TURN_ONLY_NO_SESSION_DECISION",\n' +
+      '    "raw_text_stored": false,\n' +
+      '    "question_profile_id": "v50-baseline",\n' +
+      '    "question_binding": {\n' +
+      '      "profile_id": "v50-baseline",\n' +
+      '      "policy_id": "legacy",\n' +
+      '      "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",\n' +
+      '      "questions_sha256": "e2d6959f72b901db94932a3eff8879770986436e995fb807f5cf8cad9511b484",\n' +
+      '      "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",\n' +
+      '      "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",\n' +
+      '      "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"\n' +
+      '    },\n' +
+      '    "base_policy_action": "ASK_HUMAN",\n' +
+      '    "base_policy_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",\n' +
+      '    "semantic_policy_id": "NONE_BASELINE_COMPARISON",\n' +
+      '    "local_layers": [\n' +
+      '      {\n' +
+      '        "id": "USER_REQUESTED_REVIEW",\n' +
+      '        "status": "EVALUATED",\n' +
+      '        "condition_met": false,\n' +
+      '        "before_action": "ASK_HUMAN",\n' +
+      '        "after_action": "ASK_HUMAN",\n' +
+      '        "applied": false\n' +
+      '      },\n' +
+      '      {\n' +
+      '        "id": "OFFLINE_LINKGUARD",\n' +
+      '        "status": "EVALUATED_OFFLINE",\n' +
+      '        "before_action": "ASK_HUMAN",\n' +
+      '        "after_action": "ASK_HUMAN",\n' +
+      '        "applied": false,\n' +
+      '        "summary": {\n' +
+      '          "status": "EVALUATED_OFFLINE",\n' +
+      '          "overall": "NOT_SCANNED",\n' +
+      '          "url_count": 0,\n' +
+      '          "network_used": false,\n' +
+      '          "escalated": false,\n' +
+      '          "escalation_reasons": []\n' +
+      '        }\n' +
+      '      }\n' +
+      '    ],\n' +
+      '    "current_turn_policy_action": "ASK_HUMAN",\n' +
+      '    "current_turn_policy_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",\n' +
+      '    "evidence_display": {\n' +
+      '      "schema_version": "dmsg-v51-evidence-display/1",\n' +
+      '      "status": "AVAILABLE",\n' +
+      '      "source": "LOCAL_DISPLAY_HEURISTIC",\n' +
+      '      "extraction_method": "BOUNDED_TOPIC_ACTION_AND_SPEECH_CUES",\n' +
+      '      "offset_unit": "UNICODE_CODE_POINT",\n' +
+      '      "whitespace_contract": "EXPLICIT_UNICODE_WHITE_SPACE_NO_BOM",\n' +
+      '      "policy_changed": '... 3490 more characters
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+             정상적인 은행 방문 안내  정상적인 피해 예방 안내  송금 압박  원격제어 설치 강요  일회용 인증번호 요구  모호한 전달 요청  확인되지 않은 링크  신고자의 제3자 발화 인용  합법적인 송금 지시 가능성  기관 신분 사칭 여부 불명  간접적인 행동 압박  인증번호 요구 신고 인용  인증번호 제공 금지  상담 비밀 유지 지시  고객님, 예금 만기일이 다가옵니다. 자세한 사항은 은행 공식 앱이나 지점에서 직접 확인해 주세요. 합성 시나리오 · 안전 판정이 아닌, 위험 요청 부재를 표시                           가상 알파부품 (V-ALPHA)  가상 베타설비 (V-BETA)  미등록 거래처   INV-A101 · 80,000,000원  INV-A102 · 12,000,000원  INV-B201 · 5,400,000원   HN  KB  NH  SH  WR   정상 참조자료와 일치 — 내부 승인 검토  거래처 계좌 변경 통지 — 보류  발신 주소 불일치 — 보류  청구 금액 변경 — 보류  계좌는 같지만 긴급 압박 — 보류  외부 메일의 정책 우회 문장 — 보류               송금 · transfer  인증번호 제공 · otp  원격제어 설치 · remote_install  개인정보 제공 · personal_data  링크 열기 · link  비밀 유지 · secrecy  요청 없음 · none  불분명 · unclear   직접 요청 · direct_request  인용·전달 · reported_or_quoted  경고·부정 · negated_or_warning  불분명 · unclear  informational · informational              판단 엔진: Python 정본과 JS 이식본 일치 (합성 벡터)  빌드 정보 없음   합성 시나리오·지급 예시 정책 동작  확인   온디바이스 NLP: JS ↔ Python 일치 (토큰·특징·라벨·판단)  빌드 정보 없음   온디바이스 NLP: 고정 49문장 회귀 (작성자 데이터)  검증 기록 없음   이 빌드의 실제 Zoro-1 모델 호출  검증 기록 없음   한국어 사기 문장 정확도 (독립·실사용 평가)  미측정   NPU 실행  미실행   Windows·macOS 실제 기기 실행  미검증   Android·iOS 실제 기기 설치  미검증  제품 5.1 개발 후보 · 기준 엔진 4.7      (모델 준비 전)  데스크톱  데스크톱 앱 · 모델 설정됨 (127.0.0.1, 진품 미인증)            (로컬 조로 우선 사용 · 연결 실패 시 판단 보류)    아레나와 같은 기준 정책으로 판단해요.  분석하기    판단 보류: 신뢰할 수 있는 경로로 확인하세요  ASK_HUMAN · MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS  자동 판단을 보류했어요.  판단 근거가 불충분합니다. 지금 중요한 행동을 실행하지 말고 신뢰할 수 있는 사람이나 공식 창구에서 확인하세요.  현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.      인증번호를 알려주세요  .  밑줄은 원문에서 찾은 행동 맥락입니다. 모델의 판단 근거나 의미가 검증됐다는 뜻은 아닙니다.  표시 가능한 구간 1/1 · 확인하지 못한 구간 0개     이유  모델의 확신이 기준보다 낮거나 판단을 보류했어요.  실행 방식   MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED  모델 응답 진품 미인증  모델 답  otp / direct_request · 확신 0.75 (보정 안 됨)  지연  1 ms  판단 방식  기준 정책 · 0.70 (보정 미확립)  {
+      "profile": {
+        "mode": "MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED",
+        "policy_id": "legacy",
+        "profile_id": "v50-baseline",
+        "profile_binding": {
+          "profile_id": "v50-baseline",
+          "policy_id": "legacy",
+          "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+          "questions_sha256": "e2d6959f72b901db94932a3eff8879770986436e995fb807f5cf8cad9511b484",
+          "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"
+        },
+        "analysis_scope": "CURRENT_TEXT_ONLY_NO_SESSION_RISK",
+        "indicator": "NOT_APPLIED",
+        "linkguard": "OFFLINE_ONLY",
+        "external_lookup": "NOT_RUN"
+      },
+      "trace": {
+        "schema_version": "dmsg-v51-execution-trace/1",
+        "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+        "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+        "policy_id": "legacy",
+        "model_status": "VALID",
+        "inference_source": "MODEL_RESPONSE_UNATTESTED",
+        "runtime": {
+          "expected_temperature": 1.52,
+          "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+          "temperature_observed_by_this_evaluator": false,
+          "model_attested": false,
+          "domain_calibration": "NOT_ESTABLISHED",
+          "client_probability_recalibration": "NONE",
+          "model_echo_status": "ABSENT"
+        },
+        "predicates": [
+          {
+            "id": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "NONE_DIRECT_REQUEST_CONFLICT",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "DIRECT_REQUEST_CONTRADICTS_CONTEXT",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "WARNING_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "UNSUPPORTED_WARNING_LABEL",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "REPORT_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "UNSUPPORTED_QUOTATION_LABEL",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "LOW_ACTION_PROBABILITY",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "LOW_SPEECH_PROBABILITY",
+            "condition_met": true,
+            "eligible": true
+          },
+          {
+            "id": "UNCLEAR_ACTION_LABEL",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "UNCLEAR_SPEECH_LABEL",
+            "condition_met": false,
+            "eligible": true
+          },
+          {
+            "id": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+            "condition_met": true,
+            "eligible": true
+          },
+          {
+            "id": "CONFLICTING_MODEL_QUESTIONS",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "AUX_COERCION_BLOCKS_INFORMATIONAL_CLEARANCE",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_INFORMATIONAL_NOT_REQUEST",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "NO_ACTION_CANDIDATE_NOT_SAFETY_CLEARANCE",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "NO_GROUNDED_ACTION_ANCHOR",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "AUX_COERCION_BLOCKS_WARNING_CLEARANCE",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_WARNING_NOT_REQUEST",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_REPORTED_REQUEST",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_DIRECT_ACTION_ADVISORY",
+            "condition_met": true,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_DIRECT_CAUTION_ADVISORY",
+            "condition_met": false,
+            "eligible": false
+          },
+          {
+            "id": "MODEL_EVIDENCE_INSUFFICIENT",
+            "condition_met": false,
+            "eligible": false
+          }
+        ],
+        "condition_ids": [
+          "LOW_SPEECH_PROBABILITY",
+          "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+          "MODEL_DIRECT_ACTION_ADVISORY"
+        ],
+        "applied_rule_ids": [
+          "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS"
+        ],
+        "final_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+        "final_action": "ASK_HUMAN",
+        "normalized_probabilities": {
+          "q_action": {
+            "transfer": 0.03571428571428571,
+            "otp": 0.75,
+            "remote_install": 0.03571428571428571,
+            "personal_data": 0.03571428571428571,
+            "link": 0.03571428571428571,
+            "secrecy": 0.03571428571428571,
+            "none": 0.03571428571428571,
+            "unclear": 0.03571428571428571
+          },
+          "q_speech": {
+            "direct_request": 0.6666666666666666,
+            "reported_or_quoted": 0.08333333333333334,
+            "negated_or_warning": 0.08333333333333334,
+            "unclear": 0.08333333333333334,
+            "informational": 0.08333333333333334
+          },
+          "q_scam": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "q_claim": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "q_pressure": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "q_risk": {
+            "none": 0.97,
+            "low": 0.01,
+            "moderate": 0.01,
+            "high": 0.01
+          },
+          "q_evidence": {
+            "yes": 0.98,
+            "no": 0.020000000000000018
+          }
+        },
+        "dropped_optional_questions": [],
+        "evidence_spans": [],
+        "predicate_semantics": "CONDITION_TRUE_IS_NOT_RULE_APPLIED; eligibility is layer-local and respects rule priority",
+        "trace_scope": "CURRENT_TURN_ONLY_NO_SESSION_DECISION",
+        "raw_text_stored": false,
+        "question_profile_id": "v50-baseline",
+        "question_binding": {
+          "profile_id": "v50-baseline",
+          "policy_id": "legacy",
+          "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+          "questions_sha256": "e2d6959f72b901db94932a3eff8879770986436e995fb807f5cf8cad9511b484",
+          "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"
+        },
+        "base_policy_action": "ASK_HUMAN",
+        "base_policy_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+        "semantic_policy_id": "NONE_BASELINE_COMPARISON",
+        "local_layers": [
+          {
+            "id": "USER_REQUESTED_REVIEW",
+            "status": "EVALUATED",
+            "condition_met": false,
+            "before_action": "ASK_HUMAN",
+            "after_action": "ASK_HUMAN",
+            "applied": false
+          },
+          {
+            "id": "OFFLINE_LINKGUARD",
+            "status": "EVALUATED_OFFLINE",
+            "before_action": "ASK_HUMAN",
+            "after_action": "ASK_HUMAN",
+            "applied": false,
+            "summary": {
+              "status": "EVALUATED_OFFLINE",
+              "overall": "NOT_SCANNED",
+              "url_count": 0,
+              "network_used": false,
+              "escalated": false,
+              "escalation_reasons": []
+            }
+          }
+        ],
+        "current_turn_policy_action": "ASK_HUMAN",
+        "current_turn_policy_rule": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+        "evidence_display": {
+          "schema_version": "dmsg-v51-evidence-display/1",
+          "status": "AVAILABLE",
+          "source": "LOCAL_DISPLAY_HEURISTIC",
+          "extraction_method": "BOUNDED_TOPIC_ACTION_AND_SPEECH_CUES",
+          "offset_unit": "UNICODE_CODE_POINT",
+          "whitespace_contract": "EXPLICIT_UNICODE_WHITE_SPACE_NO_BOM",
+          "policy_changed": false,
+          "role": "DISPLAY_CONTEXT_NOT_DECISION_GROUNDING",
+          "semantic_verified": false,
+          "semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+          "risk_classification": "NOT_PERFORMED",
+          "model_calls": 0,
+          "reason_codes": [],
+          "candidate_clause_count": 1,
+          "displayed_clause_count": 1,
+          "unavailable_clause_count": 0,
+          "candidate_clause_coverage": 1,
+          "unavailable_clause_rate": 0,
+          "coverage_denominator": "CLAUSES_WITH_TOPIC_OR_REQUEST_CUE_OR_VALID_UPSTREAM_ANCHOR",
+          "upstream_span_count": 0,
+          "upstream_span_displayed_count": 0,
+          "upstream_span_unavailable_count": 0,
+          "upstream_span_unavailable_rate": null,
+          "invalid_upstream_span_count": 0,
+          "raw_text_persistence": "FORBIDDEN_DISPLAY_AND_ORIGINAL_EVIDENCE_MEMORY_ONLY",
+          "clauses": [
+            {
+              "start": 0,
+              "end": 11,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "status": "DISPLAYED",
+              "reason_code": null,
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT",
+              "original_anchor_indexes": []
+            }
+          ],
+          "spans": [
+            {
+              "start": 0,
+              "end": 11,
+              "kind": "TEXT_ACTION_CONTEXT",
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "origin": "LOCAL_DISPLAY_HEURISTIC",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT",
+              "topic_cues": [
+                "CREDENTIAL_TOPIC"
+              ],
+              "original_anchor_indexes": []
+            }
+          ],
+          "raw_text_stored": false
+        }
+      },
+      "evidence_display": {
+        "schema_version": "dmsg-v51-evidence-display/1",
+        "status": "AVAILABLE",
+        "source": "LOCAL_DISPLAY_HEURISTIC",
+        "extraction_method": "BOUNDED_TOPIC_ACTION_AND_SPEECH_CUES",
+        "offset_unit": "UNICODE_CODE_POINT",
+        "whitespace_contract": "EXPLICIT_UNICODE_WHITE_SPACE_NO_BOM",
+        "policy_changed": false,
+        "role": "DISPLAY_CONTEXT_NOT_DECISION_GROUNDING",
+        "semantic_verified": false,
+        "semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+        "risk_classification": "NOT_PERFORMED",
+        "model_calls": 0,
+        "reason_codes": [],
+        "candidate_clause_count": 1,
+        "displayed_clause_count": 1,
+        "unavailable_clause_count": 0,
+        "candidate_clause_coverage": 1,
+        "unavailable_clause_rate": 0,
+        "coverage_denominator": "CLAUSES_WITH_TOPIC_OR_REQUEST_CUE_OR_VALID_UPSTREAM_ANCHOR",
+        "upstream_span_count": 0,
+        "upstream_span_displayed_count": 0,
+        "upstream_span_unavailable_count": 0,
+        "upstream_span_unavailable_rate": null,
+        "invalid_upstream_span_count": 0,
+        "raw_text_persistence": "FORBIDDEN_DISPLAY_AND_ORIGINAL_EVIDENCE_MEMORY_ONLY",
+        "clauses": [
+          {
+            "start": 0,
+            "end": 11,
+            "clause_mode": "DIRECT_REQUEST_CUE",
+            "status": "DISPLAYED",
+            "reason_code": null,
+            "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT",
+            "original_anchor_indexes": []
+          }
+        ],
+        "spans": [
+          {
+            "start": 0,
+            "end": 11,
+            "kind": "TEXT_ACTION_CONTEXT",
+            "clause_mode": "DIRECT_REQUEST_CUE",
+            "origin": "LOCAL_DISPLAY_HEURISTIC",
+            "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT",
+            "topic_cues": [
+              "CREDENTIAL_TOPIC"
+            ],
+            "original_anchor_indexes": []
+          }
+        ],
+        "raw_text_stored": false
+      },
+      "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7"
+    }   인증번호를 알려주세요 위험 행동  요청형      판단 보류: 신뢰할 수 있는 경로로 확인하세요  v1   
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261112_choice_diagnosis\[v5.3] IteraGuard_DoubtMeter\tests_v53\test_choice_ui.js:206:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: v53 arena hold is explicitly complete, including retained prior risk
+not ok 16 - v53 arena hold is explicitly complete, including retained prior risk
+  ---
+  duration_ms: 2.0474
+  type: 'test'
+  location: 'C:\\Users\\hosun\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\outputs\\20261112_choice_diagnosis\\[v5.3] IteraGuard_DoubtMeter\\tests_v53\\test_choice_ui.js:210:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /처리 중 상태가 아닙니다|현재 판단은 완료/. Input:
+    
+    'stored notice'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: 'stored notice'
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261112_choice_diagnosis\[v5.3] IteraGuard_DoubtMeter\tests_v53\test_choice_ui.js:214:12)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 14
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2697.7277

@@ -1,0 +1,1 @@
+{"threshold_jaccard_char3": 0.5, "locked_files": ["locked_v46_multitask.jsonl", "locked_handwritten_v2.jsonl", "locked_handwritten.jsonl"], "dropped": {"train": 223, "calib": 25, "locked": 7}}

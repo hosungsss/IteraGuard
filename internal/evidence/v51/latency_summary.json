@@ -1,0 +1,45 @@
+{
+  "status": "OBSERVED_WARM_REQUEST_LATENCY_ONLY",
+  "profiles": {
+    "baseline7": {
+      "requests": 157,
+      "latency_ms": {
+        "p50": 145.3,
+        "p95": 156.608,
+        "min": 134.62,
+        "max": 175.47
+      },
+      "input_codepoints": {
+        "min": 1,
+        "max": 158,
+        "median": 47
+      },
+      "question_count": 7
+    },
+    "candidate11": {
+      "requests": 157,
+      "latency_ms": {
+        "p50": 275.9,
+        "p95": 289.008,
+        "min": 263.76,
+        "max": 377.0
+      },
+      "input_codepoints": {
+        "min": 1,
+        "max": 158,
+        "median": 47
+      },
+      "question_count": 11
+    }
+  },
+  "model_cold_start": "NOT_RUN_EXISTING_RESIDENT_LOCAL_GPU_SERVER_PRESERVED",
+  "cache": "MIXED_STATE_PREFIX_CACHE; NOT_RANDOMIZED",
+  "request_order": "profiles sequential across registered stages; baseline/candidate order and warm/cache conditions differ",
+  "causal_speedup_claim": false,
+  "limitations": [
+    "End-to-end ModelClient latency, not GPU kernel time or browser total",
+    "No independent latency load test or concurrency benchmark",
+    "No additional model calls; existing actual raw timing reused",
+    "Server-process restarts use a resident warm Zoro model and are not model cold-start tests"
+  ]
+}

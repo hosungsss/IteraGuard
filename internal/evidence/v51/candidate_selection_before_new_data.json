@@ -1,0 +1,11 @@
+{
+  "registered_utc": "2026-11-04T09:59:22.060426+00:00",
+  "candidate": "v51-semantic/2",
+  "stage1": "3 expected gains, no required-pause improvement; not sufficient alone",
+  "stage2": "11 expected gains across seen98, new25 pause misses unchanged",
+  "stage3": "24 changed actions, no lost allowed outcomes; new25 expected14to22/unnecessaryASK8to2/pause_miss3to1",
+  "new36_model_results_seen": false,
+  "validation24_opened": false,
+  "next": "Paired new development36 before final validation24. No automatic adoption.",
+  "gates": "No newly risky/unknown cleared, benign paused, required pause missed or lost allowed outcome; assess unnecessary ASK and pause misses separately."
+}

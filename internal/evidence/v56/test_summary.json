@@ -1,0 +1,36 @@
+{
+  "tests_v56": {
+    "returncode": 0
+  },
+  "tests_v54": {
+    "returncode": 0
+  },
+  "tests_v51": {
+    "returncode": 0
+  },
+  "tests_v52": {
+    "returncode": 0
+  },
+  "lifecycle": {
+    "returncode": 0
+  },
+  "ui": {
+    "returncode": 0
+  },
+  "scenarios": {
+    "returncode": 0
+  },
+  "redteam": {
+    "returncode": 0
+  },
+  "http": {
+    "returncode": 0,
+    "tests": 5
+  },
+  "totals": {
+    "passed": 160,
+    "skipped": 2,
+    "live_inference_successes": 0,
+    "live_configuration_failures": 5
+  }
+}

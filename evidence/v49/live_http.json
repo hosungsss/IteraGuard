@@ -1,0 +1,134 @@
+{
+  "mode": "ACTUAL_V49_HTTP_EXECUTION",
+  "public_zoro_requests": 4,
+  "rows": [
+    {
+      "case_id": "warning",
+      "synthetic_only": true,
+      "input_sha256": "b939dbf91226e58f08d5c61366430d8347dbdf155678c9af3582679773637362",
+      "result": {
+        "label": "UNCLEAR",
+        "latency_ms": 281.00000001722947,
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "output_contract": "VALID",
+        "typed_head": false,
+        "usable_as_typed_result": false
+      },
+      "round_trip_ms": 6906.0
+    },
+    {
+      "case_id": "direct",
+      "synthetic_only": true,
+      "input_sha256": "47e9bb1b421d8da67a2785d60dbe193f00ca42d812e95e4f6a04b9a9e363a69a",
+      "result": {
+        "label": "DIRECT_REQUEST",
+        "latency_ms": 218.99999998277053,
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "output_contract": "VALID",
+        "typed_head": false,
+        "usable_as_typed_result": false
+      },
+      "round_trip_ms": 266.0
+    },
+    {
+      "case_id": "quoted",
+      "synthetic_only": true,
+      "input_sha256": "8f7585fbfee7e0afe6f9a645455834cd4e187169cb6f5d107aa77a86630c05c3",
+      "result": {
+        "label": "UNCLEAR",
+        "latency_ms": 218.99999998277053,
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "output_contract": "VALID",
+        "typed_head": false,
+        "usable_as_typed_result": false
+      },
+      "round_trip_ms": 266.0
+    },
+    {
+      "case_id": "mixed",
+      "synthetic_only": true,
+      "input_sha256": "73628450ae5c5ba9557798db838e4fab754bf6eaeed1146739d224a68f4e4262",
+      "result": {
+        "label": "DIRECT_REQUEST",
+        "latency_ms": 219.0000000409782,
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "output_contract": "VALID",
+        "typed_head": false,
+        "usable_as_typed_result": false
+      },
+      "round_trip_ms": 265.0
+    }
+  ],
+  "verification_workflow": {
+    "status": "PASS",
+    "typed_model_status": "UNAVAILABLE",
+    "state": {
+      "events": [
+        {
+          "action": "ASK_HUMAN",
+          "current_turn_action": "ASK_HUMAN",
+          "error_code": "MODEL_NOT_CONFIGURED",
+          "evidence": [],
+          "latency_ms": null,
+          "message": "현재 판단을 확정할 수 없습니다. 사람의 검토와 추가 확인이 필요합니다.",
+          "mode": "MODEL_UNAVAILABLE",
+          "model_attested": false,
+          "model_status": "FAILED",
+          "next_task": {
+            "id": "63682065a3c142a3a98d5affb73818dd",
+            "instruction": "독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.",
+            "status": "OPEN",
+            "type": "INDEPENDENT_CHANNEL_CHECK"
+          },
+          "observation": "NOT_CHECKED",
+          "observation_provenance": "USER_REPORTED",
+          "policy_version": "v48-0.70+session-v49rc1",
+          "probabilities": {},
+          "reason": "ModelUnavailable",
+          "request_id": "live-1",
+          "session_id": "c54ba1b63e3b4a39891fd735d901782e",
+          "version": 1
+        },
+        {
+          "action": "ASK_HUMAN",
+          "current_turn_action": "ASK_HUMAN",
+          "error_code": "MODEL_NOT_CONFIGURED",
+          "evidence": [],
+          "latency_ms": null,
+          "message": "현재 판단을 확정할 수 없습니다. 사람의 검토와 추가 확인이 필요합니다.",
+          "mode": "MODEL_UNAVAILABLE",
+          "model_attested": false,
+          "model_status": "FAILED",
+          "next_task": {
+            "id": "63682065a3c142a3a98d5affb73818dd",
+            "instruction": "독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.",
+            "status": "OPEN",
+            "type": "INDEPENDENT_CHANNEL_CHECK"
+          },
+          "observation": "UNRESOLVED",
+          "observation_provenance": "USER_REPORTED",
+          "observed_task_id": "63682065a3c142a3a98d5affb73818dd",
+          "policy_version": "v48-0.70+session-v49rc1",
+          "probabilities": {},
+          "reason": "ModelUnavailable",
+          "request_id": "live-2",
+          "session_id": "c54ba1b63e3b4a39891fd735d901782e",
+          "version": 2
+        }
+      ],
+      "id": "c54ba1b63e3b4a39891fd735d901782e",
+      "prior_pause": 0,
+      "tasks": [
+        {
+          "created_version": 1,
+          "id": "63682065a3c142a3a98d5affb73818dd",
+          "observation": "UNRESOLVED",
+          "sid": "c54ba1b63e3b4a39891fd735d901782e",
+          "status": "OPEN"
+        }
+      ],
+      "version": 2
+    }
+  },
+  "notice": "Generated labels are comparison-only, not typed probabilities or production policy."
+}

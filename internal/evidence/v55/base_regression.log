@@ -1,0 +1,14 @@
+test_python_javascript_same_results (test_lexical.Lexical.test_python_javascript_same_results) ... ok
+test_same_response_before_after_and_threshold_unchanged (test_lexical.Lexical.test_same_response_before_after_and_threshold_unchanged) ... ok
+test_synonyms_and_warning_report_guards (test_lexical.Lexical.test_synonyms_and_warning_report_guards) ... ok
+test_inherited_risk_does_not_create_endless_tasks (test_workflow.Workflow.test_inherited_risk_does_not_create_endless_tasks) ... ok
+test_model_failure_gets_retry_guidance_and_restores_it (test_workflow.Workflow.test_model_failure_gets_retry_guidance_and_restores_it) ... ok
+test_new_uncertainty_creates_task_after_prior_report (test_workflow.Workflow.test_new_uncertainty_creates_task_after_prior_report) ... ok
+test_restart_preserves_guidance_and_private_fingerprints (test_workflow.Workflow.test_restart_preserves_guidance_and_private_fingerprints) ... ok
+test_same_input_changed_reason_creates_task (test_workflow.Workflow.test_same_input_changed_reason_creates_task) ... ok
+test_same_input_reason_deduplicates_and_retry_is_identical (test_workflow.Workflow.test_same_input_reason_deduplicates_and_retry_is_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.067s
+
+OK

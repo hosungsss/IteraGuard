@@ -1,0 +1,1022 @@
+[
+  {
+    "path": "dmsg/.gitignore",
+    "bytes": 36,
+    "sha256": "d4f3d4924db6a788ffd218959d76910041c39c5aba248840990ad25fd2dd5b3c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/config.example.json",
+    "bytes": 884,
+    "sha256": "66c74de581cdf71c849a631c49c772214d66c36619772e16033687065c4ce525",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/README.md",
+    "bytes": 2373,
+    "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/SKILL.md",
+    "bytes": 31837,
+    "sha256": "9cf3f903ea75d4f6f817c8288d6274131c5a6a98466c32d3c64982b6d31cfe1e",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "linkguard/apk.py",
+    "bytes": 26003,
+    "sha256": "d26fb8925392f39bc313e6e5a3575c45ca54af0005627f3901f373f5728e9a46",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "linkguard/intake.py",
+    "bytes": 21693,
+    "sha256": "bd282d221faaeb8e2d026a4fef0b8bb6b85f3102439f0514d9bb7dc3c825a52d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "linkguard/policy.py",
+    "bytes": 6128,
+    "sha256": "e7b926bee64e9ad035a058a85706012b8ba196c7d376d8f78b5c2d9b8665f01e",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "linkguard/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tests_linkguard/test_arbiter.py",
+    "bytes": 6828,
+    "sha256": "462d1305d8f31a5d738a624c1f2da9a3a3db4566a821987e1050d9c0aa60c64c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tests_linkguard/test_linkguard.py",
+    "bytes": 10175,
+    "sha256": "43ebbaaeb3c5a8cda972920b31c46f7edf6f618c196045fd991defa7f06f3990",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tests_linkguard/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/app_smoke.py",
+    "bytes": 19747,
+    "sha256": "4de4c708d8740bc9cf45e18c4ae38b221701db2355818fc837833c71a6ff2e97",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/browser_smoke.py",
+    "bytes": 5609,
+    "sha256": "30eb82eba24a3a5d55e64f0927114423520e68875a1cdd366aa260bd30b48f73",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/build_apk.py",
+    "bytes": 27924,
+    "sha256": "e11803190ba14f2fedc08a9449fa4825663a21cd7987130ee8bdbcdf2c0da1cf",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/build_apps.py",
+    "bytes": 11416,
+    "sha256": "97f4a69e29c03639b449a96bec055f87b7a3343ed5d46efedf246bb282c2c421",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/build_release.py",
+    "bytes": 3239,
+    "sha256": "761454b2cd3cfffb05bfb5825ab65e1a5278cbd07e134992cac189248dc06ee7",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/check_contrast.py",
+    "bytes": 2063,
+    "sha256": "a34e5a51c2b899c1b27aeff39475df2ef436cee5338d16db7b50cebe6ae6e86a",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/check_forbidden_phrases.py",
+    "bytes": 1572,
+    "sha256": "2570f42d9a4a69acf1e79415cecb174f0001514726a1bde75a640e432caf8bfc",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/compare_engines.py",
+    "bytes": 11766,
+    "sha256": "c0cec904ec4b9a59119dfad89bd474f221a220af9af46bfe5021951f99f86144",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/delivery_gate.py",
+    "bytes": 6159,
+    "sha256": "6c85ccb0a51c038d69b1fd46e5c5db4605ef5d233aecdaf18ad49f1c01a1f997",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/export_engine_data.py",
+    "bytes": 7579,
+    "sha256": "9b3e0e5e0707af765c390ef8b0656f67d94711d01e4694b10ad8261cdb0e1e5d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/make_conformance_vectors.py",
+    "bytes": 20554,
+    "sha256": "7120c03b667653b643a0ade7723bdd0de17c7208aeda63fce0f2bd83559edaf1",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_golden_v33.py",
+    "bytes": 3913,
+    "sha256": "6390b160d3426caa3874c28f01974531375d2f567fc2b62f3f6493d956cd7a40",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v40_validation.py",
+    "bytes": 202,
+    "sha256": "efd6d97c58778a523e7d054a6629eae50b4e0ce988451bbd6bd1ae68861355c8",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v41_validation.py",
+    "bytes": 5775,
+    "sha256": "30935850e5264720903e0c0dc99f6751367d9d7d179de45e375cce4c84330e54",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v42_validation.py",
+    "bytes": 5746,
+    "sha256": "5d4283e2435fa44c8cb16b2aa2db024088b7f4f8fb482bab4e424ae357d98f0c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v44_validation.py",
+    "bytes": 6679,
+    "sha256": "641201d1fe8c6b4079d13b1b4d73f056500fc98345a6f12a571f1cc4b65059f1",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v45_validation.py",
+    "bytes": 7918,
+    "sha256": "021fbea872965ba29cb584c668e3c5a11ffc9331bd83be64bb48ea112c9b3c23",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v46_validation.py",
+    "bytes": 8224,
+    "sha256": "f49b3eccd52fcdf45271578086d3fd4db4befcdeae5630dc78eda8161f94ea62",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v47_arbiter_eval.py",
+    "bytes": 5588,
+    "sha256": "2ab131a4e02a05bd8b8af5e0a1e5cc034afef104ad44a9078471057966fe9b01",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v47_validation.py",
+    "bytes": 10183,
+    "sha256": "4a94e9dcebdf4887944f8172717a9d48b0f21eb7206ac81853ad9e7695cb0abe",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/run_v48_validation.py",
+    "bytes": 2261,
+    "sha256": "69b8e3c448013ec3b54565aae609f988392c47ac50bdadad1b71f2d43049fa64",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/test_domain_v48.js",
+    "bytes": 2742,
+    "sha256": "6fbdcfe96b24b9e9dd4813eca5ade2c22dcb381bdc81603cf3bd60a5963df037",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/test_trace_v48.py",
+    "bytes": 1818,
+    "sha256": "79f6ddc24c8d6347bef5c0ddf69e82d1b3fbc9e66e645df51d566fa323029e4d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/verify_apk.py",
+    "bytes": 8631,
+    "sha256": "1fa1b6359a6be7da42b67ad47c3ce1fec7d18f44971ac718895658e1e89da5a3",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/verify_apk_v48.py",
+    "bytes": 3080,
+    "sha256": "ea0cc23feb9364d715584bf0cf570c614b3c7d0ddf2915aca73e3a518a8f7930",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/verify_macho_signature.py",
+    "bytes": 2752,
+    "sha256": "c7512d1317bfd05f1d595eed4718e7b94e0c1261dbfcabe9235d6bf916718f2e",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/verify_release.py",
+    "bytes": 4688,
+    "sha256": "273a7f5ad41bd708262eb316d7bb913ed1f7f2e8bde381e1d972f83336a02eec",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/dmsg-apkscan.js",
+    "bytes": 26696,
+    "sha256": "dfa23da7e3a3109074bd0b687691d82bbc8255587720dcb79e5ae818d783cc16",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/dmsg-domainintel.js",
+    "bytes": 11053,
+    "sha256": "29e8cf32e34996598304697c4b931314a32f50c9fa0f013b9e206ca131a712c5",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/dmsg-engine.js",
+    "bytes": 39632,
+    "sha256": "a421b59c5f893a38af2b5ae8d38e9b1fa89a9f874eb3ab40ce3963a015360334",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/dmsg-linkguard.js",
+    "bytes": 22328,
+    "sha256": "7f3b435eb0559b548deefc1d41c56faf30681b272a6d20e7fa8606c9136378b7",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/dmsg-nlp.js",
+    "bytes": 25029,
+    "sha256": "de7542839f5f446c982627cf08794ef6b8511458461312bae12f170ce6e0dca9",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/engine-data.js",
+    "bytes": 25912,
+    "sha256": "6a3f7b936073a5c04f98c198c4df2c19296a7a1dd4defc6fb8a404e74f7b384d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/linkguard-data.js",
+    "bytes": 5237,
+    "sha256": "c5634bc453767191aa0e6cbd917e22e5d5405bb593cf6a775931e8eb9591d9f5",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/app.js",
+    "bytes": 56838,
+    "sha256": "72973623d75fbbf4afc4dc59b1701fc46bcbf617c3b03693a14334871a3f529a",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/index.html",
+    "bytes": 18752,
+    "sha256": "e57e89ae7e39b357455f6d0020bc93ac110429dede2b10baf52c72876027aea1",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/manifest.webmanifest",
+    "bytes": 806,
+    "sha256": "617de10f9a850a737c1eb35bbccf77795f196147f48361d31ac964ac51137c25",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/styles.css",
+    "bytes": 26000,
+    "sha256": "c4b8dcfd1ee8f519239cff09ad5b6de812a6343a701ff045d685e4b48b21f76b",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/sw.js",
+    "bytes": 1131,
+    "sha256": "988d8769a12e9ebfcabc2b293728244f3d9babc94ad8804994289fa20be69ddf",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-heads.js",
+    "bytes": 613287,
+    "sha256": "e2ee3f84951e9914e4f927b42f69d83e7dae917a3d8008bf072122e320006bbf",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-vocab.js",
+    "bytes": 368351,
+    "sha256": "75d31001ceeedadff9bde3fba2664ac6ac233dac94d31ee4b6cfb849df958d57",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-weights.js",
+    "bytes": 19539006,
+    "sha256": "0020eeb0da6a4293bb6b13f5eba129d39f41bbee79975b367faf9f8ec249dfa4",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/shared/nlp/NLP_ASSETS_MANIFEST.json",
+    "bytes": 696,
+    "sha256": "941480c8bbeba8ab91ce0b63d90e56aa6aaf8e5b4ddd4460a298e6d1ab9392ca",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/icons/icon-180.png",
+    "bytes": 48099,
+    "sha256": "0a6fbc731ac0ced5f54c0099358c8ca1d71f3ede8aa763f49bd5bfac9f84b681",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/icons/icon-192.png",
+    "bytes": 54214,
+    "sha256": "d50e17b338ed358f0ddb66dd8d0348e4786452577a1221abc6dccb6e1e9400b2",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/icons/icon-512.png",
+    "bytes": 330514,
+    "sha256": "285cc78b996742e86d8769e0ccb3c9e612e4a56957bb3b0a48e8fc61dcb21705",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/icons/icon-maskable-512.png",
+    "bytes": 278783,
+    "sha256": "f002294b44871a6f48adb54fa878ee7014e3191299579527a4c277c48159fec0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "apps/web/icons/icon.svg",
+    "bytes": 1468,
+    "sha256": "fbbcd4fff1c0f6c7c92427119e6b0cb97db52183830f852d309bfe35db826a35",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/assets/TEAM_WORKPLAN.md",
+    "bytes": 1730,
+    "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/context_guard.py",
+    "bytes": 14547,
+    "sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/core.py",
+    "bytes": 5693,
+    "sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/decision_oracle.py",
+    "bytes": 1707,
+    "sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/evaluation_gate.py",
+    "bytes": 3516,
+    "sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/fixtures.py",
+    "bytes": 4949,
+    "sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/model_bridge.py",
+    "bytes": 40028,
+    "sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/ontology.py",
+    "bytes": 2109,
+    "sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/paylock.py",
+    "bytes": 19875,
+    "sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/paylock_model.py",
+    "bytes": 2790,
+    "sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/server.py",
+    "bytes": 7847,
+    "sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/session.py",
+    "bytes": 13381,
+    "sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/typed_contract.py",
+    "bytes": 7118,
+    "sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/prototype/__init__.py",
+    "bytes": 79,
+    "sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/ELENCHUS_SNM_4D.md",
+    "bytes": 4826,
+    "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/EVALUATION.md",
+    "bytes": 4976,
+    "sha256": "f298e376f10c9738577da65fe4cf4518f31889dcb16a55769ddd0110d7f03a3e",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/MODEL_CONTRACT.md",
+    "bytes": 5041,
+    "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/PLATFORM_INSTALL.md",
+    "bytes": 2467,
+    "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/PRD.md",
+    "bytes": 39610,
+    "sha256": "4a9bd77b9b16612460679eeee97ac6b849cddce6896e78b2172ae447f1414fce",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/PROMPTS.md",
+    "bytes": 3401,
+    "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/SYSTEM_PROMPT.md",
+    "bytes": 29891,
+    "sha256": "2e3e646ad3302a0cc4144ef5248aceb226e89c08c9620bdcf3e1369e02013c3c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/references/TRACEABILITY.md",
+    "bytes": 18505,
+    "sha256": "4f880ae52ce3984533f9c44479a3223abc27beb36f1e3938a54b53b6ac8d58ff",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/evaluate_annotations.py",
+    "bytes": 1108,
+    "sha256": "6ae0ce6e508dcd42fd644b07be586b7abdbd160e43a45b24a2e138a2bc9b5334",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/evaluate_fixtures.py",
+    "bytes": 1368,
+    "sha256": "341d097c73c2a8986dc3f623612ac036dcdd4e02391ad69abe8ef0581a599dc0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/metamorphic_audit.py",
+    "bytes": 1596,
+    "sha256": "727b328d443cedf723539b5ba990b5e5382ab3eece90ad653f2bd4719281a5b6",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/npu_readiness.py",
+    "bytes": 3837,
+    "sha256": "ef12809b136b432b75dd7f527ef6e6bb8ee798116c77b713876d8a385be44149",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/paylock_ablation.py",
+    "bytes": 1736,
+    "sha256": "db55a28ea5d0dad76a6d16890b805ae313c01df4b541ccfaebbae63864757184",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/policy.py",
+    "bytes": 5828,
+    "sha256": "0ca4dbbc801c5513d9bbcbe7f03631575a87887aa32bfd1d8473ba055dc0db34",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/run_adversarial_suite.py",
+    "bytes": 3174,
+    "sha256": "303c6385ebb6717abdb4712a816680908cb6b68a392f2e77307258a54d7376d7",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/run_fixture_demo.py",
+    "bytes": 1659,
+    "sha256": "c44ed0aca4bac71181c4b0232c6901aaa8e0748cdcc16433d369fcecc94713c6",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/smoke_zoro.py",
+    "bytes": 6790,
+    "sha256": "ace6ae49a2c43e3a0f9dcb58ae55e9308bd966f948304610548a2306bac1454c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/scripts/validate_skill.py",
+    "bytes": 5034,
+    "sha256": "55052d9f07846a6cfe073cbbb606c9d57f6048932f18c7332be9f1ecec4f2532",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_policy.py",
+    "bytes": 5617,
+    "sha256": "50b2f6984452a2007227eb35d63c7bc500e289dd832e197b7b6cd9961a3331fe",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_prototype.py",
+    "bytes": 10895,
+    "sha256": "0b09e93b43801eaeb1f2fa8295c6d4cf26d239d163aa6568567a74c455073bf4",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_spec_alignment.py",
+    "bytes": 2617,
+    "sha256": "5bdecff03813dd7fe47e814ef0393f01e45f22ff3f1ec227347bcb69c370eb36",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v33_hardening.py",
+    "bytes": 6280,
+    "sha256": "8a3b8e1322543b861419dae689963f346174e47a10176c9e43b63bd6cd54a44d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v34_release.py",
+    "bytes": 3624,
+    "sha256": "238974353118b8ca96af8db405764029c980e24eb682ab990b003198d28a72bf",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v35_http_integration.py",
+    "bytes": 3467,
+    "sha256": "b509f9140f00c8ceac51624eac058281770a06a029a9e8c0ef74d91a020e4b64",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v35_model_bridge.py",
+    "bytes": 5706,
+    "sha256": "07d8f7bc7ed33096cefc143a09719578c0300022c4c9e1804aca509a2ffbd58b",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v36_async.py",
+    "bytes": 2214,
+    "sha256": "a52160201a3d04e6cfa33a7e31b743a0ca9c5808336c65c9db1e0e6be2136b42",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v36_context_and_transport.py",
+    "bytes": 39123,
+    "sha256": "dd5a1fa4ca8b270246b5388eca7fdac0beec7872a0b5c8545208be61e99f89f9",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v37_evaluation_npu.py",
+    "bytes": 4558,
+    "sha256": "67dabb636750e893875d066986bb7b149de3ae73c1df1c53ce0e607c9784d208",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v37_privacy_security.py",
+    "bytes": 7721,
+    "sha256": "41016ca4a955b84629073c5bdc80915f0758d630e5823d0869cd103271be8452",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/tests/test_v38_paylock.py",
+    "bytes": 27409,
+    "sha256": "7b90a8884ed56445c73516381181ad91f7876484be13c44b2905366de144f006",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/web/index.html",
+    "bytes": 3860,
+    "sha256": "714a66cdfcf6097a475bc7605a0e65c376249677678f7008b89819715f90e72f",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/web/main.js",
+    "bytes": 6341,
+    "sha256": "6fa0bc1f172163149b59634af1cc908c97d42b9874b52a92a0e59a943d2aabe3",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/web/paylock.html",
+    "bytes": 4996,
+    "sha256": "f616a93de52cc2efcae94e24251b4f371e28a93624386b90d1d4f4a9b1bcf7da",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/web/paylock.js",
+    "bytes": 6076,
+    "sha256": "de959c11bc07ea0f4eecfc3a89aa5deaca14e73a17d956b61750d3a73682f39c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "dmsg/web/style.css",
+    "bytes": 4121,
+    "sha256": "78689c2ed57f3e3cb82c89b180a9b3b50a7df0516cc2b4e7dd1ff56e207f553d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "evaluation/v47_challenge/locked.freeze.json",
+    "bytes": 783,
+    "sha256": "87156a09f7a625a557dbc5fe289c4769329a72e0cec0799e8ebc9a59baac2ad7",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "evaluation/v47_challenge/locked.jsonl",
+    "bytes": 8061,
+    "sha256": "2884bd187219d005b132e031471fd30c7b05f0d71b28c750a2db7b941921c63d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/config.json",
+    "bytes": 734,
+    "sha256": "485c8a610254c88fd681e3db29eed42267b5bf3c05a4811f12e684d7de832ef1",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/dmsg_nlp_heads_v46.json",
+    "bytes": 613170,
+    "sha256": "2a1aa9e8945b2dc78ae301ba727f9640016976b5c9189757e3dc623feac67f39",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/MODEL_CARD.md",
+    "bytes": 2286,
+    "sha256": "a5bfa06ee17910b41fab479d6c69db4d16bedeea1b73e449e6a89d1513334fd6",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/SHA256SUMS.txt",
+    "bytes": 685,
+    "sha256": "5ef8ba513050a01a7d28c1d794c352ec722fbe83c6663fbbfdd421e7a017bba0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/tokenizer.json",
+    "bytes": 814850,
+    "sha256": "d5c7a9a8996aca4fee55a3664381b012bd7dbb3e190061b2591c02502b7171b6",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/tokenizer_config.json",
+    "bytes": 1268,
+    "sha256": "06f6141cd1231cd88beafbcdc7860f442b2ea8115279682f29f21bf9fb20b275",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "models/v46/vocab.txt",
+    "bytes": 263327,
+    "sha256": "6e886927dfcecd22029b1ba80c10a1374740259c1067fc3a28d964b7ae2d55a7",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tests_data/apk_corpus/CORPUS.json",
+    "bytes": 1886,
+    "sha256": "3423e23894a3ed28e15f19bd289b83402fb0e6381269fc02e0bb292b35759ebc",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/linkguard/apk_parity.py",
+    "bytes": 3009,
+    "sha256": "1352e97b8848905773c780d6113249821cd05cdbd19789835419361b5b470256",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/linkguard/export_linkguard_data.py",
+    "bytes": 1566,
+    "sha256": "892f5d307ab9cae579afc90ada19237960b7474b6be97f9f7fbef124d0cdab9d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/linkguard/make_apk_corpus.py",
+    "bytes": 10353,
+    "sha256": "5a9d8656cf2691a2fe946559fe13121fb7ba2f933218c7ec943da6ccf4685476",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/linkguard/make_vectors.py",
+    "bytes": 3942,
+    "sha256": "2959ae96cff30dfe42499920241aefdc8b908d49c63518af9376be6b220f1c13",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/linkguard/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/build_nlp_assets.py",
+    "bytes": 1466,
+    "sha256": "ba0eada5f6cc538e90dc779694268eb8a90f4515991c6cabdb5479572ae93b7d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/compose_heads_v46.py",
+    "bytes": 1210,
+    "sha256": "fe199971de362d61fe88d8999cfdeb7806ed1b76b9039dbfee76a91c44beffee",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/electra_ref.py",
+    "bytes": 6994,
+    "sha256": "45289cee698733603168541d06871852a357c400ed883dd8ed95efaee248e9e8",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval_v46.py",
+    "bytes": 9802,
+    "sha256": "8e0a7d4174787579ebaf97802efc7727a5edaab80d73b89405aa21cc18ecbe13",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/extract_model_weights.py",
+    "bytes": 678,
+    "sha256": "4d97ea9b658aae9922e83f7f90af82c9fac98eb9e7617d8479371aa58a29cc00",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/finetune_v46.py",
+    "bytes": 18595,
+    "sha256": "45e0a7c667fe433e46eb94801acf85e308cc01f20754f9df0cdfabab56d7abe3",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_handwritten.freeze.json",
+    "bytes": 310,
+    "sha256": "a27dc4b42d41b3e02a5d446612eb44cc05a2bc2b39d2be0eb35d93d733c7e14f",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_handwritten.jsonl",
+    "bytes": 10655,
+    "sha256": "5db7355cd89ac6d7e01522dde04db5a04600bb6b0cc1aacdacf99598c318a304",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_handwritten_v2.freeze.json",
+    "bytes": 261,
+    "sha256": "7fcd0ce3a27c5ebf65b5e386c593192a72c2b4255070ca08d08b0e3792374015",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_handwritten_v2.jsonl",
+    "bytes": 11886,
+    "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_team_ai25.freeze.json",
+    "bytes": 3405,
+    "sha256": "81aa97de118c56d4ed6824041c271a1cdfb24aab1883a1a3d3168461cba61052",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_team_ai25.jsonl",
+    "bytes": 6068,
+    "sha256": "8c9976210f0802ad2dd0f870f3aaac3bfab2e400ae1a44982e3105c7ada7da48",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_v46_multitask.freeze.json",
+    "bytes": 361,
+    "sha256": "f73f5d52f51dfb425d323ba280a5387b5d95489489db09b30d7500dbfb3c5d6c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/locked_v46_multitask.jsonl",
+    "bytes": 18180,
+    "sha256": "da3bf3c72323fd5b4619abe069f0fd318fd086a0a68d11730dfd39592db0817a",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/make_dataset.py",
+    "bytes": 16566,
+    "sha256": "c4779032ac5d45db0649635be8f354329b3310763428f4aca1c0cf514e5c6a2b",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/make_dataset_v46.py",
+    "bytes": 26594,
+    "sha256": "06c6c9f3457d0f225437020aedad1a0a733caecae2e13c96075f971f1e7eee6d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/make_nlp_reference.py",
+    "bytes": 2808,
+    "sha256": "2898e985ff634ba934adb3b6818763ca6a921578cc85c18cdb5486ce876b6eb6",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/nlp_parity.js",
+    "bytes": 5118,
+    "sha256": "7554427bd5cea3fce4f40bc5d3db269e9b605d1e7dc32787e0bd844d6dc2f359",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/nlp_reference_vectors.json",
+    "bytes": 1961396,
+    "sha256": "3a2fe4bad4656b8de884763a6f55fc0e033a3b04655e681a9d609a49353c3f35",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/nlp_v46.py",
+    "bytes": 10057,
+    "sha256": "15a6fa13704287e5754d497ea2ad4ca2104246978e9049a4419756f66fc70cdc",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/regress_cases_v46.js",
+    "bytes": 2229,
+    "sha256": "692a620528802fb8f41356379f1332ceec91fc0c5b41aa33c8028451c5ebb51e",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/run_nlp_batch.js",
+    "bytes": 1555,
+    "sha256": "628e061850af9f6bb50b91e216ec2a3989f20c9e001137aed4b7a9499a8b57a8",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/train_heads.py",
+    "bytes": 17952,
+    "sha256": "b90b0df22be73c1d5acebfe7f693135c0780b0917791ffb5380713a1f5a1afd0",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/zoro/abstention_audit.py",
+    "bytes": 6123,
+    "sha256": "99522ba852892e4999ca4a3684cc5c93ad4c1752f908a78dd972cd2300469e1c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/zoro/trace_v48.py",
+    "bytes": 3561,
+    "sha256": "48463b5b7890d3f73b35452476fb33f0f7ff96aeb1887d3c0ddd71ef85862cf3",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/zoro/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/calib.jsonl",
+    "bytes": 130057,
+    "sha256": "0ff8528a37cc2b53b7f605c7875232c25005144bbe2ee8c9f0602a47ac479bd4",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/locked.jsonl",
+    "bytes": 60910,
+    "sha256": "d5f6b17929580d6ab79df75d6f6494640a71e62ad5d52fb08fd9ad0e2e690211",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/train.jsonl",
+    "bytes": 1185752,
+    "sha256": "e1d94445f1596bd2a51fe147c220a811d3f68ff6d38785f400b2655ba641ba35",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/v46_calib.jsonl",
+    "bytes": 186035,
+    "sha256": "8b2e4e951a2c9fd104fa58926386fb0f60a51fe9d766b3ccef775b007fd18d76",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/v46_decontamination.json",
+    "bytes": 192,
+    "sha256": "1bf8b7ca207c7b511878bad289378c7144caf0607ef1ff9152e0f87c5f55eb6c",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/v46_locked.jsonl",
+    "bytes": 185227,
+    "sha256": "79c3727e7a0907fdd938f011fc5c643d78cc1be50bb84e14e0310c843b35b4ff",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/data/v46_train.jsonl",
+    "bytes": 1326020,
+    "sha256": "4d49e9bba83cd4f301d646cfb3ee46e39ab10bac6def15e949043402adebd915",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/eval_v1_frozen_heads_first_touch.json",
+    "bytes": 21730,
+    "sha256": "dab303345dc0364475a9346db2438fa1cc998d381f5734fc1bbfb194bcd1e5a8",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/nlp_eval_report_v45_dev_only.json",
+    "bytes": 26071,
+    "sha256": "2f26e1a1f464f88bf43cd18fe716aa7514600606476799effaee653461647514",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/nlp_eval_report_v45_final.json",
+    "bytes": 51314,
+    "sha256": "935e9ea505d4f06228388c6c5fa42149777b62742c5e14321c648aafc9277a27",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_dev_eval.json",
+    "bytes": 201195,
+    "sha256": "e9719bc2e0d874c10768f2ae365ad7958d48f6a1eac56de3ccc159d5d2eb33ea",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_golden_snapshot.json",
+    "bytes": 3760,
+    "sha256": "9804a96bf96fc1a131dadb9fd9a71eff3794511da1b55b3b256810ab13aca640",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_model_selection.json",
+    "bytes": 834,
+    "sha256": "b122bf835f5a5c7657ed56efd0869aa9723aace37236b41041b1e63c53f72638",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b2h.json",
+    "bytes": 2081,
+    "sha256": "b9834dc4b60e602db0f3dfaa7f97a70e74e285ba39484b2b633381d95702fb9d",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4h.json",
+    "bytes": 2087,
+    "sha256": "8ffba1ab0fd952fd1b32c85a80a868711cee2290f7fa5e1df760c5921451c928",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4hl.json",
+    "bytes": 2087,
+    "sha256": "74e3591b7765e23b3639a8891c0b957d83631ab0dff59259e347171513f84e13",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4n.json",
+    "bytes": 2086,
+    "sha256": "676d7cc18b99d9e06101633e3c0e2c546fbf0743211b79d4df75abd36fde4576",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b8n.json",
+    "bytes": 2086,
+    "sha256": "1ab858e4b322b08ae1d4d34061948e32a71a235ae6c469ce9609953eec639f0a",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_c0.json",
+    "bytes": 2299,
+    "sha256": "5eefd703026a513431961f2a189667355c0579731d713a8088538237c610a820",
+    "source_manifest_status": "MATCH"
+  },
+  {
+    "path": "tools/nlp/eval/v46_vs_v45_locked_report.json",
+    "bytes": 267050,
+    "sha256": "0fd0b313ad4356abb0f6be6578403440427762fed577d6ec8e10d19ee0e35603",
+    "source_manifest_status": "MATCH"
+  }
+]

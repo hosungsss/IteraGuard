@@ -1,0 +1,22 @@
+test_arena_http (unittest.loader._FailedTest.test_arena_http) ... ERROR
+test_only_explicit_synthetic_bounded_text (tests_v49.test_generation_http.GenerationHttpTests.test_only_explicit_synthetic_bounded_text) ... ok
+test_rejects_cross_origin_and_host (tests_v49.test_generation_http.GenerationHttpTests.test_rejects_cross_origin_and_host) ... ok
+test_stub_remains_explicit_and_no_policy_side_effect (tests_v49.test_generation_http.GenerationHttpTests.test_stub_remains_explicit_and_no_policy_side_effect) ... ok
+
+======================================================================
+ERROR: test_arena_http (unittest.loader._FailedTest.test_arena_http)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_arena_http
+Traceback (most recent call last):
+  File "/home/ljmpc12/miniforge3/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_arena_http.py", line 7, in <module>
+    from test_arena import Client
+ModuleNotFoundError: No module named 'test_arena'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.522s
+
+FAILED (errors=1)

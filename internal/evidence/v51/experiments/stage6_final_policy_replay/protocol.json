@@ -1,0 +1,18 @@
+{
+  "registered_utc": "2026-11-04T10:13:47.713889+00:00",
+  "scope": "LOGIC_GUARD_REPAIR_AND_FROZEN_REPLAY_BEFORE_UNOPENED_VALIDATION",
+  "previous_candidate_status": "v3 HOLD due new V13 risky NO_STRONG_SIGNAL",
+  "changes": [
+    "specified request does not imply benign request; scope must explicitly choose other_request",
+    "indirect address/page navigation prevents ordinary-request clearance"
+  ],
+  "threshold_changes": false,
+  "new_model_calls": 0,
+  "raw_source": "stage5_specified_candidate/specified_raw.jsonl",
+  "validation24_opened": false,
+  "protected_sources": {
+    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56"
+  },
+  "acceptance": "zero new risky/unknown clear, required-pause miss, benign pause and lost allowed guidance; improve over-abstention and pause misses on development; final24 once after full execution freeze."
+}

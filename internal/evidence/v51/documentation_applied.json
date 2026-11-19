@@ -1,0 +1,321 @@
+{
+  "status": "DOCUMENTATION_APPLIED_HISTORY_PRESERVED",
+  "applied_utc": "2026-11-04T10:40:31.303798+00:00",
+  "source_root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "product_code_changed": false,
+  "contract_or_selection_changed": false,
+  "traceability_json_modified": false,
+  "parent_pointers_modified": false,
+  "model_calls": 0,
+  "history_copies": [
+    {
+      "file": "internal/history/v50_before_v51_documentation/CHANGELOG.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "bytes": 519,
+      "sha256": "908e477aebcda6b5b2768ff7eb6da05ea978096bea7a228e584e07b61af446a0",
+      "recorded_utc": "2026-11-04T10:40:31.239329+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/CURRENT_PROJECT_STATE.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 1765,
+      "sha256": "c6a6e4bdf0433841dc5f6b6fbf322f017255d7e2be5b9e01f7b88ab99c1e57b7",
+      "recorded_utc": "2026-11-04T10:40:31.239634+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/MASTER_HANDOFF_PROMPT.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "bytes": 2133,
+      "sha256": "b2a2a4fd3e31e38ae1986b021eed39f8600e26279a7f53a945a64f59699e9385",
+      "recorded_utc": "2026-11-04T10:40:31.239920+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/README.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/README.md",
+      "bytes": 4875,
+      "sha256": "f49fb087fe67f4b1a3ff86ea2999d6ee8aab33263fba8078ba49d091c56b3b31",
+      "recorded_utc": "2026-11-04T10:40:31.240180+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/all.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/all.md",
+      "bytes": 7333,
+      "sha256": "edafbe20455a06967c1b7e27d9b6fdb034b7d3333a0b4a1b453db1d8f6660b7c",
+      "recorded_utc": "2026-11-04T10:40:31.240423+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/apps/README.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 1410,
+      "sha256": "f1341444822f858299c355ebb9de31dbda703b8581da396dde76554f395a2838",
+      "recorded_utc": "2026-11-04T10:40:31.240662+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/apps/mobile/BUILD_ANDROID.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1849,
+      "sha256": "a930959355299254b42f0182bbed41ac1c3192b1ae8b5b1e78d70e468d793d39",
+      "recorded_utc": "2026-11-04T10:40:31.240905+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/dmsg/SKILL.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 32425,
+      "sha256": "00e091b1618f072c4b2c39772b1118f0eb6904650cb1bd68f4f78c2b10745b1b",
+      "recorded_utc": "2026-11-04T10:40:31.241170+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/docs/00_DOCUMENT_MAP.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "bytes": 15647,
+      "sha256": "02258f748e423491712442c731c5d41863f983c80b71fd7aa2da6a0a6c4f9733",
+      "recorded_utc": "2026-11-04T10:40:31.241406+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/internal/VERSION_LEDGER.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 5614,
+      "sha256": "12696107d94e5d1aaae08b310d8716c6f4caa25264f4a30b2624a1bc95e4c205",
+      "recorded_utc": "2026-11-04T10:40:31.241630+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/internal/history/PROVENANCE.json",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/history/PROVENANCE.json",
+      "bytes": 2623,
+      "sha256": "0dafccc6b1ab47b11db6584830bad89fcd572dff2df1cda1dd70b68ae6325816",
+      "recorded_utc": "2026-11-04T10:40:31.241860+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    },
+    {
+      "file": "internal/history/v50_before_v51_documentation/internal/history/README.md",
+      "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/history/README.md",
+      "bytes": 836,
+      "sha256": "a8de4ff6deb432033fb9eb73620f05b8c759bc7848f8e84b10225830bd84af3e",
+      "recorded_utc": "2026-11-04T10:40:31.242073+00:00",
+      "purpose": "Exact pre-v5.1-documentation copy; organized v5.0 source remains separately preserved"
+    }
+  ],
+  "provenance_entries_before": 8,
+  "provenance_entries_after": 20,
+  "modified_files": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "sha256": "b920c04a00959a35093533e2120b63786ac1d98e9fd49345cc58ef160c892f54",
+      "bytes": 651
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "sha256": "ee9e5c379baf53871698a8ca1f6c6acfd3f0883bdadc46fc315fa944d22e6c1c",
+      "bytes": 3782
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "sha256": "0d77a3c335cce4b9a0d9b599c5637c8f10c1845df7c0df1c7bc9f1ba14bb94c5",
+      "bytes": 2442
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/README.md",
+      "sha256": "25de0f392749bc8a08eb6dd7be2da9acfed99e76d57401c666a416ef9750af05",
+      "bytes": 5488
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/all.md",
+      "sha256": "6a9c1bf63d4c2fb522a5b8cc4d16e74c2bdbaf9c8534a654c333134c63d41a90",
+      "bytes": 7885
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/README.md",
+      "sha256": "17701e42f713fc5680757af3d2e37c090b4f2089b1b8c91705a9dfd96318f9ec",
+      "bytes": 1734
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "sha256": "6c148c3d5da388ed48eb66412861a5e2fbcc1ca6a424d7f4881c469e4a0b90a9",
+      "bytes": 1502
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "sha256": "576e16399bd2d5b24da87813f39bce92cfb823262e280ab2226a6435ce99c807",
+      "bytes": 32734
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/dmsg/references/PRD_v51.md",
+      "sha256": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4",
+      "bytes": 2866
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPTING_v51.md",
+      "sha256": "97ceb72b4214d29f7d2342f82a7f73a9f37e9022d59d6da1d61230908e0e6596",
+      "bytes": 2457
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "sha256": "f2872bbc2f1ee3021828d1c47986934268ffd42ac16ae16c066ff7f38845fadb",
+      "bytes": 17586
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/PRD_v51.md",
+      "sha256": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4",
+      "bytes": 2866
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/SYSTEM_PROMPTING_v51.md",
+      "sha256": "97ceb72b4214d29f7d2342f82a7f73a9f37e9022d59d6da1d61230908e0e6596",
+      "bytes": 2457
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/V51_IMPLEMENTATION_REPORT.md",
+      "sha256": "8cf76a8a604c6704b1fe73ec1e16261e5d642b79dad9ca4f4b1fce11f44262bf",
+      "bytes": 15469
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/V51_OPEN_ISSUES.md",
+      "sha256": "547b06ac32db44d74e4e0e6ce797e7488803ad2ba532b893db691a474df170d4",
+      "bytes": 5246
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "sha256": "79cc6f6cdc694fafc80ba794d228e44d1bb43f5036b1c5d4398c52c1661f88af",
+      "bytes": 11868
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/history/PROVENANCE.json",
+      "sha256": "8dc80f06236efe383478ef7643ee22032f5426a367447fe3f6d4815ec6eeb3e2",
+      "bytes": 9253
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/history/README.md",
+      "sha256": "e2e038cd6536eaa2c0c5e12789271406854243babc6c6e39333e85f240dc1a16",
+      "bytes": 1078
+    }
+  ],
+  "protected_unchanged": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/configs/v51_contract.json",
+      "sha256": "f22661725eaaba56318da84872471501f095f2bb31f6e2c0d1b8e19b9a7463f2"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/configs/v51_profiles.json",
+      "sha256": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/configs/v51_release_selection.json",
+      "sha256": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/configs/v51_semantic_rules.json",
+      "sha256": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/dist/IteraGuard_DoubtMeter_v5_1_android_debug.apk",
+      "sha256": "681c1a8a9cea3ed725166aa929cbc932109e252950a1a405064901c30b09e9d0"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/dist/IteraGuard_DoubtMeter_v5_1_web_pwa.zip",
+      "sha256": "bb722a6b359438b7b46e09114020ee08e0c6ceb7b9d3620cf86837668e852cd7"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/LATEST_VERSION.json",
+      "sha256": "08387fa80f7a69e588e80074a71ea8438c28d3906c89c746868bd5bc4c90fd38"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/README.md",
+      "sha256": "0c95f3833850dcc51bd2a4a02b5ce1033ca9ff1ae14c5b4d8b757de0a8b94d53"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/LATEST_VERSION.json",
+      "sha256": "7d3a875ddf1bc9b01aacef5f9b69aa70bfeff6a61861d408eb687c63f3d38fbd"
+    }
+  ],
+  "index_groups": {
+    "현행 진입점·명세": 18,
+    "기존 기능·운영 참고": 41,
+    "역사 원문·기준선 보고": 36,
+    "vendor 원본": 11
+  },
+  "remaining_delivery_action": "Root copies selected evidence then generates FULL and external implementation receipt; no archive hash embedded in product documents.",
+  "apk_evidence": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/apk_validation/apk_independent_verification.json",
+  "link_check": {
+    "deferred_expected_targets": [
+      {
+        "source": "CURRENT_PROJECT_STATE.md",
+        "target": "../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "README.md",
+        "target": "../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/V51_FAILURE_ANALYSIS.md"
+      },
+      {
+        "source": "all.md",
+        "target": "../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "all.md",
+        "target": "docs/V51_FAILURE_ANALYSIS.md"
+      },
+      {
+        "source": "apps/README.md",
+        "target": "../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "apps/mobile/BUILD_ANDROID.md",
+        "target": "../../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "docs/00_DOCUMENT_MAP.md",
+        "target": "V51_FAILURE_ANALYSIS.md"
+      },
+      {
+        "source": "docs/00_DOCUMENT_MAP.md",
+        "target": "../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "docs/00_DOCUMENT_MAP.md",
+        "target": "../docs/V51_FAILURE_ANALYSIS.md"
+      },
+      {
+        "source": "docs/V51_IMPLEMENTATION_REPORT.md",
+        "target": "../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "docs/V51_IMPLEMENTATION_REPORT.md",
+        "target": "../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "docs/V51_IMPLEMENTATION_REPORT.md",
+        "target": "V51_FAILURE_ANALYSIS.md"
+      },
+      {
+        "source": "docs/V51_OPEN_ISSUES.md",
+        "target": "../../Back Data/v5.1_구현기록_20261104/IMPLEMENTATION_RECEIPT.json"
+      },
+      {
+        "source": "docs/V51_OPEN_ISSUES.md",
+        "target": "V51_FAILURE_ANALYSIS.md"
+      }
+    ],
+    "note": "External receipt generated by root after FULL; failure analysis/traceability written by other assigned agents."
+  },
+  "latency_scope": "Warm resident GPU only; cold model start and load/concurrency NOT_RUN",
+  "apk_summary": {
+    "status": "STRUCTURE_SIGNATURE_AND_TAMPER_PASS_DEVICE_NOT_RUN",
+    "sha256": "681c1a8a9cea3ed725166aa929cbc932109e252950a1a405064901c30b09e9d0"
+  },
+  "final_readthrough": "Current entrypoints/specification/open issues/report/history additions reviewed; stale pending wording and root-author narration removed. Historical pre-v51 copies remain verbatim.",
+  "validation24_input_or_model_output_files_read": false,
+  "final_wording_correction": "README explicitly distinguishes excluded Zoro weights/HF token/GPU environment from bundled on-device NLP assets."
+}

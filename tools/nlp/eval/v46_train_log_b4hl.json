@@ -1,0 +1,98 @@
+{
+ "args": {
+  "onnx": "/home/claude/m45/model/enc_fp32.onnx",
+  "tok": "/home/claude/m45/model/tokenizer.json",
+  "v46": "/home/claude/m46/ds",
+  "v45": "/home/claude/m45/nlp/ds",
+  "out": "/home/claude/m46/b4hl",
+  "top_k": 4,
+  "ngram": true,
+  "epochs": 3,
+  "seed": 46,
+  "lr_enc": 2e-05,
+  "lr_head": 0.001,
+  "batch": 32
+ },
+ "sizes": {
+  "train": 9964,
+  "calib": 1174
+ },
+ "epochs": [
+  {
+   "epoch": 1,
+   "loss": 3.5743,
+   "calib": {
+    "speech": 0.7672,
+    "intent": 0.2225,
+    "req_action": 0.3057,
+    "topic": 0.3574,
+    "indicators": 0.48,
+    "mean": 0.4266
+   },
+   "seconds": 79.3
+  },
+  {
+   "epoch": 2,
+   "loss": 0.7955,
+   "calib": {
+    "speech": 0.8047,
+    "intent": 0.4136,
+    "req_action": 0.7614,
+    "topic": 0.5353,
+    "indicators": 0.6089,
+    "mean": 0.6248
+   },
+   "seconds": 41.9
+  },
+  {
+   "epoch": 3,
+   "loss": 0.4842,
+   "calib": {
+    "speech": 0.8033,
+    "intent": 0.408,
+    "req_action": 0.7623,
+    "topic": 0.5262,
+    "indicators": 0.6016,
+    "mean": 0.6203
+   },
+   "seconds": 42.8
+  }
+ ],
+ "cache_seconds": 34.7,
+ "selected_epoch": 2,
+ "calibration": {
+  "softmax_T": {
+   "speech": 1.0871072132797415,
+   "intent": 1.1958892971735384,
+   "req_action": 0.36304332663626426,
+   "topic": 1.447198762448618
+  },
+  "indicator_T": {
+   "OFF_PLATFORM_CONTACT": 0.3,
+   "UNVERIFIED_IDENTITY": 1.0871072132797415,
+   "URGENCY_OR_PRESSURE": 1.254296700827762,
+   "FINANCIAL_INDUCEMENT": 2.1193495364716846,
+   "CREDENTIAL_REQUEST": 2.2228588697800924,
+   "ACCOUNT_CHANGE_REQUEST": 0.3,
+   "IMPERSONATION_SIGNAL": 0.9882203109920058,
+   "MALICIOUS_LINK_SUSPICION": 0.5576249093541794,
+   "UNWANTED_SOLICITATION": 0.3
+  },
+  "indicator_threshold": {
+   "OFF_PLATFORM_CONTACT": 0.4,
+   "UNVERIFIED_IDENTITY": 0.3,
+   "URGENCY_OR_PRESSURE": 0.25,
+   "FINANCIAL_INDUCEMENT": 0.15,
+   "CREDENTIAL_REQUEST": 0.15,
+   "ACCOUNT_CHANGE_REQUEST": 0.5,
+   "IMPERSONATION_SIGNAL": 0.65,
+   "MALICIOUS_LINK_SUSPICION": 0.35,
+   "UNWANTED_SOLICITATION": 0.2
+  }
+ },
+ "export": {
+  "bytes": 14654232,
+  "tensors": 199
+ },
+ "train_seconds_total": 164.0
+}

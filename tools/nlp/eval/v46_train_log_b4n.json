@@ -1,0 +1,98 @@
+{
+ "args": {
+  "onnx": "/home/claude/m45/model/enc_fp32.onnx",
+  "tok": "/home/claude/m45/model/tokenizer.json",
+  "v46": "/home/claude/m46/ds",
+  "v45": "/home/claude/m45/nlp/ds",
+  "out": "/home/claude/m46/b4n",
+  "top_k": 4,
+  "ngram": false,
+  "epochs": 3,
+  "seed": 46,
+  "lr_enc": 5e-05,
+  "lr_head": 0.002,
+  "batch": 32
+ },
+ "sizes": {
+  "train": 9964,
+  "calib": 1174
+ },
+ "epochs": [
+  {
+   "epoch": 1,
+   "loss": 2.9913,
+   "calib": {
+    "speech": 0.7655,
+    "intent": 0.4094,
+    "req_action": 0.3476,
+    "topic": 0.4162,
+    "indicators": 0.6362,
+    "mean": 0.515
+   },
+   "seconds": 84.5
+  },
+  {
+   "epoch": 2,
+   "loss": 0.4154,
+   "calib": {
+    "speech": 0.8107,
+    "intent": 0.3832,
+    "req_action": 0.602,
+    "topic": 0.5573,
+    "indicators": 0.6098,
+    "mean": 0.5926
+   },
+   "seconds": 46.3
+  },
+  {
+   "epoch": 3,
+   "loss": 0.2187,
+   "calib": {
+    "speech": 0.8382,
+    "intent": 0.3639,
+    "req_action": 0.5813,
+    "topic": 0.5386,
+    "indicators": 0.5876,
+    "mean": 0.5819
+   },
+   "seconds": 44.9
+  }
+ ],
+ "cache_seconds": 35.1,
+ "selected_epoch": 2,
+ "calibration": {
+  "softmax_T": {
+   "speech": 1.1958892971735384,
+   "intent": 1.254296700827762,
+   "req_action": 0.9422029830620822,
+   "topic": 1.8368542044629212
+  },
+  "indicator_T": {
+   "OFF_PLATFORM_CONTACT": 0.3,
+   "UNVERIFIED_IDENTITY": 1.254296700827762,
+   "URGENCY_OR_PRESSURE": 2.821359281689012,
+   "FINANCIAL_INDUCEMENT": 3.255264610190456,
+   "CREDENTIAL_REQUEST": 2.5647190200856844,
+   "ACCOUNT_CHANGE_REQUEST": 0.3,
+   "IMPERSONATION_SIGNAL": 2.331423613674424,
+   "MALICIOUS_LINK_SUSPICION": 1.0364851317741894,
+   "UNWANTED_SOLICITATION": 0.3
+  },
+  "indicator_threshold": {
+   "OFF_PLATFORM_CONTACT": 0.05,
+   "UNVERIFIED_IDENTITY": 0.5,
+   "URGENCY_OR_PRESSURE": 0.15,
+   "FINANCIAL_INDUCEMENT": 0.15,
+   "CREDENTIAL_REQUEST": 0.15,
+   "ACCOUNT_CHANGE_REQUEST": 0.5,
+   "IMPERSONATION_SIGNAL": 0.35,
+   "MALICIOUS_LINK_SUSPICION": 0.45,
+   "UNWANTED_SOLICITATION": 0.05
+  }
+ },
+ "export": {
+  "bytes": 14654232,
+  "tensors": 199
+ },
+ "train_seconds_total": 175.7
+}

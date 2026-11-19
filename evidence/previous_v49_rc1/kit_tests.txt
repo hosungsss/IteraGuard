@@ -1,0 +1,44 @@
+test_changed_retry_and_stale_rejected (test_arena.ArenaTests.test_changed_retry_and_stale_rejected) ... ok
+test_cross_session_task_rejected (test_arena.ArenaTests.test_cross_session_task_rejected) ... ok
+test_failure_is_not_fixture (test_arena.ArenaTests.test_failure_is_not_fixture) ... ok
+test_invalid_controls_rejected_before_model (test_arena.ArenaTests.test_invalid_controls_rejected_before_model) ... ok
+test_new_observation_recomputes_but_does_not_clear_risk (test_arena.ArenaTests.test_new_observation_recomputes_but_does_not_clear_risk) ... ok
+test_no_raw_text_in_persistence (test_arena.ArenaTests.test_no_raw_text_in_persistence) ... ok
+test_stale_response_after_inference_rejected (test_arena.ArenaTests.test_stale_response_after_inference_rejected) ... ok
+test_task_persisted_and_idempotent (test_arena.ArenaTests.test_task_persisted_and_idempotent) ... ok
+test_origin_host_duplicate_keys_and_unknown_fields (test_arena_http.HttpTests.test_origin_host_duplicate_keys_and_unknown_fields) ... ok
+test_ui_external_assets_and_no_inline_script (test_arena_http.HttpTests.test_ui_external_assets_and_no_inline_script) ... ok
+test_workflow_roundtrip_and_reload (test_arena_http.HttpTests.test_workflow_roundtrip_and_reload) ... ok
+test_actual_bad_outputs_and_injected_tools_rejected (test_generation_boundary.GenerationBoundaryTests.test_actual_bad_outputs_and_injected_tools_rejected) ... ok
+test_entire_label_required (test_generation_boundary.GenerationBoundaryTests.test_entire_label_required) ... ok
+test_only_explicit_synthetic_bounded_text (test_generation_http.GenerationHttpTests.test_only_explicit_synthetic_bounded_text) ... ok
+test_rejects_cross_origin_and_host (test_generation_http.GenerationHttpTests.test_rejects_cross_origin_and_host) ... ok
+test_stub_remains_explicit_and_no_policy_side_effect (test_generation_http.GenerationHttpTests.test_stub_remains_explicit_and_no_policy_side_effect) ... ok
+test_direct_risk_beats_missing_model (test_kit.KitTests.test_direct_risk_beats_missing_model) ... ok
+test_failures_not_hidden_in_latency (test_kit.KitTests.test_failures_not_hidden_in_latency) ... ok
+test_fixture_cannot_be_live (test_kit.KitTests.test_fixture_cannot_be_live) ... ok
+test_gold_and_fixture_data_not_given_to_adapter (test_kit.KitTests.test_gold_and_fixture_data_not_given_to_adapter) ... ok
+test_inconsistent_argmax_rejected (test_kit.KitTests.test_inconsistent_argmax_rejected) ... ok
+test_logs_no_raw_text_or_quote (test_kit.KitTests.test_logs_no_raw_text_or_quote) ... ok
+test_low_confidence_is_measurable_not_silently_passed (test_kit.KitTests.test_low_confidence_is_measurable_not_silently_passed) ... ok
+test_missing_required_question_rejected (test_kit.KitTests.test_missing_required_question_rejected) ... ok
+test_model_proposed_evidence_does_not_authorize (test_kit.KitTests.test_model_proposed_evidence_does_not_authorize) ... ok
+test_nonfinite_and_duplicate_json_rejected (test_kit.KitTests.test_nonfinite_and_duplicate_json_rejected) ... ok
+test_session_version_rejected (test_kit.KitTests.test_session_version_rejected) ... ok
+test_span_change_rejected (test_kit.KitTests.test_span_change_rejected) ... ok
+test_warning_not_direct_otp (test_kit.KitTests.test_warning_not_direct_otp) ... ok
+test_wrong_input_hash_rejected (test_kit.KitTests.test_wrong_input_hash_rejected) ... ok
+test_zero_denominator_is_null (test_kit.KitTests.test_zero_denominator_is_null) ... ok
+test_missing_optional_is_preserved (test_v11_source_bridge.SourceBridgeTests.test_missing_optional_is_preserved) ... ok
+test_missing_required_and_nan_rejected (test_v11_source_bridge.SourceBridgeTests.test_missing_required_and_nan_rejected) ... ok
+test_model_anchor_not_promoted_to_independent_proof (test_v11_source_bridge.SourceBridgeTests.test_model_anchor_not_promoted_to_independent_proof) ... ok
+test_original_policy_exactly_recomputed (test_v11_source_bridge.SourceBridgeTests.test_original_policy_exactly_recomputed) ... ok
+test_probability_mapping_preserves_actual_mass (test_v11_source_bridge.SourceBridgeTests.test_probability_mapping_preserves_actual_mass) ... ok
+test_seven_questions_extracted_not_invented (test_v11_source_bridge.SourceBridgeTests.test_seven_questions_extracted_not_invented) ... ok
+test_source_cannot_attest_live_identity (test_v11_source_bridge.SourceBridgeTests.test_source_cannot_attest_live_identity) ... ok
+test_source_input_is_not_mutated (test_v11_source_bridge.SourceBridgeTests.test_source_input_is_not_mutated) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 3.724s
+
+OK

@@ -1,0 +1,46 @@
+{
+  "version": "5.1",
+  "checks": "manifest,metadata,skill_source,source_to_app_assets,artifact_hashes,optional_archive",
+  "file_count": 764,
+  "issues": [],
+  "pass": true,
+  "source_to_app_freshness": {
+    "status": "PASS",
+    "copied_asset_count": 30,
+    "missing_source": [],
+    "missing_assets": [],
+    "extra_assets": [],
+    "changed_assets": [],
+    "v51_checks": {
+      "copied_source_hashes": true,
+      "source_fingerprint": true,
+      "generated_hashes": true,
+      "source_sw_template": true,
+      "execution_contract": true,
+      "execution_contract_sources": true,
+      "release_selection": true,
+      "root_apk": true,
+      "apk_pwa_assets": true,
+      "sw_generation": true,
+      "sw_required_assets": true,
+      "html_required_assets": true,
+      "build_info": true,
+      "desktop_assets": true,
+      "android_version": true
+    },
+    "android_manifest_version": {
+      "versionCode": 51,
+      "versionName": "5.1"
+    },
+    "execution_contract_error": null,
+    "apk_pwa_equivalence": {
+      "status": "PASS_ASSETS_ONLY",
+      "signature_validation": "NOT_RUN_IN_ASSETS_ONLY_MODE",
+      "device_install_and_run": "NOT_RUN"
+    },
+    "scope": "v5.1 source -> PWA -> APK + desktop embedded assets, generated SW/build-info, Android version. No device, signature, model-performance or independent-evaluation claim."
+  },
+  "real_model_verified": false,
+  "host_install_verified": false,
+  "note": "Source edits require new release packaging; this verifier never blesses stale manifests or rebuilds artifacts."
+}

@@ -1,0 +1,41 @@
+{
+  "q_action": [
+    "none",
+    "money_transfer",
+    "remote_app_install",
+    "credential_or_otp",
+    "personal_data",
+    "verification_link",
+    "secrecy",
+    "other_unclear"
+  ],
+  "q_speech": [
+    "direct_request",
+    "quoted_or_reported",
+    "negated_or_warning",
+    "information",
+    "unclear"
+  ],
+  "q_scam": [
+    "yes",
+    "no"
+  ],
+  "q_pressure": [
+    "yes",
+    "no"
+  ],
+  "q_claim": [
+    "yes",
+    "no"
+  ],
+  "q_risk": [
+    "none",
+    "low",
+    "moderate",
+    "high"
+  ],
+  "q_evidence": [
+    "yes",
+    "no"
+  ]
+}

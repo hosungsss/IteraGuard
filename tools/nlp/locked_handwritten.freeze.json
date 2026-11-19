@@ -1,0 +1,7 @@
+{
+ "file": "tools/nlp/locked_handwritten.jsonl",
+ "sha256": "5db7355cd89ac6d7e01522dde04db5a04600bb6b0cc1aacdacf99598c318a304",
+ "rows": 45,
+ "frozen_at_utc": "2026-11-02T05:05:00.251643+00:00",
+ "note": "Frozen before any head training or threshold choice. Author-written; not independent of the developer."
+}

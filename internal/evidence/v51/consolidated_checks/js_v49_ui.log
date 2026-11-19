@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: arbiter buttons do not hide or change the source controls
+ok 1 - arbiter buttons do not hide or change the source controls
+  ---
+  duration_ms: 15.503591
+  type: 'test'
+  ...
+# Subtest: human review applies to a valid Zoro no-signal result
+ok 2 - human review applies to a valid Zoro no-signal result
+  ---
+  duration_ms: 42.281711
+  type: 'test'
+  ...
+# Subtest: human review never weakens a Zoro pause
+ok 3 - human review never weakens a Zoro pause
+  ---
+  duration_ms: 4.813393
+  type: 'test'
+  ...
+# Subtest: edited text rejects a late model response even if edited back
+ok 4 - edited text rejects a late model response even if edited back
+  ---
+  duration_ms: 2.904276
+  type: 'test'
+  ...
+# Subtest: policy change rejects an in-flight response
+ok 5 - policy change rejects an in-flight response
+  ---
+  duration_ms: 2.351302
+  type: 'test'
+  ...
+# Subtest: session advancement rejects an in-flight response
+ok 6 - session advancement rejects an in-flight response
+  ---
+  duration_ms: 2.853136
+  type: 'test'
+  ...
+# Subtest: changing review option rejects an in-flight response
+ok 7 - changing review option rejects an in-flight response
+  ---
+  duration_ms: 2.285789
+  type: 'test'
+  ...
+# Subtest: clear hides a completed result
+ok 8 - clear hides a completed result
+  ---
+  duration_ms: 4.012359
+  type: 'test'
+  ...
+# Subtest: desktop results and history explicitly remain per-text analysis, not session risk clearance
+ok 9 - desktop results and history explicitly remain per-text analysis, not session risk clearance
+  ---
+  duration_ms: 4.995195
+  type: 'test'
+  ...
+# Subtest: arena refresh does not restore a result after input editing
+ok 10 - arena refresh does not restore a result after input editing
+  ---
+  duration_ms: 1.950881
+  type: 'test'
+  ...
+# Subtest: arena refresh can show the unchanged input result
+ok 11 - arena refresh can show the unchanged input result
+  ---
+  duration_ms: 0.837874
+  type: 'test'
+  ...
+# Subtest: arena explains current-turn no-signal separately from a prior-risk hold, including refresh
+ok 12 - arena explains current-turn no-signal separately from a prior-risk hold, including refresh
+  ---
+  duration_ms: 2.021965
+  type: 'test'
+  ...
+# Subtest: arena prior-risk explanation follows the actual current-turn action
+ok 13 - arena prior-risk explanation follows the actual current-turn action
+  ---
+  duration_ms: 0.707749
+  type: 'test'
+  ...
+# Subtest: arena clears prior-risk explanation after edits, stale refresh, and a new session
+ok 14 - arena clears prior-risk explanation after edits, stale refresh, and a new session
+  ---
+  duration_ms: 0.899352
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2677.019963

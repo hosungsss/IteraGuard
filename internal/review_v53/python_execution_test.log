@@ -1,0 +1,19 @@
+test_arena_profile_bound_call_and_unresolved_risk_survives (tests_v51.test_execution.ExecutionTests.test_arena_profile_bound_call_and_unresolved_risk_survives) ... ok
+test_harmless_request_vs_current_secret_demand (tests_v51.test_execution.ExecutionTests.test_harmless_request_vs_current_secret_demand) ... ok
+test_local_layers_cannot_run_twice (tests_v51.test_execution.ExecutionTests.test_local_layers_cannot_run_twice) ... ok
+test_mismatched_profile_response_binding_rejected (tests_v51.test_execution.ExecutionTests.test_mismatched_profile_response_binding_rejected) ... ok
+test_missing_request_binding_rejected (tests_v51.test_execution.ExecutionTests.test_missing_request_binding_rejected) ... ok
+test_model_unavailable_never_fakes_success (tests_v51.test_execution.ExecutionTests.test_model_unavailable_never_fakes_success) ... ok
+test_original_policy_baseline_still_available (tests_v51.test_execution.ExecutionTests.test_original_policy_baseline_still_available) ... ok
+test_policy_profile_pair_rejected (tests_v51.test_execution.ExecutionTests.test_policy_profile_pair_rejected) ... ok
+test_python_js_whole_current_turn_pipeline (tests_v51.test_execution.ExecutionTests.test_python_js_whole_current_turn_pipeline) ... ok
+test_redirect_request_is_not_ordinary_clearance (tests_v51.test_execution.ExecutionTests.test_redirect_request_is_not_ordinary_clearance) ... ok
+test_required_new_answers_cannot_use_old_raw (tests_v51.test_execution.ExecutionTests.test_required_new_answers_cannot_use_old_raw) ... ok
+test_semantic_trace_priority_matches_executed_rule (tests_v51.test_execution.ExecutionTests.test_semantic_trace_priority_matches_executed_rule) ... ok
+test_trace_contains_no_input_or_quote (tests_v51.test_execution.ExecutionTests.test_trace_contains_no_input_or_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.265s
+
+OK
+

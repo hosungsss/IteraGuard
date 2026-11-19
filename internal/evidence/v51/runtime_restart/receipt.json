@@ -1,0 +1,1832 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-04T10:32:40.260552+00:00",
+  "source_root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "planned_real_calls_max": 4,
+  "process_cycles_planned": 4,
+  "provider_counter_is_exclusive": false,
+  "provider_counter_note": "Root browser work may call the same provider concurrently; only this probe INFER_START records count own calls.",
+  "validation24_accessed": false,
+  "product_source_modified": false,
+  "inputs_are_ai_synthetic": true,
+  "session_id": "aa174d2c2328489992991cd28740ab85",
+  "final_session": {
+    "version": 11,
+    "prior_pause": true,
+    "lifecycle": "CLOSED_UNRESOLVED"
+  },
+  "stored_event_count": 11,
+  "stored_task_count": 1,
+  "provider_counter_before": 1342,
+  "provider_counter_after": 1346,
+  "provider_counter_delta": 4,
+  "source_hashes_unchanged": true,
+  "db_privacy_forbidden_keys": [],
+  "finished_utc": "2026-11-04T10:32:42.883057+00:00",
+  "own_real_model_calls": 4,
+  "cycles": [
+    {
+      "cycle": 0,
+      "pid": 590739,
+      "server_log": "server_cycle_0.log",
+      "db": "restart.sqlite3",
+      "manifest": {
+        "active_policy_id": "legacy",
+        "active_question_profile": "v51-specific-candidate",
+        "app": "dmsg-arena",
+        "context_scope": "CURRENT_TEXT_ONLY",
+        "execution_manifest": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "default_policy_id": "legacy",
+          "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+          "manifest_scope": "ALLOWED_PROFILE_REGISTRY_AND_EXECUTION_SOURCES; CURRENT_REQUEST_BOUND_SEPARATELY",
+          "privacy": {
+            "network_in_evaluator": false,
+            "trace_quote": false,
+            "trace_raw_text": false,
+            "trace_url": false
+          },
+          "product_version": "5.1.0-development",
+          "profile_registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "profiles": {
+            "v50-baseline": {
+              "allowed_policy_ids": [
+                "legacy",
+                "dra"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+              "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-evidence-legacy": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "419c9464b4874d7e949382807674b74021ca1b0b7fecc892453851c10840ca81",
+              "question_contract_sha256": "983db03ee00087d2d5a1b4a850ef5725b21965039b31be86e3173ff0a89a0ba3",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-semantic-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "7f762479f1d760c52e3f4d4f460356588a45a795aa977c983d465383e3f73dd5",
+              "question_contract_sha256": "b1aca2459de01b0ec3a88d35049d247e4fdec0278f835f3913e78d21db15ec3f",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly"
+              ]
+            },
+            "v51-specific-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+              "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly",
+                "q_request_specified"
+              ]
+            }
+          },
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "question_signature": [
+            [
+              "q_action",
+              "choice",
+              "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+              "choice",
+              [
+                [
+                  "transfer",
+                  "transfer money"
+                ],
+                [
+                  "otp",
+                  "disclose one-time credential"
+                ],
+                [
+                  "remote_install",
+                  "install or grant remote access"
+                ],
+                [
+                  "personal_data",
+                  "disclose personal data"
+                ],
+                [
+                  "link",
+                  "open link"
+                ],
+                [
+                  "secrecy",
+                  "conceal from others"
+                ],
+                [
+                  "none",
+                  "no requested action"
+                ],
+                [
+                  "unclear",
+                  "unclear"
+                ]
+              ]
+            ],
+            [
+              "q_speech",
+              "choice",
+              "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+              "choice",
+              [
+                [
+                  "direct_request",
+                  "speaker directly asks listener to do it"
+                ],
+                [
+                  "reported_or_quoted",
+                  "someone reports or quotes it"
+                ],
+                [
+                  "negated_or_warning",
+                  "speaker warns not to do it"
+                ],
+                [
+                  "unclear",
+                  "insufficient context"
+                ],
+                [
+                  "informational",
+                  "speaker only states or reports information and asks for no action"
+                ]
+              ]
+            ],
+            [
+              "q_scam",
+              "noul",
+              "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud.",
+              "absent",
+              null
+            ],
+            [
+              "q_claim",
+              "noul",
+              "Does the speaker CLAIM an institutional identity, without verifying the identity?",
+              "absent",
+              null
+            ],
+            [
+              "q_pressure",
+              "noul",
+              "Does the speaker pressure urgency or secrecy?",
+              "absent",
+              null
+            ],
+            [
+              "q_risk",
+              "score",
+              "Rate advisory attention level from text alone; do not assume real-world criminality.",
+              "levels",
+              [
+                "none",
+                "low",
+                "moderate",
+                "high"
+              ]
+            ],
+            [
+              "q_evidence",
+              "noul",
+              "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_scope",
+              "choice",
+              "Classify the CURRENT speaker request to the recipient, not an action merely mentioned in a warning or quotation. A new current demand after a warning still counts. If the requested act is unspecified, choose unclear.",
+              "choice",
+              [
+                [
+                  "no_request",
+                  "no current request, only a notice, completed action, warning not to act, or report/quotation"
+                ],
+                [
+                  "other_request",
+                  "explicit current request outside money transfer, credentials/personal data, remote access, links and concealment; e.g. ordinary attendance or preparation"
+                ],
+                [
+                  "sensitive_request",
+                  "current request involving transfer/payment, credentials/personal data, remote access, a link or concealment"
+                ],
+                [
+                  "unclear",
+                  "a request is implied but its act or current directness is insufficiently specified"
+                ]
+              ]
+            ],
+            [
+              "q_current_exposure",
+              "noul",
+              "Does the current speaker ask the recipient now to disclose an OTP, login password or sensitive identifying data/images, or to install/grant remote control? Do not count a warning not to do this, a past report or a quoted example alone. A new present demand after a warning counts. Merely noting authentication is complete does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_payment_anomaly",
+              "noul",
+              "Is there BOTH a current payment or transfer demand AND an explicit unusual condition such as a changed destination account, a claimed emergency/impersonation, secrecy or blocking independent checking, a threat, guaranteed investment returns or a fee demanded before a promised benefit? Do not infer an anomaly from a routine fee, reimbursement or ordinary deadline alone. A warning or report without a new present payment demand does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_specified",
+              "noul",
+              "Does the current message explicitly specify what the listener is being asked to do now? Count everyday non-sensitive tasks as well as sensitive actions. Answer no if there is no current request, only a report or quotation, or the requested act is left as do that / follow my instructions without saying what that act is. Do not infer missing facts.",
+              "absent",
+              null
+            ]
+          ],
+          "release_selection": {
+            "android_device": "NOT_RUN",
+            "automatic_risk_release": false,
+            "default_policy_id": "legacy",
+            "default_profile_by_policy": {
+              "dra": "v50-baseline",
+              "legacy": "v51-specific-candidate"
+            },
+            "independent_human_evaluation": "NOT_RUN",
+            "product_version": "5.1.0-development",
+            "release_stage": "DEVELOPMENT_CANDIDATE",
+            "schema_version": "dmsg-v51-release-selection/1",
+            "semantic_candidate_status": "FROZEN_AI_DEVELOPMENT_CANDIDATE_NOT_HUMAN_VALIDATED"
+          },
+          "release_status": "DEVELOPMENT_CANDIDATE",
+          "runtime": {
+            "client_probability_recalibration": "NONE",
+            "domain_calibration": "NOT_ESTABLISHED",
+            "expected_temperature": 1.52,
+            "head_sha256_reference": "01ba32bd7018613b8e3da24963996dbe48950e081af36862af8deaae6d852149",
+            "model_attested": false,
+            "model_id": "trillionlabs/Zoro-1",
+            "model_repository": "trillionlabs/Zoro-1",
+            "official_revision_reference": "ab05e6c025deb0eed102f42b736dc1589848e6c9",
+            "reference_artifact_is_runtime_attestation": false,
+            "temperature_observed_by_this_evaluator": false,
+            "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+            "transport": "CALLER_CONFIGURED_TYPED_JSON; evaluator performs no I/O"
+          },
+          "schema_version": "dmsg-v51-execution-manifest/1",
+          "semantic_policy_id": "v51-semantic/4",
+          "source_hashes": {
+            "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
+            "apps/shared/v51-base-engine.js": "479c58e00bd466d3e136df1515bf4cd3ce3a64750fdaedfd144e8f99a072e1e3",
+            "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+            "apps/shared/v51-evidence.js": "51e0f10f248bb304c9989ab7691454fb317d4d74dffde7c91868db726af8cb88",
+            "apps/shared/v51-profile-data.js": "77ff1d11d1b2c46a0c58964f55d2fa0bc7c600fb0f38de12bf98e0ea96f5cdcc",
+            "apps/shared/v51-semantic-data.js": "011b7c186648258eed7878f6232ce3024a2528df8be18bdd60415e0bdfabbeb2",
+            "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+            "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
+            "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+            "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56",
+            "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+            "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
+            "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+            "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+            "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33"
+          },
+          "team_decisions": {
+            "D01": "HOLD_CURRENT_L2",
+            "D02": "HOLD_G7_ASK_HUMAN",
+            "D03": "HOLD_CLAIM_NOUL",
+            "D04": "L1_APPROVAL_NOT_ESTABLISHED"
+          },
+          "trace_schema_version": "dmsg-v51-execution-trace/1"
+        },
+        "lifecycle_states": [
+          "OPEN",
+          "CLOSED_UNRESOLVED"
+        ],
+        "observation_authority": "USER_REPORTED",
+        "question_binding": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "policy_id": "legacy",
+          "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+          "profile_id": "v51-specific-candidate",
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd"
+        },
+        "risk_release_implemented": false,
+        "schema_version": 1,
+        "version": "5.1"
+      },
+      "exit_code_after_owned_stop": -15,
+      "stopped_owned_pid": 590739
+    },
+    {
+      "cycle": 1,
+      "pid": 590746,
+      "server_log": "server_cycle_1.log",
+      "db": "restart.sqlite3",
+      "manifest": {
+        "active_policy_id": "legacy",
+        "active_question_profile": "v51-specific-candidate",
+        "app": "dmsg-arena",
+        "context_scope": "CURRENT_TEXT_ONLY",
+        "execution_manifest": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "default_policy_id": "legacy",
+          "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+          "manifest_scope": "ALLOWED_PROFILE_REGISTRY_AND_EXECUTION_SOURCES; CURRENT_REQUEST_BOUND_SEPARATELY",
+          "privacy": {
+            "network_in_evaluator": false,
+            "trace_quote": false,
+            "trace_raw_text": false,
+            "trace_url": false
+          },
+          "product_version": "5.1.0-development",
+          "profile_registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "profiles": {
+            "v50-baseline": {
+              "allowed_policy_ids": [
+                "legacy",
+                "dra"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+              "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-evidence-legacy": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "419c9464b4874d7e949382807674b74021ca1b0b7fecc892453851c10840ca81",
+              "question_contract_sha256": "983db03ee00087d2d5a1b4a850ef5725b21965039b31be86e3173ff0a89a0ba3",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-semantic-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "7f762479f1d760c52e3f4d4f460356588a45a795aa977c983d465383e3f73dd5",
+              "question_contract_sha256": "b1aca2459de01b0ec3a88d35049d247e4fdec0278f835f3913e78d21db15ec3f",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly"
+              ]
+            },
+            "v51-specific-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+              "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly",
+                "q_request_specified"
+              ]
+            }
+          },
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "question_signature": [
+            [
+              "q_action",
+              "choice",
+              "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+              "choice",
+              [
+                [
+                  "transfer",
+                  "transfer money"
+                ],
+                [
+                  "otp",
+                  "disclose one-time credential"
+                ],
+                [
+                  "remote_install",
+                  "install or grant remote access"
+                ],
+                [
+                  "personal_data",
+                  "disclose personal data"
+                ],
+                [
+                  "link",
+                  "open link"
+                ],
+                [
+                  "secrecy",
+                  "conceal from others"
+                ],
+                [
+                  "none",
+                  "no requested action"
+                ],
+                [
+                  "unclear",
+                  "unclear"
+                ]
+              ]
+            ],
+            [
+              "q_speech",
+              "choice",
+              "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+              "choice",
+              [
+                [
+                  "direct_request",
+                  "speaker directly asks listener to do it"
+                ],
+                [
+                  "reported_or_quoted",
+                  "someone reports or quotes it"
+                ],
+                [
+                  "negated_or_warning",
+                  "speaker warns not to do it"
+                ],
+                [
+                  "unclear",
+                  "insufficient context"
+                ],
+                [
+                  "informational",
+                  "speaker only states or reports information and asks for no action"
+                ]
+              ]
+            ],
+            [
+              "q_scam",
+              "noul",
+              "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud.",
+              "absent",
+              null
+            ],
+            [
+              "q_claim",
+              "noul",
+              "Does the speaker CLAIM an institutional identity, without verifying the identity?",
+              "absent",
+              null
+            ],
+            [
+              "q_pressure",
+              "noul",
+              "Does the speaker pressure urgency or secrecy?",
+              "absent",
+              null
+            ],
+            [
+              "q_risk",
+              "score",
+              "Rate advisory attention level from text alone; do not assume real-world criminality.",
+              "levels",
+              [
+                "none",
+                "low",
+                "moderate",
+                "high"
+              ]
+            ],
+            [
+              "q_evidence",
+              "noul",
+              "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_scope",
+              "choice",
+              "Classify the CURRENT speaker request to the recipient, not an action merely mentioned in a warning or quotation. A new current demand after a warning still counts. If the requested act is unspecified, choose unclear.",
+              "choice",
+              [
+                [
+                  "no_request",
+                  "no current request, only a notice, completed action, warning not to act, or report/quotation"
+                ],
+                [
+                  "other_request",
+                  "explicit current request outside money transfer, credentials/personal data, remote access, links and concealment; e.g. ordinary attendance or preparation"
+                ],
+                [
+                  "sensitive_request",
+                  "current request involving transfer/payment, credentials/personal data, remote access, a link or concealment"
+                ],
+                [
+                  "unclear",
+                  "a request is implied but its act or current directness is insufficiently specified"
+                ]
+              ]
+            ],
+            [
+              "q_current_exposure",
+              "noul",
+              "Does the current speaker ask the recipient now to disclose an OTP, login password or sensitive identifying data/images, or to install/grant remote control? Do not count a warning not to do this, a past report or a quoted example alone. A new present demand after a warning counts. Merely noting authentication is complete does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_payment_anomaly",
+              "noul",
+              "Is there BOTH a current payment or transfer demand AND an explicit unusual condition such as a changed destination account, a claimed emergency/impersonation, secrecy or blocking independent checking, a threat, guaranteed investment returns or a fee demanded before a promised benefit? Do not infer an anomaly from a routine fee, reimbursement or ordinary deadline alone. A warning or report without a new present payment demand does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_specified",
+              "noul",
+              "Does the current message explicitly specify what the listener is being asked to do now? Count everyday non-sensitive tasks as well as sensitive actions. Answer no if there is no current request, only a report or quotation, or the requested act is left as do that / follow my instructions without saying what that act is. Do not infer missing facts.",
+              "absent",
+              null
+            ]
+          ],
+          "release_selection": {
+            "android_device": "NOT_RUN",
+            "automatic_risk_release": false,
+            "default_policy_id": "legacy",
+            "default_profile_by_policy": {
+              "dra": "v50-baseline",
+              "legacy": "v51-specific-candidate"
+            },
+            "independent_human_evaluation": "NOT_RUN",
+            "product_version": "5.1.0-development",
+            "release_stage": "DEVELOPMENT_CANDIDATE",
+            "schema_version": "dmsg-v51-release-selection/1",
+            "semantic_candidate_status": "FROZEN_AI_DEVELOPMENT_CANDIDATE_NOT_HUMAN_VALIDATED"
+          },
+          "release_status": "DEVELOPMENT_CANDIDATE",
+          "runtime": {
+            "client_probability_recalibration": "NONE",
+            "domain_calibration": "NOT_ESTABLISHED",
+            "expected_temperature": 1.52,
+            "head_sha256_reference": "01ba32bd7018613b8e3da24963996dbe48950e081af36862af8deaae6d852149",
+            "model_attested": false,
+            "model_id": "trillionlabs/Zoro-1",
+            "model_repository": "trillionlabs/Zoro-1",
+            "official_revision_reference": "ab05e6c025deb0eed102f42b736dc1589848e6c9",
+            "reference_artifact_is_runtime_attestation": false,
+            "temperature_observed_by_this_evaluator": false,
+            "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+            "transport": "CALLER_CONFIGURED_TYPED_JSON; evaluator performs no I/O"
+          },
+          "schema_version": "dmsg-v51-execution-manifest/1",
+          "semantic_policy_id": "v51-semantic/4",
+          "source_hashes": {
+            "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
+            "apps/shared/v51-base-engine.js": "479c58e00bd466d3e136df1515bf4cd3ce3a64750fdaedfd144e8f99a072e1e3",
+            "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+            "apps/shared/v51-evidence.js": "51e0f10f248bb304c9989ab7691454fb317d4d74dffde7c91868db726af8cb88",
+            "apps/shared/v51-profile-data.js": "77ff1d11d1b2c46a0c58964f55d2fa0bc7c600fb0f38de12bf98e0ea96f5cdcc",
+            "apps/shared/v51-semantic-data.js": "011b7c186648258eed7878f6232ce3024a2528df8be18bdd60415e0bdfabbeb2",
+            "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+            "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
+            "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+            "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56",
+            "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+            "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
+            "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+            "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+            "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33"
+          },
+          "team_decisions": {
+            "D01": "HOLD_CURRENT_L2",
+            "D02": "HOLD_G7_ASK_HUMAN",
+            "D03": "HOLD_CLAIM_NOUL",
+            "D04": "L1_APPROVAL_NOT_ESTABLISHED"
+          },
+          "trace_schema_version": "dmsg-v51-execution-trace/1"
+        },
+        "lifecycle_states": [
+          "OPEN",
+          "CLOSED_UNRESOLVED"
+        ],
+        "observation_authority": "USER_REPORTED",
+        "question_binding": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "policy_id": "legacy",
+          "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+          "profile_id": "v51-specific-candidate",
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd"
+        },
+        "risk_release_implemented": false,
+        "schema_version": 1,
+        "version": "5.1"
+      },
+      "exit_code_after_owned_stop": -15,
+      "stopped_owned_pid": 590746
+    },
+    {
+      "cycle": 2,
+      "pid": 590757,
+      "server_log": "server_cycle_2.log",
+      "db": "restart.sqlite3",
+      "manifest": {
+        "active_policy_id": "legacy",
+        "active_question_profile": "v51-specific-candidate",
+        "app": "dmsg-arena",
+        "context_scope": "CURRENT_TEXT_ONLY",
+        "execution_manifest": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "default_policy_id": "legacy",
+          "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+          "manifest_scope": "ALLOWED_PROFILE_REGISTRY_AND_EXECUTION_SOURCES; CURRENT_REQUEST_BOUND_SEPARATELY",
+          "privacy": {
+            "network_in_evaluator": false,
+            "trace_quote": false,
+            "trace_raw_text": false,
+            "trace_url": false
+          },
+          "product_version": "5.1.0-development",
+          "profile_registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "profiles": {
+            "v50-baseline": {
+              "allowed_policy_ids": [
+                "legacy",
+                "dra"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+              "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-evidence-legacy": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "419c9464b4874d7e949382807674b74021ca1b0b7fecc892453851c10840ca81",
+              "question_contract_sha256": "983db03ee00087d2d5a1b4a850ef5725b21965039b31be86e3173ff0a89a0ba3",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-semantic-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "7f762479f1d760c52e3f4d4f460356588a45a795aa977c983d465383e3f73dd5",
+              "question_contract_sha256": "b1aca2459de01b0ec3a88d35049d247e4fdec0278f835f3913e78d21db15ec3f",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly"
+              ]
+            },
+            "v51-specific-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+              "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly",
+                "q_request_specified"
+              ]
+            }
+          },
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "question_signature": [
+            [
+              "q_action",
+              "choice",
+              "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+              "choice",
+              [
+                [
+                  "transfer",
+                  "transfer money"
+                ],
+                [
+                  "otp",
+                  "disclose one-time credential"
+                ],
+                [
+                  "remote_install",
+                  "install or grant remote access"
+                ],
+                [
+                  "personal_data",
+                  "disclose personal data"
+                ],
+                [
+                  "link",
+                  "open link"
+                ],
+                [
+                  "secrecy",
+                  "conceal from others"
+                ],
+                [
+                  "none",
+                  "no requested action"
+                ],
+                [
+                  "unclear",
+                  "unclear"
+                ]
+              ]
+            ],
+            [
+              "q_speech",
+              "choice",
+              "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+              "choice",
+              [
+                [
+                  "direct_request",
+                  "speaker directly asks listener to do it"
+                ],
+                [
+                  "reported_or_quoted",
+                  "someone reports or quotes it"
+                ],
+                [
+                  "negated_or_warning",
+                  "speaker warns not to do it"
+                ],
+                [
+                  "unclear",
+                  "insufficient context"
+                ],
+                [
+                  "informational",
+                  "speaker only states or reports information and asks for no action"
+                ]
+              ]
+            ],
+            [
+              "q_scam",
+              "noul",
+              "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud.",
+              "absent",
+              null
+            ],
+            [
+              "q_claim",
+              "noul",
+              "Does the speaker CLAIM an institutional identity, without verifying the identity?",
+              "absent",
+              null
+            ],
+            [
+              "q_pressure",
+              "noul",
+              "Does the speaker pressure urgency or secrecy?",
+              "absent",
+              null
+            ],
+            [
+              "q_risk",
+              "score",
+              "Rate advisory attention level from text alone; do not assume real-world criminality.",
+              "levels",
+              [
+                "none",
+                "low",
+                "moderate",
+                "high"
+              ]
+            ],
+            [
+              "q_evidence",
+              "noul",
+              "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_scope",
+              "choice",
+              "Classify the CURRENT speaker request to the recipient, not an action merely mentioned in a warning or quotation. A new current demand after a warning still counts. If the requested act is unspecified, choose unclear.",
+              "choice",
+              [
+                [
+                  "no_request",
+                  "no current request, only a notice, completed action, warning not to act, or report/quotation"
+                ],
+                [
+                  "other_request",
+                  "explicit current request outside money transfer, credentials/personal data, remote access, links and concealment; e.g. ordinary attendance or preparation"
+                ],
+                [
+                  "sensitive_request",
+                  "current request involving transfer/payment, credentials/personal data, remote access, a link or concealment"
+                ],
+                [
+                  "unclear",
+                  "a request is implied but its act or current directness is insufficiently specified"
+                ]
+              ]
+            ],
+            [
+              "q_current_exposure",
+              "noul",
+              "Does the current speaker ask the recipient now to disclose an OTP, login password or sensitive identifying data/images, or to install/grant remote control? Do not count a warning not to do this, a past report or a quoted example alone. A new present demand after a warning counts. Merely noting authentication is complete does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_payment_anomaly",
+              "noul",
+              "Is there BOTH a current payment or transfer demand AND an explicit unusual condition such as a changed destination account, a claimed emergency/impersonation, secrecy or blocking independent checking, a threat, guaranteed investment returns or a fee demanded before a promised benefit? Do not infer an anomaly from a routine fee, reimbursement or ordinary deadline alone. A warning or report without a new present payment demand does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_specified",
+              "noul",
+              "Does the current message explicitly specify what the listener is being asked to do now? Count everyday non-sensitive tasks as well as sensitive actions. Answer no if there is no current request, only a report or quotation, or the requested act is left as do that / follow my instructions without saying what that act is. Do not infer missing facts.",
+              "absent",
+              null
+            ]
+          ],
+          "release_selection": {
+            "android_device": "NOT_RUN",
+            "automatic_risk_release": false,
+            "default_policy_id": "legacy",
+            "default_profile_by_policy": {
+              "dra": "v50-baseline",
+              "legacy": "v51-specific-candidate"
+            },
+            "independent_human_evaluation": "NOT_RUN",
+            "product_version": "5.1.0-development",
+            "release_stage": "DEVELOPMENT_CANDIDATE",
+            "schema_version": "dmsg-v51-release-selection/1",
+            "semantic_candidate_status": "FROZEN_AI_DEVELOPMENT_CANDIDATE_NOT_HUMAN_VALIDATED"
+          },
+          "release_status": "DEVELOPMENT_CANDIDATE",
+          "runtime": {
+            "client_probability_recalibration": "NONE",
+            "domain_calibration": "NOT_ESTABLISHED",
+            "expected_temperature": 1.52,
+            "head_sha256_reference": "01ba32bd7018613b8e3da24963996dbe48950e081af36862af8deaae6d852149",
+            "model_attested": false,
+            "model_id": "trillionlabs/Zoro-1",
+            "model_repository": "trillionlabs/Zoro-1",
+            "official_revision_reference": "ab05e6c025deb0eed102f42b736dc1589848e6c9",
+            "reference_artifact_is_runtime_attestation": false,
+            "temperature_observed_by_this_evaluator": false,
+            "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+            "transport": "CALLER_CONFIGURED_TYPED_JSON; evaluator performs no I/O"
+          },
+          "schema_version": "dmsg-v51-execution-manifest/1",
+          "semantic_policy_id": "v51-semantic/4",
+          "source_hashes": {
+            "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
+            "apps/shared/v51-base-engine.js": "479c58e00bd466d3e136df1515bf4cd3ce3a64750fdaedfd144e8f99a072e1e3",
+            "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+            "apps/shared/v51-evidence.js": "51e0f10f248bb304c9989ab7691454fb317d4d74dffde7c91868db726af8cb88",
+            "apps/shared/v51-profile-data.js": "77ff1d11d1b2c46a0c58964f55d2fa0bc7c600fb0f38de12bf98e0ea96f5cdcc",
+            "apps/shared/v51-semantic-data.js": "011b7c186648258eed7878f6232ce3024a2528df8be18bdd60415e0bdfabbeb2",
+            "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+            "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
+            "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+            "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56",
+            "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+            "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
+            "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+            "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+            "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33"
+          },
+          "team_decisions": {
+            "D01": "HOLD_CURRENT_L2",
+            "D02": "HOLD_G7_ASK_HUMAN",
+            "D03": "HOLD_CLAIM_NOUL",
+            "D04": "L1_APPROVAL_NOT_ESTABLISHED"
+          },
+          "trace_schema_version": "dmsg-v51-execution-trace/1"
+        },
+        "lifecycle_states": [
+          "OPEN",
+          "CLOSED_UNRESOLVED"
+        ],
+        "observation_authority": "USER_REPORTED",
+        "question_binding": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "policy_id": "legacy",
+          "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+          "profile_id": "v51-specific-candidate",
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd"
+        },
+        "risk_release_implemented": false,
+        "schema_version": 1,
+        "version": "5.1"
+      },
+      "exit_code_after_owned_stop": -15,
+      "stopped_owned_pid": 590757
+    },
+    {
+      "cycle": 3,
+      "pid": 590766,
+      "server_log": "server_cycle_3.log",
+      "db": "restart.sqlite3",
+      "manifest": {
+        "active_policy_id": "legacy",
+        "active_question_profile": "v51-specific-candidate",
+        "app": "dmsg-arena",
+        "context_scope": "CURRENT_TEXT_ONLY",
+        "execution_manifest": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "default_policy_id": "legacy",
+          "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+          "manifest_scope": "ALLOWED_PROFILE_REGISTRY_AND_EXECUTION_SOURCES; CURRENT_REQUEST_BOUND_SEPARATELY",
+          "privacy": {
+            "network_in_evaluator": false,
+            "trace_quote": false,
+            "trace_raw_text": false,
+            "trace_url": false
+          },
+          "product_version": "5.1.0-development",
+          "profile_registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+          "profiles": {
+            "v50-baseline": {
+              "allowed_policy_ids": [
+                "legacy",
+                "dra"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "3a0d4a80c67111193ad58802a4d4d7b4e6901213d8302092729067a8524c7b42",
+              "question_contract_sha256": "b452bd115e2d01ab3b82e119e2df44fa0c381d9d128f899e9ff5ed2c634bd3bd",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-evidence-legacy": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "419c9464b4874d7e949382807674b74021ca1b0b7fecc892453851c10840ca81",
+              "question_contract_sha256": "983db03ee00087d2d5a1b4a850ef5725b21965039b31be86e3173ff0a89a0ba3",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure"
+              ]
+            },
+            "v51-semantic-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "7f762479f1d760c52e3f4d4f460356588a45a795aa977c983d465383e3f73dd5",
+              "question_contract_sha256": "b1aca2459de01b0ec3a88d35049d247e4fdec0278f835f3913e78d21db15ec3f",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly"
+              ]
+            },
+            "v51-specific-candidate": {
+              "allowed_policy_ids": [
+                "legacy"
+              ],
+              "optional_questions": [
+                "q_claim",
+                "q_evidence",
+                "q_risk"
+              ],
+              "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+              "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+              "required_questions": [
+                "q_action",
+                "q_speech",
+                "q_scam",
+                "q_pressure",
+                "q_request_scope",
+                "q_current_exposure",
+                "q_payment_anomaly",
+                "q_request_specified"
+              ]
+            }
+          },
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "question_signature": [
+            [
+              "q_action",
+              "choice",
+              "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+              "choice",
+              [
+                [
+                  "transfer",
+                  "transfer money"
+                ],
+                [
+                  "otp",
+                  "disclose one-time credential"
+                ],
+                [
+                  "remote_install",
+                  "install or grant remote access"
+                ],
+                [
+                  "personal_data",
+                  "disclose personal data"
+                ],
+                [
+                  "link",
+                  "open link"
+                ],
+                [
+                  "secrecy",
+                  "conceal from others"
+                ],
+                [
+                  "none",
+                  "no requested action"
+                ],
+                [
+                  "unclear",
+                  "unclear"
+                ]
+              ]
+            ],
+            [
+              "q_speech",
+              "choice",
+              "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+              "choice",
+              [
+                [
+                  "direct_request",
+                  "speaker directly asks listener to do it"
+                ],
+                [
+                  "reported_or_quoted",
+                  "someone reports or quotes it"
+                ],
+                [
+                  "negated_or_warning",
+                  "speaker warns not to do it"
+                ],
+                [
+                  "unclear",
+                  "insufficient context"
+                ],
+                [
+                  "informational",
+                  "speaker only states or reports information and asks for no action"
+                ]
+              ]
+            ],
+            [
+              "q_scam",
+              "noul",
+              "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud.",
+              "absent",
+              null
+            ],
+            [
+              "q_claim",
+              "noul",
+              "Does the speaker CLAIM an institutional identity, without verifying the identity?",
+              "absent",
+              null
+            ],
+            [
+              "q_pressure",
+              "noul",
+              "Does the speaker pressure urgency or secrecy?",
+              "absent",
+              null
+            ],
+            [
+              "q_risk",
+              "score",
+              "Rate advisory attention level from text alone; do not assume real-world criminality.",
+              "levels",
+              [
+                "none",
+                "low",
+                "moderate",
+                "high"
+              ]
+            ],
+            [
+              "q_evidence",
+              "noul",
+              "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_scope",
+              "choice",
+              "Classify the CURRENT speaker request to the recipient, not an action merely mentioned in a warning or quotation. A new current demand after a warning still counts. If the requested act is unspecified, choose unclear.",
+              "choice",
+              [
+                [
+                  "no_request",
+                  "no current request, only a notice, completed action, warning not to act, or report/quotation"
+                ],
+                [
+                  "other_request",
+                  "explicit current request outside money transfer, credentials/personal data, remote access, links and concealment; e.g. ordinary attendance or preparation"
+                ],
+                [
+                  "sensitive_request",
+                  "current request involving transfer/payment, credentials/personal data, remote access, a link or concealment"
+                ],
+                [
+                  "unclear",
+                  "a request is implied but its act or current directness is insufficiently specified"
+                ]
+              ]
+            ],
+            [
+              "q_current_exposure",
+              "noul",
+              "Does the current speaker ask the recipient now to disclose an OTP, login password or sensitive identifying data/images, or to install/grant remote control? Do not count a warning not to do this, a past report or a quoted example alone. A new present demand after a warning counts. Merely noting authentication is complete does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_payment_anomaly",
+              "noul",
+              "Is there BOTH a current payment or transfer demand AND an explicit unusual condition such as a changed destination account, a claimed emergency/impersonation, secrecy or blocking independent checking, a threat, guaranteed investment returns or a fee demanded before a promised benefit? Do not infer an anomaly from a routine fee, reimbursement or ordinary deadline alone. A warning or report without a new present payment demand does not count.",
+              "absent",
+              null
+            ],
+            [
+              "q_request_specified",
+              "noul",
+              "Does the current message explicitly specify what the listener is being asked to do now? Count everyday non-sensitive tasks as well as sensitive actions. Answer no if there is no current request, only a report or quotation, or the requested act is left as do that / follow my instructions without saying what that act is. Do not infer missing facts.",
+              "absent",
+              null
+            ]
+          ],
+          "release_selection": {
+            "android_device": "NOT_RUN",
+            "automatic_risk_release": false,
+            "default_policy_id": "legacy",
+            "default_profile_by_policy": {
+              "dra": "v50-baseline",
+              "legacy": "v51-specific-candidate"
+            },
+            "independent_human_evaluation": "NOT_RUN",
+            "product_version": "5.1.0-development",
+            "release_stage": "DEVELOPMENT_CANDIDATE",
+            "schema_version": "dmsg-v51-release-selection/1",
+            "semantic_candidate_status": "FROZEN_AI_DEVELOPMENT_CANDIDATE_NOT_HUMAN_VALIDATED"
+          },
+          "release_status": "DEVELOPMENT_CANDIDATE",
+          "runtime": {
+            "client_probability_recalibration": "NONE",
+            "domain_calibration": "NOT_ESTABLISHED",
+            "expected_temperature": 1.52,
+            "head_sha256_reference": "01ba32bd7018613b8e3da24963996dbe48950e081af36862af8deaae6d852149",
+            "model_attested": false,
+            "model_id": "trillionlabs/Zoro-1",
+            "model_repository": "trillionlabs/Zoro-1",
+            "official_revision_reference": "ab05e6c025deb0eed102f42b736dc1589848e6c9",
+            "reference_artifact_is_runtime_attestation": false,
+            "temperature_observed_by_this_evaluator": false,
+            "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+            "transport": "CALLER_CONFIGURED_TYPED_JSON; evaluator performs no I/O"
+          },
+          "schema_version": "dmsg-v51-execution-manifest/1",
+          "semantic_policy_id": "v51-semantic/4",
+          "source_hashes": {
+            "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
+            "apps/shared/v51-base-engine.js": "479c58e00bd466d3e136df1515bf4cd3ce3a64750fdaedfd144e8f99a072e1e3",
+            "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+            "apps/shared/v51-evidence.js": "51e0f10f248bb304c9989ab7691454fb317d4d74dffde7c91868db726af8cb88",
+            "apps/shared/v51-profile-data.js": "77ff1d11d1b2c46a0c58964f55d2fa0bc7c600fb0f38de12bf98e0ea96f5cdcc",
+            "apps/shared/v51-semantic-data.js": "011b7c186648258eed7878f6232ce3024a2528df8be18bdd60415e0bdfabbeb2",
+            "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+            "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
+            "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+            "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56",
+            "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+            "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
+            "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+            "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+            "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33"
+          },
+          "team_decisions": {
+            "D01": "HOLD_CURRENT_L2",
+            "D02": "HOLD_G7_ASK_HUMAN",
+            "D03": "HOLD_CLAIM_NOUL",
+            "D04": "L1_APPROVAL_NOT_ESTABLISHED"
+          },
+          "trace_schema_version": "dmsg-v51-execution-trace/1"
+        },
+        "lifecycle_states": [
+          "OPEN",
+          "CLOSED_UNRESOLVED"
+        ],
+        "observation_authority": "USER_REPORTED",
+        "question_binding": {
+          "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+          "policy_id": "legacy",
+          "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+          "profile_id": "v51-specific-candidate",
+          "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+          "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+          "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd"
+        },
+        "risk_release_implemented": false,
+        "schema_version": 1,
+        "version": "5.1"
+      },
+      "exit_code_after_owned_stop": -15,
+      "stopped_owned_pid": 590766
+    }
+  ],
+  "assertions": [
+    {
+      "check": "provider_temperature_1_52",
+      "pass": true
+    },
+    {
+      "check": "port_8783_free_before_cycle_0",
+      "pass": true
+    },
+    {
+      "check": "manifest_http_0",
+      "pass": true
+    },
+    {
+      "check": "selected_eleven_questions_cycle_0",
+      "pass": true
+    },
+    {
+      "check": "start_new_session",
+      "pass": true
+    },
+    {
+      "check": "one_actual_sensitive_call",
+      "pass": true
+    },
+    {
+      "check": "sensitive_current_and_session_pause",
+      "pass": true
+    },
+    {
+      "check": "sensitive_profile_binding",
+      "pass": true
+    },
+    {
+      "check": "close_0_http",
+      "pass": true
+    },
+    {
+      "check": "close_0_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_risk_0",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_0_http",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_0_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_error_0",
+      "pass": true
+    },
+    {
+      "check": "initial_retry_while_closed_http",
+      "pass": true
+    },
+    {
+      "check": "initial_retry_while_closed_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "initial_retry_while_closed_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "port_8783_free_before_cycle_1",
+      "pass": true
+    },
+    {
+      "check": "manifest_http_1",
+      "pass": true
+    },
+    {
+      "check": "selected_eleven_questions_cycle_1",
+      "pass": true
+    },
+    {
+      "check": "persist_closed_risk_cycle_1",
+      "pass": true
+    },
+    {
+      "check": "persist_same_task_cycle_1",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_1_http",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_1_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_1_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "reopen_1_http",
+      "pass": true
+    },
+    {
+      "check": "reopen_1_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "reopen_does_not_clear_1",
+      "pass": true
+    },
+    {
+      "check": "one_actual_ordinary_call_1",
+      "pass": true
+    },
+    {
+      "check": "current_nss_session_hold_1",
+      "pass": true
+    },
+    {
+      "check": "risk_retained_1",
+      "pass": true
+    },
+    {
+      "check": "reported_task_retained_without_duplicate_1",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_1_http",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_1_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_1_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "close_1_http",
+      "pass": true
+    },
+    {
+      "check": "close_1_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_risk_1",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_1_http",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_1_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_error_1",
+      "pass": true
+    },
+    {
+      "check": "port_8783_free_before_cycle_2",
+      "pass": true
+    },
+    {
+      "check": "manifest_http_2",
+      "pass": true
+    },
+    {
+      "check": "selected_eleven_questions_cycle_2",
+      "pass": true
+    },
+    {
+      "check": "persist_closed_risk_cycle_2",
+      "pass": true
+    },
+    {
+      "check": "persist_same_task_cycle_2",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_2_http",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_2_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_2_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "reopen_2_http",
+      "pass": true
+    },
+    {
+      "check": "reopen_2_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "reopen_does_not_clear_2",
+      "pass": true
+    },
+    {
+      "check": "one_actual_ordinary_call_2",
+      "pass": true
+    },
+    {
+      "check": "current_nss_session_hold_2",
+      "pass": true
+    },
+    {
+      "check": "risk_retained_2",
+      "pass": true
+    },
+    {
+      "check": "reported_task_retained_without_duplicate_2",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_2_http",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_2_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_2_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "close_2_http",
+      "pass": true
+    },
+    {
+      "check": "close_2_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_risk_2",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_2_http",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_2_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_error_2",
+      "pass": true
+    },
+    {
+      "check": "port_8783_free_before_cycle_3",
+      "pass": true
+    },
+    {
+      "check": "manifest_http_3",
+      "pass": true
+    },
+    {
+      "check": "selected_eleven_questions_cycle_3",
+      "pass": true
+    },
+    {
+      "check": "persist_closed_risk_cycle_3",
+      "pass": true
+    },
+    {
+      "check": "persist_same_task_cycle_3",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_3_http",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_3_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "cross_restart_original_retry_3_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "reopen_3_http",
+      "pass": true
+    },
+    {
+      "check": "reopen_3_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "reopen_does_not_clear_3",
+      "pass": true
+    },
+    {
+      "check": "one_actual_ordinary_call_3",
+      "pass": true
+    },
+    {
+      "check": "current_nss_session_hold_3",
+      "pass": true
+    },
+    {
+      "check": "risk_retained_3",
+      "pass": true
+    },
+    {
+      "check": "reported_task_retained_without_duplicate_3",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_3_http",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_3_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "same_response_retry_3_same_recorded_result",
+      "pass": true
+    },
+    {
+      "check": "close_3_http",
+      "pass": true
+    },
+    {
+      "check": "close_3_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_risk_3",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_3_http",
+      "pass": true
+    },
+    {
+      "check": "closed_evaluation_3_no_extra_model_call",
+      "pass": true
+    },
+    {
+      "check": "closed_error_3",
+      "pass": true
+    },
+    {
+      "check": "exact_four_own_actual_model_calls",
+      "pass": true
+    },
+    {
+      "check": "four_successful_typed_returns",
+      "pass": true
+    },
+    {
+      "check": "every_actual_call_used_eleven_question_payload",
+      "pass": true
+    },
+    {
+      "check": "model_echo_matches_not_attestation",
+      "pass": true
+    },
+    {
+      "check": "db_events_no_synthetic_input_text",
+      "pass": true
+    },
+    {
+      "check": "db_events_no_raw_or_quote_keys",
+      "pass": true
+    },
+    {
+      "check": "sqlite_bytes_do_not_contain_inputs",
+      "pass": true
+    },
+    {
+      "check": "final_session_version_risk_lifecycle",
+      "pass": true
+    },
+    {
+      "check": "duplicate_retries_create_no_events_or_tasks",
+      "pass": true
+    },
+    {
+      "check": "reported_observation_persists_across_three_restarts",
+      "pass": true
+    }
+  ],
+  "stopped_only_owned_popen": true,
+  "port": 8783,
+  "final_port_closed": true,
+  "artifacts": {
+    "runtime_before.json": {
+      "sha256": "ba01acee0b7e625af673c77185eb857e6ff0cbc8e9014bbbbeac9e8e34f54f4b",
+      "bytes": 1823
+    },
+    "provider_calls.jsonl": {
+      "sha256": "1d7501378f21e1d5b1135d252221848f930cf858055705b4fdcf8889cadda03d",
+      "bytes": 24575
+    },
+    "protocol.json": {
+      "sha256": "f96fde2bb66104aea0399bc72233a81dacf307a2e9172bbe6bda8bd1e868ebdb",
+      "bytes": 1928
+    },
+    "server_cycle_0.log": {
+      "sha256": "bb29c2080fe1dd1fc12daa829b7b7f094c59893eedcef7fff7467e38f5d8f58c",
+      "bytes": 67
+    },
+    "server_cycle_3.log": {
+      "sha256": "bb29c2080fe1dd1fc12daa829b7b7f094c59893eedcef7fff7467e38f5d8f58c",
+      "bytes": 67
+    },
+    "http_exchange.jsonl": {
+      "sha256": "c52a7120a82d3c943cbb35636e1cce944a2879c539b6aa6b32df2970a23b2bc5",
+      "bytes": 298785
+    },
+    "server_cycle_1.log": {
+      "sha256": "bb29c2080fe1dd1fc12daa829b7b7f094c59893eedcef7fff7467e38f5d8f58c",
+      "bytes": 67
+    },
+    "server_probe.py": {
+      "sha256": "2b39b7efd017b49deef327188326196e1e0fd1e334802658ede7741ff028e6ba",
+      "bytes": 1480
+    },
+    "restart.sqlite3": {
+      "sha256": "15a55ced813a60fa7a90d146d8dfba6958f26a7e7604e7395a7fcbe6bbb36ee8",
+      "bytes": 102400
+    },
+    "run_restart.py": {
+      "sha256": "58af0f295687ec42f6466dd58e9717d5913223db33b93a1c26f936a41bfb86ab",
+      "bytes": 12164
+    },
+    "server_cycle_2.log": {
+      "sha256": "bb29c2080fe1dd1fc12daa829b7b7f094c59893eedcef7fff7467e38f5d8f58c",
+      "bytes": 67
+    },
+    "runtime_after.json": {
+      "sha256": "d3e39bdc6bc80ca8ef3f4408b111152c7ef7f72a6e63b17792d5d84abb1b36d1",
+      "bytes": 1823
+    }
+  }
+}

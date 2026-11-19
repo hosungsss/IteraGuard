@@ -1,0 +1,6 @@
+{
+  "scope": "PRIOR_RELEASE_EVIDENCE_NOT_CURRENT_DOCUMENT_PACKAGE_VERIFICATION",
+  "archive_sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+  "new_model_calls_during_organization": 0,
+  "note": "Current documentation-package verification is outside source tree in the organization receipt."
+}

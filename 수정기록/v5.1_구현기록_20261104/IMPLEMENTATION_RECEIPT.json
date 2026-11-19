@@ -1,0 +1,123 @@
+{
+  "version": "5.1",
+  "stage": "DEVELOPMENT_CANDIDATE",
+  "status": "PASS_SCOPED_DEVELOPMENT_DELIVERY",
+  "completed_utc": "2026-11-04T10:52:10.135598+00:00",
+  "archive": {
+    "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/IteraGuard_DoubtMeter_v5_1_FULL_CANDIDATE.zip",
+    "sha256": "72a59c5d9399a7c80e9b228c1defb992f9a1ea83465d84c12675e0a045d3624f",
+    "bytes": 137162354,
+    "files": 764
+  },
+  "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "source_manifest": {
+    "sha256": "37aad915ade15e546da2c4ba9aef718dda19a1b07a2756673a0041b9df37bba0",
+    "members": 763,
+    "reverified_after_pointer_update": true,
+    "markdown_files": 106
+  },
+  "execution_manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+  "final_verification": {
+    "status": "PASS",
+    "receipt": "verification/receipt.json",
+    "sha256": "f36935b7c9a6542e13888ebc4e6c3fb94568bfad12a4db9659186fd0efe4f7d0",
+    "full_source_extracted_members_match": true,
+    "checks_exit0": 6,
+    "no_actual_model_calls": true,
+    "initial_failed_verifier_preserved": "verification/attempt1_unsafe_fixture",
+    "declared_adversarial_fixture": "tests_data/apk_corpus/zipslip.apk; exact baseline hash + CORPUS/A06 + complete member hashes; internal paths never extracted/executed; FULL path restrictions unchanged"
+  },
+  "distribution": {
+    "evidence": "../../[v5.1] IteraGuard_DoubtMeter/internal/evidence/v51/distribution_build.json",
+    "assets": 32,
+    "source_pwa_apk_desktop": "PASS",
+    "apk_sha256": "681c1a8a9cea3ed725166aa929cbc932109e252950a1a405064901c30b09e9d0",
+    "apk_independent_signature_and_tamper": "PASS",
+    "android_version_code": 51,
+    "android_version_name": "5.1",
+    "permissions": []
+  },
+  "latest_pointers": {
+    "status": "PASS",
+    "checks": [
+      {
+        "path": "/home/ljmpc12/Documents/hackton/LATEST_VERSION.json",
+        "sha256": "ca73a7d4f57c21bef7d5c24367edf2bdce09512a0809f8670c581da1b0507f1b",
+        "source_matches": true,
+        "archive_hash_matches": true
+      },
+      {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/LATEST_VERSION.json",
+        "sha256": "bc018911efea3cf7a7808fb2ddd5d2f3499b3fb9a56505272e621c5eaa090c67",
+        "source_matches": true,
+        "archive_hash_matches": true
+      }
+    ],
+    "collection_readme_sha256": "1517ce4e74f5a3d9793373f993244112e73a57e4ae37add44ed7805c622a3960"
+  },
+  "judgment_quality": "PARTIALLY_IMPROVED_NOT_RESOLVED",
+  "locked_validation24": {
+    "expected_match_before": 7,
+    "expected_match_after": 17,
+    "unnecessary_benign_ask_before": 11,
+    "unnecessary_benign_ask_after": 5,
+    "required_pause_missed_before": 6,
+    "required_pause_missed_after": 2,
+    "new_risky_or_unknown_clear": 0,
+    "independent_human": false
+  },
+  "no_new_regression_on_five_datasets": true,
+  "remaining_required_pause_misses": {
+    "development": 3,
+    "locked24": 2
+  },
+  "existing_benign_pause_retained": 1,
+  "evidence_display": {
+    "status": "PARTIAL",
+    "nonempty_cases": 157,
+    "cases_with_display": 48,
+    "displayed_clauses": 52,
+    "candidate_clauses": 163,
+    "offset_quote_valid": 52,
+    "independent_semantic_quality": "NOT_RUN"
+  },
+  "actual_model_calls": {
+    "experiment_actual_calls": 544,
+    "runtime_actual_calls": 13,
+    "total_new_actual_calls": 557,
+    "provider_original_counter": 792,
+    "provider_final_counter": 1349,
+    "provider_total_delta": 557,
+    "schema_provider_errors_in_registered_experiments": 0,
+    "human_independent_evaluation": "NOT_RUN",
+    "replays_are_new_model_calls": false
+  },
+  "checks": {
+    "python_pass": 179,
+    "optional_python_skip": 2,
+    "node_ui_transport_session_pass": 59,
+    "evidence_js_checks_pass": 18,
+    "python_js_policy_and_full_object_comparisons": 628,
+    "actual_response_evaluations": 314
+  },
+  "human_independent_evaluation": "NOT_RUN_AI_DATA_ONLY",
+  "physical_android": "NOT_RUN",
+  "physical_ios": "NOT_RUN",
+  "model_cold_start": "NOT_RUN",
+  "load_concurrency": "NOT_RUN",
+  "desktop_cross_compiled_binary": "NOT_RUN_BUN_SOURCE_HOST_VERIFIED",
+  "baseline_preservation": {
+    "source_manifest_members": 485,
+    "status": "PASS",
+    "archive_sha256": "6f13ae0ecfdab0801a4d2e242f744bbdeb9335c4abf3478a01f324d5daff99d2",
+    "navigation_originals": "previous_navigation"
+  },
+  "team_decisions": "L2/G7/q_claim/L1 unchanged pending specific approval",
+  "services": {
+    "arena": "http://127.0.0.1:8781/",
+    "single_text": "http://127.0.0.1:8782/",
+    "previous_single_text8770": "PRESERVED"
+  },
+  "self_hash_policy": "FULL hash is attested outside archive; this final receipt is not inside the hashed FULL",
+  "sensitive_delivery_checks": "No HF token, private PEM or raw DB found; inherited debug key held outside source/delivery; Zoro weights not bundled; existing on-device NLP assets bundled"
+}

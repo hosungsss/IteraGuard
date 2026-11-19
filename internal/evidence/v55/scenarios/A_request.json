@@ -1,0 +1,59 @@
+{
+  "schema": "iteraguard-evidence/1",
+  "package_version": "5.5",
+  "created_utc": "2026-11-19T05:21:25.946154+00:00",
+  "session_id": "53f0006e20c049709fed75ee8a64d136",
+  "context_scope": "CURRENT_TEXT_ONLY",
+  "raw_input_included": false,
+  "model_identity_verified": false,
+  "state_version": 1,
+  "lifecycle": "OPEN",
+  "prior_pause": true,
+  "tasks": [
+    {
+      "id": "4a9e908f102043a8b553ec23e2a71944",
+      "type": "PAUSE_AND_INDEPENDENT_CHECK",
+      "status": "OPEN",
+      "observation": "NOT_CHECKED"
+    }
+  ],
+  "events": [
+    {
+      "event_type": "EVALUATE",
+      "request_id": "A_request_0",
+      "version": 1,
+      "current_turn_action": "PAUSE_AND_VERIFY",
+      "current_turn_reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "action": "PAUSE_AND_VERIFY",
+      "reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "prior_pause": true,
+      "model_status": "VALID",
+      "mode": "MODEL_RESPONSE_UNATTESTED",
+      "latency_ms": 0.0,
+      "provenance": {
+        "schema": "iteraguard-provenance/1",
+        "received_utc": "2026-11-19T05:21:25.624609+00:00",
+        "execution_source": "CONTROLLED_CLIENT",
+        "model_identity_verified": false,
+        "response_sha256": "7e8f8644d88c5dd5ad7b8d3fbfc01e04800551d78f1e354a3cd12b0be9c0d587",
+        "pipeline_ms": 286.533,
+        "profile_id": "v51-specific-candidate",
+        "policy_id": "legacy",
+        "execution_manifest": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5",
+        "input_source": "USER_SUPPLIED_SYNTHETIC",
+        "npu_execution_verified": false
+      },
+      "task_disposition": "OPEN_TASK_AVAILABLE",
+      "next_task": {
+        "id": "4a9e908f102043a8b553ec23e2a71944",
+        "type": "PAUSE_AND_INDEPENDENT_CHECK",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      }
+    }
+  ],
+  "integrity_scope": "UNSIGNED_LOCAL_DIGEST_NOT_AUTHENTICATION",
+  "scenario": "A_request",
+  "requested_mode": "controlled",
+  "sha256": "af7353a7795c7af5905f63d02da3027e3015866df4acca584962f9d234587f96"
+}

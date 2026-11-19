@@ -1,0 +1,20 @@
+{
+  "version": "5.6-path-registry",
+  "baseline_sha256": "13fef744c3c6a5b36a31ba01654000f8839c24e0c4988e9af8def26244b4e445",
+  "baseline_source": "[v4.8] IteraGuard_DoubtMeter/internal/evidence/v47/BASELINE_V46.json",
+  "note": "Historical frozen baseline preserved; v4.9 additions plus v5 product/contract references.; reconciled existing v5.1 reference paths plus additive v5.2 lab reference on 2026-11-10.",
+  "additions": [
+    "references/CHANGELOG.md",
+    "references/PRD_v49.md",
+    "references/SYSTEM_PROMPTING_v49.md",
+    "references/PRD_v50.md",
+    "references/SYSTEM_PROMPTING_v50.md",
+    "references/PRD_v51.md",
+    "references/SYSTEM_PROMPTING_v51.md",
+    "references/Decision_Sandbox_v52.md",
+    "references/PRD_v54.md",
+    "references/SYSTEM_PROMPTING_v54.md",
+    "references/PRD_v56.md",
+    "references/SYSTEM_PROMPTING_v56.md"
+  ]
+}

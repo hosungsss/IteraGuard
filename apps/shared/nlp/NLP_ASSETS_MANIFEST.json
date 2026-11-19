@@ -1,0 +1,20 @@
+{
+ "weights_sha256": "5430e71add6c5b2f5aeb34371c1e662d37d9fb27ce78c0b8b162ba7f37269b36",
+ "weights_bytes": 14654232,
+ "vocab_sha256": "6e886927dfcecd22029b1ba80c10a1374740259c1067fc3a28d964b7ae2d55a7",
+ "heads_sha256": "2a1aa9e8945b2dc78ae301ba727f9640016976b5c9189757e3dc623feac67f39",
+ "files": {
+  "dmsg-nlp-weights.js": {
+   "bytes": 19539006,
+   "sha256": "0020eeb0da6a4293bb6b13f5eba129d39f41bbee79975b367faf9f8ec249dfa4"
+  },
+  "dmsg-nlp-vocab.js": {
+   "bytes": 368351,
+   "sha256": "75d31001ceeedadff9bde3fba2664ac6ac233dac94d31ee4b6cfb849df958d57"
+  },
+  "dmsg-nlp-heads.js": {
+   "bytes": 613287,
+   "sha256": "e2ee3f84951e9914e4f927b42f69d83e7dae917a3d8008bf072122e320006bbf"
+  }
+ }
+}

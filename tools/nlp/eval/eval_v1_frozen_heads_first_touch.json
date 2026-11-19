@@ -1,0 +1,1032 @@
+{
+ "feature_seconds": 40.1,
+ "sizes": {
+  "train": 6430,
+  "calib": 717,
+  "locked_frames": 297,
+  "locked_handwritten": 45
+ },
+ "speech_head": {
+  "C": 0.05,
+  "T": 1.1402016844582339
+ },
+ "action_head": {
+  "C": 0.05,
+  "T": 1.3798087085399644
+ },
+ "calib": {
+  "n": 717,
+  "speech_acc": 0.855,
+  "speech_macro_f1": 0.862,
+  "speech_ece": 0.022,
+  "action_acc": 0.93,
+  "action_macro_f1": 0.702,
+  "action_ece": 0.019,
+  "speech_confusion": {
+   "labels": [
+    "DIRECT_REQUEST",
+    "INDIRECT_REQUEST",
+    "WARNING",
+    "QUOTATION",
+    "INFORMATION"
+   ],
+   "matrix": [
+    [
+     237,
+     20,
+     4,
+     0,
+     15
+    ],
+    [
+     11,
+     91,
+     0,
+     0,
+     8
+    ],
+    [
+     0,
+     0,
+     21,
+     0,
+     5
+    ],
+    [
+     0,
+     0,
+     0,
+     28,
+     0
+    ],
+    [
+     14,
+     27,
+     0,
+     0,
+     236
+    ]
+   ]
+  }
+ },
+ "locked_frames": {
+  "n": 297,
+  "speech_acc": 0.889,
+  "speech_macro_f1": 0.885,
+  "speech_ece": 0.105,
+  "action_acc": 0.62,
+  "action_macro_f1": 0.562,
+  "action_ece": 0.108,
+  "speech_confusion": {
+   "labels": [
+    "DIRECT_REQUEST",
+    "INDIRECT_REQUEST",
+    "WARNING",
+    "QUOTATION",
+    "INFORMATION"
+   ],
+   "matrix": [
+    [
+     58,
+     0,
+     2,
+     1,
+     0
+    ],
+    [
+     1,
+     57,
+     0,
+     0,
+     3
+    ],
+    [
+     1,
+     0,
+     53,
+     0,
+     3
+    ],
+    [
+     0,
+     0,
+     0,
+     61,
+     0
+    ],
+    [
+     21,
+     1,
+     0,
+     0,
+     35
+    ]
+   ]
+  }
+ },
+ "locked_handwritten": {
+  "B0_v44_free_text": {
+   "n": 45,
+   "expected_action_rate": 0.622,
+   "expected_ci95": [
+    0.476,
+    0.749
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.0,
+   "risky_recall_ci95": [
+    0.0,
+    0.125
+   ],
+   "risky_not_cleared_rate": 1.0,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.0,
+   "benign_fa_ci95": [
+    0.0,
+    0.176
+   ],
+   "abstain_rate": 1.0
+  },
+  "B_rule_lexical_only": {
+   "n": 45,
+   "expected_action_rate": 0.756,
+   "expected_ci95": [
+    0.613,
+    0.858
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.407,
+   "risky_recall_ci95": [
+    0.245,
+    0.593
+   ],
+   "risky_not_cleared_rate": 0.63,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.056,
+   "benign_fa_ci95": [
+    0.01,
+    0.258
+   ],
+   "abstain_rate": 0.222
+  },
+  "B1_nlp_heads_only": {
+   "n": 45,
+   "expected_action_rate": 0.756,
+   "expected_ci95": [
+    0.613,
+    0.858
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.889,
+   "risky_recall_ci95": [
+    0.719,
+    0.961
+   ],
+   "risky_not_cleared_rate": 0.889,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.333,
+   "benign_fa_ci95": [
+    0.163,
+    0.563
+   ],
+   "abstain_rate": 0.0
+  },
+  "B2_nlp_plus_policy": {
+   "n": 45,
+   "expected_action_rate": 0.733,
+   "expected_ci95": [
+    0.59,
+    0.84
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.185,
+   "risky_recall_ci95": [
+    0.082,
+    0.367
+   ],
+   "risky_not_cleared_rate": 1.0,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.0,
+   "benign_fa_ci95": [
+    0.0,
+    0.176
+   ],
+   "abstain_rate": 0.756
+  },
+  "B3_real_zoro": "NOT_RUN"
+ },
+ "locked_handwritten_speech_acc": 0.756,
+ "locked_handwritten_action_acc": 0.444,
+ "per_item": [
+  {
+   "id": "L01",
+   "cat": "1_warning",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_WARNING_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "WARNING",
+   "speech_conf": 0.997,
+   "speech_gold": "WARNING",
+   "action_pred": "transfer",
+   "action_conf": 0.997,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L02",
+   "cat": "1_warning",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "UNSUPPORTED_WARNING_LABEL",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "WARNING",
+   "speech_conf": 0.979,
+   "speech_gold": "WARNING",
+   "action_pred": "secrecy",
+   "action_conf": 0.769,
+   "action_gold": "otp"
+  },
+  {
+   "id": "L03",
+   "cat": "1_warning",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NO_GROUNDED_ACTION_ANCHOR",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "WARNING",
+   "speech_conf": 0.871,
+   "speech_gold": "WARNING",
+   "action_pred": "transfer",
+   "action_conf": 0.707,
+   "action_gold": "remote_install"
+  },
+  {
+   "id": "L04",
+   "cat": "1_warning",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "UNSUPPORTED_QUOTATION_LABEL",
+   "B1": "CAUTION",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "QUOTATION",
+   "speech_conf": 0.654,
+   "speech_gold": "WARNING",
+   "action_pred": "transfer",
+   "action_conf": 0.877,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L05",
+   "cat": "2_quote",
+   "expect": [
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "UNSUPPORTED_QUOTATION_LABEL",
+   "B1": "CAUTION",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "QUOTATION",
+   "speech_conf": 0.996,
+   "speech_gold": "QUOTATION",
+   "action_pred": "otp",
+   "action_conf": 0.458,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L06",
+   "cat": "2_quote",
+   "expect": [
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "CAUTION",
+   "rule": "CAUTION",
+   "speech_pred": "QUOTATION",
+   "speech_conf": 0.991,
+   "speech_gold": "QUOTATION",
+   "action_pred": "otp",
+   "action_conf": 0.619,
+   "action_gold": "otp"
+  },
+  {
+   "id": "L07",
+   "cat": "2_quote",
+   "expect": [
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "CAUTION",
+   "rule": "CAUTION",
+   "speech_pred": "QUOTATION",
+   "speech_conf": 0.589,
+   "speech_gold": "QUOTATION",
+   "action_pred": "remote_install",
+   "action_conf": 0.699,
+   "action_gold": "link"
+  },
+  {
+   "id": "L08",
+   "cat": "3_indirect",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.74,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "personal_data",
+   "action_conf": 0.6,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L09",
+   "cat": "3_indirect",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.59,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "none",
+   "action_conf": 0.307,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L10",
+   "cat": "3_indirect",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "CAUTION",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.726,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "secrecy",
+   "action_conf": 0.429,
+   "action_gold": "otp"
+  },
+  {
+   "id": "L11",
+   "cat": "4_delivery",
+   "expect": [
+    "CAUTION",
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "CAUTION",
+   "rule": "CAUTION",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.613,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "link",
+   "action_conf": 0.646,
+   "action_gold": "link"
+  },
+  {
+   "id": "L12",
+   "cat": "4_delivery",
+   "expect": [
+    "CAUTION",
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "CAUTION",
+   "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+   "B1": "CAUTION",
+   "rule": "CAUTION",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.618,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "link",
+   "action_conf": 0.772,
+   "action_gold": "link"
+  },
+  {
+   "id": "L13",
+   "cat": "5_gov",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NO_GROUNDED_ACTION_ANCHOR",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.749,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.804,
+   "action_gold": "remote_install"
+  },
+  {
+   "id": "L14",
+   "cat": "5_gov",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "PAUSE_AND_VERIFY",
+   "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.498,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "personal_data",
+   "action_conf": 0.992,
+   "action_gold": "personal_data"
+  },
+  {
+   "id": "L15",
+   "cat": "5_gov",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "CAUTION",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.8,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "link",
+   "action_conf": 0.54,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L16",
+   "cat": "6_bec",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.533,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.469,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L17",
+   "cat": "6_bec",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "CAUTION",
+   "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+   "B1": "CAUTION",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.919,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "secrecy",
+   "action_conf": 0.714,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L18",
+   "cat": "7_normal_urgent",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.876,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "personal_data",
+   "action_conf": 0.61,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L19",
+   "cat": "7_normal_urgent",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.688,
+   "speech_gold": "REPORT",
+   "action_pred": "none",
+   "action_conf": 0.959,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L20",
+   "cat": "8_investment",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "PAUSE_AND_VERIFY",
+   "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.88,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.721,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L21",
+   "cat": "8_job",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.515,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "otp",
+   "action_conf": 0.745,
+   "action_gold": "personal_data"
+  },
+  {
+   "id": "L22",
+   "cat": "8_shopping",
+   "expect": [
+    "CAUTION",
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.527,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.539,
+   "action_gold": "link"
+  },
+  {
+   "id": "L23",
+   "cat": "8_romance",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.383,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.514,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L24",
+   "cat": "8_gift",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.594,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "personal_data",
+   "action_conf": 0.553,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L25",
+   "cat": "8_app",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NO_GROUNDED_ACTION_ANCHOR",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.827,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.991,
+   "action_gold": "remote_install"
+  },
+  {
+   "id": "L26",
+   "cat": "8_family",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.717,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "personal_data",
+   "action_conf": 0.53,
+   "action_gold": "personal_data"
+  },
+  {
+   "id": "L27",
+   "cat": "9_url",
+   "expect": [
+    "CAUTION",
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.975,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.61,
+   "action_gold": "link"
+  },
+  {
+   "id": "L28",
+   "cat": "10_long",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.875,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.494,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L29",
+   "cat": "11_mixed",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "PAUSE_AND_VERIFY",
+   "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.966,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "otp",
+   "action_conf": 0.992,
+   "action_gold": "otp"
+  },
+  {
+   "id": "L30",
+   "cat": "11_mixed",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.932,
+   "speech_gold": "INFORMATION",
+   "action_pred": "none",
+   "action_conf": 1.0,
+   "action_gold": "none"
+  },
+  {
+   "id": "L31",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NO_GROUNDED_ACTION_ANCHOR",
+   "B1": "CAUTION",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.98,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "link",
+   "action_conf": 0.758,
+   "action_gold": "none"
+  },
+  {
+   "id": "L32",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.439,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.402,
+   "action_gold": "none"
+  },
+  {
+   "id": "L33",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.994,
+   "speech_gold": "INFORMATION",
+   "action_pred": "personal_data",
+   "action_conf": 0.703,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L34",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NONE_DIRECT_REQUEST_CONFLICT",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.973,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "none",
+   "action_conf": 0.994,
+   "action_gold": "none"
+  },
+  {
+   "id": "L35",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NONE_DIRECT_REQUEST_CONFLICT",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.574,
+   "speech_gold": "INFORMATION",
+   "action_pred": "none",
+   "action_conf": 1.0,
+   "action_gold": "none"
+  },
+  {
+   "id": "L36",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.904,
+   "speech_gold": "INFORMATION",
+   "action_pred": "transfer",
+   "action_conf": 0.721,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L37",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN",
+    "CAUTION"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "ASK_HUMAN",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.433,
+   "speech_gold": "INFORMATION",
+   "action_pred": "otp",
+   "action_conf": 0.985,
+   "action_gold": "otp"
+  },
+  {
+   "id": "L38",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "CAUTION",
+    "ASK_HUMAN"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.907,
+   "speech_gold": "REPORT",
+   "action_pred": "personal_data",
+   "action_conf": 0.701,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L39",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "NO_STRONG_SIGNAL",
+   "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INFORMATION",
+   "speech_conf": 0.94,
+   "speech_gold": "INFORMATION",
+   "action_pred": "none",
+   "action_conf": 0.918,
+   "action_gold": "none"
+  },
+  {
+   "id": "L40",
+   "cat": "12_everyday",
+   "expect": [
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.695,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.438,
+   "action_gold": "none"
+  },
+  {
+   "id": "L41",
+   "cat": "2_quote",
+   "expect": [
+    "CAUTION",
+    "ASK_HUMAN",
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "REPORT_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+   "B1": "CAUTION",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "QUOTATION",
+   "speech_conf": 0.807,
+   "speech_gold": "QUOTATION",
+   "action_pred": "personal_data",
+   "action_conf": 0.388,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L42",
+   "cat": "1_warning",
+   "expect": [
+    "NO_STRONG_SIGNAL",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+   "B1": "NO_STRONG_SIGNAL",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.413,
+   "speech_gold": "WARNING",
+   "action_pred": "none",
+   "action_conf": 0.743,
+   "action_gold": "link"
+  },
+  {
+   "id": "L43",
+   "cat": "3_indirect",
+   "expect": [
+    "PAUSE_AND_VERIFY",
+    "ASK_HUMAN"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "NO_GROUNDED_ACTION_ANCHOR",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.809,
+   "speech_gold": "INDIRECT_REQUEST",
+   "action_pred": "transfer",
+   "action_conf": 0.779,
+   "action_gold": "transfer"
+  },
+  {
+   "id": "L44",
+   "cat": "5_gov",
+   "expect": [
+    "ASK_HUMAN",
+    "CAUTION",
+    "NO_STRONG_SIGNAL"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "NO_STRONG_SIGNAL",
+   "speech_pred": "INDIRECT_REQUEST",
+   "speech_conf": 0.566,
+   "speech_gold": "INFORMATION",
+   "action_pred": "otp",
+   "action_conf": 0.424,
+   "action_gold": "none"
+  },
+  {
+   "id": "L45",
+   "cat": "11_attack",
+   "expect": [
+    "PAUSE_AND_VERIFY"
+   ],
+   "B2": "ASK_HUMAN",
+   "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+   "B1": "PAUSE_AND_VERIFY",
+   "rule": "PAUSE_AND_VERIFY",
+   "speech_pred": "DIRECT_REQUEST",
+   "speech_conf": 0.773,
+   "speech_gold": "DIRECT_REQUEST",
+   "action_pred": "remote_install",
+   "action_conf": 0.4,
+   "action_gold": "transfer"
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+test_changed_retry_and_stale_rejected (test_arena.ArenaTests.test_changed_retry_and_stale_rejected) ... ok
+test_cross_session_task_rejected (test_arena.ArenaTests.test_cross_session_task_rejected) ... ok
+test_failure_is_not_fixture (test_arena.ArenaTests.test_failure_is_not_fixture) ... ok
+test_invalid_controls_rejected_before_model (test_arena.ArenaTests.test_invalid_controls_rejected_before_model) ... ok
+test_new_observation_recomputes_but_does_not_clear_risk (test_arena.ArenaTests.test_new_observation_recomputes_but_does_not_clear_risk) ... ok
+test_no_raw_text_in_persistence (test_arena.ArenaTests.test_no_raw_text_in_persistence) ... ok
+test_stale_response_after_inference_rejected (test_arena.ArenaTests.test_stale_response_after_inference_rejected) ... ok
+test_task_persisted_and_idempotent (test_arena.ArenaTests.test_task_persisted_and_idempotent) ... ok
+test_bad_generation_backend_is_502_not_a_valid_label (test_arena_http.HttpTests.test_bad_generation_backend_is_502_not_a_valid_label) ... ERROR
+test_origin_host_duplicate_keys_and_unknown_fields (test_arena_http.HttpTests.test_origin_host_duplicate_keys_and_unknown_fields) ... ERROR
+test_ui_external_assets_and_no_inline_script (test_arena_http.HttpTests.test_ui_external_assets_and_no_inline_script) ... ERROR
+test_workflow_roundtrip_and_reload (test_arena_http.HttpTests.test_workflow_roundtrip_and_reload) ... ERROR
+test_actual_bad_outputs_and_injected_tools_rejected (test_generation_boundary.GenerationBoundaryTests.test_actual_bad_outputs_and_injected_tools_rejected) ... ok
+test_entire_label_required (test_generation_boundary.GenerationBoundaryTests.test_entire_label_required) ... ok
+test_only_explicit_synthetic_bounded_text (test_generation_http.GenerationHttpTests.test_only_explicit_synthetic_bounded_text) ... ERROR
+test_rejects_cross_origin_and_host (test_generation_http.GenerationHttpTests.test_rejects_cross_origin_and_host) ... ERROR
+test_stub_remains_explicit_and_no_policy_side_effect (test_generation_http.GenerationHttpTests.test_stub_remains_explicit_and_no_policy_side_effect) ... ERROR
+test_direct_risk_beats_missing_model (test_kit.KitTests.test_direct_risk_beats_missing_model) ... ok
+test_failures_not_hidden_in_latency (test_kit.KitTests.test_failures_not_hidden_in_latency) ... ok
+test_fixture_cannot_be_live (test_kit.KitTests.test_fixture_cannot_be_live) ... ok
+test_gold_and_fixture_data_not_given_to_adapter (test_kit.KitTests.test_gold_and_fixture_data_not_given_to_adapter) ... ok
+test_inconsistent_argmax_rejected (test_kit.KitTests.test_inconsistent_argmax_rejected) ... ok
+test_logs_no_raw_text_or_quote (test_kit.KitTests.test_logs_no_raw_text_or_quote) ... ok
+test_low_confidence_is_measurable_not_silently_passed (test_kit.KitTests.test_low_confidence_is_measurable_not_silently_passed) ... ok
+test_missing_required_question_rejected (test_kit.KitTests.test_missing_required_question_rejected) ... ok
+test_model_proposed_evidence_does_not_authorize (test_kit.KitTests.test_model_proposed_evidence_does_not_authorize) ... ok
+test_nonfinite_and_duplicate_json_rejected (test_kit.KitTests.test_nonfinite_and_duplicate_json_rejected) ... ok
+test_session_version_rejected (test_kit.KitTests.test_session_version_rejected) ... ok
+test_span_change_rejected (test_kit.KitTests.test_span_change_rejected) ... ok
+test_warning_not_direct_otp (test_kit.KitTests.test_warning_not_direct_otp) ... ok
+test_wrong_input_hash_rejected (test_kit.KitTests.test_wrong_input_hash_rejected) ... ok
+test_zero_denominator_is_null (test_kit.KitTests.test_zero_denominator_is_null) ... ok
+test_explicit_confirmed_still_completes_the_task (test_observation_preservation.ObservationPreservationTests.test_explicit_confirmed_still_completes_the_task) ... ok
+test_no_new_observation_preserves_unresolved_and_retry (test_observation_preservation.ObservationPreservationTests.test_no_new_observation_preserves_unresolved_and_retry) ... ok
+test_actual_javascript_and_both_python_requests_have_identical_option_order (test_question_contract_order.QuestionContractOrderTests.test_actual_javascript_and_both_python_requests_have_identical_option_order) ... ok
+test_building_request_does_not_mutate_exported_question_data (test_question_contract_order.QuestionContractOrderTests.test_building_request_does_not_mutate_exported_question_data) ... ok
+test_choice_criteria_missing_or_extra_key_is_rejected (test_question_contract_order.QuestionContractOrderTests.test_choice_criteria_missing_or_extra_key_is_rejected) ... ok
+test_apk_asset_drift_detected (test_release_reproducibility.ReleaseReproducibility.test_apk_asset_drift_detected) ... ok
+test_apk_assets_use_packaged_pwa_without_staging (test_release_reproducibility.ReleaseReproducibility.test_apk_assets_use_packaged_pwa_without_staging) ... ok
+test_core_preserves_regression_prerequisites (test_release_reproducibility.ReleaseReproducibility.test_core_preserves_regression_prerequisites) ... ok
+test_current_tree_and_archive_verify_without_v47_artifacts (test_release_reproducibility.ReleaseReproducibility.test_current_tree_and_archive_verify_without_v47_artifacts) ... ok
+test_distribution_path_cannot_escape_release_root (test_release_reproducibility.ReleaseReproducibility.test_distribution_path_cannot_escape_release_root) ... ok
+test_imports_preserve_product_linkguard_and_cli_entrypoints (test_release_reproducibility.ReleaseReproducibility.test_imports_preserve_product_linkguard_and_cli_entrypoints) ... ok
+test_malformed_manifest_reports_failure (test_release_reproducibility.ReleaseReproducibility.test_malformed_manifest_reports_failure) ... ok
+test_missing_current_skill_is_reported_not_crash_or_skip (test_release_reproducibility.ReleaseReproducibility.test_missing_current_skill_is_reported_not_crash_or_skip) ... ok
+test_missing_regression_prerequisite_rejected (test_release_reproducibility.ReleaseReproducibility.test_missing_regression_prerequisite_rejected) ... ok
+test_new_artifact_hash_cannot_bless_apk_pwa_drift (test_release_reproducibility.ReleaseReproducibility.test_new_artifact_hash_cannot_bless_apk_pwa_drift) ... ok
+test_new_manifest_cannot_bless_stale_app_assets (test_release_reproducibility.ReleaseReproducibility.test_new_manifest_cannot_bless_stale_app_assets) ... ok
+test_same_member_set_different_archive_bytes_fail (test_release_reproducibility.ReleaseReproducibility.test_same_member_set_different_archive_bytes_fail) ... ok
+test_skill_archive_bounds_skip_crc_and_member_reads (test_release_reproducibility.ReleaseReproducibility.test_skill_archive_bounds_skip_crc_and_member_reads) ... ok
+test_skill_archive_crc_failure_skips_member_hash_reads (test_release_reproducibility.ReleaseReproducibility.test_skill_archive_crc_failure_skips_member_hash_reads) ... ok
+test_stale_source_manifest_and_skill_fail (test_release_reproducibility.ReleaseReproducibility.test_stale_source_manifest_and_skill_fail) ... ok
+test_unsafe_directory_and_duplicate_names_rejected (test_release_reproducibility.ReleaseReproducibility.test_unsafe_directory_and_duplicate_names_rejected) ... ok
+test_version_and_artifact_names_come_from_metadata (test_release_reproducibility.ReleaseReproducibility.test_version_and_artifact_names_come_from_metadata) ... ok
+test_missing_optional_is_preserved (test_v11_source_bridge.SourceBridgeTests.test_missing_optional_is_preserved) ... ok
+test_missing_required_and_nan_rejected (test_v11_source_bridge.SourceBridgeTests.test_missing_required_and_nan_rejected) ... ok
+test_model_anchor_not_promoted_to_independent_proof (test_v11_source_bridge.SourceBridgeTests.test_model_anchor_not_promoted_to_independent_proof) ... ok
+test_original_policy_exactly_recomputed (test_v11_source_bridge.SourceBridgeTests.test_original_policy_exactly_recomputed) ... ok
+test_probability_mapping_preserves_actual_mass (test_v11_source_bridge.SourceBridgeTests.test_probability_mapping_preserves_actual_mass) ... ok
+test_seven_questions_extracted_not_invented (test_v11_source_bridge.SourceBridgeTests.test_seven_questions_extracted_not_invented) ... ok
+test_source_cannot_attest_live_identity (test_v11_source_bridge.SourceBridgeTests.test_source_cannot_attest_live_identity) ... ok
+test_source_input_is_not_mutated (test_v11_source_bridge.SourceBridgeTests.test_source_input_is_not_mutated) ... ok
+test_malformed_labels_modes_identity_and_latencies_fail_closed (test_v49_transport.ResultBoundaryTests.test_malformed_labels_modes_identity_and_latencies_fail_closed) ... ok
+test_valid_does_not_acquire_policy_authority (test_v49_transport.ResultBoundaryTests.test_valid_does_not_acquire_policy_authority) ... ok
+
+======================================================================
+ERROR: test_bad_generation_backend_is_502_not_a_valid_label (test_arena_http.HttpTests.test_bad_generation_backend_is_502_not_a_valid_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_arena_http.py", line 12, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_origin_host_duplicate_keys_and_unknown_fields (test_arena_http.HttpTests.test_origin_host_duplicate_keys_and_unknown_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_arena_http.py", line 12, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_ui_external_assets_and_no_inline_script (test_arena_http.HttpTests.test_ui_external_assets_and_no_inline_script)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_arena_http.py", line 12, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_workflow_roundtrip_and_reload (test_arena_http.HttpTests.test_workflow_roundtrip_and_reload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_arena_http.py", line 12, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_only_explicit_synthetic_bounded_text (test_generation_http.GenerationHttpTests.test_only_explicit_synthetic_bounded_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_generation_http.py", line 10, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler);self.server.generator=FakeGenerator()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_rejects_cross_origin_and_host (test_generation_http.GenerationHttpTests.test_rejects_cross_origin_and_host)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_generation_http.py", line 10, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler);self.server.generator=FakeGenerator()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_stub_remains_explicit_and_no_policy_side_effect (test_generation_http.GenerationHttpTests.test_stub_remains_explicit_and_no_policy_side_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v49/test_generation_http.py", line 10, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler);self.server.generator=FakeGenerator()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socketserver.py", line 453, in __init__
+    self.socket = socket.socket(self.address_family,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ljmpc12/miniforge3/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 64 tests in 1.063s
+
+FAILED (errors=7)

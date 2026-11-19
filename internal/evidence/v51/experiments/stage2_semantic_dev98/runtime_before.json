@@ -1,0 +1,62 @@
+{
+  "models": [
+    {
+      "name": "kev-latest",
+      "description": "Kev pointer head on /home/ljmpc12/Documents/hackton/models/Zoro-1-kev, serving /home/ljmpc12/Documents/hackton/models/Zoro-1-kev at temperature 1.52",
+      "release_date": "2026-11-02",
+      "run": "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev",
+      "base": "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev",
+      "lora": 0,
+      "device": "cuda",
+      "backend": "torch",
+      "dtype": "bfloat16",
+      "temperature": 1.52,
+      "max_state_tokens": 65536,
+      "truncate_states": false,
+      "cuda_graphs": null,
+      "prefix_cache": {
+        "size": 4,
+        "min_state_tokens": 0,
+        "max_tokens": 65536,
+        "hits": 33,
+        "misses": 953,
+        "cached_states": 4,
+        "oom_retries": 0
+      },
+      "batches": {
+        "count": 986,
+        "requests": 986,
+        "queued": 0
+      }
+    },
+    {
+      "name": "jev-latest",
+      "description": "Kev pointer head on /home/ljmpc12/Documents/hackton/models/Zoro-1-kev, serving /home/ljmpc12/Documents/hackton/models/Zoro-1-kev at temperature 1.52",
+      "release_date": "2026-11-02",
+      "run": "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev",
+      "base": "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev",
+      "lora": 0,
+      "device": "cuda",
+      "backend": "torch",
+      "dtype": "bfloat16",
+      "temperature": 1.52,
+      "max_state_tokens": 65536,
+      "truncate_states": false,
+      "cuda_graphs": null,
+      "prefix_cache": {
+        "size": 4,
+        "min_state_tokens": 0,
+        "max_tokens": 65536,
+        "hits": 33,
+        "misses": 953,
+        "cached_states": 4,
+        "oom_retries": 0
+      },
+      "batches": {
+        "count": 986,
+        "requests": 986,
+        "queued": 0
+      }
+    }
+  ]
+}

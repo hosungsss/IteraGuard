@@ -1,0 +1,138 @@
+{
+  "status": "SOURCE_TOOLS_TESTED_PRODUCT_BUILD_NOT_RUN",
+  "model_calls": 0,
+  "validation24_read": false,
+  "actual_product_distribution_build": "NOT_RUN_PENDING_ROOT_FREEZE",
+  "actual_product_full_archive": "NOT_RUN_PENDING_ROOT_FREEZE",
+  "new_tests": 15,
+  "existing_release_regressions": 17,
+  "total_tests": 32,
+  "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/packaging_tools_validation.log",
+  "log_sha256": "cbeb677855a199be7f71acc04bec747263ae12eee25ae5b4fd45584477bcd3ea",
+  "changed_files": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tools/build_distribution_v51.py",
+      "sha256": "f32130c7faa005cac63cc3afa79ba00eb3bbc1d1599ec321bf864875c0bff7d1"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tools/build_release_v51.py",
+      "sha256": "dd34b012613a17596b820fee309627eb4b0c48e674c1b732c29a108e1a072c20"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tools/release_metadata.py",
+      "sha256": "cdb92a281d91ea5b4b294ff44352c1ab90f36b43681a07d1e01795f648860ca9"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tools/verify_release.py",
+      "sha256": "3eccdd1ab98538d0f9a18e081437de8f74f62c049322c8244d13383d8e724ec0"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/tests_v51/test_release_packaging.py",
+      "sha256": "a95c9944ede4426af097f276e7fdae32376bf3de9a5619a4a781c1096062296e"
+    }
+  ],
+  "preserved_historical_files": [
+    {
+      "path": "tools/build_distribution_v50.py",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "tools/build_release_v50.py",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "tools/build_apk.py",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "tools/verify_apk.py",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "internal/evidence/v50/distribution_build.json",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_web_pwa.zip",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_android_debug.apk",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "IteraGuard_DoubtMeter_v5.0.apk",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "dmsg_v5.0.skill",
+      "unchanged_from_v50": true
+    },
+    {
+      "path": "dmsg_v5.0.zip",
+      "unchanged_from_v50": true
+    }
+  ],
+  "cli_import_checks": [
+    {
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "tools/build_distribution_v51.py",
+        "--help"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "tools/build_release_v51.py",
+        "--help"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-m",
+        "tools.build_distribution_v51",
+        "--help"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-m",
+        "tools.build_release_v51",
+        "--help"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "supported_versions": [
+    "4.9",
+    "5.0",
+    "5.1"
+  ],
+  "notes": [
+    "Temporary inert APK/PWA fixture only; no production artifact build or signing performed.",
+    "Source -> PWA -> APK + root APK and desktop bytes, generated SW/build-info, actual manifest 51/5.1 are checked.",
+    "Four skill aliases and outside-tree FULL; v5.0 stamped artifacts/evidence remain byte-identical.",
+    "Independent human evaluation and Android device execution remain NOT_RUN; domain calibration remains NOT_ESTABLISHED.",
+    "v5.1 verifier also checks that HTML and service-worker SHELL include every required current shared script.",
+    "Release selection is read from verified contract.release_selection, not registry compatibility default; specific/default mismatch and disallowed policy tests pass.",
+    "Read-only verifier checks v51/registry/v50 fingerprints and all declared source bindings without executing archive code; non-web policy/semantic/base drift fails before FULL writes.",
+    "Debug signing uses an ephemeral in-memory key. Existing debug files remain unchanged; no new PEM/DER files; globals restored after success and failure. APK bytes/signing identity are not reproducible between builds."
+  ],
+  "independent_review": "TWO_FINDINGS_FIXED_PENDING_RECHECK",
+  "current_contract_read_only_check": {
+    "status": "PASS",
+    "default_policy": "legacy",
+    "default_profile_id": "v51-specific-candidate",
+    "default_profile_by_policy": {
+      "legacy": "v51-specific-candidate",
+      "dra": "v50-baseline"
+    },
+    "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7"
+  }
+}

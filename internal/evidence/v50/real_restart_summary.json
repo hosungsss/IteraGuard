@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "real_model_calls_expected": 4,
+  "independent_eval": false,
+  "session_id": "a06d0f19f7fc4fcfa836250fa7ed86d9",
+  "final_version": 6,
+  "events": 6,
+  "tasks": 2,
+  "prior_pause": true,
+  "three_restarts_preserved_exact_state": true,
+  "idempotent_retries_no_new_event": true,
+  "closed_session_rejected": true,
+  "user_report_did_not_clear_risk": true,
+  "reported_task_not_recreated_without_new_risk": true,
+  "new_risk_created_new_task": true,
+  "input_text_absent_from_db_and_state": true,
+  "common_trace_and_session_trace_consistent": true,
+  "processes": [
+    {
+      "sequence": 0,
+      "pid": 540784,
+      "started_utc": "2026-11-04T08:38:40.129629+00:00",
+      "stopped_pid": 540784,
+      "exit_code": -15
+    },
+    {
+      "sequence": 1,
+      "pid": 540810,
+      "started_utc": "2026-11-04T08:38:40.441064+00:00",
+      "stopped_pid": 540810,
+      "exit_code": -15
+    },
+    {
+      "sequence": 2,
+      "pid": 540817,
+      "started_utc": "2026-11-04T08:38:40.570459+00:00",
+      "stopped_pid": 540817,
+      "exit_code": -15
+    },
+    {
+      "sequence": 3,
+      "pid": 540825,
+      "started_utc": "2026-11-04T08:38:40.994401+00:00",
+      "stopped_pid": 540825,
+      "exit_code": -15
+    }
+  ],
+  "provider_request_counter_delta": 4,
+  "actual_model_response_events": 5,
+  "actual_response_events_include_one_cached_retry": true,
+  "distinct_model_evaluation_requests": 4,
+  "source_hashes": {
+    "arena/store.py": "9a9eeb29b997313521a646753e4df5499d6afc9e39ad3d14cf460edcc3ae25ce",
+    "arena/server.py": "817766604ae165f3d3e2ac83bca5e93b2c50199c9da5c575e76581adcbe27081",
+    "integration/v50.py": "a17215dcde607b90aae52776abacb63c8a35d0fa74854845375e357ebef85ab8",
+    "configs/v50_contract.json": "e0defed95e1dbafbb8ba94c247a0e98ffd10a224fcbc63a544981faf3cb9c682",
+    "vendor/dmsg/prototype/model_bridge.py": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+    "vendor/dmsg/prototype/typed_contract.py": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+    "vendor/dmsg/prototype/context_guard.py": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9"
+  }
+}

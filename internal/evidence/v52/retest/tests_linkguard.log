@@ -1,0 +1,23 @@
+======================================================================
+FAIL: test_dmsg_path_set_unchanged (test_linkguard.Regression.test_dmsg_path_set_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/IteraGuard_v52_workspace/[v5.1] IteraGuard_DoubtMeter/tests_linkguard/test_linkguard.py", line 199, in test_dmsg_path_set_unchanged
+    self.assertEqual(files, sorted(expected))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['.gi[670 chars]es/PRD_v51.md', 'references/PROMPTS.md', 'refe[940 chars]css'] != ['.gi[670 chars]es/PROMPTS.md', 'references/SYSTEM_PROMPT.md',[877 chars]css']
+
+First differing element 26:
+'references/PRD_v51.md'
+'references/PROMPTS.md'
+
+First list contains 2 additional elements.
+First extra element 58:
+'web/paylock.js'
+
+Diff is 1846 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.067s
+
+FAILED (failures=1)

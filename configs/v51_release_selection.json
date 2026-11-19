@@ -1,0 +1,14 @@
+{
+  "schema_version": "dmsg-v51-release-selection/1",
+  "product_version": "5.1.0-development",
+  "release_stage": "DEVELOPMENT_CANDIDATE",
+  "default_policy_id": "legacy",
+  "default_profile_by_policy": {
+    "legacy": "v51-specific-candidate",
+    "dra": "v50-baseline"
+  },
+  "semantic_candidate_status": "FROZEN_AI_DEVELOPMENT_CANDIDATE_NOT_HUMAN_VALIDATED",
+  "independent_human_evaluation": "NOT_RUN",
+  "android_device": "NOT_RUN",
+  "automatic_risk_release": false
+}

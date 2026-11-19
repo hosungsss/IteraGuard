@@ -1,0 +1,1152 @@
+[
+  {
+    "path": "apps/README.md",
+    "sha256": "4738b0b607fa9c7633884991ae4fd573b80f5d4015c27f0811b6f98f58b985e3",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/.gitignore",
+    "sha256": "d4f3d4924db6a788ffd218959d76910041c39c5aba248840990ad25fd2dd5b3c",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/config.example.json",
+    "sha256": "66c74de581cdf71c849a631c49c772214d66c36619772e16033687065c4ce525",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/README.md",
+    "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/SKILL.md",
+    "sha256": "9cf3f903ea75d4f6f817c8288d6274131c5a6a98466c32d3c64982b6d31cfe1e",
+    "original_match": true
+  },
+  {
+    "path": "docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+    "sha256": "4a9bd77b9b16612460679eeee97ac6b849cddce6896e78b2172ae447f1414fce",
+    "original_match": true
+  },
+  {
+    "path": "docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+    "sha256": "2e3e646ad3302a0cc4144ef5248aceb226e89c08c9620bdcf3e1369e02013c3c",
+    "original_match": true
+  },
+  {
+    "path": "docs/03_TRACEABILITY_MATRIX_KO.md",
+    "sha256": "4f880ae52ce3984533f9c44479a3223abc27beb36f1e3938a54b53b6ac8d58ff",
+    "original_match": true
+  },
+  {
+    "path": "docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+    "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72",
+    "original_match": true
+  },
+  {
+    "path": "docs/05_ARCHITECTURE_SNM_4D_KO.md",
+    "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb",
+    "original_match": true
+  },
+  {
+    "path": "docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+    "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e",
+    "original_match": true
+  },
+  {
+    "path": "docs/07_DEMO_AND_PITCH_KO.md",
+    "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea",
+    "original_match": true
+  },
+  {
+    "path": "docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+    "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73",
+    "original_match": true
+  },
+  {
+    "path": "docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+    "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9",
+    "original_match": true
+  },
+  {
+    "path": "docs/10_SNM_4D_REDTEAM_KO.md",
+    "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31",
+    "original_match": true
+  },
+  {
+    "path": "docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+    "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0",
+    "original_match": true
+  },
+  {
+    "path": "docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+    "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63",
+    "original_match": true
+  },
+  {
+    "path": "docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+    "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3",
+    "original_match": true
+  },
+  {
+    "path": "docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+    "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033",
+    "original_match": true
+  },
+  {
+    "path": "docs/15_CANDIDATE_DECISION_GATES_KO.md",
+    "sha256": "ea6da1a9011795f7b6110d3b09ba25b3e6d7f8d69992e950d3e3382669dec3a0",
+    "original_match": true
+  },
+  {
+    "path": "docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+    "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca",
+    "original_match": true
+  },
+  {
+    "path": "docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+    "sha256": "9ea69fe688cdc2f7f532993cff00e186333b40fba085588c3341d933886636a2",
+    "original_match": true
+  },
+  {
+    "path": "docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+    "sha256": "abf28e16741abf4cc8fd6783671681f2cd8e3090218c3ea8db68f8a083a54d96",
+    "original_match": true
+  },
+  {
+    "path": "docs/19_V45_ON_DEVICE_NLP_KO.md",
+    "sha256": "30a6cc0874296a2cb3868a5759f73cf29d5cb4c647f628e8de3b33f8a8b25494",
+    "original_match": true
+  },
+  {
+    "path": "docs/20_ZORO_RUNBOOK_AND_ENGINE_COMPARISON_KO.md",
+    "sha256": "c2285208dfd899a2ce3306df35b1c14d258cbaad17c2da44d733e53bdccfe118",
+    "original_match": true
+  },
+  {
+    "path": "docs/21_TEAM_V33_ALIGNMENT_KO.md",
+    "sha256": "4945646f9fdfc0339f5bcf391ea4854d51ee69c34716f935ca9b240de7fa8264",
+    "original_match": true
+  },
+  {
+    "path": "docs/22_V46_MULTITASK_LABELING_KO.md",
+    "sha256": "b0a13c062f1c6110e2b4b999ff6f2953134ead49109c135d70a3cd28e2f510e2",
+    "original_match": true
+  },
+  {
+    "path": "docs/23_V46_MODEL_REPORT_KO.md",
+    "sha256": "cf2fc5c7d3965d09d64f8c2baab626d1cddef14498386a3ba0c832faf367f137",
+    "original_match": true
+  },
+  {
+    "path": "docs/24_V47_ABSTENTION_ANALYSIS_KO.md",
+    "sha256": "6ba603a07b12c8e566d1a22400d9caf9d8d9114197560810923f0ac8090b8eec",
+    "original_match": true
+  },
+  {
+    "path": "docs/25_V47_LINKGUARD_SECURITY_KO.md",
+    "sha256": "99d4c9dbcb91af5bdde560d4854fa18db91830e0d9b3119c9376897e8322d552",
+    "original_match": true
+  },
+  {
+    "path": "docs/26_V48_DOMAIN_RISK_INTELLIGENCE_AND_ZORO_GATES_KO.md",
+    "sha256": "0e378fcd0e491d96b3a61f015aaba53385163d598bc18a42850e0c5c243ab49f",
+    "original_match": true
+  },
+  {
+    "path": "linkguard/apk.py",
+    "sha256": "d26fb8925392f39bc313e6e5a3575c45ca54af0005627f3901f373f5728e9a46",
+    "original_match": true
+  },
+  {
+    "path": "linkguard/intake.py",
+    "sha256": "bd282d221faaeb8e2d026a4fef0b8bb6b85f3102439f0514d9bb7dc3c825a52d",
+    "original_match": true
+  },
+  {
+    "path": "linkguard/policy.py",
+    "sha256": "e7b926bee64e9ad035a058a85706012b8ba196c7d376d8f78b5c2d9b8665f01e",
+    "original_match": true
+  },
+  {
+    "path": "linkguard/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_match": true
+  },
+  {
+    "path": "tests_linkguard/test_arbiter.py",
+    "sha256": "462d1305d8f31a5d738a624c1f2da9a3a3db4566a821987e1050d9c0aa60c64c",
+    "original_match": true
+  },
+  {
+    "path": "tests_linkguard/test_linkguard.py",
+    "sha256": "43ebbaaeb3c5a8cda972920b31c46f7edf6f618c196045fd991defa7f06f3990",
+    "original_match": true
+  },
+  {
+    "path": "tests_linkguard/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_match": true
+  },
+  {
+    "path": "tools/app_smoke.py",
+    "sha256": "4de4c708d8740bc9cf45e18c4ae38b221701db2355818fc837833c71a6ff2e97",
+    "original_match": true
+  },
+  {
+    "path": "tools/browser_smoke.py",
+    "sha256": "30eb82eba24a3a5d55e64f0927114423520e68875a1cdd366aa260bd30b48f73",
+    "original_match": true
+  },
+  {
+    "path": "tools/build_apk.py",
+    "sha256": "e11803190ba14f2fedc08a9449fa4825663a21cd7987130ee8bdbcdf2c0da1cf",
+    "original_match": true
+  },
+  {
+    "path": "tools/build_apps.py",
+    "sha256": "97f4a69e29c03639b449a96bec055f87b7a3343ed5d46efedf246bb282c2c421",
+    "original_match": true
+  },
+  {
+    "path": "tools/build_release.py",
+    "sha256": "761454b2cd3cfffb05bfb5825ab65e1a5278cbd07e134992cac189248dc06ee7",
+    "original_match": true
+  },
+  {
+    "path": "tools/check_contrast.py",
+    "sha256": "a34e5a51c2b899c1b27aeff39475df2ef436cee5338d16db7b50cebe6ae6e86a",
+    "original_match": true
+  },
+  {
+    "path": "tools/check_forbidden_phrases.py",
+    "sha256": "2570f42d9a4a69acf1e79415cecb174f0001514726a1bde75a640e432caf8bfc",
+    "original_match": true
+  },
+  {
+    "path": "tools/compare_engines.py",
+    "sha256": "c0cec904ec4b9a59119dfad89bd474f221a220af9af46bfe5021951f99f86144",
+    "original_match": true
+  },
+  {
+    "path": "tools/delivery_gate.py",
+    "sha256": "6c85ccb0a51c038d69b1fd46e5c5db4605ef5d233aecdaf18ad49f1c01a1f997",
+    "original_match": true
+  },
+  {
+    "path": "tools/export_engine_data.py",
+    "sha256": "9b3e0e5e0707af765c390ef8b0656f67d94711d01e4694b10ad8261cdb0e1e5d",
+    "original_match": true
+  },
+  {
+    "path": "tools/make_conformance_vectors.py",
+    "sha256": "7120c03b667653b643a0ade7723bdd0de17c7208aeda63fce0f2bd83559edaf1",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_golden_v33.py",
+    "sha256": "6390b160d3426caa3874c28f01974531375d2f567fc2b62f3f6493d956cd7a40",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v40_validation.py",
+    "sha256": "efd6d97c58778a523e7d054a6629eae50b4e0ce988451bbd6bd1ae68861355c8",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v41_validation.py",
+    "sha256": "30935850e5264720903e0c0dc99f6751367d9d7d179de45e375cce4c84330e54",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v42_validation.py",
+    "sha256": "5d4283e2435fa44c8cb16b2aa2db024088b7f4f8fb482bab4e424ae357d98f0c",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v44_validation.py",
+    "sha256": "641201d1fe8c6b4079d13b1b4d73f056500fc98345a6f12a571f1cc4b65059f1",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v45_validation.py",
+    "sha256": "021fbea872965ba29cb584c668e3c5a11ffc9331bd83be64bb48ea112c9b3c23",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v46_validation.py",
+    "sha256": "f49b3eccd52fcdf45271578086d3fd4db4befcdeae5630dc78eda8161f94ea62",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v47_arbiter_eval.py",
+    "sha256": "2ab131a4e02a05bd8b8af5e0a1e5cc034afef104ad44a9078471057966fe9b01",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v47_validation.py",
+    "sha256": "4a94e9dcebdf4887944f8172717a9d48b0f21eb7206ac81853ad9e7695cb0abe",
+    "original_match": true
+  },
+  {
+    "path": "tools/run_v48_validation.py",
+    "sha256": "69b8e3c448013ec3b54565aae609f988392c47ac50bdadad1b71f2d43049fa64",
+    "original_match": true
+  },
+  {
+    "path": "tools/test_domain_v48.js",
+    "sha256": "6fbdcfe96b24b9e9dd4813eca5ade2c22dcb381bdc81603cf3bd60a5963df037",
+    "original_match": true
+  },
+  {
+    "path": "tools/test_trace_v48.py",
+    "sha256": "79f6ddc24c8d6347bef5c0ddf69e82d1b3fbc9e66e645df51d566fa323029e4d",
+    "original_match": true
+  },
+  {
+    "path": "tools/verify_apk.py",
+    "sha256": "1fa1b6359a6be7da42b67ad47c3ce1fec7d18f44971ac718895658e1e89da5a3",
+    "original_match": true
+  },
+  {
+    "path": "tools/verify_apk_v48.py",
+    "sha256": "ea0cc23feb9364d715584bf0cf570c614b3c7d0ddf2915aca73e3a518a8f7930",
+    "original_match": true
+  },
+  {
+    "path": "tools/verify_macho_signature.py",
+    "sha256": "c7512d1317bfd05f1d595eed4718e7b94e0c1261dbfcabe9235d6bf916718f2e",
+    "original_match": true
+  },
+  {
+    "path": "tools/verify_release.py",
+    "sha256": "273a7f5ad41bd708262eb316d7bb913ed1f7f2e8bde381e1d972f83336a02eec",
+    "original_match": true
+  },
+  {
+    "path": "tools/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_match": true
+  },
+  {
+    "path": "apps/conformance/linkguard_vectors.json",
+    "sha256": "c3bd37eedee5ae15f3892b3d3309bf2272e9808c4ba74263a8eb124d714bb541",
+    "original_match": true
+  },
+  {
+    "path": "apps/conformance/run_apkscan.js",
+    "sha256": "c7b189da0dcfb0abc8eeb4d0a3dda2457f209a98d301390d128c82ab24a7f37e",
+    "original_match": true
+  },
+  {
+    "path": "apps/conformance/run_conformance.js",
+    "sha256": "17c0e89d5088fb68f522021fc329be1de7e893ab27b9c309b38124238800c451",
+    "original_match": true
+  },
+  {
+    "path": "apps/conformance/run_linkguard.js",
+    "sha256": "2facb7b7300e97db0f41454febaf42cb4c84f234593850141ceb3d571ebc0daa",
+    "original_match": true
+  },
+  {
+    "path": "apps/conformance/vectors.json",
+    "sha256": "3828f7851a2b65a4f32dc7e091e36615be2a47fa3cc52c12d806f15609a7476b",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/server.js",
+    "sha256": "a6535cc144abedabb3fadc369f576555baf0bbddd95e332843e03c73e4f11342",
+    "original_match": true
+  },
+  {
+    "path": "apps/dist/IteraGuard_DoubtMeter_v4_8_android_debug.apk",
+    "sha256": "f12719d975b2c3894198edfd80bab1ba8e84ed259cd60ef364ab76287618fa9f",
+    "original_match": true
+  },
+  {
+    "path": "apps/dist/IteraGuard_DoubtMeter_v4_8_web_pwa.zip",
+    "sha256": "d633b223207af1995f069abc175f06b52b43b7f1eb8f74418dbb3cb60fbbf068",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/BUILD_ANDROID.md",
+    "sha256": "51dd6644de38fdbf3b84ecbf4cfe5df37534ee3c8f11697274138d777a6cf675",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/BUILD_IOS.md",
+    "sha256": "dc7d94cc4730265894687ac5efc53c827c2406dc857a1a919a8318b8b137cab0",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/capacitor.config.json",
+    "sha256": "821fb8ad239baaed2a3c201f9dd7dbd72d00803d5750ba11defa86c876a2d44f",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/package-lock.json",
+    "sha256": "36035e931a72893a4e56b532614d2c141a8eb45e91672f22ef8e0a7684211768",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/package.json",
+    "sha256": "f2a670a63dbc247ffa60021fa77a057f05d4cdcd42c181a8920ca981ae9b7421",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/dmsg-apkscan.js",
+    "sha256": "dfa23da7e3a3109074bd0b687691d82bbc8255587720dcb79e5ae818d783cc16",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/dmsg-domainintel.js",
+    "sha256": "29e8cf32e34996598304697c4b931314a32f50c9fa0f013b9e206ca131a712c5",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/dmsg-engine.js",
+    "sha256": "a421b59c5f893a38af2b5ae8d38e9b1fa89a9f874eb3ab40ce3963a015360334",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/dmsg-linkguard.js",
+    "sha256": "7f3b435eb0559b548deefc1d41c56faf30681b272a6d20e7fa8606c9136378b7",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/dmsg-nlp.js",
+    "sha256": "de7542839f5f446c982627cf08794ef6b8511458461312bae12f170ce6e0dca9",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/engine-data.js",
+    "sha256": "6a3f7b936073a5c04f98c198c4df2c19296a7a1dd4defc6fb8a404e74f7b384d",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/linkguard-data.js",
+    "sha256": "c5634bc453767191aa0e6cbd917e22e5d5405bb593cf6a775931e8eb9591d9f5",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/app.js",
+    "sha256": "72973623d75fbbf4afc4dc59b1701fc46bcbf617c3b03693a14334871a3f529a",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/index.html",
+    "sha256": "e57e89ae7e39b357455f6d0020bc93ac110429dede2b10baf52c72876027aea1",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/manifest.webmanifest",
+    "sha256": "617de10f9a850a737c1eb35bbccf77795f196147f48361d31ac964ac51137c25",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/styles.css",
+    "sha256": "c4b8dcfd1ee8f519239cff09ad5b6de812a6343a701ff045d685e4b48b21f76b",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/sw.js",
+    "sha256": "988d8769a12e9ebfcabc2b293728244f3d9babc94ad8804994289fa20be69ddf",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/open-dmsg.command",
+    "sha256": "1924a88e6628e3b1f923aee0a61fb609e8d596d2f746db209ba3f591dd8b886b",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/README_linux.txt",
+    "sha256": "4919425dccab718137d8d5677fb5ee63280a01d09982ad8e19bae5b774b0b62a",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/README_macos.txt",
+    "sha256": "3205e9f5338460aee92232382488910d9c7f532a8cabaddcee32f6b83c67a88e",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/README_windows.txt",
+    "sha256": "6ced268d2ae818dad390b369f5e0d08e2533c2b135c477fefd40c18348960510",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/run-dmsg.bat",
+    "sha256": "4ee8e482ff22299946749ccc0a772e2536b63025aeb0187f7ff5e8ad4869c8f0",
+    "original_match": true
+  },
+  {
+    "path": "apps/desktop/launchers/run-dmsg.sh",
+    "sha256": "33e6d575ce82eb0e9237bce9ae2730079f5fd1d16d388c568097245ba8ad3c77",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/debug-key/debug_cert.der",
+    "sha256": "d1d473f8a7808b416b6f555ec310287f2c028865e3af9a4188a44e91ed17f449",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/debug-key/debug_key_DO_NOT_USE_FOR_RELEASE.pem",
+    "sha256": "220f576c8f609fd55a7c88cf62e8fff030068c95b1553a0d9ffbb5bff155b98f",
+    "original_match": true
+  },
+  {
+    "path": "apps/mobile/debug-key/README.txt",
+    "sha256": "51941e805b7a3d8ad4b45ef66598fc8168050da21e2ff7537aa04a1f8c87151d",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-heads.js",
+    "sha256": "e2ee3f84951e9914e4f927b42f69d83e7dae917a3d8008bf072122e320006bbf",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-vocab.js",
+    "sha256": "75d31001ceeedadff9bde3fba2664ac6ac233dac94d31ee4b6cfb849df958d57",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/nlp/dmsg-nlp-weights.js",
+    "sha256": "0020eeb0da6a4293bb6b13f5eba129d39f41bbee79975b367faf9f8ec249dfa4",
+    "original_match": true
+  },
+  {
+    "path": "apps/shared/nlp/NLP_ASSETS_MANIFEST.json",
+    "sha256": "941480c8bbeba8ab91ce0b63d90e56aa6aaf8e5b4ddd4460a298e6d1ab9392ca",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/icons/icon-180.png",
+    "sha256": "0a6fbc731ac0ced5f54c0099358c8ca1d71f3ede8aa763f49bd5bfac9f84b681",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/icons/icon-192.png",
+    "sha256": "d50e17b338ed358f0ddb66dd8d0348e4786452577a1221abc6dccb6e1e9400b2",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/icons/icon-512.png",
+    "sha256": "285cc78b996742e86d8769e0ccb3c9e612e4a56957bb3b0a48e8fc61dcb21705",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/icons/icon-maskable-512.png",
+    "sha256": "f002294b44871a6f48adb54fa878ee7014e3191299579527a4c277c48159fec0",
+    "original_match": true
+  },
+  {
+    "path": "apps/web/icons/icon.svg",
+    "sha256": "fbbcd4fff1c0f6c7c92427119e6b0cb97db52183830f852d309bfe35db826a35",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/assets/TEAM_WORKPLAN.md",
+    "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/context_guard.py",
+    "sha256": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/core.py",
+    "sha256": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/decision_oracle.py",
+    "sha256": "c6b70ba9ca6ffa1026c3178e78a9d404fa9068eff13391215c639d0fa920fdc0",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/evaluation_gate.py",
+    "sha256": "eb9ca15f4aab3757657d624e32295a9216f9d09f20db615a2a651857eab3c8ea",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/fixtures.py",
+    "sha256": "fb6c3ff9c3254296b286028e61157e76741ecc6c921464bafa50a7f1d5c61b2f",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/model_bridge.py",
+    "sha256": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/ontology.py",
+    "sha256": "2437f340dac287781384fb6201c42ade4a164321e7404901e7099f59527734d0",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/paylock.py",
+    "sha256": "fd285bf020302ca5aad5f620395528bd1d16208f2b4c86b130c628ae9821d183",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/paylock_model.py",
+    "sha256": "5c62ddbac1e590819ce64870e23340b945dbb5a818ad7ddd35cf663afe0637a0",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/server.py",
+    "sha256": "4b9581c36769790e6dba414500d2b446688721b6fd801bbb626a07b66c1bf20d",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/session.py",
+    "sha256": "e9983b5e5706f7c5707113da1624085e94a90be31dfd1fd80f1fb8a4806601a9",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/typed_contract.py",
+    "sha256": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/prototype/__init__.py",
+    "sha256": "c57814e283cc8e1722d780dae74e12851fd852b345b81afd8ff82b2aca9cc328",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/ELENCHUS_SNM_4D.md",
+    "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/EVALUATION.md",
+    "sha256": "f298e376f10c9738577da65fe4cf4518f31889dcb16a55769ddd0110d7f03a3e",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/MODEL_CONTRACT.md",
+    "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/PLATFORM_INSTALL.md",
+    "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/PRD.md",
+    "sha256": "4a9bd77b9b16612460679eeee97ac6b849cddce6896e78b2172ae447f1414fce",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/PROMPTS.md",
+    "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/SYSTEM_PROMPT.md",
+    "sha256": "2e3e646ad3302a0cc4144ef5248aceb226e89c08c9620bdcf3e1369e02013c3c",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/references/TRACEABILITY.md",
+    "sha256": "4f880ae52ce3984533f9c44479a3223abc27beb36f1e3938a54b53b6ac8d58ff",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/evaluate_annotations.py",
+    "sha256": "6ae0ce6e508dcd42fd644b07be586b7abdbd160e43a45b24a2e138a2bc9b5334",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/evaluate_fixtures.py",
+    "sha256": "341d097c73c2a8986dc3f623612ac036dcdd4e02391ad69abe8ef0581a599dc0",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/metamorphic_audit.py",
+    "sha256": "727b328d443cedf723539b5ba990b5e5382ab3eece90ad653f2bd4719281a5b6",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/npu_readiness.py",
+    "sha256": "ef12809b136b432b75dd7f527ef6e6bb8ee798116c77b713876d8a385be44149",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/paylock_ablation.py",
+    "sha256": "db55a28ea5d0dad76a6d16890b805ae313c01df4b541ccfaebbae63864757184",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/policy.py",
+    "sha256": "0ca4dbbc801c5513d9bbcbe7f03631575a87887aa32bfd1d8473ba055dc0db34",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/run_adversarial_suite.py",
+    "sha256": "303c6385ebb6717abdb4712a816680908cb6b68a392f2e77307258a54d7376d7",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/run_fixture_demo.py",
+    "sha256": "c44ed0aca4bac71181c4b0232c6901aaa8e0748cdcc16433d369fcecc94713c6",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/smoke_zoro.py",
+    "sha256": "ace6ae49a2c43e3a0f9dcb58ae55e9308bd966f948304610548a2306bac1454c",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/scripts/validate_skill.py",
+    "sha256": "55052d9f07846a6cfe073cbbb606c9d57f6048932f18c7332be9f1ecec4f2532",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_policy.py",
+    "sha256": "50b2f6984452a2007227eb35d63c7bc500e289dd832e197b7b6cd9961a3331fe",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_prototype.py",
+    "sha256": "0b09e93b43801eaeb1f2fa8295c6d4cf26d239d163aa6568567a74c455073bf4",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_spec_alignment.py",
+    "sha256": "5bdecff03813dd7fe47e814ef0393f01e45f22ff3f1ec227347bcb69c370eb36",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v33_hardening.py",
+    "sha256": "8a3b8e1322543b861419dae689963f346174e47a10176c9e43b63bd6cd54a44d",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v34_release.py",
+    "sha256": "238974353118b8ca96af8db405764029c980e24eb682ab990b003198d28a72bf",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v35_http_integration.py",
+    "sha256": "b509f9140f00c8ceac51624eac058281770a06a029a9e8c0ef74d91a020e4b64",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v35_model_bridge.py",
+    "sha256": "07d8f7bc7ed33096cefc143a09719578c0300022c4c9e1804aca509a2ffbd58b",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v36_async.py",
+    "sha256": "a52160201a3d04e6cfa33a7e31b743a0ca9c5808336c65c9db1e0e6be2136b42",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v36_context_and_transport.py",
+    "sha256": "dd5a1fa4ca8b270246b5388eca7fdac0beec7872a0b5c8545208be61e99f89f9",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v37_evaluation_npu.py",
+    "sha256": "67dabb636750e893875d066986bb7b149de3ae73c1df1c53ce0e607c9784d208",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v37_privacy_security.py",
+    "sha256": "41016ca4a955b84629073c5bdc80915f0758d630e5823d0869cd103271be8452",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/tests/test_v38_paylock.py",
+    "sha256": "7b90a8884ed56445c73516381181ad91f7876484be13c44b2905366de144f006",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/web/index.html",
+    "sha256": "714a66cdfcf6097a475bc7605a0e65c376249677678f7008b89819715f90e72f",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/web/main.js",
+    "sha256": "6fa0bc1f172163149b59634af1cc908c97d42b9874b52a92a0e59a943d2aabe3",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/web/paylock.html",
+    "sha256": "f616a93de52cc2efcae94e24251b4f371e28a93624386b90d1d4f4a9b1bcf7da",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/web/paylock.js",
+    "sha256": "de959c11bc07ea0f4eecfc3a89aa5deaca14e73a17d956b61750d3a73682f39c",
+    "original_match": true
+  },
+  {
+    "path": "dmsg/web/style.css",
+    "sha256": "78689c2ed57f3e3cb82c89b180a9b3b50a7df0516cc2b4e7dd1ff56e207f553d",
+    "original_match": true
+  },
+  {
+    "path": "docs/team_v3_3/DMSG_PRD_v3_3.md",
+    "sha256": "718e23fabef55970ab9f2c8751e48f8500162f7e15844cb69822f460135676eb",
+    "original_match": true
+  },
+  {
+    "path": "docs/team_v3_3/DMSG_SYSTEM_PROMPTING_v3_3.md",
+    "sha256": "dee859c03f19818d3a9099025b8f99d41502cc1895a108cde8da2b93b6f7226c",
+    "original_match": true
+  },
+  {
+    "path": "docs/team_v3_3/MANIFEST.json",
+    "sha256": "b7e2c240af4ccd30dd29488bcdcb692b4a06d4ff05414d742e8636271f10b6ec",
+    "original_match": true
+  },
+  {
+    "path": "evaluation/v47_challenge/locked.freeze.json",
+    "sha256": "87156a09f7a625a557dbc5fe289c4769329a72e0cec0799e8ebc9a59baac2ad7",
+    "original_match": true
+  },
+  {
+    "path": "evaluation/v47_challenge/locked.jsonl",
+    "sha256": "2884bd187219d005b132e031471fd30c7b05f0d71b28c750a2db7b941921c63d",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/config.json",
+    "sha256": "485c8a610254c88fd681e3db29eed42267b5bf3c05a4811f12e684d7de832ef1",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/dmsg_nlp_heads_v46.json",
+    "sha256": "2a1aa9e8945b2dc78ae301ba727f9640016976b5c9189757e3dc623feac67f39",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/MODEL_CARD.md",
+    "sha256": "a5bfa06ee17910b41fab479d6c69db4d16bedeea1b73e449e6a89d1513334fd6",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/SHA256SUMS.txt",
+    "sha256": "5ef8ba513050a01a7d28c1d794c352ec722fbe83c6663fbbfdd421e7a017bba0",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/tokenizer.json",
+    "sha256": "d5c7a9a8996aca4fee55a3664381b012bd7dbb3e190061b2591c02502b7171b6",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/tokenizer_config.json",
+    "sha256": "06f6141cd1231cd88beafbcdc7860f442b2ea8115279682f29f21bf9fb20b275",
+    "original_match": true
+  },
+  {
+    "path": "models/v46/vocab.txt",
+    "sha256": "6e886927dfcecd22029b1ba80c10a1374740259c1067fc3a28d964b7ae2d55a7",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/CORPUS.json",
+    "sha256": "3423e23894a3ed28e15f19bd289b83402fb0e6381269fc02e0bb292b35759ebc",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/corrupt_manifest.apk",
+    "sha256": "3dce983903be6fd50cca808eaa7552f7507527cd83d6727e7a9c511ec22c2a64",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/mismatch_pdf.apk",
+    "sha256": "92d4ef0d3bd81e9fe82b0920b20e8b02e81b98e79377609929b388ee763e7db5",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/normal_utility.apk",
+    "sha256": "1e49945bd8c8ef660b3547e2fdc579d494e2369c8cd6bbe0e275c452f4a475bb",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/no_manifest.apk",
+    "sha256": "d5fddc7b7b4f1e298153fe72c4bd8b06d1aac2ee456243ab8727884bf035d5dd",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/obfuscated_game.apk",
+    "sha256": "8671673818c7871916d6f918d76e42996aaa1a57d553a7151da8734b1f73f5e6",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/overperm_tracker.apk",
+    "sha256": "9cadc946fcb99a779f91b1bee1a4a84cdb3393d5315d59f3b268434648bcc334",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/unsigned_benign.apk",
+    "sha256": "8c740b42c5b3ebbe1991dd555ec89e4170c8a526b46ec5af300f925fb06fd0cc",
+    "original_match": true
+  },
+  {
+    "path": "tests_data/apk_corpus/zipslip.apk",
+    "sha256": "71d968507169a4de6b63807a9eb49d8a81f92d8cb9157c7b46c03940888028e7",
+    "original_match": true
+  },
+  {
+    "path": "tools/linkguard/apk_parity.py",
+    "sha256": "1352e97b8848905773c780d6113249821cd05cdbd19789835419361b5b470256",
+    "original_match": true
+  },
+  {
+    "path": "tools/linkguard/export_linkguard_data.py",
+    "sha256": "892f5d307ab9cae579afc90ada19237960b7474b6be97f9f7fbef124d0cdab9d",
+    "original_match": true
+  },
+  {
+    "path": "tools/linkguard/make_apk_corpus.py",
+    "sha256": "5a9d8656cf2691a2fe946559fe13121fb7ba2f933218c7ec943da6ccf4685476",
+    "original_match": true
+  },
+  {
+    "path": "tools/linkguard/make_vectors.py",
+    "sha256": "2959ae96cff30dfe42499920241aefdc8b908d49c63518af9376be6b220f1c13",
+    "original_match": true
+  },
+  {
+    "path": "tools/linkguard/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/build_nlp_assets.py",
+    "sha256": "ba0eada5f6cc538e90dc779694268eb8a90f4515991c6cabdb5479572ae93b7d",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/compose_heads_v46.py",
+    "sha256": "fe199971de362d61fe88d8999cfdeb7806ed1b76b9039dbfee76a91c44beffee",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/electra_ref.py",
+    "sha256": "45289cee698733603168541d06871852a357c400ed883dd8ed95efaee248e9e8",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval_v46.py",
+    "sha256": "8e0a7d4174787579ebaf97802efc7727a5edaab80d73b89405aa21cc18ecbe13",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/extract_model_weights.py",
+    "sha256": "4d97ea9b658aae9922e83f7f90af82c9fac98eb9e7617d8479371aa58a29cc00",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/finetune_v46.py",
+    "sha256": "45e0a7c667fe433e46eb94801acf85e308cc01f20754f9df0cdfabab56d7abe3",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_handwritten.freeze.json",
+    "sha256": "a27dc4b42d41b3e02a5d446612eb44cc05a2bc2b39d2be0eb35d93d733c7e14f",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_handwritten.jsonl",
+    "sha256": "5db7355cd89ac6d7e01522dde04db5a04600bb6b0cc1aacdacf99598c318a304",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_handwritten_v2.freeze.json",
+    "sha256": "7fcd0ce3a27c5ebf65b5e386c593192a72c2b4255070ca08d08b0e3792374015",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_handwritten_v2.jsonl",
+    "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_team_ai25.freeze.json",
+    "sha256": "81aa97de118c56d4ed6824041c271a1cdfb24aab1883a1a3d3168461cba61052",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_team_ai25.jsonl",
+    "sha256": "8c9976210f0802ad2dd0f870f3aaac3bfab2e400ae1a44982e3105c7ada7da48",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_v46_multitask.freeze.json",
+    "sha256": "f73f5d52f51dfb425d323ba280a5387b5d95489489db09b30d7500dbfb3c5d6c",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/locked_v46_multitask.jsonl",
+    "sha256": "da3bf3c72323fd5b4619abe069f0fd318fd086a0a68d11730dfd39592db0817a",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/make_dataset.py",
+    "sha256": "c4779032ac5d45db0649635be8f354329b3310763428f4aca1c0cf514e5c6a2b",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/make_dataset_v46.py",
+    "sha256": "06c6c9f3457d0f225437020aedad1a0a733caecae2e13c96075f971f1e7eee6d",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/make_nlp_reference.py",
+    "sha256": "2898e985ff634ba934adb3b6818763ca6a921578cc85c18cdb5486ce876b6eb6",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/nlp_parity.js",
+    "sha256": "7554427bd5cea3fce4f40bc5d3db269e9b605d1e7dc32787e0bd844d6dc2f359",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/nlp_reference_vectors.json",
+    "sha256": "3a2fe4bad4656b8de884763a6f55fc0e033a3b04655e681a9d609a49353c3f35",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/nlp_v46.py",
+    "sha256": "15a6fa13704287e5754d497ea2ad4ca2104246978e9049a4419756f66fc70cdc",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/regress_cases_v46.js",
+    "sha256": "692a620528802fb8f41356379f1332ceec91fc0c5b41aa33c8028451c5ebb51e",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/run_nlp_batch.js",
+    "sha256": "628e061850af9f6bb50b91e216ec2a3989f20c9e001137aed4b7a9499a8b57a8",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/train_heads.py",
+    "sha256": "b90b0df22be73c1d5acebfe7f693135c0780b0917791ffb5380713a1f5a1afd0",
+    "original_match": true
+  },
+  {
+    "path": "tools/zoro/abstention_audit.py",
+    "sha256": "99522ba852892e4999ca4a3684cc5c93ad4c1752f908a78dd972cd2300469e1c",
+    "original_match": true
+  },
+  {
+    "path": "tools/zoro/trace_v48.py",
+    "sha256": "48463b5b7890d3f73b35452476fb33f0f7ff96aeb1887d3c0ddd71ef85862cf3",
+    "original_match": true
+  },
+  {
+    "path": "tools/zoro/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/calib.jsonl",
+    "sha256": "0ff8528a37cc2b53b7f605c7875232c25005144bbe2ee8c9f0602a47ac479bd4",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/locked.jsonl",
+    "sha256": "d5f6b17929580d6ab79df75d6f6494640a71e62ad5d52fb08fd9ad0e2e690211",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/train.jsonl",
+    "sha256": "e1d94445f1596bd2a51fe147c220a811d3f68ff6d38785f400b2655ba641ba35",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/v46_calib.jsonl",
+    "sha256": "8b2e4e951a2c9fd104fa58926386fb0f60a51fe9d766b3ccef775b007fd18d76",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/v46_decontamination.json",
+    "sha256": "1bf8b7ca207c7b511878bad289378c7144caf0607ef1ff9152e0f87c5f55eb6c",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/v46_locked.jsonl",
+    "sha256": "79c3727e7a0907fdd938f011fc5c643d78cc1be50bb84e14e0310c843b35b4ff",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/data/v46_train.jsonl",
+    "sha256": "4d49e9bba83cd4f301d646cfb3ee46e39ab10bac6def15e949043402adebd915",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/eval_v1_frozen_heads_first_touch.json",
+    "sha256": "dab303345dc0364475a9346db2438fa1cc998d381f5734fc1bbfb194bcd1e5a8",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/nlp_eval_report_v45_dev_only.json",
+    "sha256": "2f26e1a1f464f88bf43cd18fe716aa7514600606476799effaee653461647514",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/nlp_eval_report_v45_final.json",
+    "sha256": "935e9ea505d4f06228388c6c5fa42149777b62742c5e14321c648aafc9277a27",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_dev_eval.json",
+    "sha256": "e9719bc2e0d874c10768f2ae365ad7958d48f6a1eac56de3ccc159d5d2eb33ea",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_golden_snapshot.json",
+    "sha256": "9804a96bf96fc1a131dadb9fd9a71eff3794511da1b55b3b256810ab13aca640",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_model_selection.json",
+    "sha256": "b122bf835f5a5c7657ed56efd0869aa9723aace37236b41041b1e63c53f72638",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b2h.json",
+    "sha256": "b9834dc4b60e602db0f3dfaa7f97a70e74e285ba39484b2b633381d95702fb9d",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4h.json",
+    "sha256": "8ffba1ab0fd952fd1b32c85a80a868711cee2290f7fa5e1df760c5921451c928",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4hl.json",
+    "sha256": "74e3591b7765e23b3639a8891c0b957d83631ab0dff59259e347171513f84e13",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b4n.json",
+    "sha256": "676d7cc18b99d9e06101633e3c0e2c546fbf0743211b79d4df75abd36fde4576",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_b8n.json",
+    "sha256": "1ab858e4b322b08ae1d4d34061948e32a71a235ae6c469ce9609953eec639f0a",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_train_log_c0.json",
+    "sha256": "5eefd703026a513431961f2a189667355c0579731d713a8088538237c610a820",
+    "original_match": true
+  },
+  {
+    "path": "tools/nlp/eval/v46_vs_v45_locked_report.json",
+    "sha256": "0fd0b313ad4356abb0f6be6578403440427762fed577d6ec8e10d19ee0e35603",
+    "original_match": true
+  }
+]

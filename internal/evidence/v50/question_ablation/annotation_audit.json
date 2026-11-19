@@ -1,0 +1,27 @@
+{
+  "status": "ANNOTATION_ISSUE_RECORDED_ORIGINAL_UNCHANGED",
+  "original_case": {
+    "action": "none",
+    "author_id": "codex_ai_draft_for_jinmyeong",
+    "authorship": "AI_GENERATED_USER_ACCEPTED",
+    "expect": [
+      "NO_STRONG_SIGNAL"
+    ],
+    "human_review_status": "ACCEPTED_TO_PROCEED_BY_USER",
+    "id": "AI-JM-02",
+    "independent_eval_eligible": false,
+    "labels_status": "USER_ACCEPTED_AI_PROPOSAL",
+    "rationale": "방문 안내만 있으며 송금·정보 제공·설치 요청이 없다.",
+    "risky": false,
+    "speech": "INFORMATION",
+    "synthetic": true,
+    "text": "📚 예약하신 도서가 도착했습니다. 도서관 운영 시간 안에 방문해 주세요."
+  },
+  "issue": "INFORMATION conflicts with the explicit harmless direct request 방문해 주세요. The action none can mean no listed sensitive action, but does not imply informational speech.",
+  "proposed_review": {
+    "requested_action": "outside_listed_categories",
+    "speech": "direct_request"
+  },
+  "scoring_rule": "Original expected guidance and labels remain byte-identical. Report issue; do not silently relabel or retroactively improve original scores.",
+  "independent_eval": false
+}

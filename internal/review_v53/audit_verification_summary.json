@@ -1,0 +1,67 @@
+{
+  "review_date_kst": "2026-11-19",
+  "review_version": "1.0",
+  "product_package": "5.3",
+  "active_engine": "5.1",
+  "active_profile": "v51-specific-candidate",
+  "new_live_model_calls": 0,
+  "source_unchanged": true,
+  "execution_manifest_verified": true,
+  "tests": [
+    {
+      "command": "python -m unittest tests_v51.test_execution -v",
+      "passed": 13,
+      "failed": 0,
+      "scope": "offline current evaluator, binding, policy and SQLite"
+    },
+    {
+      "command": "python -m unittest tests_v51.test_profiles -v",
+      "passed": 12,
+      "failed": 0,
+      "scope": "offline question and profile contracts"
+    },
+    {
+      "command": "node tests_v53/test_choice_ui.js",
+      "passed": 16,
+      "failed": 0,
+      "scope": "production UI JavaScript in minimal DOM; no real browser rendering; root-observed tool output"
+    }
+  ],
+  "reproductions": [
+    {
+      "id": "NEW_UNCERTAIN_INPUT_NO_NEW_TASK",
+      "status": "REPRODUCED",
+      "first_action": "ASK_HUMAN",
+      "second_action": "ASK_HUMAN",
+      "second_reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+      "second_disposition": "REPORTED_TASK_RETAINED_NOT_VERIFIED",
+      "open_task_count": 0,
+      "different_inputs": true,
+      "fixture_injection_count": 2,
+      "all_model_states_are_current_text_only": true
+    },
+    {
+      "id": "NEW_DECIDE_ENDPOINT_PREFLIGHT",
+      "status": "REPRODUCED",
+      "error": "INVALID_MODEL_ENDPOINT",
+      "network_calls": 0
+    }
+  ],
+  "ai24_recalculation": {
+    "status": "PASS",
+    "labels": 24,
+    "raw_records": 48,
+    "result_records": 48,
+    "all_counts_and_id_sets_match": true,
+    "independent_human_validation": false
+  },
+  "not_run": [
+    "new live Zoro inference",
+    "presentation-device end-to-end run",
+    "browser visual QA",
+    "Android/iOS device",
+    "bank or external verification",
+    "submission"
+  ],
+  "review_artifacts_only": true
+}

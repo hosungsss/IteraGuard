@@ -1,0 +1,31 @@
+✔ v56 queue selection keeps each task addressable and clears on new session (4.1623ms)
+✔ close locks input and reopen preserves risk without restoring current judgment (1.9662ms)
+✔ reload restores closed session without creating session or restoring any text (1.1739ms)
+✔ saved identifiers allow returning to a prior archived session (1.1664ms)
+✔ late input or review change invalidates result and later refresh (1.9519ms)
+✔ policy drift rejects a late result and refresh cannot reapply it (1.1201ms)
+✔ reported task disables new observation and displays current-turn vs retained risk separately (1.0927ms)
+✔ arbiter buttons do not hide or change the source controls (14.4204ms)
+✔ human review applies to a valid Zoro no-signal result (27.6166ms)
+✔ human review never weakens a Zoro pause (4.6119ms)
+✔ edited text rejects a late model response even if edited back (2.6594ms)
+✔ policy change rejects an in-flight response (2.6443ms)
+✔ session advancement rejects an in-flight response (3.0649ms)
+✔ changing review option rejects an in-flight response (2.4848ms)
+✔ clear hides a completed result (3.0442ms)
+✔ desktop results and history explicitly remain per-text analysis, not session risk clearance (5.2533ms)
+✔ arena refresh does not restore a result after input editing (1.9417ms)
+✔ arena refresh can show the unchanged input result (0.9418ms)
+✔ arena explains current-turn no-signal separately from a prior-risk hold, including refresh (0.9719ms)
+✔ arena prior-risk explanation follows the actual current-turn action (1.3706ms)
+✔ arena clears prior-risk explanation after edits, stale refresh, and a new session (1.1958ms)
+✔ v53 separate action and speech probabilities and finish hold visibly (3.453ms)
+✔ v53 arena hold is explicitly complete, including retained prior risk (1.6691ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2771.6439

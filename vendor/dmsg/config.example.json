@@ -1,0 +1,31 @@
+{
+  "skill_id": "dmsg",
+  "skill_version": "4.0",
+  "product_working_title": "의심계 / Scam Intervention Arena",
+  "model": {
+    "engine_mode": "FIXTURE",
+    "model_id": null,
+    "checkpoint_revision": null,
+    "endpoint": null,
+    "decision_temperature": null,
+    "model_attested": false
+  },
+  "safety": {
+    "real_call_interception": false,
+    "send_actual_sms": false,
+    "collect_credentials": false,
+    "freeze_bank_transfers": false,
+    "persist_raw_transcripts": false
+  },
+  "evaluation": {
+    "split_unit": "scenario_family",
+    "thresholds_pending_validation": true,
+    "report_mode_on_every_dashboard": true
+  },
+  "prototype": {
+    "runtime": "FIXTURE_DEFAULT_OPTIONAL_MODEL_UNATTESTED",
+    "free_text_path": "ASK_HUMAN_UNLESS_OPERATOR_MODEL_ENDPOINT_CONFIGURED",
+    "live_endpoint_verified": false,
+    "human_annotation_origin_required": true
+  }
+}

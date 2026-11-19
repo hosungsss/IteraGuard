@@ -1,0 +1,89 @@
+{
+  "model_id": "trillionlabs/Zoro",
+  "revision": "e8b7dc33b6e30b01ba59c46364fced85342ff4ff",
+  "official_metadata_url": "https://huggingface.co/api/models/trillionlabs/Zoro/tree/e8b7dc33b6e30b01ba59c46364fced85342ff4ff",
+  "all_pass": true,
+  "files": [
+    {
+      "file": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "status": "PASS"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2640,
+      "sha256": "a959b3f2fe6b0e1814f819788eb4e2ba6c0f607bf1bfda5a64b327d7f5354217",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "a51424f7ed708a48ec4014fba173cac05495472e",
+      "status": "PASS"
+    },
+    {
+      "file": "README_ko.md",
+      "bytes": 2988,
+      "sha256": "287480e39bd40e21d4ac6e241fc666a7cc4a47d9a5ef58f719697f488c0ede6a",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "5808ddff4cad321486417c40fa251dbe0bfe7a78",
+      "status": "PASS"
+    },
+    {
+      "file": "block_diffusion.json",
+      "bytes": 64,
+      "sha256": "504d211eea34eaaa201c02002707dbe0912a5bf007034ead597afcd3b5e8e7b3",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "d8c6720b2bc0c52852dfbc62440cf83e180286c4",
+      "status": "PASS"
+    },
+    {
+      "file": "chat_template.jinja",
+      "bytes": 7816,
+      "sha256": "72b36c740ff9c52a62fd194831b0c4160148b7e09831994e004a5b800a3344b1",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "1f01a6fd6aba12810be8ec436df059a19a8dfbe3",
+      "status": "PASS"
+    },
+    {
+      "file": "config.json",
+      "bytes": 1979,
+      "sha256": "fac3e102e70caa133140a07ce9d218629e1e026aa74828803ed0d64424743385",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "1fdc845a0840a3c873fe2aa9dd5eb0b2a00d0995",
+      "status": "PASS"
+    },
+    {
+      "file": "generation_config.json",
+      "bytes": 179,
+      "sha256": "78fe3fdcdf0cb32a4d9462a7adcca455719f82726d20feed310d8cb40812ea5f",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "3a92a405ca8435d91e8ec03e5bd8c7441aba68ea",
+      "status": "PASS"
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 9680472424,
+      "sha256": "fb015df41f21b290d0103a35a23859144b6add47686190fa4aa75be7ca9c24b1",
+      "official_digest_kind": "SHA256_LFS",
+      "official_digest": "fb015df41f21b290d0103a35a23859144b6add47686190fa4aa75be7ca9c24b1",
+      "status": "PASS"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 19989510,
+      "sha256": "37b81042a52194b32681508d12faf484b1d9052501b1f564f2da1388865ebdf0",
+      "official_digest_kind": "SHA256_LFS",
+      "official_digest": "37b81042a52194b32681508d12faf484b1d9052501b1f564f2da1388865ebdf0",
+      "status": "PASS"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 1172,
+      "sha256": "9f1118d4176937ffb80f2fb3ad3ff59b70f238bef59cd9c91579e3209a690ac6",
+      "official_digest_kind": "GIT_BLOB_SHA1",
+      "official_digest": "3c19820a928be95cf7d64f664e4a0f588f69b20b",
+      "status": "PASS"
+    }
+  ],
+  "weights_in_package": false
+}

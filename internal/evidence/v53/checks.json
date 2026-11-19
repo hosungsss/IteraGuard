@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests_v51",
+      "-v"
+    ],
+    "exit_code": 1,
+    "log": "check_0.log"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests_v52",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "check_1.log"
+  },
+  {
+    "command": [
+      "node",
+      "tests_v50/test_session_ui.js"
+    ],
+    "exit_code": 0,
+    "log": "check_2.log"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "tools/build_distribution_v51.py"
+    ],
+    "exit_code": 1,
+    "log": "check_3.log"
+  }
+]

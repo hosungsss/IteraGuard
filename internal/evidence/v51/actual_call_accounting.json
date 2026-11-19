@@ -1,0 +1,11 @@
+{
+  "experiment_actual_calls": 544,
+  "runtime_actual_calls": 13,
+  "total_new_actual_calls": 557,
+  "provider_original_counter": 792,
+  "provider_final_counter": 1349,
+  "provider_total_delta": 557,
+  "schema_provider_errors_in_registered_experiments": 0,
+  "human_independent_evaluation": "NOT_RUN",
+  "replays_are_new_model_calls": false
+}

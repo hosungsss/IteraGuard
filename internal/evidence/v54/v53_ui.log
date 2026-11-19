@@ -1,0 +1,25 @@
+✔ arbiter buttons do not hide or change the source controls (14.5342ms)
+✔ human review applies to a valid Zoro no-signal result (27.266ms)
+✔ human review never weakens a Zoro pause (4.1554ms)
+✔ edited text rejects a late model response even if edited back (2.1759ms)
+✔ policy change rejects an in-flight response (2.2252ms)
+✔ session advancement rejects an in-flight response (2.6373ms)
+✔ changing review option rejects an in-flight response (2.0682ms)
+✔ clear hides a completed result (2.5375ms)
+✔ desktop results and history explicitly remain per-text analysis, not session risk clearance (4.6505ms)
+✔ arena refresh does not restore a result after input editing (2.4577ms)
+✔ arena refresh can show the unchanged input result (1.2984ms)
+✔ arena explains current-turn no-signal separately from a prior-risk hold, including refresh (1.3878ms)
+✔ arena prior-risk explanation follows the actual current-turn action (1.8447ms)
+✔ arena clears prior-risk explanation after edits, stale refresh, and a new session (1.4038ms)
+✔ v53 separate action and speech probabilities and finish hold visibly (2.5435ms)
+✔ v53 arena hold is explicitly complete, including retained prior risk (2.5377ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2764.7089
+

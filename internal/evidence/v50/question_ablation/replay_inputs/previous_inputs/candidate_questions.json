@@ -1,0 +1,246 @@
+{
+  "artifact": "EXPERIMENT_ONLY_QUESTION_CANDIDATES",
+  "version": "candidate-design-v1",
+  "date_kst": "2026-11-04",
+  "status": "DESIGNED_AFTER_SEEN_BASELINE_BEFORE_CANDIDATE_INFERENCE",
+  "product_default_modified": false,
+  "model_calls_by_designer": 0,
+  "base_source": "/home/ljmpc12/Documents/hackton/deliverables/v50_readiness_20261104/sources/IteraGuard_DoubtMeter_v4_9_FULL/IteraGuard_DoubtMeter_v4.9/configs/v48_source_contract.json",
+  "base_questions_sha256_canonical_json": "66f58e9c92aa1849404fa9de2cddbc540c108f78ca990398969bcfa570e03099",
+  "baseline_results_sha256": "1b6aabfae447421c5c47dbeaf36ee7bf813486ded43cfb949a1955a9fe82d2f6",
+  "contract_invariants": {
+    "question_ids_and_order_preserved": true,
+    "question_types_preserved": true,
+    "choice_labels_and_order_preserved": true,
+    "score_levels_and_order_preserved": true,
+    "required_optional_sets_preserved": true,
+    "protected_q_claim_definition_unchanged": true,
+    "q_scam_q_claim_q_pressure_q_risk_byte_content_unchanged": true,
+    "policy_code_costs_thresholds_unchanged": true,
+    "L2_G7_and_L1_approval_state_unchanged": true
+  },
+  "change_scope": "Each candidate changes only q_action.instructions, q_action.criteria.none, q_speech.instructions, q_evidence.instructions. Key/label/type compatibility is preserved, but the semantic scope of none is intentionally revised; this is a new prompt contract, not the original contract.",
+  "design_hypotheses": [
+    {
+      "id": "H1",
+      "observation": "The original q_action none=no requested action has no category for harmless requests outside the listed actions.",
+      "candidate_response": "Define none as absence of any listed current action and keep harmless direct requests direct in q_speech.",
+      "remaining": "Legacy none/direct conflict is retained and may still force ASK_HUMAN; prompt alone is not a complete resolution."
+    },
+    {
+      "id": "H2",
+      "observation": "Speech type can favor warning/quote over a current command in a later clause, and negative secrecy is not a protective warning.",
+      "candidate_response": "Explicit whole-utterance scope, independent questions, and separate current request wording.",
+      "remaining": "Rules cannot prove the semantic relation; measure errors both ways."
+    },
+    {
+      "id": "H3",
+      "observation": "q_evidence may deny sufficient information when no risky action or pressure is present in a complete notice.",
+      "candidate_response": "Sufficient information may establish absence; unresolved object/reference remains insufficient.",
+      "remaining": "No assumption that absent pressure or high evidence means safe/fraud-free."
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "EN_SCOPE_V1",
+      "language": "English",
+      "questions": {
+        "q_action": {
+          "type": "choice",
+          "instructions": "Which listed action is the current speaker asking the listener to take now? Classify a requested action, not a word merely mentioned in a warning, quotation, past report, or completed notice. A warning not to disclose credentials is not a disclosure request. A demand to conceal the matter from family or advisers is a secrecy request even when phrased negatively. Examine every clause: a separate present request remains a request after a warning or quotation. Use none when no listed action is currently requested, including an ordinary request outside these categories. Use unclear when the requested action cannot be determined from this text. A legitimate transfer request is still transfer; do not infer criminality.",
+          "criteria": {
+            "transfer": "transfer money",
+            "otp": "disclose one-time credential",
+            "remote_install": "install or grant remote access",
+            "personal_data": "disclose personal data",
+            "link": "open link",
+            "secrecy": "conceal from others",
+            "none": "no current request for any listed action; includes no request or an ordinary request outside the listed categories",
+            "unclear": "unclear"
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "instructions": "Classify how the current speaker addresses the listener in this entire utterance, independently of other answers. direct_request includes questions or indirect wording that actually ask the listener to act, including ordinary harmless actions. A demand not to tell family or advisers is a direct secrecy request, not a protective warning. reported_or_quoted applies when another or past request is only reported; negated_or_warning applies when the speaker warns against an action without separately requesting it. If a quotation or warning is followed by a separate current request, classify that request. informational means facts or completed events with no requested action. Use unclear when the intended speech act cannot be resolved.",
+          "criteria": {
+            "direct_request": "speaker directly asks listener to do it",
+            "reported_or_quoted": "someone reports or quotes it",
+            "negated_or_warning": "speaker warns not to do it",
+            "unclear": "insufficient context",
+            "informational": "speaker only states or reports information and asks for no action"
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+        },
+        "q_claim": {
+          "type": "noul",
+          "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+        },
+        "q_pressure": {
+          "type": "noul",
+          "instructions": "Does the speaker pressure urgency or secrecy?"
+        },
+        "q_risk": {
+          "type": "score",
+          "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+          "criteria": [
+            "none",
+            "low",
+            "moderate",
+            "high"
+          ]
+        },
+        "q_evidence": {
+          "type": "noul",
+          "instructions": "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification."
+        }
+      },
+      "questions_sha256_canonical_json": "b637c4b5ef46cf0f81b400df2d3e5fdac8a537c64dbea223f732d8ca335c12ac",
+      "changed_json_fields": [
+        {
+          "json_pointer": "/q_action/instructions",
+          "before": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+          "after": "Which listed action is the current speaker asking the listener to take now? Classify a requested action, not a word merely mentioned in a warning, quotation, past report, or completed notice. A warning not to disclose credentials is not a disclosure request. A demand to conceal the matter from family or advisers is a secrecy request even when phrased negatively. Examine every clause: a separate present request remains a request after a warning or quotation. Use none when no listed action is currently requested, including an ordinary request outside these categories. Use unclear when the requested action cannot be determined from this text. A legitimate transfer request is still transfer; do not infer criminality."
+        },
+        {
+          "json_pointer": "/q_action/criteria/none",
+          "before": "no requested action",
+          "after": "no current request for any listed action; includes no request or an ordinary request outside the listed categories"
+        },
+        {
+          "json_pointer": "/q_speech/instructions",
+          "before": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+          "after": "Classify how the current speaker addresses the listener in this entire utterance, independently of other answers. direct_request includes questions or indirect wording that actually ask the listener to act, including ordinary harmless actions. A demand not to tell family or advisers is a direct secrecy request, not a protective warning. reported_or_quoted applies when another or past request is only reported; negated_or_warning applies when the speaker warns against an action without separately requesting it. If a quotation or warning is followed by a separate current request, classify that request. informational means facts or completed events with no requested action. Use unclear when the intended speech act cannot be resolved."
+        },
+        {
+          "json_pointer": "/q_evidence/instructions",
+          "before": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers.",
+          "after": "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification."
+        }
+      ],
+      "expected_effects": [
+        "Clarify requested vs merely mentioned action; treat secrecy demands as actual requests.",
+        "Do not let a quoted warning erase a separate current request.",
+        "Recognize sufficient evidence for complete no-action informational text."
+      ],
+      "known_remaining_policy_limits": [
+        "A harmless direct request can still correctly produce none+direct_request, which the unchanged original guard rejects. This candidate must not mislabel it informational just to bypass that guard.",
+        "Original none+action-term lexical guard can still reject warnings even with improved model labels.",
+        "The original0.70 gates and DRA costs/aggregation are unchanged; a prompt improvement does not calibrate probabilities.",
+        "A normal direct money transfer remains transfer; whether to pause such contexts is a policy/rubric issue, not solved by calling it none.",
+        "No new action option or multi-action representation is added; unresolved simultaneous actions remain a limitation."
+      ]
+    },
+    {
+      "candidate_id": "KR_SCOPE_V1",
+      "language": "Korean wording for the same three-question scope clarification",
+      "questions": {
+        "q_action": {
+          "type": "choice",
+          "instructions": "현재 화자가 청자에게 지금 하라고 요구하는 행동은 선택지 중 무엇인가? 경고·인용·과거 보고·완료 안내에 단어가 등장했다는 이유로 요청을 만들지 말고, 실제로 요구한 행동을 분류한다. 인증정보를 알려주지 말라는 경고는 공개 요청이 아니다. 가족이나 조언자에게 이 일을 숨기라는 요구는 부정형이어도 비밀 유지(secrecy) 요청이다. 모든 절을 살펴라. 경고나 인용 뒤에 별도의 현재 요청이 있으면 그 요청은 남아 있다. 현재 요구한 행동이 선택지의 어느 행동에도 해당하지 않으면 none으로 분류하며, 여기에 해당 범주 밖의 일상적인 요청도 포함한다. 이 텍스트로 요구 행동을 알 수 없으면 unclear다. 정상적인 송금 요청도 transfer이며 범죄 여부를 추정하지 않는다.",
+          "criteria": {
+            "transfer": "transfer money",
+            "otp": "disclose one-time credential",
+            "remote_install": "install or grant remote access",
+            "personal_data": "disclose personal data",
+            "link": "open link",
+            "secrecy": "conceal from others",
+            "none": "현재 나열된 어느 행동도 요구하지 않음; 요청 자체가 없거나 나열된 범주 밖의 일상적 요청인 경우 포함",
+            "unclear": "unclear"
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "instructions": "다른 질문의 답을 가정하지 말고 발화 전체에서 현재 화자가 청자에게 말하는 방식을 분류한다. direct_request에는 질문형이나 간접 표현으로 실제 행동을 요구하는 경우와 무해한 일상적 요청도 포함한다. 가족이나 조언자에게 알리지 말라는 요구는 보호 목적의 경고가 아니라 직접적인 비밀 유지 요청이다. reported_or_quoted는 다른 사람의 요청이나 과거 요청을 전달만 하는 경우다. negated_or_warning은 어떤 행동을 하지 말라고 경고하며 별도로 그 행동을 요구하지 않는 경우다. 인용이나 경고 뒤에 별도의 현재 요청이 있으면 그 요청을 분류한다. informational은 행동 요구 없이 사실이나 완료된 사건만 알리는 경우다. 의도한 화행을 해결할 수 없으면 unclear다.",
+          "criteria": {
+            "direct_request": "speaker directly asks listener to do it",
+            "reported_or_quoted": "someone reports or quotes it",
+            "negated_or_warning": "speaker warns not to do it",
+            "unclear": "insufficient context",
+            "informational": "speaker only states or reports information and asks for no action"
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+        },
+        "q_claim": {
+          "type": "noul",
+          "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+        },
+        "q_pressure": {
+          "type": "noul",
+          "instructions": "Does the speaker pressure urgency or secrecy?"
+        },
+        "q_risk": {
+          "type": "score",
+          "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+          "criteria": [
+            "none",
+            "low",
+            "moderate",
+            "high"
+          ]
+        },
+        "q_evidence": {
+          "type": "noul",
+          "instructions": "제공된 텍스트만으로 현재 요구 행동 또는 그 부재, 화행, 압박 표현의 유무를 분류할 정보가 충분한가? 민감한 행동 요구나 압박 표현이 없어도 완결된 정보 안내나 명시적인 경고는 충분한 정보를 줄 수 있다. 해결되지 않는 지시어, 요구 대상의 누락, 필요한 맥락의 부재 때문에 그 분류를 할 수 없으면 no다. 다른 질문의 답이나 외부 신원 검증을 가정하지 말고 이 텍스트를 독립적으로 평가한다."
+        }
+      },
+      "questions_sha256_canonical_json": "df47200131a7e4d7f33097981d6f7b2f600b640e6990dba1ee5283d15c4a3c1b",
+      "changed_json_fields": [
+        {
+          "json_pointer": "/q_action/instructions",
+          "before": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+          "after": "현재 화자가 청자에게 지금 하라고 요구하는 행동은 선택지 중 무엇인가? 경고·인용·과거 보고·완료 안내에 단어가 등장했다는 이유로 요청을 만들지 말고, 실제로 요구한 행동을 분류한다. 인증정보를 알려주지 말라는 경고는 공개 요청이 아니다. 가족이나 조언자에게 이 일을 숨기라는 요구는 부정형이어도 비밀 유지(secrecy) 요청이다. 모든 절을 살펴라. 경고나 인용 뒤에 별도의 현재 요청이 있으면 그 요청은 남아 있다. 현재 요구한 행동이 선택지의 어느 행동에도 해당하지 않으면 none으로 분류하며, 여기에 해당 범주 밖의 일상적인 요청도 포함한다. 이 텍스트로 요구 행동을 알 수 없으면 unclear다. 정상적인 송금 요청도 transfer이며 범죄 여부를 추정하지 않는다."
+        },
+        {
+          "json_pointer": "/q_action/criteria/none",
+          "before": "no requested action",
+          "after": "현재 나열된 어느 행동도 요구하지 않음; 요청 자체가 없거나 나열된 범주 밖의 일상적 요청인 경우 포함"
+        },
+        {
+          "json_pointer": "/q_speech/instructions",
+          "before": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+          "after": "다른 질문의 답을 가정하지 말고 발화 전체에서 현재 화자가 청자에게 말하는 방식을 분류한다. direct_request에는 질문형이나 간접 표현으로 실제 행동을 요구하는 경우와 무해한 일상적 요청도 포함한다. 가족이나 조언자에게 알리지 말라는 요구는 보호 목적의 경고가 아니라 직접적인 비밀 유지 요청이다. reported_or_quoted는 다른 사람의 요청이나 과거 요청을 전달만 하는 경우다. negated_or_warning은 어떤 행동을 하지 말라고 경고하며 별도로 그 행동을 요구하지 않는 경우다. 인용이나 경고 뒤에 별도의 현재 요청이 있으면 그 요청을 분류한다. informational은 행동 요구 없이 사실이나 완료된 사건만 알리는 경우다. 의도한 화행을 해결할 수 없으면 unclear다."
+        },
+        {
+          "json_pointer": "/q_evidence/instructions",
+          "before": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers.",
+          "after": "제공된 텍스트만으로 현재 요구 행동 또는 그 부재, 화행, 압박 표현의 유무를 분류할 정보가 충분한가? 민감한 행동 요구나 압박 표현이 없어도 완결된 정보 안내나 명시적인 경고는 충분한 정보를 줄 수 있다. 해결되지 않는 지시어, 요구 대상의 누락, 필요한 맥락의 부재 때문에 그 분류를 할 수 없으면 no다. 다른 질문의 답이나 외부 신원 검증을 가정하지 말고 이 텍스트를 독립적으로 평가한다."
+        }
+      ],
+      "expected_effects": [
+        "Clarify requested vs merely mentioned action; treat secrecy demands as actual requests.",
+        "Do not let a quoted warning erase a separate current request.",
+        "Recognize sufficient evidence for complete no-action informational text."
+      ],
+      "known_remaining_policy_limits": [
+        "A harmless direct request can still correctly produce none+direct_request, which the unchanged original guard rejects. This candidate must not mislabel it informational just to bypass that guard.",
+        "Original none+action-term lexical guard can still reject warnings even with improved model labels.",
+        "The original0.70 gates and DRA costs/aggregation are unchanged; a prompt improvement does not calibrate probabilities.",
+        "A normal direct money transfer remains transfer; whether to pause such contexts is a policy/rubric issue, not solved by calling it none.",
+        "No new action option or multi-action representation is added; unresolved simultaneous actions remain a limitation."
+      ]
+    }
+  ],
+  "evaluation_instructions": [
+    "Freeze this full artifact hash and each canonical questions hash before candidate calls.",
+    "Send the same original73seen inputs; skip blankV34. Do not send labels, rationale, expected action or case ID as model state.",
+    "For each candidate, make fresh typed calls and apply unchanged legacy0.70 and unchangedDRA to the same fresh response.",
+    "Preserve raw responses, requesthash, modelstatus, allgates, finalreason, client/provider latency and failures.",
+    "Report every candidate, not only the winner; compare by dataset, including all degraded IDs.",
+    "ENvsKR is a comparison of wording language in three questions; four auxiliary questions and most choice descriptions remain English. It is not a fully Korean request catalog.",
+    "Three responsibilities change together. If result improves, do separate one-question ablations before attributing improvement specifically to none, speech or evidence.",
+    "Do not merge candidate questions into product defaults or alter team-held L2/G7/q_claim/L1 decisions during this experiment."
+  ],
+  "selection_bias_notice": "Designed using known failure categories and fresh results on previously seen48+25 authored synthetic development cases. Candidate comparisons are post-hoc development experiments, not independent evaluation or proof of general Korean quality. Choosing the better of EN/KR on this set is model-selection bias. Final adoption requires a separately fixed rubric/validation and new locked family/session data.",
+  "acceptance_review": "No numerical performance target is invented here. Inspect normal abstention/strong-pause, risky-context clearance, requiredPAUSEmiss, nonabstainedappropriateness, validity and latency together. The existingV47/V38 andAI19/22/24 sentinel failures remain mandatory reporting cases.",
+  "limitations": [
+    "Larger/clearer prompts change token count and latency; report these overheads.",
+    "No model weights, tokenizer, temperature, cost matrix, threshold or question labels are changed.",
+    "Although7wirekeys remain, revised label semantics need explicit prompt-version tracking."
+  ]
+}

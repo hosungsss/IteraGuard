@@ -1,0 +1,41 @@
+{
+  "version": "5.0",
+  "checks": "manifest,metadata,skill_source,source_to_app_assets,artifact_hashes,optional_archive",
+  "file_count": 486,
+  "issues": [],
+  "pass": true,
+  "source_to_app_freshness": {
+    "status": "PASS",
+    "copied_asset_count": 22,
+    "missing_source": [],
+    "missing_assets": [],
+    "extra_assets": [],
+    "changed_assets": [],
+    "apk_pwa_equivalence": {
+      "status": "PASS_ASSETS_ONLY",
+      "assets_equal_web_bundle": true,
+      "zip_crc": true,
+      "expected_asset_count": 23,
+      "actual_asset_count": 23,
+      "bundle": {
+        "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_web_pwa.zip",
+        "sha256": "f5d20e6ff03e5f19c6192ed7c22bd976a5a37f24b61e3e5d6d313d76bfe2afca",
+        "source": "PACKAGED_PWA_NOT_STAGING"
+      },
+      "missing_assets": [],
+      "extra_assets": [],
+      "changed_assets": [],
+      "signature_validation": "NOT_RUN_IN_ASSETS_ONLY_MODE",
+      "device_install_and_run": "NOT_RUN",
+      "note": "APK/PWA artifact equality only; edited source requires a separate rebuild and release verification."
+    },
+    "scope": "Current copied source bytes -> PWA -> APK web assets. No binary/device execution claim.",
+    "generated_assets_excluded_from_source_comparison": [
+      "build-info.js",
+      "sw.js"
+    ]
+  },
+  "real_model_verified": false,
+  "host_install_verified": false,
+  "note": "Source edits require new release packaging; this verifier never blesses stale manifests or rebuilds artifacts."
+}

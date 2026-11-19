@@ -1,0 +1,18 @@
+Question profiles verified
+v5.1 base engine verified
+STALE_V51_SEMANTIC_DATA: apps/shared/v51-semantic-data.js
+======================================================================
+ERROR: test_generated_data_matches_source (test_semantic_parity.SemanticParityTest.test_generated_data_matches_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/IteraGuard_v52_workspace/[v5.1] IteraGuard_DoubtMeter/tests_v51/test_semantic_parity.py", line 70, in test_generated_data_matches_source
+    subprocess.check_call([sys.executable, "tools/export_v51_semantic.py", "--check"], cwd=ROOT)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 419, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/opt/pyvenv/bin/python', 'tools/export_v51_semantic.py', '--check']' returned non-zero exit status 1.
+
+----------------------------------------------------------------------
+Ran 75 tests in 17.784s
+
+FAILED (errors=1, skipped=2)

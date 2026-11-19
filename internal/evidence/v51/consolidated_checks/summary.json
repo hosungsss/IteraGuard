@@ -1,0 +1,434 @@
+{
+  "schema_version": "v51-consolidated-checks/1",
+  "created_utc": "2026-11-04T10:29:29.267661+00:00",
+  "status": "PASS_WITH_DECLARED_OPTIONAL_SKIPS",
+  "source_root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "rows": [
+    [
+      "Python v5.1 discovery",
+      "75 discovered; 73 PASS, 2 optional offline development replay SKIP"
+    ],
+    [
+      "Python v4.9 discovery + HTTP retry",
+      "64/64 PASS after authorized local socket retry; stub generation HTTP 3 reused from initial elevated attempt"
+    ],
+    [
+      "Python v5.0 discovery + corrected HTTP",
+      "42/42 PASS; old manifest version expectation ported to 5.1; static 503 regression preserved"
+    ],
+    [
+      "Post-fix Python execution/session",
+      "30/30 PASS (13 v5.1 execution + 17 lifecycle), overlap excluded from totals"
+    ],
+    [
+      "Node UI/desktop/session",
+      "59/59 PASS (14+6+6+21+12)"
+    ],
+    [
+      "Node evidence display",
+      "18/18 checks PASS"
+    ],
+    [
+      "Protected original Python core",
+      "26/26 source file hashes unchanged versus organized v5.0"
+    ]
+  ],
+  "unique_python_discovered": 181,
+  "unique_python_passed": 179,
+  "unique_python_skipped": 2,
+  "unique_python_unresolved_failures": 0,
+  "node_test_cases_passed": 59,
+  "node_evidence_checks_passed": 18,
+  "original_python_files_unchanged": 26,
+  "commands_and_logs": {
+    "python_v51": {
+      "name": "python_v51",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v51",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:25:55.067319+00:00",
+      "elapsed_s": 4.532,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_v51.log",
+      "log_sha256": "0b176555b09c464ebe61362f36ddb0eb66acb9ccba55b15b216ac7028fba1319",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 75,
+      "skip_lines": [
+        "test_captured_old_development_responses_full_result (test_semantic_parity.SemanticParityTest.test_captured_old_development_responses_full_result) ... skipped 'Optional old dev98 replay path not supplied'",
+        "test_captured_specified_development133_full_result (test_semantic_parity.SemanticParityTest.test_captured_specified_development133_full_result) ... skipped 'Optional specified dev133 replay path not supplied'",
+        "OK (skipped=2)"
+      ]
+    },
+    "python_v49": {
+      "name": "python_v49",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v49",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:25:55.076937+00:00",
+      "elapsed_s": 1.222,
+      "exit_code": 1,
+      "status": "FAIL",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_v49.log",
+      "log_sha256": "704a779600d68fad0680a61309ab194aaf4c681fd4be67674d5b0dae03211804",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 64,
+      "skip_lines": []
+    },
+    "python_v50": {
+      "name": "python_v50",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v50",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:25:55.072295+00:00",
+      "elapsed_s": 4.482,
+      "exit_code": 1,
+      "status": "FAIL",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_v50.log",
+      "log_sha256": "2dcdfab4bdf0437f2c5b20d853d5c3cc4dc0c1e107291585d4975492c4e5ae3c",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 42,
+      "skip_lines": []
+    },
+    "python_v49_http_elevated": {
+      "name": "python_v49_http_elevated",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests_v49.test_arena_http",
+        "tests_v49.test_generation_http",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:26:30.169426+00:00",
+      "elapsed_s": 1.675,
+      "exit_code": 1,
+      "status": "FAIL",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_v49_http_elevated.log",
+      "log_sha256": "b62bb74c3e4c724e62c82aaeedd50f9e9321f75fa4dc806c447b3daff6a5468c",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 4,
+      "skip_lines": []
+    },
+    "python_http_post_fix": {
+      "name": "python_http_post_fix",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v50",
+        "-p",
+        "test_session_http.py",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:14.226052+00:00",
+      "elapsed_s": 2.895,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_http_post_fix.log",
+      "log_sha256": "87c41ff9d4f141160c9d9bcba54e3e5eb6bb099434f3f12b901fda145d5cea96",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 4,
+      "skip_lines": []
+    },
+    "python_session_execution_post_fix": {
+      "name": "python_session_execution_post_fix",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests_v51.test_execution",
+        "tests_v50.test_session_lifecycle",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:21.976717+00:00",
+      "elapsed_s": 1.574,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_session_execution_post_fix.log",
+      "log_sha256": "191e756ce39a221b211aa81214beb18729515372e2b353a9d42447647e0d344a",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 30,
+      "skip_lines": []
+    },
+    "python_v49_http_post_fix": {
+      "name": "python_v49_http_post_fix",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests_v49",
+        "-p",
+        "test_arena_http.py",
+        "-v"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:42.541355+00:00",
+      "elapsed_s": 2.282,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/python_v49_http_post_fix.log",
+      "log_sha256": "82c2a43ed12a0a8d473e0f28b979f5114de27aadd5de19e3f63b6e09ccf6db0a",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tests_run": 4,
+      "skip_lines": []
+    },
+    "js_v49_ui_post_fix": {
+      "name": "js_v49_ui_post_fix",
+      "command": [
+        "node",
+        "tests_v49/test_ui_binding.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:21.979777+00:00",
+      "elapsed_s": 2.726,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v49_ui_post_fix.log",
+      "log_sha256": "3a998d9cdb314c98a5250e93f59f480ad3f8c842d601921d7025ca2c6a34b1c7",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tap_tests": 14,
+      "tap_pass": 14,
+      "tap_fail": 0,
+      "tap_skipped": 0,
+      "skip_lines": [
+        "# skipped 0"
+      ]
+    },
+    "js_v50_desktop": {
+      "name": "js_v50_desktop",
+      "command": [
+        "node",
+        "tests_v50/test_desktop_transport.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:26:04.683618+00:00",
+      "elapsed_s": 0.12,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v50_desktop.log",
+      "log_sha256": "49f826be9ad3531835fb172bb6eece217cc0999c0bd71d16e3e2100bb1138731",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tap_tests": 6,
+      "tap_pass": 6,
+      "tap_fail": 0,
+      "tap_skipped": 0,
+      "skip_lines": [
+        "# skipped 0"
+      ]
+    },
+    "js_v50_session_post_fix": {
+      "name": "js_v50_session_post_fix",
+      "command": [
+        "node",
+        "tests_v50/test_session_ui.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:21.980427+00:00",
+      "elapsed_s": 0.071,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v50_session_post_fix.log",
+      "log_sha256": "df5afb351bada73bbf7301601e2b072db212c5c6561a839041df9fd150960c49",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tap_tests": 6,
+      "tap_pass": 6,
+      "tap_fail": 0,
+      "tap_skipped": 0,
+      "skip_lines": [
+        "# skipped 0"
+      ]
+    },
+    "js_v51_ui_post_fix": {
+      "name": "js_v51_ui_post_fix",
+      "command": [
+        "node",
+        "tests_v51/test_app_profiles.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:28:21.979772+00:00",
+      "elapsed_s": 2.783,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v51_ui_post_fix.log",
+      "log_sha256": "539e934697bfa21577007655d47e0738b9532d258f5ca2fb9856481908942980",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tap_tests": 21,
+      "tap_pass": 21,
+      "tap_fail": 0,
+      "tap_skipped": 0,
+      "skip_lines": [
+        "# skipped 0"
+      ]
+    },
+    "js_v51_desktop": {
+      "name": "js_v51_desktop",
+      "command": [
+        "node",
+        "tests_v51/test_desktop_profiles.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:26:04.681709+00:00",
+      "elapsed_s": 0.179,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v51_desktop.log",
+      "log_sha256": "f1e8af9c08119e4e5adce0d54d66cb382c90abd942681233f792139e0fe3868e",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "tap_tests": 12,
+      "tap_pass": 12,
+      "tap_fail": 0,
+      "tap_skipped": 0,
+      "skip_lines": [
+        "# skipped 0"
+      ]
+    },
+    "js_v51_evidence": {
+      "name": "js_v51_evidence",
+      "command": [
+        "node",
+        "tests_v51/evidence_js_test.js"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+      "started_utc": "2026-11-04T10:26:04.678224+00:00",
+      "elapsed_s": 0.046,
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/consolidated_checks/js_v51_evidence.log",
+      "log_sha256": "49c26c0441cc6c3ce9b6152bb95ff296f7faaf879cadd42c5c73c1cbb98b5a6a",
+      "concurrent_changes": [],
+      "real_model_calls": 0,
+      "validation24_accessed": false,
+      "optional_development_replay": "ENV_UNSET",
+      "skip_lines": []
+    }
+  },
+  "initial_failures_and_resolution": [
+    {
+      "id": "SANDBOX_SOCKET_RESTRICTION",
+      "status": "RESOLVED_BY_AUTHORIZED_LOCAL_SOCKET_RETRY",
+      "initial": [
+        "python_v49.log",
+        "python_v50.log"
+      ],
+      "details": "Initial 7 v4.9 / 4 v5.0 HTTP tests failed in setUp because socket creation was forbidden; no product assertion had run."
+    },
+    {
+      "id": "HTTP_TEST_INVOCATION_IMPORT",
+      "status": "RESOLVED_BY_DISCOVERY_INVOCATION",
+      "initial": [
+        "python_v49_http_elevated.log"
+      ],
+      "details": "Direct package invocation could not import the legacy absolute test_arena name; generation HTTP 3 passed in that attempt; arena HTTP 4 passed via unittest discovery."
+    },
+    {
+      "id": "V51_MANIFEST_TYPEERROR_UNHANDLED",
+      "status": "FIXED_BY_ROOT_AND_RETESTED",
+      "initial": [
+        "python_v50_http_elevated.log"
+      ],
+      "after": [
+        "python_http_post_fix.log",
+        "python_v49_http_post_fix.log",
+        "python_session_execution_post_fix.log"
+      ],
+      "details": "profile binding evaluated before protected manifest wrapper caused a TypeError to close the connection. Root guarded both and HTTP static-503 assertions passed."
+    },
+    {
+      "id": "V50_VERSION_ASSERTION_ON_V51",
+      "status": "EXPLICITLY_PORTED_VERSION_ASSERTION_ONLY",
+      "path": "tests_v50/test_session_http.py",
+      "initial": [
+        "python_v50_http_elevated.log"
+      ],
+      "after": [
+        "python_http_post_fix.log"
+      ],
+      "details": "Root authorized only expected manifest version 5.0→5.1; all other HTTP assertions preserved."
+    }
+  ],
+  "optional_skips": [
+    "test_captured_old_development_responses_full_result: V51_SEMANTIC_DEV_PROTOCOL unset",
+    "test_captured_specified_development133_full_result: V51_SPECIFIED_DEV_PROTOCOL unset"
+  ],
+  "mutations_in_this_check_task": [
+    "tests_v50/test_session_http.py: expected version 5.0→5.1 only, explicitly authorized by root after initial failure"
+  ],
+  "real_model_calls": 0,
+  "validation24_accessed": false,
+  "no_existing_server_stopped": true,
+  "product_or_dataset_writes": false,
+  "source_changes_after_selected_checks": {},
+  "scope_limits": [
+    "Offline contract, synthetic/stub transport and DOM harness verification only; no performance/independent-evaluation claim.",
+    "Optional captured development replays not run in this batch.",
+    "No real browser or APK/device execution in this batch.",
+    "Export check is not separately invoked here; existing discovery tests run their own read-only generation checks."
+  ],
+  "protected_core_report": "vendor_core_preservation.json",
+  "source_inventory": "checked_source_inventory.json"
+}

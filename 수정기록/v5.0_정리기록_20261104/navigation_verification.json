@@ -1,0 +1,688 @@
+{
+  "files_checked": 6,
+  "local_links_checked": 136,
+  "issues": [],
+  "links": [
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/README.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/all.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "%5Bv5.0%5D%20IteraGuard_DoubtMeter/docs/V50_IMPLEMENTATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "LATEST_VERSION.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "Back%20Data/v5.0_%EC%A0%95%EB%A6%AC%EA%B8%B0%EB%A1%9D_20261104/ORGANIZATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/README.md",
+      "target": "CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/README.md",
+      "target": "all.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/README.md",
+      "target": "docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/README.md",
+      "target": "docs/00_DOCUMENT_MAP.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/README.md",
+      "target": "internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/V50_IMPLEMENTATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/PRD_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/SYSTEM_PROMPTING_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/V50_IMPLEMENTATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/V50_TRACEABILITY.json",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "docs/00_DOCUMENT_MAP.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/all.md",
+      "target": "internal/history/PROVENANCE.json",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "target": "internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "target": "CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "target": "docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/CHANGELOG.md",
+      "target": "internal/history/README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../all.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "PRD_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "SYSTEM_PROMPTING_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "V50_IMPLEMENTATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "V50_TRACEABILITY.json",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../CHANGELOG.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../MASTER_HANDOFF_PROMPT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../all.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../apps/README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../apps/mobile/BUILD_ANDROID.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../apps/mobile/BUILD_IOS.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/PRD_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/SYSTEM_PROMPTING_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/00_DOCUMENT_MAP.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/PRD_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/SYSTEM_PROMPTING_v50.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/V50_IMPLEMENTATION_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/V50_OPEN_ISSUES.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/assets/TEAM_WORKPLAN.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/ELENCHUS_SNM_4D.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/EVALUATION.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/MODEL_CONTRACT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/PLATFORM_INSTALL.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/PRD.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/PROMPTS.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/SYSTEM_PROMPT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/03_TRACEABILITY_MATRIX_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/07_DEMO_AND_PITCH_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/10_SNM_4D_REDTEAM_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/15_CANDIDATE_DECISION_GATES_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/19_V45_ON_DEVICE_NLP_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/20_ZORO_RUNBOOK_AND_ENGINE_COMPARISON_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/21_TEAM_V33_ALIGNMENT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/22_V46_MULTITASK_LABELING_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/23_V46_MODEL_REPORT_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/24_V47_ABSTENTION_ANALYSIS_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/25_V47_LINKGUARD_SECURITY_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/26_V48_DOMAIN_RISK_INTELLIGENCE_AND_ZORO_GATES_KO.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/team_v3_3/DMSG_PRD_v3_3.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/team_v3_3/DMSG_SYSTEM_PROMPTING_v3_3.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../models/v46/MODEL_CARD.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../IteraGuard_v4_9_Technical_Audit.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/CHANGELOG.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/PRD_v49.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../dmsg/references/SYSTEM_PROMPTING_v49.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/FORMAT_ALIGNMENT_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/PRD_v4_9.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/PREVIOUS_RC1_UPGRADE_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/PREVIOUS_V49_UPGRADE_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/SYSTEM_PROMPTING_v4_9.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../docs/V49_UPGRADE_REPORT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/CHANGELOG_v49_original.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/VERSION_LEDGER_through_v47_original.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_CHANGELOG.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_CURRENT_PROJECT_STATE.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_MASTER_HANDOFF_PROMPT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_VERSION_LEDGER.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../internal/history/v50_before_organization_all.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/README.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/assets/TEAM_WORKPLAN.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/ELENCHUS_SNM_4D.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/EVALUATION.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/MODEL_CONTRACT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/PLATFORM_INSTALL.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/PRD.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/PROMPTS.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/SYSTEM_PROMPT.md",
+      "exists": true
+    },
+    {
+      "file": "[v5.0] IteraGuard_DoubtMeter/docs/00_DOCUMENT_MAP.md",
+      "target": "../vendor/dmsg/references/TRACEABILITY.md",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "../../%5Bv5.0%5D%20IteraGuard_DoubtMeter/README.md",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "existing_markdown_inventory.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "older_versions_audit.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "recent_versions_audit.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "supporting_docs_audit.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "source_preservation.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "source_release_verification.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "clean_release_verification.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "historical_preservation.json",
+      "exists": true
+    },
+    {
+      "file": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+      "target": "ORGANIZATION_RECEIPT.json",
+      "exists": true
+    }
+  ],
+  "pass": true
+}

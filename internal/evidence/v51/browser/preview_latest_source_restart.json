@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "reason": "load final manifest exception guard; judgment sources unchanged",
+  "additional_inference_calls": 0,
+  "manifest_version": "5.1",
+  "profile": "v51-specific-candidate",
+  "session_version": 5,
+  "prior_pause": 1,
+  "task_count": 1
+}

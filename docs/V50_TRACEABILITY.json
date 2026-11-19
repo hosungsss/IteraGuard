@@ -1,0 +1,1362 @@
+{
+  "artifact": "v5 implementation traceability",
+  "date_kst": "2026-11-04",
+  "plan": "IteraGuard_v5_Plan_20261104.md",
+  "status": "IMPLEMENTED_DEVELOPMENT_CANDIDATE",
+  "base_product_version": "4.9",
+  "target_product_version": "5.0",
+  "base_worktree": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v4.9_zoro_iteration",
+  "base_source_tree_sha256": "fedaea4848c01cfcfd81802bfacd3668895522b1a25f4b4974c0830f643bad51",
+  "source_or_historical_evidence_changed": false,
+  "new_model_calls": {
+    "question_ablation": 388,
+    "process_restart_integration": 4,
+    "browser": 7,
+    "total": 399,
+    "accepted_typed_responses": 398,
+    "rejected_model_echo_mismatch": 1,
+    "offline_replay_calls": 0
+  },
+  "preserved_instruction": "승인 전까지 현행 유지",
+  "work_packages": {
+    "P0-01": {
+      "title": "공통 실행 명세와 최소 trace",
+      "state": "PARTIAL",
+      "next": "질문과 선택지 순서·실행 설정·정책·모듈·세션 지문 연결"
+    },
+    "P0-02": {
+      "title": "확인된 UI 수정 보존",
+      "state": "SOURCE_VERIFIED_RELEASE_PENDING",
+      "next": "새 계약과 최종 배포물에서 UI13개 및 관련 통합 검사를 보존"
+    },
+    "P0-03": {
+      "title": "기본 정책과 실행 경로 통일",
+      "state": "COMPARISON_DONE_SELECTION_PENDING",
+      "next": "질문 계약 고정 후 위험·정상 오류를 비교하고 기본 정책 및 보조 모듈 조건 선택"
+    },
+    "P0-04": {
+      "title": "주석과 질문 의미 계약 개선",
+      "state": "CANDIDATES_TESTED_NOT_ADOPTED",
+      "next": "주석 정의 검토 및 action/speech/evidence 개별 변경 실험"
+    },
+    "P0-05": {
+      "title": "실제 Typed 업무 루프와 재시작",
+      "state": "LIVE_LOOP_VERIFIED_RESTART_PENDING",
+      "next": "출시 후보로 프로세스 재시작3회와 기존 DB 복원·실패·동시성 검증"
+    },
+    "P0-06": {
+      "title": "세션 종료와 재개 경험",
+      "state": "DISPLAY_FIXED_STATE_DECISION_PENDING",
+      "next": "위험 해제와 구분한 미해결 종료·재개 및 자기보고 상태 계약"
+    },
+    "P0-07": {
+      "title": "출시 후보 생성과 지원 플랫폼 검증",
+      "state": "VERIFIERS_FIXED_ARTIFACTS_STALE",
+      "next": "공통 검사 진입점·build-info·새 패키지·재추출·실기기 검증"
+    },
+    "P0-08": {
+      "title": "독립 평가와 발표 근거",
+      "state": "DEVELOPMENT_EVAL_DONE_LOCKED_EVAL_PENDING",
+      "next": "새 작성·주석 자료 잠금과 동일 후보 평가, 결과에 맞는 최종 주장"
+    },
+    "P1-KEEP": {
+      "title": "기존 기능과 권한 보존",
+      "state": "RELEASE_REQUIRED_CONTINUOUS",
+      "next": "PAYLOCK/LinkGuard/NLP/도메인/NO_WRITE/안내 enum/동의/실패 경계 회귀"
+    },
+    "P1-DOCS": {
+      "title": "현재 문서와 라이선스 및 전달 목록",
+      "state": "PARTIAL",
+      "next": "역사 문서 분리·출처/라이선스·현재 실행 안내·미확보 자료 기록"
+    },
+    "P1-OPS": {
+      "title": "팀 결정과 대회 운영",
+      "state": "PENDING_SPECIFIC_DECISIONS",
+      "next": "현행 유지 지시 보존, 구체 변경안 및 운영 근거 준비"
+    },
+    "P1-REMOTE": {
+      "title": "원격 relay 출시 범위",
+      "state": "UNRESOLVED_CONDITIONAL",
+      "next": "loopback 기본 제안; 원격 제외 시 실행 차단, 포함 시 실제 IP 고정 수정·검증"
+    }
+  },
+  "execution_sequence": [
+    [
+      "P0-01",
+      "P0-02"
+    ],
+    [
+      "P0-04"
+    ],
+    [
+      "P0-03",
+      "P0-06",
+      "P0-05"
+    ],
+    [
+      "P0-07",
+      "P0-08"
+    ],
+    [
+      "P0-07",
+      "P1-DOCS"
+    ]
+  ],
+  "parallel_work": "독립 데이터 수집·주석, 세션 UX안, 문서/검사도구, 기존 기능 회귀는 선행 조건이 허용하는 시점부터 병렬. 최종 동결된 동일 후보로 독립 평가·실기기 검증. 팀 결정안과 운영 근거 준비도 시작부터 병렬 진행하며 해당 변경·후보 동결·출시 전에 필요한 구체 결정을 연결한다.",
+  "requirements": [
+    {
+      "id": "V50-R01",
+      "requirement": "제품 최신 기준은 v4.9 FULL이며 실험 키트 v1.2는 별도 계보다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "v4.9 FULL 376개 manifest 검증 후 별도 작업본을 만들었고 원본·실험·작업본 계보를 분리했다.",
+      "remaining": "v5 최종 manifest는 아직 생성하지 않았으며 R33에서 별도 관리한다.",
+      "original_v5_action_preserved": "FULL를 개발 기준으로 고정하고 각 원본/키트/교육/보조프로토타입의 지문과 포함·보류 범위를 manifest에 기록한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-07"
+      ],
+      "evidence_refs": [
+        "source",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "v4.9 검증 작업본에서 분리; v5 current entrypoints, 이전 계보 보존."
+    },
+    {
+      "id": "V50-R02",
+      "requirement": "공개 Zoro 생성과 Zoro-1 typed를 구분한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "11/4 현재 작업에서도 승인된 로컬 Zoro-1 typed 72회가 실제 성공했다. 과거 11/2 typed와 RTX3060 공개 생성 실험을 별도 계보로 유지한다.",
+      "remaining": "실험 파일의 로컬 출처 증거와 제품 model_attested=False를 구분하고 최종 앱 경로·배포에 연결해야 한다.",
+      "original_v5_action_preserved": "11/2 승인 typed 체크포인트·export·raw72와 11/4 생성실험의 경로/장비/모델/정책을 별도 표로 연결하고 v5 앱에서 실제 typed 경로를 재검증한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-05",
+        "P1-DOCS"
+      ],
+      "evidence_refs": [
+        "baseline",
+        "protocol",
+        "identity"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "Zoro-1 Typed 388회 새 실행; 공개 생성 비교는 별도. T/인증/도메인보정 분리."
+    },
+    {
+      "id": "V50-R03",
+      "requirement": "실제 지정 모델 판단이 정책과 확인 업무까지 이어지는 종단 간 시연이 필요하다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "실제 HTTP에서 기준본/수정본 각각3새세션×4평가=24승인평가를 수행했다. 수정본12평가는 typed→정책→작업→관측→새typed→GET/별도SQLite재조회 연결과 UNRESOLVED보존을 확인했고 실제브라우저도 별도8호출 점검했다.",
+      "remaining": "확인한 것은 기존에 본 두 합성문장 중심의 실제 연결이다. 제공자 호출횟수는 독립계측하지 않았으며 프로세스재시작3회/독립성능은 R26/R23에 남긴다.",
+      "original_v5_action_preserved": "원본 7문항 실제 응답→정규화→정책→작업 ID→관측→새 실제 응답→상태 재조회 경로를 동일 request/session으로 검증한다.",
+      "work_packages": [
+        "P0-05"
+      ],
+      "evidence_refs": [
+        "api_integration",
+        "api_unavailable",
+        "browser",
+        "verification"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "실제 새v5 HTTP3재시작+4호출, 브라우저7요청(6유효+1설정오류거부). 모델→정책→과제→관측→재판단 및저장확인."
+    },
+    {
+      "id": "V50-R04",
+      "requirement": "기존 7문항과 필수/선택 구분을 보존한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "원본7문항·필수/선택·단어/라벨/정책을 보존했다. E.questions가 canonical M.spec 옵션순서로 criteria를 구성하며 누락/추가키는 거절한다. 3회귀 및 실제72응답 정본동일 확인. 후보 EN/KR은 별도 질문계약으로만 실험했다.",
+      "remaining": "제품 후보 채택·prompt/schema/policy/template/runtime 전체 버전 manifest는 아직 없다. 정렬canonicalJSON 해시만으로 orderedwire동등성을 판단하지 않는다.",
+      "original_v5_action_preserved": "질문/schema/policy/template 버전을 별도로 고정하고 새 질문은 후보 실험 경로에서 기존 대비 후 선택한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-04"
+      ],
+      "evidence_refs": [
+        "order_fix",
+        "order_comparison",
+        "candidate_design",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "원본 7문항/ordered choice 유지. 공통 manifest 및 generator drift 검사."
+    },
+    {
+      "id": "V50-R05",
+      "requirement": "정책 정본과 v4.7 DRA 후보 상태를 일관되게 설명해야 한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "원본/DRA를 같은 실제raw로 비교했고 JS순서복구 후 두 정책출력 모두 Python정본과 일치한다.",
+      "remaining": "arena원본0.70/AppDRA 기본 분리는 남는다. JS이전순서→정본복구에서 DRA V2기대일치35→33,위험맥락NO_STRONG_SIGNAL0→1(V47)이므로 계약복구를 안전/성능개선 또는 DRA승격근거로 삼지 않는다.",
+      "original_v5_action_preserved": "desktop/web/arena가 실제 호출하는 정책별 그래프와 동일입력 차이표를 만든 뒤 v5 기본정책·후보정책을 명시한다.",
+      "work_packages": [
+        "P0-03"
+      ],
+      "evidence_refs": [
+        "baseline",
+        "order_fix",
+        "order_comparison",
+        "runtime"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "앱/아레나 기본 legacy, DRA 비교로 일치. 최적 정책/독립 안전성 확정 아님."
+    },
+    {
+      "id": "V50-R06",
+      "requirement": "무해한 직접 요청과 none(요청 없음) 정의의 공백을 해결해야 한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "EN/KR 후보 실제144회 비교 완료. 무해한 직접 요청과 불명확한 위협 지시의 계약 공백은 미해결. 개별 질문 실험·주석 기준 점검 필요.",
+      "remaining": "none+direct_request를 거절하는 기존 guard는 그대로다. 후보 실험만으로 새 제품 계약 공백이 해결되지 않는다.",
+      "original_v5_action_preserved": "harmless_request 또는 요청 유무/민감행동 분리 후보를 비교하고 위험 회귀·새 rubric과 함께 schema를 갱신한다.",
+      "work_packages": [
+        "P0-04"
+      ],
+      "evidence_refs": [
+        "candidate_design",
+        "baseline"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "action 단독 후보 실제 비교 후 DRA의 새 V50-AI-22 필수중단(PAUSE)→보류(ASK) 회귀로 HOLD. 위험 NO_STRONG_SIGNAL 신규 회귀라는 뜻은 아니다. 의미 라벨 공백은 남음."
+    },
+    {
+      "id": "V50-R07",
+      "requirement": "정상 정보의 q_evidence 부족과 최종 보류 관계를 분해한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "q_evidence를 포함한 EN/KR 공동 변경 실험 완료. 단독 변경 효과와 제품 채택·독립 주석 평가 미완료.",
+      "remaining": "현재 제품 q_evidence와 evidence guard는 그대로이며 독립 주석 평가와 개별 질문 ablation은 없다.",
+      "original_v5_action_preserved": "요청이 없는 완결 안내/무해한 요청/맥락부족을 분리하고 evidence scope 후보를 실제 모델로 비교한다.",
+      "work_packages": [
+        "P0-04"
+      ],
+      "evidence_refs": [
+        "candidate_design",
+        "candidate_protocol"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "evidence 단독 후보 실제 비교했으나 새 과잉 개입 회귀로 HOLD. 독립 주석은 미수행."
+    },
+    {
+      "id": "V50-R08",
+      "requirement": "0.70은 기존 데모 heuristic이며 검증된 최적값이 아니다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "원본0.70·DRA 비용표를 고정한 실제 비교를 얻었다. 임계값을 임의 하향하지 않았다.",
+      "remaining": "도메인 확률 보정·비용 최적화·새 잠금셋 검증은 미수행이다.",
+      "original_v5_action_preserved": "오류비용과 coverage를 함께 측정하고 개발/검증셋에서 선택 후 새로운 잠금셋으로 평가한다. 값만 낮춰 릴리스하지 않는다.",
+      "work_packages": [
+        "P0-03",
+        "P0-08"
+      ],
+      "evidence_refs": [
+        "baseline",
+        "protocol"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "0.70 보존; 도메인 확률 보정/비용 최적화 미수행."
+    },
+    {
+      "id": "V50-R09",
+      "requirement": "첫 보류 사유 외 모든 발동 조건을 기록해야 한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "실험에는 raw·정책출력·보류진단·지연과 질문/출처 해시를 보존한다.",
+      "remaining": "제품 arena에는 실험 공통 trace를 그대로 저장하지 않는다. 질문/template/runtime/모든 gate와 세션 관계의 공통 버전 계약은 남는다. 질문·선택지의 명시적 ordered keys 또는 실제 전송bytes해시도 trace에 필요하다.",
+      "original_v5_action_preserved": "실제 활성정책의 모든 gate·최종 우선rule·raw분포·지연·소스버전을 공통 trace로 연결하고 중복원인 합계를 독립건수처럼 더하지 않는다.",
+      "work_packages": [
+        "P0-01"
+      ],
+      "evidence_refs": [
+        "baseline",
+        "candidate_protocol",
+        "runtime"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "각 조건 충족/적용가능성/실제 적용 규칙/최종 규칙과 공통 로컬 후처리 추적."
+    },
+    {
+      "id": "V50-R10",
+      "requirement": "세션 과거 위험과 현재 턴 안내를 구별한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "관측유실 수정과 prior_pause 유지에 더해 현재문장 안내/과거위험 보류를 화면에서 구분한다. UI13검사와 실제브라우저에서 확인했다.",
+      "remaining": "해제·종료·최근턴문맥의 새 상태전이는 추가하지 않았다. 자기보고 CONFIRMED만으로 prior_pause를 해제하지 않는다.",
+      "original_v5_action_preserved": "새 정상문장/USER_REPORTS_CONFIRMED만으로 과거위험을 해제하지 않는 동작을 보존하며 미해결종료/새세션/해제조건 UX를 설계·명시한다.",
+      "work_packages": [
+        "P0-06"
+      ],
+      "evidence_refs": [
+        "ui",
+        "api_integration",
+        "browser",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "현재 턴/세션 위험 분리, CLOSED_UNRESOLVED 종료·재개, prior_pause 유지."
+    },
+    {
+      "id": "V50-R11",
+      "requirement": "확인 업무는 저장·재조회·후속 관측을 갖고 실제 기관 확인과 구별된다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "수정본 실제HTTP3세션에서 관측보존·작업완료/새작업·멱등재시도·409·별도SQLite재조회가 모두 통과했다.",
+      "remaining": "프로세스재시작/crash recovery는 미수행. USER_REPORTED는 실제기관 확인이 아니다.",
+      "original_v5_action_preserved": "재시작 복원·작업중복·다른세션·닫힌작업·late response·변조version 회귀를 유지하고 실모델 루프에서 재현한다.",
+      "work_packages": [
+        "P0-05",
+        "P0-06"
+      ],
+      "evidence_refs": [
+        "api_integration",
+        "ui",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "사용자 보고 작업 유지; 동일 작업 반복 생성 완화; 실제 기관 확인 없음."
+    },
+    {
+      "id": "V50-R12",
+      "requirement": "제품의 대화 맥락 범위를 정확히 정해야 한다.",
+      "latest_audit_status": "UNRESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "모델에는 현재 text만 전달하고 서버 prior_pause를 별도로 유지한다.",
+      "remaining": "최근턴 모델 문맥을 구현했다고 말할 수 없다. 현재턴+서버기억으로 v5 범위를 고정할지 별도 결정이 필요하다.",
+      "original_v5_action_preserved": "v5에서 단일현재턴+서버위험기억인지 최근턴문맥모델인지 명세 선택. 후자를 채택하면 truncation/참조해결/turn별evidence와 세션평가 추가.",
+      "work_packages": [
+        "P0-06"
+      ],
+      "evidence_refs": [
+        "runtime"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "현재 문장만 모델 입력. 서버 이력 결합, 단문 앱은 이력 위험 미결합을 표시."
+    },
+    {
+      "id": "V50-R13",
+      "requirement": "멱등성과 stale 응답 거부가 유지돼야 한다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "최신 통합63/63 및 UI13/13 통과. 실제HTTP 멱등성·409, 브라우저 edit/refresh/clear 확인. 의도적 지연은 DOMstub이며 모바일 미검증.",
+      "remaining": "의도적으로 지연시킨 응답은 DOMstub시험이며 실제브라우저 지연주입은 미수행. 모바일배포검증은 별도다.",
+      "original_v5_action_preserved": "재요청/동시요청/새관측 중 모델지연/중복업무 및 반환객체변조까지 회귀한다.",
+      "work_packages": [
+        "P0-02",
+        "P0-05"
+      ],
+      "evidence_refs": [
+        "verification",
+        "browser",
+        "api_integration"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "버전/요청 ID, lifecycle 공용 멱등성, 종료 중 신규 추론 거부/늦은 응답 거부."
+    },
+    {
+      "id": "V50-R14",
+      "requirement": "모델 장애 때 fixture를 숨겨 대신하지 않는다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "별도실제HTTP서버의 불가endpoint에서 실패명시·ASK업무·빈확률/null지연·재시도멱등성을 확인했다. 실제모델추론0이며 숨은fixture대체가 없다.",
+      "remaining": "정상typed성공과 불가endpoint실험을 구분한다. 원격relay조건부IP방어 차이는 별도G12다.",
+      "original_v5_action_preserved": "실제typed/생성비교/온디바이스/fixture/replay 모드와 실패원인을 UI·로그에서 일치시킨다.",
+      "work_packages": [
+        "P0-05",
+        "P1-KEEP",
+        "P1-REMOTE"
+      ],
+      "evidence_refs": [
+        "api_unavailable",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "장애 명시 보류. 로컬 전송만 허용, 숨은 fixture fallback 없음."
+    },
+    {
+      "id": "V50-R15",
+      "requirement": "공개 생성 비교는 전체 출력 형식과 신원 선언을 검사하고 정책에 사용하지 않는다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "공개 생성 비교는 typed 의사결정과 별도이며 엄격한 출력 검증 회귀를 보존했다.",
+      "remaining": "이번 typed 실험을 공개 생성 실험의 성능으로 합치지 않는다.",
+      "original_v5_action_preserved": "별도 비교로 보존하되 공통화면에서 실제typed로 오해되지 않게 실행경로 표시; 생성분류의 의미기여는 별도 평가한다.",
+      "work_packages": [
+        "P0-01",
+        "P1-KEEP",
+        "P1-DOCS"
+      ],
+      "evidence_refs": [
+        "verification",
+        "protocol",
+        "runtime"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "생성 비교 기존 형식/신원검사 보존; 이번 Typed 성능 수치와 합산 안 함."
+    },
+    {
+      "id": "V50-R16",
+      "requirement": "공용 데이터와 Python/JS 판단 적합성을 보존한다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "최종동결소스에서 JS24,488·source drift7,LinkJS7,639,도메인93,trace4,KoELECTRA golden49 및 문항순서3검사를 통과했다. 수정후실제72확률·두정책전체출력도 Python정본과 일치했다.",
+      "remaining": "구현/요청계약 적합성이며 독립의미정확도나 제품안전개선이 아니다. DRA V47위험해제 회귀는 R05/G03에 남기고 배포는 R21에서 미완료로 관리한다.",
+      "original_v5_action_preserved": "새 질문·정책이 바뀌면 생성자산·JS이식·각배포앱을 함께 갱신하고 source drift 및 의미있는 mutation 검사를 유지한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-07",
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "verification",
+        "order_fix",
+        "order_comparison"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "Python/JS 기존17824 정책벡터 보존; 신규 정본 raw97개+빈 입력1 ×2정책×2검토옵션=392 오프라인 출력비교 일치, 추가모델호출0. 전체 적합성24488 PASS."
+    },
+    {
+      "id": "V50-R17",
+      "requirement": "PAYLOCK 기능과 지급 권한 경계를 잃지 않는다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "PAYLOCK 포함 dmsg325 회귀를 통과했고 실제 지급 권한/은행 연결 기능은 추가하지 않았다.",
+      "remaining": "주력 시연·메뉴 재편은 미결정이며 새 은행 기능은 범위 밖이다.",
+      "original_v5_action_preserved": "v5 회귀·메뉴·패키지에 보존하고 주력 시연 확장 여부는 별도 결정한다.",
+      "work_packages": [
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "verification",
+        "requirements"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "PAYLOCK 코드/권한 경계 유지, 기존 회귀에 포함."
+    },
+    {
+      "id": "V50-R18",
+      "requirement": "LinkGuard/APK 정적 분석을 보존하되 제외·차단 상태를 유지한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "LinkGuard Python42·JS7,639 및 APK/PWA자산 검사를 통과하고 누락 corpus/skip을 수정했다.",
+      "remaining": "평판 NOT_RUN, 웹분석 BLOCKED, 모바일 NOT_RUN은 유지한다. 외부 확인 도구를 연결했다고 말할 수 없다.",
+      "original_v5_action_preserved": "링크가 안내를 낮추지 않는 정책·외부전송동의·APK 미설치/미실행을 회귀하고 네트워크 시연은 실증 범위만 표기한다.",
+      "work_packages": [
+        "P1-KEEP",
+        "P0-07"
+      ],
+      "evidence_refs": [
+        "verification",
+        "release",
+        "runtime"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "오프라인 LinkGuard 공통 후처리; APK 정적 분석 유지, 실제 평판 조회 제외."
+    },
+    {
+      "id": "V50-R19",
+      "requirement": "사업·투자·가상자산 예비 실사와 원문 근거를 보존한다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "도메인 13케이스/93assertions 회귀 통과. 오프라인 텍스트 관찰 범위를 유지한다.",
+      "remaining": "법적/온라인 등록 확인·투자 권고의 효능 증거가 아니다.",
+      "original_v5_action_preserved": "핵심 대화평가와 분리한 확장 기능으로 보존하며 자동사기확정/투자권고로 승격하지 않는다.",
+      "work_packages": [
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "verification",
+        "runtime"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "도메인 텍스트 모듈 보존, 전용 회귀/금지문구 범위 추가."
+    },
+    {
+      "id": "V50-R20",
+      "requirement": "메모리/harness는 읽기 전용 제안과 실제 권한을 구분한다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "기존 NO_WRITE 메모리/harness 경계와 dmsg회귀를 보존했다. 새 원문저장 기능을 추가하지 않았다.",
+      "remaining": "호출자 provenance 값은 외부 인증이나 메모리 저장제품의 증거가 아니다.",
+      "original_v5_action_preserved": "메모리 저장제품으로 오인하지 않게 범위/테스트를 유지하고 사용자원문을 실행지시로 취급하지 않는다.",
+      "work_packages": [
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "verification",
+        "requirements"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "메모리/harness 보존, 실제 권한 확대 없음."
+    },
+    {
+      "id": "V50-R21",
+      "requirement": "APK/PWA 빌드와 실기기 성공을 구분한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "최종소스로 만든 실험desktoppreview22자산의HTTP동등성 및 실제브라우저를 확인했다. 기존v4.9APK/PWA자산·서명근거는 그대로 유효하다. 최종verifier는현재20복사소스→PWA→APK도검사하며 app.js/dmsg-engine.js 미반영을실제로검출한다.",
+      "remaining": "preview는 출시물 아님. 새 UI/순서/관측/검증 소스는 기존APK/PWA/SKILL/manifest에 미반영. 재빌드·설치/실기기실행 미수행이며 verify_release는 stale FAIL이다.",
+      "original_v5_action_preserved": "v5 산출물별 목표버전/빌드hash/포함자산/실행검증 플랫폼 표를 제공하고 실제 기기 검증 전 성공 주장 금지.",
+      "work_packages": [
+        "P0-07"
+      ],
+      "evidence_refs": [
+        "preview",
+        "browser",
+        "verification",
+        "release"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "v5 PWA/APK 소스재빌드, 독립APK서명/구조검사와자산일치PASS. version50/5.0. Android 실기기/iOS NOT_RUN."
+    },
+    {
+      "id": "V50-R22",
+      "requirement": "원문 비저장과 파생정보 보관은 별개다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "원문 비저장/파생 관측의 기존 회귀를 보존하고 실험 입력은 기존 합성자료만 사용했다.",
+      "remaining": "모든 로그/DB/브라우저 경로의 보존·삭제 정책/실제 이용자 환경 검증 완료는 아니다.",
+      "original_v5_action_preserved": "로그/오류/DB/브라우저경로별 보관·삭제 정책과 합성 입력 경계를 명시하고 실제원문 유출·키포함을 검사한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-06",
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "ui",
+        "verification",
+        "protocol"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "DB 원문/인용/URL 미저장; 파생 분포/offset/보고 저장을 명시. 합성 SQLite 검증."
+    },
+    {
+      "id": "V50-R23",
+      "requirement": "독립 평가는 세션/family 분리와 주석을 요구한다.",
+      "latest_audit_status": "UNRESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "48+25는 이미 본 작성자/AI 보조 합성 개발자료로 명시했다. 새 실제 호출도 독립평가가 아니다.",
+      "remaining": "새 작성자/새 family·session 분리·독립 주석·불일치 기록·잠금 평가가 필요하다. 이번 후보를 보고 난 같은 자료로 대체하지 않는다.",
+      "original_v5_action_preserved": "requested_action/speech/risk_context/expected_guidance/alternatives/reason을 분리하고 두검토자 독립주석·불일치기록·새잠금평가 수행.",
+      "work_packages": [
+        "P0-08"
+      ],
+      "evidence_refs": [
+        "protocol_review",
+        "candidate_design",
+        "baseline"
+      ],
+      "implementation_status": "NOT_RUN",
+      "implementation_evidence": "사용자 승인 AI 초안25개만 추가. 독립 사람 주석·잠금 평가로 세지 않음."
+    },
+    {
+      "id": "V50-R24",
+      "requirement": "무조건보류 대비, 정상 부담·위험 누락·coverage를 함께 보고한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "기준선·EN/KR 후보·선택지순서의 문장별 개선과 회귀 분석 완료. 항상ASK 비교 포함. 동일 전체 제품 파이프라인과 독립 평가는 남음.",
+      "remaining": "후보별 per-case 악화 확인과 동일 제품 파이프라인 비교는 별도다. 기존 전체 rule/NLP/Zoro 비교를 동일 정책 비교라고 하지 않는다.",
+      "original_v5_action_preserved": "항상ASK 기준선, 규칙, NLP, 실제typed, 후보정책을 같은조건 또는 파이프라인차이명시로 비교; 분자분모/실패/선택적정확성 공개.",
+      "work_packages": [
+        "P0-03",
+        "P0-04",
+        "P0-08"
+      ],
+      "evidence_refs": [
+        "baseline",
+        "protocol_review",
+        "candidate_protocol"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "기존72+새25, 항상ASK 및 개선/회귀/정상 부담/필수중단 누락 비교. 독립 평가는 없음."
+    },
+    {
+      "id": "V50-R25",
+      "requirement": "모델지연·HTTP왕복·사용자지연과 cold/warm을 구분한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "현재 장비에서 client/provider 지연과 첫 요청/후속 요청을 구분해 기록했다. 빈입력은 모델지연에서 제외한다.",
+      "remaining": "cold boot·실패/timeout·동시성·사용자 전체 지연 검증은 없다. 공유서버 후보 지연을 일반적 속도향상으로 발표하지 않는다.",
+      "original_v5_action_preserved": "v5 동일장비에서 로딩·첫요청·warm·실패·timeout·동시성을 별도 측정; 표본이 작은 p95 일반화 금지.",
+      "work_packages": [
+        "P0-05",
+        "P0-08"
+      ],
+      "evidence_refs": [
+        "protocol",
+        "candidate_protocol"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "새 실험 provider/HTTP 지연 기록. 브라우저 체감은 별도, cold-start 성능 인증 아님."
+    },
+    {
+      "id": "V50-R26",
+      "requirement": "릴리스 전에 재시작한 핵심경로를3회 재현한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "기준/수정각3개 새세션에서 실제typed연결을 반복했고 SQLite별도연결재조회는 일치한다.",
+      "remaining": "서버프로세스재시작은 false다. 세션3회 또는SQLitereopen을 깨끗한환경 재시작3회로 세지 않는다.",
+      "original_v5_action_preserved": "새환경/깨끗한DB에서 정상/직접/혼합/후속관측/장애를 실제typed로3회 재현하고 빌드동일성 기록.",
+      "work_packages": [
+        "P0-05",
+        "P0-07"
+      ],
+      "evidence_refs": [
+        "api_integration",
+        "verification"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "별도포트8771 최초+재시작3=4프로세스, 실제모델4호출; DB/위험/관측/과제 유지 PASS."
+    },
+    {
+      "id": "V50-R27",
+      "requirement": "L2본문·G7·기관질문·진명L1 승인은 확인 전 현행 유지다.",
+      "latest_audit_status": "UNRESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "승인 전 현행 유지 지시를 지켰다. L2문자·G7 ASK_HUMAN·q_claim noul·구체L1 승인 상태는 변경하지 않았다.",
+      "remaining": "사용자의 본인 확인·이번 실험/결함수정 승인을 별도 팀 결정의 포괄 승인으로 취급하지 않는다.",
+      "original_v5_action_preserved": "지금은 기존 상태 보존. v5 변경안·영향·대조결과를 준비하고 실제 팀 결정만 기록; 사용자가진명이라는 사실을 포괄승인으로 변환하지 않는다.",
+      "work_packages": [
+        "P1-OPS"
+      ],
+      "evidence_refs": [
+        "candidate_design",
+        "ui",
+        "requirements"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "L2문자/GOLDEN-V33-G7 ASK/기관질문/L1 현행 유지, 구체 팀 승인 추정 안 함."
+    },
+    {
+      "id": "V50-R28",
+      "requirement": "주력 P0는 의심계의 실제판단→확인업무→관측 재판단으로 집중하는 제안이다.",
+      "latest_audit_status": "UNRESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "의심계 실제판단·업무·관측 중심은 기존 제안이며 확장 기능은 회귀 보존했다.",
+      "remaining": "주력 시연·역할·IP의 구체 팀합의 증거는 추가되지 않았다.",
+      "original_v5_action_preserved": "v5 핵심 가치를 해당루프로 명료하게 설계하고 기존기능은 회귀보존; 주력범위/담당/IP 합의는 증거기록.",
+      "work_packages": [
+        "P0-06",
+        "P1-OPS"
+      ],
+      "evidence_refs": [
+        "requirements",
+        "verification"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "아레나를 주력 세션 흐름, 단문앱/확장 기능은 별도 범위로 명시."
+    },
+    {
+      "id": "V50-R29",
+      "requirement": "CallShield/Factory/SRE와 의심계는 별도 구현계보다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "다른 팀 가이드의 CallShield/센서/surrogate/은행동결 제안을 현재 제품 완료 기능으로 병합하지 않았다.",
+      "remaining": "동결·문자발송·음성인증 등 새 부작용 기능은 이번 1~4 범위 밖이다.",
+      "original_v5_action_preserved": "상태기계/멱등성/UI분리 아이디어만 참고하고 surrogate 수식·타모델명·실제동결계획을 의심계 완료기능으로 병합하지 않는다.",
+      "work_packages": [
+        "P1-KEEP",
+        "P1-DOCS"
+      ],
+      "evidence_refs": [
+        "requirements",
+        "source"
+      ],
+      "implementation_status": "PRESERVED",
+      "implementation_evidence": "CallShield/Factory/SRE 별도 계보. 본 프로젝트 기능으로 합치지 않음."
+    },
+    {
+      "id": "V50-R30",
+      "requirement": "대회 필수 참가·일정 조건을 최신 공식 출처로 확인한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "기존 준비감사의 공식 일정/규칙 확인 기록을 재사용한다. 이번 후속 검토에서는 웹 재조회하지 않았다.",
+      "remaining": "개인 접수/장비/운영진 답변·사전코드/외부API/GPU/제출/IP 근거는 여전히 미확인이다.",
+      "original_v5_action_preserved": "팀 접수/참석/장비 증거를 실제로 채우고 공식 세부심사/사전코드/외부API/GPU/제출/발표/IP 미확인 유지.",
+      "work_packages": [
+        "P1-OPS"
+      ],
+      "evidence_refs": [
+        "requirements"
+      ],
+      "implementation_status": "NOT_RUN",
+      "implementation_evidence": "이번 구현은 대회 규정/참가/IP 신규 확인을 수행하지 않음. 기존 공식 확인 기록을 최신 확정으로 승격 안 함."
+    },
+    {
+      "id": "V50-R31",
+      "requirement": "공식 온도 숫자가 서로 다르므로 실제 실행 설정을 고정한다.",
+      "latest_audit_status": "PARTIAL",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "로컬 export 해시와 서버 identity의 실제 실행 T=1.52,bf16을 고정했고 tokenizer 경고를 별도 분석했다.",
+      "remaining": "제품의 NOT_APPLIED_PUBLIC_SOURCES_CONFLICT 문자열과 실제 서버T를 구별해야 한다. source provenance·identity attestation·도메인 calibration을 하나의 상태로 합치지 않는다.",
+      "original_v5_action_preserved": "checkpoint/head/tokenizer/runtime/export temperature를 기록; 숫자충돌을 임의교체로 해결했다고 하지 않는다.",
+      "work_packages": [
+        "P0-01",
+        "P1-DOCS"
+      ],
+      "evidence_refs": [
+        "protocol",
+        "identity",
+        "tokenizer"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "실행 T=1.52, 모델 미인증, 도메인보정 미검증 별도 표기. 입력 계약/모델export 유지."
+    },
+    {
+      "id": "V50-R32",
+      "requirement": "추가 reasoning/LLM 미들웨어는 필수가 아니라 비교 후보이다.",
+      "latest_audit_status": "RESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "기존 adapter/정책/상태 결함을 먼저 점검했으며 별도 LLM 미들웨어/서버를 필수로 추가하지 않았다.",
+      "remaining": "추가 reasoning은 별도 효과·지연 실험 없이는 채택하지 않는다. 새 기능 권고로 이번 범위를 늘리지 않는다.",
+      "original_v5_action_preserved": "기존 어댑터·정책·상태를 먼저 통합하고 별도서버/LLM은 실패종류별효용·지연대조 후 필요할 때 채택한다.",
+      "work_packages": [
+        "P0-01",
+        "P1-KEEP"
+      ],
+      "evidence_refs": [
+        "protocol_review",
+        "candidate_design"
+      ],
+      "implementation_status": "IMPLEMENTED",
+      "implementation_evidence": "필수 별도LLM 미들웨어 없음. 기존 정책/검증을 공통 계약 모듈로 통합."
+    },
+    {
+      "id": "V50-R33",
+      "requirement": "v5 이름만 올리는 대신 코드·계약·앱·문서·모드·평가의 정합성을 갖춘 major 전환이 필요하다.",
+      "latest_audit_status": "UNRESOLVED",
+      "status_scope": "소스·검증 경계의 상태이며 출시 완료를 의미하지 않음",
+      "current_evidence": "최종384소스/산출물의 회귀와 실제계약복구·작업연결·브라우저점검을 연결했다. 버전은4.9이고 후보문항/기본정책은 보존했다.",
+      "remaining": "독립평가·v5기본계약/정책결정·최종모바일배포/manifest·재시작기준을 완료하지 않았다. 소스PASS만으로v5승격불가.",
+      "original_v5_action_preserved": "v5 진입기준/수용게이트/보존목록/이전호환/되돌리기·배포 manifest를 먼저 확정해 구현과 보고가 같은 사실을 보게 한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-07",
+        "P0-08",
+        "P1-DOCS"
+      ],
+      "evidence_refs": [
+        "verification",
+        "final_summary",
+        "order_fix",
+        "browser",
+        "source"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "v5 코드/계약/UI/새실험/검사/빌드/현재문서 연결. 의미성능·독립평가·기기 게이트는 미완료."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C01",
+      "topic": "환경별 typed실행 계보",
+      "latest_audit_status": "RESOLVED",
+      "current_evidence": "11/2·11/4실험/장비 계보를 분리하고 이번실제typed 기준선72·후보/순서실험·현재arenaHTTP와브라우저연결을 각각기록했다. 최신환경에서 전체프로젝트 미실행이라는 해석을 해소했다.",
+      "remaining": "환경·일자·모델·계약·실행/재생 종류별 provenance 연결; v5 현재 앱 경로에서 재검증.",
+      "work_packages": [
+        "P0-01",
+        "P1-DOCS"
+      ],
+      "implementation_note": "새 Typed 실험/실행 provenance 연결."
+    },
+    {
+      "id": "C02",
+      "topic": "DRA와 원본정책",
+      "latest_audit_status": "PARTIAL",
+      "current_evidence": "실제raw정책비교 및 orderedwire복구는 확인. arena원본/AppDRA 기본분리와 v5채택은 남고 DRA V47해제위험은 재현된다.",
+      "remaining": "활성경로별policy ID/코드위치/출력차이 공개 후 v5정책선택.",
+      "work_packages": [
+        "P0-03"
+      ],
+      "implementation_note": "legacy 기본 일치, DRA는 비교; 성능 한계 보존."
+    },
+    {
+      "id": "C03",
+      "topic": "현재문서 안 rc1 잔재",
+      "latest_audit_status": "UNRESOLVED",
+      "current_evidence": "현재 PRD/상태문서의 rc1·과거실행 상태를 단일 현재표로 정리하지 않았다. apps/README 한정 최신화로 전체 문서 충돌 해소는 아니다.",
+      "remaining": "역사본문을 보관경로로 이동하고 현재명세는 단일상태표에서 생성.",
+      "work_packages": [
+        "P1-DOCS"
+      ],
+      "implementation_note": "현재 진입점 v5로 교체; 기존 버전 문서 역사 보존."
+    },
+    {
+      "id": "C04",
+      "topic": "기획서의 옛 테스트 실패",
+      "latest_audit_status": "PARTIAL",
+      "current_evidence": "현재 작업본325PASS를 새 로그로 확인했다. 옛기획서는 보존됐으므로 과거 실패를 현재상태로 읽지 않게 최종문서 연결이 남는다.",
+      "remaining": "옛실패기록은과거로보존; 최신테스트와사용환경검증을별도갱신.",
+      "work_packages": [
+        "P1-DOCS"
+      ],
+      "implementation_note": "과거 실패 기록은 그대로; v5 최신 실행 로그를 별도 연결."
+    },
+    {
+      "id": "C05",
+      "topic": "일반 요청 후보 공백",
+      "latest_audit_status": "PARTIAL",
+      "current_evidence": "EN/KR scope 후보 실제 비교 완료. 후보는 미채택이며 원본 의미 계약의 공백은 남음.",
+      "remaining": "동일원문질문별scope정의 및 새계약실험.",
+      "work_packages": [
+        "P0-04"
+      ],
+      "implementation_note": "388회 단독 질문 실험 후 모두 HOLD, 공백 미해결."
+    },
+    {
+      "id": "C06",
+      "topic": "작업완료와 위험해제",
+      "latest_audit_status": "PARTIAL",
+      "current_evidence": "관측유실은 실제HTTP3회보존으로 수정확인. 현재턴/과거위험 화면설명도 추가됐다. USER_REPORTED완료와 위험해제는 그대로다.",
+      "remaining": "현재턴/세션/작업의상태를분리표시; 해제기준은별도요구·평가.",
+      "work_packages": [
+        "P0-06"
+      ],
+      "implementation_note": "세션/현재턴/작업 분리와 미해결 종료/재개. 위험 해제 안 함."
+    },
+    {
+      "id": "C07",
+      "topic": "Team Guide 실적 전이 위험",
+      "latest_audit_status": "RESOLVED",
+      "current_evidence": "다른 가이드 아이디어를 지정모델 실적/현재 기능으로 병합하지 않았고 범위 외로 유지했다.",
+      "remaining": "별도프로토타입계보와아이디어출처로표기; 실제추론·권한·효능주장분리.",
+      "work_packages": [
+        "P1-KEEP",
+        "P1-DOCS"
+      ],
+      "implementation_note": "별도 계보 유지."
+    },
+    {
+      "id": "C08",
+      "topic": "L0..L5 의미가 문서마다 다름",
+      "latest_audit_status": "UNRESOLVED",
+      "current_evidence": "L번호의 문서별 의미 차이는 그대로다. 구체 승인 시 문서버전+계층명을 병기해야 한다.",
+      "remaining": "문서버전+계층명 또는 안정된 namespace로승인과trace 연결.",
+      "work_packages": [
+        "P1-DOCS",
+        "P1-OPS"
+      ],
+      "implementation_note": "v5 문서는 EXECUTION-v50/SESSION-v50 계약으로 식별. 이전 L번호의 합의 의미는 현행 유지."
+    },
+    {
+      "id": "C09",
+      "topic": "G7 이름 충돌",
+      "latest_audit_status": "PARTIAL",
+      "current_evidence": "이번 검토는 GOLDEN-V33-G7과 릴리스 발표게이트를 구별한다. 원본문서 전반 namespace 정합은 미수정이다.",
+      "remaining": "GOLDEN-V33-G7과RELEASE-G7처럼분리.",
+      "work_packages": [
+        "P1-DOCS",
+        "P1-OPS"
+      ],
+      "implementation_note": "GOLDEN-V33-G7과 RELEASE-V50-G07을 구분해 참조."
+    },
+    {
+      "id": "C10",
+      "topic": "교재와 패키지 전달 누락",
+      "latest_audit_status": "UNRESOLVED",
+      "current_evidence": "기존 교재/키트 미확보 파일의 새로운 전달 근거를 확인하지 못했다. BASELINE_V46 복원은 이 별도 누락을 해결하지 않는다.",
+      "remaining": "미확보목록을남기고v5필요파일은원본전달경로에서회수;없다고검증완료처리하지않음.",
+      "work_packages": [
+        "P1-DOCS"
+      ],
+      "implementation_note": "누락된 별도 원본 교재/키트는 이번에도 확보했다고 주장하지 않음."
+    },
+    {
+      "id": "C11",
+      "topic": "감사파일 3중 이름",
+      "latest_audit_status": "RESOLVED",
+      "current_evidence": "동일SHA의3개문서 사본은 독립감사로 세지 않는다. 새로운 source회귀 로그는 별도 실행근거로 기록한다.",
+      "remaining": "동일내용사본과독립검사를인벤토리에서구분.",
+      "work_packages": [
+        "P1-DOCS"
+      ],
+      "implementation_note": "내용 SHA가 같은 사본은 독립 검사로 세지 않음."
+    },
+    {
+      "id": "C12",
+      "topic": "현재문서/역사문서 질문수·런타임",
+      "latest_audit_status": "UNRESOLVED",
+      "current_evidence": "2/6/7질문·포트·런타임 역사문서 혼재를 단일현재계약으로 전환하지 않았다. 현재실험은7문항해시로 고정했다.",
+      "remaining": "현재계약을기계생성한단일manifest로삼고역사문서는명시된버전폴더로분리.",
+      "work_packages": [
+        "P0-01",
+        "P1-DOCS"
+      ],
+      "implementation_note": "현재 질문7개/runtime정본은 기계검사 manifest, 역사 문서의 예전 질문수와 구별."
+    }
+  ],
+  "pending_decisions": [
+    {
+      "id": "D01",
+      "item": "L2 안내본문 문자/통화 맥락",
+      "current": "문자맥락 현행유지",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS",
+        "P1-DOCS"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    },
+    {
+      "id": "D02",
+      "item": "GOLDEN-V33-G7 none+직접송금",
+      "current": "ASK_HUMAN",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS",
+        "P0-04"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    },
+    {
+      "id": "D03",
+      "item": "기관주장 질문",
+      "current": "q_claim noul optional",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS",
+        "P0-04"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    },
+    {
+      "id": "D04",
+      "item": "진명 L1 승인",
+      "current": "문서에는미완료",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    },
+    {
+      "id": "D05",
+      "item": "v5 기본 정책/질문/확률기준",
+      "current": "arena original/advisory와다른앱경로대조필요",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P0-03",
+        "P0-04",
+        "P0-08"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "허가된 개발 후보는 legacy 기본 일치·DRA 비교, 질문 원본 유지. 최종 최적 정책 승인으로 해석하지 않음"
+    },
+    {
+      "id": "D06",
+      "item": "세션문맥·위험해제·작업종료",
+      "current": "현재text만모델,priorpause유지",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P0-06"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "허가된 계획에 따라 미해결 종료/재개 구현. 실제 위험 해제/다중 턴 모델 입력 제외"
+    },
+    {
+      "id": "D07",
+      "item": "주력시연·기존확장메뉴·역할/IP",
+      "current": "의심계핵심집중제안",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS",
+        "P1-KEEP"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    },
+    {
+      "id": "D08",
+      "item": "대회 참가·사전코드·외부도구·GPU·제출/발표/IP",
+      "current": "공식공개일정만재확인",
+      "status": "PENDING_NO_NEW_ITEM_SPECIFIC_APPROVAL",
+      "work_packages": [
+        "P1-OPS"
+      ],
+      "handling": "구체 변경안·영향·비교를 준비하는 계획. 기존 현행 유지 지시를 변경하지 않음.",
+      "implementation_handling": "현행 유지; 구체 팀 합의가 완료되었다고 기록하지 않음"
+    }
+  ],
+  "promotion_checklist": [
+    {
+      "id": "G01",
+      "title": "원본/후보/작업본/출시제품 계보",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "최종 지정 source, 질문/정책/template/runtime/자산 버전을 함께 고정하고 실험 후보를 제품 기본값과 분리한다.",
+      "work_packages": [
+        "P0-01",
+        "P0-07"
+      ],
+      "refs": [
+        "V50-R01",
+        "V50-R02",
+        "V50-R04",
+        "V50-R33"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "사전고정 프로토콜/원본입력/export지문 보존, 단독변경388회.",
+      "stable_release_gate_id": "RELEASE-V50-G01"
+    },
+    {
+      "id": "G02",
+      "title": "독립 평가",
+      "latest_audit_status": "UNRESOLVED",
+      "remaining_or_verified_boundary": "새 family/session·독립 작성/주석과 잠금 평가 없이는 일반 정확도·보정·우월성으로 승격하지 않는다. 이번73개는 개발 비교다.",
+      "work_packages": [
+        "P0-08"
+      ],
+      "refs": [
+        "V50-R08",
+        "V50-R23",
+        "V50-R24"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "원본72 재호출 확률/두정책 출력이 이전과 정확히동일.",
+      "stable_release_gate_id": "RELEASE-V50-G02"
+    },
+    {
+      "id": "G03",
+      "title": "후보의 안전한 채택 판단",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "후보선택/성능승격은 보류. 원본JSorder→정본복구시 DRA V2기대35→33,위험맥락해제0→1(V47),정상PAUSE1유지. legacy안내73개는동일. 계약복구·개발셋향상·독립안전성은별개다.",
+      "work_packages": [
+        "P0-03",
+        "P0-04",
+        "P0-08"
+      ],
+      "refs": [
+        "V50-R05",
+        "V50-R06",
+        "V50-R07",
+        "V50-R24",
+        "D05"
+      ],
+      "implementation_status": "HOLD",
+      "implementation_evidence": "세 질문 후보 모두 회귀; 정상 과보류/필수중단 누락/독립안전 미해결.",
+      "stable_release_gate_id": "RELEASE-V50-G03"
+    },
+    {
+      "id": "G04",
+      "title": "실제 typed 작업 루프 및 재시작",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "실제HTTP24평가(기준/수정 각3새세션)로 전체작업루프·관측보존·재조회확인. 서버프로세스restart=false이므로 재시작3회 게이트는미완료다.",
+      "work_packages": [
+        "P0-05",
+        "P0-06"
+      ],
+      "refs": [
+        "V50-R03",
+        "V50-R10",
+        "V50-R11",
+        "V50-R26"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "실제 프로세스3재시작·4모델호출·멱등성/관측/종료재개 PASS.",
+      "stable_release_gate_id": "RELEASE-V50-G04"
+    },
+    {
+      "id": "G05",
+      "title": "UI 수정의 실제 실행·제품 반영",
+      "latest_audit_status": "RESOLVED",
+      "remaining_or_verified_boundary": "최종UI13회귀와 실제브라우저8호출,HTTP제공22자산동일성 확인. 현재턴/과거위험설명 및 입력/정책/검토UI 확인. 이는로컬실험preview로범위한정;모바일/릴리스미반영은G06.",
+      "work_packages": [
+        "P0-02",
+        "P0-07"
+      ],
+      "refs": [
+        "V50-R13",
+        "V50-R21"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "브라우저 세션/단문앱과 최신HTTP자산일치, UI회귀14+6 PASS.",
+      "stable_release_gate_id": "RELEASE-V50-G05"
+    },
+    {
+      "id": "G06",
+      "title": "배포물·manifest·모바일",
+      "latest_audit_status": "UNRESOLVED",
+      "remaining_or_verified_boundary": "새 source에 맞는 SKILL/PWA/APK/manifest/full archive 재생성과 검사 필요. 현재 verify_release는 실제 stale FAIL이다. Android 실기기 검증 없이 실행완료라고 쓰지 않는다. 최종검사에서20복사자산중 app.js/엔진이PWA와다름을직접검출했다. manifest만갱신해도이차이를차단한다.",
+      "work_packages": [
+        "P0-07"
+      ],
+      "refs": [
+        "V50-R21",
+        "V50-R33"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "최신 PWA/APK/스킬/FULL 후보 생성. APK독립정적/서명PASS, 실기기NOT_RUN.",
+      "stable_release_gate_id": "RELEASE-V50-G06"
+    },
+    {
+      "id": "G07",
+      "title": "공통 trace 및 계약 공백",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "모델의 현재턴범위, 정책ID·모든 gate·질문/runtime 지문, request/session, 관측출처를 연결한다. sanitized gate trace는 원문quote를 제거한 분석로그이고 replay용 승인합성export와 다름을 안내한다. 로그 직접재생 거절을 결함으로 보거나 quote를 자동복원하지 않는다.",
+      "work_packages": [
+        "P0-01",
+        "P0-04",
+        "P0-06"
+      ],
+      "refs": [
+        "V50-R09",
+        "V50-R12",
+        "C12"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "공통trace/manifest구현·392출력 replay동일. 요청 의미schema공백 남음.",
+      "stable_release_gate_id": "RELEASE-V50-G07"
+    },
+    {
+      "id": "G08",
+      "title": "팀 승인 및 상태 계약",
+      "latest_audit_status": "UNRESOLVED",
+      "remaining_or_verified_boundary": "D01~D08은 결정권자의 구체 합의 증거 전 현행 유지. 특히 자기보고 작업완료를 자동 위험해제로 바꾸지 않는다.",
+      "work_packages": [
+        "P1-OPS"
+      ],
+      "refs": [
+        "V50-R27",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "implementation_status": "PARTIAL",
+      "implementation_evidence": "허가된코드수정/미해결종료·재개만구현. L2/G7/기관/L1 현행유지, 팀합의추정안함.",
+      "stable_release_gate_id": "RELEASE-V50-G08"
+    },
+    {
+      "id": "G09",
+      "title": "실행 T=1.52와 제품 provenance 표시",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "실제 local serving T=1.52·exporthash는 실행 설정이다. MODEL_RESPONSE_UNATTESTED/model_attested=False는 제품의 인증 한계, NOT_ESTABLISHED는 도메인보정 미검증이다. 세가지를 별개 표기하고 기존 NOT_APPLIED 문자열과 혼동하지 않게 한다.",
+      "work_packages": [
+        "P0-01",
+        "P1-DOCS"
+      ],
+      "refs": [
+        "V50-R02",
+        "V50-R08",
+        "V50-R31"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "T1.52제공자설정/인증false/도메인보정NOT_ESTABLISHED분리.",
+      "stable_release_gate_id": "RELEASE-V50-G09"
+    },
+    {
+      "id": "G10",
+      "title": "확장/검증 범위 보존",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "PAYLOCK/LinkGuard/도메인/메모리 회귀는 보존. 실제 평판/web/기관확인/은행권한/모바일검증을 미수행 상태 그대로 표기한다. 이번1~4밖 기능을 새로 만들지 않는다.",
+      "work_packages": [
+        "P1-KEEP"
+      ],
+      "refs": [
+        "V50-R17",
+        "V50-R18",
+        "V50-R19",
+        "V50-R20",
+        "V50-R29"
+      ],
+      "implementation_status": "VERIFIED_SCOPED",
+      "implementation_evidence": "기존확장회귀통과. 외부평판/기관/은행권한/기기는실행주장없음.",
+      "stable_release_gate_id": "RELEASE-V50-G10"
+    },
+    {
+      "id": "G11",
+      "title": "검사 진입점과 build-info 상태",
+      "latest_audit_status": "PARTIAL",
+      "remaining_or_verified_boundary": "최종회귀63Python/13UI/JS적합성과 영향golden49를 수행했다. narrow validate_v49.ps1·금지7파일·v49build-info누락은그대로이며전체완료표시로바꾸지않는다.",
+      "work_packages": [
+        "P0-07",
+        "P1-DOCS"
+      ],
+      "refs": [
+        "V50-R16",
+        "V50-R21",
+        "V50-R33"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "통합검사진입점·금지11파일·실제검사결과와빌드자산해시연결. 경로오염수정64회귀PASS.",
+      "stable_release_gate_id": "RELEASE-V50-G11"
+    },
+    {
+      "id": "G12",
+      "title": "원격 relay 조건부 방어 차이",
+      "latest_audit_status": "UNRESOLVED",
+      "remaining_or_verified_boundary": "Node relay의 DNS사전검사와 연결IP 미고정은 기존 조건부 정적 발견이다. loopback 현재 실험 성공으로 해소되지 않는다. 원격기능을 출시범위에 넣으면 수정·검증, 아니면 제외범위를 명시한다. 공격실증/새기능으로 오해하지 않는다.",
+      "work_packages": [
+        "P1-REMOTE"
+      ],
+      "refs": [
+        "V50-R14",
+        "V50-R22"
+      ],
+      "implementation_status": "EXCLUDED_ENFORCED",
+      "implementation_evidence": "v5원격relay실행차단. loopback전용, 원격기능완료가아님.",
+      "stable_release_gate_id": "RELEASE-V50-G12"
+    },
+    {
+      "id": "G13",
+      "title": "Python/JS 모델 choice 순서 계약",
+      "latest_audit_status": "RESOLVED",
+      "remaining_or_verified_boundary": "E.questions에서M.spec옵션순서복원·누락/추가키거절. 생성기정렬은그대로이나요청경계에서정본순서를복구했다. 계약3검사와실제72응답·두정책전체출력Python일치확인. 성능/안전미해결은G03에분리.",
+      "work_packages": [
+        "P0-01",
+        "P0-07"
+      ],
+      "refs": [
+        "V50-R04",
+        "V50-R09",
+        "V50-R16",
+        "V50-R33"
+      ],
+      "implementation_status": "VERIFIED_LOCAL",
+      "implementation_evidence": "ordered choice7문항보존, 공통계약/과거벡터/실제raw재생통과.",
+      "stable_release_gate_id": "RELEASE-V50-G13"
+    }
+  ],
+  "editorial_updates_without_historical_edits": {
+    "V50-R06": "EN/KR 후보 실제144회 비교 완료. 무해한 직접 요청과 불명확한 위협 지시의 계약 공백은 미해결. 개별 질문 실험·주석 기준 점검 필요.",
+    "V50-R07": "q_evidence를 포함한 EN/KR 공동 변경 실험 완료. 단독 변경 효과와 제품 채택·독립 주석 평가 미완료.",
+    "V50-R13": "최신 통합63/63 및 UI13/13 통과. 실제HTTP 멱등성·409, 브라우저 edit/refresh/clear 확인. 의도적 지연은 DOMstub이며 모바일 미검증.",
+    "V50-R24": "기준선·EN/KR 후보·선택지순서의 문장별 개선과 회귀 분석 완료. 항상ASK 비교 포함. 동일 전체 제품 파이프라인과 독립 평가는 남음.",
+    "C05": "EN/KR scope 후보 실제 비교 완료. 후보는 미채택이며 원본 의미 계약의 공백은 남음."
+  },
+  "plan_additions": [
+    "주석 정의 충돌 점검과 변경 이력 분리",
+    "최소 trace 다음 질문별 ablation",
+    "모든 발동 gate와 최종 결정 사유 분리",
+    "위험 해제와 구분한 미해결 종료·재개",
+    "출시 후보 해시를 평가/플랫폼검증에 연결",
+    "원격 relay 제외 시 실행 설정과 UI 차단"
+  ],
+  "sources": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_readiness_20261104/agent_requirements_audit.json",
+      "sha256": "e8b5c81d41b050607d6d10d91f8aae0417bdf97d63e780091c163afc9c09c0a9"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_readiness_20261104/agent_runtime_audit.json",
+      "sha256": "ce3f6bd069d6d3207fed94bd69578d7481f9241bb1a3b696631dd6f8aea10bdb"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_readiness_20261104/build_readiness_report.py",
+      "sha256": "c28403974588f2e41b733d383f6060537786f7edaf0583a241647a97ddd060d6"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_readiness_20261104/IteraGuard_v5_Readiness_20261104.pdf",
+      "sha256": "097db93c40cd0f5bad60c980745bb2f2646ad999f722c3d85f9ddef8a2d33c67"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/v5_gate_review.json",
+      "sha256": "f6617b977adce8118e7aeeed2ae303662a44c00546e418437d29341c31efb2cc"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/full_verification.json",
+      "sha256": "f8b83b403c7a83f2442813403661a78d9926231c6da8b84f524f465171c9345d"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/final_verification_summary.json",
+      "sha256": "2fcea85561fbf43a5378d736ef7d6ed5f58a775033ee1447cc54aac0c3d42a0c"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/model_call_ledger.json",
+      "sha256": "2a13dd4d03e044ae3d39773ec37aa23cfb78cbdf5bbe9552359e75c227e572fd"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/candidate_diagnosis.json",
+      "sha256": "5dea80edd7ff93eb6be0351f8e0d57e73fbb80ae30917dcb2ca2e61a8c3b5c1a"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/candidate_comparison.json",
+      "sha256": "6cffb27401660ee3bea50f29d0a7802e7f92700b14c5f456fd780cf0cd130fda"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/cross_surface_order_comparison.json",
+      "sha256": "2d84068ef62afad9c39fd9ccbc78f17debf565e5f715a5dc49c5dd4844ce487d"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/order_report_summary.json",
+      "sha256": "fd625efc1eadb90f5868b5201558e3aa5bdf6ad3fcf67e795a97e5d60ecacc4d"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/question_order_fix.json",
+      "sha256": "bc5146afb1296c463d8ac96ceae57adb47e354779d53a639e94e1646691599d9"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/api_integration_results.json",
+      "sha256": "a84ab308216634d7626c91c10b20efdf827a799714e50a3ee748b5ef7fc221be"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/api_unavailable_results.json",
+      "sha256": "123cd4573231290b730560cc53261b609a9f6722182805b719cc351564d3b8f2"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/browser_verification.json",
+      "sha256": "2169972fcc8fe4397e47fb5a650a06143e94b08f962fdeca4afaecf0b1cab3d0"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/release_fix.json",
+      "sha256": "1c6e7b6006330de8e68ce7b6c609f45d60d62a0c41d25138e86a7cdeb780bdab"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/source_inventory_final.json",
+      "sha256": "15847d4d5cecb9c7b3319c6ca7d6ba2c37f8eda397ea62da0e9e9bc9dd31eaf0"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl",
+      "sha256": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl",
+      "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/tokenizer_warning_review.json",
+      "sha256": "a53411245a3ec27acfa2488349a7cbadc34a64296b916efdbdbb068db87f1c6e"
+    }
+  ],
+  "decision_checkpoints": {
+    "before_candidate_activation": [
+      "D05",
+      "D06"
+    ],
+    "before_related_contract_change": [
+      "D01",
+      "D02",
+      "D03",
+      "D04"
+    ],
+    "before_public_release_and_demo": [
+      "D07",
+      "D08"
+    ],
+    "current_request_changes_item_specific_approval": false
+  },
+  "implementation_date_kst": "2026-11-04",
+  "implementation_scope": "Authorized code/debugging + AI synthetic development25; independent human evaluation and public release not claimed",
+  "implementation_validation": "internal/evidence/v50 source/experiment/restart/browser/APK evidence; final release verification stored outside source to avoid hash self-reference.",
+  "field_precedence": "implementation_status/implementation_evidence describe v5. latest_audit_status, current_evidence, remaining, work_packages and promotion_checklist are preserved prior-plan audit and must not override final implementation evidence.",
+  "implementation_work_packages": {
+    "P0-01": "공통 계약/지문/trace 구현·검증",
+    "P0-02": "아레나 현재턴/세션/보고 UI, 단문앱 범위 표시",
+    "P0-03": "legacy 기준 일치, DRA 비교 유지; 최적성 미검증",
+    "P0-04": "질문별388실험·주석audit 완료, 모든후보HOLD",
+    "P0-05": "실제Typed과제루프 검증",
+    "P0-06": "미해결종료재개/관측/과제중복완화/마이그레이션/3재시작검증",
+    "P0-07": "새빌드·통합검사·정적APK·자산/패키지검증; 실기기제외",
+    "P0-08": "AI개발25만추가, 독립인간평가NOT_RUN"
+  }
+}

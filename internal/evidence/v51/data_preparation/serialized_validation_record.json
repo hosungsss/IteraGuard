@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "counts": {
+    "total_cases": 60,
+    "development": 36,
+    "validation": 24,
+    "families": 20,
+    "development_families": 12,
+    "validation_families": 8,
+    "semantic_spans": 81
+  },
+  "checks": {
+    "schema": "PASS",
+    "family_split": "PASS",
+    "exact_text_duplicates_in_existing98": [],
+    "all_spans_codepoint_match": true,
+    "existing98_max_trigram_jaccard": 0.17543859649122806,
+    "existing98_threshold_review_flags": [],
+    "cross_split_max_trigram_jaccard": 0.08536585365853659,
+    "existing98_semantic_novelty": "Distinct newly authored scenario/workflow families; lexical scan is only a safeguard, not an independent semantic novelty proof."
+  },
+  "existing_sources": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl",
+      "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl",
+      "sha256": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v50_ai_development25.jsonl",
+      "sha256": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68"
+    }
+  ],
+  "model_calls": 0,
+  "independent_eval": false,
+  "validation_content_disclosed_to_parent": false,
+  "serialized_files": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_development36.jsonl",
+      "sha256": "5c1811aa68272ca987c084ef78e148be137ac477e27ffe9fd7de811a91e3fff9",
+      "freeze_hash_match": true,
+      "row_count": 36,
+      "family_count": 12,
+      "risk_counts": {
+        "False": 19,
+        "True": 12,
+        "None": 5
+      },
+      "pause_required_count": 12,
+      "all_evidence_offsets_match": true,
+      "json_roundtrip_schema": "checked_by_prepare_data.validate"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_validation24.jsonl",
+      "sha256": "9088ff6491e4f47c732efffc4ffc75ee1698f77f535a853ebe8c6a51fa7b5355",
+      "freeze_hash_match": true,
+      "row_count": 24,
+      "family_count": 8,
+      "risk_counts": {
+        "False": 12,
+        "True": 7,
+        "None": 5
+      },
+      "pause_required_count": 7,
+      "all_evidence_offsets_match": true,
+      "json_roundtrip_schema": "checked_by_prepare_data.validate"
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "rubric_hash_match": true,
+  "author_script_hash_match": true
+}

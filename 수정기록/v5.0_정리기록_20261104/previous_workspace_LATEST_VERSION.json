@@ -1,0 +1,14 @@
+{
+  "version": "5.0",
+  "stage": "DEVELOPMENT_CANDIDATE",
+  "source": "workspaces/IteraGuard_DoubtMeter_v5.0",
+  "report": "deliverables/v50_implementation_20261104/V50_IMPLEMENTATION_REPORT.md",
+  "package": "deliverables/v50_implementation_20261104/delivery/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+  "package_sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+  "live_arena": "http://127.0.0.1:8769/",
+  "live_single_text_app": "http://127.0.0.1:8770/",
+  "independent_human_evaluation": "NOT_RUN_AI_DATA_ONLY",
+  "physical_android": "NOT_RUN",
+  "clean_package_verification": "PASS",
+  "final_result": "deliverables/v50_implementation_20261104/FINAL_RESULT.json"
+}

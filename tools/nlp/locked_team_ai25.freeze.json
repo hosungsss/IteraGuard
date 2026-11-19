@@ -1,0 +1,159 @@
+{
+ "file": "locked_team_ai25.jsonl",
+ "sha256": "8c9976210f0802ad2dd0f870f3aaac3bfab2e400ae1a44982e3105c7ada7da48",
+ "n": 25,
+ "status": "SEEN_DEV_SET (labels and team results visible before any v4.7 change)",
+ "source": "report_2_ai_assisted_25_evaluation_20261102.pdf appendix; emoji in 02 assumed 📚; team's own input sha 9f7c589a… not reproducible from PDF text",
+ "team_observed_v45": [
+  {
+   "id": "AI-JM-01",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-02",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-03",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-04",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "NO_STRONG_SIGNAL",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-05",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-06",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-07",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-08",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-09",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-10",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-11",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-12",
+   "rule_v45": "CAUTION",
+   "nlp_v45": "CAUTION",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-13",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-14",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-15",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "PAUSE_AND_VERIFY",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-16",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-17",
+   "rule_v45": "CAUTION",
+   "nlp_v45": "CAUTION",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-18",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-19",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "CAUTION",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-20",
+   "rule_v45": "ASK_HUMAN",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "PAUSE_AND_VERIFY"
+  },
+  {
+   "id": "AI-JM-21",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "NO_STRONG_SIGNAL",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-22",
+   "rule_v45": "NO_STRONG_SIGNAL",
+   "nlp_v45": "NO_STRONG_SIGNAL",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-23",
+   "rule_v45": "CAUTION",
+   "nlp_v45": "CAUTION",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-24",
+   "rule_v45": "PAUSE_AND_VERIFY",
+   "nlp_v45": "ASK_HUMAN",
+   "zoro_v45": "ASK_HUMAN"
+  },
+  {
+   "id": "AI-JM-25",
+   "rule_v45": "CAUTION",
+   "nlp_v45": "CAUTION",
+   "zoro_v45": "ASK_HUMAN"
+  }
+ ]
+}

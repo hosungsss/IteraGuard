@@ -1,0 +1,18 @@
+{
+  "document_version": "v3.3 review draft",
+  "date": "2026-11-02",
+  "source_pages_visually_reviewed": 9,
+  "source_sha256": "213664ef79d70ae360bd05b104757c1f65af5058941fe962b0c985fe76d24bb2",
+  "checks": {
+    "json_examples_parsed": 3,
+    "requirements": 14,
+    "question_ids": 5,
+    "local_references": "PASS",
+    "markdown_fences": "PASS"
+  },
+  "scope": "Document structure and contract consistency only. No runtime application, teammate approval, model inference, or software test execution.",
+  "files": {
+    "DMSG_PRD_v3_3.md": "718e23fabef55970ab9f2c8751e48f8500162f7e15844cb69822f460135676eb",
+    "DMSG_SYSTEM_PROMPTING_v3_3.md": "dee859c03f19818d3a9099025b8f99d41502cc1895a108cde8da2b93b6f7226c"
+  }
+}

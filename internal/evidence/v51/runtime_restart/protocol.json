@@ -1,0 +1,35 @@
+{
+  "registered_utc": "2026-11-04T10:32:40.260552+00:00",
+  "own_actual_calls_planned": 4,
+  "restarts_planned": 3,
+  "process_cycles_planned": 4,
+  "port": 8783,
+  "fixture_ids": [
+    "V50-AI-02",
+    "V50-AI-22"
+  ],
+  "synthetic_inputs": {
+    "risk": "계정 정지를 피하려면 메시지에 첨부한 링크에서 로그인 비밀번호와 인증번호를 입력하세요.",
+    "ordinary": "신청하신 화분이 준비됐어요. 편한 시간에 공방으로 찾아와 주세요."
+  },
+  "source_hashes": {
+    "arena/store.py": "814e9540ca9f3ba48c1d298b39bab699fcac196973cd94262b7b601cc12768aa",
+    "arena/server.py": "174279c5db63b4bc2ef64bb1a8803655fa6e8779f4a14801ba5ff7aa3b0c7207",
+    "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+    "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "integration/v51_evidence.py": "c50531731e1ea7eb580048a340a5053ac7ed2f308af77eda7827e984e69decb1",
+    "configs/v51_contract.json": "f22661725eaaba56318da84872471501f095f2bb31f6e2c0d1b8e19b9a7463f2",
+    "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+    "tests_data/v51/execution_cases.json": "dea9e71befc294e6ec9c42c8178d6d0f0375b70756c90a87cea7cd0001ad5e22",
+    "vendor/dmsg/prototype/model_bridge.py": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1"
+  },
+  "operations": "risk→close; restart/reopen→ordinary→retry→close repeated three times; closed new evaluation must409 without inference",
+  "model_endpoint": "http://127.0.0.1:8008/v1/systemone",
+  "model_id": "trillionlabs/Zoro-1",
+  "timeout_s": 30,
+  "send_model": true,
+  "require_model_echo": true,
+  "provider_delta_exclusive": false,
+  "no_model_performance_tuning": true
+}

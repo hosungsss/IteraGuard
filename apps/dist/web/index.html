@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eef2fb" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="의심계">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>의심계 · IteraGuard</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="splash" id="splash" aria-hidden="true"><div class="splash-core"><svg class="splash-mark" viewBox="0 0 32 32"><defs><linearGradient id="sm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cc4ff"/><stop offset="1" stop-color="#8b6bff"/></linearGradient></defs><path d="M16 3.5 26 7.6v8.1c0 6.1-4.2 10.6-10 12.8C10.2 26.3 6 21.8 6 15.7V7.6z" fill="url(#sm)"/><path class="splash-check" d="m11.4 16.2 3.3 3.3 6-6.4" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="splash-name">의심계</div><div class="splash-sub">IteraGuard · 기기 안에서 분석</div></div></div>
+<div class="backdrop" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="orb o4"></i></div>
+
+<header class="topbar glass" role="banner">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cc4ff"/><stop offset="1" stop-color="#8b6bff"/></linearGradient></defs><path d="M16 3.5 26 7.6v8.1c0 6.1-4.2 10.6-10 12.8C10.2 26.3 6 21.8 6 15.7V7.6z" fill="url(#bm)"/><path d="M11.2 16.4h9.6M16 11.6v9.6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".92"/></svg>
+    <div><h1>의심계</h1><p>IteraGuard · Doubt Meter</p></div>
+  </div>
+  <div class="top-pills">
+    <span class="pill" id="hostPill" title="실행 환경">브라우저</span>
+    <span class="pill subtle" title="모델 진품 인증 상태">모델 미인증</span>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- ANALYZE -->
+<section class="view active" id="view-analyze" role="tabpanel" aria-labelledby="tab-analyze">
+  <div class="card glass hero">
+    <div class="seg" role="radiogroup" aria-label="입력 방식">
+      <button class="seg-btn on" role="radio" aria-checked="true" data-src="text">문자 붙여넣기</button>
+      <button class="seg-btn" role="radio" aria-checked="false" data-src="fixture">예시 시나리오</button>
+      <i class="seg-thumb" aria-hidden="true"></i>
+    </div>
+    <p class="fine" id="inputScopeNotice">현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.</p>
+    <div id="srcFixture" hidden>
+      <div class="chips" id="fixtureChips" role="listbox" aria-label="시나리오"></div>
+      <blockquote class="transcript" id="fixtureText" aria-live="polite"></blockquote>
+    </div>
+    <div id="srcText">
+      <label class="field">
+        <span class="field-label">받은 문자·메시지 <small>(이 기기 안에서만 분석 · 외부 전송 없음)</small></span>
+        <textarea id="freeText" rows="4" maxlength="2000" placeholder="받은 문자를 붙여넣으세요. 예: 고객님 계좌 보호를 위해 자금을 안전한 곳으로 옮기셔야 합니다."></textarea>
+        <span class="counter"><span id="count">0</span> / 2000</span>
+      </label>
+      <div class="btn-row tight"><button class="secondary small" id="pasteBtn" type="button">클립보드에서 붙여넣기</button><button class="ghost small" id="clearBtn" type="button">지우기</button></div>
+      <label class="switch-row"><input type="checkbox" id="useNLP" checked><span class="switch" aria-hidden="true"></span><span>온디바이스 AI 의미 분석 <small id="nlpHint">(모델 준비 중…)</small></span></label>
+      <button class="secondary small" id="nlpRetry" type="button" hidden>모델 다시 불러오기</button>
+      <label class="switch-row"><input type="checkbox" id="useModel"><span class="switch" aria-hidden="true"></span><span>실제 조로로 판단 <small id="useModelHint">(연결 실패 시 판단 보류 · 온디바이스로 자동 전환하지 않음)</small></span></label>
+    </div>
+    <details class="advanced">
+      <summary>고급 옵션</summary>
+      <label class="switch-row"><input type="checkbox" id="askReview"><span class="switch" aria-hidden="true"></span><span>사람 확인 요청으로 표시</span></label>
+      <label class="switch-row"><input type="checkbox" id="simFail"><span class="switch" aria-hidden="true"></span><span>모델 장애 모의</span></label>
+    </details>
+    <button class="primary" id="runBtn"><span id="runLabel">분석하기</span></button>
+  </div>
+
+  <div class="card glass result" id="resultCard" hidden aria-live="polite">
+    <div class="state" id="stateRow">
+      <span class="state-icon" id="stateIcon" aria-hidden="true"></span>
+      <div><div class="state-label" id="stateLabel"></div><div class="state-sub" id="stateSub"></div></div>
+    </div>
+    <p class="message" id="message"></p>
+    <p class="fine" id="resultScopeNotice">현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.</p>
+    <div class="evidence" id="evidenceBox"></div>
+    <details class="xray"><summary>기술 정보 (판정 코드와 실행 경로)</summary><div class="state-code" id="stateCode"></div><pre id="executionTrace" class="execution-trace"></pre></details>
+    <dl class="facts" id="facts"></dl>
+    <details class="clauses" id="clauseBox"><summary>절 단위 단서 보기</summary><ol id="clauseList"></ol></details>
+    <div class="next" id="nextRow">
+      <button class="ghost" data-intent="PLAN_INDEPENDENT_VERIFICATION">공식 경로로 직접 확인할게요</button>
+      <button class="ghost" data-intent="REQUEST_TRUSTED_HUMAN_HELP">믿을 수 있는 사람에게 물어볼게요</button>
+    </div>
+    <p class="fine">이 결과는 안전 보증이나 사기 판정이 아닙니다. 송금·인증정보 제공·앱 설치 전에 상대가 알려준 번호가 아닌, 직접 찾은 공식 번호로 확인하세요.</p>
+  </div>
+
+  <div class="card glass history" id="historyCard" hidden>
+    <h2>문장별 분석 기록 <small>원문은 저장하지 않습니다</small></h2>
+    <p class="fine">각 문장을 따로 분석한 기록입니다. 이전 문장에서 안내한 위험이 해소됐다는 뜻은 아닙니다.</p>
+    <ol id="historyList"></ol>
+  </div>
+</section>
+
+<!-- PAYLOCK -->
+<section class="view" id="view-pay" role="tabpanel" aria-labelledby="tab-pay" hidden>
+  <div class="card glass">
+    <h2>지급 요청 검토 <small>PAYLOCK · 가상 거래처 기록</small></h2>
+    <div class="chips" id="payChips" role="listbox" aria-label="지급 예시"></div>
+    <form class="grid" id="payForm" autocomplete="off">
+      <label class="field"><span class="field-label">거래처</span><select id="pVendor"></select></label>
+      <label class="field"><span class="field-label">청구서</span><select id="pInvoice"></select></label>
+      <label class="field wide"><span class="field-label">발신 이메일 (주장)</span><input id="pEmail" inputmode="email"></label>
+      <label class="field"><span class="field-label">은행</span><select id="pBank"></select></label>
+      <label class="field"><span class="field-label">요청 계좌</span><input id="pAccount" inputmode="numeric"></label>
+      <label class="field wide"><span class="field-label">금액 (원)</span><input id="pAmount" inputmode="numeric"></label>
+      <label class="field wide"><span class="field-label">메일 본문 <small>(지시가 아닌 데이터로 취급)</small></span><textarea id="pMessage" rows="3" maxlength="1500"></textarea></label>
+    </form>
+    <button class="primary" id="payBtn"><span>검토하기</span></button>
+  </div>
+  <div class="card glass result" id="payResult" hidden aria-live="polite">
+    <div class="state" id="payState"><span class="state-icon" id="payIcon" aria-hidden="true"></span><div><div class="state-label" id="payLabel"></div><div class="state-code" id="payCode"></div></div></div>
+    <ul class="reasons" id="payReasons"></ul>
+    <p class="fine">실제 송금·계좌 소유 확인·발신자 인증 기능은 없습니다. 기록과 일치해도 "내부 검토 준비"일 뿐 지급 승인이 아닙니다.</p>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section class="view" id="view-model" role="tabpanel" aria-labelledby="tab-model" hidden>
+  <div class="card glass">
+    <h2>모델 연결 <small>Zoro-1 · kev /v1/systemone</small></h2>
+    <div class="status-row"><span class="dot" id="hostDot"></span><span id="hostText">확인 중…</span></div>
+    <div id="cfgBox">
+      <label class="field wide"><span class="field-label">엔드포인트</span><input id="cEndpoint" placeholder="http://127.0.0.1:8008/v1/systemone"></label>
+      <div class="grid">
+        <label class="field"><span class="field-label">모델 ID</span><input id="cModel" placeholder="trillionlabs/Zoro-1"></label>
+        <label class="field"><span class="field-label">타임아웃 (초)</span><input id="cTimeout" inputmode="decimal" placeholder="20"></label>
+      </div>
+      <div class="btn-row"><button class="secondary" id="cfgSave">저장</button><button class="secondary" id="probeBtn">계약 점검 (합성 4문장)</button></div>
+      <p class="fine">v5.1 개발 후보은 이 PC의 로컬 주소(127.0.0.1·localhost)만 연결합니다. 원격 서버 연결은 제공하지 않습니다.</p>
+    </div>
+    <ol class="probe" id="probeList"></ol>
+  </div>
+  <div class="card glass">
+    <h2>판단 방식 <small>v5.1 개발 비교</small></h2>
+    <div class="seg two" role="radiogroup" aria-label="판단 방식" id="arbSeg" data-pos="1">
+      <button class="seg-btn" role="radio" aria-checked="false" data-arb="dra">DRA 비교 (실험)</button>
+      <button class="seg-btn on" role="radio" aria-checked="true" data-arb="v46">기준 정책 (기본)</button>
+      <i class="seg-thumb" aria-hidden="true"></i>
+    </div>
+    <p class="fine">기대비용 중재는 같은 안내로 이어지는 선택지를 합친 뒤, "사람 확인"에도 비용을 매겨 가장 비용이 낮은 안내를 고릅니다. 비용표는 설계값이며 검증된 값이 아닙니다. 어떤 방식도 송금·차단을 실행하지 않습니다.</p>
+  </div>
+  <div class="card glass">
+    <h2>합성 모델 응답으로 판단 경로 시험 <small>SIMULATED · 실제 모델 아님</small></h2>
+    <label class="field wide"><span class="field-label">문장</span><input id="sText" value="[경고] 계좌가 동결됩니다. 지금 바로 안전계좌로 이체하세요."></label>
+    <div class="grid">
+      <label class="field"><span class="field-label">모델이 고른 행동</span><select id="sAction"></select></label>
+      <label class="field"><span class="field-label">모델이 고른 화행</span><select id="sSpeech"></select></label>
+      <label class="field"><span class="field-label">확신도 <output id="sPOut">0.90</output></span><input type="range" id="sP" min="0.5" max="0.99" step="0.01" value="0.9"></label>
+      <label class="field"><span class="field-label">압박·사기 신호 <output id="sAuxOut">0.20</output></span><input type="range" id="sAux" min="0" max="1" step="0.01" value="0.2"></label>
+    </div>
+    <button class="secondary" id="simBtn">이 응답으로 판단</button>
+    <div class="sim-out" id="simOut" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- LINKGUARD (v4.7) -->
+<section class="view" id="view-guard" role="tabpanel" aria-labelledby="tab-guard" hidden>
+  <div class="card glass">
+    <h2>링크 검사 <small>주소를 열지 않고 형식만 확인 · 외부 전송 없음</small></h2>
+    <label class="field wide"><span class="field-label">링크 또는 링크가 들어 있는 문장</span>
+      <textarea id="urlText" rows="3" maxlength="4000" placeholder="예: [CJ택배] 주소 확인 bit.ly/3AbC9 · https://nаver.com-login.top"></textarea></label>
+    <button class="primary" id="urlBtn" type="button">링크 검사</button>
+    <div id="urlOut" aria-live="polite"></div>
+  </div>
+  <div class="card glass">
+    <h2>앱 파일 검사 <small>사용자가 고른 APK만 · 설치·실행하지 않음 · 이 기기 안에서 분석</small></h2>
+    <label class="field wide"><span class="field-label">APK 파일 선택</span><input type="file" id="apkFile" accept=".apk,.apks,.xapk,application/vnd.android.package-archive,application/zip"></label>
+    <p class="fine" id="apkHint">권한·구성요소·서명 인증서·DEX 문자열을 정적으로 읽습니다. 악성코드 판정이 아니며, 개발사 서버 코드와 실행 중 동작은 확인하지 않습니다.</p>
+    <div id="apkOut" aria-live="polite"></div>
+  </div>
+  <div class="card glass">
+    <h2>검사 동의와 범위 <small>기본값은 모두 꺼짐</small></h2>
+    <label class="switch-row"><input type="checkbox" id="consentRep"><span class="switch" aria-hidden="true"></span><span>외부 평판 조회 허용 <small>(Safe Browsing·VirusTotal — 현재 조회 서버가 없어 동의해도 수행되지 않음: 미실행으로 표시)</small></span></label>
+    <label class="switch-row"><input type="checkbox" id="consentWeb"><span class="switch" aria-hidden="true"></span><span>격리 환경 웹 분석 허용 <small>(현재 배포에 포함되지 않음: 차단됨으로 표시)</small></span></label>
+    <p class="fine">어떤 설정에서도 이 앱은 의심 페이지를 휴대전화에서 자동으로 열지 않고, 문자를 보내지 않으며, 원문을 저장하지 않습니다. "알려진 위협 없음"은 안전하다는 뜻이 아닙니다.</p>
+  </div>
+  <div class="card glass" id="domainCard">
+    <section class="glass" aria-labelledby="zoro-v50-title"><h2 id="zoro-v50-title">v5.1 · 로컬 Zoro-1 검증</h2><p>PC에서 Zoro-1 Typed 응답을 선택한 질문·정책 묶음과 연결합니다. 개발 실험과 실행 검증은 별도 보고서에서 확인합니다. 정상 문장 과보류와 독립 성능 검증은 남아 있습니다.</p><p>확인 작업과 이전 위험을 유지하는 주력 화면은 별도 아레나(127.0.0.1:8769)입니다. 이 앱은 현재 문장만 분석합니다. GPU 모델은 앱에 내장되지 않으며 공개 Zoro 생성 비교는 별도 경로입니다. Android 실기기 실행은 미검증입니다.</p></section>
+<h2>사업·투자 위험 근거 검토 <small>v5.1 · 오프라인 예비 진단</small></h2>
+    <p class="fine">네트워크마케팅, 금융투자, 가상자산 및 플랫폼의 주장·계약 조건을 살핍니다. 문구가 발견되어도 위법·사기 확정이 아니며 외부 등록부·체인·원장을 실제 조회하지 않습니다.</p>
+    <label class="field wide"><span class="field-label">사업 소개·보상계획·투자 권유 문구</span><textarea id="domainPitch" rows="5" maxlength="5000" placeholder="예: 신규 회원을 모집해야 보너스 자격을 유지합니다. 공식 보상표, 매출과 실제 정산 내역도 확인해야 하나요?"></textarea></label>
+    <div class="btn-row"><button class="secondary" id="domainFromMessage" type="button">분석 입력 가져오기</button><button class="primary" id="domainAnalyzeBtn" type="button">근거·검증 항목 정리</button></div>
+    <div id="domainResult" aria-live="polite"></div>
+    <p class="fine">문장 패턴 기반의 <b>로컬 사전 검토</b>이며 최신 회사 등록, 수익 지급, 스마트컨트랙트 감사, 법률 적합성, 실세계 사기율을 검증하지 않습니다. 연락처·계좌·개인키를 입력하지 마세요.</p>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="view" id="view-info" role="tabpanel" aria-labelledby="tab-info" hidden>
+  <div class="card glass">
+    <h2>무엇이 검증됐나</h2>
+    <table class="verify" id="verifyTable"></table>
+  </div>
+  <div class="card glass">
+    <h2>개인정보와 동작 원칙</h2>
+    <ul class="plain">
+      <li>판단은 이 기기 안에서 실행됩니다. 모델을 연결하지 않으면 입력이 밖으로 나가지 않습니다.</li>
+      <li>원문은 기록에 남기지 않습니다. 화면의 문장별 기록에는 판단 결과와 사유 코드가 표시됩니다.</li>
+      <li>이 앱은 송금 차단, 통화 가로채기, 문자 발송, 신원 인증을 하지 않습니다.</li>
+      <li>"뚜렷한 위험 요청 없음"은 안전하다는 뜻이 아닙니다.</li>
+    </ul>
+  </div>
+  <div class="card glass about">
+    <p><strong>의심계 v5.1 개발 후보</strong> · 판단 엔진은 Python 정본(dmsg)을 이식한 것이며 교차 구현 적합성 시험으로 일치를 확인합니다. 온디바이스 한국어 NLP(KoELECTRA-small 상위 8층 미세조정 int8 + 다중 과제 분류 헤드)는 이 기기 안에서만 실행되며, 결과는 조언이고 안전·사기 판정이 아닙니다. LinkGuard는 문장 속 링크의 형식(유사 도메인·사설 IP·APK 다운로드·토큰 노출 등)과 사용자가 고른 APK 파일을 기기 안에서 정적으로 확인합니다.</p>
+    <p class="fine" id="buildInfo"></p>
+  </div>
+</section>
+</main>
+
+<nav class="tabbar glass" role="tablist" aria-label="화면">
+  <button class="tab on" role="tab" id="tab-analyze" aria-selected="true" aria-controls="view-analyze" data-view="analyze"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6.3v6.1c0 4.6-3.2 8-8 9.6-4.8-1.6-8-5-8-9.6V6.3z"/><path d="m8.8 12.2 2.2 2.2 4.4-4.6"/></svg><span>분석</span></button>
+  <button class="tab" role="tab" id="tab-guard" aria-selected="false" aria-controls="view-guard" data-view="guard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>확장 검증</span></button>
+  <button class="tab" role="tab" id="tab-pay" aria-selected="false" aria-controls="view-pay" data-view="pay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="M3 10h18M7 15h4"/></svg><span>지급 검토</span></button>
+  <button class="tab" role="tab" id="tab-model" aria-selected="false" aria-controls="view-model" data-view="model"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><span>모델</span></button>
+  <button class="tab" role="tab" id="tab-info" aria-selected="false" aria-controls="view-info" data-view="info"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.2"/></svg><span>정보</span></button>
+</nav>
+
+<div class="toast glass" id="toast" role="status" hidden></div>
+<script src="build-info.js"></script>
+<script src="engine-data.js"></script>
+<script src="dmsg-engine.js"></script>
+<script src="dmsg-nlp.js"></script>
+<script src="linkguard-data.js"></script>
+<script src="dmsg-linkguard.js"></script>
+<script src="dmsg-apkscan.js"></script>
+<script src="dmsg-domainintel.js"></script>
+<script src="v50-contract-data.js"></script>
+<script src="v50-contract.js"></script>
+<script src="v51-profile-data.js"></script>
+<script src="v51-semantic-data.js"></script>
+<script src="v51-base-engine.js"></script>
+<script src="v51-base-contract.js"></script>
+<script src="v51-semantic.js"></script>
+<script src="v51-evidence.js"></script>
+<script src="v51-contract-data.js"></script>
+<script src="v51-contract.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

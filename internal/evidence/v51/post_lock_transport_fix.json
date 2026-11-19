@@ -1,0 +1,10 @@
+{
+  "changed_utc": "2026-11-04T10:27:43.174462+00:00",
+  "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/arena/store.py",
+  "frozen_sha256": "6ee7ddc299d36da223370a5a8edd25c194dda6b26a8a9e105d41c0f6eae7c7a4",
+  "new_sha256": "814e9540ca9f3ba48c1d298b39bab699fcac196973cd94262b7b601cc12768aa",
+  "scope": "manifest error handling only; call execution manifest guard before profile binding; TypeError/OSError/ValueError/KeyError return static503",
+  "decision_policy_changed": false,
+  "validation24_retuned": false,
+  "decision_source_hashes_unchanged": true
+}

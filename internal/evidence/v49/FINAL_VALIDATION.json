@@ -1,0 +1,45 @@
+{
+  "version": "4.9",
+  "format_revision": 2,
+  "date_kst": "2026-11-04",
+  "status": "PASS_IMPLEMENTED_LOCAL_SCOPE",
+  "checks": {
+    "source_tests": {
+      "status": "PASS",
+      "count": 325
+    },
+    "upgrade_tests": {
+      "status": "PASS",
+      "count": 42
+    },
+    "policy_conformance": {
+      "status": "PASS",
+      "count": 24488
+    },
+    "public_zoro": {
+      "status": "PASS_EXECUTION_ONLY",
+      "requests": 4
+    },
+    "sqlite_observe_reassess": {
+      "status": "PASS",
+      "final_version": 2
+    },
+    "pwa": {
+      "status": "PASS_CRC_VERSION_AND_CONTENT"
+    },
+    "apk": {
+      "status": "STRUCTURE_AND_SIGNATURE_PASS_DEVICE_NOT_RUN",
+      "version_code": 49,
+      "version_name": "4.9",
+      "signature_v2": true,
+      "assets_equal": true
+    }
+  },
+  "not_run": [
+    "Zoro-1 typed-head inference",
+    "Android physical-device install/run",
+    "Independent domain accuracy",
+    "New native desktop binaries"
+  ],
+  "cloud_verification": "Recorded separately after upload; not implied by this local record."
+}

@@ -1,0 +1,15 @@
+✔ close locks input and reopen preserves risk without restoring current judgment (4.5316ms)
+✔ reload restores closed session without creating session or restoring any text (2.1341ms)
+✔ saved identifiers allow returning to a prior archived session (1.6404ms)
+✔ late input or review change invalidates result and later refresh (2.5957ms)
+✔ policy drift rejects a late result and refresh cannot reapply it (1.3717ms)
+✔ reported task disables new observation and displays current-turn vs retained risk separately (1.3225ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.2531
+

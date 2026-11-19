@@ -1,0 +1,982 @@
+[
+  {
+    "id": "V13",
+    "text": "[CJ택배] 운송장 번호 오류로 반송 예정입니다. 주소 수정은 아래 주소에서 진행하세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.5469,
+          "probabilities": {
+            "transfer": 0.001,
+            "otp": 0.0033,
+            "remote_install": 0.0018,
+            "personal_data": 0.0461,
+            "link": 0.1364,
+            "secrecy": 0.0023,
+            "none": 0.6035,
+            "unclear": 0.2056
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.3965,
+          "probabilities": {
+            "direct_request": 0.5172,
+            "reported_or_quoted": 0.1883,
+            "negated_or_warning": 0.0203,
+            "unclear": 0.1874,
+            "informational": 0.0868
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.0489
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.1079
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0211
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.6752,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2621,
+            "1": 0.1085,
+            "2": 0.3216,
+            "3": 0.3078
+          },
+          "confidence": 0.0595
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.6724
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "unclear",
+          "confidence": 0.2613,
+          "probabilities": {
+            "no_request": 0.2714,
+            "other_request": 0.1616,
+            "sensitive_request": 0.1211,
+            "unclear": 0.4459
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.0069
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0154
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.8564
+        }
+      },
+      "usage": {
+        "input_tokens": 777,
+        "output_tokens": 580
+      },
+      "latency_ms": 264.6
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V15",
+    "text": "검찰청 수사과입니다. 피의자 조사를 위해 신분증 앞면을 촬영해서 보내세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "personal_data",
+          "confidence": 0.5852,
+          "probabilities": {
+            "transfer": 0.0031,
+            "otp": 0.0139,
+            "remote_install": 0.0035,
+            "personal_data": 0.6371,
+            "link": 0.0021,
+            "secrecy": 0.0052,
+            "none": 0.2915,
+            "unclear": 0.0435
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.7907,
+          "probabilities": {
+            "direct_request": 0.8326,
+            "reported_or_quoted": 0.0606,
+            "negated_or_warning": 0.0032,
+            "unclear": 0.0764,
+            "informational": 0.0272
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.538
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.7348
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0329
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.5035,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2959,
+            "1": 0.169,
+            "2": 0.2706,
+            "3": 0.2644
+          },
+          "confidence": 0.0
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.798
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.3953,
+          "probabilities": {
+            "no_request": 0.0483,
+            "other_request": 0.3163,
+            "sensitive_request": 0.5464,
+            "unclear": 0.089
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.6065
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0125
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.8189
+        }
+      },
+      "usage": {
+        "input_tokens": 775,
+        "output_tokens": 576
+      },
+      "latency_ms": 266.3
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V18",
+    "text": "회계팀 공지: 해외 협력사 결제 계좌가 바뀌었습니다. 이번 송금부터 첨부된 계좌를 사용해 주세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "transfer",
+          "confidence": 0.6229,
+          "probabilities": {
+            "transfer": 0.6701,
+            "otp": 0.0024,
+            "remote_install": 0.0018,
+            "personal_data": 0.0044,
+            "link": 0.0162,
+            "secrecy": 0.0018,
+            "none": 0.1796,
+            "unclear": 0.1237
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "reported_or_quoted",
+          "confidence": 0.3678,
+          "probabilities": {
+            "direct_request": 0.1241,
+            "reported_or_quoted": 0.4942,
+            "negated_or_warning": 0.0127,
+            "unclear": 0.2518,
+            "informational": 0.1171
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.0319
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0789
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0416
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.285,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.3458,
+            "1": 0.1715,
+            "2": 0.3347,
+            "3": 0.148
+          },
+          "confidence": 0.0
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.5888
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.5319,
+          "probabilities": {
+            "no_request": 0.1248,
+            "other_request": 0.0316,
+            "sensitive_request": 0.6489,
+            "unclear": 0.1947
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.0078
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.9107
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.8416
+        }
+      },
+      "usage": {
+        "input_tokens": 778,
+        "output_tokens": 579
+      },
+      "latency_ms": 268.2
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V19",
+    "text": "사장인데 회의 중이라 통화가 어렵다. 지금 거래처에 2천만 원 보내고 결과만 문자로 알려줘.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "transfer",
+          "confidence": 0.8651,
+          "probabilities": {
+            "transfer": 0.882,
+            "otp": 0.0018,
+            "remote_install": 0.0017,
+            "personal_data": 0.0057,
+            "link": 0.0009,
+            "secrecy": 0.0084,
+            "none": 0.0636,
+            "unclear": 0.0359
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.6441,
+          "probabilities": {
+            "direct_request": 0.7153,
+            "reported_or_quoted": 0.0639,
+            "negated_or_warning": 0.0113,
+            "unclear": 0.1366,
+            "informational": 0.073
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.1242
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0668
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.2853
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.5666,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2771,
+            "1": 0.1437,
+            "2": 0.3148,
+            "3": 0.2644
+          },
+          "confidence": 0.0378
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.6218
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.7792,
+          "probabilities": {
+            "no_request": 0.0443,
+            "other_request": 0.0445,
+            "sensitive_request": 0.8344,
+            "unclear": 0.0768
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.0111
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.3661
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.7158
+        }
+      },
+      "usage": {
+        "input_tokens": 781,
+        "output_tokens": 580
+      },
+      "latency_ms": 268.8
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V50-AI-02",
+    "text": "신청하신 화분이 준비됐어요. 편한 시간에 공방으로 찾아와 주세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7256,
+          "probabilities": {
+            "transfer": 0.0031,
+            "otp": 0.0029,
+            "remote_install": 0.0751,
+            "personal_data": 0.0073,
+            "link": 0.0097,
+            "secrecy": 0.0018,
+            "none": 0.7599,
+            "unclear": 0.1401
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.641,
+          "probabilities": {
+            "direct_request": 0.7128,
+            "reported_or_quoted": 0.0577,
+            "negated_or_warning": 0.0012,
+            "unclear": 0.0856,
+            "informational": 0.1427
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.0305
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0221
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0177
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 0.8752,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.43,
+            "1": 0.3195,
+            "2": 0.1958,
+            "3": 0.0547
+          },
+          "confidence": 0.1248
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.6872
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "other_request",
+          "confidence": 0.6344,
+          "probabilities": {
+            "no_request": 0.0778,
+            "other_request": 0.7258,
+            "sensitive_request": 0.005,
+            "unclear": 0.1914
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.0074
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0152
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.5424
+        }
+      },
+      "usage": {
+        "input_tokens": 771,
+        "output_tokens": 577
+      },
+      "latency_ms": 255.2
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V50-AI-20",
+    "text": "뉴스에서 돈 보내라는 전화는 의심하라고 했죠. 하지만 이 건은 다르니 안내한 임시 계좌로 바로 송금하세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "transfer",
+          "confidence": 0.9254,
+          "probabilities": {
+            "transfer": 0.9347,
+            "otp": 0.0044,
+            "remote_install": 0.001,
+            "personal_data": 0.0023,
+            "link": 0.0049,
+            "secrecy": 0.0009,
+            "none": 0.0378,
+            "unclear": 0.0141
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.5811,
+          "probabilities": {
+            "direct_request": 0.6648,
+            "reported_or_quoted": 0.1173,
+            "negated_or_warning": 0.089,
+            "unclear": 0.1066,
+            "informational": 0.0223
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.9192
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0695
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.5915
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 2.0722,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.1914,
+            "1": 0.0681,
+            "2": 0.2175,
+            "3": 0.523
+          },
+          "confidence": 0.0722
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.4495
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.8772,
+          "probabilities": {
+            "no_request": 0.0362,
+            "other_request": 0.0075,
+            "sensitive_request": 0.9079,
+            "unclear": 0.0485
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.1301
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.6342
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.8247
+        }
+      },
+      "usage": {
+        "input_tokens": 782,
+        "output_tokens": 579
+      },
+      "latency_ms": 255.0
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V50-AI-21",
+    "text": "송금하지 않겠다고 하셨지만 그러면 오늘 업무를 중단시키겠습니다. 보증금을 먼저 보내야 해결됩니다.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "transfer",
+          "confidence": 0.67,
+          "probabilities": {
+            "transfer": 0.7112,
+            "otp": 0.0012,
+            "remote_install": 0.0013,
+            "personal_data": 0.0031,
+            "link": 0.0017,
+            "secrecy": 0.002,
+            "none": 0.2139,
+            "unclear": 0.0655
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "reported_or_quoted",
+          "confidence": 0.3386,
+          "probabilities": {
+            "direct_request": 0.146,
+            "reported_or_quoted": 0.4709,
+            "negated_or_warning": 0.0945,
+            "unclear": 0.211,
+            "informational": 0.0777
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.108
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.3654
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.6931,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2878,
+            "1": 0.0885,
+            "2": 0.2666,
+            "3": 0.3572
+          },
+          "confidence": 0.0
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.5805
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.6122,
+          "probabilities": {
+            "no_request": 0.1226,
+            "other_request": 0.0418,
+            "sensitive_request": 0.7091,
+            "unclear": 0.1265
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.0052
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.412
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.6218
+        }
+      },
+      "usage": {
+        "input_tokens": 775,
+        "output_tokens": 572
+      },
+      "latency_ms": 256.0
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V50-AI-22",
+    "text": "계정 정지를 피하려면 메시지에 첨부한 링크에서 로그인 비밀번호와 인증번호를 입력하세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "otp",
+          "confidence": 0.3032,
+          "probabilities": {
+            "transfer": 0.0025,
+            "otp": 0.3903,
+            "remote_install": 0.0115,
+            "personal_data": 0.1714,
+            "link": 0.2119,
+            "secrecy": 0.0183,
+            "none": 0.1395,
+            "unclear": 0.0546
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "unclear",
+          "confidence": 0.0703,
+          "probabilities": {
+            "direct_request": 0.2187,
+            "reported_or_quoted": 0.2264,
+            "negated_or_warning": 0.2337,
+            "unclear": 0.2562,
+            "informational": 0.065
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.8882
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0375
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.109
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.6745,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2631,
+            "1": 0.1164,
+            "2": 0.3034,
+            "3": 0.3171
+          },
+          "confidence": 0.0
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.3906
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.8159,
+          "probabilities": {
+            "no_request": 0.0721,
+            "other_request": 0.0159,
+            "sensitive_request": 0.8619,
+            "unclear": 0.0501
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.6638
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0328
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.7755
+        }
+      },
+      "usage": {
+        "input_tokens": 774,
+        "output_tokens": 577
+      },
+      "latency_ms": 255.0
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V51-F02_REUSE_FURNITURE_PICKUP-03",
+    "text": "가구 배송 등록을 대신하려면 주민등록증 앞뒤 사진과 집 주소를 이 채팅으로 보내 주세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "personal_data",
+          "confidence": 0.8907,
+          "probabilities": {
+            "transfer": 0.0006,
+            "otp": 0.0052,
+            "remote_install": 0.0019,
+            "personal_data": 0.9043,
+            "link": 0.0018,
+            "secrecy": 0.0031,
+            "none": 0.068,
+            "unclear": 0.015
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.9133,
+          "probabilities": {
+            "direct_request": 0.9307,
+            "reported_or_quoted": 0.0248,
+            "negated_or_warning": 0.0057,
+            "unclear": 0.0294,
+            "informational": 0.0094
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.5885
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.1064
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0359
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.8125,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2056,
+            "1": 0.1301,
+            "2": 0.3106,
+            "3": 0.3537
+          },
+          "confidence": 0.0
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.6862
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.7458,
+          "probabilities": {
+            "no_request": 0.0181,
+            "other_request": 0.1078,
+            "sensitive_request": 0.8094,
+            "unclear": 0.0648
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.8485
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0157
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.7975
+        }
+      },
+      "usage": {
+        "input_tokens": 776,
+        "output_tokens": 578
+      },
+      "latency_ms": 255.1
+    },
+    "profile_id": "v51-specific-candidate"
+  },
+  {
+    "id": "V51-F06_PRINTER_SERVICE_CONTRAST-02",
+    "text": "모르는 사람이 보낸 원격 앱은 설치하면 안 됩니다. 다만 지금 제 점검용 원격제어 앱은 설치하고 화면 조작 권한을 켜 주세요.",
+    "raw": {
+      "model": "trillionlabs/Zoro-1",
+      "answers": {
+        "q_action": {
+          "type": "choice",
+          "choice": "remote_install",
+          "confidence": 0.834,
+          "probabilities": {
+            "transfer": 0.0009,
+            "otp": 0.0015,
+            "remote_install": 0.8548,
+            "personal_data": 0.0039,
+            "link": 0.0084,
+            "secrecy": 0.0096,
+            "none": 0.0904,
+            "unclear": 0.0305
+          }
+        },
+        "q_speech": {
+          "type": "choice",
+          "choice": "direct_request",
+          "confidence": 0.4881,
+          "probabilities": {
+            "direct_request": 0.5905,
+            "reported_or_quoted": 0.0522,
+            "negated_or_warning": 0.2647,
+            "unclear": 0.0694,
+            "informational": 0.0232
+          }
+        },
+        "q_scam": {
+          "type": "noul",
+          "noul": 0.282
+        },
+        "q_claim": {
+          "type": "noul",
+          "noul": 0.0216
+        },
+        "q_pressure": {
+          "type": "noul",
+          "noul": 0.0689
+        },
+        "q_risk": {
+          "type": "score",
+          "score": 1.6174,
+          "legend": {
+            "0": "none",
+            "1": "low",
+            "2": "moderate",
+            "3": "high"
+          },
+          "probabilities": {
+            "0": 0.2342,
+            "1": 0.1713,
+            "2": 0.3374,
+            "3": 0.2571
+          },
+          "confidence": 0.1031
+        },
+        "q_evidence": {
+          "type": "noul",
+          "noul": 0.7495
+        },
+        "q_request_scope": {
+          "type": "choice",
+          "choice": "sensitive_request",
+          "confidence": 0.6047,
+          "probabilities": {
+            "no_request": 0.0857,
+            "other_request": 0.1205,
+            "sensitive_request": 0.7035,
+            "unclear": 0.0903
+          }
+        },
+        "q_current_exposure": {
+          "type": "noul",
+          "noul": 0.5452
+        },
+        "q_payment_anomaly": {
+          "type": "noul",
+          "noul": 0.0085
+        },
+        "q_request_specified": {
+          "type": "noul",
+          "noul": 0.8732
+        }
+      },
+      "usage": {
+        "input_tokens": 787,
+        "output_tokens": 581
+      },
+      "latency_ms": 268.5
+    },
+    "profile_id": "v51-specific-candidate"
+  }
+]

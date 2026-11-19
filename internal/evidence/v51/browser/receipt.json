@@ -1,0 +1,104 @@
+{
+  "status": "PASS_LOCAL_BROWSER_AND_RUNTIME",
+  "created_utc": "2026-11-04T10:35:07.810034+00:00",
+  "browser_backend": "CUA_REPL in-app browser; dedicated browser-client bootstrap failed privileged native pipe, fallback connected",
+  "browser_real_model_calls": 8,
+  "desktop_api_real_model_calls": 1,
+  "restart_real_model_calls": 4,
+  "runtime_total_actual_calls": 13,
+  "provider_before": 1336,
+  "provider_after": 1349,
+  "provider_delta": 13,
+  "real_default_profile": "v51-specific-candidate",
+  "question_count": 11,
+  "semantic_policy": "v51-semantic/4",
+  "cases": [
+    {
+      "name": "desktop_normal",
+      "action": "NO_STRONG_SIGNAL",
+      "calls": 1,
+      "snapshot": "desktop_normal.txt"
+    },
+    {
+      "name": "desktop_sensitive",
+      "action": "PAUSE_AND_VERIFY",
+      "calls": 1,
+      "snapshot": "desktop_sensitive.txt"
+    },
+    {
+      "name": "desktop_warning",
+      "action": "ASK_HUMAN",
+      "calls": 1,
+      "snapshot": "desktop_warning.txt"
+    },
+    {
+      "name": "desktop_redirect",
+      "action": "ASK_HUMAN",
+      "calls": 1,
+      "snapshot": "desktop_redirect.txt"
+    },
+    {
+      "name": "desktop_simulated_failure",
+      "action": "ASK_HUMAN",
+      "calls": 0,
+      "snapshot": "desktop_simulated_failure.txt"
+    },
+    {
+      "name": "desktop_final",
+      "action": "PAUSE_AND_VERIFY",
+      "calls": 1,
+      "snapshot": "desktop_final.txt"
+    },
+    {
+      "name": "arena_sensitive",
+      "action": "PAUSE_AND_VERIFY",
+      "calls": 1,
+      "snapshot": "arena_sensitive.txt"
+    },
+    {
+      "name": "arena_normal_after_risk",
+      "action": "ASK_HUMAN(current:NSS)",
+      "calls": 1,
+      "snapshot": "arena_normal_after_risk.txt"
+    },
+    {
+      "name": "arena_resumed",
+      "action": "ASK_HUMAN(current:NSS)",
+      "calls": 1,
+      "snapshot": "arena_resumed.txt"
+    }
+  ],
+  "sessions": {
+    "refresh_restored_closed": true,
+    "reopen_preserves_risk_and_task": true,
+    "user_confirmation_not_independent_verification": true,
+    "new_risk_task_not_duplicated": true
+  },
+  "actual_unreachable_endpoint_checked": "desktop_api_probe.json",
+  "restart_receipt": "../runtime_restart/receipt.json",
+  "limitations": [
+    "Synthetic examples only; not independent human quality",
+    "Warning example remains ASK; no false completeness claim",
+    "Android/iOS physical devices NOT_RUN",
+    "No generation-server comparison run"
+  ],
+  "evidence_sha256": {
+    "desktop_final.png": "57f844cddd09002b0c26dac9fc61998c9d730ee4b1053f7865d4ebed339a561d",
+    "desktop_normal.txt": "e84c31d2a6b9c7f4aba6d322d1031351530e7b539a140478cf588774076ee5df",
+    "desktop_simulated_failure.txt": "61626e589265aee9afbf4aed00a2cfd6cc02cbce69bcf5fbb851ec748b68b61b",
+    "arena_resumed.png": "71739182f7e7885d96bb1311e3e46fe0f6d8333b4a47466591caa736deb04314",
+    "desktop_normal.png": "40b7ec10a05a79061d1672a7553105aa67adc9f2b74ec46b71467aa194d8c849",
+    "desktop_sensitive.txt": "8bc355fe5a7520a380cb0b0e16bd5947795a0baf3ea18933271ef77f88745957",
+    "desktop_warning.txt": "1d5a73abffc62a77f2a8d213888caaf9f5af2fbe0dadc3d1753f39ad20f7c5cf",
+    "arena_closed.txt": "8a7bc9ee5cd944492fee76dc751a34e7760e2507e937523bf7e5b44a7d137e82",
+    "arena_normal_after_risk.png": "e87a7e7b0181d2daa70052d7f33170e477caf47a7005a9f50b0db12425c9bdd2",
+    "desktop_simulated_failure.png": "0d2387f58e9024cd081aa4f750a228e4d253592ba9fba1f8c3d9096c844a812c",
+    "desktop_final.txt": "63210d500a4b2487ee8aa83433015cf463dfb80ae168b727e96d6c281f1a9e1f",
+    "desktop_profile_trace.txt": "f19aedccc86fe2078b44f3af77ff6a7425ca9963e2101e1b9c90d0cff286086e",
+    "desktop_sensitive.png": "3df75f1a6a34e2a795a11721b637b1dfae37c505f74990a8164734b6898677c7",
+    "arena_sensitive.txt": "9460e06f23b50eebbbca8adc72db0e236da74238494fc88d087079e5a9116448",
+    "desktop_redirect.txt": "48a58a6c7db474c0f3d6306c10d8b470fd92326c67f6bc33238bed231c222109",
+    "arena_resumed.txt": "5b8c67a862385d5cde4f11fab727e21575514592d7101e7ea49adb0931021096",
+    "arena_normal_after_risk.txt": "20ea3f4c57740ce4f099839a940c3914ca79747455c44f4bd05f72c9488afb6b"
+  }
+}

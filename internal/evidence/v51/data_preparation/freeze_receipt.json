@@ -1,0 +1,48 @@
+{
+  "schema": "v51.ai_synthetic_data_freeze.v1",
+  "frozen_utc": "2026-11-04T09:54:32.830711+00:00",
+  "candidate_outputs_observed_before_freeze": false,
+  "model_calls": 0,
+  "independent_eval": false,
+  "independent_eval_eligible": false,
+  "authorship": "AI_GENERATED",
+  "labels_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED",
+  "family_assignment": "12 preassigned development families; 8 disjoint preassigned validation families; 3 contrast cases each",
+  "validation_use": "candidate-selection validation, not independent human held-out evaluation",
+  "files": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_development36.jsonl",
+      "split": "development",
+      "cases": 36,
+      "families": 12,
+      "bytes": 56236,
+      "sha256": "5c1811aa68272ca987c084ef78e148be137ac477e27ffe9fd7de811a91e3fff9"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_validation24.jsonl",
+      "split": "validation",
+      "cases": 24,
+      "families": 8,
+      "bytes": 38720,
+      "sha256": "9088ff6491e4f47c732efffc4ffc75ee1698f77f535a853ebe8c6a51fa7b5355"
+    }
+  ],
+  "existing_sources": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl",
+      "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl",
+      "sha256": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v50_ai_development25.jsonl",
+      "sha256": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68"
+    }
+  ],
+  "prepared_by_script_sha256": "72f552bdd8cc14dab26f8d692f4ee35bd66a747a7ec431aed2b28f05e32235bb",
+  "pre_inference_validation_sha256": "5795fffa3cfd532d89d0cc3517dd756d3251bc708f0de2746f7d81f2d8386ecf",
+  "rubric_sha256": "75148acede78d25a31fc4aa6bef2deeb3619e8936d49396f202a1950561fdf38",
+  "existing_files_modified": false
+}

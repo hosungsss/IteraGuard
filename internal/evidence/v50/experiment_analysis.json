@@ -1,0 +1,426 @@
+{
+  "status": {
+    "requests_planned": 388,
+    "actual_inference_requests": 388,
+    "valid_responses": 388,
+    "failures": 0,
+    "blank_cases_without_inference": 4,
+    "provider_request_counter_delta": 388,
+    "additional_combination_calls": 0,
+    "external_paid_api_calls": 0,
+    "independent_eval": false
+  },
+  "recommendation": "KEEP_BASELINE_QUESTIONS_NO_PROMOTION",
+  "screening_outcome": {
+    "action_only": "HOLD_KEEP_BASELINE",
+    "speech_only": "HOLD_KEEP_BASELINE",
+    "evidence_only": "HOLD_KEEP_BASELINE"
+  },
+  "baseline_reproduction": {
+    "old_nonempty": 72,
+    "identical_normalized_responses": 72,
+    "same_policy_action_reason_nonempty": 72,
+    "model_export_hashes_match_prior": {
+      "head.pt": true,
+      "config.json": true,
+      "model.safetensors": true,
+      "tokenizer.json": true,
+      "tokenizer_config.json": true
+    }
+  },
+  "new25_head_label_comparison": {
+    "baseline": {
+      "n": 25,
+      "action_label_match": 20,
+      "speech_label_match": 20,
+      "joint_match": 17,
+      "confusions": [
+        {
+          "id": "V50-AI-07",
+          "requested_action_proposed": "outside_listed_categories",
+          "mapped_action_label": "none",
+          "observed_action": "secrecy",
+          "speech_proposed": "negated_or_warning",
+          "observed_speech": "negated_or_warning",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-09",
+          "requested_action_proposed": "none",
+          "mapped_action_label": "none",
+          "observed_action": "none",
+          "speech_proposed": "reported_or_quoted",
+          "observed_speech": "informational",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-18",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-21",
+          "requested_action_proposed": "transfer",
+          "mapped_action_label": "transfer",
+          "observed_action": "transfer",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-22",
+          "requested_action_proposed": "otp",
+          "mapped_action_label": "otp",
+          "observed_action": "otp",
+          "speech_proposed": "direct_request",
+          "observed_speech": "unclear",
+          "additional_actions": [
+            "link",
+            "personal_data"
+          ]
+        },
+        {
+          "id": "V50-AI-23",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-24",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "unclear",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-25",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        }
+      ],
+      "label_status": "AI_PROPOSED_NOT_INDEPENDENT_GROUND_TRUTH",
+      "warning": "Single main action score does not evaluate simultaneous secondary actions. Mapping outside_listed_categories to none is a development comparison, not silently adopted product ontology."
+    },
+    "action_only": {
+      "n": 25,
+      "action_label_match": 20,
+      "speech_label_match": 20,
+      "joint_match": 18,
+      "confusions": [
+        {
+          "id": "V50-AI-09",
+          "requested_action_proposed": "none",
+          "mapped_action_label": "none",
+          "observed_action": "none",
+          "speech_proposed": "reported_or_quoted",
+          "observed_speech": "informational",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-18",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-21",
+          "requested_action_proposed": "transfer",
+          "mapped_action_label": "transfer",
+          "observed_action": "transfer",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-22",
+          "requested_action_proposed": "otp",
+          "mapped_action_label": "otp",
+          "observed_action": "link",
+          "speech_proposed": "direct_request",
+          "observed_speech": "unclear",
+          "additional_actions": [
+            "link",
+            "personal_data"
+          ]
+        },
+        {
+          "id": "V50-AI-23",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-24",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "unclear",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-25",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        }
+      ],
+      "label_status": "AI_PROPOSED_NOT_INDEPENDENT_GROUND_TRUTH",
+      "warning": "Single main action score does not evaluate simultaneous secondary actions. Mapping outside_listed_categories to none is a development comparison, not silently adopted product ontology."
+    },
+    "speech_only": {
+      "n": 25,
+      "action_label_match": 20,
+      "speech_label_match": 23,
+      "joint_match": 20,
+      "confusions": [
+        {
+          "id": "V50-AI-07",
+          "requested_action_proposed": "outside_listed_categories",
+          "mapped_action_label": "none",
+          "observed_action": "secrecy",
+          "speech_proposed": "negated_or_warning",
+          "observed_speech": "negated_or_warning",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-18",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "unclear",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-23",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-24",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "unclear",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-25",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        }
+      ],
+      "label_status": "AI_PROPOSED_NOT_INDEPENDENT_GROUND_TRUTH",
+      "warning": "Single main action score does not evaluate simultaneous secondary actions. Mapping outside_listed_categories to none is a development comparison, not silently adopted product ontology."
+    },
+    "evidence_only": {
+      "n": 25,
+      "action_label_match": 20,
+      "speech_label_match": 20,
+      "joint_match": 17,
+      "confusions": [
+        {
+          "id": "V50-AI-07",
+          "requested_action_proposed": "outside_listed_categories",
+          "mapped_action_label": "none",
+          "observed_action": "secrecy",
+          "speech_proposed": "negated_or_warning",
+          "observed_speech": "negated_or_warning",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-09",
+          "requested_action_proposed": "none",
+          "mapped_action_label": "none",
+          "observed_action": "none",
+          "speech_proposed": "reported_or_quoted",
+          "observed_speech": "informational",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-18",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-21",
+          "requested_action_proposed": "transfer",
+          "mapped_action_label": "transfer",
+          "observed_action": "transfer",
+          "speech_proposed": "direct_request",
+          "observed_speech": "reported_or_quoted",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-22",
+          "requested_action_proposed": "otp",
+          "mapped_action_label": "otp",
+          "observed_action": "otp",
+          "speech_proposed": "direct_request",
+          "observed_speech": "unclear",
+          "additional_actions": [
+            "link",
+            "personal_data"
+          ]
+        },
+        {
+          "id": "V50-AI-23",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-24",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "unclear",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        },
+        {
+          "id": "V50-AI-25",
+          "requested_action_proposed": "unclear",
+          "mapped_action_label": "unclear",
+          "observed_action": "none",
+          "speech_proposed": "direct_request",
+          "observed_speech": "direct_request",
+          "additional_actions": []
+        }
+      ],
+      "label_status": "AI_PROPOSED_NOT_INDEPENDENT_GROUND_TRUTH",
+      "warning": "Single main action score does not evaluate simultaneous secondary actions. Mapping outside_listed_categories to none is a development comparison, not silently adopted product ontology."
+    }
+  },
+  "untouched_question_probability_changes": {
+    "action_only": {
+      "q_speech": 97,
+      "q_scam": 95,
+      "q_claim": 94,
+      "q_pressure": 95,
+      "q_risk": 97,
+      "q_evidence": 97
+    },
+    "speech_only": {
+      "q_action": 96,
+      "q_scam": 96,
+      "q_claim": 95,
+      "q_pressure": 94,
+      "q_risk": 97,
+      "q_evidence": 97
+    },
+    "evidence_only": {
+      "q_action": 0,
+      "q_speech": 0,
+      "q_scam": 0,
+      "q_claim": 0,
+      "q_pressure": 0,
+      "q_risk": 0
+    }
+  },
+  "coupling_interpretation": "An input question-only ablation is not an isolated head perturbation. action/speech wording alters other heads; evidence-only left all six other heads identical in these97 calls. This observation is local, not a guarantee of model architecture.",
+  "recommendation_detail": [
+    "action_only removes V47 DRA risky clearance but loses required pause on new V50-AI-22 (credential disclosure through link) and expected CAUTION on AI-JM-12; hold.",
+    "speech_only gains11 policy-case expected matches but loses V33 original-policy PAUSE: direct_request probability0.712 to0.657 crosses unchanged0.70; hold.",
+    "evidence_only gains14 policy-case expected matches and improves new25 DRA17to20, but turns V02 protective OTP warning ASK into unwanted CAUTION; hold under the predeclared both-policy no-loss screen.",
+    "Do not run a combination selected after failures under a rewritten acceptance rule. No candidate passes this registered screen; product wording remains unchanged.",
+    "This is not a finding that every partial change is unusable: evidence_only under original policy showed3 expected gains without observed lost matches. A policy-specific follow-up requires its own prospective criterion, not a retroactive promotion."
+  ],
+  "persistent_problems": [
+    {
+      "id": "P01",
+      "case_ids": [
+        "V38",
+        "V50-AI-04",
+        "V50-AI-05"
+      ],
+      "problem": "Legitimate transfers remain transfer actions. Action labels alone do not distinguish normal business from coercion. V38 DRA stays PAUSE in all variants; new normal transfers remain mostly ASK."
+    },
+    {
+      "id": "P02",
+      "case_ids": [
+        "V47",
+        "V50-AI-18"
+      ],
+      "problem": "Indirect threat can predict none with uncertain speech. DRA can clear V47; action-only fixes that one case while introducing other regression."
+    },
+    {
+      "id": "P03",
+      "case_ids": [
+        "V50-AI-02",
+        "V50-AI-03",
+        "AI-JM-02"
+      ],
+      "problem": "Harmless request is none plus direct_request; existing NONE_DIRECT_REQUEST_CONFLICT abstains even when model semantics are plausible. AI-JM-02 old INFORMATION annotation also conflates guidance and speech."
+    },
+    {
+      "id": "P04",
+      "case_ids": [
+        "V50-AI-19",
+        "V50-AI-20",
+        "V50-AI-21",
+        "V50-AI-22"
+      ],
+      "problem": "Warnings/reports plus a new current demand and simultaneous actions spread mass or select quote/unclear. Single action pointer and fixed threshold retain gaps."
+    },
+    {
+      "id": "P05",
+      "case_ids": [
+        "V50-AI-11",
+        "V50-AI-12",
+        "AI-JM-16"
+      ],
+      "problem": "Original evidence-sufficiency wording rejects complete no-action notices. Evidence-only reduces that failure but must be checked with the selected downstream policy."
+    }
+  ],
+  "limitations": [
+    "All98 unique cases are authored synthetic development material; first use of new25 is not independent validation. Labels and harms need human review before release claims.",
+    "Expected-match is rubric compatibility, not real-world fraud accuracy. V2 has many multi-allowed outcomes and blankV34; do not compare its fraction directly with stricter AI25.",
+    "New25 unknown-risk cases3 are excluded from benign/risky denominators and reported separately. NO_STRONG_SIGNAL is not a safety verdict.",
+    "Both policies consume each identical parsed response, without changing0.70 threshold, DRA cost matrix, tokenizer, orT1.52. Temperature is actual serving config, not established calibration.",
+    "No whole arena/LinkGuard/session pipeline, mobile deployment, actual financial action, NPU or third-party attestation is established by this experiment.",
+    "Raw files contain model-client parsed JSON before typed normalization, not byte-for-byte HTTP responses. Transport failures would retain error codes because the existing client does not expose rejected raw bytes.",
+    "Sequential warm-server block timing is descriptive; no randomization, repeated-seed uncertainty or production latency claim.",
+    "Replay inputs preserve frozen code/data/candidate files; actual rerun needs a separately configured local model and these inputs. Model weights are not packaged."
+  ],
+  "source_inputs_verified_unchanged": true
+}

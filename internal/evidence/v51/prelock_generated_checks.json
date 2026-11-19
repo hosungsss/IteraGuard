@@ -1,0 +1,26 @@
+[
+  {
+    "tool": "export_v51_profiles.py",
+    "returncode": 0,
+    "stdout": "Question profiles verified\n",
+    "stderr": ""
+  },
+  {
+    "tool": "export_v51_base_engine.py",
+    "returncode": 0,
+    "stdout": "v5.1 base engine verified\n",
+    "stderr": ""
+  },
+  {
+    "tool": "export_v51_semantic.py",
+    "returncode": 0,
+    "stdout": "Semantic data verified\n",
+    "stderr": ""
+  },
+  {
+    "tool": "export_v51_contract.py",
+    "returncode": 0,
+    "stdout": "{\"status\": \"CHECKED\", \"manifest_fingerprint\": \"48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7\"}\n",
+    "stderr": ""
+  }
+]

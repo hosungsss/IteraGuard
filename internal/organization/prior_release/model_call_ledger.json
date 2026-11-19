@@ -1,0 +1,16 @@
+{
+  "total_new_provider_requests": 399,
+  "question_ablation": 388,
+  "real_process_restart": 4,
+  "browser": 7,
+  "accepted_valid_typed_responses": 398,
+  "rejected_identity_echo_mismatch": 1,
+  "mock_and_offline_replay_included": false,
+  "provider_temperature": 1.52,
+  "evidence": [
+    "experiments/protocol.json",
+    "integration/real_restart/summary.json",
+    "browser/verification.json"
+  ],
+  "scope": "synthetic local development; no independent accuracy claim"
+}

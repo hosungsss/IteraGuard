@@ -1,0 +1,7 @@
+{
+  "ObservedAt": "2026-11-19T14:24:45.5473312+09:00",
+  "GPUs": null,
+  "NPUExecutionVerified": false,
+  "Note": "CIM access denied; null GPUs does not establish absence of a GPU. NPU inference NOT_RUN.",
+  "inventory_status": "UNAVAILABLE_CIM_ACCESS"
+}

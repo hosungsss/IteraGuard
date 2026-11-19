@@ -1,0 +1,62 @@
+test_capacity_rejects_atomically_without_losing_prior_state (test_evidence_queue.EvidenceQueue.test_capacity_rejects_atomically_without_losing_prior_state) ... ok
+test_completed_duplicate_after_intervening_request_not_recreated (test_evidence_queue.EvidenceQueue.test_completed_duplicate_after_intervening_request_not_recreated) ... ok
+test_distinct_asks_remain_accessible_and_repeat_dedupes (test_evidence_queue.EvidenceQueue.test_distinct_asks_remain_accessible_and_repeat_dedupes) ... ok
+test_export_has_current_arena_source_fingerprints (test_evidence_queue.EvidenceQueue.test_export_has_current_arena_source_fingerprints) ... ok
+test_export_omits_input_and_raw_response (test_evidence_queue.EvidenceQueue.test_export_omits_input_and_raw_response) ... ok
+test_latency_is_separated_and_invalid_values_excluded (test_evidence_queue.EvidenceQueue.test_latency_is_separated_and_invalid_values_excluded) ... ok
+test_missing_event_rejected_even_with_new_hash (test_evidence_queue.EvidenceQueue.test_missing_event_rejected_even_with_new_hash) ... ok
+test_modified_report_rejected (test_evidence_queue.EvidenceQueue.test_modified_report_rejected) ... ok
+test_nonfinite_response_is_explicit_failure (test_evidence_queue.EvidenceQueue.test_nonfinite_response_is_explicit_failure) ... ok
+test_readiness_does_not_promote_controlled_logs (test_evidence_queue.EvidenceQueue.test_readiness_does_not_promote_controlled_logs) ... ok
+test_resigned_false_attestation_rejected (test_evidence_queue.EvidenceQueue.test_resigned_false_attestation_rejected) ... ok
+test_second_risk_is_queued_and_prioritized (test_evidence_queue.EvidenceQueue.test_second_risk_is_queued_and_prioritized) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.164s
+
+OK
+test_python_javascript_same_results (test_lexical.Lexical.test_python_javascript_same_results) ... ok
+test_same_response_before_after_and_threshold_unchanged (test_lexical.Lexical.test_same_response_before_after_and_threshold_unchanged) ... ok
+test_synonyms_and_warning_report_guards (test_lexical.Lexical.test_synonyms_and_warning_report_guards) ... ok
+test_inherited_risk_does_not_create_endless_tasks (test_workflow.Workflow.test_inherited_risk_does_not_create_endless_tasks) ... ok
+test_model_failure_gets_retry_guidance_and_restores_it (test_workflow.Workflow.test_model_failure_gets_retry_guidance_and_restores_it) ... ok
+test_new_uncertainty_creates_task_after_prior_report (test_workflow.Workflow.test_new_uncertainty_creates_task_after_prior_report) ... ok
+test_restart_preserves_guidance_and_private_fingerprints (test_workflow.Workflow.test_restart_preserves_guidance_and_private_fingerprints) ... ok
+test_same_input_changed_reason_creates_task (test_workflow.Workflow.test_same_input_changed_reason_creates_task) ... ok
+test_same_input_reason_deduplicates_and_retry_is_identical (test_workflow.Workflow.test_same_input_reason_deduplicates_and_retry_is_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.241s
+
+OK
+✔ v56 queue selection keeps each task addressable and clears on new session (4.2342ms)
+✔ close locks input and reopen preserves risk without restoring current judgment (2.078ms)
+✔ reload restores closed session without creating session or restoring any text (1.1793ms)
+✔ saved identifiers allow returning to a prior archived session (1.224ms)
+✔ late input or review change invalidates result and later refresh (1.9688ms)
+✔ policy drift rejects a late result and refresh cannot reapply it (1.048ms)
+✔ reported task disables new observation and displays current-turn vs retained risk separately (1.0415ms)
+✔ arbiter buttons do not hide or change the source controls (14.5767ms)
+✔ human review applies to a valid Zoro no-signal result (27.9518ms)
+✔ human review never weakens a Zoro pause (4.9893ms)
+✔ edited text rejects a late model response even if edited back (3.1158ms)
+✔ policy change rejects an in-flight response (2.6118ms)
+✔ session advancement rejects an in-flight response (2.9639ms)
+✔ changing review option rejects an in-flight response (3.2406ms)
+✔ clear hides a completed result (3.1179ms)
+✔ desktop results and history explicitly remain per-text analysis, not session risk clearance (5.6626ms)
+✔ arena refresh does not restore a result after input editing (1.9593ms)
+✔ arena refresh can show the unchanged input result (1.0223ms)
+✔ arena explains current-turn no-signal separately from a prior-risk hold, including refresh (1.0145ms)
+✔ arena prior-risk explanation follows the actual current-turn action (0.9267ms)
+✔ arena clears prior-risk explanation after edits, stale refresh, and a new session (1.0237ms)
+✔ v53 separate action and speech probabilities and finish hold visibly (3.488ms)
+✔ v53 arena hold is explicitly complete, including retained prior risk (1.6672ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2778.1164

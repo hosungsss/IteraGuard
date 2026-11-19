@@ -1,0 +1,37 @@
+{
+  "version": "5.0",
+  "release_stage": "DEVELOPMENT_CANDIDATE",
+  "implementation_and_debugging": "COMPLETE_WITH_DECLARED_EVALUATION_LIMITS",
+  "clean_archive_verification": "PASS",
+  "package_files": 465,
+  "package_sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+  "v50_tests": 42,
+  "v49_regressions": 64,
+  "dmsg_tests": 325,
+  "python_js_conformance": 24488,
+  "app_ui": 14,
+  "session_ui": 6,
+  "desktop_transport": 6,
+  "nlp_parity": 221,
+  "nlp_golden": 49,
+  "actual_model_request_ledger": "model_call_ledger.json",
+  "apk_status": "STRUCTURE_AND_SIGNATURE_PASS_DEVICE_NOT_RUN",
+  "apk_sha256": "c4e2a7c700ede0806183444a66ed3e7154d49f15ff325b877f2f4e9f8f395cb3",
+  "web_source_fingerprint": "f503d428efb35a5eb2f4c2c3454b01a907c5a5549269c3552042d5a4e0f1aa9c",
+  "manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3",
+  "base_source_preservation": "384/384 unchanged",
+  "remaining": [
+    "benign over-abstention and required pause misses",
+    "independent human evaluation NOT_RUN (AI development25 only)",
+    "physical Android/iOS NOT_RUN",
+    "item-specific team approvals unchanged"
+  ],
+  "evidence": [
+    "clean_release_verification.json",
+    "validation/final_validation_summary.json",
+    "browser/verification.json",
+    "experiments/analysis.json",
+    "integration/real_restart/summary.json",
+    "apk_independent_verification.json"
+  ]
+}

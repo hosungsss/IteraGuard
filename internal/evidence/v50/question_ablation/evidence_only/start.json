@@ -1,0 +1,19 @@
+{
+  "started_utc": "2026-11-04T08:29:47.669470+00:00",
+  "protocol_sha256": "bd70abbc3a1a99830d18a588ca85c2901d8d3d7b8c57c169bdc13b69d2d931f4",
+  "client_status": {
+    "configured": true,
+    "remote_text_transfer": false,
+    "remote_consent": true,
+    "remote_host_allowlisted": true,
+    "mode": "REMOTE_RESPONSE_UNATTESTED",
+    "verified_model": false,
+    "calibrated": false,
+    "reasoning_available": false,
+    "send_model_field": true,
+    "require_model_echo": true,
+    "timeout_s": 20.0,
+    "calibration_temperature": "NOT_APPLIED_PUBLIC_SOURCES_CONFLICT_2.19_VS_1.52",
+    "endpoint_host": "127.0.0.1"
+  }
+}

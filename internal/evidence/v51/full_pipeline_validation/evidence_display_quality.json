@@ -1,0 +1,692 @@
+{
+  "scope": "DISPLAY_ONLY_LEXICAL_CLAUSE_COVERAGE_AND_COORDINATE_ALIGNMENT",
+  "new_model_calls": 0,
+  "network_used": false,
+  "source_edits": false,
+  "semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+  "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+  "overall": {
+    "case_count_including_empty": 158,
+    "evaluated_nonempty_cases": 157,
+    "empty_no_inference_not_evaluated": 1,
+    "status_case_counts": {
+      "PARTIAL": 13,
+      "UNAVAILABLE": 88,
+      "NOT_APPLICABLE": 21,
+      "AVAILABLE": 35
+    },
+    "cases_with_any_display": 48,
+    "counts": {
+      "candidate_clause_count": 163,
+      "displayed_clause_count": 52,
+      "unavailable_clause_count": 111,
+      "upstream_span_count": 19,
+      "upstream_span_displayed_count": 9,
+      "upstream_span_unavailable_count": 10,
+      "invalid_upstream_span_count": 0
+    },
+    "candidate_clause_coverage_micro": 0.31901840490797545,
+    "unavailable_clause_rate_micro": 0.6809815950920245,
+    "upstream_span_unavailable_rate_micro": 0.5263157894736842,
+    "cases_with_zero_candidate_clauses": 21,
+    "cases_with_zero_upstream_spans": 138,
+    "reason_code_case_counts": {
+      "SPEECH_CONTEXT_UNRESOLVED": 28,
+      "NO_DISPLAYABLE_ACTION_CONTEXT": 109,
+      "NO_SUPPORTED_TOPIC_ACTION_PAIR": 56,
+      "REPORT_SCOPE_UNRESOLVED": 11,
+      "MIXED_NEGATED_AND_REQUEST_CUES": 7,
+      "MIXED_QUOTED_AND_UNQUOTED_ACTION_CUES": 1
+    },
+    "displayed_span_method_counts": {
+      "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 43,
+      "UPSTREAM_ANCHOR_CLAUSE_CONTEXT": 9
+    },
+    "displayed_span_context_counts": {
+      "NEGATED_OR_WARNING_CUE": 10,
+      "QUOTED_OR_REPORTED": 5,
+      "DIRECT_REQUEST_CUE": 37
+    }
+  },
+  "by_dataset": {
+    "AI24_locked": {
+      "case_count_including_empty": 24,
+      "evaluated_nonempty_cases": 24,
+      "empty_no_inference_not_evaluated": 0,
+      "status_case_counts": {
+        "UNAVAILABLE": 12,
+        "AVAILABLE": 4,
+        "PARTIAL": 3,
+        "NOT_APPLICABLE": 5
+      },
+      "cases_with_any_display": 7,
+      "counts": {
+        "candidate_clause_count": 23,
+        "displayed_clause_count": 8,
+        "unavailable_clause_count": 15,
+        "upstream_span_count": 1,
+        "upstream_span_displayed_count": 0,
+        "upstream_span_unavailable_count": 1,
+        "invalid_upstream_span_count": 0
+      },
+      "candidate_clause_coverage_micro": 0.34782608695652173,
+      "unavailable_clause_rate_micro": 0.6521739130434783,
+      "upstream_span_unavailable_rate_micro": 1.0,
+      "cases_with_zero_candidate_clauses": 5,
+      "cases_with_zero_upstream_spans": 23,
+      "reason_code_case_counts": {
+        "NO_SUPPORTED_TOPIC_ACTION_PAIR": 9,
+        "NO_DISPLAYABLE_ACTION_CONTEXT": 17,
+        "REPORT_SCOPE_UNRESOLVED": 3,
+        "MIXED_QUOTED_AND_UNQUOTED_ACTION_CUES": 1,
+        "MIXED_NEGATED_AND_REQUEST_CUES": 1,
+        "SPEECH_CONTEXT_UNRESOLVED": 1
+      },
+      "displayed_span_method_counts": {
+        "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 8
+      },
+      "displayed_span_context_counts": {
+        "DIRECT_REQUEST_CUE": 7,
+        "NEGATED_OR_WARNING_CUE": 1
+      }
+    },
+    "AI25_new": {
+      "case_count_including_empty": 25,
+      "evaluated_nonempty_cases": 25,
+      "empty_no_inference_not_evaluated": 0,
+      "status_case_counts": {
+        "NOT_APPLICABLE": 3,
+        "UNAVAILABLE": 16,
+        "AVAILABLE": 4,
+        "PARTIAL": 2
+      },
+      "cases_with_any_display": 6,
+      "counts": {
+        "candidate_clause_count": 28,
+        "displayed_clause_count": 6,
+        "unavailable_clause_count": 22,
+        "upstream_span_count": 5,
+        "upstream_span_displayed_count": 2,
+        "upstream_span_unavailable_count": 3,
+        "invalid_upstream_span_count": 0
+      },
+      "candidate_clause_coverage_micro": 0.21428571428571427,
+      "unavailable_clause_rate_micro": 0.7857142857142857,
+      "upstream_span_unavailable_rate_micro": 0.6,
+      "cases_with_zero_candidate_clauses": 3,
+      "cases_with_zero_upstream_spans": 20,
+      "reason_code_case_counts": {
+        "NO_DISPLAYABLE_ACTION_CONTEXT": 19,
+        "NO_SUPPORTED_TOPIC_ACTION_PAIR": 7,
+        "SPEECH_CONTEXT_UNRESOLVED": 8,
+        "REPORT_SCOPE_UNRESOLVED": 3,
+        "MIXED_NEGATED_AND_REQUEST_CUES": 2
+      },
+      "displayed_span_method_counts": {
+        "UPSTREAM_ANCHOR_CLAUSE_CONTEXT": 2,
+        "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 4
+      },
+      "displayed_span_context_counts": {
+        "DIRECT_REQUEST_CUE": 5,
+        "NEGATED_OR_WARNING_CUE": 1
+      }
+    },
+    "AI25_previous": {
+      "case_count_including_empty": 25,
+      "evaluated_nonempty_cases": 25,
+      "empty_no_inference_not_evaluated": 0,
+      "status_case_counts": {
+        "UNAVAILABLE": 14,
+        "AVAILABLE": 10,
+        "PARTIAL": 1
+      },
+      "cases_with_any_display": 11,
+      "counts": {
+        "candidate_clause_count": 30,
+        "displayed_clause_count": 13,
+        "unavailable_clause_count": 17,
+        "upstream_span_count": 6,
+        "upstream_span_displayed_count": 3,
+        "upstream_span_unavailable_count": 3,
+        "invalid_upstream_span_count": 0
+      },
+      "candidate_clause_coverage_micro": 0.43333333333333335,
+      "unavailable_clause_rate_micro": 0.5666666666666667,
+      "upstream_span_unavailable_rate_micro": 0.5,
+      "cases_with_zero_candidate_clauses": 0,
+      "cases_with_zero_upstream_spans": 19,
+      "reason_code_case_counts": {
+        "SPEECH_CONTEXT_UNRESOLVED": 5,
+        "NO_DISPLAYABLE_ACTION_CONTEXT": 14,
+        "NO_SUPPORTED_TOPIC_ACTION_PAIR": 6,
+        "REPORT_SCOPE_UNRESOLVED": 2,
+        "MIXED_NEGATED_AND_REQUEST_CUES": 2
+      },
+      "displayed_span_method_counts": {
+        "UPSTREAM_ANCHOR_CLAUSE_CONTEXT": 3,
+        "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 10
+      },
+      "displayed_span_context_counts": {
+        "DIRECT_REQUEST_CUE": 8,
+        "NEGATED_OR_WARNING_CUE": 2,
+        "QUOTED_OR_REPORTED": 3
+      }
+    },
+    "AI36_development": {
+      "case_count_including_empty": 36,
+      "evaluated_nonempty_cases": 36,
+      "empty_no_inference_not_evaluated": 0,
+      "status_case_counts": {
+        "NOT_APPLICABLE": 4,
+        "UNAVAILABLE": 19,
+        "AVAILABLE": 9,
+        "PARTIAL": 4
+      },
+      "cases_with_any_display": 13,
+      "counts": {
+        "candidate_clause_count": 39,
+        "displayed_clause_count": 14,
+        "unavailable_clause_count": 25,
+        "upstream_span_count": 3,
+        "upstream_span_displayed_count": 2,
+        "upstream_span_unavailable_count": 1,
+        "invalid_upstream_span_count": 0
+      },
+      "candidate_clause_coverage_micro": 0.358974358974359,
+      "unavailable_clause_rate_micro": 0.6410256410256411,
+      "upstream_span_unavailable_rate_micro": 0.3333333333333333,
+      "cases_with_zero_candidate_clauses": 4,
+      "cases_with_zero_upstream_spans": 33,
+      "reason_code_case_counts": {
+        "NO_DISPLAYABLE_ACTION_CONTEXT": 23,
+        "NO_SUPPORTED_TOPIC_ACTION_PAIR": 15,
+        "MIXED_NEGATED_AND_REQUEST_CUES": 2,
+        "SPEECH_CONTEXT_UNRESOLVED": 3,
+        "REPORT_SCOPE_UNRESOLVED": 3
+      },
+      "displayed_span_method_counts": {
+        "UPSTREAM_ANCHOR_CLAUSE_CONTEXT": 2,
+        "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 12
+      },
+      "displayed_span_context_counts": {
+        "DIRECT_REQUEST_CUE": 9,
+        "NEGATED_OR_WARNING_CUE": 5
+      }
+    },
+    "V2_48": {
+      "case_count_including_empty": 48,
+      "evaluated_nonempty_cases": 47,
+      "empty_no_inference_not_evaluated": 1,
+      "status_case_counts": {
+        "PARTIAL": 3,
+        "UNAVAILABLE": 27,
+        "NOT_APPLICABLE": 9,
+        "AVAILABLE": 8
+      },
+      "cases_with_any_display": 11,
+      "counts": {
+        "candidate_clause_count": 43,
+        "displayed_clause_count": 11,
+        "unavailable_clause_count": 32,
+        "upstream_span_count": 4,
+        "upstream_span_displayed_count": 2,
+        "upstream_span_unavailable_count": 2,
+        "invalid_upstream_span_count": 0
+      },
+      "candidate_clause_coverage_micro": 0.2558139534883721,
+      "unavailable_clause_rate_micro": 0.7441860465116279,
+      "upstream_span_unavailable_rate_micro": 0.5,
+      "cases_with_zero_candidate_clauses": 9,
+      "cases_with_zero_upstream_spans": 43,
+      "reason_code_case_counts": {
+        "SPEECH_CONTEXT_UNRESOLVED": 11,
+        "NO_DISPLAYABLE_ACTION_CONTEXT": 36,
+        "NO_SUPPORTED_TOPIC_ACTION_PAIR": 19
+      },
+      "displayed_span_method_counts": {
+        "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT": 9,
+        "UPSTREAM_ANCHOR_CLAUSE_CONTEXT": 2
+      },
+      "displayed_span_context_counts": {
+        "NEGATED_OR_WARNING_CUE": 1,
+        "QUOTED_OR_REPORTED": 2,
+        "DIRECT_REQUEST_CUE": 8
+      }
+    }
+  },
+  "ai_annotation_overlap": {
+    "AI36_development": {
+      "cases": 36,
+      "label_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED",
+      "annotation_key": "evidence[] with start_cp/end_cp/quote",
+      "coordinate_counts": {
+        "annotation_span_count": 46,
+        "display_span_count": 14,
+        "annotation_cp": 983,
+        "display_cp": 530,
+        "intersection_cp": 378,
+        "outside_annotation_cp": 152,
+        "annotation_uncovered_cp": 605,
+        "display_spans_with_any_annotation_overlap": 13,
+        "annotation_spans_with_any_display_overlap": 16,
+        "exact_span_match_count": 0
+      },
+      "cases_with_any_display": 13,
+      "cases_with_any_overlap": 13,
+      "displayed_cases_with_no_annotation_overlap": [],
+      "display_cp_inside_annotation_fraction": 0.7132075471698113,
+      "annotation_cp_covered_fraction": 0.38453713123092575,
+      "coordinate_iou": 0.33303964757709253,
+      "cases_with_display_outside_annotation": 9,
+      "largest_display_extensions": [
+        {
+          "id": "V51-F06_PRINTER_SERVICE_CONTRAST-02",
+          "annotation_span_count": 1,
+          "display_span_count": 2,
+          "annotation_cp": 35,
+          "display_cp": 67,
+          "intersection_cp": 34,
+          "outside_annotation_cp": 33,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 1,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 27,
+              "clause_mode": "NEGATED_OR_WARNING_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            },
+            {
+              "start": 29,
+              "end": 69,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 35,
+              "end_cp": 70,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F08_SUBSCRIPTION_TECH_SUPPORT-02",
+          "annotation_span_count": 2,
+          "display_span_count": 1,
+          "annotation_cp": 43,
+          "display_cp": 69,
+          "intersection_cp": 42,
+          "outside_annotation_cp": 27,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 2,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 69,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 18,
+              "end_cp": 38,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            },
+            {
+              "start_cp": 47,
+              "end_cp": 70,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F12_SAVINGS_GROUP_SECRECY-01",
+          "annotation_span_count": 1,
+          "display_span_count": 1,
+          "annotation_cp": 20,
+          "display_cp": 37,
+          "intersection_cp": 19,
+          "outside_annotation_cp": 18,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 1,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 37,
+              "clause_mode": "NEGATED_OR_WARNING_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 18,
+              "end_cp": 38,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "negated",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F02_REUSE_FURNITURE_PICKUP-03",
+          "annotation_span_count": 1,
+          "display_span_count": 1,
+          "annotation_cp": 33,
+          "display_cp": 48,
+          "intersection_cp": 32,
+          "outside_annotation_cp": 16,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 1,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 48,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 16,
+              "end_cp": 49,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F12_SAVINGS_GROUP_SECRECY-03",
+          "annotation_span_count": 2,
+          "display_span_count": 1,
+          "annotation_cp": 26,
+          "display_cp": 40,
+          "intersection_cp": 25,
+          "outside_annotation_cp": 15,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 2,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 40,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 14,
+              "end_cp": 23,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            },
+            {
+              "start_cp": 24,
+              "end_cp": 41,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        }
+      ],
+      "interpretation": "Clause context expansion can include words outside narrow AI annotations; omitted punctuation also reduces overlap. These values do not establish true/false evidence, model grounding, fraud accuracy or human semantic quality."
+    },
+    "AI24_locked": {
+      "cases": 24,
+      "label_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED",
+      "annotation_key": "evidence[] with start_cp/end_cp/quote",
+      "coordinate_counts": {
+        "annotation_span_count": 35,
+        "display_span_count": 8,
+        "annotation_cp": 764,
+        "display_cp": 374,
+        "intersection_cp": 248,
+        "outside_annotation_cp": 126,
+        "annotation_uncovered_cp": 516,
+        "display_spans_with_any_annotation_overlap": 8,
+        "annotation_spans_with_any_display_overlap": 12,
+        "exact_span_match_count": 0
+      },
+      "cases_with_any_display": 7,
+      "cases_with_any_overlap": 7,
+      "displayed_cases_with_no_annotation_overlap": [],
+      "display_cp_inside_annotation_fraction": 0.6631016042780749,
+      "annotation_cp_covered_fraction": 0.32460732984293195,
+      "coordinate_iou": 0.2786516853932584,
+      "cases_with_display_outside_annotation": 7,
+      "largest_display_extensions": [
+        {
+          "id": "V51-F14_ANIMAL_TRANSPORT_BOOKING-01",
+          "annotation_span_count": 1,
+          "display_span_count": 1,
+          "annotation_cp": 29,
+          "display_cp": 63,
+          "intersection_cp": 28,
+          "outside_annotation_cp": 35,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 1,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 63,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 35,
+              "end_cp": 64,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F17_REFRIGERATED_WAREHOUSE_ACCESS-02",
+          "annotation_span_count": 2,
+          "display_span_count": 1,
+          "annotation_cp": 39,
+          "display_cp": 62,
+          "intersection_cp": 38,
+          "outside_annotation_cp": 24,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 2,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 62,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 23,
+              "end_cp": 35,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            },
+            {
+              "start_cp": 36,
+              "end_cp": 63,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F18_ONLINE_MUSIC_LESSON_RECOVERY-03",
+          "annotation_span_count": 2,
+          "display_span_count": 2,
+          "annotation_cp": 52,
+          "display_cp": 72,
+          "intersection_cp": 50,
+          "outside_annotation_cp": 22,
+          "annotation_uncovered_cp": 2,
+          "display_spans_with_any_annotation_overlap": 2,
+          "annotation_spans_with_any_display_overlap": 2,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 0,
+              "end": 35,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            },
+            {
+              "start": 37,
+              "end": 74,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 13,
+              "end_cp": 36,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            },
+            {
+              "start_cp": 46,
+              "end_cp": 75,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F14_ANIMAL_TRANSPORT_BOOKING-02",
+          "annotation_span_count": 2,
+          "display_span_count": 1,
+          "annotation_cp": 36,
+          "display_cp": 49,
+          "intersection_cp": 36,
+          "outside_annotation_cp": 13,
+          "annotation_uncovered_cp": 0,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 2,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 17,
+              "end": 66,
+              "clause_mode": "NEGATED_OR_WARNING_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 17,
+              "end_cp": 29,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            },
+            {
+              "start_cp": 30,
+              "end_cp": 54,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        },
+        {
+          "id": "V51-F16_TRANSLATION_MANUSCRIPT_REVIEW-03",
+          "annotation_span_count": 1,
+          "display_span_count": 1,
+          "annotation_cp": 32,
+          "display_cp": 44,
+          "intersection_cp": 31,
+          "outside_annotation_cp": 13,
+          "annotation_uncovered_cp": 1,
+          "display_spans_with_any_annotation_overlap": 1,
+          "annotation_spans_with_any_display_overlap": 1,
+          "exact_span_match_count": 0,
+          "display_spans": [
+            {
+              "start": 31,
+              "end": 75,
+              "clause_mode": "DIRECT_REQUEST_CUE",
+              "method": "LOCAL_TOPIC_ACTION_CLAUSE_CONTEXT"
+            }
+          ],
+          "annotation_spans": [
+            {
+              "start_cp": 44,
+              "end_cp": 76,
+              "kind": "AI_ANNOTATED_SEMANTIC_CLAUSE",
+              "directness": "direct",
+              "annotation_status": "AI_PROPOSED_NOT_HUMAN_VALIDATED"
+            }
+          ]
+        }
+      ],
+      "interpretation": "Clause context expansion can include words outside narrow AI annotations; omitted punctuation also reduces overlap. These values do not establish true/false evidence, model grounding, fraud accuracy or human semantic quality."
+    }
+  },
+  "invariants": {
+    "evaluated_nonempty_cases": 157,
+    "decision_or_original_evidence_trace_change_n": 0,
+    "differences": [],
+    "display_span_cp_quote_checks": 52,
+    "invalid_display_cp_offsets_or_quotes": []
+  },
+  "definitions": {
+    "status_cases": "AVAILABLE all eligible lexical candidates shown; PARTIAL some omitted/invalid; UNAVAILABLE none shown among candidates; NOT_APPLICABLE no candidate clauses; empty no-inference excluded from evaluator.",
+    "clause_denominator": "clauses with topic cue OR request cue OR valid upstream anchor; not all semantic action clauses",
+    "upstream_denominator": "all pre-display decision evidence anchors including unavailable/invalid ones",
+    "rates": "micro rates use summed clause/span counts, never mean of per-message percentages",
+    "ai_overlap": "Python Unicode code-point set intersections; gold key is evidence[]; AI labels are not independently human verified"
+  },
+  "input_sha256": {
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage5_specified_candidate/protocol.json": "3abcec0c929e9c0986e90bc3004d90e23207adf0a6660df7a7aa28f953f7e984",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/evidence/v50/question_ablation/replay_inputs/previous_inputs/V2_48.jsonl": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/evidence/v50/question_ablation/replay_inputs/previous_inputs/AI25.jsonl": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v50_ai_development25.jsonl": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_development36.jsonl": "5c1811aa68272ca987c084ef78e148be137ac477e27ffe9fd7de811a91e3fff9",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage5_specified_candidate/specified_raw.jsonl": "d6757b6d369aec356ac97b5b813d93880afd8c43e1f7f0752fb4a44f64e869de",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage7_locked_validation24/protocol.json": "33b4516bdbd6929699810077d393f07b5f690dbd1482f17fa7722085c7f310f8",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_validation24.jsonl": "9088ff6491e4f47c732efffc4ffc75ee1698f77f535a853ebe8c6a51fa7b5355",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage7_locked_validation24/specified_raw.jsonl": "a4aaf70258c29e8d9d5c4eae2021b81f7964fc91902d9988bb04c5943914a539"
+  },
+  "script_sha256": "d9b26ea78188147dfd180f5804e89ddc347ca8084c5ddb268565e6bc284d05be",
+  "limitations": [
+    "Clause expansion intentionally displays context and may overhighlight relative to narrow annotated spans.",
+    "Coverage is neither evidence semantic correctness nor model attention/attribution fidelity.",
+    "No threshold/policy/question/display algorithm changes followed locked validation inspection.",
+    "Existing frozen AI36 development and AI24 validation annotations remain separate."
+  ]
+}

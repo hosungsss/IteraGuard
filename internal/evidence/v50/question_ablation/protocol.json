@@ -1,0 +1,297 @@
+{
+  "registered_utc": "2026-11-04T08:28:11.908516+00:00",
+  "source": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0",
+  "datasets": {
+    "V2_48": {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl",
+      "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+      "n": 48,
+      "nonempty": 47,
+      "status": "PREVIOUSLY_SEEN_AUTHORED_DEVELOPMENT_NOT_INDEPENDENT"
+    },
+    "AI25_previous": {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl",
+      "sha256": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a",
+      "n": 25,
+      "nonempty": 25,
+      "status": "AI_AUTHORED_DEVELOPMENT_NOT_INDEPENDENT"
+    },
+    "AI25_new": {
+      "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/data/v50_ai_development25.jsonl",
+      "sha256": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68",
+      "n": 25,
+      "nonempty": 25,
+      "status": "AI_AUTHORED_DEVELOPMENT_NOT_INDEPENDENT"
+    }
+  },
+  "variants": {
+    "baseline": {
+      "q_action": {
+        "type": "choice",
+        "instructions": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+        "criteria": {
+          "transfer": "transfer money",
+          "otp": "disclose one-time credential",
+          "remote_install": "install or grant remote access",
+          "personal_data": "disclose personal data",
+          "link": "open link",
+          "secrecy": "conceal from others",
+          "none": "no requested action",
+          "unclear": "unclear"
+        }
+      },
+      "q_speech": {
+        "type": "choice",
+        "instructions": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+        "criteria": {
+          "direct_request": "speaker directly asks listener to do it",
+          "reported_or_quoted": "someone reports or quotes it",
+          "negated_or_warning": "speaker warns not to do it",
+          "unclear": "insufficient context",
+          "informational": "speaker only states or reports information and asks for no action"
+        }
+      },
+      "q_scam": {
+        "type": "noul",
+        "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+      },
+      "q_claim": {
+        "type": "noul",
+        "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+      },
+      "q_pressure": {
+        "type": "noul",
+        "instructions": "Does the speaker pressure urgency or secrecy?"
+      },
+      "q_risk": {
+        "type": "score",
+        "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+        "criteria": [
+          "none",
+          "low",
+          "moderate",
+          "high"
+        ]
+      },
+      "q_evidence": {
+        "type": "noul",
+        "instructions": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers."
+      }
+    },
+    "action_only": {
+      "q_action": {
+        "type": "choice",
+        "instructions": "Which listed action is the current speaker asking the listener to take now? Classify a requested action, not a word merely mentioned in a warning, quotation, past report, or completed notice. A warning not to disclose credentials is not a disclosure request. A demand to conceal the matter from family or advisers is a secrecy request even when phrased negatively. Examine every clause: a separate present request remains a request after a warning or quotation. Use none when no listed action is currently requested, including an ordinary request outside these categories. Use unclear when the requested action cannot be determined from this text. A legitimate transfer request is still transfer; do not infer criminality.",
+        "criteria": {
+          "transfer": "transfer money",
+          "otp": "disclose one-time credential",
+          "remote_install": "install or grant remote access",
+          "personal_data": "disclose personal data",
+          "link": "open link",
+          "secrecy": "conceal from others",
+          "none": "no current request for any listed action; includes no request or an ordinary request outside the listed categories",
+          "unclear": "unclear"
+        }
+      },
+      "q_speech": {
+        "type": "choice",
+        "instructions": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+        "criteria": {
+          "direct_request": "speaker directly asks listener to do it",
+          "reported_or_quoted": "someone reports or quotes it",
+          "negated_or_warning": "speaker warns not to do it",
+          "unclear": "insufficient context",
+          "informational": "speaker only states or reports information and asks for no action"
+        }
+      },
+      "q_scam": {
+        "type": "noul",
+        "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+      },
+      "q_claim": {
+        "type": "noul",
+        "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+      },
+      "q_pressure": {
+        "type": "noul",
+        "instructions": "Does the speaker pressure urgency or secrecy?"
+      },
+      "q_risk": {
+        "type": "score",
+        "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+        "criteria": [
+          "none",
+          "low",
+          "moderate",
+          "high"
+        ]
+      },
+      "q_evidence": {
+        "type": "noul",
+        "instructions": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers."
+      }
+    },
+    "speech_only": {
+      "q_action": {
+        "type": "choice",
+        "instructions": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+        "criteria": {
+          "transfer": "transfer money",
+          "otp": "disclose one-time credential",
+          "remote_install": "install or grant remote access",
+          "personal_data": "disclose personal data",
+          "link": "open link",
+          "secrecy": "conceal from others",
+          "none": "no requested action",
+          "unclear": "unclear"
+        }
+      },
+      "q_speech": {
+        "type": "choice",
+        "instructions": "Classify how the current speaker addresses the listener in this entire utterance, independently of other answers. direct_request includes questions or indirect wording that actually ask the listener to act, including ordinary harmless actions. A demand not to tell family or advisers is a direct secrecy request, not a protective warning. reported_or_quoted applies when another or past request is only reported; negated_or_warning applies when the speaker warns against an action without separately requesting it. If a quotation or warning is followed by a separate current request, classify that request. informational means facts or completed events with no requested action. Use unclear when the intended speech act cannot be resolved.",
+        "criteria": {
+          "direct_request": "speaker directly asks listener to do it",
+          "reported_or_quoted": "someone reports or quotes it",
+          "negated_or_warning": "speaker warns not to do it",
+          "unclear": "insufficient context",
+          "informational": "speaker only states or reports information and asks for no action"
+        }
+      },
+      "q_scam": {
+        "type": "noul",
+        "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+      },
+      "q_claim": {
+        "type": "noul",
+        "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+      },
+      "q_pressure": {
+        "type": "noul",
+        "instructions": "Does the speaker pressure urgency or secrecy?"
+      },
+      "q_risk": {
+        "type": "score",
+        "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+        "criteria": [
+          "none",
+          "low",
+          "moderate",
+          "high"
+        ]
+      },
+      "q_evidence": {
+        "type": "noul",
+        "instructions": "Can the requested action, its directness and any pressure cues be classified from explicit words in the supplied text? Answer no when context or meaning is insufficient. Evaluate independently of other answers."
+      }
+    },
+    "evidence_only": {
+      "q_action": {
+        "type": "choice",
+        "instructions": "Which action, if any, is the addressee being asked to take in the current utterance? Treat quoted and negated phrases separately.",
+        "criteria": {
+          "transfer": "transfer money",
+          "otp": "disclose one-time credential",
+          "remote_install": "install or grant remote access",
+          "personal_data": "disclose personal data",
+          "link": "open link",
+          "secrecy": "conceal from others",
+          "none": "no requested action",
+          "unclear": "unclear"
+        }
+      },
+      "q_speech": {
+        "type": "choice",
+        "instructions": "Is the apparent action a direct instruction to the listener, a report/quote, a warning/negation, or unclear?",
+        "criteria": {
+          "direct_request": "speaker directly asks listener to do it",
+          "reported_or_quoted": "someone reports or quotes it",
+          "negated_or_warning": "speaker warns not to do it",
+          "unclear": "insufficient context",
+          "informational": "speaker only states or reports information and asks for no action"
+        }
+      },
+      "q_scam": {
+        "type": "noul",
+        "instructions": "Does the utterance contain features commonly associated with deceptive coercion? Not a real-world probability of fraud."
+      },
+      "q_claim": {
+        "type": "noul",
+        "instructions": "Does the speaker CLAIM an institutional identity, without verifying the identity?"
+      },
+      "q_pressure": {
+        "type": "noul",
+        "instructions": "Does the speaker pressure urgency or secrecy?"
+      },
+      "q_risk": {
+        "type": "score",
+        "instructions": "Rate advisory attention level from text alone; do not assume real-world criminality.",
+        "criteria": [
+          "none",
+          "low",
+          "moderate",
+          "high"
+        ]
+      },
+      "q_evidence": {
+        "type": "noul",
+        "instructions": "Does the supplied text contain enough information to determine the current requested action or its absence, the speech act, and whether pressure is expressed? A complete informational notice or an explicit warning can be sufficient even when no sensitive action is requested and no pressure is expressed. Answer no when an unresolved reference, missing requested object, or missing context prevents that classification. Evaluate this text independently; do not assume other questions' answers or external identity verification."
+      }
+    }
+  },
+  "ordered_questions_sha256": {
+    "baseline": "e2d6959f72b901db94932a3eff8879770986436e995fb807f5cf8cad9511b484",
+    "action_only": "1103fae5ea05e8db316055915b68edf97f2a19d343eb4c2b61aabbf55748d32a",
+    "speech_only": "6453bcb46905ba989f02b03dda31242403f94b9c6326d505270709619818afa3",
+    "evidence_only": "214b80ba85f12c20c8dddfaafc5131c82e2e1465912ef92c7567aa43817abac1"
+  },
+  "protected_hashes": {
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/model_bridge.py": "4a0d067fd669c7df756cf087ce558fd750b946174e73b29808bf6412b894eef1",
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/typed_contract.py": "b204d036e635d9faa1189fb4790b572fd46aac1fabdd9cb6c7f95c1491ed505a",
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/context_guard.py": "78ec728cbb5d573db11a24b605e2b523e20f4b12eea4a916fae96d854a3ae0b9",
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/vendor/dmsg/prototype/core.py": "ffc5213336421127bc6c6d9a50cc6195f1507194bf17815ba8f1d4ccaccf5e22",
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/experiments/v50_ablation.py": "48708ff732d13a5e6086d84e5fe5d8c15b09d7e36feea4c42d56d50f1c0f3fde",
+    "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/candidate_questions.json": "d30bdcddaf6214e262db13418fe8cb2a3a832ce52dbf367a9d6f8f4d07e11f77",
+    "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/V2_48.jsonl": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+    "/home/ljmpc12/Documents/hackton/deliverables/zoro_iteration_20261104/AI25.jsonl": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a",
+    "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/data/v50_ai_development25.jsonl": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68"
+  },
+  "model_export_hashes": {
+    "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev/head.pt": "01ba32bd7018613b8e3da24963996dbe48950e081af36862af8deaae6d852149",
+    "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev/config.json": "5509ddb7f687327c96a6a947e5866144cf009fe69d68a88e67913ec6fc140fc2",
+    "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev/model.safetensors": "63e1272ad94144e75ae76110b58c3718bebb6a0f2e9deac20699f880d2f9383d",
+    "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev/tokenizer.json": "37b81042a52194b32681508d12faf484b1d9052501b1f564f2da1388865ebdf0",
+    "/home/ljmpc12/Documents/hackton/models/Zoro-1-kev/tokenizer_config.json": "9f1118d4176937ffb80f2fb3ad3ff59b70f238bef59cd9c91579e3209a690ac6"
+  },
+  "official_model": "trillionlabs/Zoro-1",
+  "official_revision": "ab05e6c025deb0eed102f42b736dc1589848e6c9",
+  "endpoint": "http://127.0.0.1:8008/v1/systemone",
+  "temperature": 1.52,
+  "dtype": "bfloat16",
+  "tokenizer_patch": false,
+  "fresh_calls_per_variant": 97,
+  "variant_order": [
+    "baseline",
+    "action_only",
+    "speech_only",
+    "evidence_only"
+  ],
+  "calls_planned": 388,
+  "policies": [
+    "legacy_advisory_threshold_0.70",
+    "existing_dra_1.2_costs_unchanged"
+  ],
+  "question_scope": "Single-axis English wording changes; action_only also clarifies existing none description. Other questions/options and their insertion order remain unchanged.",
+  "input_policy": "Only case text as state; never labels, expected guidance, rationale, family or case ID.",
+  "failure_policy": "No retry. Persist parsed provider raw before normalization; failures remain explicit with ASK_HUMAN fallback. Blank V34 has no inference. Never fabricate a valid response.",
+  "evaluation_unit": "98 cases per variant (97 calls plus blank V34), same raw response consumed by both unchanged policies. Not the whole arena/LinkGuard/session pipeline.",
+  "acceptance": {
+    "automatic_promotion": false,
+    "screen": "For EACH dataset and EACH policy, no newly cleared risky/unknown cases, no newly paused benign cases, no newly missed required pause, no lost expected-match cases, and no provider/contract failures; at least one expected-match gain required to recommend a combination follow-up.",
+    "otherwise": "Hold candidate; preserve baseline wording. Report all gains/losses and sentinel cases. Passing this development screen still is not an independent evaluation or release gate.",
+    "combination": "Only after this report; freeze a separate protocol and fresh calls before evaluating any combination."
+  },
+  "latency": "Record client/provider latency per call and first request separately. Sequential variant blocks share a warm server; timing is descriptive, not a controlled speed comparison.",
+  "provenance_boundary": "All data synthetic, seen/devised for development. New25 authored before these calls but not independent or human-validated. Model ID echo is not authenticated attestation. T1.52 is serving metadata, not established product probability calibration.",
+  "no_external_calls": true,
+  "product_default_modified": false
+}

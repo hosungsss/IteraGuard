@@ -1,0 +1,101 @@
+{
+  "suite": "synthetic_untrusted_model_response_policy_regressions",
+  "source": "DEVELOPER_AUTHORED_FIXTURES",
+  "independent_validation": false,
+  "real_zoro_inference_calls": 0,
+  "cases": 15,
+  "passed": 15,
+  "failed": 0,
+  "rows": [
+    {
+      "id": "direct_transfer",
+      "expected": "PAUSE_AND_VERIFY",
+      "observed": "PAUSE_AND_VERIFY",
+      "pass": true
+    },
+    {
+      "id": "direct_otp",
+      "expected": "PAUSE_AND_VERIFY",
+      "observed": "PAUSE_AND_VERIFY",
+      "pass": true
+    },
+    {
+      "id": "direct_remote",
+      "expected": "PAUSE_AND_VERIFY",
+      "observed": "PAUSE_AND_VERIFY",
+      "pass": true
+    },
+    {
+      "id": "direct_link",
+      "expected": "CAUTION",
+      "observed": "CAUTION",
+      "pass": true
+    },
+    {
+      "id": "warning_transfer",
+      "expected": "NO_STRONG_SIGNAL",
+      "observed": "NO_STRONG_SIGNAL",
+      "pass": true
+    },
+    {
+      "id": "warning_otp",
+      "expected": "NO_STRONG_SIGNAL",
+      "observed": "NO_STRONG_SIGNAL",
+      "pass": true
+    },
+    {
+      "id": "reported_transfer",
+      "expected": "CAUTION",
+      "observed": "CAUTION",
+      "pass": true
+    },
+    {
+      "id": "wrong_direct_warning",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "wrong_direct_report",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "wrong_none_transfer",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "wrong_none_otp",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "wrong_warning_label",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "wrong_report_label",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "mixed_warning_report",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    },
+    {
+      "id": "no_lexical_evidence",
+      "expected": "ASK_HUMAN",
+      "observed": "ASK_HUMAN",
+      "pass": true
+    }
+  ]
+}

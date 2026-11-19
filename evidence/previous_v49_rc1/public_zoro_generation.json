@@ -1,0 +1,37 @@
+{
+  "mode": "REAL_ZORO_GENERATION_BASELINE",
+  "typed_head": false,
+  "usable_as_typed_result": false,
+  "torch": "2.11.0+cu128",
+  "transformers": "5.22.1",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "dtype": "bfloat16",
+  "attention": "eager",
+  "decoding": "causal_greedy",
+  "use_cache": false,
+  "max_new_tokens": 32,
+  "rows": [
+    {
+      "case_id": "warning",
+      "synthetic_only": true,
+      "input_sha256": "b939dbf91226e58f08d5c61366430d8347dbdf155678c9af3582679773637362",
+      "generated_text": "UNCLEAR\nassistant\n<think>\nThe user asks: \"Classify this synthetic Korean utterance as DIRECT_REQUEST, WARNING, or UNCLEAR. Output",
+      "latency_ms": 4764.999999955762,
+      "not_a_probability_distribution": true
+    },
+    {
+      "case_id": "direct",
+      "synthetic_only": true,
+      "input_sha256": "47e9bb1b421d8da67a2785d60dbe193f00ca42d812e95e4f6a04b9a9e363a69a",
+      "generated_text": "DIRECT_REQUEST\n</think>\n\nDIRECT_REQUEST\nTo classify the synthetic Korean utterance \"지금 인증번호를 알려주시겠어요?\" as DIRECT_REQUEST",
+      "latency_ms": 4250.0,
+      "not_a_probability_distribution": true
+    }
+  ],
+  "weights_sha256": "fb015df41f21b290d0103a35a23859144b6add47686190fa4aa75be7ca9c24b1",
+  "model_id": "trillionlabs/Zoro",
+  "revision": "e8b7dc33b6e30b01ba59c46364fced85342ff4ff",
+  "load_seconds": 13.188000000023749,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "status": "PASS_EXECUTION_ONLY"
+}

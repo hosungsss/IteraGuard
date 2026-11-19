@@ -1,0 +1,270 @@
+{
+  "schema_version": "iteraguard-v52-exploratory/1",
+  "data_status": "AI_AUTHORED_SYNTHETIC_DEVELOPMENT_ONLY",
+  "independent_human_labels": "NOT_RUN",
+  "target_label": "PAUSE_REQUIRED_AS_ANNOTATED_BY_AI_NOT_REAL_FRAUD",
+  "model_mode": "EXPLORATORY_GROUP_FOLD",
+  "n": 61,
+  "families": 37,
+  "class_counts": {
+    "0": 41,
+    "1": 20
+  },
+  "cross_family_5fold": {
+    "logistic_oof_brier": 0.11203045908071173,
+    "raw_q_scam_brier_ILL_DEFINED_AS_EVENT": 0.11026804491803278,
+    "note": "Q_SCAM is not a fraud probability; comparison is illustrative only"
+  },
+  "unavailable_raw": [],
+  "training_data_leakage_notice": "Previous releases used these cases; not untouched holdout",
+  "status": "EXPLORATORY_ONLY_NO_PRODUCTION_PROMOTION",
+  "android_model_retrained": false,
+  "domain_calibrated": false,
+  "model_identity_attested": false,
+  "case_id_only_oof": [
+    {
+      "id": "V50-AI-22",
+      "fold": 0
+    },
+    {
+      "id": "V50-AI-24",
+      "fold": 0
+    },
+    {
+      "id": "V50-AI-25",
+      "fold": 0
+    },
+    {
+      "id": "V51-F01_PLANETARIUM_ACCESS-01",
+      "fold": 0
+    },
+    {
+      "id": "V51-F01_PLANETARIUM_ACCESS-02",
+      "fold": 0
+    },
+    {
+      "id": "V51-F01_PLANETARIUM_ACCESS-03",
+      "fold": 0
+    },
+    {
+      "id": "V51-F05_ROBOTICS_CLUB_LOGIN-01",
+      "fold": 0
+    },
+    {
+      "id": "V51-F05_ROBOTICS_CLUB_LOGIN-02",
+      "fold": 0
+    },
+    {
+      "id": "V51-F05_ROBOTICS_CLUB_LOGIN-03",
+      "fold": 0
+    },
+    {
+      "id": "V51-F08_SUBSCRIPTION_TECH_SUPPORT-01",
+      "fold": 0
+    },
+    {
+      "id": "V51-F08_SUBSCRIPTION_TECH_SUPPORT-02",
+      "fold": 0
+    },
+    {
+      "id": "V51-F08_SUBSCRIPTION_TECH_SUPPORT-03",
+      "fold": 0
+    },
+    {
+      "id": "V51-F09_CONTEST_ELIGIBILITY_THREAT-01",
+      "fold": 0
+    },
+    {
+      "id": "V51-F09_CONTEST_ELIGIBILITY_THREAT-02",
+      "fold": 0
+    },
+    {
+      "id": "V51-F09_CONTEST_ELIGIBILITY_THREAT-03",
+      "fold": 0
+    },
+    {
+      "id": "V51-F10_UNRESOLVED_PRODUCTION_REFERENCE-01",
+      "fold": 0
+    },
+    {
+      "id": "V51-F10_UNRESOLVED_PRODUCTION_REFERENCE-02",
+      "fold": 0
+    },
+    {
+      "id": "V51-F10_UNRESOLVED_PRODUCTION_REFERENCE-03",
+      "fold": 0
+    },
+    {
+      "id": "V50-AI-04",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-06",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-09",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-14",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-16",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-17",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-21",
+      "fold": 1
+    },
+    {
+      "id": "V51-F11_PUBLIC_RECORDS_CLAIM-01",
+      "fold": 1
+    },
+    {
+      "id": "V51-F11_PUBLIC_RECORDS_CLAIM-02",
+      "fold": 1
+    },
+    {
+      "id": "V51-F11_PUBLIC_RECORDS_CLAIM-03",
+      "fold": 1
+    },
+    {
+      "id": "V50-AI-02",
+      "fold": 2
+    },
+    {
+      "id": "V50-AI-07",
+      "fold": 2
+    },
+    {
+      "id": "V50-AI-08",
+      "fold": 2
+    },
+    {
+      "id": "V50-AI-15",
+      "fold": 2
+    },
+    {
+      "id": "V50-AI-18",
+      "fold": 2
+    },
+    {
+      "id": "V51-F04_COMMUNITY_GARDEN_SETTLEMENT-01",
+      "fold": 2
+    },
+    {
+      "id": "V51-F04_COMMUNITY_GARDEN_SETTLEMENT-02",
+      "fold": 2
+    },
+    {
+      "id": "V51-F04_COMMUNITY_GARDEN_SETTLEMENT-03",
+      "fold": 2
+    },
+    {
+      "id": "V51-F07_FERRY_CHANGE_NOTICE-01",
+      "fold": 2
+    },
+    {
+      "id": "V51-F07_FERRY_CHANGE_NOTICE-02",
+      "fold": 2
+    },
+    {
+      "id": "V51-F07_FERRY_CHANGE_NOTICE-03",
+      "fold": 2
+    },
+    {
+      "id": "V50-AI-01",
+      "fold": 3
+    },
+    {
+      "id": "V50-AI-10",
+      "fold": 3
+    },
+    {
+      "id": "V50-AI-12",
+      "fold": 3
+    },
+    {
+      "id": "V50-AI-13",
+      "fold": 3
+    },
+    {
+      "id": "V51-F02_REUSE_FURNITURE_PICKUP-01",
+      "fold": 3
+    },
+    {
+      "id": "V51-F02_REUSE_FURNITURE_PICKUP-02",
+      "fold": 3
+    },
+    {
+      "id": "V51-F02_REUSE_FURNITURE_PICKUP-03",
+      "fold": 3
+    },
+    {
+      "id": "V51-F06_PRINTER_SERVICE_CONTRAST-01",
+      "fold": 3
+    },
+    {
+      "id": "V51-F06_PRINTER_SERVICE_CONTRAST-02",
+      "fold": 3
+    },
+    {
+      "id": "V51-F06_PRINTER_SERVICE_CONTRAST-03",
+      "fold": 3
+    },
+    {
+      "id": "V51-F12_SAVINGS_GROUP_SECRECY-01",
+      "fold": 3
+    },
+    {
+      "id": "V51-F12_SAVINGS_GROUP_SECRECY-02",
+      "fold": 3
+    },
+    {
+      "id": "V51-F12_SAVINGS_GROUP_SECRECY-03",
+      "fold": 3
+    },
+    {
+      "id": "V50-AI-03",
+      "fold": 4
+    },
+    {
+      "id": "V50-AI-05",
+      "fold": 4
+    },
+    {
+      "id": "V50-AI-11",
+      "fold": 4
+    },
+    {
+      "id": "V50-AI-19",
+      "fold": 4
+    },
+    {
+      "id": "V50-AI-20",
+      "fold": 4
+    },
+    {
+      "id": "V50-AI-23",
+      "fold": 4
+    },
+    {
+      "id": "V51-F03_THEATRE_RESERVATION_FEE-01",
+      "fold": 4
+    },
+    {
+      "id": "V51-F03_THEATRE_RESERVATION_FEE-02",
+      "fold": 4
+    },
+    {
+      "id": "V51-F03_THEATRE_RESERVATION_FEE-03",
+      "fold": 4
+    }
+  ]
+}

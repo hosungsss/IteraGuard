@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: close locks input and reopen preserves risk without restoring current judgment
+ok 1 - close locks input and reopen preserves risk without restoring current judgment
+  ---
+  duration_ms: 5.1728
+  type: 'test'
+  ...
+# Subtest: reload restores closed session without creating session or restoring any text
+ok 2 - reload restores closed session without creating session or restoring any text
+  ---
+  duration_ms: 2.0685
+  type: 'test'
+  ...
+# Subtest: saved identifiers allow returning to a prior archived session
+ok 3 - saved identifiers allow returning to a prior archived session
+  ---
+  duration_ms: 2.0992
+  type: 'test'
+  ...
+# Subtest: late input or review change invalidates result and later refresh
+ok 4 - late input or review change invalidates result and later refresh
+  ---
+  duration_ms: 2.7716
+  type: 'test'
+  ...
+# Subtest: policy drift rejects a late result and refresh cannot reapply it
+ok 5 - policy drift rejects a late result and refresh cannot reapply it
+  ---
+  duration_ms: 1.3749
+  type: 'test'
+  ...
+# Subtest: reported task disables new observation and displays current-turn vs retained risk separately
+ok 6 - reported task disables new observation and displays current-turn vs retained risk separately
+  ---
+  duration_ms: 2.2298
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 19.0498

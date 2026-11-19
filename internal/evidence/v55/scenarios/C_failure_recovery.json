@@ -1,0 +1,92 @@
+{
+  "schema": "iteraguard-evidence/1",
+  "package_version": "5.5",
+  "created_utc": "2026-11-19T05:21:26.275863+00:00",
+  "session_id": "186f3375daac40f3ba624055706f00f6",
+  "context_scope": "CURRENT_TEXT_ONLY",
+  "raw_input_included": false,
+  "model_identity_verified": false,
+  "state_version": 2,
+  "lifecycle": "OPEN",
+  "prior_pause": true,
+  "tasks": [
+    {
+      "id": "cd393069235f47d38adb6dd098d77e85",
+      "type": "MODEL_RETRY",
+      "status": "OPEN",
+      "observation": "NOT_CHECKED"
+    }
+  ],
+  "events": [
+    {
+      "event_type": "EVALUATE",
+      "request_id": "C_failure_recovery_0",
+      "version": 1,
+      "current_turn_action": "ASK_HUMAN",
+      "current_turn_reason": "MODEL_TRANSPORT_ERROR_TimeoutError",
+      "action": "ASK_HUMAN",
+      "reason": "MODEL_TRANSPORT_ERROR_TimeoutError",
+      "prior_pause": false,
+      "model_status": "FAILED",
+      "mode": "MODEL_UNAVAILABLE",
+      "latency_ms": null,
+      "provenance": {
+        "schema": "iteraguard-provenance/1",
+        "received_utc": "2026-11-19T05:21:26.131462+00:00",
+        "execution_source": "CONTROLLED_CLIENT",
+        "model_identity_verified": false,
+        "response_sha256": null,
+        "pipeline_ms": 48.039,
+        "profile_id": "v51-specific-candidate",
+        "policy_id": "legacy",
+        "execution_manifest": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5",
+        "input_source": "USER_SUPPLIED_SYNTHETIC",
+        "npu_execution_verified": false
+      },
+      "task_disposition": "OPEN_TASK_AVAILABLE",
+      "next_task": {
+        "id": "cd393069235f47d38adb6dd098d77e85",
+        "type": "MODEL_RETRY",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      }
+    },
+    {
+      "event_type": "EVALUATE",
+      "request_id": "C_failure_recovery_1",
+      "version": 2,
+      "current_turn_action": "PAUSE_AND_VERIFY",
+      "current_turn_reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "action": "PAUSE_AND_VERIFY",
+      "reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "prior_pause": true,
+      "model_status": "VALID",
+      "mode": "MODEL_RESPONSE_UNATTESTED",
+      "latency_ms": 0.0,
+      "provenance": {
+        "schema": "iteraguard-provenance/1",
+        "received_utc": "2026-11-19T05:21:26.194362+00:00",
+        "execution_source": "CONTROLLED_CLIENT",
+        "model_identity_verified": false,
+        "response_sha256": "7e8f8644d88c5dd5ad7b8d3fbfc01e04800551d78f1e354a3cd12b0be9c0d587",
+        "pipeline_ms": 56.535,
+        "profile_id": "v51-specific-candidate",
+        "policy_id": "legacy",
+        "execution_manifest": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5",
+        "input_source": "USER_SUPPLIED_SYNTHETIC",
+        "npu_execution_verified": false
+      },
+      "task_disposition": "OPEN_TASK_AVAILABLE",
+      "next_task": {
+        "id": "cd393069235f47d38adb6dd098d77e85",
+        "type": "MODEL_RETRY",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      }
+    }
+  ],
+  "integrity_scope": "UNSIGNED_LOCAL_DIGEST_NOT_AUTHENTICATION",
+  "scenario": "C_failure_recovery",
+  "requested_mode": "controlled",
+  "sha256": "458773a0b453d8d43386426161a02ab782b7309c60245279462c0187f2e41385"
+}

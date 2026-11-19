@@ -1,0 +1,9 @@
+{
+ "file": "locked_v46_multitask.jsonl",
+ "sha256": "da3bf3c72323fd5b4619abe069f0fd318fd086a0a68d11730dfd39592db0817a",
+ "n": 49,
+ "frozen_before": "any v4.6 model or policy run",
+ "author": "assistant (not independent annotators)",
+ "case_ab": "reconstructed from the v4.6 prompt description; original screenshots were not provided",
+ "created": "2026-11-02"
+}

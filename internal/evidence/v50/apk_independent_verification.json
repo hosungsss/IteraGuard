@@ -1,0 +1,103 @@
+{
+  "apk": "apps/dist/IteraGuard_DoubtMeter_v5_0_android_debug.apk",
+  "sha256": "c4e2a7c700ede0806183444a66ed3e7154d49f15ff325b877f2f4e9f8f395cb3",
+  "signature_v2": true,
+  "manifest": {
+    "package": "kr.iteraguard.doubtmeter",
+    "version": [
+      "50",
+      "5.0"
+    ],
+    "min_target": [
+      "24",
+      "34"
+    ],
+    "label": "의심계",
+    "icon": "res/mipmap/ic_launcher.png",
+    "permissions": [],
+    "activities": [
+      "kr.iteraguard.doubtmeter.MainActivity"
+    ],
+    "main_activity": "kr.iteraguard.doubtmeter.MainActivity",
+    "exported": "true",
+    "debuggable": "true"
+  },
+  "launch_theme": {
+    "ref": "@7F020000",
+    "resolved": [
+      "['#FF0B1020']"
+    ]
+  },
+  "dex": {
+    "rules": {
+      "magic": true,
+      "checksum": true,
+      "sha1": true,
+      "file_size": true,
+      "header_size": true,
+      "strings_sorted_unique": true,
+      "types_sorted_unique": true,
+      "protos_sorted_unique": true,
+      "fields_sorted_unique": true,
+      "methods_sorted_unique": true,
+      "map_offsets_ascending": true,
+      "map_matches_header": true,
+      "data_section": true,
+      "aligned_items": true,
+      "only_whitelisted_methods": true,
+      "no_forbidden_types": true,
+      "single_class": true
+    },
+    "method_refs": [
+      "Landroid/app/Activity;-><init>()V",
+      "Landroid/app/Activity;->getIntent()Landroid/content/Intent;",
+      "Landroid/app/Activity;->onBackPressed()V",
+      "Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "Landroid/app/Activity;->requestWindowFeature(I)Z",
+      "Landroid/app/Activity;->setContentView(Landroid/view/View;)V",
+      "Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;",
+      "Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;",
+      "Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V",
+      "Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V",
+      "Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V",
+      "Landroid/webkit/WebView;->canGoBack()Z",
+      "Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;",
+      "Landroid/webkit/WebView;->goBack()V",
+      "Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V",
+      "Landroid/webkit/WebView;->setBackgroundColor(I)V",
+      "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;",
+      "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B",
+      "Lkr/iteraguard/doubtmeter/MainActivity;-><init>()V",
+      "Lkr/iteraguard/doubtmeter/MainActivity;->onBackPressed()V",
+      "Lkr/iteraguard/doubtmeter/MainActivity;->onCreate(Landroid/os/Bundle;)V"
+    ],
+    "androguard_methods": [
+      "<init>",
+      "onBackPressed",
+      "onCreate"
+    ]
+  },
+  "asset_comparison": {
+    "status": "PASS_ASSETS_ONLY",
+    "assets_equal_web_bundle": true,
+    "zip_crc": true,
+    "expected_asset_count": 23,
+    "actual_asset_count": 23,
+    "bundle": {
+      "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_web_pwa.zip",
+      "sha256": "f5d20e6ff03e5f19c6192ed7c22bd976a5a37f24b61e3e5d6d313d76bfe2afca",
+      "source": "PACKAGED_PWA_NOT_STAGING"
+    },
+    "missing_assets": [],
+    "extra_assets": [],
+    "changed_assets": [],
+    "signature_validation": "NOT_RUN_IN_ASSETS_ONLY_MODE",
+    "device_install_and_run": "NOT_RUN",
+    "note": "APK/PWA artifact equality only; edited source requires a separate rebuild and release verification."
+  },
+  "assets_equal_web_bundle": true,
+  "zip_crc": true,
+  "stored_entries_aligned": true,
+  "status": "STRUCTURE_AND_SIGNATURE_PASS_DEVICE_NOT_RUN",
+  "device_install_and_run": "NOT_RUN"
+}

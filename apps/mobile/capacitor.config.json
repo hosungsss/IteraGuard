@@ -1,0 +1,16 @@
+{
+  "appId": "kr.iteraguard.doubtmeter",
+  "appName": "의심계",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false,
+    "backgroundColor": "#0B1020"
+  },
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0B1020"
+  },
+  "backgroundColor": "#0B1020"
+}

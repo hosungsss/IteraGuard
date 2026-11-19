@@ -1,0 +1,13 @@
+{
+  "scope": "AGENT_CODE_REVIEW_NOT_HUMAN_PERFORMANCE_EVALUATION",
+  "fixes": [
+    "evidence example-scope boundary/Unicode whitespace parity",
+    "JS/Python casefold parity via generated v51 compatibility engine",
+    "build metadata uses actual release selection, not compatibility registry default",
+    "new signing key not written into release source tree",
+    "source freshness verifies actual execution-manifest dependencies",
+    "semantic trace eligibility honors first-match priority"
+  ],
+  "new_model_calls_in_reviews": 0,
+  "validation24_read_in_reviews": false
+}

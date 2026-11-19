@@ -1,0 +1,510 @@
+{
+  "schema": "v51-independent-extraction/1",
+  "started_utc": "2026-11-04T10:49:58.158985+00:00",
+  "status": "PASS",
+  "archive": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/IteraGuard_DoubtMeter_v5_1_FULL_CANDIDATE.zip",
+  "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "script": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/prepare_verify.py",
+  "script_sha256": "88ecb1dbdd4f40350f234820634f9b492291f1ae99628a8e0123f5c99a7736aa",
+  "actual_model_calls": 0,
+  "network_requests": 0,
+  "device_execution": "NOT_RUN",
+  "claims_scope": "Packaging, byte integrity, generated contract reproducibility, inherited traceability, bounded secret scanning only.",
+  "quality_completion": "NOT_CLAIMED",
+  "human_independent_evaluation": "NOT_RUN",
+  "verification_script_correction": {
+    "initial_failure_receipt": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/attempt1_unsafe_fixture/receipt.json",
+    "reason": "Generic recursive ZIP scan rejected the intentionally adversarial A06 test fixture. Exact path, unchanged v5.0 digest, CORPUS declaration, A06 expectation, metadata and all inner member digests now identify it as expected unsafe test data; memory-only scan remains bounded. Every other unsafe nested path still fails.",
+    "product_source_or_archive_changed": false,
+    "full_archive_path_rules_relaxed": false,
+    "fixture_inner_members_ever_extracted_or_executed": false
+  },
+  "limitations": [
+    "Existing host Python environment, not clean OS/dependency installation.",
+    "No browser interaction, model inference, authenticated checkpoint attestation or physical Android/iOS execution.",
+    "Static secret patterns cannot prove absence of every possible secret representation.",
+    "Candidate metadata and passing checks do not prove semantic quality or independent human evaluation."
+  ],
+  "archive_sha256": "72a59c5d9399a7c80e9b228c1defb992f9a1ea83465d84c12675e0a045d3624f",
+  "archive_bytes": 137162354,
+  "source_inventory_before_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "archive_safety": {
+    "entries": 764,
+    "files": 764,
+    "directories": 0,
+    "uncompressed_bytes": 207482979,
+    "root": "[v5.1] IteraGuard_DoubtMeter",
+    "bounds_checked_before_decompression": true,
+    "crc": "PASS",
+    "status": "PASS"
+  },
+  "extracted_root": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+  "extracted_inventory_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "source_to_extracted": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "manifest_member_sha": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "file_counts": {
+    "manifest_members": 763,
+    "source_package_files": 764,
+    "extracted_files": 764,
+    "empty_files": [
+      "linkguard/__init__.py",
+      "tests_linkguard/__init__.py",
+      "tools/__init__.py",
+      "tools/linkguard/__init__.py",
+      "tools/zoro/__init__.py"
+    ],
+    "empty_file_count": 5
+  },
+  "sensitive_content": {
+    "status": "PASS",
+    "findings": [],
+    "scope": "Every extracted payload; bounded recursive ZIP/APK/skill payloads; hash-deduplicated. No matched secret values are logged.",
+    "private_key_detection": "Actual multiline encoded private PEM block or private-key filename with PRIVATE KEY header. Test source literals alone are not key material.",
+    "hf_detection": "Standalone hf_ plus at least 20 alphanumeric characters.",
+    "archives": [
+      {
+        "path": "IteraGuard_DoubtMeter_v5.0.apk",
+        "entries": 27,
+        "files": 27,
+        "directories": 0,
+        "uncompressed_bytes": 21579548,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "IteraGuard_DoubtMeter_v5.1.apk",
+        "entries": 35,
+        "files": 35,
+        "directories": 0,
+        "uncompressed_bytes": 21741816,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_web_pwa.zip",
+        "entries": 24,
+        "files": 24,
+        "directories": 0,
+        "uncompressed_bytes": 21522047,
+        "root": "dmsg-web",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "apps/dist/IteraGuard_DoubtMeter_v5_1_web_pwa.zip",
+        "entries": 32,
+        "files": 32,
+        "directories": 0,
+        "uncompressed_bytes": 21684493,
+        "root": "dmsg-web",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "dmsg.skill",
+        "entries": 60,
+        "files": 60,
+        "directories": 0,
+        "uncompressed_bytes": 477849,
+        "root": "dmsg",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "dmsg_v5.0.skill",
+        "entries": 58,
+        "files": 58,
+        "directories": 0,
+        "uncompressed_bytes": 472217,
+        "root": "dmsg",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/corrupt_manifest.apk",
+        "entries": 1,
+        "files": 1,
+        "directories": 0,
+        "uncompressed_bytes": 48,
+        "root": "AndroidManifest.xml",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/no_manifest.apk",
+        "entries": 1,
+        "files": 1,
+        "directories": 0,
+        "uncompressed_bytes": 5,
+        "root": "readme.txt",
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/normal_utility.apk",
+        "entries": 3,
+        "files": 3,
+        "directories": 0,
+        "uncompressed_bytes": 1438,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/obfuscated_game.apk",
+        "entries": 4,
+        "files": 4,
+        "directories": 0,
+        "uncompressed_bytes": 2418,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/overperm_tracker.apk",
+        "entries": 4,
+        "files": 4,
+        "directories": 0,
+        "uncompressed_bytes": 3232,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/unsigned_benign.apk",
+        "entries": 2,
+        "files": 2,
+        "directories": 0,
+        "uncompressed_bytes": 818,
+        "root": null,
+        "bounds_checked_before_decompression": true,
+        "crc": "PASS"
+      },
+      {
+        "path": "tests_data/apk_corpus/zipslip.apk",
+        "entries": 2,
+        "files": 2,
+        "directories": 0,
+        "uncompressed_bytes": 661,
+        "bounds_checked_before_decompression": true,
+        "status": "EXPECTED_UNSAFE_TEST_FIXTURE",
+        "inner_members_extracted_or_executed": false,
+        "preserved_v50_sha256": "b777536d2a29c641e417330536ef225f9db7e979c77f386ed747d7cb05e7305f",
+        "corpus_and_A06_declaration": "MATCH",
+        "member_digests": {
+          "AndroidManifest.xml": {
+            "bytes": 660,
+            "sha256": "0dbe7aac5683ba53309299340d2fb9afef090dbae01b98b96191a2ddfb9048f2"
+          },
+          "../../data/evil.so": {
+            "bytes": 1,
+            "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+          }
+        },
+        "crc": "PASS"
+      }
+    ],
+    "unique_bytes_scanned": 173753715,
+    "nested_bytes_expanded": 87486590,
+    "files_scanned": 650,
+    "duplicate_payloads_skipped": 367
+  },
+  "prd_reference": {
+    "status": "PASS",
+    "comparisons": [
+      {
+        "version": "v50",
+        "extracted": {
+          "docs/PRD_v50.md": "28289bbc8dd15e69f766bbbc0584e9c8a9c402d4d12afaa1ca2a8343ae05e702",
+          "dmsg/references/PRD_v50.md": "28289bbc8dd15e69f766bbbc0584e9c8a9c402d4d12afaa1ca2a8343ae05e702"
+        },
+        "source": {
+          "docs/PRD_v50.md": "28289bbc8dd15e69f766bbbc0584e9c8a9c402d4d12afaa1ca2a8343ae05e702",
+          "dmsg/references/PRD_v50.md": "28289bbc8dd15e69f766bbbc0584e9c8a9c402d4d12afaa1ca2a8343ae05e702"
+        },
+        "same": true
+      },
+      {
+        "version": "v51",
+        "extracted": {
+          "docs/PRD_v51.md": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4",
+          "dmsg/references/PRD_v51.md": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4"
+        },
+        "source": {
+          "docs/PRD_v51.md": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4",
+          "dmsg/references/PRD_v51.md": "a7bb4b6128804c0b58e9bc6e14cf0a94fc183b17f9c30be4c95961733b0e3ac4"
+        },
+        "same": true
+      }
+    ]
+  },
+  "traceability": {
+    "status": "PASS",
+    "issues": [],
+    "counts": {
+      "requirements": 33,
+      "conflicts": 12,
+      "pending_decisions": 8,
+      "promotion_checklist": 13
+    },
+    "legacy_ids": [
+      "V50-R01",
+      "V50-R02",
+      "V50-R03",
+      "V50-R04",
+      "V50-R05",
+      "V50-R06",
+      "V50-R07",
+      "V50-R08",
+      "V50-R09",
+      "V50-R10",
+      "V50-R11",
+      "V50-R12",
+      "V50-R13",
+      "V50-R14",
+      "V50-R15",
+      "V50-R16",
+      "V50-R17",
+      "V50-R18",
+      "V50-R19",
+      "V50-R20",
+      "V50-R21",
+      "V50-R22",
+      "V50-R23",
+      "V50-R24",
+      "V50-R25",
+      "V50-R26",
+      "V50-R27",
+      "V50-R28",
+      "V50-R29",
+      "V50-R30",
+      "V50-R31",
+      "V50-R32",
+      "V50-R33",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "G13"
+    ],
+    "stable_gate_ids": [
+      "RELEASE-V50-G01",
+      "RELEASE-V50-G02",
+      "RELEASE-V50-G03",
+      "RELEASE-V50-G04",
+      "RELEASE-V50-G05",
+      "RELEASE-V50-G06",
+      "RELEASE-V50-G07",
+      "RELEASE-V50-G08",
+      "RELEASE-V50-G09",
+      "RELEASE-V50-G10",
+      "RELEASE-V50-G11",
+      "RELEASE-V50-G12",
+      "RELEASE-V50-G13"
+    ],
+    "new_gate_ids": [
+      "RELEASE-V51-G14",
+      "RELEASE-V51-G15",
+      "RELEASE-V51-G16",
+      "RELEASE-V51-G17",
+      "RELEASE-V51-G18",
+      "RELEASE-V51-G19",
+      "RELEASE-V51-G20"
+    ],
+    "original_fields_preserved": true,
+    "delivery_claims_source": {
+      "owner": "root",
+      "status": "DEVELOPMENT_CANDIDATE_DELIVERY_EXTERNALLY_ATTESTED",
+      "distribution_artifact_verification": {
+        "status": "SEE_EXTERNAL_FINAL_DELIVERY_RECEIPT",
+        "evidence": [
+          "distribution_build",
+          "apk_verification",
+          "delivery_external"
+        ]
+      },
+      "latest_pointer_verification": {
+        "status": "SEE_EXTERNAL_FINAL_DELIVERY_RECEIPT",
+        "evidence": [
+          "distribution_build",
+          "apk_verification",
+          "delivery_external"
+        ]
+      },
+      "full_manifest_and_archive_verification": {
+        "status": "SEE_EXTERNAL_FINAL_DELIVERY_RECEIPT",
+        "evidence": [
+          "distribution_build",
+          "apk_verification",
+          "delivery_external"
+        ]
+      },
+      "do_not_infer_completion_from": [
+        "packaging fixture tests",
+        "runtime/browser PASS",
+        "development replay PASS"
+      ],
+      "physical_devices_remain": {
+        "Android": "NOT_RUN",
+        "iOS": "NOT_RUN"
+      },
+      "self_hash_recursion": "FINAL_HASH_AND_FRESH_EXTRACT_RESULT_OUTSIDE_ARCHIVE"
+    },
+    "independent_human_evaluation": "NOT_RUN",
+    "physical_device_validation": {
+      "Android": "NOT_RUN",
+      "iOS": "NOT_RUN"
+    },
+    "quality_status": "PARTIAL"
+  },
+  "commands": [
+    {
+      "name": "verify_release",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/verify_release.py",
+        "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/IteraGuard_DoubtMeter_v5_1_FULL_CANDIDATE.zip",
+        "--root",
+        "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 1.668,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/verify_release.log",
+      "log_sha256": "9f7d894797f88a9ef17da05563568a5e9d686779fabeb6f0038062063f720a92"
+    },
+    {
+      "name": "export_v50_contract",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/export_v50_contract.py",
+        "--check"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.115,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/export_v50_contract.log",
+      "log_sha256": "742df722c3dc58ef745fca093434cdcb443bb68936581737707ab6a0b01715ed"
+    },
+    {
+      "name": "export_v51_profiles",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/export_v51_profiles.py",
+        "--check"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.146,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/export_v51_profiles.log",
+      "log_sha256": "d6b3543edbf9dc77bce14b8b1609b3a3c5ada41b587067a4ba8403b14b7e7086"
+    },
+    {
+      "name": "export_v51_base_engine",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/export_v51_base_engine.py",
+        "--check"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.032,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/export_v51_base_engine.log",
+      "log_sha256": "db767d1b26b4d93f90b5c45228ec6074f5ea6a3ae6764f7b680f4b30dc4c876e"
+    },
+    {
+      "name": "export_v51_semantic",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/export_v51_semantic.py",
+        "--check"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.265,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/export_v51_semantic.log",
+      "log_sha256": "c530054d5bc32f7ae0807dbc48a006be4dd1a7870653ab383a9622eca47b03b3"
+    },
+    {
+      "name": "export_v51_contract",
+      "command": [
+        "/home/ljmpc12/miniforge3/bin/python",
+        "-B",
+        "tools/export_v51_contract.py",
+        "--check"
+      ],
+      "cwd": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+      "exit_code": 0,
+      "status": "PASS",
+      "seconds": 0.115,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/export_v51_contract.log",
+      "log_sha256": "f453f7b87b5974fb0c620d7d6b96240a4f508e114d6856408976cb668134c098"
+    }
+  ],
+  "extracted_immutable": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "archive_sha256_after": "72a59c5d9399a7c80e9b228c1defb992f9a1ea83465d84c12675e0a045d3624f",
+  "archive_immutable": true,
+  "source_inventory_after_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "source_immutable": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "completed_utc": "2026-11-04T10:50:04.289662+00:00"
+}

@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: remote endpoint remains disabled even with legacy consent and allowlist environment
+ok 1 - remote endpoint remains disabled even with legacy consent and allowlist environment
+  ---
+  duration_ms: 22.641663
+  type: 'test'
+  ...
+# Subtest: endpoint changes during inference cannot relabel the original response
+ok 2 - endpoint changes during inference cannot relabel the original response
+  ---
+  duration_ms: 7.091639
+  type: 'test'
+  ...
+# Subtest: URL credentials and parameters are rejected before relay
+ok 3 - URL credentials and parameters are rejected before relay
+  ---
+  duration_ms: 2.332454
+  type: 'test'
+  ...
+# Subtest: 2000 Korean code points and astral characters fit the desktop UTF-8 body limit
+ok 4 - 2000 Korean code points and astral characters fit the desktop UTF-8 body limit
+  ---
+  duration_ms: 5.316438
+  type: 'test'
+  ...
+# Subtest: declared and streamed oversized bodies are rejected before any provider request
+ok 5 - declared and streamed oversized bodies are rejected before any provider request
+  ---
+  duration_ms: 2.270205
+  type: 'test'
+  ...
+# Subtest: false content lengths are rejected even when the body is below the byte cap
+ok 6 - false content lengths are rejected even when the body is below the byte cap
+  ---
+  duration_ms: 1.837062
+  type: 'test'
+  ...
+# Subtest: host uses selected profile questions and returns exactly the seven-field request binding
+ok 7 - host uses selected profile questions and returns exactly the seven-field request binding
+  ---
+  duration_ms: 5.538082
+  type: 'test'
+  ...
+# Subtest: unselected profile, invalid policy and client-supplied questions never reach provider
+ok 8 - unselected profile, invalid policy and client-supplied questions never reach provider
+  ---
+  duration_ms: 2.735906
+  type: 'test'
+  ...
+# Subtest: candidate profile with eleven questions is fixed before provider invocation
+ok 9 - candidate profile with eleven questions is fixed before provider invocation
+  ---
+  duration_ms: 2.903569
+  type: 'test'
+  ...
+# Subtest: registry/configuration/echo flags are snapshotted across an in-flight response
+ok 10 - registry/configuration/echo flags are snapshotted across an in-flight response
+  ---
+  duration_ms: 15.912404
+  type: 'test'
+  ...
+# Subtest: invalid or missing profile contract fails before provider invocation
+ok 11 - invalid or missing profile contract fails before provider invocation
+  ---
+  duration_ms: 5.306841
+  type: 'test'
+  ...
+# Subtest: malformed JSON, mismatched model echo and non-JSON responses remain unavailable
+ok 12 - malformed JSON, mismatched model echo and non-JSON responses remain unavailable
+  ---
+  duration_ms: 6.162049
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 84.048009

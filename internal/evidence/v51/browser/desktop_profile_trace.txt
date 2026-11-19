@@ -1,0 +1,597 @@
+Browser tab: 5, Title: "의심계 · IteraGuard", URL: "http://127.0.0.1:8782/".
+0 AXWebArea 의심계 · IteraGuard, URL: 127.0.0.1:8782/
+	1 container
+		2 heading 의심계, Value: 1
+			3 text 의심계
+		4 text IteraGuard · Doubt Meter
+		5 text 데스크톱
+	6 container Description: 분석, ID: view-analyze
+		7 container
+			8 입력 방식
+				9 radio button 문자 붙여넣기, Value: 1
+				10 radio button 예시 시나리오, Value: 0
+			11 text 현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.
+			12 container srcText
+				13 container
+					14 text 받은 문자·메시지 (이 기기 안에서만 분석 · 외부 전송 없음)
+					15 text entry area (settable) 받은 문자·메시지 (이 기기 안에서만 분석 · 외부 전송 없음) 40 / 2000, Value: 본인 확인을 위해 지금 받은 OTP 인증번호를 이 채팅으로 보내 주세요., ID: freeText
+					89 text 40
+					17 text  / 2000
+				18 button 클립보드에서 붙여넣기, ID: pasteBtn
+				19 button 지우기, ID: clearBtn
+				20 container
+					21 checkbox (settable, integer) Description: 온디바이스 AI 의미 분석 (준비됨 · 이 기기에서 실행 · 외부 전송 없음), Value: 1, ID: useNLP
+					22 text 온디바이스 AI 의미 분석 
+					23 text (준비됨 · 이 기기에서 실행 · 외부 전송 없음)
+				24 container
+					25 checkbox (settable, integer) Description: 실제 조로로 판단 (로컬 조로 우선 사용 · 연결 실패 시 판단 보류), Value: 1, ID: useModel
+					26 text 실제 조로로 판단 
+					27 text (로컬 조로 우선 사용 · 연결 실패 시 판단 보류)
+			28 button (collapsed) › 고급 옵션, Secondary Actions: Expand
+				29 text ›
+				30 text 고급 옵션
+			31 button 분석하기, ID: runBtn
+				90 text 분석하기
+		91 container resultCard
+			92 container stateRow
+				93 text 잠시 멈추고 공식 경로에서 직접 확인하세요
+				94 text 위험할 수 있는 행동을 잠시 멈추세요.
+			95 text 요청받은 송금·인증정보 제공·원격제어 설치 등을 멈추고 독립적인 공식 경로로 확인하세요.
+			96 text 현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.
+			97 container evidenceBox
+				98 container
+					99 text 본인 확인을 위해 지금 받은 OTP 인증번호를 이 채팅으로 보내 주세요
+					100 text .
+				101 text 밑줄은 원문에서 찾은 행동 맥락입니다. 모델의 판단 근거나 의미가 검증됐다는 뜻은 아닙니다.
+				102 text 표시 가능한 구간 1/1 · 확인하지 못한 구간 0개
+			139 container
+				140 button (expanded) 기술 정보 (판정 코드와 실행 경로), Secondary Actions: Collapse
+					141 text 기술 정보 (판정 코드와 실행 경로)
+				142 text PAUSE_AND_VERIFY · MODEL_DIRECT_ACTION_ADVISORY
+				143 text {
+  "profile": {
+    "mode": "MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED",
+    "policy_id": "legacy",
+    "profile_id": "v51-specific-candidate",
+    "profile_binding": {
+      "profile_id": "v51-specific-candidate",
+      "policy_id": "legacy",
+      "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+      "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+      "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+      "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+      "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"
+    },
+    "analysis_scope": "CURRENT_TEXT_ONLY_NO_SESSION_RISK",
+    "indicator": "NOT_APPLIED",
+    "linkguard": "OFFLINE_ONLY",
+    "external_lookup": "NOT_RUN"
+  },
+  "trace": {
+    "schema_version": "dmsg-v51-execution-trace/1",
+    "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+    "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+    "policy_id": "legacy",
+    "model_status": "VALID",
+    "inference_source": "MODEL_RESPONSE_UNATTESTED",
+    "runtime": {
+      "expected_temperature": 1.52,
+      "temperature_source": "LOCAL_KEV_HEAD_CHECKPOINT_CONFIG; baseline_protocol_20261104",
+      "temperature_observed_by_this_evaluator": false,
+      "model_attested": false,
+      "domain_calibration": "NOT_ESTABLISHED",
+      "client_probability_recalibration": "NONE",
+      "model_echo_status": "MATCH_UNAUTHENTICATED"
+    },
+    "predicates": [
+      {
+        "id": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "NONE_DIRECT_REQUEST_CONFLICT",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "DIRECT_REQUEST_CONTRADICTS_CONTEXT",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "WARNING_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "UNSUPPORTED_WARNING_LABEL",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "REPORT_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "UNSUPPORTED_QUOTATION_LABEL",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "LOW_ACTION_PROBABILITY",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "LOW_SPEECH_PROBABILITY",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "UNCLEAR_ACTION_LABEL",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "UNCLEAR_SPEECH_LABEL",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "CONFLICTING_MODEL_QUESTIONS",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "AUX_COERCION_BLOCKS_INFORMATIONAL_CLEARANCE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_INFORMATIONAL_NOT_REQUEST",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "NO_ACTION_CANDIDATE_NOT_SAFETY_CLEARANCE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "NO_GROUNDED_ACTION_ANCHOR",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "AUX_COERCION_BLOCKS_WARNING_CLEARANCE",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_WARNING_NOT_REQUEST",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_REPORTED_REQUEST",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_DIRECT_ACTION_ADVISORY",
+        "condition_met": true,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_DIRECT_CAUTION_ADVISORY",
+        "condition_met": false,
+        "eligible": true
+      },
+      {
+        "id": "MODEL_EVIDENCE_INSUFFICIENT",
+        "condition_met": false,
+        "eligible": false
+      },
+      {
+        "id": "CURRENT_SENSITIVE_EXPOSURE",
+        "condition_met": true,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "CURRENT_ANOMALOUS_PAYMENT",
+        "condition_met": false,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "SCOPED_SENSITIVE_REQUEST",
+        "condition_met": true,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "SCOPED_PAYMENT_CORROBORATION",
+        "condition_met": false,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "EXPLICIT_OTHER_REQUEST",
+        "condition_met": false,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "EXPLICIT_INFORMATION_ONLY",
+        "condition_met": false,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      },
+      {
+        "id": "EXPLICIT_PROTECTIVE_WARNING",
+        "condition_met": false,
+        "eligible": false,
+        "layer": "SEMANTIC_EXTENSION"
+      }
+    ],
+    "condition_ids": [
+      "MODEL_DIRECT_ACTION_ADVISORY",
+      "CURRENT_SENSITIVE_EXPOSURE",
+      "SCOPED_SENSITIVE_REQUEST"
+    ],
+    "applied_rule_ids": [
+      "MODEL_DIRECT_ACTION_ADVISORY"
+    ],
+    "final_rule": "MODEL_DIRECT_ACTION_ADVISORY",
+    "final_action": "PAUSE_AND_VERIFY",
+    "normalized_probabilities": {
+      "q_action": {
+        "transfer": 0.0002,
+        "otp": 0.9822,
+        "remote_install": 0.0005,
+        "personal_data": 0.0089,
+        "link": 0.0002,
+        "secrecy": 0.0021,
+        "none": 0.0042,
+        "unclear": 0.0017
+      },
+      "q_speech": {
+        "direct_request": 0.8483,
+        "reported_or_quoted": 0.0293,
+        "negated_or_warning": 0.0574,
+        "unclear": 0.0544,
+        "informational": 0.0107
+      },
+      "q_scam": {
+        "yes": 0.8985,
+        "no": 0.10150000000000003
+      },
+      "q_claim": {
+        "yes": 0.108,
+        "no": 0.892
+      },
+      "q_pressure": {
+        "yes": 0.1379,
+        "no": 0.8621
+      },
+      "q_risk": {
+        "none": 0.204,
+        "low": 0.1512,
+        "moderate": 0.293,
+        "high": 0.3518
+      },
+      "q_evidence": {
+        "yes": 0.5979,
+        "no": 0.4021
+      },
+      "q_request_scope": {
+        "no_request": 0.0195,
+        "other_request": 0.0608,
+        "sensitive_request": 0.8851,
+        "unclear": 0.0347
+      },
+      "q_current_exposure": {
+        "yes": 0.9586,
+        "no": 0.04139999999999999
+      },
+      "q_payment_anomaly": {
+        "yes": 0.0219,
+        "no": 0.9781
+      },
+      "q_request_specified": {
+        "yes": 0.8199,
+        "no": 0.18010000000000004
+      }
+    },
+    "dropped_optional_questions": [],
+    "evidence_spans": [
+      {
+        "start": 16,
+        "end": 19,
+        "kind": "OTP",
+        "directness": "DIRECT_REQUEST",
+        "origin": "MODEL_SCHEMA_CHECKED"
+      }
+    ],
+    "predicate_semantics": "CONDITION_TRUE_IS_NOT_RULE_APPLIED; eligibility is layer-local and respects rule priority",
+    "trace_scope": "CURRENT_TURN_ONLY_NO_SESSION_DECISION",
+    "raw_text_stored": false,
+    "question_profile_id": "v51-specific-candidate",
+    "question_binding": {
+      "profile_id": "v51-specific-candidate",
+      "policy_id": "legacy",
+      "question_contract_sha256": "63c2ff249498196fddcbbb3316783a05c09e1a47834830209f6a354c4805b56d",
+      "questions_sha256": "b1a891f24c0ce98f41d0e058f6098d0d3d73340fdf9dd26bcc02c98bb981f65e",
+      "profile_fingerprint": "71052b7b97adfc9ee3e35e5cd2cbe2869a52a3a5cdeeb88d820f6f9639058ba2",
+      "registry_fingerprint": "3b1f58c4321001b16ed58aad02469c33e636a2e5435c99f6604ac95f17d2f2bd",
+      "base_execution_manifest_fingerprint": "a7edba89bbfe78ed22c067959058762cc1003a2df5286fcae36d38725ea895a3"
+    },
+    "base_policy_action": "PAUSE_AND_VERIFY",
+    "base_policy_rule": "MODEL_DIRECT_ACTION_ADVISORY",
+    "semantic_policy_id": "v51-semantic/4",
+    "semantic": {
+      "schema_version": "dmsg-v51-semantic/1",
+      "baseline_action": "PAUSE_AND_VERIFY",
+      "baseline_reason": "MODEL_DIRECT_ACTION_ADVISORY",
+      "rule_id": "PRESERVE_EXISTING_PAUSE",
+      "predicates": [
+        {
+          "id": "CURRENT_SENSITIVE_EXPOSURE",
+          "condition_met": true
+        },
+        {
+          "id": "CURRENT_ANOMALOUS_PAYMENT",
+          "condition_met": false
+        },
+        {
+          "id": "SCOPED_SENSITIVE_REQUEST",
+          "condition_met": true
+        },
+        {
+          "id": "SCOPED_PAYMENT_CORROBORATION",
+          "condition_met": false
+        },
+        {
+          "id": "EXPLICIT_OTHER_REQUEST",
+          "condition_met": false
+        },
+        {
+          "id": "EXPLICIT_INFORMATION_ONLY",
+          "condition_met": false
+        },
+        {
+          "id": "EXPLICIT_PROTECTIVE_WARNING",
+          "condition_met": false
+        }
+      ],
+      "request_scope": "sensitive_request",
+      "specified_request": true,
+      "indirect_redirect_cue": false,
+      "request_scope_probabilities": {
+        "no_request": 0.0195,
+        "other_request": 0.0608,
+        "sensitive_request": 0.8851,
+        "unclear": 0.0347
+      },
+      "current_exposure_probabilities": {
+        "yes": 0.9586,
+        "no": 0.04139999999999999
+      },
+      "payment_anomaly_probabilities": {
+        "yes": 0.0219,
+        "no": 0.9781
+      },
+      "active_exposure_spans": [
+        {
+          "start": 0,
+          "end": 39
+        }
+      ],
+      "raw_text_stored": false,
+      "is_semantic_proof": false
+    },
+    "local_layers": [
+      {
+        "id": "USER_REQUESTED_REVIEW",
+        "status": "EVALUATED",
+        "condition_met": false,
+        "before_action": "PAUSE_AND_VERIFY",
+        "after_action": "PAUSE_AND_VERIFY",
+        "applied": false
+      },
+      {
+        "id": "OFFLINE_LINKGUARD",
+        "status": "EVALUATED_OFFLINE",
+        "before_action": "PAUSE_AND_VERIFY",
+        "after_action": "PAUSE_AND_VERIFY",
+        "applied": false,
+        "summary": {
+          "status": "EVALUATED_OFFLINE",
+          "overall": "NOT_SCANNED",
+          "url_count": 0,
+          "network_used": false,
+          "escalated": false,
+          "escalation_reasons": []
+        }
+      }
+    ],
+    "current_turn_policy_action": "PAUSE_AND_VERIFY",
+    "current_turn_policy_rule": "MODEL_DIRECT_ACTION_ADVISORY",
+    "evidence_display": {
+      "schema_version": "dmsg-v51-evidence-display/1",
+      "status": "AVAILABLE",
+      "source": "LOCAL_DISPLAY_HEURISTIC",
+      "extraction_method": "BOUNDED_TOPIC_ACTION_AND_SPEECH_CUES",
+      "offset_unit": "UNICODE_CODE_POINT",
+      "whitespace_contract": "EXPLICIT_UNICODE_WHITE_SPACE_NO_BOM",
+      "policy_changed": false,
+      "role": "DISPLAY_CONTEXT_NOT_DECISION_GROUNDING",
+      "semantic_verified": false,
+      "semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+      "risk_classification": "NOT_PERFORMED",
+      "model_calls": 0,
+      "reason_codes": [],
+      "candidate_clause_count": 1,
+      "displayed_clause_count": 1,
+      "unavailable_clause_count": 0,
+      "candidate_clause_coverage": 1,
+      "unavailable_clause_rate": 0,
+      "coverage_denominator": "CLAUSES_WITH_TOPIC_OR_REQUEST_CUE_OR_VALID_UPSTREAM_ANCHOR",
+      "upstream_span_count": 1,
+      "upstream_span_displayed_count": 1,
+      "upstream_span_unavailable_count": 0,
+      "upstream_span_unavailable_rate": 0,
+      "invalid_upstream_span_count": 0,
+      "raw_text_persistence": "FORBIDDEN_DISPLAY_AND_ORIGINAL_EVIDENCE_MEMORY_ONLY",
+      "clauses": [
+        {
+          "start": 0,
+          "end": 39,
+          "clause_mode": "DIRECT_REQUEST_CUE",
+          "status": "DISPLAYED",
+          "reason_code": null,
+          "method": "UPSTREAM_ANCHOR_CLAUSE_CONTEXT",
+          "original_anchor_indexes": [
+            0
+          ]
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 39,
+          "kind": "TEXT_ACTION_CONTEXT",
+          "clause_mode": "DIRECT_REQUEST_CUE",
+          "origin": "LOCAL_DISPLAY_HEURISTIC",
+          "method": "UPSTREAM_ANCHOR_CLAUSE_CONTEXT",
+          "topic_cues": [
+            "CREDENTIAL_TOPIC"
+          ],
+          "original_anchor_indexes": [
+            0
+          ]
+        }
+      ],
+      "raw_text_stored": false
+    }
+  },
+  "evidence_display": {
+    "schema_version": "dmsg-v51-evidence-display/1",
+    "status": "AVAILABLE",
+    "source": "LOCAL_DISPLAY_HEURISTIC",
+    "extraction_method": "BOUNDED_TOPIC_ACTION_AND_SPEECH_CUES",
+    "offset_unit": "UNICODE_CODE_POINT",
+    "whitespace_contract": "EXPLICIT_UNICODE_WHITE_SPACE_NO_BOM",
+    "policy_changed": false,
+    "role": "DISPLAY_CONTEXT_NOT_DECISION_GROUNDING",
+    "semantic_verified": false,
+    "semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+    "risk_classification": "NOT_PERFORMED",
+    "model_calls": 0,
+    "reason_codes": [],
+    "candidate_clause_count": 1,
+    "displayed_clause_count": 1,
+    "unavailable_clause_count": 0,
+    "candidate_clause_coverage": 1,
+    "unavailable_clause_rate": 0,
+    "coverage_denominator": "CLAUSES_WITH_TOPIC_OR_REQUEST_CUE_OR_VALID_UPSTREAM_ANCHOR",
+    "upstream_span_count": 1,
+    "upstream_span_displayed_count": 1,
+    "upstream_span_unavailable_count": 0,
+    "upstream_span_unavailable_rate": 0,
+    "invalid_upstream_span_count": 0,
+    "raw_text_persistence": "FORBIDDEN_DISPLAY_AND_ORIGINAL_EVIDENCE_MEMORY_ONLY",
+    "clauses": [
+      {
+        "start": 0,
+        "end": 39,
+        "clause_mode": "DIRECT_REQUEST_CUE",
+        "status": "DISPLAYED",
+        "reason_code": null,
+        "method": "UPSTREAM_ANCHOR_CLAUSE_CONTEXT",
+        "original_anchor_indexes": [
+          0
+        ]
+      }
+    ],
+    "spans": [
+      {
+        "start": 0,
+        "end": 39,
+        "kind": "TEXT_ACTION_CONTEXT",
+        "clause_mode": "DIRECT_REQUEST_CUE",
+        "origin": "LOCAL_DISPLAY_HEURISTIC",
+        "method": "UPSTREAM_ANCHOR_CLAUSE_CONTEXT",
+        "topic_cues": [
+          "CREDENTIAL_TOPIC"
+        ],
+        "original_anchor_indexes": [
+          0
+        ]
+      }
+    ],
+    "raw_text_stored": false
+  },
+  "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7"
+}
+			105 definition list facts
+				106 container 이유
+					107 text 이유
+				108 text 모델이 위험 행동의 직접 요청으로 봤고, 문장 안에서 해당 표현을 찾았어요.
+				109 container 실행 방식
+					110 text 실행 방식
+				111 container
+					112 text MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED 모델 응답 진품 미인증
+				113 container 근거
+					114 text 근거
+				115 text 문장 속 표현 위치 (의미 인증 아님)
+				116 container 모델 답
+					117 text 모델 답
+				118 text otp / direct_request · 확신 0.98 (보정 안 됨)
+				119 container 지연
+					120 text 지연
+				121 text 278.33 ms
+				122 container 모델 이름 반향
+					123 text 모델 이름 반향
+				124 text 일치 (인증 아님)
+				125 container 판단 방식
+					126 text 판단 방식
+				127 text 기준 정책 · 0.70 (보정 미확립)
+			128 button (collapsed) › 절 단위 단서 보기, Secondary Actions: Expand
+				129 text ›
+				130 text 절 단위 단서 보기
+			131 container nextRow
+				132 checkbox 공식 경로로 직접 확인할게요, Value: 0
+				133 checkbox 믿을 수 있는 사람에게 물어볼게요, Value: 0
+			134 text 이 결과는 안전 보증이나 사기 판정이 아닙니다. 송금·인증정보 제공·앱 설치 전에 상대가 알려준 번호가 아닌, 직접 찾은 공식 번호로 확인하세요.
+		81 container historyCard
+			82 heading 문장별 분석 기록 원문은 저장하지 않습니다, Value: 2
+				83 text 문장별 분석 기록
+				84 text 원문은 저장하지 않습니다
+			85 text 각 문장을 따로 분석한 기록입니다. 이전 문장에서 안내한 위험이 해소됐다는 뜻은 아닙니다.
+			86 content list historyList
+				135 container
+					136 text 잠시 멈추고 공식 경로에서 직접 확인하세요 v2
+				137 container
+					138 text 뚜렷한 위험 행동 요청 미감지 (안전 보증 아님) v1
+	33 tab group 화면
+		34 tab (selected, settable, boolean) 분석, Value: 1, ID: tab-analyze
+		35 tab (selectable, settable, boolean) 확장 검증, Value: 0, ID: tab-guard
+		36 tab (selectable, settable, boolean) 지급 검토, Value: 0, ID: tab-pay
+		37 tab (selectable, settable, boolean) 모델, Value: 0, ID: tab-model
+		38 tab (selectable, settable, boolean) 정보, Value: 0, ID: tab-info
+
+The focused UI element is 140 button (expanded) 기술 정보 (판정 코드와 실행 경로), Secondary Actions: Collapse

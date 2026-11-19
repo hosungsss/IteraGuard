@@ -1,0 +1,1572 @@
+{
+  "artifact": "v50_supporting_documents_organization_audit",
+  "generated_utc": "2026-11-04T09:27:03.044587+00:00",
+  "base": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard",
+  "mode": "READ_ONLY_SOURCE_AND_ARTIFACT_AUDIT",
+  "audit_output": "/home/ljmpc12/Documents/hackton/deliverables/v50_organization_20261104/supporting_docs_audit.json",
+  "activity": {
+    "source_files_modified": false,
+    "source_files_moved": false,
+    "source_files_deleted": false,
+    "full_or_manifest_modified": false,
+    "external_requests": 0,
+    "model_calls": 0,
+    "tests_executed": 0,
+    "archives_extracted": 0,
+    "new_file_written": "/home/ljmpc12/Documents/hackton/deliverables/v50_organization_20261104/supporting_docs_audit.json"
+  },
+  "scope": {
+    "supporting_file_count": 31,
+    "included": [
+      "Root TRILLION_HACKATHON_Team_Guide.md",
+      "All files recursively in Back Data, Package, iteraguard and textbook folder"
+    ],
+    "excluded": [
+      "Versioned v3.x/v4.x product directories (handled by parent/other audit)",
+      "Root dmsg .skill archives (other version audit)",
+      "External Drive/web pages",
+      "Current product source code re-audit and execution"
+    ],
+    "review_modes_are_per_file_not_all_files_full_content_review": true
+  },
+  "files_reviewed": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+      "relative_path": "TRILLION_HACKATHON_Team_Guide.md",
+      "bytes": 12771,
+      "sha256": "410ec1f405afa6d4fea7f4dc46db0229a401df0418134f531218e564bae00da2",
+      "review_scope": "FULL_TEXT",
+      "line_count": 134
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/02_준비물_체크리스트_20261104.md",
+      "relative_path": "Back Data/02_준비물_체크리스트_20261104.md",
+      "bytes": 4932,
+      "sha256": "2190b399dbf608b41a3501c5b48224250e0b6e6820fc3df89e988ea8c1a0a5ce",
+      "review_scope": "FULL_TEXT",
+      "line_count": 72
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Hackathon_Plan_20261104.zip",
+      "relative_path": "Back Data/DMSG_Hackathon_Plan_20261104.zip",
+      "bytes": 14430,
+      "sha256": "022754495561372391eb607f78eef6eb828c3f268c997815113d68119291669e",
+      "review_scope": "ARCHIVE_CENTRAL_DIRECTORY_AND_SELECTED_MEMBERS"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+      "relative_path": "Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+      "bytes": 17018,
+      "sha256": "960ce0d3a4f5ebf5289a88c1347a629082a740cf7d16fcc9380c044e081e0dae",
+      "review_scope": "FULL_TEXT",
+      "line_count": 175
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+      "relative_path": "Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+      "bytes": 5744,
+      "sha256": "f8cd42d81772a87c9f5b184a46f7ca8b0a8249524faf5d2b1def5bd21b7e59af",
+      "review_scope": "FULL_TEXT",
+      "line_count": 148
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+      "relative_path": "Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+      "bytes": 3689,
+      "sha256": "048c84254a7d583a468674fc0933c54e98fc8143de4cea823b547f4800796584",
+      "review_scope": "FULL_TEXT",
+      "line_count": 34
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_20261103.zip",
+      "relative_path": "Package/DMSG_Revision_Experiment_Kit_20261103.zip",
+      "bytes": 47967,
+      "sha256": "8627c7ca99cf3e3ba9b30a1c027995a26ee0dc30f0c20e2c29bafe5d58b4168b",
+      "review_scope": "ARCHIVE_CENTRAL_DIRECTORY_AND_SELECTED_MEMBERS"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_v1.1_20261104.sha256.txt",
+      "relative_path": "Package/DMSG_Revision_Experiment_Kit_v1.1_20261104.sha256.txt",
+      "bytes": 114,
+      "sha256": "35359d34e236ded07343d7ef0b4417702ae271f29f1d6709246c2a0d6d8ee5a4",
+      "review_scope": "FULL_TEXT",
+      "line_count": 1
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_v1.2_20261104.zip",
+      "relative_path": "Package/DMSG_Revision_Experiment_Kit_v1.2_20261104.zip",
+      "bytes": 18010127,
+      "sha256": "b51253418e07344fa3bf89815c7be859df5a56edc44e93731533081649191cdc",
+      "review_scope": "ARCHIVE_CENTRAL_DIRECTORY_AND_SELECTED_MEMBERS"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_SYSTEM_PROMPTING_v4.9-rc1_20261104.md",
+      "relative_path": "Package/DMSG_SYSTEM_PROMPTING_v4.9-rc1_20261104.md",
+      "bytes": 9096,
+      "sha256": "131d7e2d265e0e078212aaa531c02278db8ed90681d67a80252c568841e86b0d",
+      "review_scope": "FULL_TEXT",
+      "line_count": 105
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/evaluation_suite.py",
+      "relative_path": "iteraguard/backend/iteraguard/evaluation_suite.py",
+      "bytes": 32775,
+      "sha256": "ceda4b7f07153a663a487fb646604381928070a7179517df6736607e19a3052b",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 743
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/event_normalizer.py",
+      "relative_path": "iteraguard/backend/iteraguard/event_normalizer.py",
+      "bytes": 11857,
+      "sha256": "19203ebfc7c3682883c969b942e0d0142ef73e2a32074f3500c9aa874f47e81b",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 257
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/event_service.py",
+      "relative_path": "iteraguard/backend/iteraguard/event_service.py",
+      "bytes": 2896,
+      "sha256": "a3e780aca51d0ae8206dc7686e7cf5a55296834e3536fd63979b73468448adf6",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 78
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/factory_cpr.py",
+      "relative_path": "iteraguard/backend/iteraguard/factory_cpr.py",
+      "bytes": 32272,
+      "sha256": "b716400658e7629297c8c8f1dd814aaefb90cb9cd004352d6beea711417584cf",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 751
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/kev_server_adapter.py",
+      "relative_path": "iteraguard/backend/iteraguard/kev_server_adapter.py",
+      "bytes": 2793,
+      "sha256": "1efd98e9fd6dc7665b9e8ce963390f6340adfd4929b5505b07e16f00620ce25b",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 76
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/policy_engine.py",
+      "relative_path": "iteraguard/backend/iteraguard/policy_engine.py",
+      "bytes": 13472,
+      "sha256": "081378f7711efe5c2398fc33f3efec41493cf0b60b655c0daacfdc1a8697fa84",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 276
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/tool_registry.py",
+      "relative_path": "iteraguard/backend/iteraguard/tool_registry.py",
+      "bytes": 7662,
+      "sha256": "8af7ba2044bbf1ebec55fc9880b7e3b37f7da598782137a90c4003ec7948e887",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 223
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+      "relative_path": "iteraguard/backend/iteraguard/workflow_orchestrator.py",
+      "bytes": 33814,
+      "sha256": "60ba4c9d06940417b9d9de9aeaf25ae6f0c43b7b922d1850940cf097ff04e12d",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 780
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/dist/callshield.html",
+      "relative_path": "iteraguard/frontend/dist/callshield.html",
+      "bytes": 104677,
+      "sha256": "12ece2cd5d982085033ab35279bd496f747af7aa4417a1aa346719c309c0281e",
+      "review_scope": "TARGETED_CLAIM_AND_MODEL_IMPLEMENTATION_LINES",
+      "line_count": 2035
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/dist/index.html",
+      "relative_path": "iteraguard/frontend/dist/index.html",
+      "bytes": 11061,
+      "sha256": "e379afa34b4725da8b5fd325a8194bcb20a56c558a81e4c4028273cde419a5a1",
+      "review_scope": "INVENTORY_AND_SHA_ONLY",
+      "line_count": 250
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/src/components/DecisionInspector.tsx",
+      "relative_path": "iteraguard/frontend/src/components/DecisionInspector.tsx",
+      "bytes": 1680,
+      "sha256": "0a0e64b176bb4e4edbea829db82b9b060a7451442bacefcef167f1638b4add98",
+      "review_scope": "INVENTORY_AND_SHA_ONLY",
+      "line_count": 57
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/src/components/ProbabilityChart.tsx",
+      "relative_path": "iteraguard/frontend/src/components/ProbabilityChart.tsx",
+      "bytes": 2963,
+      "sha256": "184f8fc5b3bd4a9a4a666fbeafaf4c2f87bcd267291e1fc2e3d6d75df3f2c76c",
+      "review_scope": "INVENTORY_AND_SHA_ONLY",
+      "line_count": 72
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/src/types/iteraguard.ts",
+      "relative_path": "iteraguard/frontend/src/types/iteraguard.ts",
+      "bytes": 4082,
+      "sha256": "58b7ed710cfb7c51ac1f6d5d03bf0631bcbf408b0d1b15d73dda7d2299e53cc5",
+      "review_scope": "INVENTORY_AND_SHA_ONLY",
+      "line_count": 166
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/requirements.txt",
+      "relative_path": "iteraguard/requirements.txt",
+      "bytes": 218,
+      "sha256": "24bfc0b1c03958f44f9df8798896943b4cc6ff2862a1e69420dbcd7914779311",
+      "review_scope": "FULL_TEXT",
+      "line_count": 9
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/run.sh",
+      "relative_path": "iteraguard/run.sh",
+      "bytes": 387,
+      "sha256": "b4d0bd02b50a79cfb97d7f78da4ebfced25c6f0fa991fb00d68e38d36e251aaf",
+      "review_scope": "FULL_TEXT",
+      "line_count": 10
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_callshield.py",
+      "relative_path": "iteraguard/tests/test_callshield.py",
+      "bytes": 6876,
+      "sha256": "bf1c6fc8a73108247e5f1e6c1dd45123d3e4fea5459f1192b1b73372fcace02e",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 142
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+      "relative_path": "iteraguard/tests/test_iteraguard_v0_1.py",
+      "bytes": 21401,
+      "sha256": "40ae4b8240676a47840e47a0ea5d37f66df56893f961ab3f49d3be383119d7af",
+      "review_scope": "AST_PARSE_TOP_LEVEL_DOCSTRING_IMPORTS_AND_SIGNATURES",
+      "line_count": 474
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+      "relative_path": "Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+      "bytes": 2301,
+      "sha256": "9b057483bae0172f70268a8c075959531c698bdf45361848d7ff38e5ecb6ca33",
+      "review_scope": "FULL_TEXT",
+      "line_count": 62
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+      "relative_path": "Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+      "bytes": 76906,
+      "sha256": "6467025232bbfc36719866ff1154934d25b9de7642702d112daf1c178a7db241",
+      "review_scope": "FULL_TEXT",
+      "line_count": 758
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/VALIDATION.json",
+      "relative_path": "Trida_의심계_학습교재_제1판_20261104/VALIDATION.json",
+      "bytes": 1549,
+      "sha256": "6346e5ddff1f24ad51a0aa62f7df019402722eb4bb22ced5dcfbbd242fc88023",
+      "review_scope": "FULL_TEXT",
+      "line_count": 38
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/WINNING_PLAYBOOK.txt",
+      "relative_path": "Trida_의심계_학습교재_제1판_20261104/WINNING_PLAYBOOK.txt",
+      "bytes": 11080,
+      "sha256": "d95f2941264e9089a6956485712de2c0b8567674e9ccd73257d6afd97145a72f",
+      "review_scope": "FULL_TEXT",
+      "line_count": 103
+    }
+  ],
+  "archive_observations": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Hackathon_Plan_20261104.zip",
+      "sha256": "022754495561372391eb607f78eef6eb828c3f268c997815113d68119291669e",
+      "entry_count": 5,
+      "uncompressed_bytes": 29153,
+      "member_names": [
+        "Hackathon_Plan_20261104/01_해커톤개요_필수사항_우승기획서.md",
+        "Hackathon_Plan_20261104/02_준비물_체크리스트.md",
+        "Hackathon_Plan_20261104/03_준비_현장일정표.md",
+        "Hackathon_Plan_20261104/04_일정표.csv",
+        "Hackathon_Plan_20261104/MANIFEST.json"
+      ],
+      "selected_members": [
+        {
+          "member": "Hackathon_Plan_20261104/01_해커톤개요_필수사항_우승기획서.md",
+          "bytes": 14344,
+          "sha256": "ab05957a1ea51fb707c7b798510604c481a798e29d3680f1c164e0d27ab01767",
+          "review_scope": "FULL_TEXT"
+        },
+        {
+          "member": "Hackathon_Plan_20261104/02_준비물_체크리스트.md",
+          "bytes": 4932,
+          "sha256": "2190b399dbf608b41a3501c5b48224250e0b6e6820fc3df89e988ea8c1a0a5ce",
+          "review_scope": "FULL_TEXT"
+        },
+        {
+          "member": "Hackathon_Plan_20261104/03_준비_현장일정표.md",
+          "bytes": 5350,
+          "sha256": "8be36e6e0b453878a0364cec907f06f6710e3364553326722c7628ed64ded2a5",
+          "review_scope": "FULL_TEXT"
+        },
+        {
+          "member": "Hackathon_Plan_20261104/MANIFEST.json",
+          "bytes": 856,
+          "sha256": "d39ab6dd41fbf23008e38c9cf86759cfec4449e23abf34d8d7404560e5089536",
+          "review_scope": "FULL_TEXT"
+        }
+      ],
+      "full_crc_test": "NOT_RUN",
+      "extracted_or_executed": false
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_20261103.zip",
+      "sha256": "8627c7ca99cf3e3ba9b30a1c027995a26ee0dc30f0c20e2c29bafe5d58b4168b",
+      "entry_count": 34,
+      "uncompressed_bytes": 120281,
+      "member_names": [
+        "수정/.gitignore",
+        "수정/01_Trida_반영계획.md",
+        "수정/02_기존보고서_정합성.md",
+        "수정/03_실행검증_및_적용범위.md",
+        "수정/configs/questions.normalized.json",
+        "수정/data/development.jsonl",
+        "수정/data/replay_fixture.jsonl",
+        "수정/docs/EXPERIMENT_PROTOCOL.md",
+        "수정/docs/PROTOTYPE_INTEGRATION.md",
+        "수정/docs/TRACE_CONTRACT.md",
+        "수정/evidence/command_1.txt",
+        "수정/evidence/command_2.txt",
+        "수정/evidence/command_3.txt",
+        "수정/evidence/command_4.txt",
+        "수정/evidence/development_fixture_sweep.json",
+        "수정/evidence/fixture_protocol.json",
+        "수정/evidence/fixture_REPORT.md",
+        "수정/evidence/fixture_summary.json",
+        "수정/evidence/overwrite_guard.txt",
+        "수정/evidence/replay_protocol.json",
+        "수정/experiments/__init__.py",
+        "수정/experiments/contracts.py",
+        "수정/experiments/fixtures.py",
+        "수정/experiments/metrics.py",
+        "수정/experiments/policy_probe.py",
+        "수정/experiments/run.py",
+        "수정/experiments/sweep.py",
+        "수정/integration/__init__.py",
+        "수정/integration/example_adapter.py",
+        "수정/README.md",
+        "수정/run_demo.ps1",
+        "수정/run_demo.sh",
+        "수정/tests/test_kit.py",
+        "수정/PACKAGE_MANIFEST.json"
+      ],
+      "selected_members": [],
+      "full_crc_test": "NOT_RUN",
+      "extracted_or_executed": false
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_v1.2_20261104.zip",
+      "sha256": "b51253418e07344fa3bf89815c7be859df5a56edc44e93731533081649191cdc",
+      "entry_count": 289,
+      "uncompressed_bytes": 30618149,
+      "member_names": [
+        "DMSG_Experiment_Kit_v1.2/.env.example",
+        "DMSG_Experiment_Kit_v1.2/.gitignore",
+        "DMSG_Experiment_Kit_v1.2/01_Trida_반영계획.md",
+        "DMSG_Experiment_Kit_v1.2/02_기존보고서_정합성.md",
+        "DMSG_Experiment_Kit_v1.2/03_실행검증_및_적용범위.md",
+        "DMSG_Experiment_Kit_v1.2/arena/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/arena/generation_client.py",
+        "DMSG_Experiment_Kit_v1.2/arena/generation_probe.py",
+        "DMSG_Experiment_Kit_v1.2/arena/generation_server.py",
+        "DMSG_Experiment_Kit_v1.2/arena/probe.py",
+        "DMSG_Experiment_Kit_v1.2/arena/run_kev.ps1",
+        "DMSG_Experiment_Kit_v1.2/arena/server.py",
+        "DMSG_Experiment_Kit_v1.2/arena/store.py",
+        "DMSG_Experiment_Kit_v1.2/arena/web/index.html",
+        "DMSG_Experiment_Kit_v1.2/arena/web/main.js",
+        "DMSG_Experiment_Kit_v1.2/arena/web/style.css",
+        "DMSG_Experiment_Kit_v1.2/configs/questions.normalized.json",
+        "DMSG_Experiment_Kit_v1.2/configs/v48.env.example",
+        "DMSG_Experiment_Kit_v1.2/configs/v48_source_contract.json",
+        "DMSG_Experiment_Kit_v1.2/data/development.jsonl",
+        "DMSG_Experiment_Kit_v1.2/data/replay_fixture.jsonl",
+        "DMSG_Experiment_Kit_v1.2/docs/EXPERIMENT_PROTOCOL.md",
+        "DMSG_Experiment_Kit_v1.2/docs/PRD_v4_9_rc1.md",
+        "DMSG_Experiment_Kit_v1.2/docs/PROTOTYPE_INTEGRATION.md",
+        "DMSG_Experiment_Kit_v1.2/docs/README_v1_1_ARCHIVE.md",
+        "DMSG_Experiment_Kit_v1.2/docs/SYSTEM_PROMPTING_v4_9_rc1.md",
+        "DMSG_Experiment_Kit_v1.2/docs/TRACE_CONTRACT.md",
+        "DMSG_Experiment_Kit_v1.2/docs/V1_1_UPGRADE.md",
+        "DMSG_Experiment_Kit_v1.2/docs/V1_2_UPGRADE_REPORT.md",
+        "DMSG_Experiment_Kit_v1.2/docs/winning_plan/01_해커톤개요_필수사항_우승기획서.md",
+        "DMSG_Experiment_Kit_v1.2/docs/winning_plan/02_준비물_체크리스트.md",
+        "DMSG_Experiment_Kit_v1.2/docs/winning_plan/03_준비_현장일정표.md",
+        "DMSG_Experiment_Kit_v1.2/docs/winning_plan/04_일정표.csv",
+        "DMSG_Experiment_Kit_v1.2/docs/winning_plan/MANIFEST.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/command_1.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/command_2.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/command_3.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/command_4.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/development_fixture_sweep.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/fixture_protocol.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/fixture_REPORT.md",
+        "DMSG_Experiment_Kit_v1.2/evidence/fixture_summary.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/overwrite_guard.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/replay_protocol.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/development_stub_sweep.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/gate_trace.jsonl",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/kit_tests.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/policy_differences.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/protocol.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/reference_policy_summary.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/source_byte_integrity.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/source_suite.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/stub_conversion_protocol.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.1/summary.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/arena_model_unavailable.jpg",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/arena_public_zoro_live.jpg",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/generation_environment.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/generation_http.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/kit_tests.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/public_model_provenance.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/public_zoro_generation.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/public_zoro_generation_chat_stop.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/restored_assets.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/runtime_inventory.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/source_suite.txt",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/typed_endpoint_attempt.json",
+        "DMSG_Experiment_Kit_v1.2/evidence/v1.2/vendor_provenance.json",
+        "DMSG_Experiment_Kit_v1.2/experiments/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/contracts.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/fixtures.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/metrics.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/policy_probe.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/run.py",
+        "DMSG_Experiment_Kit_v1.2/experiments/sweep.py",
+        "DMSG_Experiment_Kit_v1.2/integration/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/integration/example_adapter.py",
+        "DMSG_Experiment_Kit_v1.2/integration/v48.py",
+        "DMSG_Experiment_Kit_v1.2/integration/v48_replay.py",
+        "DMSG_Experiment_Kit_v1.2/README.md",
+        "DMSG_Experiment_Kit_v1.2/requirements-generation.txt",
+        "DMSG_Experiment_Kit_v1.2/run_arena.ps1",
+        "DMSG_Experiment_Kit_v1.2/run_demo.ps1",
+        "DMSG_Experiment_Kit_v1.2/run_demo.sh",
+        "DMSG_Experiment_Kit_v1.2/run_local_zoro.ps1",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/gate_trace.jsonl",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/protocol.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/REPORT.md",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/results.csv",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/results.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_fixture/summary.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/gate_trace.jsonl",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/policy_differences.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/protocol.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/reference_policy_summary.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/REPORT.md",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/results.csv",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/results.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_replay/summary.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_stub.jsonl",
+        "DMSG_Experiment_Kit_v1.2/runs/v12_stub.protocol.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/gate_trace.jsonl",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/policy_differences.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/protocol.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/reference_policy_summary.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/REPORT.md",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/results.csv",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/results.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_comparison/summary.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_demo_trace.jsonl",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_demo_trace.protocol.json",
+        "DMSG_Experiment_Kit_v1.2/runs/v48_sweep.json",
+        "DMSG_Experiment_Kit_v1.2/tests/test_arena.py",
+        "DMSG_Experiment_Kit_v1.2/tests/test_arena_http.py",
+        "DMSG_Experiment_Kit_v1.2/tests/test_generation_boundary.py",
+        "DMSG_Experiment_Kit_v1.2/tests/test_generation_http.py",
+        "DMSG_Experiment_Kit_v1.2/tests/test_kit.py",
+        "DMSG_Experiment_Kit_v1.2/tests/test_v11_source_bridge.py",
+        "DMSG_Experiment_Kit_v1.2/validate.ps1",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/dmsg-apkscan.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/dmsg-domainintel.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/dmsg-engine.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/dmsg-linkguard.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/dmsg-nlp.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/engine-data.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/linkguard-data.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/nlp/dmsg-nlp-heads.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/nlp/dmsg-nlp-vocab.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/nlp/dmsg-nlp-weights.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/shared/nlp/NLP_ASSETS_MANIFEST.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/app.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/icons/icon-180.png",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/icons/icon-192.png",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/icons/icon-512.png",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/icons/icon-maskable-512.png",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/icons/icon.svg",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/index.html",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/manifest.webmanifest",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/styles.css",
+        "DMSG_Experiment_Kit_v1.2/vendor/apps/web/sw.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/.gitignore",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/assets/TEAM_WORKPLAN.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/config.example.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/context_guard.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/core.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/decision_oracle.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/evaluation_gate.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/fixtures.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/model_bridge.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/ontology.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/paylock.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/paylock_model.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/server.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/session.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/prototype/typed_contract.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/README.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/ELENCHUS_SNM_4D.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/EVALUATION.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/MODEL_CONTRACT.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/PLATFORM_INSTALL.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/PRD.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/PROMPTS.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/SYSTEM_PROMPT.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/references/TRACEABILITY.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/evaluate_annotations.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/evaluate_fixtures.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/metamorphic_audit.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/npu_readiness.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/paylock_ablation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/policy.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/run_adversarial_suite.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/run_fixture_demo.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/smoke_zoro.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/scripts/validate_skill.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/SKILL.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_policy.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_prototype.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_spec_alignment.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v33_hardening.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v34_release.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v35_http_integration.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v35_model_bridge.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v36_async.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v36_context_and_transport.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v37_evaluation_npu.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v37_privacy_security.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/tests/test_v38_paylock.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/web/index.html",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/web/main.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/web/paylock.html",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/web/paylock.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/dmsg/web/style.css",
+        "DMSG_Experiment_Kit_v1.2/vendor/evaluation/v47_challenge/locked.freeze.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/evaluation/v47_challenge/locked.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/linkguard/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/linkguard/apk.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/linkguard/intake.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/linkguard/policy.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/config.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/dmsg_nlp_heads_v46.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/MODEL_CARD.md",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/SHA256SUMS.txt",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/tokenizer.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/tokenizer_config.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/models/v46/vocab.txt",
+        "DMSG_Experiment_Kit_v1.2/vendor/tests_data/apk_corpus/CORPUS.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tests_linkguard/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tests_linkguard/test_arbiter.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tests_linkguard/test_linkguard.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/app_smoke.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/browser_smoke.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/build_apk.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/build_apps.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/build_release.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/check_contrast.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/check_forbidden_phrases.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/compare_engines.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/delivery_gate.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/export_engine_data.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/linkguard/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/linkguard/apk_parity.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/linkguard/export_linkguard_data.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/linkguard/make_apk_corpus.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/linkguard/make_vectors.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/make_conformance_vectors.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/build_nlp_assets.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/compose_heads_v46.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/calib.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/locked.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/train.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/v46_calib.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/v46_decontamination.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/v46_locked.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/data/v46_train.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/electra_ref.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/eval_v1_frozen_heads_first_touch.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/nlp_eval_report_v45_dev_only.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/nlp_eval_report_v45_final.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_dev_eval.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_golden_snapshot.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_model_selection.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_b2h.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_b4h.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_b4hl.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_b4n.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_b8n.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_train_log_c0.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval/v46_vs_v45_locked_report.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/eval_v46.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/extract_model_weights.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/finetune_v46.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_handwritten.freeze.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_handwritten.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_handwritten_v2.freeze.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_handwritten_v2.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_team_ai25.freeze.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_team_ai25.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_v46_multitask.freeze.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/locked_v46_multitask.jsonl",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/make_dataset.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/make_dataset_v46.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/make_nlp_reference.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/nlp_parity.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/nlp_reference_vectors.json",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/nlp_v46.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/regress_cases_v46.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/run_nlp_batch.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/nlp/train_heads.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_golden_v33.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v40_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v41_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v42_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v44_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v45_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v46_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v47_arbiter_eval.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v47_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/run_v48_validation.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/test_domain_v48.js",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/test_trace_v48.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/verify_apk.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/verify_apk_v48.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/verify_macho_signature.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/verify_release.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/zoro/__init__.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/zoro/abstention_audit.py",
+        "DMSG_Experiment_Kit_v1.2/vendor/tools/zoro/trace_v48.py",
+        "DMSG_Experiment_Kit_v1.2/PACKAGE_MANIFEST.json"
+      ],
+      "selected_members": [
+        {
+          "member": "DMSG_Experiment_Kit_v1.2/docs/PRD_v4_9_rc1.md",
+          "bytes": 9009,
+          "sha256": "af26dab73a698e42b1a14dc9262a0c030bdcdfdd2cca16b071435725b9029708",
+          "review_scope": "EXISTENCE_SIZE_SHA_ONLY"
+        },
+        {
+          "member": "DMSG_Experiment_Kit_v1.2/docs/SYSTEM_PROMPTING_v4_9_rc1.md",
+          "bytes": 9096,
+          "sha256": "131d7e2d265e0e078212aaa531c02278db8ed90681d67a80252c568841e86b0d",
+          "review_scope": "FULL_TEXT"
+        },
+        {
+          "member": "DMSG_Experiment_Kit_v1.2/docs/V1_2_UPGRADE_REPORT.md",
+          "bytes": 12408,
+          "sha256": "40f98dd5c13ada09c2011b7c560ff28897181c5f261b5eb897480112040d78a9",
+          "review_scope": "EXISTENCE_SIZE_SHA_ONLY"
+        }
+      ],
+      "full_crc_test": "NOT_RUN",
+      "extracted_or_executed": false
+    }
+  ],
+  "byte_equivalence": [
+    {
+      "left": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/02_준비물_체크리스트_20261104.md",
+      "right": "Back Data/DMSG_Hackathon_Plan_20261104.zip::Hackathon_Plan_20261104/02_준비물_체크리스트.md",
+      "status": "BYTE_IDENTICAL",
+      "sha256": "2190b399dbf608b41a3501c5b48224250e0b6e6820fc3df89e988ea8c1a0a5ce"
+    },
+    {
+      "left": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_SYSTEM_PROMPTING_v4.9-rc1_20261104.md",
+      "right": "Package/DMSG_Revision_Experiment_Kit_v1.2_20261104.zip::DMSG_Experiment_Kit_v1.2/docs/SYSTEM_PROMPTING_v4_9_rc1.md",
+      "status": "BYTE_IDENTICAL",
+      "sha256": "131d7e2d265e0e078212aaa531c02278db8ed90681d67a80252c568841e86b0d"
+    },
+    {
+      "left": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/MANIFEST_SHA256.json",
+      "right": "v5 FULL::IteraGuard_DoubtMeter_v5.0/MANIFEST_SHA256.json",
+      "status": "BYTE_IDENTICAL",
+      "sha256": "a73b05c48a70413084d08576cd806bb2030144f21d08e5e483d7992d8829352f"
+    }
+  ],
+  "missing_items": [
+    {
+      "id": "TEXTBOOK_Trida_DoubtMeter_Textbook.pdf",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.pdf",
+      "status": "MISSING_IN_PROVIDED_TEXTBOOK_FOLDER",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+        "lines": [
+          6
+        ]
+      },
+      "resolution": "원본 영수증과 미확보 상태를 보존. TXT로 PDF/HTML/ZIP 확보를 대신 표시하지 않음."
+    },
+    {
+      "id": "TEXTBOOK_Trida_DoubtMeter_Textbook.html",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.html",
+      "status": "MISSING_IN_PROVIDED_TEXTBOOK_FOLDER",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+        "lines": [
+          11
+        ]
+      },
+      "resolution": "원본 영수증과 미확보 상태를 보존. TXT로 PDF/HTML/ZIP 확보를 대신 표시하지 않음."
+    },
+    {
+      "id": "TEXTBOOK_START_HERE.txt",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/START_HERE.txt",
+      "status": "MISSING_IN_PROVIDED_TEXTBOOK_FOLDER",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+        "lines": [
+          26
+        ]
+      },
+      "resolution": "원본 영수증과 미확보 상태를 보존. TXT로 PDF/HTML/ZIP 확보를 대신 표시하지 않음."
+    },
+    {
+      "id": "TEXTBOOK_Trida_DoubtMeter_Textbook_20261104.zip",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook_20261104.zip",
+      "status": "MISSING_IN_PROVIDED_TEXTBOOK_FOLDER",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+        "lines": [
+          36
+        ]
+      },
+      "resolution": "원본 영수증과 미확보 상태를 보존. TXT로 PDF/HTML/ZIP 확보를 대신 표시하지 않음."
+    },
+    {
+      "id": "TEXTBOOK_LAB_study_lab.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/study_lab.py",
+      "status": "REFERENCED_BUT_NOT_IN_PROVIDED_TEXTBOOK_FOLDER_OR_THREE_SUPPORT_ZIPS",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          589
+        ]
+      }
+    },
+    {
+      "id": "TEXTBOOK_LAB_current_v49_questions.json",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/current_v49_questions.json",
+      "status": "REFERENCED_BUT_NOT_IN_PROVIDED_TEXTBOOK_FOLDER_OR_THREE_SUPPORT_ZIPS",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          373
+        ]
+      }
+    },
+    {
+      "id": "KIT_V11_ZIP",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_v1.1_20261104.zip",
+      "status": "MISSING_IN_PROVIDED_PACKAGE_FOLDER",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Revision_Experiment_Kit_v1.1_20261104.sha256.txt",
+        "lines": [
+          1
+        ]
+      },
+      "expected_sha256": "f3685b606a3eda7f977aa96a9fcbb569b7d82f786fe39310334b49a898663f2c",
+      "resolution": "v1.2 ZIP을 v1.1로 개명하지 않고 고아 checksum 기록으로 보존."
+    },
+    {
+      "id": "KIT_V12_LOOSE_DMSG_PRD_v4.9-rc1_20261104.md",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_PRD_v4.9-rc1_20261104.md",
+      "status": "LOOSE_FILE_MISSING_EMBEDDED_EQUIVALENT_NAMED_DOCUMENT_PRESENT",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+        "lines": [
+          48
+        ]
+      },
+      "archive_member": "DMSG_Experiment_Kit_v1.2/docs/PRD_v4_9_rc1.md",
+      "caveat": "PRD/upgrade ZIP member size equals receipt metadata; original loose/cloud bytes unavailable so byte identity to missing loose file is NOT_VERIFIED."
+    },
+    {
+      "id": "KIT_V12_LOOSE_DMSG_v1.2_UPGRADE_REPORT_20261104.md",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_v1.2_UPGRADE_REPORT_20261104.md",
+      "status": "LOOSE_FILE_MISSING_EMBEDDED_EQUIVALENT_NAMED_DOCUMENT_PRESENT",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+        "lines": [
+          98
+        ]
+      },
+      "archive_member": "DMSG_Experiment_Kit_v1.2/docs/V1_2_UPGRADE_REPORT.md",
+      "caveat": "PRD/upgrade ZIP member size equals receipt metadata; original loose/cloud bytes unavailable so byte identity to missing loose file is NOT_VERIFIED."
+    },
+    {
+      "id": "KIT_V12_LOOSE_DMSG_v1.2_SHA256_20261104.txt",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_v1.2_SHA256_20261104.txt",
+      "status": "LOOSE_FILE_MISSING_RECEIPT_HAS_ARCHIVE_HASH",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+        "lines": [
+          123
+        ]
+      },
+      "archive_member": null,
+      "caveat": "새 checksum을 만들더라도 원본 납품 파일 복원으로 표시하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_run_demo.sh",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/run_demo.sh",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          35
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_README_TEAM_GUIDE.md",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/README_TEAM_GUIDE.md",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          109
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_backend/iteraguard/app.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/app.py",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          112
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_backend/iteraguard/callshield.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/callshield.py",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          113
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_backend/iteraguard/decision_client.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/decision_client.py",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          115
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_frontend/dist/launcher.html",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/dist/launcher.html",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          26
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_frontend/dist/factory_cpr.html",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/dist/factory_cpr.html",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          28
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_GUIDE_tests/test_factory_cpr.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_factory_cpr.py",
+      "status": "MISSING_IN_PROVIDED_ITERAGUARD_TREE",
+      "reference": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          126
+        ]
+      },
+      "resolution": "독립 프로토타입 계보의 복원 필요 목록으로 보존. 의심계 v5 파일로 덮어 채우지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT___init__.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/__init__.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/policy_engine.py",
+          "line": 24,
+          "import_module": "",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_app.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/app.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+          "line": 16,
+          "import_module": "iteraguard.app",
+          "level": 0
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_approval_service.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/approval_service.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+          "line": 17,
+          "import_module": "iteraguard.approval_service",
+          "level": 0
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 14,
+          "import_module": "approval_service",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_audit_repository.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/audit_repository.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+          "line": 18,
+          "import_module": "iteraguard.audit_repository",
+          "level": 0
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 15,
+          "import_module": "audit_repository",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/event_service.py",
+          "line": 16,
+          "import_module": "audit_repository",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_callshield.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/callshield.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_callshield.py",
+          "line": 13,
+          "import_module": "iteraguard.callshield",
+          "level": 0
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_decision_client.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/decision_client.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 16,
+          "import_module": "decision_client",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/kev_server_adapter.py",
+          "line": 21,
+          "import_module": "decision_client",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_decision_validator.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/decision_validator.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+          "line": 19,
+          "import_module": "iteraguard.decision_validator",
+          "level": 0
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 17,
+          "import_module": "decision_validator",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_schemas.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/schemas.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/tests/test_iteraguard_v0_1.py",
+          "line": 22,
+          "import_module": "iteraguard.schemas",
+          "level": 0
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 21,
+          "import_module": "schemas",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/policy_engine.py",
+          "line": 25,
+          "import_module": "schemas",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/evaluation_suite.py",
+          "line": 25,
+          "import_module": "schemas",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/kev_server_adapter.py",
+          "line": 22,
+          "import_module": "schemas",
+          "level": 1
+        },
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/event_service.py",
+          "line": 18,
+          "import_module": "schemas",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    },
+    {
+      "id": "PROTOTYPE_IMPORT_tool_executor.py",
+      "expected_path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/tool_executor.py",
+      "status": "LOCAL_MODULE_TARGET_ABSENT_STATIC_CHECK",
+      "references": [
+        {
+          "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/backend/iteraguard/workflow_orchestrator.py",
+          "line": 34,
+          "import_module": "tool_executor",
+          "level": 1
+        }
+      ],
+      "caveat": "실행하지 않았으며 실제 import exception 수/테스트 실패 수를 주장하지 않음."
+    }
+  ],
+  "missing_import_target_count": 9,
+  "missing_scope_note": "누락은 지정된 상대 경로/폴더와 검사한 지원 ZIP에 한정한다. 전체 PC/클라우드 부재를 주장하지 않는다. 동일 경로가 가이드 및 import 두 근거에 반복되므로 missing_items 행 수는 고유 누락 파일 수가 아니다.",
+  "recordkeeping_rules": [
+    {
+      "id": "REC01",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/02_준비물_체크리스트_20261104.md",
+        "lines": [
+          3,
+          45,
+          47,
+          51
+        ]
+      },
+      "rule": "완료는 실제 증거·담당자·확인 시각으로 기록한다. 공식 사실/내부 제안/미확인을 구분한다.",
+      "v5_handling": "옛 체크박스를 일괄 완료로 바꾸지 않고 v5 별도 상태표에 근거를 연결."
+    },
+    {
+      "id": "REC02",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+        "lines": [
+          44,
+          58,
+          86,
+          135
+        ]
+      },
+      "rule": "48/25/새 AI25, 실제 요청/정책 사례/독립 평가 분모를 섞지 않는다.",
+      "v5_handling": "v5 97 비어있지 않은 입력×4=388; 빈 입력 포함 정책98개; 총 제공자399/수용398; 독립 인간 평가 미완료."
+    },
+    {
+      "id": "REC03",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+        "lines": [
+          96,
+          103,
+          133
+        ]
+      },
+      "rule": "모델 raw와 guard, 적용 정책, 최종 안내, 전체 파이프라인의 기여를 분리한다.",
+      "v5_handling": "v5 단계 trace와 세션 과거 위험/현재 문장 안내를 각각 기록."
+    },
+    {
+      "id": "REC04",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+        "lines": [
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      "rule": "stub/fixture, kit tests, source tests, 실제 모델 호출을 별도 집계하고 실패 로그를 보존한다.",
+      "v5_handling": "과거 키트23/39, 교육14/6을 v5 회귀 수에 합산하지 않음. v49 최초 실패·브라우저 거부1 보존."
+    },
+    {
+      "id": "REC05",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_SYSTEM_PROMPTING_v4.9-rc1_20261104.md",
+        "lines": [
+          66,
+          82,
+          84,
+          103
+        ]
+      },
+      "rule": "DRA는 미검증 비교 후보, 사용자 확인은 USER_REPORTED, 온도는 도메인 보정 주장이 아니다.",
+      "v5_handling": "legacy 기본, 후보3 HOLD, T=1.52 제공자 설정, REPORTED_COMPLETE가 위험 해제를 의미하지 않음."
+    },
+    {
+      "id": "REC06",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          427,
+          485,
+          527
+        ]
+      },
+      "rule": "case/family/split/hash/protocol/revision/실패·변경을 보존하며 가중치·PII·토큰·서명키를 무분별하게 포함하지 않는다.",
+      "v5_handling": "원 실험 runner와 후속 portable runner를 구분하고 동결 증거·raw는 불변 보존."
+    },
+    {
+      "id": "REC07",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+        "lines": [
+          171
+        ]
+      },
+      "rule": "L2/G7/기관 질문/진명 L1의 구체 팀 합의는 추정하지 않는다.",
+      "v5_handling": "새 AI 초안·개발 구현 승인과 별개인 팀 내용 승인은 미해결로 남김."
+    },
+    {
+      "id": "REC08",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/02_준비물_체크리스트_20261104.md",
+        "lines": [
+          18,
+          28,
+          72
+        ]
+      },
+      "rule": "실물 장비/실기기/전체 PC 재시작/현장 조건은 별도 증거가 필요하다.",
+      "v5_handling": "v5 서버3회 재시작·깨끗한 추출 검증을 실기기·새 OS/PC 검증 완료로 승격하지 않음."
+    },
+    {
+      "id": "REC09",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          535,
+          537
+        ]
+      },
+      "rule": "행사 규정·제공 GPU/API·발표/제출/IP 등 공식 확인 전 가정을 사실로 쓰지 않는다.",
+      "v5_handling": "문서의 당시 확인일과 출처를 남기고 현재 공식 조건 재확인은 미실행으로 기록."
+    },
+    {
+      "id": "REC10",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+        "lines": [
+          7,
+          44
+        ]
+      },
+      "rule": "납품 영수증은 그 시점/버전의 주장이다. access_not_verified와 현재 로컬 바이트 확인을 구분한다.",
+      "v5_handling": "현 로컬 v1.2 ZIP SHA는 일치. 외부 Drive 재접근/재업로드 없이 과거 영수증 보존."
+    }
+  ],
+  "claims_and_current_v5": [
+    {
+      "id": "CLAIM01",
+      "severity": "HIGH_IF_USED_AS_CURRENT",
+      "kind": "SEPARATE_PRODUCT_LINEAGE",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          8,
+          14,
+          97,
+          100
+        ]
+      },
+      "historical_claim": "CallShield family voice/passphrase, 10-minute banking freeze and Factory CPR/SRE roadmap.",
+      "current_v5": {
+        "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+        "lines": [
+          13,
+          19,
+          42
+        ]
+      },
+      "finding": "의심계 v5는 실제 은행/전화 제어·실기관 확인·음성 딥페이크 판별을 수행하지 않음. 기존 프로토타입 시뮬레이션을 v5 기능으로 합치면 범위 오류.",
+      "handling": "별도 계보/아이디어 자료로 보존, v5 기능 목록과 분리."
+    },
+    {
+      "id": "CLAIM02",
+      "severity": "HIGH_IF_USED_AS_CURRENT",
+      "kind": "MODEL_AND_BENCHMARK_SCOPE",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          51,
+          63,
+          75,
+          77,
+          79,
+          81,
+          87,
+          97
+        ]
+      },
+      "historical_claim": "Trida2.1-4B (Zoro-1), T=2.19, ECE/속도 개선 및 0ms surrogate.",
+      "additional_source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/frontend/dist/callshield.html",
+        "lines": [
+          122,
+          610,
+          611,
+          706,
+          759,
+          949
+        ]
+      },
+      "current_v5": {
+        "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+        "lines": [
+          9,
+          23,
+          34,
+          73
+        ]
+      },
+      "finding": "v5 실제 Typed 온도1.52와 모델 export 흔적은 로컬 실행 근거. 구형 토큰 가중치·0ms·오탐0%·외부 benchmark는 v5 정확도/지연 증거가 아님. 모델명/버전 혼용도 현재 기술 설명에 상속 금지.",
+      "handling": "과거 주장으로 인용 범위를 표시하고 현재 성능표에는 넣지 않음."
+    },
+    {
+      "id": "CLAIM03",
+      "severity": "HIGH_IF_USED_AS_CURRENT",
+      "kind": "HISTORICAL_STATUS_SUPERSEDED",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DELIVERY_RECEIPT_DMSG_v1.2_20261104.json",
+        "lines": [
+          7
+        ]
+      },
+      "additional_source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          321,
+          338,
+          737,
+          743
+        ]
+      },
+      "current_v5": {
+        "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+        "lines": [
+          23,
+          69,
+          70,
+          73
+        ]
+      },
+      "finding": "v4.9-rc1/교재 작성 당시 Typed NOT_RUN과 지금 v5 실제388 질문+4 재시작+7 브라우저 요청은 시점이 다름. 전체399중 수용398/모델명 거부1이며 독립성·정확도 보증은 아님.",
+      "handling": "옛 문구 수정 없이 별도 v5 상태표에서 superseded-by 증거 연결."
+    },
+    {
+      "id": "CLAIM04",
+      "severity": "MEDIUM",
+      "kind": "INCOMPLETE_OLD_RUNTIME",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/TRILLION_HACKATHON_Team_Guide.md",
+        "lines": [
+          22,
+          26,
+          35,
+          42,
+          108,
+          127
+        ]
+      },
+      "additional_source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/iteraguard/run.sh",
+        "lines": [
+          1,
+          10
+        ]
+      },
+      "finding": "가이드 실행파일과 로컬 import 대상이 실제 iteraguard 트리에 누락되고 run.sh는 macOS Python3.14 절대경로를 사용한다. Python 표준/브라우저 즉시 실행이라는 가이드가 현재 제공 트리의 재현을 증명하지 못함.",
+      "handling": "정적 불완전 상태로 기록. 이 감사에서 실행/수리하지 않음."
+    },
+    {
+      "id": "CLAIM05",
+      "severity": "MEDIUM",
+      "kind": "OLD_VALIDATION_COUNTS_NOT_CURRENT",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+        "lines": [
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      "additional_source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/Trida_DoubtMeter_Textbook.txt",
+        "lines": [
+          323,
+          324,
+          325
+        ]
+      },
+      "current_v5": {
+        "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+        "lines": [
+          46,
+          58,
+          71
+        ]
+      },
+      "finding": "옛 kit23/39, source325 실패2+오류8, 교육14/6, 정책벡터를 현재 v5 시험·실추론으로 합산하면 안 됨. 현재 clean archive tests42+64는 별도 시점/범위.",
+      "handling": "시험 종류/버전/분모/원로그 구분."
+    },
+    {
+      "id": "CLAIM06",
+      "severity": "MEDIUM",
+      "kind": "MISSING_DELIVERY_ITEMS",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Trida_의심계_학습교재_제1판_20261104/DELIVERY_RECEIPT.json",
+        "lines": [
+          6,
+          11,
+          26,
+          36,
+          47
+        ]
+      },
+      "finding": "영수증상 클라우드 납품/바이트 검증 기록은 있으나 현재 지정 폴더에는 PDF/HTML/START_HERE/ZIP이 없다. 기존 PASS를 현 로컬 구성 완전성으로 읽을 수 없음.",
+      "handling": "영수증 보존, 제공 폴더 미확보 상태 기록. 외부 재확인은 하지 않음."
+    },
+    {
+      "id": "CLAIM07",
+      "severity": "HIGH_IF_USED_AS_APPROVAL",
+      "kind": "HISTORICAL_AUTHORIZATION_NOT_CURRENT",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+        "lines": [
+          34
+        ]
+      },
+      "finding": "이전 작업에서 Drive 업로드를 명시 승인했다는 기록은 현재 정리 작업의 전송·공유 승인으로 사용하지 않음.",
+      "handling": "읽기전용 로컬 정리, 외부 전송0."
+    },
+    {
+      "id": "CLAIM08",
+      "severity": "MEDIUM",
+      "kind": "STILL_OPEN_NOT_SUPERSEDED",
+      "source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+        "lines": [
+          135,
+          171
+        ]
+      },
+      "additional_source": {
+        "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/Back Data/02_준비물_체크리스트_20261104.md",
+        "lines": [
+          7,
+          10,
+          72
+        ]
+      },
+      "current_v5": {
+        "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+        "lines": [
+          38,
+          42
+        ]
+      },
+      "finding": "독립 인간 평가, 팀 내용 승인, 참가/확정/IP 조건, 실기기·새 OS 검증은 v5 구현/해시검증으로 완료되지 않음.",
+      "handling": "계속 미해결/별도 검증 필요로 유지."
+    }
+  ],
+  "lineages": [
+    {
+      "id": "L1",
+      "name": "IteraGuard three-prototype track",
+      "paths": [
+        "TRILLION_HACKATHON_Team_Guide.md",
+        "iteraguard/"
+      ],
+      "status": "HISTORICAL_SEPARATE_INCOMPLETE_PROTOTYPE",
+      "v5_relation": "CallShield/Factory CPR/SRE 아이디어와 프로토타입을 의심계 v5 구현 기능 또는 완료 조건으로 자동 승계하지 않음."
+    },
+    {
+      "id": "L2",
+      "name": "DMSG/DoubtMeter product",
+      "paths": [
+        "versioned product folders (separate audit)",
+        "v5 FULL and workspaces v5"
+      ],
+      "status": "V5_DEVELOPMENT_CANDIDATE",
+      "v5_relation": "현재 README/CURRENT_PROJECT_STATE/PRD_v50/SYSTEM_PROMPTING_v50/구현보고서/추적표가 현재 판단 계약과 상태 기준."
+    },
+    {
+      "id": "L3",
+      "name": "DMSG experiment kits",
+      "paths": [
+        "Package/"
+      ],
+      "status": "KIT_VERSION_1_1_AND_1_2_NOT_PRODUCT_VERSION",
+      "v5_relation": "구형 fixture/public generation/typed unavailable 기록과 도구 계보. 제품4.9-rc1 및 v5를 kit version으로 혼동하지 않음."
+    },
+    {
+      "id": "L4",
+      "name": "Educational textbook edition 1",
+      "paths": [
+        "Trida_의심계_학습교재_제1판_20261104/"
+      ],
+      "status": "HISTORICAL_V49_EDUCATIONAL_MATERIAL_WITH_MISSING_DELIVERY_FILES",
+      "v5_relation": "v5 실행 증거와 별도. WINNING_PLAYBOOK은 교재 발췌이며 독립 검증 출처로 중복 계산하지 않음."
+    },
+    {
+      "id": "L5",
+      "name": "Hackathon plans and report consistency review",
+      "paths": [
+        "Back Data/"
+      ],
+      "status": "DATED_PLANNING_AND_REVIEW",
+      "v5_relation": "당시 일정/조직 제안/미해결 기록 보존. 현재 확인된 구현은 외부 v5 상태표로 연결하고 참가·규정 합의는 추정하지 않음."
+    }
+  ],
+  "v5_evidence_references": [
+    {
+      "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_IMPLEMENTATION_REPORT.md",
+      "bytes": 10893,
+      "sha256": "abd10447138e255bbb000244a486ffd01b8835012506c003e7dc817fc8966961",
+      "review_scope": "FINAL_REPORT_FULL_TEXT"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/docs/V50_TRACEABILITY.json",
+      "bytes": 70326,
+      "sha256": "53f0f8462cc07c7abf161e5ed19826c1d01c3b642dd7381818fb09ddbd0addad",
+      "review_scope": "HASH_ONLY"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0/MANIFEST_SHA256.json",
+      "bytes": 72829,
+      "sha256": "a73b05c48a70413084d08576cd806bb2030144f21d08e5e483d7992d8829352f",
+      "review_scope": "HASH_ONLY"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/model_call_ledger.json",
+      "bytes": 476,
+      "sha256": "50a2d3b83c913d4c03618b382a65bae401f2fca96dccd3f75705ab82a6b9f66b",
+      "review_scope": "FULL_JSON"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/clean_release_verification.json",
+      "bytes": 4490,
+      "sha256": "48b5e67156f4d267deca3569280882c60e573d29a197be725c48179a2efb2a07",
+      "review_scope": "FULL_JSON"
+    },
+    {
+      "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/delivery/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+      "bytes": 87478586,
+      "sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+      "review_scope": "HASH_ONLY"
+    }
+  ],
+  "preservation_recommendations": [
+    "원본 지원자료·버전폴더·영수증·checksum의 이름과 바이트를 유지하고 외부 정리 안내/인덱스에서 계보·작성시점·현재 효력·누락을 설명한다.",
+    "기존 FULL_CANDIDATE ZIP과 MANIFEST_SHA256.json 내부에 정리 문서를 끼워 넣거나 재압축하지 않는다. 새 v5 정리 디렉터리에는 검증된 ZIP을 바이트 그대로 복사하고 별도 조직 기록/README/감사 JSON을 sibling으로 둔다.",
+    "기존 v5 작업본이나 추출본을 링크할 때 mutable worktree와 hash-verified archive를 구분한다. 현재 패키지 상태는 DEVELOPMENT_CANDIDATE이며 최종 독립 평가 통과 릴리스로 이름을 바꾸지 않는다.",
+    "SHA-256 manifest는 무결성 목록이며 APK 서명 검증과 다르다. 별도 ZIP 전자서명 증거가 없으면 FULL 자체를 전자서명된 파일로 설명하지 않는다.",
+    "구형 가이드, kit v1.x, 교재는 별도 historical/supporting 경로에서 연결한다. 누락 파일을 v5 파일로 대체하거나 과거 NOT_RUN/실패를 덮어 쓰지 않는다.",
+    "PRD/upgrade embedded member는 로컬 ZIP 내 존재·크기·SHA를 표기해 회수 가능한 자료로 구분한다. 새로 추출할 경우 기존 원본과 구분한 derived recovery 기록과 member SHA를 남긴다.",
+    "현재 완료표는 실제 Typed 388+4+7=399 요청/398 수용, AI 독립성 false, 3질문 후보 HOLD, legacy 기본, 실기기/독립 인간 평가/팀승인/규정 미완료를 함께 보인다.",
+    "원본 위치와 정리된 복사 위치 각각의 상대경로·bytes·SHA를 매핑하고 전체 보존 여부를 확인한다. 제공하지 않은 교재/구형프로토타입 자산은 누락 목록에 남긴다."
+  ],
+  "limitations": [
+    "외부 인터넷/Drive를 접근하지 않았으므로 행사 일정·규정·저장소/API·모델 공개사항의 현재 사실을 검증하지 않았다. 문서 내 역사적 출처/확인일을 감사한 것이다.",
+    "모델 호출·기존 앱/테스트/쉘스크립트 실행·패키지 설치를 하지 않았다. Python 파일은 AST와 imports/signatures, CallShield HTML은 지정 주장/모델 구간만 정적으로 읽었다.",
+    "없는 PDF/HTML/ZIP의 내용·시각 품질을 검증하지 않았다. 옛 VALIDATION/DELIVERY_RECEIPT의 PASS는 당시 기록으로만 보존한다.",
+    "지원 ZIP의 중앙목록·SHA와 명시 selected members만 검토했다. 전체 CRC 또는 모든 내부 소스에 대한 감사/실행은 하지 않았다.",
+    "v5 최종 실행/시험 사실은 기존 최종 보고서·ledger·clean release evidence에 연결했다. 이번 감사가 그 테스트를 새로 실행한 것은 아니다.",
+    "원본 지원파일 31개 SHA는 감사시점의 로컬 스냅샷이며 문서의 과거 웹/클라우드 주장을 독립적으로 인증하지 않는다."
+  ],
+  "audit_consistency_checks": {
+    "json_parse": "PASS",
+    "supporting_inventory_31_files_rehashed_unchanged": true,
+    "manifest_archive_vs_worktree_byte_identity": "PASS",
+    "tests_or_model_calls_in_audit": 0
+  }
+}

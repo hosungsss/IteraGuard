@@ -1,0 +1,10 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests_v50 -p 'test_ablation*.py' -v",
+  "exit_code": 0,
+  "tests": 10,
+  "status": "PASS",
+  "real_model_calls": 0,
+  "log": "test_ablation.log",
+  "log_sha256": "a657c087f76d7bee672a1d03c1cb97fd4e0dc7571a4d306b10123a391509b519",
+  "test_source_sha256": "8f9113623c8de9c1ca3f62fe46f8521e895372bb6c6ac043b0095b859be15428"
+}

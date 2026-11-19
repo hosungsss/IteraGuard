@@ -1,0 +1,42 @@
+{
+  "HANDOFF_CHANGELOG.md": {
+    "bytes": 2526,
+    "sha256": "354f0ebb231b67fad3f30fe09414bb319c10287874295e8c3d78d1637617d8e0"
+  },
+  "IteraGuard_v53_Critical_Review_20261119.txt": {
+    "bytes": 27872,
+    "sha256": "efb9ceff972901ca5bf8190b7fa8af4421e4226b2c29c55c2906d0283532d10a"
+  },
+  "README_REVIEW.txt": {
+    "bytes": 1507,
+    "sha256": "5cb93cc38935402e11ef6dce24e0c5a997dc55054b347a86c66b45b4f8004f50"
+  },
+  "audit_verification_summary.json": {
+    "bytes": 1908,
+    "sha256": "ddf41722cb92dcf28524c058adeb991d6cf89a6504d8158cf453f7908cf9815e"
+  },
+  "code_audit_repro.py": {
+    "bytes": 4692,
+    "sha256": "bf2ab583e417de6d27899b2c3d155b90f61577d41715269fd57a3d5cc59512d3"
+  },
+  "code_audit_repro_results.json": {
+    "bytes": 1278,
+    "sha256": "5b61914b1eeb9210fa206e785b0705a3ec96b70e1beaf5c9e1230a7a56110231"
+  },
+  "python_execution_test.log": {
+    "bytes": 1891,
+    "sha256": "01a7fbd2099b6bd43cbb68c6bf135b3ef7870952e074d5d8475a8f7e803d4bc2"
+  },
+  "python_profiles_test.log": {
+    "bytes": 2100,
+    "sha256": "69c636502e7cf97ceddd4362be7e87ad90dbe90aae812afd3838e54d84151fe3"
+  },
+  "raw_audit_result.json": {
+    "bytes": 10791,
+    "sha256": "fab646d040714129face6ef61fcb1567ce4b5695b58afa7c6c8b315698e9e9cf"
+  },
+  "recheck_saved_evidence.py": {
+    "bytes": 4623,
+    "sha256": "355fab6d6b43a9f8fd201e4b43f0c929000430cf9e98efbc8adc44cc0f25761c"
+  }
+}

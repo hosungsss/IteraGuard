@@ -1,0 +1,98 @@
+{
+ "args": {
+  "onnx": "/home/claude/m45/model/enc_fp32.onnx",
+  "tok": "/home/claude/m45/model/tokenizer.json",
+  "v46": "/home/claude/m46/ds",
+  "v45": "/home/claude/m45/nlp/ds",
+  "out": "/home/claude/m46/b2h",
+  "top_k": 2,
+  "ngram": true,
+  "epochs": 3,
+  "seed": 46,
+  "lr_enc": 5e-05,
+  "lr_head": 0.002,
+  "batch": 32
+ },
+ "sizes": {
+  "train": 9964,
+  "calib": 1174
+ },
+ "epochs": [
+  {
+   "epoch": 1,
+   "loss": 2.8055,
+   "calib": {
+    "speech": 0.751,
+    "intent": 0.1328,
+    "req_action": 0.2003,
+    "topic": 0.419,
+    "indicators": 0.424,
+    "mean": 0.3854
+   },
+   "seconds": 48.7
+  },
+  {
+   "epoch": 2,
+   "loss": 0.5287,
+   "calib": {
+    "speech": 0.8062,
+    "intent": 0.3274,
+    "req_action": 0.8503,
+    "topic": 0.5546,
+    "indicators": 0.5923,
+    "mean": 0.6262
+   },
+   "seconds": 19.4
+  },
+  {
+   "epoch": 3,
+   "loss": 0.3015,
+   "calib": {
+    "speech": 0.8149,
+    "intent": 0.2823,
+    "req_action": 0.7254,
+    "topic": 0.5486,
+    "indicators": 0.5778,
+    "mean": 0.5898
+   },
+   "seconds": 19.3
+  }
+ ],
+ "cache_seconds": 40.2,
+ "selected_epoch": 2,
+ "calibration": {
+  "softmax_T": {
+   "speech": 1.3155567303978541,
+   "intent": 1.751319510077437,
+   "req_action": 0.6134240052755748,
+   "topic": 1.5920136392745468
+  },
+  "indicator_T": {
+   "OFF_PLATFORM_CONTACT": 0.3,
+   "UNVERIFIED_IDENTITY": 1.1402016844582339,
+   "URGENCY_OR_PRESSURE": 1.6697678122334545,
+   "FINANCIAL_INDUCEMENT": 2.2228588697800924,
+   "CREDENTIAL_REQUEST": 2.821359281689012,
+   "ACCOUNT_CHANGE_REQUEST": 0.3,
+   "IMPERSONATION_SIGNAL": 1.3155567303978541,
+   "MALICIOUS_LINK_SUSPICION": 0.5576249093541794,
+   "UNWANTED_SOLICITATION": 0.3
+  },
+  "indicator_threshold": {
+   "OFF_PLATFORM_CONTACT": 0.25,
+   "UNVERIFIED_IDENTITY": 0.2,
+   "URGENCY_OR_PRESSURE": 0.2,
+   "FINANCIAL_INDUCEMENT": 0.1,
+   "CREDENTIAL_REQUEST": 0.1,
+   "ACCOUNT_CHANGE_REQUEST": 0.5,
+   "IMPERSONATION_SIGNAL": 0.5,
+   "MALICIOUS_LINK_SUSPICION": 0.15,
+   "UNWANTED_SOLICITATION": 0.4
+  }
+ },
+ "export": {
+  "bytes": 14654232,
+  "tensors": 199
+ },
+ "train_seconds_total": 87.4
+}

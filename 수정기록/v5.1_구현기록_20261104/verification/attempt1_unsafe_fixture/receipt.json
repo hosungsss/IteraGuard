@@ -1,0 +1,73 @@
+{
+  "schema": "v51-independent-extraction/1",
+  "started_utc": "2026-11-04T10:47:50.584034+00:00",
+  "status": "FAIL",
+  "archive": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/IteraGuard_DoubtMeter_v5_1_FULL_CANDIDATE.zip",
+  "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "script": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/prepare_verify.py",
+  "script_sha256": "19a4d7a4746575dc175489dd53ea3ba6cee9e5d96391a96240b2d4df868c0b07",
+  "actual_model_calls": 0,
+  "network_requests": 0,
+  "device_execution": "NOT_RUN",
+  "claims_scope": "Packaging, byte integrity, generated contract reproducibility, inherited traceability, bounded secret scanning only.",
+  "quality_completion": "NOT_CLAIMED",
+  "human_independent_evaluation": "NOT_RUN",
+  "limitations": [
+    "Existing host Python environment, not clean OS/dependency installation.",
+    "No browser interaction, model inference, authenticated checkpoint attestation or physical Android/iOS execution.",
+    "Static secret patterns cannot prove absence of every possible secret representation.",
+    "Candidate metadata and passing checks do not prove semantic quality or independent human evaluation."
+  ],
+  "archive_sha256": "72a59c5d9399a7c80e9b228c1defb992f9a1ea83465d84c12675e0a045d3624f",
+  "archive_bytes": 137162354,
+  "source_inventory_before_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "archive_safety": {
+    "entries": 764,
+    "files": 764,
+    "directories": 0,
+    "uncompressed_bytes": 207482979,
+    "root": "[v5.1] IteraGuard_DoubtMeter",
+    "bounds_checked_before_decompression": true,
+    "crc": "PASS",
+    "status": "PASS"
+  },
+  "extracted_root": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/final_verification/extracted/[v5.1] IteraGuard_DoubtMeter",
+  "extracted_inventory_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "source_to_extracted": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "manifest_member_sha": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "file_counts": {
+    "manifest_members": 763,
+    "source_package_files": 764,
+    "extracted_files": 764,
+    "empty_files": [
+      "linkguard/__init__.py",
+      "tests_linkguard/__init__.py",
+      "tools/__init__.py",
+      "tools/linkguard/__init__.py",
+      "tools/zoro/__init__.py"
+    ],
+    "empty_file_count": 5
+  },
+  "error": {
+    "type": "ValueError",
+    "code": "UNSAFE_PATH"
+  },
+  "source_inventory_after_sha256": "18503de3068d804bac1e864a5a45d5ef813c437a3a37cab08c820d090bbb41f2",
+  "source_immutable": {
+    "same": true,
+    "missing": [],
+    "unexpected": [],
+    "mismatched": []
+  },
+  "completed_utc": "2026-11-04T10:47:54.224752+00:00"
+}

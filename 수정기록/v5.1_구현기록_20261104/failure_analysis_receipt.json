@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-11-04T10:46:35.951916+00:00",
+  "document": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/docs/V51_FAILURE_ANALYSIS.md",
+  "document_sha256": "3b1ad2acc2cb2e34a2dc78f58de6b5a56dc8db3ff9ccfb5360e607fc08ba6ff0",
+  "bytes": 41153,
+  "scope": "DOCUMENT_ONLY_FIXED_CANDIDATE_FAILURE_ANALYSIS",
+  "new_model_calls": 0,
+  "policy_or_question_changes": false,
+  "weights_training": false,
+  "validation_set_tuning": false,
+  "write_boundary": "Only docs/V51_FAILURE_ANALYSIS.md written in W; this receipt written to O",
+  "manifest_fingerprint": "48b0bbd05a51de8d2612186f7420090e0ab4330071f42abdb856b195838afdb7",
+  "cases": {
+    "required_pause_miss": [
+      "V18",
+      "V19",
+      "V50-AI-21",
+      "V51-F13_ARCHIVE_READING_ACCESS-03",
+      "V51-F17_REFRIGERATED_WAREHOUSE_ACCESS-02"
+    ],
+    "existing_benign_pause": [
+      "V51-F03_THEATRE_RESERVATION_FEE-01"
+    ],
+    "locked_unnecessary_benign_ask": [
+      "V51-F14_ANIMAL_TRANSPORT_BOOKING-03",
+      "V51-F16_TRANSLATION_MANUSCRIPT_REVIEW-01",
+      "V51-F16_TRANSLATION_MANUSCRIPT_REVIEW-02",
+      "V51-F18_ONLINE_MUSIC_LESSON_RECOVERY-02",
+      "V51-F20_WINTER_RESPONSE_CENTER-03"
+    ]
+  },
+  "primary_tags": {
+    "모델 분류/확신 제약": 5,
+    "어휘/문맥 규칙 제약": 3,
+    "모델+어휘 혼합": 2,
+    "기존 정책 목표/범위": 1
+  },
+  "tag_limit": "Descriptive primary attribution; not causal ablation or independent-human classification",
+  "input_sha256": {
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage5_specified_candidate/specified_raw.jsonl": "d6757b6d369aec356ac97b5b813d93880afd8c43e1f7f0752fb4a44f64e869de",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage7_locked_validation24/protocol.json": "33b4516bdbd6929699810077d393f07b5f690dbd1482f17fa7722085c7f310f8",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_validation24.jsonl": "9088ff6491e4f47c732efffc4ffc75ee1698f77f535a853ebe8c6a51fa7b5355",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/full_pipeline_validation/results.json": "8e903a394dea9e5dccb125cadb4238b49248f94b46256cfc31ce01fb9c602df7",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/full_pipeline_validation/per_case.jsonl": "d440d0d2fb261ffa5a33af0f9df52df89bcb068f64cd748255cb3ada6968b8bc",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage5_specified_candidate/protocol.json": "3abcec0c929e9c0986e90bc3004d90e23207adf0a6660df7a7aa28f953f7e984",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/evidence/v50/question_ablation/replay_inputs/previous_inputs/V2_48.jsonl": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/experiments/stage7_locked_validation24/specified_raw.jsonl": "a4aaf70258c29e8d9d5c4eae2021b81f7964fc91902d9988bb04c5943914a539",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v51_development36.jsonl": "5c1811aa68272ca987c084ef78e148be137ac477e27ffe9fd7de811a91e3fff9",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/latency_summary.json": "8252e6c98c160ed73b677450aabbeb2a90c658f68712649fdea2d05173a9affe",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/internal/evidence/v50/question_ablation/replay_inputs/previous_inputs/AI25.jsonl": "9f7c589ae333201ea65255dc485dbb0587fe1491e3178d2a65b773d8c195798a",
+    "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/data/v50_ai_development25.jsonl": "8a759d2e27a3de1593d047c245142678d6dc4a3f6086f7efd7492245bb681d68",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/full_pipeline_validation/evidence_display_quality.json": "c94d4ea372f46b868a34e3848b8c04e75dec663d7c79fc6e566c6011816381f2",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/browser/receipt.json": "6cc078ec66edc628949c2432d612cff6c497b5e800f0de9f79d6edac01d3d4b3",
+    "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/browser/desktop_warning.txt": "1d5a73abffc62a77f2a8d213888caaf9f5af2fbe0dadc3d1753f39ad20f7c5cf"
+  },
+  "source_sha256": {
+    "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "configs/v51_semantic_rules.json": "1dbf130a80e4d1215f26147694ca5e2d5de90560786e74967039a542c1423f56",
+    "configs/v51_profiles.json": "ec49c02b56ba5ea83eb0aac5d2384bb295160b14a7768a77d2acb1949cf7356b",
+    "configs/v51_contract.json": "f22661725eaaba56318da84872471501f095f2bb31f6e2c0d1b8e19b9a7463f2",
+    "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+    "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+    "apps/web/app.js": "3e663064e924ee9adce229ccfa8bcef3437f63df0b8a653a7ce6165e291bbfd8"
+  },
+  "verification": [
+    "All 11 expected/actual pairs and normalized probability tables generated from saved full-pipeline records.",
+    "Mechanism conditions inspected from frozen source and local deterministic saved-response evaluation; no inference.",
+    "Source hashes still match the frozen execution manifest.",
+    "Browser warning has no full raw in its snapshot; exact head-level cause left unconfirmed.",
+    "Warm timing stated without causal or cold-start claims."
+  ],
+  "limitations": [
+    "AI labels only; no independently human-validated semantic accuracy",
+    "Latencies are observed mixed-cache request timings",
+    "Existing locked24 is now analyzed and must not serve as a fresh unseen candidate-selection set"
+  ],
+  "parent_editorial_adjustment": {
+    "scope": "remove inferred extra user-approval requirement for future policy experiments; independent-evaluation boundary retained",
+    "sha256": "75536ae944dba2ba0b58b26178e390c660f39f4baea4d086d3baa9df8605a0fe",
+    "decision_sources_changed": false
+  }
+}

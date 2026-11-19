@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "provider_request_counter_delta": 7,
+  "actual_model_requests": 7,
+  "accepted_valid_responses": 6,
+  "rejected_model_echo_mismatch": 1,
+  "arena_requests": 5,
+  "desktop_requests": 2,
+  "initial_configuration_error": "Missing DMSG_SEND_MODEL_FIELD produced local export name echo mismatch; response rejected, then launch command fixed without weakening identity checks. README includes required field/echo flags.",
+  "browser_console_errors": 0,
+  "asset_equality": {
+    "index.html": true,
+    "app.js": true,
+    "v50-contract.js": true,
+    "v50-contract-data.js": true,
+    "build-info.js": true,
+    "sw.js": true
+  },
+  "checks": [
+    "actual typed legacy PAUSE displayed in arena and desktop",
+    "current_turn NO_STRONG_SIGNAL with session ASK after prior risk",
+    "self-report retained and no duplicate task",
+    "close disables inference and reopening preserves risk",
+    "saved session selector restored original risk/task",
+    "app explicitly single-current-text scope",
+    "current version5/build conformance24488/NLP221/golden49, independent/device NOT_RUN"
+  ],
+  "arena_final_version": 9,
+  "arena_prior_pause": 1,
+  "physical_device": "NOT_RUN",
+  "independent_accuracy": "NOT_MEASURED",
+  "screenshots": [
+    "app_final.jpg",
+    "arena_final.jpg",
+    "app_info.jpg"
+  ]
+}

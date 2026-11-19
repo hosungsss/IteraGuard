@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-11-03T21:48:20.355317+00:00",
+  "python": "3.12.10",
+  "gpu": "NVIDIA GeForce RTX 3060, 617.42, 12288 MiB",
+  "typed_model": "trillionlabs/Zoro-1",
+  "typed_checkpoint_access": "HTTP_401_UNAUTHENTICATED",
+  "public_generation_model": "trillionlabs/Zoro",
+  "generation_revision": "e8b7dc33b6e30b01ba59c46364fced85342ff4ff",
+  "credentials_read_or_transmitted": false,
+  "note": "Previously reported RTX 5080 is not this execution host."
+}

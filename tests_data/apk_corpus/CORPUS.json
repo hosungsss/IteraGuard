@@ -1,0 +1,74 @@
+{
+ "normal_utility.apk": {
+  "sha256": "988827c743064484ef46a3f53cd39d864e81d2aa5a6555b7085e1e122926becd",
+  "bytes": 1030,
+  "expect": {
+   "state": "NO_KNOWN_THREAT_FOUND"
+  }
+ },
+ "overperm_tracker.apk": {
+  "sha256": "56ed73fccb9349e0665fd362a8e8cd5b9cd4b12ab2a51b80948794127784466c",
+  "bytes": 1656,
+  "expect": {
+   "state": "SUSPICIOUS"
+  }
+ },
+ "obfuscated_game.apk": {
+  "sha256": "90cbc3cf1d4ce2d870f611cf0f1b007e77603f6aaf01777b6237aaeef5cf75e7",
+  "bytes": 1517,
+  "expect": {
+   "state": "NO_KNOWN_THREAT_FOUND",
+   "obfuscation_likely": true
+  }
+ },
+ "mismatch_pdf.apk": {
+  "sha256": "92d4ef0d3bd81e9fe82b0920b20e8b02e81b98e79377609929b388ee763e7db5",
+  "bytes": 51,
+  "expect": {
+   "state": "SCAN_FAILED",
+   "finding": "NOT_AN_APK_CONTAINER_EXTENSION_MISMATCH"
+  }
+ },
+ "no_manifest.apk": {
+  "sha256": "d5fddc7b7b4f1e298153fe72c4bd8b06d1aac2ee456243ab8727884bf035d5dd",
+  "bytes": 125,
+  "expect": {
+   "state": "SCAN_FAILED",
+   "finding": "NO_ANDROID_MANIFEST"
+  }
+ },
+ "zipslip.apk": {
+  "sha256": "b777536d2a29c641e417330536ef225f9db7e979c77f386ed747d7cb05e7305f",
+  "bytes": 574,
+  "expect": {
+   "state": "SUSPICIOUS",
+   "finding": "PATH_TRAVERSAL"
+  }
+ },
+ "corrupt_manifest.apk": {
+  "sha256": "3dce983903be6fd50cca808eaa7552f7507527cd83d6727e7a9c511ec22c2a64",
+  "bytes": 149,
+  "expect": {
+   "state": "SCAN_FAILED",
+   "finding": "MANIFEST_PARSE_FAILED"
+  }
+ },
+ "unsigned_benign.apk": {
+  "sha256": "c13f5e0257758388f1d2e4e3db29c463c0d718adb7fd44afe540a648369143c1",
+  "bytes": 657,
+  "expect": {
+   "state": "NO_KNOWN_THREAT_FOUND",
+   "finding": "UNSIGNED"
+  }
+ },
+ "own_iteraguard_debug.apk": {
+  "source": "release_distribution_metadata",
+  "path": "apps/dist/IteraGuard_DoubtMeter_v5_0_android_debug.apk",
+  "sha256": "c4e2a7c700ede0806183444a66ed3e7154d49f15ff325b877f2f4e9f8f395cb3",
+  "bytes": 15770674,
+  "expect": {
+   "state": "NO_KNOWN_THREAT_FOUND",
+   "finding": "DEBUGGABLE"
+  }
+ }
+}

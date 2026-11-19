@@ -1,0 +1,297 @@
+{"text": "경찰청 사이버수사대입니다. 지금 투자금을 입금하세요. 시간이 없습니다.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "경찰청 사이버수사대입니다. 지금 문자로 온 번호를 불러주세요. 시간이 없습니다.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마 나야. 지금 설치 파일을 열어 주세요. 시간이 없습니다.", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "채용 담당자입니다. 지금 통장 사본과 비밀번호를 보내세요. 시간이 없습니다.", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "중고거래 판매자인데요, 지금 URL을 열어 재입력하세요. 시간이 없습니다.", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 송금하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 이체하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 입금하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 돈을 보내세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "안전계좌로 옮기세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "환급을 받으시려면 수수료를 납부하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 대금을 새 계좌로 보내세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 결제하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 현금을 인출해서 전달하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 투자금을 입금하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "인증번호를 알려주세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 OTP 번호를 말씀하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 비밀번호를 입력하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "본인 확인을 위해 보안카드 번호를 전부 입력하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 문자로 온 번호를 불러주세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "본인 확인을 위해 원격제어 앱을 설치하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 보안 앱을 설치하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "본인 확인을 위해 팀뷰어를 실행하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 설치 파일을 열어 주세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "환급을 받으시려면 주민등록번호를 입력하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 신분증 사진을 보내세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 카드 번호와 유효기간을 보내세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "통장 사본과 비밀번호를 보내세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 링크를 클릭하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주소로 접속하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 URL을 열어 재입력하세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 아무에게도 말하지 마세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 전화를 끊지 마세요. 완료되면 회신 주세요.", "speech": "DIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "DIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 본인 확인을 위해 송금해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 계좌가 범죄에 연루되어 이체해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 입금해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 돈을 보내 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 환급을 받으시려면 안전계좌로 옮겨 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 배송 주소가 불일치하여 수수료를 납부해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 보안 점검을 위해 대금을 새 계좌로 보내 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 결제해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 현금을 찾아서 전달해 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 투자금을 넣어 주세요", "speech": "DIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 본인 확인을 위해 인증번호 좀 불러 주세요", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] OTP 번호를 입력해 주세요", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 배송 주소가 불일치하여 비밀번호를 알려 주세요", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 대출 승인을 위해 보안카드 번호를 보내 주세요", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 본인 확인을 위해 문자로 받은 숫자를 알려 주세요", "speech": "DIRECT_REQUEST", "action": "otp", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 본인 확인을 위해 원격제어 앱을 깔아 주세요", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 환급을 받으시려면 보안 앱을 다운받아 주세요", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 계좌가 범죄에 연루되어 팀뷰어를 켜 주세요", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 보내드린 apk 파일을 설치해 주세요", "speech": "DIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 보안 점검을 위해 주민번호를 알려 주세요", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 신분증 앞뒤 사진을 보내 주세요", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 보안 점검을 위해 카드 앞뒤 사진 좀 보내 주세요", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 대출 승인을 위해 통장 사본을 보내 주세요", "speech": "DIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 배송 주소가 불일치하여 아래 링크를 눌러 주세요", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 배송 주소가 불일치하여 이 주소로 들어가 주세요", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] URL에서 정보를 수정해 주세요", "speech": "DIRECT_REQUEST", "action": "link", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 환급을 받으시려면 가족에게는 비밀로 해 주세요", "speech": "DIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "[Web발신] 보안 점검을 위해 통화 중에는 끊지 말아 주세요", "speech": "DIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "DIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "혹시 투자금 입금 좀 가능할까요? 지금 바로 필요해서요.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "혹시 확인 번호 좀 가능할까요? 필요해서요.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "혹시 설치 파일 좀 가능할까요? 필요해서요.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "혹시 통장 좀 가능할까요? 오늘 안에 필요해서요.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "혹시 URL 좀 가능할까요? 즉시 필요해서요.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 송금하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 이체하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 입금하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "돈을 보내셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "본인 확인을 위해 안전계좌로 옮기셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 수수료를 먼저 납부하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대금은 변경된 계좌로 보내셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "환급을 받으시려면 결제하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 현금을 인출하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "환급을 받으시려면 투자금을 먼저 넣으셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 인증번호를 알려주셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 OTP 번호를 입력하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "환급을 받으시려면 비밀번호를 확인하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 보안카드 번호 전체가 필요할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 문자로 간 번호만 확인해 주시면 됩니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "본인 확인을 위해 원격 지원 앱을 설치하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 보안 점검 앱을 설치하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 팀뷰어 연결이 필요할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 보내드린 파일을 설치하셔야 처리됩니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 주민등록번호 확인이 필요할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "신분증 사본을 제출하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대출 승인을 위해 카드 정보 확인이 필요할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 점검을 위해 통장과 체크카드를 맡기셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 링크에 접속하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "사이트에서 확인하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "안내된 URL에서 다시 입력하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "배송 주소가 불일치하여 이 내용은 외부에 알리시면 안 됩니다.", "speech": "INDIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌가 범죄에 연루되어 조사가 끝날 때까지 통화를 유지하셔야 할 것 같습니다.", "speech": "INDIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "INDIRECT_REQUEST:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 송금 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 고객센터입니다. 고객님 보호를 위해 이체 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대표님 지시입니다. 고객님 보호를 위해 입금 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "경찰청 사이버수사대입니다. 고객님 보호를 위해 돈 보내기 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 안전계좌 이동 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "중고거래 판매자인데요, 고객님 보호를 위해 수수료 납부 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 계좌 변경 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "택배 배송센터입니다. 고객님 보호를 위해 결제 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "회원님, 고객님 보호를 위해 현금 전달 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "카드사 보안팀입니다. 고객님 보호를 위해 투자금 입금 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "transfer", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "택배 배송센터입니다. 고객님 보호를 위해 인증번호 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 OTP 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "금융감독원 직원입니다. 고객님 보호를 위해 비밀번호 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 고객센터입니다. 고객님 보호를 위해 보안카드 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "국세청 안내입니다. 고객님 보호를 위해 확인 번호 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "otp", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 원격제어 앱 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "대표님 지시입니다. 고객님 보호를 위해 보안 앱 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 팀뷰어 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "채용 담당자입니다. 고객님 보호를 위해 설치 파일 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "remote_install", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "투자 리딩방 안내입니다. 고객님 보호를 위해 주민등록번호 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "택배 배송센터입니다. 고객님 보호를 위해 신분증 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 카드 정보 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "아빠, 나 폰 고장났어. 고객님 보호를 위해 통장 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "personal_data", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 링크 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "회원님, 고객님 보호를 위해 사이트 주소 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "채용 담당자입니다. 고객님 보호를 위해 URL 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "link", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "검찰 수사관입니다. 고객님 보호를 위해 비밀 유지 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "고객님 보호를 위해 통화 유지 절차를 진행해야 합니다.", "speech": "INDIRECT_REQUEST", "action": "secrecy", "split": "locked", "family": "INDIRECT_REQUEST:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "요즘 투자금 입금 사기가 많대. 투자금을 넣지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "요즘 확인 번호 사기가 많대. 문자로 온 번호를 남에게 알려주지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "요즘 설치 파일 사기가 많대. 출처 모를 apk는 설치하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "요즘 통장 사기가 많대. 통장이나 체크카드를 넘기지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "요즘 URL 사기가 많대. 문자 속 URL은 열지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "송금 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "이체 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "입금 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "돈 보내기 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "안전계좌 이동 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "수수료 납부 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌 변경 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "결제 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "현금 전달 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "투자금 입금 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "인증번호 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "OTP 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "비밀번호 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안카드 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "확인 번호 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "원격제어 앱 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 앱 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "팀뷰어 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "설치 파일 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주민등록번호 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "신분증 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "카드 정보 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "통장 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "링크 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "사이트 주소 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "URL 관련 문자는 피싱입니다. 응하지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 송금하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 이체하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 입금하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 돈을 보내지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 안전계좌로 옮기지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 수수료를 납부하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 대금을 바뀐 계좌로 보내지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 결제하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 현금을 인출해 전달하지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 투자금을 넣지 마세요.", "speech": "WARNING", "action": "transfer", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 인증번호를 알려주지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: OTP 번호를 말하지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 비밀번호를 알려주지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 보안카드 번호를 보내지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 문자로 온 번호를 남에게 알려주지 마세요.", "speech": "WARNING", "action": "otp", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 원격제어 앱을 설치하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 모르는 보안 앱은 설치하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 팀뷰어를 켜지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 출처 모를 apk는 설치하지 마세요.", "speech": "WARNING", "action": "remote_install", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 주민등록번호를 알려주지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 신분증 사진을 보내지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 카드 사진을 보내지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 통장이나 체크카드를 넘기지 마세요.", "speech": "WARNING", "action": "personal_data", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 모르는 링크는 누르지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 수상한 사이트에 접속하지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주의: 문자 속 URL은 열지 마세요.", "speech": "WARNING", "action": "link", "split": "locked", "family": "WARNING:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마가 투자금을 넣으라고 연락을 받았대.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마가 문자로 온 번호를 불러 달라고 연락을 받았대.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마가 apk 파일을 설치하라고 연락을 받았대.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마가 통장을 빌려 달라고 연락을 받았대.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "엄마가 URL을 열라고 연락을 받았대.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 송금하라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 이체하라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 입금하라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 돈을 보내라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 안전계좌로 옮기라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 수수료를 내라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 대금을 새 계좌로 보내라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 결제하라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 현금을 찾아 오라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 투자금을 넣으라고 했다더라.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 인증번호를 알려 달라고 했다더라.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 OTP 번호를 불러 달라고 했다더라.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 비밀번호를 알려 달라고 했다더라.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 보안카드 번호를 보내라고 했다더라.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 문자로 온 번호를 불러 달라고 했다더라.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 원격 앱을 깔라고 했다더라.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 보안 앱을 설치하라고 했다더라.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 팀뷰어를 켜라고 했다더라.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 apk 파일을 설치하라고 했다더라.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 주민번호를 알려 달라고 했다더라.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 신분증 사진을 보내라고 했다더라.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 카드 사진을 보내라고 했다더라.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 통장을 빌려 달라고 했다더라.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 링크를 누르라고 했다더라.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 사이트에 들어가라고 했다더라.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 URL을 열라고 했다더라.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 비밀로 하라고 했다더라.", "speech": "QUOTATION", "action": "secrecy", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "기사에서 범인이 전화를 끊지 말라고 했다더라.", "speech": "QUOTATION", "action": "secrecy", "split": "locked", "family": "QUOTATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "어떤 사람이 송금하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 이체하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "검찰이라는 사람이 입금하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "어떤 사람이 돈을 보내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "어떤 사람이 안전계좌로 옮기라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "친구가 받은 문자에서 수수료를 내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "모르는 번호로 대금을 새 계좌로 보내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "검찰이라는 사람이 결제하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "택배사라고 현금을 찾아 오라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "모르는 번호로 투자금을 넣으라고 했다고 들었어요.", "speech": "QUOTATION", "action": "transfer", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "택배사라고 인증번호를 알려 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 직원이라면서 OTP 번호를 불러 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 비밀번호를 알려 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 보안카드 번호를 보내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 문자로 온 번호를 불러 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "otp", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "모르는 번호로 원격 앱을 깔라고 했다고 들었어요.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 보안 앱을 설치하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 팀뷰어를 켜라고 했다고 들었어요.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "친구가 받은 문자에서 apk 파일을 설치하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "remote_install", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 주민번호를 알려 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "방금 전화로 신분증 사진을 보내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "어떤 사람이 카드 사진을 보내라고 했다고 들었어요.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "어떤 사람이 통장을 빌려 달라고 했다고 들었어요.", "speech": "QUOTATION", "action": "personal_data", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "모르는 번호로 링크를 누르라고 했다고 들었어요.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 직원이라면서 사이트에 들어가라고 했다고 들었어요.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "모르는 번호로 URL을 열라고 했다고 들었어요.", "speech": "QUOTATION", "action": "link", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 직원이라면서 비밀로 하라고 했다고 들었어요.", "speech": "QUOTATION", "action": "secrecy", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "은행 직원이라면서 전화를 끊지 말라고 했다고 들었어요.", "speech": "QUOTATION", "action": "secrecy", "split": "locked", "family": "QUOTATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "투자금 입금 일정이 다음 주로 변경되었습니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "확인 번호 일정이 다음 주로 변경되었습니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "설치 파일 일정이 다음 주로 변경되었습니다.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "통장 일정이 다음 주로 변경되었습니다.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "URL 일정이 다음 주로 변경되었습니다.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:5", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 송금 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 이체 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 입금 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 돈 보내기 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 안전계좌 이동 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 수수료 납부 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 계좌 변경 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 결제 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 현금 전달 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 투자금 입금 문의했어.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 인증번호 문의했어.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 OTP 문의했어.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 비밀번호 문의했어.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 보안카드 문의했어.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 확인 번호 문의했어.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 원격제어 앱 문의했어.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 보안 앱 문의했어.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 팀뷰어 문의했어.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 설치 파일 문의했어.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 주민등록번호 문의했어.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 신분증 문의했어.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 카드 정보 문의했어.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 통장 문의했어.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 링크 문의했어.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 사이트 주소 문의했어.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "오늘 은행 가서 URL 문의했어.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:6", "source": "AUTHORED_SYNTHETIC"}
+{"text": "송금 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "이체 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "입금 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "돈 보내기 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "안전계좌 이동 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "수수료 납부 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "계좌 변경 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "결제 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "현금 전달 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "투자금 입금 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "transfer", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "인증번호 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "OTP 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "비밀번호 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안카드 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "확인 번호 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "otp", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "원격제어 앱 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "보안 앱 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "팀뷰어 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "설치 파일 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "remote_install", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "주민등록번호 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "신분증 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "카드 정보 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "통장 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "personal_data", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "링크 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "사이트 주소 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}
+{"text": "URL 안내 자료를 첨부합니다.", "speech": "INFORMATION", "action": "link", "split": "locked", "family": "INFORMATION:7", "source": "AUTHORED_SYNTHETIC"}

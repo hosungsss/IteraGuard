@@ -1,0 +1,40 @@
+{
+  "v54": {
+    "exit_code": 0,
+    "log": "v54.log",
+    "tests": 9
+  },
+  "v51": {
+    "exit_code": 0,
+    "log": "v51.log",
+    "tests": 75,
+    "skipped": 2
+  },
+  "v52": {
+    "exit_code": 0,
+    "log": "v52.log",
+    "tests": 21
+  },
+  "lifecycle": {
+    "exit_code": 0,
+    "log": "lifecycle.log",
+    "tests": 17
+  },
+  "http": {
+    "exit_code": 0,
+    "log": "http_local_verified.log",
+    "initial_environment_restriction": "WinError10013; see http.log",
+    "initial_version_assertion": "Old 5.1 package version expectation updated to 5.4; contract_version remains 5.1",
+    "tests": 4
+  },
+  "v53_ui": {
+    "exit_code": 0,
+    "log": "v53_ui.log",
+    "tests": 16
+  },
+  "session_ui": {
+    "exit_code": 0,
+    "log": "session_ui.log",
+    "tests": 6
+  }
+}

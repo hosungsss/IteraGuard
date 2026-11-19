@@ -1,0 +1,43 @@
+{
+  "mode": "ACTUAL_PUBLIC_GENERATION_HTTP",
+  "typed_head": false,
+  "direct_requests": 2,
+  "proxy_requests": 1,
+  "rows": [
+    {
+      "case_id": "warning",
+      "result": {
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "typed_head": false,
+        "usable_as_typed_result": false,
+        "label": "UNCLEAR",
+        "output_contract": "VALID",
+        "latency_ms": 1079.0000000270084
+      },
+      "round_trip_ms": 1157.0
+    },
+    {
+      "case_id": "direct",
+      "result": {
+        "mode": "REAL_ZORO_GENERATION_BASELINE",
+        "typed_head": false,
+        "usable_as_typed_result": false,
+        "label": "DIRECT_REQUEST",
+        "output_contract": "VALID",
+        "latency_ms": 454.00000002700835
+      },
+      "round_trip_ms": 500.0
+    }
+  ],
+  "proxy": {
+    "http_status": 200,
+    "result": {
+      "label": "DIRECT_REQUEST",
+      "latency_ms": 406.00000001722947,
+      "mode": "REAL_ZORO_GENERATION_BASELINE",
+      "output_contract": "VALID",
+      "typed_head": false,
+      "usable_as_typed_result": false
+    }
+  }
+}

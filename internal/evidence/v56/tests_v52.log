@@ -1,0 +1,26 @@
+test_bad_probability_rejected (test_decision_sandbox.MiddlewareTests.test_bad_probability_rejected) ... ok
+test_baseline_version_remains_untouched (test_decision_sandbox.MiddlewareTests.test_baseline_version_remains_untouched) ... ok
+test_choice_sum_rejected (test_decision_sandbox.MiddlewareTests.test_choice_sum_rejected) ... ok
+test_development_only_training (test_decision_sandbox.MiddlewareTests.test_development_only_training) ... ok
+test_family_leakage (test_decision_sandbox.MiddlewareTests.test_family_leakage) ... ok
+test_five_features (test_decision_sandbox.MiddlewareTests.test_five_features) ... ok
+test_locked_not_used_as_train (test_decision_sandbox.MiddlewareTests.test_locked_not_used_as_train) ... ok
+test_no_action_change_with_cost (test_decision_sandbox.MiddlewareTests.test_no_action_change_with_cost) ... ok
+test_no_production_promotion (test_decision_sandbox.MiddlewareTests.test_no_production_promotion) ... ok
+test_not_probabilities_of_fraud (test_decision_sandbox.MiddlewareTests.test_not_probabilities_of_fraud) ... ok
+test_noul_bool_rejected (test_decision_sandbox.MiddlewareTests.test_noul_bool_rejected) ... ok
+test_noul_nan_rejected (test_decision_sandbox.MiddlewareTests.test_noul_nan_rejected) ... ok
+test_odds_inverse_not_independent (test_decision_sandbox.MiddlewareTests.test_odds_inverse_not_independent) ... ok
+test_paired_output_has_denominator (test_decision_sandbox.MiddlewareTests.test_paired_output_has_denominator) ... ok
+test_reasoning_cost_nonzero (test_decision_sandbox.MiddlewareTests.test_reasoning_cost_nonzero) ... ok
+test_single_class_invalid (test_decision_sandbox.MiddlewareTests.test_single_class_invalid) ... ok
+test_threshold_cost_asymmetry (test_decision_sandbox.MiddlewareTests.test_threshold_cost_asymmetry) ... ok
+test_threshold_not_reasoning_threshold (test_decision_sandbox.MiddlewareTests.test_threshold_not_reasoning_threshold) ... ok
+test_training_deterministic (test_decision_sandbox.MiddlewareTests.test_training_deterministic) ... ok
+test_uncalibrated_fails_meu (test_decision_sandbox.MiddlewareTests.test_uncalibrated_fails_meu) ... ok
+test_unsupported_incomplete_profile_fails (test_decision_sandbox.MiddlewareTests.test_unsupported_incomplete_profile_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.032s
+
+OK

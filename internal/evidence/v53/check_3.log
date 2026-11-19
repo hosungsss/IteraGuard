@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261112_choice_diagnosis\[v5.3] IteraGuard_DoubtMeter\tools\build_distribution_v51.py", line 150, in <module>
+    build()
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261112_choice_diagnosis\[v5.3] IteraGuard_DoubtMeter\tools\build_distribution_v51.py", line 76, in build
+    shutil.rmtree(web)
+  File "C:\Users\hosun\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hosun\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.rmdir, fullname, err)
+  File "C:\Users\hosun\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 627, in _rmtree_unsafe
+    os.rmdir(fullname)
+PermissionError: [WinError 5] 액세스가 거부되었습니다: 'C:\\Users\\hosun\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an\\outputs\\20261112_choice_diagnosis\\[v5.3] IteraGuard_DoubtMeter\\apps\\dist\\web\\icons'

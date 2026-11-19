@@ -1,0 +1,10 @@
+{
+ "file": "locked.jsonl",
+ "sha256": "2884bd187219d005b132e031471fd30c7b05f0d71b28c750a2db7b941921c63d",
+ "n": 32,
+ "frozen_utc": "2026-11-02T12:00:45.955228+00:00",
+ "author": "AI (Claude) — NOT independent; written after reading team reports 1/2, so it targets known failure classes",
+ "dra_source_sha256_at_freeze": "f12ac3616198d9ad130fa2e5eb378824f70a56983b32a58bc3468a1788073452",
+ "rule": "labels and DRA parameters are not changed after the first run; results reported as-is",
+ "amendment_before_first_run": "DRA source edited for JS parity only (explicit summation order, tie comparator, no output rounding) after this freeze and before any evaluation run; cost table and boosts unchanged. Current hash recorded in internal/evidence/v47/v47_arbiter_eval.protocol.json."
+}

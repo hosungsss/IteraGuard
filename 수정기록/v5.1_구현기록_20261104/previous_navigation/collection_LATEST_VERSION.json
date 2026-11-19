@@ -1,0 +1,22 @@
+{
+  "version": "5.0",
+  "stage": "DEVELOPMENT_CANDIDATE",
+  "updated_utc": "2026-11-04T09:35:23.548680+00:00",
+  "source": "[v5.0] IteraGuard_DoubtMeter",
+  "entrypoint": "[v5.0] IteraGuard_DoubtMeter/README.md",
+  "current_state": "[v5.0] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+  "open_issues": "[v5.0] IteraGuard_DoubtMeter/docs/V50_OPEN_ISSUES.md",
+  "report": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_REPORT.md",
+  "receipt": "Back Data/v5.0_정리기록_20261104/ORGANIZATION_RECEIPT.json",
+  "package": "IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+  "package_sha256": "6f13ae0ecfdab0801a4d2e242f744bbdeb9335c4abf3478a01f324d5daff99d2",
+  "file_count": 486,
+  "organization_status": "VERIFIED",
+  "runtime_infrastructure_status": "IMPLEMENTED_AND_PREVIOUSLY_TESTED",
+  "core_judgment_performance_status": "NOT_RESOLVED",
+  "independent_human_evaluation": "NOT_RUN_AI_DATA_ONLY",
+  "physical_android": "NOT_RUN",
+  "source_and_fresh_package_verification": "PASS",
+  "prior_workspace_preserved": "/home/ljmpc12/Documents/hackton/workspaces/IteraGuard_DoubtMeter_v5.0",
+  "live_services_restarted": false
+}

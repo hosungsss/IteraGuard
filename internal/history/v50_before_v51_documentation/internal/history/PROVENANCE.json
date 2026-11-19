@@ -1,0 +1,50 @@
+[
+  {
+    "file": "internal/history/VERSION_LEDGER_through_v47_original.md",
+    "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v4.7] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+    "bytes": 61451,
+    "sha256": "62bb8a622a439dad84f3e459edcbcf1dfd2d33e8d0d5afa287bd2b39326e681f"
+  },
+  {
+    "file": "internal/history/CHANGELOG_v49_original.md",
+    "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v4.9] IteraGuard_DoubtMeter/IteraGuard_DoubtMeter_v4_9_FULL.zip!IteraGuard_DoubtMeter_v4.9/CHANGELOG.md",
+    "bytes": 1114,
+    "sha256": "56e72b1d6ca9c770cc6bfb7e32ce9cc2b0a47f85214befa2679575128e04aad0"
+  },
+  {
+    "file": "internal/history/v50_before_organization_all.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!all.md",
+    "bytes": 31852,
+    "sha256": "6b7def26bf67aba635685be54f4dbb34853468a0806c2f7af79b5e15bc4dabb6"
+  },
+  {
+    "file": "internal/history/v50_before_organization_README.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!README.md",
+    "bytes": 4205,
+    "sha256": "955962049cd0fa80388202fe6e4a2309a03494a121d834f1991b04ed7768daa2"
+  },
+  {
+    "file": "internal/history/v50_before_organization_CURRENT_PROJECT_STATE.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!CURRENT_PROJECT_STATE.md",
+    "bytes": 1667,
+    "sha256": "2342203090ddadedd0182a58e5fd4091339dc7cf688062d08a2144697cfc3f6e"
+  },
+  {
+    "file": "internal/history/v50_before_organization_MASTER_HANDOFF_PROMPT.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!MASTER_HANDOFF_PROMPT.md",
+    "bytes": 1426,
+    "sha256": "caa81a15ef1a64a8bedbbb4dd589cdb460cc1133cc1d876abead98587e85ca89"
+  },
+  {
+    "file": "internal/history/v50_before_organization_CHANGELOG.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!CHANGELOG.md",
+    "bytes": 1535,
+    "sha256": "ad9500687d7fd73ad6d09ad381ccb3887a2e553995c8d924b7654391f319d2d2"
+  },
+  {
+    "file": "internal/history/v50_before_organization_VERSION_LEDGER.md",
+    "source": "verified v5 archive b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae!internal/VERSION_LEDGER.md",
+    "bytes": 417,
+    "sha256": "edc2bd10c73b5f509a3a5ed7e087d378fd1cf0f2ab1c0b8ff45df9f8bb49fc07"
+  }
+]

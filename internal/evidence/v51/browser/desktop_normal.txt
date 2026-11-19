@@ -1,0 +1,90 @@
+Browser tab: 5, Title: "의심계 · IteraGuard", URL: "http://127.0.0.1:8782/".
+0 AXWebArea 의심계 · IteraGuard, URL: 127.0.0.1:8782/
+	1 container
+		2 heading 의심계, Value: 1
+			3 text 의심계
+		4 text IteraGuard · Doubt Meter
+		5 text 데스크톱
+	6 container Description: 분석, ID: view-analyze
+		7 container
+			8 입력 방식
+				9 radio button 문자 붙여넣기, Value: 1
+				10 radio button 예시 시나리오, Value: 0
+			11 text 현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.
+			12 container srcText
+				13 container
+					14 text 받은 문자·메시지 (이 기기 안에서만 분석 · 외부 전송 없음)
+					15 text entry area (settable) 받은 문자·메시지 (이 기기 안에서만 분석 · 외부 전송 없음) 25 / 2000, Value: 내일 회의에 노트북과 충전기를 가져와 주세요., ID: freeText
+					39 text 25
+					17 text  / 2000
+				18 button 클립보드에서 붙여넣기, ID: pasteBtn
+				19 button 지우기, ID: clearBtn
+				20 container
+					21 checkbox (settable, integer) Description: 온디바이스 AI 의미 분석 (준비됨 · 이 기기에서 실행 · 외부 전송 없음), Value: 1, ID: useNLP
+					22 text 온디바이스 AI 의미 분석 
+					23 text (준비됨 · 이 기기에서 실행 · 외부 전송 없음)
+				24 container
+					25 checkbox (settable, integer) Description: 실제 조로로 판단 (로컬 조로 우선 사용 · 연결 실패 시 판단 보류), Value: 1, ID: useModel
+					26 text 실제 조로로 판단 
+					27 text (로컬 조로 우선 사용 · 연결 실패 시 판단 보류)
+			28 button (collapsed) › 고급 옵션, Secondary Actions: Expand
+				29 text ›
+				30 text 고급 옵션
+			31 button 분석하기, ID: runBtn
+				40 text 분석하기
+		41 container resultCard
+			42 container stateRow
+				43 text 뚜렷한 위험 행동 요청 미감지 (안전 보증 아님)
+				44 text 안전이 확인된 것은 아닙니다.
+			45 text 이 입력에서 뚜렷한 위험 행동 요청을 찾지 못했습니다. 안전하다는 의미는 아닙니다.
+			46 text 현재 문장만 분석하며 이전 문장의 위험은 이어서 판단하지 않습니다.
+			47 container evidenceBox
+				48 text 내일 회의에 노트북과 충전기를 가져와 주세요.
+				49 text 밑줄은 원문에서 찾은 행동 맥락입니다. 모델의 판단 근거나 의미가 검증됐다는 뜻은 아닙니다.
+				50 text 표시 가능한 구간 0/1 · 확인하지 못한 구간 1개
+				51 text 일부 근거 구간 확인 불가: 행동과 대상을 함께 확인하기 어려움
+			52 button (collapsed) 기술 정보 (판정 코드와 실행 경로), Secondary Actions: Expand
+				53 text 기술 정보 (판정 코드와 실행 경로)
+			54 definition list facts
+				55 container 이유
+					56 text 이유
+				57 text 일상적인 요청으로 분석됐고, 민감한 행동 요구는 뚜렷하지 않아요. 안전 보증은 아니에요.
+				58 container 실행 방식
+					59 text 실행 방식
+				60 container
+					61 text MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED 모델 응답 진품 미인증
+				62 container 모델 답
+					63 text 모델 답
+				64 text none / direct_request · 확신 0.95 (보정 안 됨)
+				65 container 지연
+					66 text 지연
+				67 text 277 ms
+				68 container 모델 이름 반향
+					69 text 모델 이름 반향
+				70 text 일치 (인증 아님)
+				71 container 판단 방식
+					72 text 판단 방식
+				73 text 기준 정책 · 0.70 (보정 미확립)
+			74 button (collapsed) › 절 단위 단서 보기, Secondary Actions: Expand
+				75 text ›
+				76 text 절 단위 단서 보기
+			77 container nextRow
+				78 checkbox 공식 경로로 직접 확인할게요, Value: 0
+				79 checkbox 믿을 수 있는 사람에게 물어볼게요, Value: 0
+			80 text 이 결과는 안전 보증이나 사기 판정이 아닙니다. 송금·인증정보 제공·앱 설치 전에 상대가 알려준 번호가 아닌, 직접 찾은 공식 번호로 확인하세요.
+		81 container historyCard
+			82 heading 문장별 분석 기록 원문은 저장하지 않습니다, Value: 2
+				83 text 문장별 분석 기록
+				84 text 원문은 저장하지 않습니다
+			85 text 각 문장을 따로 분석한 기록입니다. 이전 문장에서 안내한 위험이 해소됐다는 뜻은 아닙니다.
+			86 content list historyList
+				87 container
+					88 text 뚜렷한 위험 행동 요청 미감지 (안전 보증 아님) v1
+	33 tab group 화면
+		34 tab (selected, settable, boolean) 분석, Value: 1, ID: tab-analyze
+		35 tab (selectable, settable, boolean) 확장 검증, Value: 0, ID: tab-guard
+		36 tab (selectable, settable, boolean) 지급 검토, Value: 0, ID: tab-pay
+		37 tab (selectable, settable, boolean) 모델, Value: 0, ID: tab-model
+		38 tab (selectable, settable, boolean) 정보, Value: 0, ID: tab-info
+
+The focused UI element is 31 button 분석하기, ID: runBtn

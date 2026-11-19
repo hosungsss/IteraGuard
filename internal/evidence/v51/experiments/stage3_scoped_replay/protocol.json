@@ -1,0 +1,17 @@
+{
+  "registered_utc": "2026-11-04T09:58:38.069363+00:00",
+  "scope": "PROSPECTIVE_NEW_POLICY_REPLAY_ON_ALREADY_SEEN_DEVELOPMENT_ONLY",
+  "raw_source": "../stage2_semantic_dev98/semantic_raw.jsonl",
+  "new_model_calls": 0,
+  "validation24_opened": false,
+  "changes": [
+    "strong negative evidence veto follows original contract; never treat missing evidence as affirmative",
+    "grounded present exposure is corroborated by strong sensitive-request head and no strong exposure contradiction",
+    "current payment with explicit anomaly/strong pressure is corroborated by sensitive-request head and scam-feature head; no strong anomaly contradiction"
+  ],
+  "source_sha256": {
+    "integration/v51_policy.py": "437753df99e59cf9c209ddb7d9e177d1bfc3e2911e9da2b4776bb7052e602e54",
+    "configs/v51_semantic_rules.json": "603beae69519e9420e25fb04a3b00013e89396f280aa709e43b441e79532d882"
+  },
+  "acceptance": "No new risky/unknown clear, required pause miss, benign pause or lost allowed outcome on old98, reduce unnecessary ask and required-pause misses. Then new36 and fresh24 validation, not automatic promotion."
+}

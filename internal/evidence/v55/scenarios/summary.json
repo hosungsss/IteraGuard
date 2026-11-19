@@ -1,0 +1,28 @@
+{
+  "requested_mode": "controlled",
+  "actual_live_identity_attested": false,
+  "latency": {
+    "metric": "server_pipeline_ms",
+    "n": 4,
+    "p50": 56.535,
+    "p95": 286.533,
+    "method": "nearest_rank",
+    "scope": "includes policy and task construction; excludes HTTP serialization/browser render/commit completion",
+    "independent_benchmark": false
+  },
+  "readiness": {
+    "status": "NOT_SUBMISSION_READY",
+    "model_identity_verified": false,
+    "model_events": 4,
+    "unresolved": [
+      "live_model_attestation",
+      "three_live_scenarios",
+      "slides_access",
+      "repository_access",
+      "license_review",
+      "public_demo_access"
+    ],
+    "note": "Local evidence and a model name do not prove submission readiness or model identity."
+  },
+  "failure_injection": "CONTROLLED_ONLY"
+}

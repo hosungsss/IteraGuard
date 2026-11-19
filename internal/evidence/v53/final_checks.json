@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "tests_v51.test_release_packaging",
+      "-v"
+    ],
+    "returncode": 0,
+    "log": "final_0.log"
+  },
+  {
+    "command": [
+      "node",
+      "tests_v53/test_choice_ui.js"
+    ],
+    "returncode": 0,
+    "log": "final_1.log"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "tools/replay_choice_path_v53.py"
+    ],
+    "returncode": 0,
+    "log": "final_2.log"
+  }
+]

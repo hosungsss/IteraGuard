@@ -1,0 +1,9 @@
+test_bad_generation_backend_is_502_not_a_valid_label (test_arena_http.HttpTests.test_bad_generation_backend_is_502_not_a_valid_label) ... ok
+test_origin_host_duplicate_keys_and_unknown_fields (test_arena_http.HttpTests.test_origin_host_duplicate_keys_and_unknown_fields) ... ok
+test_ui_external_assets_and_no_inline_script (test_arena_http.HttpTests.test_ui_external_assets_and_no_inline_script) ... ok
+test_workflow_roundtrip_and_reload (test_arena_http.HttpTests.test_workflow_roundtrip_and_reload) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.158s
+
+OK

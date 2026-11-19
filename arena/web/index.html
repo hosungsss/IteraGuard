@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>의심계 · 확인과 재개</title><link rel="stylesheet" href="/style.css">
+<body><main>
+<p class="eyebrow">ITERAGUARD / DECISION ARENA</p>
+<h1>요청을 이해하고,<br>다음 확인으로 연결합니다.</h1>
+<p>의심계 v5.6 · 합성 문장 전용 · 실은행/실연락 실행 없음 · 모델 신원 미인증</p>
+<section class="decision" aria-labelledby="lifecycle">
+<p class="eyebrow">세션 상태</p><h2 id="lifecycle">불러오는 중</h2>
+<p id="riskState"></p><p id="lifecycleNotice">종료는 위험 해제가 아닙니다.</p>
+<button id="close">미해결 상태로 보관</button><button id="reopen">이전 이력 유지하고 재개</button>
+<button id="new">별도 새 세션</button><button id="refresh">저장 상태 재조회</button>
+<label for="sessionHistory">이 브라우저에서 열었던 기록</label><select id="sessionHistory"></select>
+<button id="loadSession">선택한 기록 불러오기</button>
+<p>다른 기록을 열기 전 현재 세션을 보관하세요. 브라우저에는 원문 없이 세션 식별자만 기억합니다.</p>
+<button id="exportEvidence">현재 세션 증거 조회</button><pre id="evidenceExport"></pre>
+<p id="status" role="status">평가 전</p>
+</section>
+<p>입력 출처: 사용자가 작성한 합성 문장. 판단 출처: 모델 응답(신원 미인증) 또는 연결 실패. 예제 문장이라는 이유로 모델 호출을 생략하지 않습니다.</p>
+<label for="text">현재 판단할 합성 문장</label>
+<textarea id="text" rows="5" maxlength="2000">지금 인증번호를 알려주시겠어요?</textarea>
+<p>입력한 현재 문장만 모델에 전달합니다. 이전 대화나 확인 보고를 기관 검증 사실로 덧붙이지 않습니다.</p>
+<label class="check"><input id="review" type="checkbox"> 사람에게 검토를 요청하고 싶어요</label>
+<section class="decision" aria-labelledby="taskHeading">
+<p class="eyebrow">확인 업무</p><h2 id="taskHeading">사용자 확인 보고</h2><p id="task">현재 확인 작업 없음</p>
+<label for="taskQueue">미해결 확인업무 선택</label><select id="taskQueue"></select><p id="queueCount"></p>
+<label for="observation">열린 확인 작업의 새 관측</label>
+<select id="observation"><option value="NOT_CHECKED">새 확인 보고 없음</option><option value="USER_REPORTS_CONFIRMED">확인했다고 보고</option><option value="USER_REPORTS_DENIED">사실이 아니라고 보고</option><option value="UNRESOLVED">확인했지만 미해결</option></select>
+<p>사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 새 보고가 없으면 이전 미해결 보고를 유지합니다.</p>
+</section>
+<button id="run">현재 문장 판단 및 확인 보고 저장</button>
+<section class="decision" aria-labelledby="action">
+<p class="eyebrow">현재 안내</p><h2 id="action">평가 전</h2>
+<p id="message">모델 미연결 시 사람 검토를 안내합니다.</p><p id="executionSource"></p><p id="currentTurn"></p><p id="sessionNotice"></p><p id="evidence"></p>
+</section>
+<p>NO_STRONG_SIGNAL은 안전 보증이 아닙니다. 확률은 모델의 선택 분포이며 실제 사기 확률이 아닙니다.</p>
+<details><summary>판단 근거와 저장 기록</summary><p id="reason"></p><pre id="result"></pre></details>
+<details><summary>실행 계약과 비교 정책</summary><pre id="manifest"></pre></details>
+<section class="decision"><p class="eyebrow">공개 ZORO / 생성 비교 실험</p>
+<h2>같은 문장을 생성 모델로 비교</h2><p>Zoro-1 판단 헤드와 별도 경로입니다. 생성 레이블은 위 안내·작업·확률에 적용하지 않습니다. 최대 300자 합성 문장만 사용합니다.</p>
+<button id="compare">공개 Zoro 생성 비교 실행</button><pre id="generation">실행 전 / 생성 서버 별도 필요</pre></section>
+</main><script src="/main.js"></script></body></html>

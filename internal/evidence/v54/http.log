@@ -1,0 +1,231 @@
+
+test_full_lifecycle_with_recreated_server_and_same_database (tests_v50.test_session_http.SessionHttpTests.test_full_lifecycle_with_recreated_server_and_same_database) ... ERROR
+test_lifecycle_conflicting_retry_stale_and_origin (tests_v50.test_session_http.SessionHttpTests.test_lifecycle_conflicting_retry_stale_and_origin) ... ERROR
+test_manifest_failure_is_static_503_before_inference (tests_v50.test_session_http.SessionHttpTests.test_manifest_failure_is_static_503_before_inference) ... ERROR
+test_manifest_policy_is_server_owned (tests_v50.test_session_http.SessionHttpTests.test_manifest_policy_is_server_owned) ... ERROR
+
+======================================================================
+ERROR: test_full_lifecycle_with_recreated_server_and_same_database (tests_v50.test_session_http.SessionHttpTests.test_full_lifecycle_with_recreated_server_and_same_database)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 850, in create_connection
+    sock.connect(sa)
+PermissionError: [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 65, in test_full_lifecycle_with_recreated_server_and_same_database
+    sid = self.start()
+          ^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 57, in start
+    code, body = self.call('/api/start', {})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 51, in call
+    with urllib.request.urlopen(req, timeout=5) as result:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>
+
+======================================================================
+ERROR: test_lifecycle_conflicting_retry_stale_and_origin (tests_v50.test_session_http.SessionHttpTests.test_lifecycle_conflicting_retry_stale_and_origin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 850, in create_connection
+    sock.connect(sa)
+PermissionError: [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 112, in test_lifecycle_conflicting_retry_stale_and_origin
+    sid = self.start()
+          ^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 57, in start
+    code, body = self.call('/api/start', {})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 51, in call
+    with urllib.request.urlopen(req, timeout=5) as result:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>
+
+======================================================================
+ERROR: test_manifest_failure_is_static_503_before_inference (tests_v50.test_session_http.SessionHttpTests.test_manifest_failure_is_static_503_before_inference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 850, in create_connection
+    sock.connect(sa)
+PermissionError: [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 102, in test_manifest_failure_is_static_503_before_inference
+    sid = self.start()
+          ^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 57, in start
+    code, body = self.call('/api/start', {})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 51, in call
+    with urllib.request.urlopen(req, timeout=5) as result:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>
+
+======================================================================
+ERROR: test_manifest_policy_is_server_owned (tests_v50.test_session_http.SessionHttpTests.test_manifest_policy_is_server_owned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1141, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1085, in send
+    self.connect()
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\http\client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 865, in create_connection
+    raise exceptions[0]
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\socket.py", line 850, in create_connection
+    sock.connect(sa)
+PermissionError: [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 93, in test_manifest_policy_is_server_owned
+    code, manifest = self.call('/api/manifest')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hosun\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an\outputs\20261119_v54\[v5.4] IteraGuard_DoubtMeter\tests_v50\test_session_http.py", line 51, in call
+    with urllib.request.urlopen(req, timeout=5) as result:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1117-1425-0_26.1117.1425.0_x64__3k8sg7r9htsxt\dependencies\python\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.150s
+
+FAILED (errors=4)

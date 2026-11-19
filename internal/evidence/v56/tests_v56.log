@@ -1,0 +1,17 @@
+test_capacity_rejects_atomically_without_losing_prior_state (test_evidence_queue.EvidenceQueue.test_capacity_rejects_atomically_without_losing_prior_state) ... ok
+test_completed_duplicate_after_intervening_request_not_recreated (test_evidence_queue.EvidenceQueue.test_completed_duplicate_after_intervening_request_not_recreated) ... ok
+test_distinct_asks_remain_accessible_and_repeat_dedupes (test_evidence_queue.EvidenceQueue.test_distinct_asks_remain_accessible_and_repeat_dedupes) ... ok
+test_export_has_current_arena_source_fingerprints (test_evidence_queue.EvidenceQueue.test_export_has_current_arena_source_fingerprints) ... ok
+test_export_omits_input_and_raw_response (test_evidence_queue.EvidenceQueue.test_export_omits_input_and_raw_response) ... ok
+test_latency_is_separated_and_invalid_values_excluded (test_evidence_queue.EvidenceQueue.test_latency_is_separated_and_invalid_values_excluded) ... ok
+test_missing_event_rejected_even_with_new_hash (test_evidence_queue.EvidenceQueue.test_missing_event_rejected_even_with_new_hash) ... ok
+test_modified_report_rejected (test_evidence_queue.EvidenceQueue.test_modified_report_rejected) ... ok
+test_nonfinite_response_is_explicit_failure (test_evidence_queue.EvidenceQueue.test_nonfinite_response_is_explicit_failure) ... ok
+test_readiness_does_not_promote_controlled_logs (test_evidence_queue.EvidenceQueue.test_readiness_does_not_promote_controlled_logs) ... ok
+test_resigned_false_attestation_rejected (test_evidence_queue.EvidenceQueue.test_resigned_false_attestation_rejected) ... ok
+test_second_risk_is_queued_and_prioritized (test_evidence_queue.EvidenceQueue.test_second_risk_is_queued_and_prioritized) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.911s
+
+OK

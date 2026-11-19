@@ -1,0 +1,10 @@
+{
+  "reference_unchanged": true,
+  "preserve_only_parts_identical": true,
+  "changed_parts": [
+    "word/document.xml",
+    "word/footer1.xml",
+    "word/settings.xml"
+  ],
+  "fields_refresh": "updateFields=true; render computed page fields; no Word refresh"
+}

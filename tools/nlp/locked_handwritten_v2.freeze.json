@@ -1,0 +1,8 @@
+{
+ "file": "locked_handwritten_v2.jsonl",
+ "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+ "n": 48,
+ "frozen_before": "any v4.5 model run on this set",
+ "author": "assistant (not independent annotator)",
+ "created": "2026-11-02"
+}

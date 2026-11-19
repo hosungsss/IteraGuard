@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "source_assets_sha256": {
+    "app.js": "1be67a870dae68382b74cafb70edd1c9c0979a20d623d539a518d1bc3d64534b",
+    "dmsg-apkscan.js": "dfa23da7e3a3109074bd0b687691d82bbc8255587720dcb79e5ae818d783cc16",
+    "dmsg-domainintel.js": "29e8cf32e34996598304697c4b931314a32f50c9fa0f013b9e206ca131a712c5",
+    "dmsg-engine.js": "aea7772af3bcbc01d1b3b083b9073d712985546253b697e1cfa5f256e3c4aeba",
+    "dmsg-linkguard.js": "7f3b435eb0559b548deefc1d41c56faf30681b272a6d20e7fa8606c9136378b7",
+    "dmsg-nlp.js": "de7542839f5f446c982627cf08794ef6b8511458461312bae12f170ce6e0dca9",
+    "engine-data.js": "6a3f7b936073a5c04f98c198c4df2c19296a7a1dd4defc6fb8a404e74f7b384d",
+    "icons/icon-180.png": "0a6fbc731ac0ced5f54c0099358c8ca1d71f3ede8aa763f49bd5bfac9f84b681",
+    "icons/icon-192.png": "d50e17b338ed358f0ddb66dd8d0348e4786452577a1221abc6dccb6e1e9400b2",
+    "icons/icon-512.png": "285cc78b996742e86d8769e0ccb3c9e612e4a56957bb3b0a48e8fc61dcb21705",
+    "icons/icon-maskable-512.png": "f002294b44871a6f48adb54fa878ee7014e3191299579527a4c277c48159fec0",
+    "icons/icon.svg": "fbbcd4fff1c0f6c7c92427119e6b0cb97db52183830f852d309bfe35db826a35",
+    "index.html": "9e12f6f7f492c223ca2a3cd02b9dff52f3c9cbcb18838409a683afe63f43fd1d",
+    "linkguard-data.js": "c5634bc453767191aa0e6cbd917e22e5d5405bb593cf6a775931e8eb9591d9f5",
+    "manifest.webmanifest": "eea8cfc40d7d425a287fa90d93de2f709313ad66530897bbdb2cb642da0aef63",
+    "nlp/NLP_ASSETS_MANIFEST.json": "941480c8bbeba8ab91ce0b63d90e56aa6aaf8e5b4ddd4460a298e6d1ab9392ca",
+    "nlp/dmsg-nlp-heads.js": "e2ee3f84951e9914e4f927b42f69d83e7dae917a3d8008bf072122e320006bbf",
+    "nlp/dmsg-nlp-vocab.js": "75d31001ceeedadff9bde3fba2664ac6ac233dac94d31ee4b6cfb849df958d57",
+    "nlp/dmsg-nlp-weights.js": "0020eeb0da6a4293bb6b13f5eba129d39f41bbee79975b367faf9f8ec249dfa4",
+    "styles.css": "a73a8793480d9d335b993d1fbbd203198a9e4cd86f99c23c5e1549d95dc8d3eb",
+    "v50-contract-data.js": "285609836d5ee477bff0661323109d16c17cac2cdb080b6d6687c26f12a41fa9",
+    "v50-contract.js": "01601fd11cf1584a0d65ea9093cf300e8cc3525b9106c878fc8cccc4bbbe467f"
+  },
+  "conformance": {
+    "sections": {
+      "source_drift": {
+        "total": 7,
+        "pass": 7
+      },
+      "turns": {
+        "total": 216,
+        "pass": 216
+      },
+      "spans": {
+        "total": 168,
+        "pass": 168
+      },
+      "guard": {
+        "total": 440,
+        "pass": 440
+      },
+      "advisory": {
+        "total": 17520,
+        "pass": 17520
+      },
+      "anchor": {
+        "total": 3282,
+        "pass": 3282
+      },
+      "structural": {
+        "total": 176,
+        "pass": 176
+      },
+      "indicator": {
+        "total": 1568,
+        "pass": 1568
+      },
+      "dra": {
+        "total": 468,
+        "pass": 468
+      },
+      "normalize": {
+        "total": 24,
+        "pass": 24
+      },
+      "json": {
+        "total": 13,
+        "pass": 13
+      },
+      "paylock": {
+        "total": 166,
+        "pass": 166
+      },
+      "external": {
+        "total": 440,
+        "pass": 440
+      }
+    },
+    "mismatches": [],
+    "total": 24488,
+    "pass": 24488,
+    "status": "PASS",
+    "scope": "Python reference vs JS port on synthetic vectors; implementation equality only, not detection accuracy."
+  },
+  "nlp_parity": {
+    "n": 221,
+    "schema": "dmsg-nlp-heads/3",
+    "tokenizer_exact": 221,
+    "ngram_exact": 221,
+    "pooled_min_cos_ort": 0.9999999999935485,
+    "pooled_max_abs_ort": 5.997039794536363e-06,
+    "pooled_min_cos_numpy": 0.9999999999996405,
+    "numpy_n": 30,
+    "prob_max_abs": 9.411350182342293e-06,
+    "label_match": 221,
+    "anchor_match": 221,
+    "uncertainty_match": 221,
+    "action_match": 221,
+    "mismatches": [],
+    "load_ms": 40,
+    "latency": {
+      "p50_ms": 130,
+      "p95_ms": 237,
+      "max_ms": 672,
+      "n": 218,
+      "env": "node v22.23.1 (CPU, single thread)"
+    },
+    "memory": {
+      "rss_before_model_mb": 99,
+      "rss_after_mb": 162,
+      "note": "Node RSS incl. base64 asset strings; not an Android measurement"
+    },
+    "status": "PASS"
+  },
+  "validation_evidence": "external validation/final_validation_summary.json (v49 corrected after full run)",
+  "nlp_golden": {
+    "status": "PASS",
+    "n": 49,
+    "diff": [],
+    "case_ab_not_cleared": true,
+    "case_ab": [
+      {
+        "id": "W01",
+        "action": "PAUSE_AND_VERIFY"
+      },
+      {
+        "id": "W02",
+        "action": "CAUTION"
+      }
+    ]
+  },
+  "final_label_change_checks": [
+    "ui_final_labels.log:14PASS",
+    "forbidden_final.json:PASS"
+  ]
+}

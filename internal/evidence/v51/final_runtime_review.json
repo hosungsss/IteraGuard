@@ -1,0 +1,70 @@
+{
+  "reviewed_utc": "2026-11-04T10:29:14.743779+00:00",
+  "root": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter",
+  "scope": "Read-only static release/build, import/output boundary, selected profile and execution contract review. No model calls or source edits. Follow-up stored-response full pipeline verification is separate.",
+  "findings": [],
+  "confirmed_blocking_correctness_findings": 0,
+  "observations": [
+    {
+      "id": "V51-REVIEW-01",
+      "category": "nonselected_api_provenance_limitation",
+      "file": "integration/v51.py",
+      "line": 41,
+      "detail": "Semantic evaluation overrides source but inherits bridge.advisory default mode, so a caller supplying source=SIMULATED_RESPONSE can receive source=SIMULATED_RESPONSE alongside mode=MODEL_RESPONSE_UNATTESTED / NOT_ATTESTED. The JS wrapper mirrors this. Current Arena and desktop real-response routes pass the default real-response source; the simulator uses the separate E.advisory route. No active shipping-route misclassification is asserted.",
+      "action": "Keep documented as API provenance follow-up; policy and question freeze unchanged."
+    },
+    {
+      "id": "V51-REVIEW-02",
+      "category": "intentional_compatibility_default",
+      "file": "arena/store.py",
+      "line": 55,
+      "detail": "Arena() direct constructor retains v50-baseline default. CLI arena/server.py explicitly selects v51.selected_profile(policy), so released CLI legacy path selects 11 questions and DRA path selects 7. Direct embedders must pass the selected profile explicitly."
+    },
+    {
+      "id": "V51-REVIEW-03",
+      "category": "verification_boundary",
+      "file": "apps/shared/v51-contract.js",
+      "line": 12,
+      "detail": "Browser executionManifest cross-checks metadata and question signatures; filesystem/source hashes are checked by Python manifests and release preflight/verification, not by browser runtime cryptographic source attestation. No model authenticity is claimed."
+    }
+  ],
+  "confirmed_paths": [
+    "legacy -> v51-specific-candidate (11 questions); dra -> v50-baseline (7 questions), selected in desktop host and Arena CLI",
+    "Desktop freezes binding and generated payload before async fetch; browser checks returned binding before evaluation",
+    "Python execution_manifest validates source hashes, baseline/profile fingerprints and current release selection; build preflight runs exporter --check in subprocess",
+    "New versioned builders use package-relative imports when imported and sibling imports in CLI mode; distribution outputs use explicit v5_1 names and restore temporary build_apk globals",
+    "Full builder refuses output under source tree; verifies source/app freshness, member hashes and final archive before rename",
+    "PWA/APK/embedded desktop assets are compared byte-for-byte to source copy set and generated metadata; UI/source edits require rebuild"
+  ],
+  "limitations": [
+    "Static review is not a fresh package build, artifact delivery test or native-device validation.",
+    "No code changes made. No model invocation.",
+    "Delivery gate independently claims local archive integrity only; source-to-app freshness is the separate verify_release/build gate.",
+    "Full-pipeline response parity and metric reprocessing are being performed separately after parent explicitly permitted locked24 inspection."
+  ],
+  "files_reviewed": {
+    "tools/build_distribution_v51.py": "f32130c7faa005cac63cc3afa79ba00eb3bbc1d1599ec321bf864875c0bff7d1",
+    "tools/build_release_v51.py": "dd34b012613a17596b820fee309627eb4b0c48e674c1b732c29a108e1a072c20",
+    "tools/release_metadata.py": "cdb92a281d91ea5b4b294ff44352c1ab90f36b43681a07d1e01795f648860ca9",
+    "tools/verify_release.py": "3eccdd1ab98538d0f9a18e081437de8f74f62c049322c8244d13383d8e724ec0",
+    "tools/delivery_gate.py": "040f2a1141d930b9e33f421589bc3a42163677be0f81a873d57b00b4bdefff6a",
+    "tools/export_v51_contract.py": "158ecdad372906e7d5ff39be2a47e2c92395b1d94ddef2d37835ab4582524d33",
+    "tools/build_apps.py": "97f4a69e29c03639b449a96bec055f87b7a3343ed5d46efedf246bb282c2c421",
+    "tools/build_apk.py": "356796c8c6254fda157549c23513074fcbf2a642ef4771d8abaf72cd370fd67a",
+    "integration/v51.py": "140108939ac7ddb502a6ce3988637aac0d3236c21133eedefe57222926f0661d",
+    "integration/v51_profiles.py": "aaef1029182a32af73b56722fdbbff9e2d51c5bfbd9a02987b21944e4b26dc0f",
+    "integration/v51_policy.py": "67eae898130f3c56a891143524cbae2b818b30b1512288167c23961e79bad6b6",
+    "integration/v50.py": "a17215dcde607b90aae52776abacb63c8a35d0fa74854845375e357ebef85ab8",
+    "configs/v51_release_selection.json": "3d2731495045d35fa0421bff27227d6268a38b3a6688f91fcd07fd63cf99b478",
+    "configs/v51_contract.json": "f22661725eaaba56318da84872471501f095f2bb31f6e2c0d1b8e19b9a7463f2",
+    "apps/shared/v51-contract.js": "26cd33d36d4c6dc40941cd56d689a5ae53822a61835a2333bc0232541f28d5c9",
+    "apps/shared/v51-semantic.js": "4930978b111d9c001e413a5c2e6ebbe531f87526104d66f1778d63df49a177ca",
+    "apps/shared/v51-base-contract.js": "7473cbe70aa0e85173b3a8697807523d87d88e6751c8af6581cf344a86308e79",
+    "apps/desktop/server.js": "6d95c6764e7d7eda5cb3edef3534a7e1a8b9536b567aeb3bbf93696dbe8bb18d",
+    "apps/web/app.js": "3e663064e924ee9adce229ccfa8bcef3437f63df0b8a653a7ce6165e291bbfd8",
+    "apps/web/index.html": "bf99fc874bef688cba2610606a14ce41b9b405005f04351ff5bd0d274352a851",
+    "arena/store.py": "814e9540ca9f3ba48c1d298b39bab699fcac196973cd94262b7b601cc12768aa",
+    "arena/server.py": "174279c5db63b4bc2ef64bb1a8803655fa6e8779f4a14801ba5ff7aa3b0c7207",
+    "tests_v51/test_execution.py": "e8a00c1838d22049ce418774cb8e7a55efa654019b46fe9690ae1a7064fb3bf1"
+  }
+}

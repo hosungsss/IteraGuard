@@ -1,0 +1,7 @@
+{"profile": "baseline", "calls": 10, "total_calls": 10, "errors": 0}
+{"profile": "baseline", "calls": 20, "total_calls": 20, "errors": 0}
+{"profile_done": "baseline", "calls": 24, "total_calls": 24, "errors": 0}
+{"profile": "specified", "calls": 10, "total_calls": 34, "errors": 0}
+{"profile": "specified", "calls": 20, "total_calls": 44, "errors": 0}
+{"profile_done": "specified", "calls": 24, "total_calls": 48, "errors": 0}
+{"finished": true, "calls": 48, "errors": 0}

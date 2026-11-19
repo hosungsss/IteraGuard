@@ -1,0 +1,69 @@
+{
+  "schema": "iteraguard.v50.organization_receipt.v1",
+  "created_utc": "2026-11-04T09:35:23.548680+00:00",
+  "scope": "LOCAL_DOCUMENTATION_ORGANIZATION_ONLY",
+  "status": "ORGANIZATION_AND_PACKAGING_VERIFIED",
+  "product_stage": "DEVELOPMENT_CANDIDATE",
+  "core_judgment_performance_improved": false,
+  "source": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.0] IteraGuard_DoubtMeter",
+  "archive": {
+    "path": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+    "sha256": "6f13ae0ecfdab0801a4d2e242f744bbdeb9335c4abf3478a01f324d5daff99d2",
+    "bytes": 87700266,
+    "files": 486
+  },
+  "prior_archive": {
+    "path": "/home/ljmpc12/Documents/hackton/deliverables/v50_implementation_20261104/delivery/IteraGuard_DoubtMeter_v5_0_FULL_CANDIDATE.zip",
+    "sha256": "b2ab13478290502fac9e088c17f159fc7ad2902d5ab2507edecf4acc03eb73ae",
+    "preserved": true
+  },
+  "documentation": {
+    "existing_markdown_files": 360,
+    "existing_unique_contents": 159,
+    "current_v5_markdown_files": 86,
+    "semantic_review_scope": "Per-file full, targeted, duplicate or inventory-only review is recorded in audit JSON. This is not a claim of full line-by-line semantic review of every old file.",
+    "v49_full_markdown_paths_retained_in_v5": 69,
+    "v49_unpacked_missing_markdown_vs_full": 30
+  },
+  "verification": {
+    "source_release": "PASS",
+    "fresh_extraction_release": "PASS",
+    "source_pwa_apk_assets": "PASS",
+    "existing_markdown_unchanged": 360,
+    "supporting_files_unchanged": 31,
+    "missing_original_v5_files": 0,
+    "unexpected_existing_v5_file_changes": 0,
+    "code_model_questions_policy_apk_pwa_unchanged": true,
+    "skill_aliases_same_contents_repackaged": true,
+    "navigation": "PASS",
+    "local_links_checked": 136
+  },
+  "activity": {
+    "new_model_calls": 0,
+    "app_server_restarts": 0,
+    "algorithm_changes": 0,
+    "external_uploads": 0,
+    "new_runtime_regression_runs": 0
+  },
+  "remaining": [
+    "Normal-text over-abstention and some required-pause misses",
+    "Evidence span semantic quality",
+    "Independent human evaluation",
+    "Physical-device verification",
+    "Specific team decisions kept unchanged"
+  ],
+  "evidence_files": {
+    "clean_release_verification.json": "365b0910611331467abb3b6a50c021ba8f40a0f2243158d464f672085f469699",
+    "existing_markdown_inventory.json": "be2706ed49761a76cffcf5dbfd5994358dc8e26472424dee700b0ff2a643f31c",
+    "historical_preservation.json": "e1c277badded2e7d92c5e5a28cdb5a38708bae9b741f2715dd209f6709c702f5",
+    "initial_copy_receipt.json": "5dc95c72e811205b4752bdb8b581f84b468cc15d57e49a1653df9e7d38c889fa",
+    "older_versions_audit.json": "e28c30ffae1fb5b8b203fb213184a087d1ab15fc27a12a992cce67548563517b",
+    "previous_workspace_LATEST_VERSION.json": "f484e8525a8b815e9eb2ef4cc0d7f9f940efe861c3dde66ce37dd725386094c0",
+    "recent_versions_audit.json": "82422c632458bbd866eb2e306bf8dd7712782fd3bf3dfe88bd7445bfe701a175",
+    "source_preservation.json": "127ff6de66975c3b76fa093c84aa02f90f89ffdd08c9d911898b8a9834ce75cf",
+    "source_release_verification.json": "365b0910611331467abb3b6a50c021ba8f40a0f2243158d464f672085f469699",
+    "supporting_docs_audit.json": "9e9d17e99ff830d8885ab47c1a976cf54b1fc8a19ac05663e7da17ddad7ddcfc",
+    "navigation_verification.json": "7e9fc73107cd73a2fab9214658e141454d4e8b7596a1e3bd0751b13f6b1e31e7"
+  },
+  "report_sha256": "e6bbffb361e7535638b8ae87daa85d8eae2855bfbffce6efad86154b72e50b33"
+}

@@ -1,0 +1,54 @@
+{
+  "mode": "ACTUAL_ENDPOINT_ATTEMPT",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "question_ids": [
+    "q_action",
+    "q_claim",
+    "q_evidence",
+    "q_pressure",
+    "q_risk",
+    "q_scam",
+    "q_speech"
+  ],
+  "fixture_fallback": false,
+  "attempted_requests": 4,
+  "valid_responses": 0,
+  "rows": [
+    {
+      "case_id": "normal",
+      "input_sha256": "494fca5806375476e1c5372aa1efe191ce874df83dec4b115cb2c784a6f5686f",
+      "synthetic_only": true,
+      "status": "FAILED",
+      "error": "ModelUnavailable",
+      "error_code": "MODEL_TRANSPORT_ERROR_URLError",
+      "elapsed_ms": 2078.0
+    },
+    {
+      "case_id": "warning",
+      "input_sha256": "b939dbf91226e58f08d5c61366430d8347dbdf155678c9af3582679773637362",
+      "synthetic_only": true,
+      "status": "FAILED",
+      "error": "ModelUnavailable",
+      "error_code": "MODEL_TRANSPORT_ERROR_URLError",
+      "elapsed_ms": 2078.0
+    },
+    {
+      "case_id": "direct",
+      "input_sha256": "47e9bb1b421d8da67a2785d60dbe193f00ca42d812e95e4f6a04b9a9e363a69a",
+      "synthetic_only": true,
+      "status": "FAILED",
+      "error": "ModelUnavailable",
+      "error_code": "MODEL_TRANSPORT_ERROR_URLError",
+      "elapsed_ms": 2078.0
+    },
+    {
+      "case_id": "mixed",
+      "input_sha256": "73628450ae5c5ba9557798db838e4fab754bf6eaeed1146739d224a68f4e4262",
+      "synthetic_only": true,
+      "status": "FAILED",
+      "error": "ModelUnavailable",
+      "error_code": "MODEL_TRANSPORT_ERROR_URLError",
+      "elapsed_ms": 2063.0
+    }
+  ]
+}

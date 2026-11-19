@@ -1,0 +1,177 @@
+{
+  "status": "STRUCTURE_SIGNATURE_AND_TAMPER_PASS_DEVICE_NOT_RUN",
+  "created_utc": "2026-11-04T10:36:35.667323+00:00",
+  "apk": "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/dist/IteraGuard_DoubtMeter_v5_1_android_debug.apk",
+  "sha256": "681c1a8a9cea3ed725166aa929cbc932109e252950a1a405064901c30b09e9d0",
+  "bytes": 15822632,
+  "checks": {
+    "signature_v2": true,
+    "tampered_copy_rejected": true,
+    "one_v2_certificate": true,
+    "manifest_version": true,
+    "manifest_sdk": true,
+    "manifest_permissions_empty": true,
+    "manifest_package_activity": true,
+    "debug_flag_declared": true,
+    "dex_structure": true,
+    "stored_entries_aligned": true,
+    "source_pwa_apk_desktop_freshness": true,
+    "original_apk_unchanged": true,
+    "root_apk_matches": true
+  },
+  "signature": {
+    "command": [
+      "/home/ljmpc12/Documents/hackton/.v50-verification/bin/python",
+      "-m",
+      "apksigtool",
+      "verify",
+      "/home/ljmpc12/Documents/hackton/20261028수_해커톤 준비_IteraGuard-20261104T055702Z-1-002/20261028수_해커톤 준비_IteraGuard/[v5.1] IteraGuard_DoubtMeter/apps/dist/IteraGuard_DoubtMeter_v5_1_android_debug.apk"
+    ],
+    "exit_code": 0,
+    "v2_verified": true,
+    "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/apk_validation/signature_original.log",
+    "log_sha256": "a31f9e1ee228fd6307f93c9afa0647ec1eba4bccfc8f659ee8ee715215dc0d84"
+  },
+  "tamper_test": {
+    "scratch_copy": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/apk_validation/tampered_copy_DO_NOT_INSTALL.apk",
+    "sha256": "92b1e7f0f0e7b5cd7aa2fd907d823b456dcc5071c962130da62e86a3a2afca91",
+    "changed_byte_offset": 849,
+    "changed_entry": "classes.dex",
+    "signature_result": {
+      "command": [
+        "/home/ljmpc12/Documents/hackton/.v50-verification/bin/python",
+        "-m",
+        "apksigtool",
+        "verify",
+        "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/apk_validation/tampered_copy_DO_NOT_INSTALL.apk"
+      ],
+      "exit_code": 1,
+      "v2_verified": false,
+      "log": "/home/ljmpc12/Documents/hackton/deliverables/v51_implementation_20261104/apk_validation/signature_tampered.log",
+      "log_sha256": "f31f4aeb683a6a0c752989b86e85376aa4d5c6dae3d408b9e367598f8b8ab890"
+    },
+    "original_file_modified": false
+  },
+  "certificates": [
+    {
+      "certificate_sha256": "2de06ae4c076760fb77d84232a255e460d6c07fa56eb9ab2a6a1357bbe44c0d0",
+      "subject": "O=IteraGuard (hackathon demo),CN=IteraGuard Debug",
+      "issuer": "O=IteraGuard (hackathon demo),CN=IteraGuard Debug",
+      "public_key_spki_sha256": "fc967dfb399119b3841badf670f42c86a96a74aba741ebf8918dfe032d7530fc",
+      "serial_number": "279886577579542995728128868556762367752887273322",
+      "not_before": "2026-11-01T00:00:00+00:00",
+      "not_after": "2056-10-24T00:00:00+00:00",
+      "identity_scope": "DEBUG_CERTIFICATE_NOT_EXTERNAL_IDENTITY_ATTESTATION"
+    }
+  ],
+  "manifest": {
+    "package": "kr.iteraguard.doubtmeter",
+    "version_code": "51",
+    "version_name": "5.1",
+    "min_sdk": "24",
+    "target_sdk": "34",
+    "permissions": [],
+    "label": "의심계",
+    "main_activity": "kr.iteraguard.doubtmeter.MainActivity",
+    "debuggable": "true"
+  },
+  "dex": {
+    "rules": {
+      "magic": true,
+      "checksum": true,
+      "sha1": true,
+      "file_size": true,
+      "header_size": true,
+      "strings_sorted_unique": true,
+      "types_sorted_unique": true,
+      "protos_sorted_unique": true,
+      "fields_sorted_unique": true,
+      "methods_sorted_unique": true,
+      "map_offsets_ascending": true,
+      "map_matches_header": true,
+      "data_section": true,
+      "aligned_items": true,
+      "only_whitelisted_methods": true,
+      "no_forbidden_types": true,
+      "single_class": true
+    },
+    "method_refs": [
+      "Landroid/app/Activity;-><init>()V",
+      "Landroid/app/Activity;->getIntent()Landroid/content/Intent;",
+      "Landroid/app/Activity;->onBackPressed()V",
+      "Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V",
+      "Landroid/app/Activity;->requestWindowFeature(I)Z",
+      "Landroid/app/Activity;->setContentView(Landroid/view/View;)V",
+      "Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;",
+      "Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;",
+      "Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V",
+      "Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V",
+      "Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V",
+      "Landroid/webkit/WebView;->canGoBack()Z",
+      "Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;",
+      "Landroid/webkit/WebView;->goBack()V",
+      "Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V",
+      "Landroid/webkit/WebView;->setBackgroundColor(I)V",
+      "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;",
+      "Ljava/lang/String;->getBytes(Ljava/lang/String;)[B",
+      "Lkr/iteraguard/doubtmeter/MainActivity;-><init>()V",
+      "Lkr/iteraguard/doubtmeter/MainActivity;->onBackPressed()V",
+      "Lkr/iteraguard/doubtmeter/MainActivity;->onCreate(Landroid/os/Bundle;)V"
+    ],
+    "androguard_methods": [
+      "<init>",
+      "onBackPressed",
+      "onCreate"
+    ]
+  },
+  "asset_verification": {
+    "status": "PASS",
+    "copied_asset_count": 30,
+    "missing_source": [],
+    "missing_assets": [],
+    "extra_assets": [],
+    "changed_assets": [],
+    "v51_checks": {
+      "copied_source_hashes": true,
+      "source_fingerprint": true,
+      "generated_hashes": true,
+      "source_sw_template": true,
+      "execution_contract": true,
+      "execution_contract_sources": true,
+      "release_selection": true,
+      "root_apk": true,
+      "apk_pwa_assets": true,
+      "sw_generation": true,
+      "sw_required_assets": true,
+      "html_required_assets": true,
+      "build_info": true,
+      "desktop_assets": true,
+      "android_version": true
+    },
+    "android_manifest_version": {
+      "versionCode": 51,
+      "versionName": "5.1"
+    },
+    "execution_contract_error": null,
+    "apk_pwa_equivalence": {
+      "status": "PASS_ASSETS_ONLY",
+      "signature_validation": "NOT_RUN_IN_ASSETS_ONLY_MODE",
+      "device_install_and_run": "NOT_RUN"
+    },
+    "scope": "v5.1 source -> PWA -> APK + desktop embedded assets, generated SW/build-info, Android version. No device, signature, model-performance or independent-evaluation claim."
+  },
+  "tool_versions": {
+    "apksigtool": "0.1.0",
+    "androguard": "4.1.4",
+    "cryptography": "50.0.2"
+  },
+  "device_install_and_run": "NOT_RUN",
+  "new_signing_keys_created": false,
+  "signing_key_read_or_used": false,
+  "model_calls": 0,
+  "validation24_accessed": false,
+  "limitations": [
+    "Static parsing, signature/content integrity, and packaged asset correspondence only.",
+    "No Android installation, launch, runtime behavior, upgrade-signature compatibility or independent model-quality claim."
+  ]
+}

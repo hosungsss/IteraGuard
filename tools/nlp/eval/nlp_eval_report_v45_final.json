@@ -1,0 +1,2432 @@
+{
+ "feature_seconds": 39.5,
+ "sizes": {
+  "tr": 6430,
+  "ca": 717,
+  "lk": 297,
+  "dev": 45,
+  "hw": 48
+ },
+ "speech_head": {
+  "features": "KoELECTRA [CLS;mean] standardized + 0.5 x char-ngram",
+  "C": 0.05,
+  "T": 1.0364851317741894
+ },
+ "action_head": {
+  "features": "char 1-3gram hashed 2048 (lexical, not deep semantic)",
+  "C": 3.0,
+  "T": 0.8983284915485489
+ },
+ "threshold_selection_on_calib": {
+  "0.5": 0.9554,
+  "0.55": 0.9498,
+  "0.6": 0.9428,
+  "0.65": 0.94,
+  "0.7": 0.9303,
+  "0.75": 0.9233,
+  "0.8": 0.9093
+ },
+ "threshold": 0.5,
+ "locked_sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+ "locked_freeze": {
+  "file": "locked_handwritten_v2.jsonl",
+  "sha256": "956467fb0f73312d08afcda6b00970dd4c5c8238ca1f66bb9757df7050cc9593",
+  "n": 48,
+  "frozen_before": "any v4.5 model run on this set",
+  "author": "assistant (not independent annotator)",
+  "created": "2026-11-02"
+ },
+ "calib": {
+  "n": 717,
+  "speech_acc": 0.866,
+  "speech_macro_f1": 0.885,
+  "speech_ece": 0.027,
+  "action_acc": 0.983,
+  "action_macro_f1": 0.933,
+  "action_ece": 0.006,
+  "speech_confusion": {
+   "labels": [
+    "DIRECT_REQUEST",
+    "INDIRECT_REQUEST",
+    "WARNING",
+    "QUOTATION",
+    "INFORMATION"
+   ],
+   "matrix": [
+    [
+     239,
+     18,
+     3,
+     0,
+     16
+    ],
+    [
+     10,
+     90,
+     0,
+     0,
+     10
+    ],
+    [
+     0,
+     0,
+     24,
+     0,
+     2
+    ],
+    [
+     0,
+     0,
+     0,
+     28,
+     0
+    ],
+    [
+     16,
+     21,
+     0,
+     0,
+     240
+    ]
+   ]
+  }
+ },
+ "locked_frames": {
+  "n": 297,
+  "speech_acc": 0.889,
+  "speech_macro_f1": 0.884,
+  "speech_ece": 0.106,
+  "action_acc": 0.747,
+  "action_macro_f1": 0.704,
+  "action_ece": 0.14,
+  "speech_confusion": {
+   "labels": [
+    "DIRECT_REQUEST",
+    "INDIRECT_REQUEST",
+    "WARNING",
+    "QUOTATION",
+    "INFORMATION"
+   ],
+   "matrix": [
+    [
+     59,
+     0,
+     1,
+     1,
+     0
+    ],
+    [
+     1,
+     57,
+     0,
+     0,
+     3
+    ],
+    [
+     0,
+     0,
+     56,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     60,
+     1
+    ],
+    [
+     25,
+     0,
+     0,
+     0,
+     32
+    ]
+   ]
+  }
+ },
+ "dev_handwritten_v1_SEEN": {
+  "B0_v44_free_text": {
+   "n": 45,
+   "expected_action_rate": 0.622,
+   "expected_ci95": [
+    0.476,
+    0.749
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.0,
+   "risky_recall_ci95": [
+    0.0,
+    0.125
+   ],
+   "risky_not_cleared_rate": 1.0,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.0,
+   "benign_fa_ci95": [
+    0.0,
+    0.176
+   ],
+   "abstain_rate": 1.0
+  },
+  "B_rule_lexical_only": {
+   "n": 45,
+   "expected_action_rate": 0.756,
+   "expected_ci95": [
+    0.613,
+    0.858
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.407,
+   "risky_recall_ci95": [
+    0.245,
+    0.593
+   ],
+   "risky_not_cleared_rate": 0.63,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.056,
+   "benign_fa_ci95": [
+    0.01,
+    0.258
+   ],
+   "abstain_rate": 0.222
+  },
+  "B1_nlp_heads_only": {
+   "n": 45,
+   "expected_action_rate": 0.911,
+   "expected_ci95": [
+    0.793,
+    0.965
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.963,
+   "risky_recall_ci95": [
+    0.817,
+    0.993
+   ],
+   "risky_not_cleared_rate": 0.963,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.167,
+   "benign_fa_ci95": [
+    0.058,
+    0.392
+   ],
+   "abstain_rate": 0.0
+  },
+  "B2_nlp_plus_policy": {
+   "n": 45,
+   "expected_action_rate": 0.889,
+   "expected_ci95": [
+    0.765,
+    0.952
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.741,
+   "risky_recall_ci95": [
+    0.553,
+    0.868
+   ],
+   "risky_not_cleared_rate": 0.963,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.167,
+   "benign_fa_ci95": [
+    0.058,
+    0.392
+   ],
+   "abstain_rate": 0.2
+  },
+  "B2_ablation_no_attribution_span": {
+   "n": 45,
+   "expected_action_rate": 0.867,
+   "expected_ci95": [
+    0.738,
+    0.937
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.444,
+   "risky_recall_ci95": [
+    0.276,
+    0.627
+   ],
+   "risky_not_cleared_rate": 0.963,
+   "benign_n": 18,
+   "benign_false_alarm_rate": 0.056,
+   "benign_fa_ci95": [
+    0.01,
+    0.258
+   ],
+   "abstain_rate": 0.444
+  },
+  "B3_real_zoro": "NOT_RUN",
+  "B4_rag_anomaly": "NOT_IMPLEMENTED",
+  "speech_acc": 0.8,
+  "action_acc": 0.8,
+  "per_item": [
+   {
+    "id": "L01",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_WARNING_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.998,
+    "speech_gold": "WARNING",
+    "action_pred": "transfer",
+    "action_conf": 0.998,
+    "action_gold": "transfer",
+    "anchor": [
+     5,
+     9,
+     "마세요."
+    ]
+   },
+   {
+    "id": "L02",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_WARNING_LABEL",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.987,
+    "speech_gold": "WARNING",
+    "action_pred": "otp",
+    "action_conf": 0.991,
+    "action_gold": "otp",
+    "anchor": [
+     16,
+     21,
+     "인증번호를"
+    ]
+   },
+   {
+    "id": "L03",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_WARNING_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.862,
+    "speech_gold": "WARNING",
+    "action_pred": "remote_install",
+    "action_conf": 0.885,
+    "action_gold": "remote_install",
+    "anchor": [
+     24,
+     28,
+     "됩니다."
+    ]
+   },
+   {
+    "id": "L04",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_QUOTATION_LABEL",
+    "B1": "CAUTION",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.65,
+    "speech_gold": "WARNING",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     23,
+     28,
+     "않습니다."
+    ]
+   },
+   {
+    "id": "L05",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_QUOTATION_LABEL",
+    "B1": "CAUTION",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.997,
+    "speech_gold": "QUOTATION",
+    "action_pred": "transfer",
+    "action_conf": 0.968,
+    "action_gold": "transfer",
+    "anchor": [
+     3,
+     8,
+     "송금하라고"
+    ]
+   },
+   {
+    "id": "L06",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_REPORTED_REQUEST",
+    "B1": "CAUTION",
+    "rule": "CAUTION",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.994,
+    "speech_gold": "QUOTATION",
+    "action_pred": "otp",
+    "action_conf": 0.995,
+    "action_gold": "otp",
+    "anchor": [
+     11,
+     14,
+     "번호를"
+    ]
+   },
+   {
+    "id": "L07",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_REPORTED_REQUEST",
+    "B1": "CAUTION",
+    "rule": "CAUTION",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.68,
+    "speech_gold": "QUOTATION",
+    "action_pred": "link",
+    "action_conf": 0.998,
+    "action_gold": "link",
+    "anchor": [
+     9,
+     11,
+     "링크"
+    ]
+   },
+   {
+    "id": "L08",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.834,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.309,
+    "action_gold": "transfer",
+    "anchor": [
+     19,
+     23,
+     "합니다."
+    ]
+   },
+   {
+    "id": "L09",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.727,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.996,
+    "action_gold": "transfer",
+    "anchor": [
+     46,
+     50,
+     "합니다."
+    ]
+   },
+   {
+    "id": "L10",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.742,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.347,
+    "action_gold": "otp",
+    "anchor": [
+     26,
+     29,
+     "번호만"
+    ]
+   },
+   {
+    "id": "L11",
+    "cat": "4_delivery",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+    "B1": "CAUTION",
+    "rule": "CAUTION",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.662,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "link",
+    "action_conf": 1.0,
+    "action_gold": "link",
+    "anchor": [
+     35,
+     39,
+     "링크에서"
+    ]
+   },
+   {
+    "id": "L12",
+    "cat": "4_delivery",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+    "B1": "CAUTION",
+    "rule": "CAUTION",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.674,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "link",
+    "action_conf": 1.0,
+    "action_gold": "link",
+    "anchor": [
+     17,
+     20,
+     "링크에"
+    ]
+   },
+   {
+    "id": "L13",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.798,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "remote_install",
+    "action_conf": 0.994,
+    "action_gold": "remote_install",
+    "anchor": [
+     40,
+     46,
+     "설치하세요."
+    ]
+   },
+   {
+    "id": "L14",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.64,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "personal_data",
+    "action_conf": 0.692,
+    "action_gold": "personal_data",
+    "anchor": [
+     24,
+     31,
+     "주민등록번호와"
+    ]
+   },
+   {
+    "id": "L15",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.777,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     46,
+     49,
+     "이체해"
+    ]
+   },
+   {
+    "id": "L16",
+    "cat": "6_bec",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.698,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     59,
+     64,
+     "바랍니다."
+    ]
+   },
+   {
+    "id": "L17",
+    "cat": "6_bec",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.945,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.776,
+    "action_gold": "transfer",
+    "anchor": [
+     25,
+     27,
+     "송금"
+    ]
+   },
+   {
+    "id": "L18",
+    "cat": "7_normal_urgent",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.943,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.969,
+    "action_gold": "transfer",
+    "anchor": [
+     32,
+     36,
+     "주세요."
+    ]
+   },
+   {
+    "id": "L19",
+    "cat": "7_normal_urgent",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.747,
+    "speech_gold": "REPORT",
+    "action_pred": "transfer",
+    "action_conf": 0.585,
+    "action_gold": "transfer",
+    "anchor": [
+     18,
+     23,
+     "이체했어."
+    ]
+   },
+   {
+    "id": "L20",
+    "cat": "8_investment",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.889,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.998,
+    "action_gold": "transfer",
+    "anchor": [
+     37,
+     43,
+     "입금하세요."
+    ]
+   },
+   {
+    "id": "L21",
+    "cat": "8_job",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.5,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.978,
+    "action_gold": "personal_data",
+    "anchor": [
+     36,
+     41,
+     "비밀번호를"
+    ]
+   },
+   {
+    "id": "L22",
+    "cat": "8_shopping",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.573,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.988,
+    "action_gold": "link",
+    "anchor": [
+     27,
+     34,
+     "보내드릴게요."
+    ]
+   },
+   {
+    "id": "L23",
+    "cat": "8_romance",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.434,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.999,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "L24",
+    "cat": "8_gift",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.572,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.999,
+    "action_gold": "transfer",
+    "anchor": [
+     35,
+     39,
+     "주세요."
+    ]
+   },
+   {
+    "id": "L25",
+    "cat": "8_app",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.696,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "remote_install",
+    "action_conf": 0.955,
+    "action_gold": "remote_install",
+    "anchor": [
+     6,
+     8,
+     "앱을"
+    ]
+   },
+   {
+    "id": "L26",
+    "cat": "8_family",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.63,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "personal_data",
+    "action_conf": 0.7,
+    "action_gold": "personal_data",
+    "anchor": [
+     49,
+     53,
+     "보내줘."
+    ]
+   },
+   {
+    "id": "L27",
+    "cat": "9_url",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "CAUTION",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.975,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "link",
+    "action_conf": 0.443,
+    "action_gold": "link",
+    "anchor": [
+     39,
+     43,
+     "주세요."
+    ]
+   },
+   {
+    "id": "L28",
+    "cat": "10_long",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.947,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "personal_data",
+    "action_conf": 0.59,
+    "action_gold": "transfer",
+    "anchor": [
+     40,
+     47,
+     "감사드립니다."
+    ]
+   },
+   {
+    "id": "L29",
+    "cat": "11_mixed",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.974,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 1.0,
+    "action_gold": "otp",
+    "anchor": [
+     39,
+     43,
+     "인증번호"
+    ]
+   },
+   {
+    "id": "L30",
+    "cat": "11_mixed",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.951,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.998,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L31",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.981,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.987,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L32",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.523,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.783,
+    "action_gold": "none",
+    "anchor": [
+     21,
+     25,
+     "주세요."
+    ]
+   },
+   {
+    "id": "L33",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.996,
+    "speech_gold": "INFORMATION",
+    "action_pred": "transfer",
+    "action_conf": 0.507,
+    "action_gold": "transfer",
+    "anchor": [
+     28,
+     35,
+     "25일입니다."
+    ]
+   },
+   {
+    "id": "L34",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.983,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 1.0,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L35",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.512,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.997,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L36",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.926,
+    "speech_gold": "INFORMATION",
+    "action_pred": "transfer",
+    "action_conf": 0.963,
+    "action_gold": "transfer",
+    "anchor": [
+     4,
+     12,
+     "입금되었습니다."
+    ]
+   },
+   {
+    "id": "L37",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.484,
+    "speech_gold": "INFORMATION",
+    "action_pred": "otp",
+    "action_conf": 0.973,
+    "action_gold": "otp",
+    "anchor": [
+     0,
+     4,
+     "비밀번호"
+    ]
+   },
+   {
+    "id": "L38",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.931,
+    "speech_gold": "REPORT",
+    "action_pred": "none",
+    "action_conf": 0.958,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "L39",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.961,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.988,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L40",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.578,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.969,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "L41",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN",
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.813,
+    "speech_gold": "QUOTATION",
+    "action_pred": "none",
+    "action_conf": 0.889,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "L42",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.403,
+    "speech_gold": "WARNING",
+    "action_pred": "link",
+    "action_conf": 0.947,
+    "action_gold": "link",
+    "anchor": [
+     9,
+     11,
+     "링크"
+    ]
+   },
+   {
+    "id": "L43",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.787,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.639,
+    "action_gold": "transfer",
+    "anchor": [
+     52,
+     57,
+     "같습니다."
+    ]
+   },
+   {
+    "id": "L44",
+    "cat": "5_gov",
+    "expect": [
+     "ASK_HUMAN",
+     "CAUTION",
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.479,
+    "speech_gold": "INFORMATION",
+    "action_pred": "remote_install",
+    "action_conf": 0.403,
+    "action_gold": "none",
+    "anchor": [
+     33,
+     41,
+     "연락드렸습니다."
+    ]
+   },
+   {
+    "id": "L45",
+    "cat": "11_attack",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.86,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     52,
+     58,
+     "송금하세요."
+    ]
+   }
+  ]
+ },
+ "locked_handwritten_v2": {
+  "B0_v44_free_text": {
+   "n": 48,
+   "expected_action_rate": 0.667,
+   "expected_ci95": [
+    0.525,
+    0.783
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.0,
+   "risky_recall_ci95": [
+    0.0,
+    0.125
+   ],
+   "risky_not_cleared_rate": 1.0,
+   "benign_n": 21,
+   "benign_false_alarm_rate": 0.0,
+   "benign_fa_ci95": [
+    0.0,
+    0.155
+   ],
+   "abstain_rate": 1.0
+  },
+  "B_rule_lexical_only": {
+   "n": 48,
+   "expected_action_rate": 0.688,
+   "expected_ci95": [
+    0.547,
+    0.801
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.37,
+   "risky_recall_ci95": [
+    0.215,
+    0.558
+   ],
+   "risky_not_cleared_rate": 0.593,
+   "benign_n": 21,
+   "benign_false_alarm_rate": 0.143,
+   "benign_fa_ci95": [
+    0.05,
+    0.346
+   ],
+   "abstain_rate": 0.229
+  },
+  "B1_nlp_heads_only": {
+   "n": 48,
+   "expected_action_rate": 0.833,
+   "expected_ci95": [
+    0.704,
+    0.913
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.815,
+   "risky_recall_ci95": [
+    0.633,
+    0.918
+   ],
+   "risky_not_cleared_rate": 0.815,
+   "benign_n": 21,
+   "benign_false_alarm_rate": 0.19,
+   "benign_fa_ci95": [
+    0.077,
+    0.4
+   ],
+   "abstain_rate": 0.0
+  },
+  "B2_nlp_plus_policy": {
+   "n": 48,
+   "expected_action_rate": 0.833,
+   "expected_ci95": [
+    0.704,
+    0.913
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.667,
+   "risky_recall_ci95": [
+    0.478,
+    0.814
+   ],
+   "risky_not_cleared_rate": 0.889,
+   "benign_n": 21,
+   "benign_false_alarm_rate": 0.19,
+   "benign_fa_ci95": [
+    0.077,
+    0.4
+   ],
+   "abstain_rate": 0.25
+  },
+  "B2_ablation_no_attribution_span": {
+   "n": 48,
+   "expected_action_rate": 0.833,
+   "expected_ci95": [
+    0.704,
+    0.913
+   ],
+   "risky_n": 27,
+   "risky_intervention_recall": 0.296,
+   "risky_recall_ci95": [
+    0.159,
+    0.485
+   ],
+   "risky_not_cleared_rate": 0.889,
+   "benign_n": 21,
+   "benign_false_alarm_rate": 0.0,
+   "benign_fa_ci95": [
+    0.0,
+    0.155
+   ],
+   "abstain_rate": 0.542
+  },
+  "B3_real_zoro": "NOT_RUN",
+  "B4_rag_anomaly": "NOT_IMPLEMENTED",
+  "speech_acc": 0.75,
+  "action_acc": 0.583,
+  "per_item": [
+   {
+    "id": "V01",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_WARNING_LABEL",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.508,
+    "speech_gold": "WARNING",
+    "action_pred": "transfer",
+    "action_conf": 0.994,
+    "action_gold": "transfer",
+    "anchor": [
+     31,
+     35,
+     "마세요."
+    ]
+   },
+   {
+    "id": "V02",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_WARNING_LABEL",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.523,
+    "speech_gold": "WARNING",
+    "action_pred": "otp",
+    "action_conf": 0.969,
+    "action_gold": "otp",
+    "anchor": [
+     10,
+     14,
+     "OTP를"
+    ]
+   },
+   {
+    "id": "V03",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.497,
+    "speech_gold": "WARNING",
+    "action_pred": "none",
+    "action_conf": 0.607,
+    "action_gold": "remote_install",
+    "anchor": null
+   },
+   {
+    "id": "V04",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.42,
+    "speech_gold": "WARNING",
+    "action_pred": "personal_data",
+    "action_conf": 0.818,
+    "action_gold": "personal_data",
+    "anchor": [
+     8,
+     12,
+     "주민번호"
+    ]
+   },
+   {
+    "id": "V05",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_NONE_BUT_ACTION_TERMS_PRESENT",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "CAUTION",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.979,
+    "speech_gold": "QUOTATION",
+    "action_pred": "none",
+    "action_conf": 0.978,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V06",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_QUOTATION_LABEL",
+    "B1": "CAUTION",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.933,
+    "speech_gold": "QUOTATION",
+    "action_pred": "remote_install",
+    "action_conf": 0.811,
+    "action_gold": "remote_install",
+    "anchor": [
+     22,
+     26,
+     "받았대."
+    ]
+   },
+   {
+    "id": "V07",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "UNSUPPORTED_QUOTATION_LABEL",
+    "B1": "CAUTION",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "QUOTATION",
+    "speech_conf": 0.656,
+    "speech_gold": "QUOTATION",
+    "action_pred": "otp",
+    "action_conf": 0.995,
+    "action_gold": "otp",
+    "anchor": [
+     0,
+     5,
+     "\"인증번호"
+    ]
+   },
+   {
+    "id": "V08",
+    "cat": "2_quote",
+    "expect": [
+     "CAUTION",
+     "ASK_HUMAN",
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "CAUTION",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.827,
+    "speech_gold": "QUOTATION",
+    "action_pred": "link",
+    "action_conf": 0.866,
+    "action_gold": "link",
+    "anchor": [
+     8,
+     10,
+     "링크"
+    ]
+   },
+   {
+    "id": "V09",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.905,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.771,
+    "action_gold": "transfer",
+    "anchor": [
+     34,
+     40,
+     "필요합니다."
+    ]
+   },
+   {
+    "id": "V10",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.721,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.692,
+    "action_gold": "otp",
+    "anchor": [
+     32,
+     37,
+     "끝납니다."
+    ]
+   },
+   {
+    "id": "V11",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "CAUTION",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.583,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "link",
+    "action_conf": 0.294,
+    "action_gold": "transfer",
+    "anchor": [
+     28,
+     34,
+     "가능합니다."
+    ]
+   },
+   {
+    "id": "V12",
+    "cat": "3_indirect",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.967,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.772,
+    "action_gold": "remote_install",
+    "anchor": [
+     33,
+     37,
+     "합니다."
+    ]
+   },
+   {
+    "id": "V13",
+    "cat": "4_delivery",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.596,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "link",
+    "action_conf": 0.763,
+    "action_gold": "link",
+    "anchor": [
+     43,
+     49,
+     "진행하세요."
+    ]
+   },
+   {
+    "id": "V14",
+    "cat": "4_delivery",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.928,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.876,
+    "action_gold": "link",
+    "anchor": [
+     36,
+     40,
+     "주세요."
+    ]
+   },
+   {
+    "id": "V15",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.849,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "personal_data",
+    "action_conf": 0.998,
+    "action_gold": "personal_data",
+    "anchor": [
+     23,
+     26,
+     "신분증"
+    ]
+   },
+   {
+    "id": "V16",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.752,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.995,
+    "action_gold": "personal_data",
+    "anchor": [
+     30,
+     35,
+     "비밀번호를"
+    ]
+   },
+   {
+    "id": "V17",
+    "cat": "5_gov",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.911,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.998,
+    "action_gold": "transfer",
+    "anchor": [
+     33,
+     39,
+     "전달하세요."
+    ]
+   },
+   {
+    "id": "V18",
+    "cat": "6_bec",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.58,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     50,
+     54,
+     "주세요."
+    ]
+   },
+   {
+    "id": "V19",
+    "cat": "6_bec",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.481,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.883,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V20",
+    "cat": "7_normal_urgent",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.384,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.944,
+    "action_gold": "transfer",
+    "anchor": [
+     28,
+     35,
+     "부탁드립니다."
+    ]
+   },
+   {
+    "id": "V21",
+    "cat": "7_normal_urgent",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.97,
+    "speech_gold": "INFORMATION",
+    "action_pred": "transfer",
+    "action_conf": 0.812,
+    "action_gold": "transfer",
+    "anchor": [
+     13,
+     19,
+     "출금됐어요."
+    ]
+   },
+   {
+    "id": "V22",
+    "cat": "8_investment",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.396,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.95,
+    "action_gold": "transfer",
+    "anchor": [
+     32,
+     37,
+     "입금하시면"
+    ]
+   },
+   {
+    "id": "V23",
+    "cat": "8_job",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.796,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.997,
+    "action_gold": "personal_data",
+    "anchor": [
+     31,
+     36,
+     "비밀번호를"
+    ]
+   },
+   {
+    "id": "V24",
+    "cat": "8_shopping",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.731,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "transfer",
+    "anchor": [
+     34,
+     38,
+     "드려요."
+    ]
+   },
+   {
+    "id": "V25",
+    "cat": "8_romance",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.602,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.969,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V26",
+    "cat": "8_gift",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.478,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.996,
+    "action_gold": "otp",
+    "anchor": [
+     32,
+     37,
+     "인증번호를"
+    ]
+   },
+   {
+    "id": "V27",
+    "cat": "8_app",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.505,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "remote_install",
+    "action_conf": 0.829,
+    "action_gold": "remote_install",
+    "anchor": [
+     28,
+     33,
+     "풀립니다."
+    ]
+   },
+   {
+    "id": "V28",
+    "cat": "8_family",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "CAUTION",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.981,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.858,
+    "action_gold": "transfer",
+    "anchor": [
+     42,
+     46,
+     "보내줘."
+    ]
+   },
+   {
+    "id": "V29",
+    "cat": "9_url",
+    "expect": [
+     "CAUTION",
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.976,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 1.0,
+    "action_gold": "link",
+    "anchor": [
+     35,
+     41,
+     "해제하세요."
+    ]
+   },
+   {
+    "id": "V30",
+    "cat": "9_url",
+    "expect": [
+     "ASK_HUMAN",
+     "CAUTION",
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "CAUTION",
+    "reason": "MODEL_DIRECT_CAUTION_ADVISORY",
+    "B1": "CAUTION",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.562,
+    "speech_gold": "QUOTATION",
+    "action_pred": "link",
+    "action_conf": 0.994,
+    "action_gold": "link",
+    "anchor": [
+     2,
+     5,
+     "사이트"
+    ]
+   },
+   {
+    "id": "V31",
+    "cat": "10_long",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.965,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.687,
+    "action_gold": "otp",
+    "anchor": [
+     128,
+     133,
+     "인증번호를"
+    ]
+   },
+   {
+    "id": "V32",
+    "cat": "10_long",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.385,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.256,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V33",
+    "cat": "11_mixed",
+    "expect": [
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "CAUTION",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.973,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.58,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V34",
+    "cat": "11_mixed",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "ContractError:INVALID_TEXT",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.99,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.999,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V35",
+    "cat": "11_mixed",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.938,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.998,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V36",
+    "cat": "11_attack",
+    "expect": [
+     "PAUSE_AND_VERIFY",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.738,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.991,
+    "action_gold": "otp",
+    "anchor": [
+     39,
+     42,
+     "번호를"
+    ]
+   },
+   {
+    "id": "V37",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.746,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.989,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V38",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "INFORMATIONAL_LABEL_CONTRADICTED_BY_IMPERATIVE_CLAUSE",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "CAUTION",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.941,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 0.995,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V39",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.979,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.638,
+    "action_gold": "none",
+    "anchor": [
+     16,
+     20,
+     "주세요."
+    ]
+   },
+   {
+    "id": "V40",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "PAUSE_AND_VERIFY",
+    "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "PAUSE_AND_VERIFY",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.939,
+    "speech_gold": "DIRECT_REQUEST",
+    "action_pred": "otp",
+    "action_conf": 0.878,
+    "action_gold": "personal_data",
+    "anchor": [
+     2,
+     7,
+     "비밀번호는"
+    ]
+   },
+   {
+    "id": "V41",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.925,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.916,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V42",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.898,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.616,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V43",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "DIRECT_REQUEST",
+    "speech_conf": 0.599,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "none",
+    "action_conf": 1.0,
+    "action_gold": "none",
+    "anchor": null
+   },
+   {
+    "id": "V44",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.702,
+    "speech_gold": "INFORMATION",
+    "action_pred": "none",
+    "action_conf": 0.568,
+    "action_gold": "transfer",
+    "anchor": null
+   },
+   {
+    "id": "V45",
+    "cat": "12_everyday",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "CAUTION"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.574,
+    "speech_gold": "INFORMATION",
+    "action_pred": "transfer",
+    "action_conf": 0.759,
+    "action_gold": "none",
+    "anchor": [
+     29,
+     33,
+     "보세요."
+    ]
+   },
+   {
+    "id": "V46",
+    "cat": "5_gov",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN",
+     "CAUTION"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "MODEL_INFORMATIONAL_NOT_REQUEST",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "ASK_HUMAN",
+    "speech_pred": "INFORMATION",
+    "speech_conf": 0.512,
+    "speech_gold": "INFORMATION",
+    "action_pred": "transfer",
+    "action_conf": 0.892,
+    "action_gold": "none",
+    "anchor": [
+     17,
+     19,
+     "계좌"
+    ]
+   },
+   {
+    "id": "V47",
+    "cat": "3_indirect",
+    "expect": [
+     "ASK_HUMAN",
+     "CAUTION",
+     "PAUSE_AND_VERIFY"
+    ],
+    "B2": "ASK_HUMAN",
+    "reason": "MODEL_LOW_CONFIDENCE_OR_AMBIGUOUS",
+    "B1": "PAUSE_AND_VERIFY",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "INDIRECT_REQUEST",
+    "speech_conf": 0.985,
+    "speech_gold": "INDIRECT_REQUEST",
+    "action_pred": "transfer",
+    "action_conf": 0.358,
+    "action_gold": "none",
+    "anchor": [
+     54,
+     58,
+     "합니다."
+    ]
+   },
+   {
+    "id": "V48",
+    "cat": "1_warning",
+    "expect": [
+     "NO_STRONG_SIGNAL",
+     "ASK_HUMAN"
+    ],
+    "B2": "NO_STRONG_SIGNAL",
+    "reason": "NO_ACTION_CANDIDATE_NOT_SAFETY_CLEARANCE",
+    "B1": "NO_STRONG_SIGNAL",
+    "rule": "NO_STRONG_SIGNAL",
+    "speech_pred": "WARNING",
+    "speech_conf": 0.903,
+    "speech_gold": "WARNING",
+    "action_pred": "none",
+    "action_conf": 0.946,
+    "action_gold": "remote_install",
+    "anchor": null
+   }
+  ]
+ }
+}

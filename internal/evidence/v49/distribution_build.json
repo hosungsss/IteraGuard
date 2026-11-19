@@ -1,0 +1,18 @@
+{
+  "apk": "apps/dist/IteraGuard_DoubtMeter_v4_9_android_debug.apk",
+  "bytes": 15759514,
+  "sha256": "b0c8202b6af7b0fadd1a3454468ba02e85932ce0ad41315d459af6db5c176678",
+  "dex_sha256": "9aa7c269ff9a64832ce7762ed4cfa85128b09bae034ba0279403b406e6c82fc6",
+  "cert_sha256": "d1d473f8a7808b416b6f555ec310287f2c028865e3af9a4188a44e91ed17f449",
+  "entries": 25,
+  "min_sdk": 24,
+  "target_sdk": 34,
+  "debuggable": true,
+  "permissions": [],
+  "version": "4.9",
+  "version_code": 49,
+  "build_type": "DEBUG",
+  "device_install": "NOT_RUN",
+  "pwa": "apps/dist/IteraGuard_DoubtMeter_v4_9_web_pwa.zip",
+  "pwa_sha256": "9e6463336d089643ccb90d25d51aec64f54c8aaada026d221a1afba2ebe8d077"
+}

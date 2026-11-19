@@ -1,0 +1,110 @@
+{
+  "schema": "iteraguard-evidence/1",
+  "package_version": "5.6",
+  "created_utc": "2026-11-19T05:32:51.344255+00:00",
+  "session_id": "13e56bce103a4bcbad2e8bde2b8b4d3f",
+  "context_scope": "CURRENT_TEXT_ONLY",
+  "raw_input_included": false,
+  "model_identity_verified": false,
+  "state_version": 2,
+  "lifecycle": "OPEN",
+  "prior_pause": true,
+  "tasks": [
+    {
+      "id": "50e94ff9579543bdb72820b682f4d37d",
+      "type": "PAUSE_AND_INDEPENDENT_CHECK",
+      "status": "OPEN",
+      "observation": "NOT_CHECKED"
+    },
+    {
+      "id": "9145362ea632436696c0f690ad8cc474",
+      "type": "MODEL_RETRY",
+      "status": "OPEN",
+      "observation": "NOT_CHECKED"
+    }
+  ],
+  "events": [
+    {
+      "event_type": "EVALUATE",
+      "request_id": "C_failure_recovery_0",
+      "version": 1,
+      "current_turn_action": "ASK_HUMAN",
+      "current_turn_reason": "MODEL_TRANSPORT_ERROR_TimeoutError",
+      "action": "ASK_HUMAN",
+      "reason": "MODEL_TRANSPORT_ERROR_TimeoutError",
+      "prior_pause": false,
+      "model_status": "FAILED",
+      "mode": "MODEL_UNAVAILABLE",
+      "latency_ms": null,
+      "provenance": {
+        "schema": "iteraguard-provenance/1",
+        "received_utc": "2026-11-19T05:32:51.185548+00:00",
+        "execution_source": "CONTROLLED_CLIENT",
+        "model_identity_verified": false,
+        "response_sha256": null,
+        "pipeline_ms": 44.244,
+        "profile_id": "v51-specific-candidate",
+        "policy_id": "legacy",
+        "execution_manifest": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5",
+        "arena_sources": {
+          "store.py": "4b0497a36f8458166fd7f9887c746e633fd3c72388bd51493b747b37792d89db",
+          "evidence.py": "7ae1df54ec09e81f73438452a6070eac947df84acac9c237378265b6187972b3",
+          "server.py": "85b4908abf710b0128e7ae03b6f115859e30ea034004d99620754ea6fba176e3",
+          "web/main.js": "bcef015a626a5bf7ceeefe70252f442b19b148f38846274410ad6e0f6b3df3b4"
+        },
+        "input_source": "USER_SUPPLIED_SYNTHETIC",
+        "npu_execution_verified": false
+      },
+      "task_disposition": "OPEN_TASK_AVAILABLE",
+      "next_task": {
+        "id": "9145362ea632436696c0f690ad8cc474",
+        "type": "MODEL_RETRY",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      }
+    },
+    {
+      "event_type": "EVALUATE",
+      "request_id": "C_failure_recovery_1",
+      "version": 2,
+      "current_turn_action": "PAUSE_AND_VERIFY",
+      "current_turn_reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "action": "PAUSE_AND_VERIFY",
+      "reason": "V51_SCOPED_SENSITIVE_REQUEST",
+      "prior_pause": true,
+      "model_status": "VALID",
+      "mode": "MODEL_RESPONSE_UNATTESTED",
+      "latency_ms": 0.0,
+      "provenance": {
+        "schema": "iteraguard-provenance/1",
+        "received_utc": "2026-11-19T05:32:51.245556+00:00",
+        "execution_source": "CONTROLLED_CLIENT",
+        "model_identity_verified": false,
+        "response_sha256": "7e8f8644d88c5dd5ad7b8d3fbfc01e04800551d78f1e354a3cd12b0be9c0d587",
+        "pipeline_ms": 54.809,
+        "profile_id": "v51-specific-candidate",
+        "policy_id": "legacy",
+        "execution_manifest": "f3724fad77fc742762155f68e9ee1729cd9b2f3d09cc1c42cad84375cf25fbf5",
+        "arena_sources": {
+          "store.py": "4b0497a36f8458166fd7f9887c746e633fd3c72388bd51493b747b37792d89db",
+          "evidence.py": "7ae1df54ec09e81f73438452a6070eac947df84acac9c237378265b6187972b3",
+          "server.py": "85b4908abf710b0128e7ae03b6f115859e30ea034004d99620754ea6fba176e3",
+          "web/main.js": "bcef015a626a5bf7ceeefe70252f442b19b148f38846274410ad6e0f6b3df3b4"
+        },
+        "input_source": "USER_SUPPLIED_SYNTHETIC",
+        "npu_execution_verified": false
+      },
+      "task_disposition": "OPEN_TASK_AVAILABLE",
+      "next_task": {
+        "id": "50e94ff9579543bdb72820b682f4d37d",
+        "type": "PAUSE_AND_INDEPENDENT_CHECK",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      }
+    }
+  ],
+  "integrity_scope": "UNSIGNED_LOCAL_DIGEST_NOT_AUTHENTICATION",
+  "scenario": "C_failure_recovery",
+  "requested_mode": "controlled",
+  "sha256": "6fe4d88fb01c95873c4c893f5db9203c97833b9facdf8564ee3cf065e02742fd"
+}

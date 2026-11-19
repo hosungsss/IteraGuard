@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "original_summary": "validation_summary.json",
+  "superseding_check": {
+    "name": "v49",
+    "log": "v49_fixed.log",
+    "tests": 64,
+    "status": "PASS",
+    "sha256": "df469c67dccafe710e67962d8dbb52adb681b55446aeca70fddbfd7420b035cd"
+  },
+  "initial_failure": "release tool import modified sys.path; product linkguard shadowed by tools/linkguard",
+  "fix": "package-relative imports; CLI preserved; fresh subprocess regression",
+  "product_source_changed_after_checks": "Only UI version/evidence labels, followed by ui_final_labels.log and forbidden_final.json PASS",
+  "live_model_calls": 0,
+  "device_execution": "NOT_RUN",
+  "additional_checks": [
+    "ui_final_labels.log:14PASS",
+    "forbidden_final.json:PASS",
+    "linkguard_current_apk.log:42PASS"
+  ]
+}

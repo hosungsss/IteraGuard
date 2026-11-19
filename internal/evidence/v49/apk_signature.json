@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "zip_crc": "PASS",
+  "v2_signature": "PASS",
+  "v2_content_digest": "PASS",
+  "cert_public_key_match": "PASS",
+  "sha256": "b0c8202b6af7b0fadd1a3454468ba02e85932ce0ad41315d459af6db5c176678",
+  "bytes": 15759514,
+  "permission_internet": false,
+  "assets_domain_js": true,
+  "android_runtime": "NOT_RUN",
+  "debug_signed": true,
+  "files": 25
+}

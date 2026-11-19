@@ -1,0 +1,1807 @@
+{
+  "scope": "existing Markdown before v5 organization",
+  "total": 360,
+  "distinct_content": 159,
+  "files": [
+    {
+      "path": "Back Data/02_준비물_체크리스트_20261104.md",
+      "bytes": 4932,
+      "sha256": "2190b399dbf608b41a3501c5b48224250e0b6e6820fc3df89e988ea8c1a0a5ce"
+    },
+    {
+      "path": "Back Data/DMSG_Zoro_Report_Consistency_Review_20261102.md",
+      "bytes": 17018,
+      "sha256": "960ce0d3a4f5ebf5289a88c1347a629082a740cf7d16fcc9380c044e081e0dae"
+    },
+    {
+      "path": "Package/DMSG_Experiment_Kit_v1.1_Upgrade_Report_20261104.md",
+      "bytes": 3689,
+      "sha256": "048c84254a7d583a468674fc0933c54e98fc8143de4cea823b547f4800796584"
+    },
+    {
+      "path": "Package/DMSG_SYSTEM_PROMPTING_v4.9-rc1_20261104.md",
+      "bytes": 9096,
+      "sha256": "131d7e2d265e0e078212aaa531c02278db8ed90681d67a80252c568841e86b0d"
+    },
+    {
+      "path": "TRILLION_HACKATHON_Team_Guide.md",
+      "bytes": 12771,
+      "sha256": "410ec1f405afa6d4fea7f4dc46db0229a401df0418134f531218e564bae00da2"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2641,
+      "sha256": "2d68b7aa83c93e862a4c6e31e8778948b66e186e40b5d4dd8d36af6719b29d46"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/archive/TEAM_GUIDE_2026-10-28_original.md",
+      "bytes": 12771,
+      "sha256": "410ec1f405afa6d4fea7f4dc46db0229a401df0418134f531218e564bae00da2"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/archive/previous_v2_System_Prompt_snapshot.md",
+      "bytes": 9503,
+      "sha256": "916fd53fc37df31c25b5a592ed634f05c0ef0f98e662e765c274166cd385fe4f"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 3710,
+      "sha256": "00f603c2890c82e2c083f59ac034fdd657ea6c006b2f471f6f8ec79fc07f3e20"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 5980,
+      "sha256": "c00177f64790ae5a20f6f7481b0aba172949e2abbb7c7faf1f6edb233fad36fb"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 2864,
+      "sha256": "4c1a27eaaf8d05f726ee9daa9c0bc16de7798ab4df3184d24b82195402e1c954"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/dmsg/references/TEAM_GUIDE_DELTA.md",
+      "bytes": 3856,
+      "sha256": "825abf1b2630cafeadd9f7dc3451b3614ab8059c66610b4ea83cf6f7234e8913"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/notes/01_CRITICAL_AUDIT_KO.md",
+      "bytes": 12996,
+      "sha256": "37df9b3d08e1c096fa4541df71ae6de0c9b6a357aed6674155e57f69ece33b7c"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/notes/03_REQUIREMENT_TRACE.md",
+      "bytes": 3167,
+      "sha256": "0ebcdf82ed91b65f8a3da85322e8412b29d7c0b1b56a5bdcbc028a36925859a1"
+    },
+    {
+      "path": "[v3.1.0] IteraGuard_DoubtMeter/notes/05_RELEASE_TEST_RESULT.md",
+      "bytes": 1777,
+      "sha256": "3bd570277d9c87cb9eb6a8d49c6eccb33a2d34320ac5207b64df9107c2d2300d"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/README.md",
+      "bytes": 3165,
+      "sha256": "095580c9ecbcada368ef122cc2371972f1431c650c8e0b559f63af4dd1c0d5ba"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/all.md",
+      "bytes": 37278,
+      "sha256": "acc4aa2f1cf46c9d7e1567bc5f2bbb5a0ed053fa2372c3463bddc18ebf747d38"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 1442,
+      "sha256": "46e531be2368be3a47f74ee3cd9f39e980c54f2dc93cbcfe2a325130689871dc"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4171,
+      "sha256": "e3ffa17f0ad0ad51e7667b16fbd000b7ac871577425a19a4ceea9eef2c0308f2"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 2528,
+      "sha256": "7cbb75d8dd4bb6b9437d356d970b6a43298598e824616af5c9d09d3e62cd00cd"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 17691,
+      "sha256": "30f2bfca0bf78371f4a88db7bca68d0ded92ea40d5597d8035c3aa39aeadee47"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 2864,
+      "sha256": "4c1a27eaaf8d05f726ee9daa9c0bc16de7798ab4df3184d24b82195402e1c954"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 14975,
+      "sha256": "691502d5359f424dfc4d8648b9e703eded3654581ac168e814784845d3cf4414"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 6396,
+      "sha256": "d5f3d2aca940cbae1b08b3ac461d850d487596a579759f156492c3aefcf3914a"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4174,
+      "sha256": "0d03cc28c5cc0d43039732850f3c8fadb35b99ba4c46157ee2b109c14a023790"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 6214,
+      "sha256": "a2bd60aa9f2b2c4d7f9aefa3c39a50bcc2e6f4120b3c6a6311abef5956d5c337"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 3018,
+      "sha256": "83cd56f77a86442f873a1b2678d636743c0bead9a005d38a6495a02684ef90a2"
+    },
+    {
+      "path": "[v3.4] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 3443,
+      "sha256": "9c99e33c41ee644844c9195c41e4175df065670beb63d7762f088a8a2b79d2a8"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/README.md",
+      "bytes": 3583,
+      "sha256": "d0068ab236130d12fdd260dbb03b5b8a9c07c0b412e1e9737366bd5066d7e879"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/all.md",
+      "bytes": 42900,
+      "sha256": "234b1b25f44339f825a194c68a6b4d6b5bc1067c27e7fbda59415edf1222e847"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 1442,
+      "sha256": "098cd098914c5c8e4afd2981d7dfdf2d3dedb3d537f9edefebb58104dab05507"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 3746,
+      "sha256": "91ff3e852216ec62d7365247b03d4643da24e0ddb411174111303a2fda17b206"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 15691,
+      "sha256": "7371cee2c8c3216112935e20a17f11aab50030e754b6fdba10143c143ae926f8"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 7414,
+      "sha256": "4abf5a240de9d8c768317a28324058c1242908d77ea90e4cf7c900b98b0a3f0e"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 18854,
+      "sha256": "0713ca667e8a613a04b3ed512141306be862e4cbd42cb83b8b753c276499cd85"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 15691,
+      "sha256": "7371cee2c8c3216112935e20a17f11aab50030e754b6fdba10143c143ae926f8"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 7414,
+      "sha256": "4abf5a240de9d8c768317a28324058c1242908d77ea90e4cf7c900b98b0a3f0e"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4174,
+      "sha256": "0d03cc28c5cc0d43039732850f3c8fadb35b99ba4c46157ee2b109c14a023790"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 6214,
+      "sha256": "a2bd60aa9f2b2c4d7f9aefa3c39a50bcc2e6f4120b3c6a6311abef5956d5c337"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 3443,
+      "sha256": "9c99e33c41ee644844c9195c41e4175df065670beb63d7762f088a8a2b79d2a8"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v3.5] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 19154,
+      "sha256": "c37d4be1e12a547e6f331ffe0ad28dcdd4a1ea423cba71d3eb6192b179108cdb"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 5178,
+      "sha256": "f3544a157f210456b1b5fb5392dec527a0c18916567973cd3975189496bcfabd"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/README.md",
+      "bytes": 4646,
+      "sha256": "f0c819f0eebf3906d78f9e0b438c37d8f9913f77ad1c5510aabb3c1e6e7e7db9"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/all.md",
+      "bytes": 49716,
+      "sha256": "b7bfae5317646881c0c3ed41095e83a2556a9a4619852e901394a44652e612cc"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 10991,
+      "sha256": "eeef25cd56ff95df7fa1fd80513434d6ec98c792ede573c0b39f73daff5bbbc1"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4171,
+      "sha256": "e3ffa17f0ad0ad51e7667b16fbd000b7ac871577425a19a4ceea9eef2c0308f2"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 16983,
+      "sha256": "0da18fa1fe54f62f89c6a8c82e1d34b1940ca327fdba255236f08798958d39e3"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 21421,
+      "sha256": "3c3f53f095037be41c42da3cf79858f2c1f9405f51a82194d6b3ae6d3092d98f"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 16983,
+      "sha256": "0da18fa1fe54f62f89c6a8c82e1d34b1940ca327fdba255236f08798958d39e3"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 8771,
+      "sha256": "8215109a7b2f0d0c21a8546b3d9855bff17b08868e337cb9df4ffc7ed56c7e33"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 6214,
+      "sha256": "a2bd60aa9f2b2c4d7f9aefa3c39a50bcc2e6f4120b3c6a6311abef5956d5c337"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 3443,
+      "sha256": "9c99e33c41ee644844c9195c41e4175df065670beb63d7762f088a8a2b79d2a8"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "bytes": 2099,
+      "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "015b0979b57d2071b89ee047919e92ea74f60ed5b16e204663b024c053f11db0"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/internal/TEAM_PROPOSAL_SELECTION.md",
+      "bytes": 1114,
+      "sha256": "82c318ad8ee2c32001ab77b1b676901eeee5b3e68513decbaf216df4e8af6157"
+    },
+    {
+      "path": "[v3.6] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 24097,
+      "sha256": "0de3a9a412e4e4e36a070141f4cfe512366909c2f9ad278929c48cee8b490ca6"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 8980,
+      "sha256": "8f6717a9d75d82dfbff7f2ed58a72b69f1f919c59514f7ac56d8ff77de85f911"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 17622,
+      "sha256": "0d05cdf8db7bf05133742da011c24ce075f6f8740880ec75240b984fbfe6c105"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 3723,
+      "sha256": "420521be3c83528c1e3ec57b20f4be1ee85f1b81c5d992c3d92c5a445e95a84c"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 31787,
+      "sha256": "508cfb4d58accda78c7868e360453a56206410e91e3149bc4f35018d67fbce7c"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 14368,
+      "sha256": "c3aa5591e01c1e2b52cd193ebef43210bfb37ae567b468a2847d5278a2b9442b"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 6660,
+      "sha256": "e15915b7d61a2d62963aa158c270ddf0be25fc7db870834d332648a43a8e1d0d"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+      "bytes": 5759,
+      "sha256": "9ea69fe688cdc2f7f532993cff00e186333b40fba085588c3341d933886636a2"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/internal/source_material/reviewed_team_inputs/README_SOURCE_SCOPE.md",
+      "bytes": 1352,
+      "sha256": "00a109504cc121685f57539ba3de8ca726496768d1e544233db80f96887f1c94"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/internal/source_material/team_governance/PROJECT_INSTRUCTIONS_KO.md",
+      "bytes": 18872,
+      "sha256": "98204de7664d5ac7260fadd26b70cd85b2810cdf3d7276e86b172b1ab7d5362b"
+    },
+    {
+      "path": "[v4.0] IteraGuard_DoubtMeter/internal/source_material/team_proposals/의심계_우승기획서_v1.0_ORIGINAL.md",
+      "bytes": 22324,
+      "sha256": "4d273c97cf35a96afb79390dea9f9f769e8221873e3520ff2a02ca770d8b3d52"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 10043,
+      "sha256": "0031274d0683f255bcc9d2e40c3998d9bc4bba440e99f775fa89e35febf0a5c4"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/README.md",
+      "bytes": 7178,
+      "sha256": "7ef044d8b22688ee15691fc8e8e18d5c463895484579e3765972679c46c5a89d"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 18941,
+      "sha256": "90826d689eabba016ab30a94a5b9d7800c030b3e82b00622fabb18135fc43d5b"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 4415,
+      "sha256": "74ffc870b2f7cabc758d38caefd8e7fea8c9b246121c80c0b6437c0bba733115"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 3723,
+      "sha256": "420521be3c83528c1e3ec57b20f4be1ee85f1b81c5d992c3d92c5a445e95a84c"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 32958,
+      "sha256": "096986be2d07780585e4810065edc49a1c8af39c095b881ccfc95241c417d6f1"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 15212,
+      "sha256": "5766f7aae3f83278f9504d19aaeafa38bcfb4fae6d5527e4ef0f40289c129561"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 32958,
+      "sha256": "096986be2d07780585e4810065edc49a1c8af39c095b881ccfc95241c417d6f1"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 24801,
+      "sha256": "59cfb49f8d56843edf95114c55877b8080e9b0172fd71911ac77d77980c5ab99"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 15212,
+      "sha256": "5766f7aae3f83278f9504d19aaeafa38bcfb4fae6d5527e4ef0f40289c129561"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 2500,
+      "sha256": "530f7d7b7143953c9481b92c8e4e0f448b4d647ee0b09754ae192ac0242a72ac"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+      "bytes": 5759,
+      "sha256": "9ea69fe688cdc2f7f532993cff00e186333b40fba085588c3341d933886636a2"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+      "bytes": 13924,
+      "sha256": "abf28e16741abf4cc8fd6783671681f2cd8e3090218c3ea8db68f8a083a54d96"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V39.md",
+      "bytes": 7027,
+      "sha256": "14263e1fd20516ae5ead38f8082bb87d4b20ad4c442e3d5cdfebd045ddcaede1"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/internal/source_material/team_governance/PROJECT_INSTRUCTIONS_KO.md",
+      "bytes": 18872,
+      "sha256": "98204de7664d5ac7260fadd26b70cd85b2810cdf3d7276e86b172b1ab7d5362b"
+    },
+    {
+      "path": "[v4.1] IteraGuard_DoubtMeter/internal/source_material/team_proposals/의심계_우승기획서_v1.0_ORIGINAL.md",
+      "bytes": 22324,
+      "sha256": "4d273c97cf35a96afb79390dea9f9f769e8221873e3520ff2a02ca770d8b3d52"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "bytes": 10033,
+      "sha256": "a5b4bf9d75195a36c974a2232d97fce7a056957f85181079071ccf443907aeac"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 4415,
+      "sha256": "74ffc870b2f7cabc758d38caefd8e7fea8c9b246121c80c0b6437c0bba733115"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 26597,
+      "sha256": "e505fdc26f0407e54f8dc354ac02c43e346f5091bc85b877b1dc51ecff4ff436"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 34976,
+      "sha256": "cf24de4ce7fa3c162d2d825cf05270674242c78cdf96a52c59c300a9cc9c98e1"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 26597,
+      "sha256": "e505fdc26f0407e54f8dc354ac02c43e346f5091bc85b877b1dc51ecff4ff436"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 4560,
+      "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/15_CANDIDATE_DECISION_GATES_KO.md",
+      "bytes": 2203,
+      "sha256": "ea6da1a9011795f7b6110d3b09ba25b3e6d7f8d69992e950d3e3382669dec3a0"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+      "bytes": 13924,
+      "sha256": "abf28e16741abf4cc8fd6783671681f2cd8e3090218c3ea8db68f8a083a54d96"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V39.md",
+      "bytes": 7027,
+      "sha256": "14263e1fd20516ae5ead38f8082bb87d4b20ad4c442e3d5cdfebd045ddcaede1"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V42.md",
+      "bytes": 10718,
+      "sha256": "cbda053183c9f079bdaa6304b6c9d828469977d6f2f1d500f14d150e7f1b00ce"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 47376,
+      "sha256": "c42bf715a4ade9f34beffcf5b8290a4aa696919124b989f37f1024703b9592df"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/source_material/team_governance/PROJECT_INSTRUCTIONS_KO.md",
+      "bytes": 18872,
+      "sha256": "98204de7664d5ac7260fadd26b70cd85b2810cdf3d7276e86b172b1ab7d5362b"
+    },
+    {
+      "path": "[v4.2] IteraGuard_DoubtMeter/internal/source_material/team_proposals/STATUS.md",
+      "bytes": 385,
+      "sha256": "e531aa5a781c9cefcf12326ba6ae84d31d7b4fbd1b06be5d2bfdd480b74444d8"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 12256,
+      "sha256": "257ee24c3c78a13685db940610b65556e5deac934bffa9e3a111a80e79eeb0e2"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/all.md",
+      "bytes": 79037,
+      "sha256": "b839d9e63d50da3843c115aa16472378280ebc03b6a7a99e9b16ff47e092640b"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1143,
+      "sha256": "4b50c3228e684f1ecf06a3dc8739f87a36fee6aabd73c7c23e42e2898590dcf9"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/apps/mobile/BUILD_IOS.md",
+      "bytes": 968,
+      "sha256": "c5833859d2533d2f56adf5501d7823efaf0715316d0318bb2e20717090e532f6"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 36786,
+      "sha256": "8943d8a9ead274ddf689360620f8770948f899c904c98f7e3c26d58a62429a4f"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 27873,
+      "sha256": "cb4d25ce718831ddb40a9a204957a8108c3ba20e1a6ec7457bfdd2941b433e4e"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 36786,
+      "sha256": "8943d8a9ead274ddf689360620f8770948f899c904c98f7e3c26d58a62429a4f"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 27873,
+      "sha256": "cb4d25ce718831ddb40a9a204957a8108c3ba20e1a6ec7457bfdd2941b433e4e"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 17229,
+      "sha256": "7235632d5e1dae48eb94bfcc0b9ae74ca1aa00a59a0bd6930797d4d87300264e"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "bytes": 2099,
+      "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 8173,
+      "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+      "bytes": 13924,
+      "sha256": "abf28e16741abf4cc8fd6783671681f2cd8e3090218c3ea8db68f8a083a54d96"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V39.md",
+      "bytes": 7027,
+      "sha256": "14263e1fd20516ae5ead38f8082bb87d4b20ad4c442e3d5cdfebd045ddcaede1"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V41.md",
+      "bytes": 6527,
+      "sha256": "1e2fcf2a63d8dad120868e4fae58151d8a3e034d742018491d6134147f8b1add"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 49139,
+      "sha256": "d2afb6b2b658db906656cfdb7c66d6e2973c028be7a9b743a196ab80ed549333"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.3] IteraGuard_DoubtMeter/internal/source_material/reviewed_team_inputs/README_SOURCE_SCOPE.md",
+      "bytes": 1352,
+      "sha256": "00a109504cc121685f57539ba3de8ca726496768d1e544233db80f96887f1c94"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "bytes": 11124,
+      "sha256": "be77cc3f48e19bc673b2caa895665edf4d9add6de7122fd952494a95af8785a6"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/README.md",
+      "bytes": 8041,
+      "sha256": "9cc8e254cbd847e80a32abe852f408870df0be063fcfcd9bd30cdd3fb11e4663"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/all.md",
+      "bytes": 80083,
+      "sha256": "0ef796dd7bb18de6811f131ec7e95ad7774ccc926e4eb13ef8cbdc16e8ba2cea"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 4186,
+      "sha256": "403c950fadc3042aa7ba8ac4d1a219c6e3f617c64b593fc45bfa7c1ea3136520"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/apps/mobile/BUILD_IOS.md",
+      "bytes": 968,
+      "sha256": "dc7d94cc4730265894687ac5efc53c827c2406dc857a1a919a8318b8b137cab0"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 24565,
+      "sha256": "92608e447786f9ed1839642060e7c1e32b11b7de6c90a65bfa8f8585fdd8ef1d"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 28280,
+      "sha256": "2074acfb3371a6dfadb1ead357612203e461eeb7fcb3b1789b2e6d07c2673946"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 17378,
+      "sha256": "758126000c51fad5c7220b5de1a0649b7bb539a94c613688718f9211a83eeebb"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 4560,
+      "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/docs/18_PAYLOCK_PILOT_AND_VALIDATION_KO.md",
+      "bytes": 13924,
+      "sha256": "abf28e16741abf4cc8fd6783671681f2cd8e3090218c3ea8db68f8a083a54d96"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V42.md",
+      "bytes": 10718,
+      "sha256": "cbda053183c9f079bdaa6304b6c9d828469977d6f2f1d500f14d150e7f1b00ce"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V43.md",
+      "bytes": 9736,
+      "sha256": "c0d8846470d00ce4d7c03d4a0b09b1563a919f02507bebe9372d9d308c5cdd4b"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V44.md",
+      "bytes": 2842,
+      "sha256": "f5b143363bff1652c0333647ade794187b3ed155042aa0c1299bebcb158da59a"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/TEAM_PROPOSAL_SELECTION.md",
+      "bytes": 1114,
+      "sha256": "82c318ad8ee2c32001ab77b1b676901eeee5b3e68513decbaf216df4e8af6157"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/source_material/team_governance/PROJECT_INSTRUCTIONS_KO.md",
+      "bytes": 18872,
+      "sha256": "98204de7664d5ac7260fadd26b70cd85b2810cdf3d7276e86b172b1ab7d5362b"
+    },
+    {
+      "path": "[v4.4] IteraGuard_DoubtMeter/internal/source_material/team_proposals/#Uc758#Uc2ec#Uacc4_#Uc6b0#Uc2b9#Uae30#Ud68d#Uc11c_v1.0_ORIGINAL.md",
+      "bytes": 22324,
+      "sha256": "4d273c97cf35a96afb79390dea9f9f769e8221873e3520ff2a02ca770d8b3d52"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 13566,
+      "sha256": "0d7c7e79cca740bbd8c695f14ce9fc3578419dd9d3dc1021819b1c17c1f12922"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "bytes": 12008,
+      "sha256": "353e024e43601d7f47fc7961e01136de3a046b889dfde86045336cda632a044d"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/all.md",
+      "bytes": 85495,
+      "sha256": "e16e0af64093db80e2d1e6054eaade1cefa60235d6563770d1cb09dc5d644bc9"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 5715,
+      "sha256": "39399254bef184e366d9881fdf9c07f831de92880ea77986aab28c4aa36ea74b"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 4415,
+      "sha256": "74ffc870b2f7cabc758d38caefd8e7fea8c9b246121c80c0b6437c0bba733115"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 37333,
+      "sha256": "c63efc57b6f30062d3ef524b6d6c40ae536dc5c4a47ee2b7272cdbb296b9b68e"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 28280,
+      "sha256": "2074acfb3371a6dfadb1ead357612203e461eeb7fcb3b1789b2e6d07c2673946"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 17378,
+      "sha256": "758126000c51fad5c7220b5de1a0649b7bb539a94c613688718f9211a83eeebb"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/01_PRODUCT_REQUIREMENTS_PRD_KO.md",
+      "bytes": 37333,
+      "sha256": "c63efc57b6f30062d3ef524b6d6c40ae536dc5c4a47ee2b7272cdbb296b9b68e"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "bytes": 2099,
+      "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 4560,
+      "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 8173,
+      "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+      "bytes": 5759,
+      "sha256": "9ea69fe688cdc2f7f532993cff00e186333b40fba085588c3341d933886636a2"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/19_V45_ON_DEVICE_NLP_KO.md",
+      "bytes": 7025,
+      "sha256": "30a6cc0874296a2cb3868a5759f73cf29d5cb4c647f628e8de3b33f8a8b25494"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_SYSTEM_PROMPTING_v3_3.md",
+      "bytes": 24469,
+      "sha256": "dee859c03f19818d3a9099025b8f99d41502cc1895a108cde8da2b93b6f7226c"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V40.md",
+      "bytes": 9159,
+      "sha256": "24931fb48f520ab87a0e6ceae57d603e66e39271a2aa66697572899d9fd8dfdb"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V41.md",
+      "bytes": 6527,
+      "sha256": "1e2fcf2a63d8dad120868e4fae58151d8a3e034d742018491d6134147f8b1add"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V43.md",
+      "bytes": 9736,
+      "sha256": "c0d8846470d00ce4d7c03d4a0b09b1563a919f02507bebe9372d9d308c5cdd4b"
+    },
+    {
+      "path": "[v4.5] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/README.md",
+      "bytes": 9034,
+      "sha256": "dd74f92af8e2209ae100e9f487065297186d980d09d89a5ee7410ff2b331ef1d"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/all.md",
+      "bytes": 89661,
+      "sha256": "a8dcf64ac9e42b8d19c58cb13eb7532a18a4eb8d4f77dcedf3fb5732e900ac5d"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1143,
+      "sha256": "6c9dac0b0d1cf56d1333fea602d5d65d7bd48aef34dadb1cc14ce2fe45a66dab"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/apps/mobile/BUILD_IOS.md",
+      "bytes": 968,
+      "sha256": "dc7d94cc4730265894687ac5efc53c827c2406dc857a1a919a8318b8b137cab0"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 4415,
+      "sha256": "74ffc870b2f7cabc758d38caefd8e7fea8c9b246121c80c0b6437c0bba733115"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 37333,
+      "sha256": "c63efc57b6f30062d3ef524b6d6c40ae536dc5c4a47ee2b7272cdbb296b9b68e"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 28280,
+      "sha256": "2074acfb3371a6dfadb1ead357612203e461eeb7fcb3b1789b2e6d07c2673946"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 17378,
+      "sha256": "758126000c51fad5c7220b5de1a0649b7bb539a94c613688718f9211a83eeebb"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 28280,
+      "sha256": "2074acfb3371a6dfadb1ead357612203e461eeb7fcb3b1789b2e6d07c2673946"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/03_TRACEABILITY_MATRIX_KO.md",
+      "bytes": 17378,
+      "sha256": "758126000c51fad5c7220b5de1a0649b7bb539a94c613688718f9211a83eeebb"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 8173,
+      "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/15_CANDIDATE_DECISION_GATES_KO.md",
+      "bytes": 2203,
+      "sha256": "ea6da1a9011795f7b6110d3b09ba25b3e6d7f8d69992e950d3e3382669dec3a0"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/17_CURRENT_TECHNICAL_AUDIT_KO.md",
+      "bytes": 5759,
+      "sha256": "9ea69fe688cdc2f7f532993cff00e186333b40fba085588c3341d933886636a2"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/20_ZORO_RUNBOOK_AND_ENGINE_COMPARISON_KO.md",
+      "bytes": 5449,
+      "sha256": "c2285208dfd899a2ce3306df35b1c14d258cbaad17c2da44d733e53bdccfe118"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_PRD_v3_3.md",
+      "bytes": 23414,
+      "sha256": "718e23fabef55970ab9f2c8751e48f8500162f7e15844cb69822f460135676eb"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V39.md",
+      "bytes": 7027,
+      "sha256": "14263e1fd20516ae5ead38f8082bb87d4b20ad4c442e3d5cdfebd045ddcaede1"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V40.md",
+      "bytes": 9159,
+      "sha256": "24931fb48f520ab87a0e6ceae57d603e66e39271a2aa66697572899d9fd8dfdb"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V43.md",
+      "bytes": 9736,
+      "sha256": "c0d8846470d00ce4d7c03d4a0b09b1563a919f02507bebe9372d9d308c5cdd4b"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V44.md",
+      "bytes": 2842,
+      "sha256": "f5b143363bff1652c0333647ade794187b3ed155042aa0c1299bebcb158da59a"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V46.md",
+      "bytes": 7303,
+      "sha256": "7499f2cdd5a02efda6632ea4d8467cba8d4bceb39086fbf9987ea20b9a0bbc29"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/TEAM_PROPOSAL_SELECTION.md",
+      "bytes": 1114,
+      "sha256": "82c318ad8ee2c32001ab77b1b676901eeee5b3e68513decbaf216df4e8af6157"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 57959,
+      "sha256": "d3bf9f210405ee9743fb090adac96f4cdb953e263885af325f0d275a7f39656f"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/internal/source_material/reviewed_team_inputs/README_SOURCE_SCOPE.md",
+      "bytes": 1352,
+      "sha256": "00a109504cc121685f57539ba3de8ca726496768d1e544233db80f96887f1c94"
+    },
+    {
+      "path": "[v4.6] IteraGuard_DoubtMeter/models/v46/MODEL_CARD.md",
+      "bytes": 2286,
+      "sha256": "a5bfa06ee17910b41fab479d6c69db4d16bedeea1b73e449e6a89d1513334fd6"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/all.md",
+      "bytes": 93295,
+      "sha256": "4175a6a0bc7cb4b24d1fa298a32f2045b951c9b84cbafa67bd56f58879c59ff4"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 6204,
+      "sha256": "50f84ba515121548ec2a6ee259e9497f17e5549f1ad8fb7715bb2ad3235c8b4b"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1143,
+      "sha256": "6c9dac0b0d1cf56d1333fea602d5d65d7bd48aef34dadb1cc14ce2fe45a66dab"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 30756,
+      "sha256": "1d9af01b421b4ec364a749b74a611c336136378e2e15b98225c6a3c8ec350c33"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 18223,
+      "sha256": "acc213fcbc94caf9158edcbeb3e62d49b4eca2b1862c4361468c071d2bd633b6"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 29297,
+      "sha256": "a46d68ee6d7b2bf24aee8929c444c43063500d1c942f9fec31f07acb5d0a64b2"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "bytes": 2099,
+      "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 8173,
+      "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/16_ANNOTATED_EVALUATION_PROTOCOL_KO.md",
+      "bytes": 1954,
+      "sha256": "576207619737ee6124ab452e96d3d742044fbfbc6fabb25df343ff47912578ca"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/19_V45_ON_DEVICE_NLP_KO.md",
+      "bytes": 7025,
+      "sha256": "30a6cc0874296a2cb3868a5759f73cf29d5cb4c647f628e8de3b33f8a8b25494"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/21_TEAM_V33_ALIGNMENT_KO.md",
+      "bytes": 4788,
+      "sha256": "4945646f9fdfc0339f5bcf391ea4854d51ee69c34716f935ca9b240de7fa8264"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/22_V46_MULTITASK_LABELING_KO.md",
+      "bytes": 3574,
+      "sha256": "b0a13c062f1c6110e2b4b999ff6f2953134ead49109c135d70a3cd28e2f510e2"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/24_V47_ABSTENTION_ANALYSIS_KO.md",
+      "bytes": 9658,
+      "sha256": "6ba603a07b12c8e566d1a22400d9caf9d8d9114197560810923f0ac8090b8eec"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_PRD_v3_3.md",
+      "bytes": 23414,
+      "sha256": "718e23fabef55970ab9f2c8751e48f8500162f7e15844cb69822f460135676eb"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/DRIVE_SOURCE_AUDIT.md",
+      "bytes": 3276,
+      "sha256": "f7fff6ceddf245d4303bb917d7e0a39457738791ba24b9b68ef94bea389abfa2"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V41.md",
+      "bytes": 6527,
+      "sha256": "1e2fcf2a63d8dad120868e4fae58151d8a3e034d742018491d6134147f8b1add"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V44.md",
+      "bytes": 2842,
+      "sha256": "f5b143363bff1652c0333647ade794187b3ed155042aa0c1299bebcb158da59a"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V46.md",
+      "bytes": 7303,
+      "sha256": "7499f2cdd5a02efda6632ea4d8467cba8d4bceb39086fbf9987ea20b9a0bbc29"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V47.md",
+      "bytes": 1502,
+      "sha256": "528967b5c6b8af1c5138f24991162c4242ec01faca2abed7f8694582210b8bfd"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/TEAM_PROPOSAL_SELECTION.md",
+      "bytes": 1114,
+      "sha256": "82c318ad8ee2c32001ab77b1b676901eeee5b3e68513decbaf216df4e8af6157"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/VERSION_LEDGER.md",
+      "bytes": 61451,
+      "sha256": "62bb8a622a439dad84f3e459edcbcf1dfd2d33e8d0d5afa287bd2b39326e681f"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/evidence/v47/v47_validation_matrix.md",
+      "bytes": 4348,
+      "sha256": "56d6aa2d9a2ab12499852e2c70b92f249db3579b62804fdff17d4019d50c8945"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/source_material/reviewed_team_inputs/README_SOURCE_SCOPE.md",
+      "bytes": 1352,
+      "sha256": "00a109504cc121685f57539ba3de8ca726496768d1e544233db80f96887f1c94"
+    },
+    {
+      "path": "[v4.7] IteraGuard_DoubtMeter/internal/source_material/team_proposals/STATUS.md",
+      "bytes": 385,
+      "sha256": "e531aa5a781c9cefcf12326ba6ae84d31d7b4fbd1b06be5d2bfdd480b74444d8"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/IteraGuard_v4_8_Technical_Audit.md",
+      "bytes": 8373,
+      "sha256": "44161c5621a450bb59261dea21a19beaa4de094e65e22769e8cc5b99b1f610fa"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/all.md",
+      "bytes": 94402,
+      "sha256": "0a06e595ce143f1ffa2fa38dd82597cc4263dea1931d0505d42f9c9585f6ee73"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 6816,
+      "sha256": "4738b0b607fa9c7633884991ae4fd573b80f5d4015c27f0811b6f98f58b985e3"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1532,
+      "sha256": "51dd6644de38fdbf3b84ecbf4cfe5df37534ee3c8f11697274138d777a6cf675"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/SKILL.md",
+      "bytes": 31837,
+      "sha256": "9cf3f903ea75d4f6f817c8288d6274131c5a6a98466c32d3c64982b6d31cfe1e"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/references/EVALUATION.md",
+      "bytes": 4976,
+      "sha256": "f298e376f10c9738577da65fe4cf4518f31889dcb16a55769ddd0110d7f03a3e"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/references/PRD.md",
+      "bytes": 39610,
+      "sha256": "4a9bd77b9b16612460679eeee97ac6b849cddce6896e78b2172ae447f1414fce"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 18505,
+      "sha256": "4f880ae52ce3984533f9c44479a3223abc27beb36f1e3938a54b53b6ac8d58ff"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/02_SYSTEM_PROMPT_AGENT_KO.md",
+      "bytes": 29891,
+      "sha256": "2e3e646ad3302a0cc4144ef5248aceb226e89c08c9620bdcf3e1369e02013c3c"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/04_DEPLOYMENT_AND_VERIFICATION_KO.md",
+      "bytes": 4824,
+      "sha256": "d1622e9caa32a20c6c835e9172fde176b77890e272d6976af0e69c68cafbef72"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/06_SOURCE_INTEGRITY_AND_BARRIERS_KO.md",
+      "bytes": 4243,
+      "sha256": "098c974b1ba326040a072dc03650028f838cc53194327622432a5d81575f7d9e"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 4560,
+      "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/14_SECURITY_EVIDENCE_NPU_KO.md",
+      "bytes": 8173,
+      "sha256": "a6f9ded20378b6fcc0388a32b1ad051b63af144f8c1c002f2cf5bcc5930d5033"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/19_V45_ON_DEVICE_NLP_KO.md",
+      "bytes": 7025,
+      "sha256": "30a6cc0874296a2cb3868a5759f73cf29d5cb4c647f628e8de3b33f8a8b25494"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/24_V47_ABSTENTION_ANALYSIS_KO.md",
+      "bytes": 9658,
+      "sha256": "6ba603a07b12c8e566d1a22400d9caf9d8d9114197560810923f0ac8090b8eec"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/26_V48_DOMAIN_RISK_INTELLIGENCE_AND_ZORO_GATES_KO.md",
+      "bytes": 7502,
+      "sha256": "0e378fcd0e491d96b3a61f015aaba53385163d598bc18a42850e0c5c243ab49f"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_SYSTEM_PROMPTING_v3_3.md",
+      "bytes": 24469,
+      "sha256": "dee859c03f19818d3a9099025b8f99d41502cc1895a108cde8da2b93b6f7226c"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V39.md",
+      "bytes": 7027,
+      "sha256": "14263e1fd20516ae5ead38f8082bb87d4b20ad4c442e3d5cdfebd045ddcaede1"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V40.md",
+      "bytes": 9159,
+      "sha256": "24931fb48f520ab87a0e6ceae57d603e66e39271a2aa66697572899d9fd8dfdb"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V42.md",
+      "bytes": 10718,
+      "sha256": "cbda053183c9f079bdaa6304b6c9d828469977d6f2f1d500f14d150e7f1b00ce"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V43.md",
+      "bytes": 9736,
+      "sha256": "c0d8846470d00ce4d7c03d4a0b09b1563a919f02507bebe9372d9d308c5cdd4b"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V44.md",
+      "bytes": 2842,
+      "sha256": "f5b143363bff1652c0333647ade794187b3ed155042aa0c1299bebcb158da59a"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_AUDIT_V46.md",
+      "bytes": 7303,
+      "sha256": "7499f2cdd5a02efda6632ea4d8467cba8d4bceb39086fbf9987ea20b9a0bbc29"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/POST_RELEASE_CRITICAL_AUDIT_V38.md",
+      "bytes": 5552,
+      "sha256": "c9a992b4213c7679ccdba1ca42af56707ad70006b08b2b567b48f42e066f6389"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/evidence/v47/v47_validation_matrix.md",
+      "bytes": 4348,
+      "sha256": "56d6aa2d9a2ab12499852e2c70b92f249db3579b62804fdff17d4019d50c8945"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/evidence/v48/README.md",
+      "bytes": 137,
+      "sha256": "9136ea425224e77539a2ed69a67c4a973de2a957ae2d36caad1e2479f373908d"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/source_material/README_SOURCE_MATERIAL.md",
+      "bytes": 505,
+      "sha256": "9e8e454cca9c0d69119f4df86a9b64f6b5f84697175fdf5b4fe68308b0bad5f1"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/internal/source_material/reviewed_team_inputs/README_SOURCE_SCOPE.md",
+      "bytes": 1352,
+      "sha256": "00a109504cc121685f57539ba3de8ca726496768d1e544233db80f96887f1c94"
+    },
+    {
+      "path": "[v4.8] IteraGuard_DoubtMeter/models/v46/MODEL_CARD.md",
+      "bytes": 2286,
+      "sha256": "a5bfa06ee17910b41fab479d6c69db4d16bedeea1b73e449e6a89d1513334fd6"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/CURRENT_PROJECT_STATE.md",
+      "bytes": 1086,
+      "sha256": "1aa854c02a24caa711e20767b21447173c7024f2d020e3e6f904baee5e0968cb"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/DMSG_PRD_v4.9_20261104.md",
+      "bytes": 10005,
+      "sha256": "ac9781ebc68713d939a9091317ad39681a8fca0d895374758fc1bfaffb515599"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/DMSG_v4.9_UPGRADE_REPORT_20261104.md",
+      "bytes": 4108,
+      "sha256": "24457a6aa43e1c08d4af92e5999d52ae4871053bb6acc6101f7a4aa052599193"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/MASTER_HANDOFF_PROMPT.md",
+      "bytes": 1059,
+      "sha256": "7036e67b34014529ee263968eeacbba0dffdcfe502a23bab7df7f3c788bc86fd"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/README.md",
+      "bytes": 5086,
+      "sha256": "ef7199df72690b29d3051dc0458180efd59505342639a403fc724185fb2d7f98"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/apps/README.md",
+      "bytes": 6816,
+      "sha256": "4738b0b607fa9c7633884991ae4fd573b80f5d4015c27f0811b6f98f58b985e3"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/apps/mobile/BUILD_ANDROID.md",
+      "bytes": 1849,
+      "sha256": "a930959355299254b42f0182bbed41ac1c3192b1ae8b5b1e78d70e468d793d39"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/apps/mobile/BUILD_IOS.md",
+      "bytes": 968,
+      "sha256": "dc7d94cc4730265894687ac5efc53c827c2406dc857a1a919a8318b8b137cab0"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/README.md",
+      "bytes": 2373,
+      "sha256": "d01d2654b53e3341b5ffb05dc99c993837148db5ad9c9bb85f0027c5ab181ccb"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/assets/TEAM_WORKPLAN.md",
+      "bytes": 1730,
+      "sha256": "cbf0fcf05baafefb00ac04d87aff90dac1ed00d5a0c01895eb8392b70b4e3cd5"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5326,
+      "sha256": "82f71187e6ad874dd9fb804fe3ba37a4a4ecd276eb77b33c4caa1bdbd086d6dd"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 30434,
+      "sha256": "14d9846a267bd1992541bf4a2369947aa0eb26bed1156688912cbc4f20980a82"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/references/SYSTEM_PROMPTING_v49.md",
+      "bytes": 10089,
+      "sha256": "16be069850be39f110b2a5b54af864708cc6ddb3cf8acf678184904f51bcfefd"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/dmsg/references/TRACEABILITY.md",
+      "bytes": 18505,
+      "sha256": "4f880ae52ce3984533f9c44479a3223abc27beb36f1e3938a54b53b6ac8d58ff"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/05_ARCHITECTURE_SNM_4D_KO.md",
+      "bytes": 9077,
+      "sha256": "cd1d0c05f950dfe1bbd2e04fec13a5fc08f9ae19e988b11446764215ec5d56cb"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/07_DEMO_AND_PITCH_KO.md",
+      "bytes": 4807,
+      "sha256": "b4abeebb5b05b189d4366f1eebb22230d2d605aa076efcad20e47e0e72878bea"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/08_RELEASE_AND_DRIVE_WORKFLOW_KO.md",
+      "bytes": 2099,
+      "sha256": "dc43f99a272502a2766ad0b179f9d36cb2878b45c61bc889f661182205612a73"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/09_MODEL_ADVISORY_CONTRACT_KO.md",
+      "bytes": 4179,
+      "sha256": "84f8046de81ba302f195706a6d274a6b0c8a063438ffa17a29903f2220eb3be9"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/10_SNM_4D_REDTEAM_KO.md",
+      "bytes": 3363,
+      "sha256": "8b6daaf9f611d5fe204971ca1cec80040b37606ba0131d13b23e70d619938e31"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/11_MODEL_OPERATOR_GUIDE_KO.md",
+      "bytes": 4560,
+      "sha256": "40a24994e88f524667269bcdb9ab80c62bee64b6afa43068ead193a5f9afffa0"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/12_SNM_4D_THREAT_AND_ACCEPTANCE_KO.md",
+      "bytes": 6059,
+      "sha256": "093fc34fa5d8b7300bb0a880b4813007ec42b77bee741d945127e00ae4216b63"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/13_MODEL_QUALITY_EXPERIMENT_KO.md",
+      "bytes": 3173,
+      "sha256": "5da746acf7a67b2187eabe84529d994645b07ef907c5d240ddd2d0101277f0f3"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/19_V45_ON_DEVICE_NLP_KO.md",
+      "bytes": 7025,
+      "sha256": "30a6cc0874296a2cb3868a5759f73cf29d5cb4c647f628e8de3b33f8a8b25494"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/22_V46_MULTITASK_LABELING_KO.md",
+      "bytes": 3574,
+      "sha256": "b0a13c062f1c6110e2b4b999ff6f2953134ead49109c135d70a3cd28e2f510e2"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/24_V47_ABSTENTION_ANALYSIS_KO.md",
+      "bytes": 9658,
+      "sha256": "6ba603a07b12c8e566d1a22400d9caf9d8d9114197560810923f0ac8090b8eec"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/26_V48_DOMAIN_RISK_INTELLIGENCE_AND_ZORO_GATES_KO.md",
+      "bytes": 7502,
+      "sha256": "0e378fcd0e491d96b3a61f015aaba53385163d598bc18a42850e0c5c243ab49f"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/PRD_v4_9.md",
+      "bytes": 10005,
+      "sha256": "ac9781ebc68713d939a9091317ad39681a8fca0d895374758fc1bfaffb515599"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/PREVIOUS_V49_UPGRADE_REPORT.md",
+      "bytes": 8209,
+      "sha256": "54a2a9a33bfcc635b3f796d359c6656434df6115b62b1cda4d99e676f7426b9d"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/SYSTEM_PROMPTING_v4_9.md",
+      "bytes": 10089,
+      "sha256": "16be069850be39f110b2a5b54af864708cc6ddb3cf8acf678184904f51bcfefd"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/V49_UPGRADE_REPORT.md",
+      "bytes": 4108,
+      "sha256": "24457a6aa43e1c08d4af92e5999d52ae4871053bb6acc6101f7a4aa052599193"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_PRD_v3_3.md",
+      "bytes": 23414,
+      "sha256": "718e23fabef55970ab9f2c8751e48f8500162f7e15844cb69822f460135676eb"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/docs/team_v3_3/DMSG_SYSTEM_PROMPTING_v3_3.md",
+      "bytes": 24469,
+      "sha256": "dee859c03f19818d3a9099025b8f99d41502cc1895a108cde8da2b93b6f7226c"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/models/v46/MODEL_CARD.md",
+      "bytes": 2286,
+      "sha256": "a5bfa06ee17910b41fab479d6c69db4d16bedeea1b73e449e6a89d1513334fd6"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/SKILL.md",
+      "bytes": 31837,
+      "sha256": "9cf3f903ea75d4f6f817c8288d6274131c5a6a98466c32d3c64982b6d31cfe1e"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/ELENCHUS_SNM_4D.md",
+      "bytes": 4826,
+      "sha256": "2c87c035530c477b9931a381d23c73e60d8f6bc6c85dd106f1c5e5354d9e1f83"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/EVALUATION.md",
+      "bytes": 4976,
+      "sha256": "f298e376f10c9738577da65fe4cf4518f31889dcb16a55769ddd0110d7f03a3e"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/MODEL_CONTRACT.md",
+      "bytes": 5041,
+      "sha256": "f5ad97cb05604e421e85c9153f6e9fe9eba2ec91142405b108369c73296e2c98"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/PLATFORM_INSTALL.md",
+      "bytes": 2467,
+      "sha256": "011fd40722a23d666818599def814cee38e3d4d8ec3de00961012781da5888c4"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/PROMPTS.md",
+      "bytes": 3401,
+      "sha256": "590a7160e229d918c22563982209b2a9d63970569f63b7de1c8c32f0ea81ac01"
+    },
+    {
+      "path": "[v4.9] IteraGuard_DoubtMeter/vendor/dmsg/references/SYSTEM_PROMPT.md",
+      "bytes": 29891,
+      "sha256": "2e3e646ad3302a0cc4144ef5248aceb226e89c08c9620bdcf3e1369e02013c3c"
+    }
+  ]
+}

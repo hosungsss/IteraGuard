@@ -1,0 +1,9 @@
+test_full_lifecycle_with_recreated_server_and_same_database (test_session_http.SessionHttpTests.test_full_lifecycle_with_recreated_server_and_same_database) ... ok
+test_lifecycle_conflicting_retry_stale_and_origin (test_session_http.SessionHttpTests.test_lifecycle_conflicting_retry_stale_and_origin) ... ok
+test_manifest_failure_is_static_503_before_inference (test_session_http.SessionHttpTests.test_manifest_failure_is_static_503_before_inference) ... ok
+test_manifest_policy_is_server_owned (test_session_http.SessionHttpTests.test_manifest_policy_is_server_owned) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.722s
+
+OK
