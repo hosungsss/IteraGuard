@@ -170,11 +170,11 @@ function renderTask(item) {
   if (task && openTaskQueue.some(t => t.id === task)) el('taskQueue').value = task;
   if (task) {
     const observed = item.observation === 'UNRESOLVED' ? ' · 확인했지만 미해결로 보고됨' : '';
-    el('task').textContent = '열린 확인 작업' + observed + ' · ' + item.id + '\n' + (item.instruction || '독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.');
+    el('task').textContent = '열린 확인 작업' + observed + ' · #' + item.id.slice(0, 8) + '\n' + (item.instruction || '독립적으로 알고 있던 공식 경로에서 확인하세요. 실제 연락은 수행되지 않습니다.');
   } else if (item?.status === 'MODEL_RETRY_RESOLVED') {
-    el('task').textContent = '모델 재시도 완료 · ' + item.id;
+    el('task').textContent = '모델 재시도 완료 · #' + item.id.slice(0, 8);
   } else if (item) {
-    el('task').textContent = '확인 보고 보관 · ' + item.id + '\n사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 이전 위험 때문에 같은 확인 작업을 자동으로 반복 생성하지 않습니다.';
+    el('task').textContent = '확인 보고 보관 · #' + item.id.slice(0, 8) + '\n사용자가 입력한 확인 결과입니다. 기관에서 검증한 결과가 아닙니다. 이전 위험 때문에 같은 확인 작업을 자동으로 반복 생성하지 않습니다.';
   } else el('task').textContent = '현재 확인 작업 없음';
   el('observation').value = 'NOT_CHECKED';
 }

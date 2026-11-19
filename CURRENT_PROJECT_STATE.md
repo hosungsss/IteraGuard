@@ -18,3 +18,6 @@ v5.8 optional Rulebook System One bridge: rulebook/zoro_bridge.py can call the e
 
 
 V5.8 Rule Tweak Candidate 1 (2026-11-19): an independent bounded Korean warning/report observer is now attached to the Python Arena response path in SHADOW mode only. The original published v5.6/v5.1 semantic policy, persistent task processing, model transport, and optional industry Rulebook remain authoritative and unmodified. Enforce is blocked; optional DMSG_RULE_TWEAK_MODE=off disables observation. New independent evaluation, actual Zoro re-inference, browser/device/NPU validation and general accuracy gains remain NOT_VERIFIED. See docs/V58_RULE_TWEAK_SHADOW_REVIEW.md and exact commit CI.
+
+
+V5.9 source candidate (2026-11-19, branch feature/v59-arena-ui-performance): request-scoped contract verification makes the Arena evaluate path ~2.7x faster on controlled responses (p50 53.99 -> 19.59 ms) with byte-identical normalized decisions; the Arena web UI was redesigned (liquid glass, decision-process view, side sheet for session/evidence). Decision policy, model contract and persistence semantics are unchanged. Real Zoro-1 inference, deployed site, devices/NPU and independent evaluation remain NOT_VERIFIED. See docs/V59_ARENA_UI_AND_PERFORMANCE.md.
