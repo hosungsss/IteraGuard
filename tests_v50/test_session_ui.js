@@ -192,18 +192,32 @@ test('model failure and recovery remain distinct from unresolved session risk', 
     const inflight = a.get('run').dispatch('click'); await settle();
     a.pending.shift()(override); await inflight;
   };
-  const retained = { action: 'ASK_HUMAN', reason: 'PRIOR_RISK_UNRESOLVED' };
-  await submit({ ...retained, model_status: 'FAILED', current_turn_action: 'ASK_HUMAN' });
+  const payment = { id: TID, status: 'OPEN', type: 'PAUSE_AND_INDEPENDENT_CHECK',
+    observation: 'NOT_CHECKED', instruction: '송금을 보류하고 기존 거래처 연락처로 계좌를 확인하세요.', created_version: 1 };
+  const retry = { id: 'd'.repeat(32), status: 'OPEN', type: 'MODEL_RETRY', created_version: 2 };
+  await submit({ model_status: 'VALID', next_task: payment, open_tasks: [payment] });
+  assert.equal(a.get('modelNotice').textContent, '');
+  a.get('text').value = '내일 회의에 충전기를 가져와 주세요.';
+  await a.get('text').dispatch('input');
+  const retained = { action: 'ASK_HUMAN', reason: 'PRIOR_RISK_UNRESOLVED', next_task: payment };
+  await submit({ ...retained, model_status: 'FAILED', current_turn_action: 'ASK_HUMAN',
+    open_tasks: [payment, retry] });
   assert.match(a.get('nextAction').textContent, /연결 상태.*같은 문장/);
+  assert.match(a.get('nextAction').textContent, /이전 요청.*실행을 보류/);
   assert.match(a.get('message').textContent, /판단하지 못했습니다/);
   assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
+  assert.equal(a.get('modelNotice').textContent, '');
   assert.doesNotMatch(a.get('message').textContent, /현재 판단은 완료/);
   await submit({ ...retained, model_status: 'VALID', current_turn_action: 'NO_STRONG_SIGNAL',
-    resolved_retry_task_ids: ['retry'], next_task: undefined,
-    related_task: { id: TID, status: 'MODEL_RETRY_RESOLVED', observation: 'NOT_CHECKED' } });
-  assert.match(a.get('modelNotice').textContent, /기술 재시도 업무를 정리/);
-  assert.match(a.get('task').textContent, /모델 재시도 완료/);
-  assert.match(a.get('sessionNotice').textContent, /해제되지 않습니다/);
+    resolved_retry_task_ids: [retry.id], open_tasks: [payment] });
+  assert.match(a.get('modelNotice').textContent, /분석 복구 완료 · 같은 문장을 다시 분석/);
+  assert.match(a.get('currentTurn').textContent, /뚜렷한 위험 행동 요청 미감지/);
+  assert.match(a.get('task').textContent, /송금을 보류/);
+  assert.match(a.get('sessionNotice').textContent, /이전 요청 · 확인 대기.*해제되지 않습니다/);
+  assert.deepEqual(a.get('taskQueue').children.map(option => option.value), [payment.id]);
+  await submit({ ...retained, model_status: 'VALID', current_turn_action: 'NO_STRONG_SIGNAL', open_tasks: [payment] });
+  assert.equal(a.get('modelNotice').textContent, '');
+  assert.match(a.get('sessionNotice').textContent, /이전 요청 · 확인 대기/);
 });
 
 

@@ -194,7 +194,7 @@
     const kept = data.prior_risk_unresolved ? '\n기존 위험 보류 이력은 유지됩니다.' : '';
     append('assistant', '현재 판단 및 다음 단계',
       action + '\n' + String(data.message || '판단 근거를 확인해 주세요.') +
-      kept + '\n공식 경로로 직접 확인할 내용: ' + Number(data.task_count || 0) + '건',
+      kept + '\n미해결 업무 ' + Number(data.task_count || 0) + '건',
       source + ' · 채팅형 요약은 별도 모델 생성이 아님');
     status('지금까지의 판단을 유지하면서 상황별 후속 질문을 할 수 있습니다. 문장형 질문은 제한된 표현만 인식합니다.');
     setReady();

@@ -184,6 +184,7 @@ function decisionCopy(d) {
   const current = d.current_turn_action || d.action;
   const prior = d.reason === 'PRIOR_RISK_UNRESOLVED' || d.execution_trace?.session?.prior_pause_before === true;
   const failed = d.model_status === 'FAILED';
+  const recovered = d.model_status === 'VALID' && Array.isArray(d.resolved_retry_task_ids) && d.resolved_retry_task_ids.length > 0;
   const reason = d.current_turn_reason || d.reason;
   const descriptions = {
     NO_STRONG_SIGNAL: '이번 문장에서 뚜렷한 위험 행동 요청은 감지되지 않았습니다. 안전이 확인됐다는 뜻은 아닙니다.',
@@ -197,12 +198,14 @@ function decisionCopy(d) {
     V51_EXPLICIT_PAST_CREDENTIAL_REPORT: '이번 문장은 과거 요청을 인용한 내용이며, 현재 전달 요구는 확인되지 않았습니다.',
     USER_REQUESTED_REVIEW: '요청하신 대로 이번 문장을 사람의 검토 대상으로 남겼습니다.'
   };
-  let title = failed ? '이번 메시지를 분석하지 못했습니다' : prior ? '이번 분석과 이전 확인 사항을 구분해 주세요' :
-    current === 'PAUSE_AND_VERIFY' ? '요청을 실행하기 전에 확인하세요' : current === 'ASK_HUMAN' ? '요청 내용을 추가로 확인해 주세요' :
+  let title = failed ? '이번 메시지를 분석하지 못했습니다' :
+    current === 'PAUSE_AND_VERIFY' ? '요청을 실행하기 전에 확인하세요' :
+    prior ? '이전 요청은 확인이 필요합니다' : current === 'ASK_HUMAN' ? '요청 내용을 추가로 확인해 주세요' :
     current === 'CAUTION' ? '요청의 진위를 한 번 더 확인하세요' : '뚜렷한 위험 요청은 감지되지 않았습니다';
   const message = failed ? '모델 응답을 받지 못했거나 응답 검사에 실패했습니다. 이번 문장의 위험 여부는 판단하지 못했습니다.' :
     context[reason] || descriptions[current] || '이번 문장의 판단 정보를 확인할 수 없습니다.';
-  let next = failed ? '연결 상태를 확인한 뒤 같은 문장을 다시 분석하세요.' :
+  let next = failed ? '연결 상태를 확인한 뒤 같은 문장을 다시 분석하세요.' +
+    (prior ? ' 이전 요청은 기존 공식 경로로 확인할 때까지 실행을 보류하세요.' : '') :
     (prior || current === 'PAUSE_AND_VERIFY') ? '확인되지 않은 요청은 실행을 보류하고, 기존에 알고 있던 연락처로 요청 내용을 확인하세요.' :
     current === 'ASK_HUMAN' ? '누가 무엇을 요청하는지 확인하고, 필요한 경우 신뢰할 수 있는 담당자에게 검토를 요청하세요.' :
     current === 'CAUTION' ? '메시지에 적힌 연락처 대신 기존에 알고 있던 연락처로 요청 내용을 확인하세요.' : '';
@@ -211,16 +214,16 @@ function decisionCopy(d) {
   const spans = (d.evidence || []).filter(e => Number.isInteger(e.start) && Number.isInteger(e.end) && e.start >= 0 && e.end > e.start && e.end <= cp.length);
   const evidence = spans.map(e => cp.slice(e.start, e.end).join('')).join(' ');
   if (!failed && current === 'PAUSE_AND_VERIFY') {
-    if (/송금|이체|대금/.test(evidence)) { title = prior ? title : '송금하기 전에 요청을 확인하세요'; next = '송금을 보류하고, 기존에 알고 있던 상대방 연락처로 지급 요청과 계좌 정보를 확인하세요.'; }
+    if (/송금|이체|대금/.test(evidence)) { title = '송금하기 전에 요청을 확인하세요'; next = '송금을 보류하고, 기존에 알고 있던 상대방 연락처로 지급 요청과 계좌 정보를 확인하세요.'; }
     else if (/인증번호|비밀번호|OTP/i.test(evidence)) next = '요청받은 인증정보를 전달하지 말고, 본인이 시작한 절차인지 해당 서비스의 공식 경로에서 확인하세요.';
   }
   const tasks = Array.isArray(d.open_tasks) ? d.open_tasks : [];
   const earlier = tasks.filter(t => Number.isInteger(t.created_version) && Number.isInteger(d.version) && t.created_version < d.version);
   const count = Number.isInteger(d.open_task_count) ? d.open_task_count : tasks.length;
-  const history = (prior ? '이전 요청의 확인이 끝나지 않았습니다. 이번 결과나 사용자 완료 보고만으로 이전 위험이 해제되지 않습니다.' : '') +
+  const history = (prior ? '이전 요청 · 확인 대기. 이번 결과나 사용자 완료 보고만으로 이전 위험이 해제되지 않습니다.' : '') +
     (earlier.length ? ' 이전에 생성된 미해결 업무 ' + earlier.length + '건.' : '') +
     (count ? ' 이 분석 기록의 미해결 업무는 총 ' + count + '건입니다. 앱이 대신 확인하거나 자동으로 해결 처리하지는 않습니다.' : '');
-  return { title, message, next, history, current, failed };
+  return { title, message, next, history, current, failed, recovered };
 }
 function renderDecision(d) {
   const copy = decisionCopy(d);
@@ -234,7 +237,7 @@ function renderDecision(d) {
   el('currentTurn').textContent = '현재 문장: ' + (copy.failed ? '분석 실패 · 판단 불가' : labels[copy.current] || '확인 불가');
   el('sessionNotice').textContent = copy.history;
   el('sessionNotice').hidden = !copy.history;
-  el('modelNotice').textContent = !copy.failed && d.resolved_retry_task_ids?.length ? '같은 입력의 기술 재시도 업무를 정리했습니다. 별도의 확인 업무는 유지됩니다.' : '';
+  el('modelNotice').textContent = copy.recovered ? '분석 복구 완료 · 같은 문장을 다시 분석했습니다.' : '';
   el('executionSource').textContent = copy.failed ? '판단 출처: 모델 연결 또는 응답 검증 실패' : d.provenance?.execution_source === 'CONTROLLED_CLIENT' ? '판단 출처: 통제 응답 · 실제 모델 추론 아님' : '판단 출처: 모델 응답 · 체크포인트 신원 미인증';
 }
 function renderQueue(items) {

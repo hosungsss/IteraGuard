@@ -131,7 +131,7 @@
       failed ? '사람 확인 권고' : '서버 정책 결과 수신 · ' + (SHORT[action] || '추가 확인'));
     const n = Number.isInteger(d.open_task_count) ? d.open_task_count : (d.open_tasks || []).length;
     setStage('task', n ? 'warn' : 'done',
-      n ? '공식 경로에서 확인할 항목 ' + n + '건' : '추가 항목 정보 없음');
+      n ? '미해결 업무 ' + n + '건' : '추가 항목 정보 없음');
     $('pipeMeta').textContent = failed ? '모델 결과 검증 불가 · 사람 확인 안내' :
       '서버 응답 수신 · 화면 반영 중';
     setMode(failed ? 'warn' : 'ok',
