@@ -101,6 +101,17 @@ class SignalHttpTests(unittest.TestCase):
         self.assertEqual(set(result['scores']), {'red', 'orange', 'green', 'gray'})
         self.assertEqual(self.arena.read(sid), before)
 
+    def test_verify_profile_is_selected_by_server_only(self):
+        from arena.signal import PROFILES
+        self.server.signal_profile = 'verify'
+        body = {'text': '합성 안내', 'synthetic_only': True}
+        status, raw = self.request('POST', '/api/signal', body)
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(raw)['grade'], 'red')
+        self.assertEqual(self.model.requests[0][1]['questions'], PROFILES['verify'])
+        self.assertEqual(self.request('POST', '/api/signal', dict(body, profile='short'))[0], 400)
+        self.assertEqual(len(self.model.requests), 1)
+
     def test_rejects_invalid_or_cross_origin_inputs_before_inference(self):
         for payload, origin, want in [
             ({'text': '가상 문자'}, None, 400),

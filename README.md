@@ -160,3 +160,5 @@ The team's historical v5.6 bounded Korean warning/report candidate has been adap
 - 지금은 합성·비식별 테스트 전용이며 실제 SMS 개인정보, 원본 계좌정보, OTP, 비밀번호 전송을 허용하는 제품이라고 주장하지 않습니다. Zoro 실모델/정확도/실브라우저 반응형 완성은 별도 검증해야 합니다.
 - 검수: `docs/reviews/RULEBOOK_ZORO_REMEDIATION_REVIEW_CURRENT_20261119.md`; 동봉 원본 `docs/reviews/RULEBOOK_ZORO_REMEDIATION_PLAN_KO_20261119_SOURCE.md`. RB-1~9/ZP-1~10의 위험 검토를 수록하되 실제 정책 변경/가중치 학습은 수행하지 않았습니다.
 - 테스트: `python -m unittest discover -s tests_consumer -v` 및 `tests_remediation`, 기존 전 회귀검사. '진단 테스트 PASS'는 결함 해결이 아니라 **현행 결함을 재현했다는 뜻**입니다.
+
+한국어 신호등 개선 후보와 실제 모델 실행 명령은 [신호등 질문 비교 및 성능검증](docs/SIGNAL_PAIRED_EVALUATION_KO.md)에 정리했습니다.
