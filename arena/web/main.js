@@ -135,6 +135,7 @@ function renderLifecycle() {
   el('lifecycleNotice').textContent = isClosed() ? '보관은 위험 해제가 아닙니다. 이전 이력을 유지하며 재개할 수 있습니다.' : '확인을 마치지 못해도 미해결 상태로 보관할 수 있습니다. 재개 시 이전 위험과 업무 이력이 유지됩니다.';
 }
 function currentInputRequired(message) {
+  if (el('nextAction')) { el('nextAction').textContent = ''; el('nextAction').hidden = true; }
   if (el('verdictPanel')) el('verdictPanel').hidden = false;
   el('executionSource').textContent = '현재 입력의 실행 출처는 재평가 후 확인하세요.';
   el('action').textContent = 'ASK_HUMAN'; el('message').textContent = message;
@@ -142,6 +143,12 @@ function currentInputRequired(message) {
 }
 function renderDecision(d) {
   if (el('verdictPanel')) el('verdictPanel').hidden = false;
+  const next = d.next_task && d.next_task.status === 'OPEN' && typeof d.next_task.instruction === 'string'
+    ? d.next_task.instruction.trim() : '';
+  if (el('nextAction')) {
+    el('nextAction').textContent = next ? '다음으로 할 일 · ' + next : '';
+    el('nextAction').hidden = !next;
+  }
   el('executionSource').textContent = d.model_status === 'FAILED' ? '판단 출처: 모델 연결 또는 응답 검증 실패' : d.provenance?.execution_source === 'CONTROLLED_CLIENT' ? '판단 출처: 통제 응답 · 실제 모델 추론 아님' : '판단 출처: 모델 응답 · 체크포인트 신원 미인증';
   el('action').textContent = d.action; el('message').textContent = d.message; el('reason').textContent = d.reason;
   const contextNotes = {
@@ -228,6 +235,7 @@ async function start() {
   el('status').textContent = '새 세션 · ' + session.session_id;
   el('action').textContent = '평가 전'; el('message').textContent = '현재 문장을 판단해 주세요.';
   if (el('verdictPanel')) el('verdictPanel').hidden = true;
+  if (el('nextAction')) { el('nextAction').hidden = true; el('nextAction').textContent = ''; }
   for (const id of ['evidence', 'reason', 'task', 'result', 'currentTurn', 'sessionNotice', 'modelNotice']) el(id).textContent = '';
 
   el('observation').value = 'NOT_CHECKED'; renderLifecycle();
