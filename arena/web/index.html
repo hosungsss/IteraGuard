@@ -99,6 +99,50 @@
     </details>
   </section>
 
+  <section class="guided-chat glass" id="conversationPanel" aria-labelledby="conversationHeading">
+    <div class="conversation-heading">
+      <div>
+        <p class="eyebrow">INCIDENT RESPONSE / CONTINUOUS GUIDANCE</p>
+        <h2 id="conversationHeading">판단 이후에도, 상황을 이어서 확인하세요.</h2>
+        <p class="conversation-intro">원본 문자 판단은 Zoro 경로가 담당합니다. 후속 질문은 저장된 판단을 보존하면서 공식 대응 원칙을 적용하는 <strong>규칙 기반 안내</strong>입니다.</p>
+      </div>
+      <span class="conversation-pill">READ ONLY · NO AUTO ACTION</span>
+    </div>
+
+    <div class="conversation-workspace">
+      <div class="conversation-stream">
+        <div class="conversation-stream-header">
+          <span class="conversation-online" aria-hidden="true"></span>
+          <span>의심계 · 대응 대화</span>
+          <small>브라우저 메모리에서만 표시 · 대화 원문 저장 안 함</small>
+        </div>
+        <div id="conversationFeed" class="conversation-feed" role="log" aria-live="polite" aria-relevant="additions" aria-label="판단과 후속 상담 내역"></div>
+        <p id="conversationNotice" class="conversation-notice" role="status">원본 합성 문장을 먼저 판단해 주세요.</p>
+      </div>
+      <div class="conversation-compose">
+        <p class="conversation-eyebrow">FOLLOW-UP / 상황별 후속 질문</p>
+        <p class="conversation-help">추가 위험을 발견하거나 이미 행동했다면 아래에서 선택하세요. 자유 질문은 제한된 표현만 인식하며, 임의의 GPT 답변으로 대체하지 않습니다.</p>
+        <div class="conversation-choices" role="group" aria-label="빠른 사고 상황 질문">
+          <button type="button" data-followup="link_only">링크만 누르면?</button>
+          <button type="button" data-followup="clicked">이미 눌렀어요</button>
+          <button type="button" data-followup="downloaded">파일을 받았어요</button>
+          <button type="button" data-followup="installed">앱을 설치했어요</button>
+          <button type="button" data-followup="entered_secret">인증번호 입력</button>
+          <button type="button" data-followup="paid">이미 송금했어요</button>
+          <button type="button" data-followup="verify">공식 확인 방법</button>
+          <button type="button" data-followup="not_clicked">아직 안 눌렀어요</button>
+        </div>
+        <label for="followupText" class="field-label">후속 질문 (합성 상황만)</label>
+        <textarea id="followupText" rows="2" maxlength="300" placeholder="예: 링크만 누르고 인증번호를 안 넣으면 괜찮아?"></textarea>
+        <div class="conversation-send-row">
+          <p>Enter로 질문 · Shift+Enter 줄바꿈. 질문 원문은 서버에 전송하지 않습니다.</p>
+          <button id="sendFollowup" class="primary conversation-submit" type="button" disabled>질문 보내기 <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="conversation-legal">상담 안내는 일반적인 사고 대응 정보이며 사기 판정·악성코드 검사·실제 계정 보호 조치가 아닙니다. 앞서 감지한 위험은 이 대화로 해제되지 않습니다.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="tasks glass" id="taskPanel" aria-labelledby="taskHeading" data-empty="true">
     <div class="section-head">
       <h2 id="taskHeading">확인 업무</h2>
@@ -194,6 +238,7 @@
 <script src="/ambient3d.js"></script>
 <script src="/visual.js"></script>
 <script src="/main.js"></script>
+<script src="/chat.js"></script>
 <script src="/secondary.js"></script>
 <script src="/research.js"></script>
 </body>
