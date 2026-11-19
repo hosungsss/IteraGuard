@@ -1,0 +1,871 @@
+{
+  "schema": "iteraguard-signal-confirmation-evaluation/1",
+  "profile": "high-recall",
+  "expected_label_provenance": "PUBLIC_DEMO_CURATED_EXPECTATIONS",
+  "rules": {
+    "green": [
+      "green",
+      "gray"
+    ],
+    "orange": [
+      "orange",
+      "red"
+    ],
+    "red": [
+      "red",
+      "orange"
+    ]
+  },
+  "before": {
+    "surface": "PUBLIC_HTTPS_API_SIGNAL",
+    "commit": "39e2d78370d14eb6941b476bf04314fe57e2dde5",
+    "summary": {
+      "n": 15,
+      "accepted": 9,
+      "exact": 5,
+      "miss_ids": [
+        "1-3",
+        "2-3",
+        "2-4",
+        "2-5",
+        "3-1",
+        "3-5"
+      ]
+    },
+    "rows": [
+      {
+        "id": "1-1",
+        "title": "카드 승인 안내",
+        "input_sha256": "b8ec639fcba2c7cd4a442307c60c29cf5d1afdfd188674c5da109a4311e87071",
+        "expected": "green",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.4997,
+          "green": 0.111,
+          "orange": 0.2851,
+          "red": 0.1042
+        },
+        "pass": true,
+        "exact": false
+      },
+      {
+        "id": "1-2",
+        "title": "택배 배송 완료",
+        "input_sha256": "5d0187db3dc06e6c31e625d4360ac05eeda932cf11778ec3f29ca3fa1457c469",
+        "expected": "green",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.6199,
+          "green": 0.16,
+          "orange": 0.1709,
+          "red": 0.0492
+        },
+        "pass": true,
+        "exact": false
+      },
+      {
+        "id": "1-3",
+        "title": "본인인증 번호",
+        "input_sha256": "4514f8a20f53127c61acce7f0f6f4054ace775bc8ee73d7b42f7d2e0ae76691b",
+        "expected": "green",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "share_auth_secret",
+          "label": "비밀번호·인증번호 알려주기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.0425,
+          "green": 0.0114,
+          "orange": 0.1322,
+          "red": 0.814
+        },
+        "pass": false,
+        "exact": false
+      },
+      {
+        "id": "1-4",
+        "title": "병원 진료 예약",
+        "input_sha256": "e88922d5667ad0dc277899c546c1b976684b984872779176c580658cc878cd18",
+        "expected": "green",
+        "grade": "green",
+        "original_grade": "green",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.2417,
+          "green": 0.5813,
+          "orange": 0.1249,
+          "red": 0.0521
+        },
+        "pass": true,
+        "exact": true
+      },
+      {
+        "id": "1-5",
+        "title": "회의 자료 전달",
+        "input_sha256": "053cb380fb8ca09d1db7a2ba2a29fe2c860e7e38ba86214c985c6e0c0ae90085",
+        "expected": "green",
+        "grade": "gray",
+        "original_grade": "green",
+        "action": {
+          "id": "unknown",
+          "label": "불명확"
+        },
+        "reasons": [
+          "UNKNOWN_ACTION_NOT_NORMAL"
+        ],
+        "scores": {
+          "gray": 0.0616,
+          "green": 0.8539,
+          "orange": 0.0646,
+          "red": 0.0199
+        },
+        "pass": true,
+        "exact": false
+      },
+      {
+        "id": "2-1",
+        "title": "바우처 만료 광고",
+        "input_sha256": "72bc42e5718e314232fc7e227502a4557a83b54d0866304fcda013de063596fa",
+        "expected": "orange",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "링크·버튼을 열거나 일반 정보를 확인하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.1195,
+          "green": 0.067,
+          "orange": 0.6236,
+          "red": 0.1899
+        },
+        "pass": true,
+        "exact": true
+      },
+      {
+        "id": "2-2",
+        "title": "임시 번호로 지인 연락",
+        "input_sha256": "3e932d0b3bb2c981c49cc557dc76df195da52426761c2f806620fc6bf1fbd8be",
+        "expected": "orange",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "contact_reply_or_report",
+          "label": "전화·채팅으로 연락하거나 회신·신고하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.0712,
+          "green": 0.2094,
+          "orange": 0.6739,
+          "red": 0.0455
+        },
+        "pass": true,
+        "exact": true
+      },
+      {
+        "id": "2-3",
+        "title": "카드 배송 방문 안내",
+        "input_sha256": "ef00e5bfe4d2a0aacd823240b1dd2c41ad46597672c6fa9a70eb398341936164",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "contact_reply_or_report",
+          "label": "전화·채팅으로 연락하거나 회신·신고하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.458,
+          "green": 0.2487,
+          "orange": 0.2353,
+          "red": 0.058
+        },
+        "pass": false,
+        "exact": false
+      },
+      {
+        "id": "2-4",
+        "title": "전기요금 미납 안내",
+        "input_sha256": "f8eb6fde4c100ebf908085c3d3f9b8eab2dc6f7e679961ee93cb012b67d30887",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.4858,
+          "green": 0.1488,
+          "orange": 0.26,
+          "red": 0.1054
+        },
+        "pass": false,
+        "exact": false
+      },
+      {
+        "id": "2-5",
+        "title": "설문 참여 보상",
+        "input_sha256": "8e07d8a9cc27bd2bc0023449becece19cfd81cfd1025d77efa85778a1e3c106a",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "링크·버튼을 열거나 일반 정보를 확인하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.5136,
+          "green": 0.1301,
+          "orange": 0.2548,
+          "red": 0.1015
+        },
+        "pass": false,
+        "exact": false
+      },
+      {
+        "id": "3-1",
+        "title": "수사기관 출석요구 사칭",
+        "input_sha256": "294cd094cffa636e6d566f9c843314dd380523b876fd299b8fe8f181c9909bf1",
+        "expected": "red",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "링크·버튼을 열거나 일반 정보를 확인하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.3531,
+          "green": 0.0946,
+          "orange": 0.2029,
+          "red": 0.3494
+        },
+        "pass": false,
+        "exact": false
+      },
+      {
+        "id": "3-2",
+        "title": "가족 사칭 금융정보 요구",
+        "input_sha256": "5347fbcec05d3f6dbabbacd299c4f7c60aa099eb1dbb9f7174a0800dc0c838a2",
+        "expected": "red",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "submit_identity_info",
+          "label": "개인정보·신분증·본인확인 사진 보내기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.0107,
+          "green": 0.0817,
+          "orange": 0.3176,
+          "red": 0.5899
+        },
+        "pass": true,
+        "exact": true
+      },
+      {
+        "id": "3-3",
+        "title": "고액 해외 결제 취소 전화",
+        "input_sha256": "93cde1cd1301d7d9c8aef47fd43d013640441db072ad128353829f637758c7d1",
+        "expected": "red",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.0923,
+          "green": 0.0251,
+          "orange": 0.2926,
+          "red": 0.59
+        },
+        "pass": true,
+        "exact": true
+      },
+      {
+        "id": "3-4",
+        "title": "정부지원금 신청 사칭",
+        "input_sha256": "9365eb4437fe56478b50bb432c5460b620c096f9c56ed1ee414ace8082730a47",
+        "expected": "red",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "apply_for_service",
+          "label": "서비스를 신청하거나 내 명의로 진행하도록 허락하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.2616,
+          "green": 0.0825,
+          "orange": 0.4995,
+          "red": 0.1565
+        },
+        "pass": true,
+        "exact": false
+      },
+      {
+        "id": "3-5",
+        "title": "택배 주소 변경 사칭",
+        "input_sha256": "0929eb1bbc43317d8ab55d9831768a3bc09c5738b4d1d5f551502df6ba713972",
+        "expected": "red",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "링크·버튼을 열거나 일반 정보를 확인하기"
+        },
+        "reasons": [],
+        "scores": {
+          "gray": 0.5978,
+          "green": 0.0906,
+          "orange": 0.2094,
+          "red": 0.1022
+        },
+        "pass": false,
+        "exact": false
+      }
+    ]
+  },
+  "candidate": {
+    "source_base_commit": "39e2d78370d14eb6941b476bf04314fe57e2dde5",
+    "surface": "LOCAL_SIGNAL_EVALUATOR_LIVE_ZORO",
+    "q_action_config_sha256": "5b8772b6dccd10f66308f123b72a01ee9b22818035ea1e48f32ff7e50c3b2a98",
+    "summary": {
+      "n": 15,
+      "accepted": 9,
+      "exact": 6,
+      "miss_ids": [
+        "1-3",
+        "2-3",
+        "2-4",
+        "2-5",
+        "3-1",
+        "3-5"
+      ]
+    },
+    "rows": [
+      {
+        "id": "1-1",
+        "title": "카드 승인 안내",
+        "input_sha256": "b8ec639fcba2c7cd4a442307c60c29cf5d1afdfd188674c5da109a4311e87071",
+        "expected": "green",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1042,
+          "orange": 0.2851,
+          "green": 0.111,
+          "gray": 0.4997
+        },
+        "pass": true,
+        "exact": false,
+        "action_scores_top3": {
+          "no_request": 0.9356,
+          "unknown": 0.0435,
+          "contact_reply_or_report": 0.005
+        }
+      },
+      {
+        "id": "1-2",
+        "title": "택배 배송 완료",
+        "input_sha256": "5d0187db3dc06e6c31e625d4360ac05eeda932cf11778ec3f29ca3fa1457c469",
+        "expected": "green",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.0492,
+          "orange": 0.1709,
+          "green": 0.16,
+          "gray": 0.6199
+        },
+        "pass": true,
+        "exact": false,
+        "action_scores_top3": {
+          "no_request": 0.9421,
+          "check_content_or_link": 0.0353,
+          "unknown": 0.0129
+        }
+      },
+      {
+        "id": "1-3",
+        "title": "본인인증 번호",
+        "input_sha256": "4514f8a20f53127c61acce7f0f6f4054ace775bc8ee73d7b42f7d2e0ae76691b",
+        "expected": "green",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "share_auth_secret",
+          "label": "비밀번호·인증번호 알려주기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.814,
+          "orange": 0.1322,
+          "green": 0.0114,
+          "gray": 0.0425
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "share_auth_secret": 0.6829,
+          "login_or_verify": 0.1468,
+          "check_content_or_link": 0.1216
+        }
+      },
+      {
+        "id": "1-4",
+        "title": "병원 진료 예약",
+        "input_sha256": "e88922d5667ad0dc277899c546c1b976684b984872779176c580658cc878cd18",
+        "expected": "green",
+        "grade": "green",
+        "original_grade": "green",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.0521,
+          "orange": 0.1249,
+          "green": 0.5813,
+          "gray": 0.2417
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "no_request": 0.5607,
+          "submit_identity_info": 0.2695,
+          "unknown": 0.0978
+        }
+      },
+      {
+        "id": "1-5",
+        "title": "회의 자료 전달",
+        "input_sha256": "053cb380fb8ca09d1db7a2ba2a29fe2c860e7e38ba86214c985c6e0c0ae90085",
+        "expected": "green",
+        "grade": "green",
+        "original_grade": "green",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "자료 확인"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.0199,
+          "orange": 0.0646,
+          "green": 0.8539,
+          "gray": 0.0616
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "check_content_or_link": 0.5519,
+          "unknown": 0.1977,
+          "open_attachment": 0.1179
+        }
+      },
+      {
+        "id": "2-1",
+        "title": "바우처 만료 광고",
+        "input_sha256": "72bc42e5718e314232fc7e227502a4557a83b54d0866304fcda013de063596fa",
+        "expected": "orange",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "자료 확인"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1899,
+          "orange": 0.6236,
+          "green": 0.067,
+          "gray": 0.1195
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "check_content_or_link": 0.4411,
+          "unknown": 0.2203,
+          "no_request": 0.1925
+        }
+      },
+      {
+        "id": "2-2",
+        "title": "임시 번호로 지인 연락",
+        "input_sha256": "3e932d0b3bb2c981c49cc557dc76df195da52426761c2f806620fc6bf1fbd8be",
+        "expected": "orange",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "contact_reply_or_report",
+          "label": "전화·채팅으로 연락하거나 회신·신고하기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.0455,
+          "orange": 0.6739,
+          "green": 0.2094,
+          "gray": 0.0712
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "contact_reply_or_report": 0.7838,
+          "unknown": 0.1555,
+          "no_request": 0.0478
+        }
+      },
+      {
+        "id": "2-3",
+        "title": "카드 배송 방문 안내",
+        "input_sha256": "ef00e5bfe4d2a0aacd823240b1dd2c41ad46597672c6fa9a70eb398341936164",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "contact_reply_or_report",
+          "label": "전화·채팅으로 연락하거나 회신·신고하기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.058,
+          "orange": 0.2353,
+          "green": 0.2487,
+          "gray": 0.458
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "contact_reply_or_report": 0.6735,
+          "no_request": 0.2511,
+          "unknown": 0.0344
+        }
+      },
+      {
+        "id": "2-4",
+        "title": "전기요금 미납 안내",
+        "input_sha256": "f8eb6fde4c100ebf908085c3d3f9b8eab2dc6f7e679961ee93cb012b67d30887",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1054,
+          "orange": 0.26,
+          "green": 0.1488,
+          "gray": 0.4858
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "no_request": 0.4602,
+          "unknown": 0.2677,
+          "send_payment": 0.0875
+        }
+      },
+      {
+        "id": "2-5",
+        "title": "설문 참여 보상",
+        "input_sha256": "8e07d8a9cc27bd2bc0023449becece19cfd81cfd1025d77efa85778a1e3c106a",
+        "expected": "orange",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1015,
+          "orange": 0.2548,
+          "green": 0.1301,
+          "gray": 0.5136
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "no_request": 0.5232,
+          "check_content_or_link": 0.274,
+          "unknown": 0.1161
+        }
+      },
+      {
+        "id": "3-1",
+        "title": "수사기관 출석요구 사칭",
+        "input_sha256": "294cd094cffa636e6d566f9c843314dd380523b876fd299b8fe8f181c9909bf1",
+        "expected": "red",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "자료 확인"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.3494,
+          "orange": 0.2029,
+          "green": 0.0946,
+          "gray": 0.3531
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "check_content_or_link": 0.6359,
+          "unknown": 0.1113,
+          "open_attachment": 0.1027
+        }
+      },
+      {
+        "id": "3-2",
+        "title": "가족 사칭 금융정보 요구",
+        "input_sha256": "5347fbcec05d3f6dbabbacd299c4f7c60aa099eb1dbb9f7174a0800dc0c838a2",
+        "expected": "red",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "submit_identity_info",
+          "label": "개인정보·신분증·본인확인 사진 보내기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.5899,
+          "orange": 0.3176,
+          "green": 0.0817,
+          "gray": 0.0107
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "submit_identity_info": 0.6846,
+          "share_auth_secret": 0.1622,
+          "check_content_or_link": 0.0445
+        }
+      },
+      {
+        "id": "3-3",
+        "title": "고액 해외 결제 취소 전화",
+        "input_sha256": "93cde1cd1301d7d9c8aef47fd43d013640441db072ad128353829f637758c7d1",
+        "expected": "red",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "no_request",
+          "label": "현재 요청 없음"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.59,
+          "orange": 0.2926,
+          "green": 0.0251,
+          "gray": 0.0923
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "no_request": 0.7328,
+          "contact_reply_or_report": 0.1021,
+          "unknown": 0.101
+        }
+      },
+      {
+        "id": "3-4",
+        "title": "정부지원금 신청 사칭",
+        "input_sha256": "9365eb4437fe56478b50bb432c5460b620c096f9c56ed1ee414ace8082730a47",
+        "expected": "red",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "apply_for_service",
+          "label": "서비스를 신청하거나 내 명의로 진행하도록 허락하기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1565,
+          "orange": 0.4995,
+          "green": 0.0825,
+          "gray": 0.2616
+        },
+        "pass": true,
+        "exact": false,
+        "action_scores_top3": {
+          "apply_for_service": 0.9179,
+          "no_request": 0.0332,
+          "check_content_or_link": 0.0238
+        }
+      },
+      {
+        "id": "3-5",
+        "title": "택배 주소 변경 사칭",
+        "input_sha256": "0929eb1bbc43317d8ab55d9831768a3bc09c5738b4d1d5f551502df6ba713972",
+        "expected": "red",
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "check_content_or_link",
+          "label": "자료 확인"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.1022,
+          "orange": 0.2094,
+          "green": 0.0906,
+          "gray": 0.5978
+        },
+        "pass": false,
+        "exact": false,
+        "action_scores_top3": {
+          "check_content_or_link": 0.2377,
+          "unknown": 0.2332,
+          "no_request": 0.1903
+        }
+      }
+    ],
+    "additional_synthetic_checks": [
+      {
+        "id": "check-auth",
+        "title": "자료 검토 명목의 인증번호 요청",
+        "input_sha256": "66f9d19e22338292050a39ca398071a505d2c5f721ae0518e2fa9c3c546b2924",
+        "expected": "red",
+        "grade": "red",
+        "original_grade": "red",
+        "action": {
+          "id": "share_auth_secret",
+          "label": "비밀번호·인증번호 알려주기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.7535,
+          "orange": 0.2144,
+          "green": 0.016,
+          "gray": 0.0162
+        },
+        "pass": true,
+        "exact": true,
+        "action_scores_top3": {
+          "share_auth_secret": 0.9741,
+          "check_content_or_link": 0.0197,
+          "open_attachment": 0.0014
+        }
+      },
+      {
+        "id": "check-payment",
+        "title": "자료 검토 명목의 새 계좌 송금",
+        "input_sha256": "8c5155bd2b41b8bc2e3571f0cddd40792a8c60adda91de358f993ce1b72df085",
+        "expected": "red",
+        "grade": "orange",
+        "original_grade": "orange",
+        "action": {
+          "id": "send_payment",
+          "label": "송금·결제·대납하기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.4057,
+          "orange": 0.4585,
+          "green": 0.05,
+          "gray": 0.0857
+        },
+        "pass": true,
+        "exact": false,
+        "action_scores_top3": {
+          "send_payment": 0.3298,
+          "pay_to_changed_account": 0.3236,
+          "open_attachment": 0.2075
+        }
+      },
+      {
+        "id": "check-generic",
+        "title": "대상 없는 확인 요청",
+        "input_sha256": "c365453edc19c9b5bfddb10d9e626493dde8f71b7314b3c090b0b159434a945d",
+        "expected": null,
+        "grade": "gray",
+        "original_grade": "gray",
+        "action": {
+          "id": "unknown",
+          "label": "불명확"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.0222,
+          "orange": 0.0509,
+          "green": 0.1736,
+          "gray": 0.7532
+        },
+        "pass": null,
+        "exact": false,
+        "action_scores_top3": {
+          "unknown": 0.8903,
+          "no_request": 0.0228,
+          "check_content_or_link": 0.0207
+        }
+      },
+      {
+        "id": "check-attach",
+        "title": "업무 메일 첨부파일 검토 요청",
+        "input_sha256": "bfd456e44fb1789fc8e120479653f61d00674402ba836574a0bab320e55c57b6",
+        "expected": null,
+        "grade": "green",
+        "original_grade": "green",
+        "action": {
+          "id": "open_attachment",
+          "label": "첨부파일 열기·읽기·검토하기"
+        },
+        "reasons": [],
+        "scores": {
+          "red": 0.135,
+          "orange": 0.2976,
+          "green": 0.363,
+          "gray": 0.2044
+        },
+        "pass": null,
+        "exact": false,
+        "action_scores_top3": {
+          "open_attachment": 0.9687,
+          "check_content_or_link": 0.0202,
+          "contact_reply_or_report": 0.0048
+        }
+      }
+    ]
+  }
+}

@@ -83,6 +83,27 @@ class SignalHttpTests(unittest.TestCase):
         finally:
             conn.close()
 
+    def test_material_review_choice_is_forwarded_and_displayed_in_green_result(self):
+        action = 'check_content_or_link'
+        self.model.answers['q_action'].update(
+            choice=action, probabilities={key: float(key == action) for key in ACTION_QUESTION['criteria']},
+        )
+        self.model.answers['q_signal'].update(
+            choice='green', probabilities={'red': .01, 'orange': .04, 'green': .9, 'gray': .05},
+        )
+        text = '회의 자료를 메일로 보냈습니다. 확인하시고 수정할 부분이 있으면 말씀해 주세요.'
+        status, raw = self.request('POST', '/api/signal', {'text': text, 'synthetic_only': True})
+        self.assertEqual(status, 200)
+        result = json.loads(raw)
+        self.assertEqual(result['grade'], 'green')
+        self.assertEqual(result['requested_action'], {'id': action, 'label': '자료 확인'})
+        self.assertFalse(result['context_review']['adjusted'])
+        criteria = self.model.requests[0][1]['questions']['q_action']['criteria']
+        self.assertEqual(len(criteria), 20)
+        self.assertIn('검토', criteria[action])
+        self.assertIn('수정', criteria[action])
+        self.assertIn('링크', criteria[action])
+
     def test_assets_and_two_questions_without_session_change(self):
         status, page = self.request('GET', '/')
         self.assertEqual(status, 200)
