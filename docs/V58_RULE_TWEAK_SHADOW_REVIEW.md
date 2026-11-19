@@ -35,3 +35,6 @@ NPU: no device inference; this is CPU/Python bounded grammar only. No accelerati
 
 ## Rollback and provenance
 Revert this PR. Original archived ZIP remains outside public Git; only the tailored logic and SHA reference are published. The old baseline manifest is preserved. Since the observer is side-effect-free, no DB migration is necessary; active sessions must not be deleted. Disable immediately with DMSG_RULE_TWEAK_MODE=off if instrumentation causes unexpected overhead. Protect private logs, tokens, backups and raw personal messages.
+
+## CI/environment compatibility note
+Baseline v51 semantic JS-data source was generated under Unicode 15.0; the historic full regression expects that exact version. CI uses Python 3.12. Initial Python 3.11 verification failed with STALE_V51_SEMANTIC_DATA and was not counted as a new product failure. Expanded Node UI verification also required graceful handling of absent querySelectorAll in the minimal DOM test harness; normal browser functionality remains available. Do not mistake either test-environment repair for a change in model accuracy.
