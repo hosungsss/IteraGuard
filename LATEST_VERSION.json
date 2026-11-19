@@ -16,5 +16,8 @@
   "arena_footer_copy": "",
   "arena_top_runtime_copy_visible": false,
   "arena_topbar_visible": false,
-  "sphere_connection_indicator": "RECENT_VALID_MODEL_RESPONSE_60S"
+  "sphere_connection_indicator": "RECENT_VALID_MODEL_RESPONSE_60S",
+  "project_authored_license": "Apache-2.0",
+  "license_scope": "LICENSE_SCOPE.md",
+  "full_rights_clearance_verified": false
 }

@@ -195,3 +195,5 @@ Risks: sample selection/source publication biases, no actual ground-truth, no Zo
 2026-11-19: User explicitly requested removal of the entire top bar, including logo, mode badge and session/history button. Remove header markup and guard optional sheet opener references to prevent startup errors. Session backend unchanged; header entry point removed. Hosted deployment not verified.
 
 2026-11-19: Sphere connection label/glow follows recent VALID LOCAL_HTTP_MODEL_UNATTESTED responses with response hash. Fixtures never show connected; transport/model failure clears it; expires after 60 seconds. No health polling or checkpoint attestation; first real evaluation required. Reduced motion disables glow animation.
+
+2026-11-19: Maintainer-authorized Apache-2.0 grant for original project work; preserve third-party/mixed terms via LICENSE_SCOPE, NOTICE, THIRD_PARTY_NOTICES, legal texts and asset sidecars. Historical binaries/model/data bytes unchanged. Static inventory check added; full rights clearance and legacy standalone-package compliance NOT_ASSERTED. See docs/licensing/REVIEW_20261119.md.

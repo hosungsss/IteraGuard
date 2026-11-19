@@ -1,0 +1,20 @@
+{
+  "checked": "2026-11-19",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+    },
+    {
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "source": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt"
+    },
+    {
+      "path": "LICENSES/kakaotalk-chat-analyzer-MIT.txt",
+      "sha256": "2e0d900fe2626afd7f5459ff887540db6a630d947cbdd25d1b9a0c5a0409e7d4",
+      "source": "https://github.com/claudianus/kakaotalk-chat-analyzer/blob/main/LICENSE"
+    }
+  ]
+}
