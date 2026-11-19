@@ -100,7 +100,7 @@ python -X utf8 -m arena.server --port 8769 --signal-benchmark-csv /path/to/test.
 
 ## 검증과 참고 문서
 
-**트랙 1 실행 로그 3종**을 최신 소스 `62c0acf`에서 실제 로컬 Zoro로 새로 기록했습니다. 인증번호 요구·경고 구분, 송금 위험과 업무 보존, 실험 연결 단절·복구를 각각 검증했습니다. [A · 인증번호 요구와 경고](docs/execution-logs/2026-11-20/A_credential_request.json) · [B · 송금 위험과 업무 유지](docs/execution-logs/2026-11-20/B_retained_payment_risk.json) · [C · 연결 실패 후 복구](docs/execution-logs/2026-11-20/C_transport_failure_recovery.json) · [실행 조건과 읽는 법](docs/execution-logs/2026-11-20/README.md)
+**트랙 1 실행 로그 3종**은 실제 로컬 Zoro로 검증했습니다. A와 B는 소스 `62c0acf`에서 실행했고, C는 `778eed8`에 복구 안내를 수정해 브라우저에서 다시 실행했습니다. [A · 인증번호 요구와 경고](docs/execution-logs/2026-11-20/A_credential_request.json) · [B · 송금 위험과 업무 유지](docs/execution-logs/2026-11-20/B_retained_payment_risk.json) · [C · 연결 실패 후 복구](docs/execution-logs/2026-11-20/C_transport_failure_recovery_ui.json) · [실행 조건과 읽는 법](docs/execution-logs/2026-11-20/README.md)
 
 ```bash
 python -X utf8 -m unittest discover -s tests_v56 -v
