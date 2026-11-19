@@ -1,7 +1,7 @@
 name: v5.8 rulebook contracts
 on:
   push:
-    branches: [feature/v58-rulebook-governance, main]
+    branches: [feature/v58-rulebook-governance, feature/v58-jev-114-opt-in-text-studio, main]
   pull_request:
     branches: [main]
 permissions:
