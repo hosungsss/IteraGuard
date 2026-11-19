@@ -1,7 +1,7 @@
 name: v5.8 rulebook contracts
 on:
   push:
-    branches: [feature/v58-rulebook-governance, feature/v59-evidence-jev-ambient3d, main]
+    branches: [feature/v58-rulebook-governance, feature/v59-evidence-jev-ambient3d, feature/v59-guided-incident-conversation, main]
   pull_request:
     branches: [main]
 permissions:
@@ -22,13 +22,14 @@ jobs:
           python -m unittest discover -s tests_rule_tweak_shadow -v
           python -m unittest discover -s tests_v59 -v
           python -m unittest discover -s tests_secondary -v
+          python -m unittest discover -s tests_conversation -v
           python -m unittest discover -s tests_v56 -v
           python -m unittest discover -s tests_v54 -v
           python -m unittest discover -s tests_v51 -v
           python -m unittest discover -s tests_demo_validation -v
           node --test tests_demo_validation/test_api_ui.js
           node --test tests_demo_validation/test_recovery.js
-          node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js tests_secondary/test_secondary_ui.js tests_v59/test_ambient_research_ui.js
+          node --test tests_v50/test_session_ui.js tests_v53/test_choice_ui.js tests_secondary/test_secondary_ui.js tests_v59/test_ambient_research_ui.js tests_conversation/test_guided_chat_ui.js
       - name: Python and JavaScript syntax
         run: |
           python -m compileall -q rulebook arena integration/rule_tweak_shadow.py integration/v51.py integration/v51_profiles.py tools/v59 tools/rulebook_preview_v58.py tools/rulebook_live_v58.py
@@ -37,6 +38,7 @@ jobs:
           node --check arena/web/ambient3d.js
           node --check arena/web/secondary.js
           node --check arena/web/research.js
+          node --check arena/web/chat.js
       - name: Append-only ledgers and required docs
         run: |
           python - <<'PY'
@@ -48,7 +50,7 @@ jobs:
               if old.returncode != 0: raise SystemExit('LEDGER_BASE_UNAVAILABLE '+path)
               if not Path(path).read_bytes().startswith(old.stdout):
                   raise SystemExit('LEDGER_NOT_APPEND_ONLY '+path)
-          for path in ('AGENTS.md','docs/V58_RULEBOOK_ARCHITECTURE.md','CURRENT_PROJECT_STATE.md'):
+          for path in ('AGENTS.md','docs/V58_RULEBOOK_ARCHITECTURE.md','CURRENT_PROJECT_STATE.md','docs/V59_GUIDED_CONVERSATION_ARCHITECTURE.md'):
               if not Path(path).is_file(): raise SystemExit('MISSING_REQUIRED '+path)
           print('APPEND_ONLY_AND_REQUIRED_DOCS_OK')
           PY
