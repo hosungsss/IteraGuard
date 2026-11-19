@@ -276,3 +276,9 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 - 소스 기준 `d283fad44b2f629abf7a46220656b94dd61ae74e`. README를 현재 진입 화면, 고감도 교차 확인, 551건 실측과 로컬 재측정 순으로 정리했다.
 - 벤치마크 집계는 기존 API 실측을 인용한다. 관련 명령과 링크를 소스와 대조했다.
+
+
+## 2026-11-20 KST · 고려대 테스트 데이터 출처 검증
+
+- 소스 기준 `23ea23a8a7f5d75078644e11363c26a3cf4ffab7`. 공식 고정 CSV와 로컬 551건의 지문·라벨 건수를 확인했다.
+- 원저장소의 고정 README와 파일 목록에서 CSV 재배포 조건을 찾지 못했고, 공식 Zoro-1 실측 리비전의 가중치 LICENSE는 Apache-2.0을 확인했다. [외부 자료 고지](../THIRD_PARTY_NOTICES.md)

@@ -21,9 +21,9 @@
 
 상세 Arena는 별도 평가 경로를 사용합니다. Zoro의 후보 선택과 예·아니오 응답을 현재 문장의 근거와 함께 읽어 조치를 정합니다. 확인 업무와 기록은 SQLite에 저장됩니다. [Arena 시연과 검증 범위](docs/V56_ARENA_DEMO_UPDATE.md)
 
-## 로컬 Zoro 실측
+## 피싱 탐지율 실측
 
-**피싱 탐지율 34.0% → 84.0%**로, 같은 피싱 50건 중 **25건을 더 탐지**했습니다. 고정 테스트는 한국어 메시지 551건이며 정상 501건과 피싱 50건으로 구성됩니다.
+같은 한국어 테스트 551건에서 **피싱 탐지율이 34.0% → 84.0%**로 올랐습니다. 피싱 탐지율은 피싱으로 라벨된 50건 중 빨강·주황 경보가 나온 비율입니다.
 
 | 적용 조건 | 피싱 탐지율 | 정상 탐지율 |
 | --- | ---: | ---: |
@@ -31,9 +31,24 @@
 | 고감도 질문과 문맥 보정 | 78.0% (39/50) | 88.2% (442/501) |
 | **현재 기본값** · 고감도 질문과 고위험 행동 교차 확인 | **84.0% (42/50)** | **84.8% (425/501)** |
 
-빨강·주황은 경보로 집계합니다. **정상 탐지율**은 정상 문자에서 경보가 없었던 비율로 초록 325건과 회색 100건을 셉니다. 정상 문자에 뜬 경보는 46건에서 76건으로 늘었습니다. 최종 이진 정확도는 **84.8% (467/551)**, 정상의 초록만 정답으로 세는 엄격 일치율은 **66.6% (367/551)**입니다.
+**정상 탐지율**은 정상 501건 중 경보가 없었던 비율로 초록 325건과 회색 100건을 셉니다. 피싱을 25건 더 탐지했고 정상 문자에 뜬 경보는 46건에서 76건으로 늘었습니다. 최종 이진 정확도는 **84.8% (467/551)**, 정상의 초록만 정답으로 세는 엄격 일치율은 **66.6% (367/551)**입니다.
 
-로컬 Zoro-1 `bf1b76b9`, CUDA BF16, 온도 **1.59**로 Arena 재측정 API에서 **551회 요청**을 실행해 위 집계를 재현했습니다. 소요 시간은 **209.446초**였습니다. 별도 독립 표본의 성능과 구절 표시 정확도는 아직 검증하지 않았습니다. [실측 환경·원본 CSV·채점 기준](docs/SIGNAL_BENCHMARK_UI_20261120.md)
+로컬 Zoro-1 `bf1b76b9`, CUDA BF16, 온도 **1.59**로 Arena 재측정 API에서 **551회 요청**을 실행해 최종 집계를 재현했습니다. 소요 시간은 **209.446초**였습니다. 질문과 규칙을 검토한 고정 표본의 결과입니다. 새 표본에서의 탐지 성능과 원문 구절 표시 정확도는 미검증입니다. [실측 환경과 채점 기준](docs/SIGNAL_BENCHMARK_UI_20261120.md)
+
+### 평가 데이터 출처와 이용 조건
+
+고려대학교 Autonomous AI Lab의 `MessengerPhishingDetection`에서 제공하는 **한국어 테스트 분할**을 사용했습니다. 이 실험에서는 551건을 로컬 모델의 평가 입력으로 사용했습니다.
+
+| 항목 | 평가 기준 |
+| --- | --- |
+| 원본 파일 | `messenger_phishing_dataset/kor/test.csv` |
+| 원본 리비전 | `438cfbb251410fee791f49d75d928520847030c3` |
+| 라벨 | `0` 정상 501건, `1` 피싱 50건 |
+| CSV SHA-256 | `31bed1a63581de43b1c81b84c8714873199ace1f92a4d93830478842df5443bf` |
+
+[고려대 Autonomous AI Lab](https://github.com/ku-autoai) · [고정 리비전 데이터 설명](https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/README.md) · [고정 CSV](https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/messenger_phishing_dataset/kor/test.csv)
+
+고정 리비전의 문서와 데이터 디렉터리에서 CSV의 라이선스 및 재배포 조건을 확인하지 못했습니다. 이 저장소에는 출처 링크, 해시와 실측 집계를 실었습니다. CSV를 다시 배포하거나 다른 용도로 이용할 때는 원 게시처에 적용 조건을 확인하세요. [외부 자료 고지](THIRD_PARTY_NOTICES.md)
 
 ## 로컬에서 실행하기
 
@@ -55,7 +70,7 @@ Windows PowerShell에서는 같은 변수를 `$env:DMSG_MODEL_ENABLED = "1"` 형
 
 ### 551건 재측정하기
 
-[성능검증 문서](docs/SIGNAL_BENCHMARK_UI_20261120.md)의 고정 리비전에서 원본 `test.csv`를 받아 모델 환경을 설정한 셸에서 실행합니다.
+위 고정 리비전에서 원본 `test.csv`를 내려받아 모델 환경을 설정한 셸에서 실행합니다. 재측정 서버는 사용 전에 CSV의 SHA-256과 라벨 구성을 검증합니다.
 
 ```bash
 python -X utf8 -m arena.server --port 8769 --signal-benchmark-csv /path/to/test.csv
@@ -84,4 +99,6 @@ python -X utf8 tools/run_judge_scenarios.py --mode live --out runs/live
 
 ## 라이선스
 
-프로젝트가 직접 작성한 코드와 문서는 [Apache-2.0](LICENSE)입니다. 외부 모델·데이터와 동봉된 이전 APK/ZIP은 각 자료의 조건을 따릅니다. [라이선스 적용 범위](LICENSE_SCOPE.md) · [외부 자료 고지](THIRD_PARTY_NOTICES.md)
+- **IteraGuard 원저작물**은 [Apache-2.0](LICENSE)입니다. [라이선스 적용 범위](LICENSE_SCOPE.md)
+- **Zoro-1 가중치**는 Apache-2.0입니다. Hugging Face에서 모델 파일을 받으려면 해당 저장소의 접근 조건에 동의해야 합니다. 모델은 실행 환경에서 별도로 준비합니다. [Zoro-1 모델 카드](https://huggingface.co/trillionlabs/Zoro-1#license) · [실측 리비전의 LICENSE](https://huggingface.co/trillionlabs/Zoro-1/resolve/bf1b76b9b4df03b05fcbb73444e1cd4db0f566da/LICENSE)
+- **외부 데이터와 이전 APK·ZIP 등**은 자료별 조건을 따릅니다. [외부 자료 고지](THIRD_PARTY_NOTICES.md)

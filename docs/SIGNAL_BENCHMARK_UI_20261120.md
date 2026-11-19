@@ -7,6 +7,8 @@
 - 표의 551건은 정상 501건·피싱 50건이다. 원본의 라벨은 정상·피싱 두 가지다. [고정 리비전 테스트 CSV](https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/messenger_phishing_dataset/kor/test.csv)
 - 메인 판단은 `/api/signal`을 사용한다. 막대는 모델의 선택 점수 분포를 표시한다.
 
+고려대학교 Autonomous AI Lab `ku-autoai/MessengerPhishingDetection`의 고정 리비전 `438cfbb251410fee791f49d75d928520847030c3`을 사용했다. 그 리비전의 문서와 데이터 디렉터리에서 CSV의 라이선스 및 재배포 조건은 확인하지 못했다. 이 저장소는 출처와 집계 결과를 기록한다. [원저장소 데이터 설명](https://github.com/ku-autoai/MessengerPhishingDetection/blob/438cfbb251410fee791f49d75d928520847030c3/README.md) · [외부 자료 고지](../THIRD_PARTY_NOTICES.md)
+
 ## 최초 결과 표시 검증
 
 - 로컬 Python 426건 중 424건 통과·2건 건너뜀, Node 143건 통과, 라이선스 예외 파일 608건 검사 통과. 회귀 테스트는 CSV 지문 일치·불일치, 이전 파일 확인 결과의 늦은 도착, 점수 누락과 입력 변경 시 표시 초기화를 포함한다.

@@ -168,3 +168,8 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 ## 2026-11-20 KST · README 현행화
 
 `main` `d283fad` 기준으로 첫 화면의 신호등·원문 강조, 상세 Arena 및 551건 재측정 흐름을 정리했다. 기존 질문·고감도 질문·교차 확인의 탐지율과 정상 경보의 변화를 [README](README.md)에 반영했다. 로컬 모델 설정과 CSV 재현 절차를 담았다.
+
+
+## 2026-11-20 KST · 평가 데이터와 라이선스 안내
+
+고려대학교 Autonomous AI Lab 평가 CSV의 고정 리비전, 라벨 분포, SHA-256과 확인 가능한 이용 조건을 README에 적었다. 피싱 탐지율과 전체 이진 정확도의 계산 범위를 설명했다. 프로젝트 원저작물, Zoro-1 가중치, 외부 데이터의 적용 조건은 [외부 자료 고지](THIRD_PARTY_NOTICES.md)에서 확인한다.
