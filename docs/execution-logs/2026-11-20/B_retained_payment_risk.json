@@ -1,0 +1,457 @@
+{
+  "schema": "iteraguard-scenario-run/1",
+  "scenario": "B_retained_payment_risk",
+  "title": "새 송금 위험 우선 및 미해결 업무 유지",
+  "executed_source_commit": "62c0acf51a7beb2cd6fb1b01ca514a07edd5e091",
+  "created_utc": "2026-11-19T22:44:29.103026+00:00",
+  "source_version": "5.9",
+  "arena_engine_version": "5.6",
+  "typed_contract_version": "5.1",
+  "input_provenance": "SYNTHETIC_FIXTURES",
+  "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+  "model": {
+    "id": "trillionlabs/Zoro-1",
+    "served_checkpoint_name": "Zoro-1-kev-bf1b76b9",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "temperature": 1.59,
+    "checkpoint_independently_attested": false
+  },
+  "status": "PASS",
+  "checks": {
+    "three_real_model_responses": true,
+    "initial_clarification": true,
+    "new_risk_prioritized_without_losing_previous": true,
+    "ordinary_turn_keeps_session_risk": true,
+    "same_request_replayed_without_new_model_or_state": true,
+    "close_reopen_preserved_both_tasks": true,
+    "latest_fin02_card_separate_from_session": true
+  },
+  "steps": [
+    {
+      "step": "대상이 모호한 요청",
+      "route": "/api/evaluate",
+      "request_id": "b0c8352f-b392-41b8-ab6a-b25309d8e2b4",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 432.829,
+      "upstream_responses": 1,
+      "version_before": 0,
+      "version_after": 1,
+      "lifecycle": "OPEN",
+      "prior_pause": false,
+      "task_state": [
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ],
+      "input_sha256": "c720fe57f45b7a40f25ed50b501e2a886fcc2de72f96234c66f44484227d08b9",
+      "model_status": "VALID",
+      "current_turn_action": "ASK_HUMAN",
+      "current_turn_reason": "NONE_DIRECT_REQUEST_CONFLICT",
+      "action": "ASK_HUMAN",
+      "reason": "NONE_DIRECT_REQUEST_CONFLICT",
+      "task_disposition": "OPEN_TASK_AVAILABLE"
+    },
+    {
+      "step": "새 계좌 송금 요구",
+      "route": "/api/evaluate",
+      "request_id": "86a8d5d1-7a05-4a8e-8849-2fad2daa12bd",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 441.059,
+      "upstream_responses": 1,
+      "version_before": 1,
+      "version_after": 2,
+      "lifecycle": "OPEN",
+      "prior_pause": true,
+      "task_state": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ],
+      "input_sha256": "9f508b54eee8e16f8d8877139045e1d30bddbcf63b5cf13b34c405c8c29e8e84",
+      "model_status": "VALID",
+      "current_turn_action": "PAUSE_AND_VERIFY",
+      "current_turn_reason": "MODEL_DIRECT_ACTION_ADVISORY",
+      "action": "PAUSE_AND_VERIFY",
+      "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+      "task_disposition": "OPEN_TASK_AVAILABLE"
+    },
+    {
+      "step": "정상 후속 문장",
+      "route": "/api/evaluate",
+      "request_id": "637c8002-f220-47ac-9fb9-ed0be13580da",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 450.037,
+      "upstream_responses": 1,
+      "version_before": 2,
+      "version_after": 3,
+      "lifecycle": "OPEN",
+      "prior_pause": true,
+      "task_state": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ],
+      "input_sha256": "067eae3ff3c480cb9ed9c7dc5fc352b9abacd1e644cdb4d56bf2c1a65f53c036",
+      "model_status": "VALID",
+      "current_turn_action": "NO_STRONG_SIGNAL",
+      "current_turn_reason": "V51_EXPLICIT_OTHER_REQUEST",
+      "action": "ASK_HUMAN",
+      "reason": "PRIOR_RISK_UNRESOLVED",
+      "task_disposition": "OPEN_TASK_AVAILABLE"
+    },
+    {
+      "step": "동일 요청 ID로 재전송",
+      "route": "/api/evaluate",
+      "request_id": "86a8d5d1-7a05-4a8e-8849-2fad2daa12bd",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 4.181,
+      "upstream_responses": 0,
+      "version_before": 3,
+      "version_after": 3,
+      "lifecycle": "OPEN",
+      "prior_pause": true,
+      "task_state": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ],
+      "input_sha256": "9f508b54eee8e16f8d8877139045e1d30bddbcf63b5cf13b34c405c8c29e8e84",
+      "model_status": "VALID",
+      "current_turn_action": "PAUSE_AND_VERIFY",
+      "current_turn_reason": "MODEL_DIRECT_ACTION_ADVISORY",
+      "action": "PAUSE_AND_VERIFY",
+      "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+      "task_disposition": "OPEN_TASK_AVAILABLE"
+    },
+    {
+      "step": "미해결 상태로 보관",
+      "route": "/api/close",
+      "request_id": "cd731560-7ddd-4c22-b069-1f9646f212b0",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 7.836,
+      "upstream_responses": 0,
+      "version_before": 3,
+      "version_after": 4,
+      "lifecycle": "CLOSED_UNRESOLVED",
+      "prior_pause": true,
+      "task_state": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ]
+    },
+    {
+      "step": "기존 이력을 유지하고 재개",
+      "route": "/api/reopen",
+      "request_id": "28eb86fc-3219-4067-bf22-d5a832f2f360",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "http_ms": 5.037,
+      "upstream_responses": 0,
+      "version_before": 4,
+      "version_after": 5,
+      "lifecycle": "OPEN",
+      "prior_pause": true,
+      "task_state": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "type": "CLARIFY_REQUEST",
+          "status": "OPEN"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "context_scope": "CURRENT_TEXT_ONLY",
+      "created_utc": "2026-11-19T22:44:31.503257+00:00",
+      "events": [
+        {
+          "action": "ASK_HUMAN",
+          "current_turn_action": "ASK_HUMAN",
+          "current_turn_reason": "NONE_DIRECT_REQUEST_CONFLICT",
+          "event_type": "EVALUATE",
+          "latency_ms": 404.55,
+          "mode": "MODEL_RESPONSE_UNATTESTED",
+          "model_status": "VALID",
+          "next_task": {
+            "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+            "observation": "NOT_CHECKED",
+            "status": "OPEN",
+            "type": "CLARIFY_REQUEST"
+          },
+          "prior_pause": false,
+          "provenance": {
+            "arena_sources": {
+              "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+              "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+              "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+              "web/main.js": "73579db98abe1a94d108ffaeb7420d4bb9af72fc91879dda02d6843dc269f467"
+            },
+            "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+            "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+            "input_source": "USER_SUPPLIED_SYNTHETIC",
+            "model_identity_verified": false,
+            "npu_execution_verified": false,
+            "pipeline_ms": 421.906,
+            "policy_id": "legacy",
+            "profile_id": "v51-specific-candidate",
+            "received_utc": "2026-11-19T22:44:30.093764+00:00",
+            "response_sha256": "43ac65cefc6b54cb59444a7c91f31807f254ef86174b92f68b2f7657a6d93102",
+            "schema": "iteraguard-provenance/1"
+          },
+          "reason": "NONE_DIRECT_REQUEST_CONFLICT",
+          "request_id": "b0c8352f-b392-41b8-ab6a-b25309d8e2b4",
+          "task_disposition": "OPEN_TASK_AVAILABLE",
+          "version": 1
+        },
+        {
+          "action": "PAUSE_AND_VERIFY",
+          "current_turn_action": "PAUSE_AND_VERIFY",
+          "current_turn_reason": "MODEL_DIRECT_ACTION_ADVISORY",
+          "event_type": "EVALUATE",
+          "latency_ms": 419.18,
+          "mode": "MODEL_RESPONSE_UNATTESTED",
+          "model_status": "VALID",
+          "next_task": {
+            "id": "6e72a16a3bbf491eba6132706492c0a2",
+            "observation": "NOT_CHECKED",
+            "status": "OPEN",
+            "type": "PAUSE_AND_INDEPENDENT_CHECK"
+          },
+          "prior_pause": true,
+          "provenance": {
+            "arena_sources": {
+              "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+              "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+              "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+              "web/main.js": "73579db98abe1a94d108ffaeb7420d4bb9af72fc91879dda02d6843dc269f467"
+            },
+            "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+            "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+            "input_source": "USER_SUPPLIED_SYNTHETIC",
+            "model_identity_verified": false,
+            "npu_execution_verified": false,
+            "pipeline_ms": 431.624,
+            "policy_id": "legacy",
+            "profile_id": "v51-specific-candidate",
+            "received_utc": "2026-11-19T22:44:30.538516+00:00",
+            "response_sha256": "85ff7fc3c302f5d62f6c1789be44e67eedd1910aca9bbc3a49eaa48315884046",
+            "schema": "iteraguard-provenance/1"
+          },
+          "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+          "request_id": "86a8d5d1-7a05-4a8e-8849-2fad2daa12bd",
+          "task_disposition": "OPEN_TASK_AVAILABLE",
+          "version": 2
+        },
+        {
+          "action": "ASK_HUMAN",
+          "current_turn_action": "NO_STRONG_SIGNAL",
+          "current_turn_reason": "V51_EXPLICIT_OTHER_REQUEST",
+          "event_type": "EVALUATE",
+          "latency_ms": 421.59,
+          "mode": "MODEL_RESPONSE_UNATTESTED",
+          "model_status": "VALID",
+          "next_task": {
+            "id": "6e72a16a3bbf491eba6132706492c0a2",
+            "observation": "NOT_CHECKED",
+            "status": "OPEN",
+            "type": "PAUSE_AND_INDEPENDENT_CHECK"
+          },
+          "prior_pause": true,
+          "provenance": {
+            "arena_sources": {
+              "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+              "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+              "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+              "web/main.js": "73579db98abe1a94d108ffaeb7420d4bb9af72fc91879dda02d6843dc269f467"
+            },
+            "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+            "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+            "input_source": "USER_SUPPLIED_SYNTHETIC",
+            "model_identity_verified": false,
+            "npu_execution_verified": false,
+            "pipeline_ms": 439.839,
+            "policy_id": "legacy",
+            "profile_id": "v51-specific-candidate",
+            "received_utc": "2026-11-19T22:44:30.990104+00:00",
+            "response_sha256": "5fbfc32a31d909810d8a1e87b4ffe7c103ca6d9f0472e41dd3f9512d813864f2",
+            "schema": "iteraguard-provenance/1"
+          },
+          "reason": "PRIOR_RISK_UNRESOLVED",
+          "request_id": "637c8002-f220-47ac-9fb9-ed0be13580da",
+          "task_disposition": "OPEN_TASK_AVAILABLE",
+          "version": 3
+        },
+        {
+          "event_type": "CLOSE_UNRESOLVED",
+          "mode": "LIFECYCLE_ONLY",
+          "prior_pause": true,
+          "request_id": "cd731560-7ddd-4c22-b069-1f9646f212b0",
+          "version": 4
+        },
+        {
+          "event_type": "REOPEN",
+          "mode": "LIFECYCLE_ONLY",
+          "prior_pause": true,
+          "request_id": "28eb86fc-3219-4067-bf22-d5a832f2f360",
+          "version": 5
+        }
+      ],
+      "integrity_scope": "UNSIGNED_LOCAL_DIGEST_NOT_AUTHENTICATION",
+      "lifecycle": "OPEN",
+      "model_identity_verified": false,
+      "package_version": "5.6",
+      "prior_pause": true,
+      "raw_input_included": false,
+      "schema": "iteraguard-evidence/1",
+      "session_id": "e713263d189947fa869b6cdc8dd55bc7",
+      "sha256": "6682d4034e6e7ea5808d6d724743f9451105c32495ca0ea3f24869de5b50f84f",
+      "state_version": 5,
+      "tasks": [
+        {
+          "id": "6e72a16a3bbf491eba6132706492c0a2",
+          "observation": "NOT_CHECKED",
+          "status": "OPEN",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK"
+        },
+        {
+          "id": "3dbd78ec25ce412a9b573575ff2cb31b",
+          "observation": "NOT_CHECKED",
+          "status": "OPEN",
+          "type": "CLARIFY_REQUEST"
+        }
+      ]
+    }
+  ],
+  "upstream": [
+    {
+      "received_utc": "2026-11-19T22:44:30.502991+00:00",
+      "response_sha256": "43ac65cefc6b54cb59444a7c91f31807f254ef86174b92f68b2f7657a6d93102",
+      "elapsed_ms": 399.487,
+      "question_ids": [
+        "q_action",
+        "q_speech",
+        "q_scam",
+        "q_claim",
+        "q_pressure",
+        "q_risk",
+        "q_evidence",
+        "q_request_scope",
+        "q_current_exposure",
+        "q_payment_anomaly",
+        "q_request_specified"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:44:30.962381+00:00",
+      "response_sha256": "85ff7fc3c302f5d62f6c1789be44e67eedd1910aca9bbc3a49eaa48315884046",
+      "elapsed_ms": 414.279,
+      "question_ids": [
+        "q_action",
+        "q_speech",
+        "q_scam",
+        "q_claim",
+        "q_pressure",
+        "q_risk",
+        "q_evidence",
+        "q_request_scope",
+        "q_current_exposure",
+        "q_payment_anomaly",
+        "q_request_specified"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:44:31.416133+00:00",
+      "response_sha256": "5fbfc32a31d909810d8a1e87b4ffe7c103ca6d9f0472e41dd3f9512d813864f2",
+      "elapsed_ms": 416.31,
+      "question_ids": [
+        "q_action",
+        "q_speech",
+        "q_scam",
+        "q_claim",
+        "q_pressure",
+        "q_risk",
+        "q_evidence",
+        "q_request_scope",
+        "q_current_exposure",
+        "q_payment_anomaly",
+        "q_request_specified"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:44:31.807470+00:00",
+      "response_sha256": "3607063ebc027955f5a2d279f44f47cc4bda66b476803ef2f360adfe5e17cfb0",
+      "elapsed_ms": 299.323,
+      "question_ids": [
+        "q_action",
+        "q_signal"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:44:31.918837+00:00",
+      "response_sha256": "ad65e294a4798631fdf0a58f7c4ee02e3a74b6972801d5f1c0845101268feeac",
+      "elapsed_ms": 105.471,
+      "question_ids": [
+        "q_signal"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:44:32.075402+00:00",
+      "response_sha256": "53c19ca311fdafbd98579a97a2229e31e7a7695ac578092ea1dacb4dda2a375b",
+      "elapsed_ms": 150.996,
+      "question_ids": [
+        "q_procedure"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    }
+  ],
+  "separate_stateless_signal_check": {
+    "grade": "red",
+    "requested_action": "pay_to_changed_account",
+    "procedure_id": "FIN-02",
+    "http_ms": 572.205,
+    "upstream_responses": 3,
+    "state_unchanged": true
+  }
+}
