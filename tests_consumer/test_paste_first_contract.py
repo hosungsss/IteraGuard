@@ -89,6 +89,9 @@ class ConsumerUXContract(unittest.TestCase):
         self.assertIn("el('verdictPanel').hidden = false", self.main)
         self.assertIn("el('verdictPanel').hidden = true", self.main)
         self.assertIn("대신 확인하지는 않습니다", self.main)
+        self.assertIn("nextAction", self.dom.by_id)
+        self.assertIn("d.next_task.instruction", self.main)
+        self.assertIn("el('nextAction').hidden = !next", self.main)
 
     def test_chat_panel_not_visible_before_decision(self):
         _, attrs = self.dom.by_id["conversationPanel"]
