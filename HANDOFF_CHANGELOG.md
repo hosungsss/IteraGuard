@@ -121,3 +121,6 @@ Validation: PR/head and merge CI outcomes to be read back; no live Jev API, no a
 
 
 2026-11-19: Integrated origin/main 636f56b by fast-forward, preserving 9ed5dac UI state separation. No conflicts or runtime code edits required. Python 237 passed / 2 skipped, Node 68 passed, Edge 1440/390 controlled session flows passed, licensing 608-file inventory passed. Signal preview HTTP checks included; live model and hosted deployment NOT_RUN in this integration. See docs/MAIN_INTEGRATION_VALIDATION_20261119.md.
+
+## 2026-11-19 · 문자 신호등을 분석 결과에 표시
+기준 main 636f56b. 기존 판단 결과 상단에 신호등을 추가했습니다. 기존 평가 응답을 반영한 뒤 같은 입력으로 /api/signal을 호출하며, 입력이 바뀌면 이전 색을 숨깁니다. 신호등 오류는 회색으로 표시하고 기존 판단 및 저장 기록을 유지합니다. /signal 경로는 메인 화면을 제공합니다.
