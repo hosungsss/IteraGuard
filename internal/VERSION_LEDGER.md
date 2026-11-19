@@ -323,4 +323,4 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 ## 2026-11-20 KST · README 공개 시연과 기술 소개
 
-- 기준 main `a4c9bc3`. [README](../README.md) 상단에 공개 시연 링크와 Zoro 선택형 판단, 원문 구절 강조, 로컬 회계 절차 조회를 소개한다. README에 고정 로컬 주소를 두는 대신 터미널 출력 경로를 안내한다.
+- 기준 main `a4c9bc3`. [README](../README.md) 상단에 공개 시연 링크와 Zoro 선택형 판단, 원문 구절 강조, PointerHead의 회계 절차 조회와 사례·매뉴얼 조회 실험을 소개한다. 로컬 실행은 터미널 출력 주소를 안내한다.
