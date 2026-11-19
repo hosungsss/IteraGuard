@@ -306,3 +306,8 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 - 검증 소스 62c0acf. 합성 입력으로 A, B, C의 전체 검사 조건을 충족했다. Arena 유효 응답 7건과 B 회계 카드용 별도 응답 3건을 대조했다. C의 의도한 로컬 전달 연결 단절에서 모델 전달 0건을 관측했다.
 - 공개 JSON과 실행 설명은 [트랙 1 실행 로그](../docs/execution-logs/2026-11-20/README.md)에 있다. 모델 신원은 독립적으로 인증되지 않았다.
+
+## 2026-11-20 KST · 시나리오 C 복구 상태 표시
+
+- 기준 main 778eed8. Arena UI에 같은 문장 분석 복구와 이전 요청 확인 대기를 따로 표시한다. 전체 미해결 업무 수에는 모델 재시도도 포함한다.
+- 실제 로컬 Zoro로 분석 실패와 재시도를 브라우저에서 재실행했다. 실패 시 업무 2건, 복구 시 기술 재시도만 해결되고 송금 확인 1건이 계속 열려 있었다. [실행 JSON](../docs/execution-logs/2026-11-20/C_transport_failure_recovery_ui.json)

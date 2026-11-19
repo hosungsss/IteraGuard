@@ -44,5 +44,6 @@
   "signal_confirmation_excerpt_display": "OPTIONAL_ORIGINAL_CODE_POINT_SPAN",
   "signal_accounting_procedure_display": "OPTIONAL_LOCAL_ZORO_CATALOG_LOOKUP",
   "pointerhead_multi_lookup_architecture": "README_DESIGN_WITH_LOCAL_SMOKE_TEST",
-  "scenario_execution_evidence": "ABC_LOCAL_HTTP_ZORO_RUN_62c0acf"
+  "scenario_execution_evidence": "ABC_LOCAL_HTTP_ZORO_RUN_62c0acf",
+  "arena_retry_recovery_ui": "LOCAL_ZORO_BROWSER_SCENARIO_C_VERIFIED"
 }

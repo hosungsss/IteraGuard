@@ -1,0 +1,305 @@
+{
+  "schema": "iteraguard-scenario-browser-run/1",
+  "scenario": "C",
+  "status": "PASS",
+  "created_utc": "2026-11-19T22:53:43.100515+00:00",
+  "source_base_commit": "778eed805b39e03dcdda787d18ff0ecc626cbfa6",
+  "executed_ui_sha256": {
+    "arena/web/index.html": "24c0a9a161ed37cf547e8b73122a9388c170a8e38fc52cc2e072da772cc9adf7",
+    "arena/web/main.js": "c8f23a057dc1fc7c15565925894e170e9931ad8588814a15b2e6f22dd95efa71",
+    "arena/web/visual.js": "8d8f7094ecfe8da7acba773a43c09fcc7dfa74dfd4eff404d65f17ce701ee8ab",
+    "arena/web/chat.js": "e7746c65bfd6fee6df5c311ee3051ee19b087ac80fff3c6e18eb221e67810079"
+  },
+  "input_provenance": "SYNTHETIC_FIXTURES",
+  "executed_route": "/arena",
+  "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+  "model": {
+    "id": "trillionlabs/Zoro-1",
+    "served_checkpoint_name": "Zoro-1-kev-bf1b76b9",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "temperature": 1.59,
+    "checkpoint_independently_attested": false
+  },
+  "outage": {
+    "method": "CLOSE_AND_REBIND_ISOLATED_LOOPBACK_FORWARDER",
+    "downstream_connection_refused": true,
+    "zoro_service_remained_available": true
+  },
+  "observed_request_ids": {
+    "seed": "07f7a7b6-98ce-4e0e-a64e-8a8208bebd52",
+    "failed": "9cf19f14-ae9c-42ec-86fc-d655aaa949b1",
+    "recovered": "ce5e6dd0-b6a8-4d0e-8587-1d53338c6b13"
+  },
+  "evaluations": [
+    {
+      "request_id": "07f7a7b6-98ce-4e0e-a64e-8a8208bebd52",
+      "text_sha256": "9f508b54eee8e16f8d8877139045e1d30bddbcf63b5cf13b34c405c8c29e8e84",
+      "upstream_responses": 1
+    },
+    {
+      "request_id": "9cf19f14-ae9c-42ec-86fc-d655aaa949b1",
+      "text_sha256": "067eae3ff3c480cb9ed9c7dc5fc352b9abacd1e644cdb4d56bf2c1a65f53c036",
+      "upstream_responses": 0
+    },
+    {
+      "request_id": "ce5e6dd0-b6a8-4d0e-8587-1d53338c6b13",
+      "text_sha256": "067eae3ff3c480cb9ed9c7dc5fc352b9abacd1e644cdb4d56bf2c1a65f53c036",
+      "upstream_responses": 1
+    }
+  ],
+  "arena_evidence": {
+    "schema": "iteraguard-evidence/1",
+    "package_version": "5.6",
+    "created_utc": "2026-11-19T22:53:43.100202+00:00",
+    "session_id": "46094253db1a4d1e94fad85dbb9ca20c",
+    "context_scope": "CURRENT_TEXT_ONLY",
+    "raw_input_included": false,
+    "model_identity_verified": false,
+    "state_version": 3,
+    "lifecycle": "OPEN",
+    "prior_pause": true,
+    "tasks": [
+      {
+        "id": "2b932e3b430041d5a77ee0bc7261d49a",
+        "type": "PAUSE_AND_INDEPENDENT_CHECK",
+        "status": "OPEN",
+        "observation": "NOT_CHECKED"
+      },
+      {
+        "id": "d862900989434ce4ada1bb60f0f9d059",
+        "type": "MODEL_RETRY",
+        "status": "MODEL_RETRY_RESOLVED",
+        "observation": "NOT_CHECKED"
+      }
+    ],
+    "events": [
+      {
+        "event_type": "EVALUATE",
+        "request_id": "07f7a7b6-98ce-4e0e-a64e-8a8208bebd52",
+        "version": 1,
+        "current_turn_action": "PAUSE_AND_VERIFY",
+        "current_turn_reason": "MODEL_DIRECT_ACTION_ADVISORY",
+        "action": "PAUSE_AND_VERIFY",
+        "reason": "MODEL_DIRECT_ACTION_ADVISORY",
+        "prior_pause": true,
+        "model_status": "VALID",
+        "mode": "MODEL_RESPONSE_UNATTESTED",
+        "latency_ms": 471.16,
+        "provenance": {
+          "schema": "iteraguard-provenance/1",
+          "received_utc": "2026-11-19T22:52:59.351960+00:00",
+          "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+          "model_identity_verified": false,
+          "response_sha256": "74a3dff87d28dc25cadfff69ae0f6db9fde3496e48d9e2cb922572e1ae7694fa",
+          "pipeline_ms": 491.191,
+          "profile_id": "v51-specific-candidate",
+          "policy_id": "legacy",
+          "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+          "arena_sources": {
+            "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+            "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+            "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+            "web/main.js": "c8f23a057dc1fc7c15565925894e170e9931ad8588814a15b2e6f22dd95efa71"
+          },
+          "input_source": "USER_SUPPLIED_SYNTHETIC",
+          "npu_execution_verified": false
+        },
+        "task_disposition": "OPEN_TASK_AVAILABLE",
+        "next_task": {
+          "id": "2b932e3b430041d5a77ee0bc7261d49a",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN",
+          "observation": "NOT_CHECKED"
+        }
+      },
+      {
+        "event_type": "EVALUATE",
+        "request_id": "9cf19f14-ae9c-42ec-86fc-d655aaa949b1",
+        "version": 2,
+        "current_turn_action": "ASK_HUMAN",
+        "current_turn_reason": "MODEL_TRANSPORT_ERROR_URLError",
+        "action": "ASK_HUMAN",
+        "reason": "PRIOR_RISK_UNRESOLVED",
+        "prior_pause": true,
+        "model_status": "FAILED",
+        "mode": "MODEL_UNAVAILABLE",
+        "latency_ms": null,
+        "provenance": {
+          "schema": "iteraguard-provenance/1",
+          "received_utc": "2026-11-19T22:53:16.645975+00:00",
+          "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+          "model_identity_verified": false,
+          "response_sha256": null,
+          "pipeline_ms": 17.422,
+          "profile_id": "v51-specific-candidate",
+          "policy_id": "legacy",
+          "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+          "arena_sources": {
+            "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+            "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+            "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+            "web/main.js": "c8f23a057dc1fc7c15565925894e170e9931ad8588814a15b2e6f22dd95efa71"
+          },
+          "input_source": "USER_SUPPLIED_SYNTHETIC",
+          "npu_execution_verified": false
+        },
+        "task_disposition": "OPEN_TASK_AVAILABLE",
+        "observed_task_id": "2b932e3b430041d5a77ee0bc7261d49a",
+        "next_task": {
+          "id": "2b932e3b430041d5a77ee0bc7261d49a",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN",
+          "observation": "NOT_CHECKED"
+        }
+      },
+      {
+        "event_type": "EVALUATE",
+        "request_id": "ce5e6dd0-b6a8-4d0e-8587-1d53338c6b13",
+        "version": 3,
+        "current_turn_action": "NO_STRONG_SIGNAL",
+        "current_turn_reason": "V51_EXPLICIT_OTHER_REQUEST",
+        "action": "ASK_HUMAN",
+        "reason": "PRIOR_RISK_UNRESOLVED",
+        "prior_pause": true,
+        "model_status": "VALID",
+        "mode": "MODEL_RESPONSE_UNATTESTED",
+        "latency_ms": 465.27,
+        "provenance": {
+          "schema": "iteraguard-provenance/1",
+          "received_utc": "2026-11-19T22:53:27.022275+00:00",
+          "execution_source": "LOCAL_HTTP_MODEL_UNATTESTED",
+          "model_identity_verified": false,
+          "response_sha256": "275ac15ef1602b5c957aa67a8fc12e44699b0174292b34baf6425526e93fd32c",
+          "pipeline_ms": 478.789,
+          "profile_id": "v51-specific-candidate",
+          "policy_id": "legacy",
+          "execution_manifest": "86e02915856e6389d5075be5c9a2f6d6720e846fc58046d8082b1ff89b70c37e",
+          "arena_sources": {
+            "store.py": "ed304c47d389132538b4faeed20f06a23ed87d0955acddb1b4a6acb9c0e6cfc7",
+            "evidence.py": "b24194cbb6b85ad2dec1974dbb9c05542b681c0f5eff9e48940209b634429de6",
+            "server.py": "7c7363e81652ad3dee8733c1b28bda8c34c2920e5461956a9c8cf9c9ca7271ce",
+            "web/main.js": "c8f23a057dc1fc7c15565925894e170e9931ad8588814a15b2e6f22dd95efa71"
+          },
+          "input_source": "USER_SUPPLIED_SYNTHETIC",
+          "npu_execution_verified": false
+        },
+        "task_disposition": "OPEN_TASK_AVAILABLE",
+        "observed_task_id": "2b932e3b430041d5a77ee0bc7261d49a",
+        "resolved_retry_task_ids": [
+          "d862900989434ce4ada1bb60f0f9d059"
+        ],
+        "next_task": {
+          "id": "2b932e3b430041d5a77ee0bc7261d49a",
+          "type": "PAUSE_AND_INDEPENDENT_CHECK",
+          "status": "OPEN",
+          "observation": "NOT_CHECKED"
+        }
+      }
+    ],
+    "integrity_scope": "UNSIGNED_LOCAL_DIGEST_NOT_AUTHENTICATION",
+    "sha256": "f60b9434292ef4c12f27dd196a07ceb9d7d9a991856c3ecac3db828103f0cecc"
+  },
+  "upstream": [
+    {
+      "received_utc": "2026-11-19T22:52:59.828725+00:00",
+      "response_sha256": "74a3dff87d28dc25cadfff69ae0f6db9fde3496e48d9e2cb922572e1ae7694fa",
+      "elapsed_ms": 465.543,
+      "question_ids": [
+        "q_action",
+        "q_speech",
+        "q_scam",
+        "q_claim",
+        "q_pressure",
+        "q_risk",
+        "q_evidence",
+        "q_request_scope",
+        "q_current_exposure",
+        "q_payment_anomaly",
+        "q_request_specified"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:53:00.183414+00:00",
+      "response_sha256": "15178a45d11bf0ff3973a2aaef76da7318526f98dfa61c0c5a93b173ce98871f",
+      "elapsed_ms": 303.311,
+      "question_ids": [
+        "q_action",
+        "q_signal"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:53:00.312764+00:00",
+      "response_sha256": "fbca30737eae20edd7c3d1ce248965d1d59608db6c7e7229b0f207ee5f1f7718",
+      "elapsed_ms": 123.319,
+      "question_ids": [
+        "q_signal"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:53:00.490070+00:00",
+      "response_sha256": "10b9cceabf36a94d977893b6c3b4733f55918d11309d37c1799c0b0f6a34f1d5",
+      "elapsed_ms": 164.773,
+      "question_ids": [
+        "q_procedure"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:53:27.492834+00:00",
+      "response_sha256": "275ac15ef1602b5c957aa67a8fc12e44699b0174292b34baf6425526e93fd32c",
+      "elapsed_ms": 459.968,
+      "question_ids": [
+        "q_action",
+        "q_speech",
+        "q_scam",
+        "q_claim",
+        "q_pressure",
+        "q_risk",
+        "q_evidence",
+        "q_request_scope",
+        "q_current_exposure",
+        "q_payment_anomaly",
+        "q_request_specified"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    },
+    {
+      "received_utc": "2026-11-19T22:53:27.820114+00:00",
+      "response_sha256": "fb499326af82e9f7597560f2a850bcdb985bfd5350e878db748469c8dfe19e11",
+      "elapsed_ms": 298.012,
+      "question_ids": [
+        "q_action",
+        "q_signal"
+      ],
+      "model_echo": "trillionlabs/Zoro-1"
+    }
+  ],
+  "browser_observation": {
+    "method": "IN_APP_BROWSER_ACCESSIBILITY_TREE",
+    "initial": {
+      "title": "송금하기 전에 요청을 확인하세요"
+    },
+    "failure": {
+      "current": "현재 문장: 분석 실패 · 판단 불가",
+      "next": "다음 행동 · 연결 상태를 확인한 뒤 같은 문장을 다시 분석하세요. 이전 요청은 기존 공식 경로로 확인할 때까지 실행을 보류하세요.",
+      "previous": "이전 요청 · 확인 대기. 이번 결과나 사용자 완료 보고만으로 이전 위험이 해제되지 않습니다. 이전에 생성된 미해결 업무 1건. 이 분석 기록의 미해결 업무는 총 2건입니다. 앱이 대신 확인하거나 자동으로 해결 처리하지는 않습니다."
+    },
+    "recovery": {
+      "current": "현재 문장: 뚜렷한 위험 행동 요청 미감지 (안전 보증 아님)",
+      "next": "다음 행동 · 확인되지 않은 요청은 실행을 보류하고, 기존에 알고 있던 연락처로 요청 내용을 확인하세요.",
+      "recovered": "분석 복구 완료 · 같은 문장을 다시 분석했습니다.",
+      "previous": "이전 요청 · 확인 대기. 이번 결과나 사용자 완료 보고만으로 이전 위험이 해제되지 않습니다. 이전에 생성된 미해결 업무 1건. 이 분석 기록의 미해결 업무는 총 1건입니다. 앱이 대신 확인하거나 자동으로 해결 처리하지는 않습니다."
+    }
+  },
+  "checks": {
+    "isolated_relay_unavailable_during_failure": true,
+    "same_text_retried_with_new_request_id": true,
+    "real_zoro_response_restored": true,
+    "retry_task_completed_prior_payment_review_open": true,
+    "browser_displays_recovery_and_prior_review_separately": true
+  }
+}

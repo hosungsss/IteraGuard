@@ -106,3 +106,5 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 ## 최신 소스에서 실제 Zoro로 A·B·C 실행 · 2026-11-20 KST
 
 소스 62c0acf에서 인증번호 요구와 경고 비교, 미해결 송금 위험 보존, 격리 연결 단절과 복구를 실행했다. 실제 응답 지문과 Arena 내보내기를 대조한 [실행 로그 3종](docs/execution-logs/2026-11-20/README.md)을 별도로 기록했다.
+
+2026-11-20 KST · Arena의 모델 응답 복구 완료와 이전 요청 확인 대기를 각각 표시한다. 로컬 Zoro와 브라우저로 시나리오 C를 재실행해 기술 재시도가 끝나고 이전 송금 확인 업무가 대기 상태로 표시되는 것을 확인했다. [브라우저 실행 기록](docs/execution-logs/2026-11-20/C_transport_failure_recovery_ui.json)
