@@ -50,58 +50,65 @@
   function resetStages() { timers.forEach(clearTimeout); timers = []; ORDER.forEach(k => setStage(k, null, defaults[k])); }
   function pipelineStart(payload) {
     resetStages();
-    body.dataset.phase = 'running'; core.busy = true;
+    const panel = $('pipelinePanel');
+    if (panel) panel.hidden = false;
+    body.dataset.phase = 'running';
+    core.busy = true;
     const n = Array.from((payload && payload.text) || '').length;
-    setStage('input', 'active', n + '자 · 현재 문장만');
-    $('pipeMeta').textContent = '판단 중…';
-    later(() => { setStage('input', 'done', n + '자 · 원문은 저장하지 않음'); setStage('model', 'active', 'Zoro-1 응답 기다리는 중'); }, 220);
+    setStage('input', 'done', n + '자 · 검토 요청');
+    setStage('model', 'active', '서버의 판단 응답을 기다리는 중 · 모델 출처는 응답 후 확인');
+    $('pipeMeta').textContent = '응답 대기 중 · 실제 진행률은 제공되지 않습니다';
   }
+
   function sourceLabel(d) {
     const src = d.provenance && d.provenance.execution_source;
     return src === 'CONTROLLED_CLIENT' ? '통제 응답 · 실제 추론 아님' : 'Zoro-1 응답 · 신원 미인증';
   }
   function pipelineFinish(d) {
+    // The HTTP response has actually arrived; never animate imagined internal
+    // model/contract/policy timings or claim stream events that were not emitted.
     observeModelConnection(d);
     timers.forEach(clearTimeout); timers = [];
-    setStage('input', 'done', Array.from(el('text').value).length + '자 · 원문은 저장하지 않음');
     const failed = d.model_status === 'FAILED';
-    lastModelFailed = failed; syncVerdict();
-    const lat = Number.isFinite(d.latency_ms) && d.latency_ms > 0 ? ' · ' + Math.round(d.latency_ms) + 'ms' : '';
-    const steps = [
-      () => setStage('model', failed ? 'fail' : 'done', failed ? '응답 없음 · ' + (d.error_code || d.current_turn_reason || d.reason || '연결 실패') : sourceLabel(d) + lat),
-      () => {
-        const fp = typeof d.manifest_fingerprint === 'string' ? d.manifest_fingerprint.slice(0, 8) : '';
-        const prof = d.question_profile_id || (d.question_binding && d.question_binding.profile_id) || '';
-        setStage('contract', failed ? 'warn' : (fp ? 'done' : 'warn'),
-          failed ? '검증할 응답 없음 → 사람 확인' : fp ? '응답 계약 통과 · 지문 ' + fp + (prof ? ' · ' + prof : '') : '계약 지문 정보 없음');
-      },
-      () => {
-        const cur = d.current_turn_action || d.action;
-        const held = d.reason === 'PRIOR_RISK_UNRESOLVED' ? ' · 이전 위험 유지' : '';
-        setStage('policy', failed ? 'warn' : (cur === 'PAUSE_AND_VERIFY' ? 'fail' : cur === 'NO_STRONG_SIGNAL' ? 'done' : 'warn'),
-          '현재 문장: ' + (SHORT[cur] || cur) + held);
-      },
-      () => {
-        const n = Number.isInteger(d.open_task_count) ? d.open_task_count : (d.open_tasks || []).length;
-        setStage('task', n ? 'warn' : 'done', n ? '열린 확인 업무 ' + n + '건' : '열린 업무 없음');
-      }
-    ];
-    steps.forEach((fn, i) => later(fn, 160 * i));
+    lastModelFailed = failed;
+    syncVerdict();
+    setStage('input', 'done', Array.from(el('text').value).length + '자 · 요청 접수');
+    setStage('model', failed ? 'fail' : 'done',
+      failed ? '모델 결과를 확인할 수 없음' : sourceLabel(d));
+    setStage('contract', failed ? 'warn' : 'done',
+      failed ? '계약 판단 보류' : '서버가 응답 계약 처리 결과를 반환함');
+    const action = d.current_turn_action || d.action;
+    setStage('policy', failed ? 'warn' : 'done',
+      failed ? '사람 확인 권고' : '서버 정책 결과 수신 · ' + (SHORT[action] || '추가 확인'));
+    const n = Number.isInteger(d.open_task_count) ? d.open_task_count : (d.open_tasks || []).length;
+    setStage('task', n ? 'warn' : 'done',
+      n ? '공식 경로에서 확인할 항목 ' + n + '건' : '추가 항목 정보 없음');
+    $('pipeMeta').textContent = failed ? '모델 결과 검증 불가 · 사람 확인 안내' :
+      '서버 응답 수신 · 화면 반영 중';
+    setMode(failed ? 'warn' : 'ok',
+      failed ? '모델 응답 검증 실패' : sourceLabel(d));
     later(() => {
-      body.dataset.phase = 'idle'; core.busy = false;
-      const ms = d.provenance && Number.isFinite(d.provenance.pipeline_ms) ? '서버 처리 ' + d.provenance.pipeline_ms.toFixed(1) + 'ms · ' : '';
-      $('pipeMeta').textContent = ms + new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-      setMode(failed ? 'warn' : 'ok', failed ? '모델 연결 실패 · 사람 확인으로 처리' : sourceLabel(d));
-    }, 160 * steps.length);
+      const panel = $('pipelinePanel');
+      if (panel) panel.hidden = true;
+      body.dataset.phase = 'idle';
+      core.busy = false;
+    }, 650);
   }
+
   function pipelineFail(message) {
     modelConnection('failed');
     timers.forEach(clearTimeout); timers = [];
     const active = ORDER.find(k => stages[k] && stages[k].dataset.state === 'active') || 'model';
     setStage(active, 'fail', '요청 실패 · ' + message);
-    body.dataset.phase = 'idle'; core.busy = false;
-    $('pipeMeta').textContent = '요청이 완료되지 않았어요';
+    $('pipeMeta').textContent = '서버 응답을 확인하지 못했습니다';
+    later(() => {
+      const panel = $('pipelinePanel');
+      if (panel) panel.hidden = true;
+      body.dataset.phase = 'idle';
+      core.busy = false;
+    }, 650);
   }
+
 
   // ---------- observe requests made by main.js (read-only) ----------
   const nativeFetch = window.fetch.bind(window);
