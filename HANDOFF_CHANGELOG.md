@@ -27,3 +27,10 @@ Changed tools/rulebook_preview_v58.py; tests_rulebook/test_cli.py; README, archi
 Security: max 64 KiB local JSON; duplicate keys/nonfinite inputs refused; no Zoro/live network/side effects.
 Verification: CI contract checks for custom preview, duplicate JSON and large payload; actual main SHA and statuses must be read back after merge. End-to-end live domain model validation NOT_RUN.
 Rollback: revert follow-up PR; existing profiles and Arena remain present.
+
+
+## 2026-11-19 / v5.8 optional local System One Rulebook bridge
+Purpose: connect industry question books to existing installed Arena ModelClient without replacing active Arena v5.6 policy.
+Added: rulebook/zoro_bridge.py, tools/rulebook_live_v58.py, synthetic text fixture, mock-only tests and source guide. Explicit opt-in is required; no external business side effects.
+Source: locally configured /v1/systemone only; response modes distinguish test double, unavailable and unverified model. Real model/checkpoint validation NOT_RUN here.
+Read-back: check corresponding PR/CI/main SHA and an independently authorized real synthetic Zoro probe before claiming live success. Rollback by stopping opt-in CLI; existing Arena unaffected.

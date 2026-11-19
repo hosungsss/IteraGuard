@@ -122,3 +122,9 @@ CR-20261119-02. Add custom --book-file to tools/rulebook_preview_v58.py so a bus
 Requirements R58-G-07 source edit: CLI arbitrary JSON parsing; test_cli local custom, duplicate keys and >64KiB rejection; new docs and input limitations.
 Risk: rulebook still not connected to live Zoro service or independent business authorization; sample confidence remains uncalibrated. Scope does not add actual transaction APIs, NPU or performance promises. CI log must be checked against HEAD after PR; developer-authored correctness cannot substitute for user or business validation.
 Rollback: revert PR on top of merged v5.8 base; no DB migration.
+
+
+## 2026-11-19 · v5.8 follow-up: opt-in real transport wiring, no side-effect authority
+CR-20261119-03. Previous isolated rulebook had no live Zoro adapter. Added rulebook/zoro_bridge.py to reuse operator-configured bridge.ModelClient with a dynamic bounded System One question profile. Real endpoint restricted by existing loopback check; response passed to independent strict rulebook policy; live flag and --synthetic-only are both required by CLI.
+Acceptance/test: tests_rulebook/test_zoro_bridge.py exercises disabled/no call, typed request payload with test double, model failure, malformed response and invalid model latency. All such tests are fixture/test-double evidence only; real Zoro checkpoint/head and public API authentication remain NOT_VERIFIED. Core Arena still defaults to v5.6; question probability != fraud/outcome probability; no customer order/refund/SMS API is invoked.
+Impact: new extensibility path and operator script, but not an automatic transaction system or production-ready multitenant service. Risk and rollback: disable environment flag or do not invoke module; no SQLite migration, no model checkpoint mutation; preserve prior ledgers.

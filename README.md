@@ -109,3 +109,12 @@ python -X utf8 tools/redteam_workflow.py
 Duplicate one of the versioned rulebook/presets/*.json files, change question instructions/criteria and when/action rules, then save it as a local JSON file. No model retraining or business API credentials are needed for a synthetic preview:
 python -m tools.rulebook_preview_v58 --book-file path/to/company_rules.json --answers tests_rulebook/refund_fixture.json
 This command only evaluates an already supplied typed answer envelope. If the question set differs, supply a matching synthetic answers file. It never contacts Zoro or executes any business action.
+
+
+### Optional real System One Rulebook preview (operator opt-in)
+The existing configured Zoro /v1/systemone ModelClient may now be reused by rulebook/zoro_bridge.py with arbitrary versioned company question books. This does NOT modify the default Arena and does NOT execute the proposed business action.
+
+Example for a local, synthetic scenario (requires the existing local model server and operator environment configuration):
+DMSG_V58_RULEBOOK_LIVE_ENABLE=1 python -m tools.rulebook_live_v58 --book refund_intake --state-file tests_rulebook/refund_synthetic_message.txt --synthetic-only
+
+A network response remains LOCAL_HTTP_MODEL_UNATTESTED unless the exact model/checkpoint/head is verified independently. If disabled, invalid, disconnected or unconfigured, no fixture is silently substituted. Use python -m unittest discover -s tests_rulebook -v for unit tests (test doubles are NOT a live model test).
