@@ -96,7 +96,7 @@ python -X utf8 tools/redteam_workflow.py
 
 ## v5.8 GitHub source integration (not a released APK)
 - Rulebook/engine.py adds a *proposal-only* typed decision to configurable industry workflow; zero external side effects. Sample financial-operations account-change and customer-support refund books are in rulebook/presets/.
-- Arena web UX includes three clearly labeled synthetic samples, selected task observation target, and privacy-limited evidence JSON download. Existing v5.6 backend and v5.1 typed source contract are not replaced.
+- Arena web UX includes four contextual synthetic messages covering a changed payment account, a preventive notice, an unclear request, and a routine follow-up, selected task observation target, and privacy-limited evidence JSON download. Existing v5.6 backend and v5.1 typed source contract are not replaced.
 - Run local fixture preview: python -m tools.rulebook_preview_v58 --book refund_intake --answers tests_rulebook/refund_fixture.json
 - Run rulebook contract checks: python -m unittest discover -s tests_rulebook -v
 - Read AGENTS.md before AI edits, internal/VERSION_LEDGER.md for append-only detailed changes, and HANDOFF_CHANGELOG.md for cumulative resume instructions.

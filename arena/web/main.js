@@ -251,9 +251,10 @@ el("taskQueue").onchange = () => {
   controls();
 };
 const V58_SYNTHETIC_EXAMPLES = Object.freeze({
-  direct: '지금 안전 계좌로 송금하세요. 다른 사람에게 말하지 마세요.',
-  warning: '안내문: 인증번호를 알려주지 마세요. 지금 송금하지 마세요.',
-  ambiguous: '계정 보호를 위해 별도의 확인 절차를 진행해 주세요.'
+  direct: el('text').defaultValue,
+  warning: '회계팀에 공유합니다. 최근 거래처를 사칭한 메신저에서 계좌 변경과 인증번호 전송을 요구한 사례가 있었습니다. 메신저로 받은 새 계좌로 송금하거나 인증번호를 전달하지 마세요. 변경 여부는 사내 장부에 등록된 대표번호에서 확인하세요.',
+  ambiguous: '샘플상사 11월 정산 건 관련 안내입니다. 등록 정보가 달라 추가 확인이 필요하니, 오늘 안으로 안내에 따라 확인 절차를 진행해 주세요. 무엇을 확인해야 하는지와 제출 방법은 아직 안내되지 않았습니다.',
+  followup: '샘플상사 11월 정산 진행 상황을 공유합니다. 지급 요청서는 검토 대기 목록에 있으며, 계좌 정보와 결재 담당자는 기존 등록 내용과 같습니다. 다음 상태 업데이트는 내일 오전에 공유하겠습니다.'
 });
 for (const button of (document.querySelectorAll?.('[data-sample]') || [])) {
   button.addEventListener('click', () => {
@@ -263,7 +264,7 @@ for (const button of (document.querySelectorAll?.('[data-sample]') || [])) {
     el('text').value = sample;
     el('review').checked = false;
     invalidateInput();
-    el('sampleNotice').textContent = '합성 문장을 선택했습니다. 모델을 자동 호출하지 않았습니다.';
+    el('sampleNotice').textContent = '합성 문장을 채웠습니다. 아래 판단 버튼을 누르세요.';
     el('text').focus();
   });
 }

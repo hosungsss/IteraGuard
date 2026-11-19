@@ -10,6 +10,7 @@ class Element {
   constructor() { this.value = ''; this.checked = false; this.disabled = false; this.listeners = {}; this.children = []; this._text = ''; }
   set textContent(v) { this._text = String(v); this.children = []; }
   get textContent() { return this._text; }
+  focus() {}
   appendChild(v) { this.children.push(v); }
   addEventListener(name, fn) { (this.listeners[name] ||= []).push(fn); }
   async dispatch(name) {
@@ -24,6 +25,13 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
   if (remembered) storage.set('dmsg-arena-v5-session', remembered);
   storage.set('dmsg-arena-v5-session-ids', JSON.stringify(rememberedHistory));
   const get = id => elements[id] ||= new Element();
+  const html = fs.readFileSync(path.join(__dirname, '../arena/web/index.html'), 'utf8');
+  get('text').defaultValue = html.match(/<textarea id="text"[^>]*>([^<]*)<\/textarea>/u)[1];
+  const samples = Object.fromEntries(Array.from(html.matchAll(/data-sample="([^"]+)"/gu), ([, name]) => {
+    const button = new Element();
+    button.dataset = { sample: name };
+    return [name, button];
+  }));
   get('text').value = '지금 송금하세요.';
   get('observation').value = 'NOT_CHECKED';
   const state = { id: remembered || SID, version: closed ? 2 : 0, prior_pause: closed ? 1 : 0,
@@ -53,12 +61,30 @@ async function app({ remembered = null, closed = false, deferEvaluation = false,
     } else throw Error('UNEXPECTED_FETCH');
     return { ok: true, json: async () => JSON.parse(JSON.stringify(data)) };
   };
-  const context = { document: { getElementById: get, createElement: () => new Element() }, fetch,
+  const context = { document: { getElementById: get, createElement: () => new Element(), querySelectorAll: () => Object.values(samples) }, fetch,
     crypto: { randomUUID: () => 'request-' + ++seq }, localStorage: { getItem: k => storage.get(k) ?? null, setItem: (k,v) => storage.set(k,v) }, console };
   vm.createContext(context);
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../arena/web/main.js'), 'utf8'), context);
-  await settle(); return { get, calls, pending, state, storage, context };
+  await settle(); return { get, calls, pending, state, storage, context, samples };
 }
+
+test('each synthetic example fills the editor and waits for an explicit evaluation', async () => {
+  const a = await app();
+  const seen = new Set();
+  assert.deepEqual(Object.keys(a.samples), ['direct', 'warning', 'ambiguous', 'followup']);
+  for (const [name, button] of Object.entries(a.samples)) {
+    const before = a.calls.length;
+    await button.dispatch('click');
+    const value = a.get('text').value;
+    assert.ok(value.length > 0 && !seen.has(value));
+    if (name === 'direct') assert.equal(value, a.get('text').defaultValue);
+    seen.add(value);
+    assert.equal(a.calls.length, before);
+  }
+  await a.get('run').dispatch('click');
+  assert.equal(a.calls.filter(c => c.url === '/api/evaluate').length, 1);
+  assert.equal(a.calls.at(-1).body.text, a.get('text').value);
+});
 
 test('v56 queue selection keeps each task addressable and clears on new session', async () => {
   const a=await app();

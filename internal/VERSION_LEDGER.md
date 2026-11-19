@@ -138,3 +138,10 @@ CR-20261119-04. User authorized source upgrade/merge/push following prior code a
 **Validation:** execute new and existing CI on feature HEAD; do not claim passing until read-back. Release package/APK/PWA/dmsg binaries are NOT regenerated. Rollback by reverting PR or off mode + restart, keeping SQLite sessions. New independent locked evaluation is mandatory for any future enforce request. Detailed implementation and source fingerprint in docs/V58_RULE_TWEAK_SHADOW_REVIEW.md.
 
 **CI remediation, same CR:** Initial expanded workflow failed due to YAML scalar folding; replaced with multiline run block. Python 3.11 exposed preexisting v51-semantic-data Unicode 15.0 generator version mismatch; set CI Python 3.12 (Unicode 15.0) rather than silently regenerating historical assets. The expanded Node minimal-DOM test exposed an older v5.8 main UI assumption that querySelectorAll always exists; synthetic example registration now treats the optional DOM API as absent in minimal harness, retaining full behavior in real browsers. These are CI/environment compatibility repairs, not evidence of live model quality. Rerun all checks on HEAD.
+
+
+## 2026-11-19 · Arena 웹 합성 예시 문맥 보강
+
+첫 입력과 예시 버튼에 거래처 계좌 변경, 보안팀 예방 공지, 방법이 빠진 확인 요청, 정산 진행 보고를 담았다. 같은 기록에서 확인 요청, 계좌 변경, 진행 보고를 차례대로 판단해 업무 보존을 시연할 수 있다.
+브라우저 스크립트 회귀는 각 예시가 편집기 값을 채우고, 사용자가 판단을 눌렀을 때만 해당 문장이 평가로 전달되는지 확인한다.
+별도 SQLite에서 실제 로컬 Zoro-1의 응답 4건을 받았다. 사전 기대와 일치한 확인 요청, 계좌 변경, 진행 보고는 같은 기록에서 두 확인 업무를 보존했다. 새 기록에서 평가한 예방 공지는 `MODEL_NONE_BUT_ACTION_TERMS_PRESENT` 이유로 사람 검토와 추가 업무를 만들었다. 이 결과는 시연에 쓰는 합성 예시에 대한 점검이다.
