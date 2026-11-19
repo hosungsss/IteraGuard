@@ -11,6 +11,7 @@ from integration.v48 import SOURCE_ROOT, bridge
 from prototype.server import Handler as SecureHandler
 from .store import Arena,Conflict
 from .generation_client import compare
+from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from urllib.error import URLError
 
 class Handler(SecureHandler):
@@ -24,6 +25,7 @@ class Handler(SecureHandler):
     def do_GET(self):
         if not self._origin_safe():return self.out(403,{'error':'LOCAL_HOST_ONLY'})
         u=urlsplit(self.path)
+        if u.path=='/api/secondary/capabilities':return self.out(200,capabilities())
         if u.path=='/api/manifest':
             try:return self.out(200,self.server.arena.manifest())
             except (bridge.ContractError,OSError,KeyError,ValueError):return self.out(503,{'error':'EXECUTION_CONTRACT_UNAVAILABLE'})
@@ -37,7 +39,7 @@ class Handler(SecureHandler):
             try:return self.out(200,self.server.arena.read(parse_qs(u.query).get('session_id',[''])[0]))
             except Conflict as e:return self.out(404,{'error':str(e)})
             except ValueError:return self.out(400,{'error':'INVALID_REQUEST'})
-        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js'}
+        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js'}
         if u.path not in names:return self.out(404,{'error':'NOT_FOUND'})
         data=(Path(__file__).parent/'web'/names[u.path]).read_bytes()
         self.send_response(200);self.headers_safe('text/javascript; charset=utf-8' if u.path.endswith('.js') else 'text/css; charset=utf-8' if u.path.endswith('.css') else 'text/html; charset=utf-8')
@@ -56,6 +58,15 @@ class Handler(SecureHandler):
                 return d
             body=json.loads(self.rfile.read(length),object_pairs_hook=unique)
             if type(body) is not dict:raise ValueError('OBJECT_REQUIRED')
+            if self.path=='/api/secondary/check':
+                if not set(body)<= {'text','synthetic_only','mode','consent_external'} or not {'text','synthetic_only','mode'}<=set(body):raise ValueError('SECONDARY_CONTRACT_INVALID')
+                if body['mode']=='offline':
+                    if 'consent_external' in body:raise ValueError('UNNEEDED_EXTERNAL_CONSENT')
+                    return self.out(200,indicators(body['text'],synthetic_only=body['synthetic_only']))
+                if body['mode']=='jev':
+                    if set(body)!={'text','synthetic_only','mode','consent_external'}:raise ValueError('EXTERNAL_CONSENT_FIELD_REQUIRED')
+                    return self.out(200,self.server.jev_shadow.check(body['text'],synthetic_only=body['synthetic_only'],consent_external=body['consent_external']))
+                raise ValueError('UNKNOWN_SECONDARY_MODE')
             if self.path=='/api/start':
                 if body:raise ValueError('START_TAKES_NO_ARGS')
                 return self.out(200,self.server.arena.start())
@@ -69,6 +80,7 @@ class Handler(SecureHandler):
                 except (ValueError,TypeError,UnicodeError):return self.out(502,{'mode':'GENERATION_UNAVAILABLE','error':'INVALID_GENERATION_RESPONSE'})
             if self.path=='/api/evaluate':return self._infer_once(lambda: self.server.arena.evaluate(**body))
             return self.out(404,{'error':'NOT_FOUND'})
+        except SecondaryError as e:return self.out(e.status,{'error':e.code})
         except Conflict as e:return self.out(409,{'error':str(e)})
         except bridge.ContractError:return self.out(503,{'error':'EXECUTION_CONTRACT_UNAVAILABLE'})
         except (ValueError,TypeError,UnicodeError):return self.out(400,{'error':'INVALID_REQUEST'})
@@ -84,6 +96,7 @@ def main():
     arena=Arena(a.db,policy_id=a.policy,profile_id=v51.selected_profile(a.policy))
     with ThreadingHTTPServer(('127.0.0.1',a.port),Handler) as server:
         server.arena=arena
+        server.jev_shadow=JevShadow()
         print(f'http://127.0.0.1:{a.port} - SYNTHETIC ONLY / model identity UNATTESTED',flush=True)
         server.serve_forever()
 if __name__=='__main__':main()
