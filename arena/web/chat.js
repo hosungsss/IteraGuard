@@ -186,8 +186,8 @@
       fixture ? '통제 응답(FIXTURE) · 실제 Zoro 추론 아님' :
       '로컬 모델 응답(체크포인트 신원 미인증) + 독립 정책';
     append('user', '검토할 합성 메시지', data.text, '현재 메시지만 평가 · 원문 대화는 SQLite에 저장하지 않음');
-    const action = riskLabels[data.action] || '결과 확인 필요';
-    const kept = data.prior_pause ? '\n기존 위험 보류 이력은 유지됩니다.' : '';
+    const action = failed ? '분석 실패 · 판단 불가' : riskLabels[data.current_turn_action || data.action] || '결과 확인 필요';
+    const kept = data.prior_risk_unresolved ? '\n기존 위험 보류 이력은 유지됩니다.' : '';
     append('assistant', '현재 판단 및 다음 단계',
       action + '\n' + String(data.message || '판단 근거를 확인해 주세요.') +
       kept + '\n공식 경로로 직접 확인할 내용: ' + Number(data.task_count || 0) + '건',

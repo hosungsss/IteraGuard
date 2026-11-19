@@ -150,3 +150,15 @@ test('question text is rendered via textContent without HTML interpretation',()=
   assert.match(feed.textContent,/<img/);
   assert.equal(feed.children[0].children[1].children.length,0);
 });
+
+
+test('new pause is not mislabeled as a previous unresolved risk',()=>{
+  const a=app();a.decision({prior_pause:true,prior_risk_unresolved:false});
+  assert.doesNotMatch(a.get('conversationFeed').textContent,/기존 위험 보류 이력/);
+  a.decision({action:'ASK_HUMAN',current_turn_action:'NO_STRONG_SIGNAL',prior_risk_unresolved:true});
+  assert.match(a.get('conversationFeed').textContent,/기존 위험 보류 이력/);
+});
+test('failed inference is not displayed as a completed current judgment',()=>{
+  const a=app();a.decision({model_status:'FAILED',action:'ASK_HUMAN'});
+  assert.match(a.get('conversationFeed').textContent,/분석 실패 · 판단 불가/);
+});
