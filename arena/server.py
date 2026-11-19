@@ -40,7 +40,7 @@ class Handler(SecureHandler):
             try:return self.out(200,self.server.arena.read(parse_qs(u.query).get('session_id',[''])[0]))
             except Conflict as e:return self.out(404,{'error':str(e)})
             except ValueError:return self.out(400,{'error':'INVALID_REQUEST'})
-        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js'}
+        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js','/chat.js':'chat.js'}
         if u.path not in names:return self.out(404,{'error':'NOT_FOUND'})
         data=(Path(__file__).parent/'web'/names[u.path]).read_bytes()
         self.send_response(200);self.headers_safe('text/javascript; charset=utf-8' if u.path.endswith('.js') else 'text/css; charset=utf-8' if u.path.endswith('.css') else 'text/html; charset=utf-8')
