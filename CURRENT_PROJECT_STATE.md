@@ -112,3 +112,5 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 2026-11-20 KST · 제출용 A·B·C 로그 목록의 C 항목을 브라우저 재실행 기록으로 통일했다.
 
 2026-11-20 KST · 메인 신호등의 행동 선택지에 대상이 분명한 업무 자료 검토를 명시하고 기존 `check_content_or_link`를 ‘자료 확인’으로 표시한다. 확인용 15건 대조에서 회의 자료 전달은 회색에서 초록으로 바뀌었다. 기대 분류 허용 기준은 9/15건, 정확한 색상 일치는 5/15건에서 6/15건이었다. [사례별 대조](docs/SIGNAL_MATERIAL_REVIEW_20261120.json)
+
+2026-11-20 KST · README 맨 위에 공개 시연 링크, Zoro의 신호등과 원문 강조, PointerHead를 활용한 절차 조회 및 피해 사례·매뉴얼 조회 실험을 소개한다. [README](README.md)
