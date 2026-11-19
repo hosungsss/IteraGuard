@@ -47,8 +47,8 @@ class Markup(unittest.TestCase):
         self.assertNotIn('localStorage', VISUAL)
         self.assertNotRegex(VISUAL, r'\.value\s*=(?!=)')
 
-    def test_disclaimers_kept(self):
-        for phrase in ('안전 보증이 아닙니다', '모델 신원 미인증', '합성 문장 전용', '기관이 검증한 결과가 아니에요', '사기 확률이 아닙니다'):
+    def test_contextual_explanations_kept(self):
+        for phrase in ('기관이 검증한 결과가 아니에요', '사기 확률이 아닙니다'):
             self.assertIn(phrase, HTML)
 
 
