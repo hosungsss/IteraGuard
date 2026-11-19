@@ -324,3 +324,7 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 ## 2026-11-20 KST · README 공개 시연과 기술 소개
 
 - 기준 main `a4c9bc3`. [README](../README.md) 상단에 공개 시연 링크와 Zoro 선택형 판단, 원문 구절 강조, PointerHead의 회계 절차 조회와 사례·매뉴얼 조회 실험을 소개한다. 로컬 실행은 터미널 출력 주소를 안내한다.
+
+## 2026-11-20 KST · README 고정 검증 데이터 안내
+
+- 기준 main `6df35ed`. [README의 성능 평가](../README.md#검증-데이터-기반-성능-평가)에 고정 CSV의 검증 기준과 세 설정의 평가표를 모았다. 수치의 기준 실행은 기존 551건 재측정 기록을 따른다.
