@@ -246,3 +246,73 @@ body[data-flash="1"] .verdict{animation:arrive .7s cubic-bezier(.2,.8,.2,1)}
 body[data-model-connection="connected"] #coreCanvas{animation:zoro-connected-glow 3.2s ease-in-out infinite}
 body[data-model-connection="connected"] .core-label{color:#dce9ff;border-color:#91b5ff;box-shadow:0 0 14px #719aff33}
 @media(prefers-reduced-motion:reduce){body[data-model-connection="connected"] #coreCanvas{animation:none;filter:brightness(1.08)}}
+
+/* v5.9 guided incident conversation — in-memory, independent of risk decisions. */
+.guided-chat{
+  grid-column:1/-1;min-width:0;position:relative;overflow:hidden;padding:clamp(20px,3.2vw,34px);
+  border:1px solid rgba(151,183,226,.25);border-radius:27px;
+  background:linear-gradient(145deg,rgba(23,34,58,.78),rgba(9,17,32,.85) 62%,rgba(21,30,49,.77));
+  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+  box-shadow:0 26px 74px rgba(1,5,13,.28),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.guided-chat::before{content:"";position:absolute;pointer-events:none;width:400px;height:400px;top:-265px;right:-170px;border-radius:50%;background:radial-gradient(circle,rgba(121,152,247,.17),transparent 68%)}
+.conversation-heading{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:25px}
+.conversation-heading h2{font-size:clamp(22px,3vw,32px);line-height:1.35;letter-spacing:-.045em;margin:6px 0 8px;color:#f4f7ff}
+.conversation-heading .eyebrow{font-size:10px;letter-spacing:.15em;color:#9ab6ff;margin:0}
+.conversation-intro{max-width:65ch;font-size:13px;line-height:1.85;color:#bdc7dc;margin:0}
+.conversation-intro strong{color:#e9ebff}
+.conversation-pill{flex:none;align-self:flex-start;padding:9px 12px;border-radius:999px;font-weight:800;font-size:10px;letter-spacing:.09em;border:1px solid rgba(126,205,191,.28);background:rgba(74,136,123,.1);color:#a5e9d7}
+.conversation-workspace{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(295px,.85fr);gap:18px}
+.conversation-stream,.conversation-compose{min-width:0;border:1px solid rgba(154,174,221,.2);border-radius:18px;background:rgba(5,11,22,.46);overflow:hidden}
+.conversation-stream{display:flex;flex-direction:column}
+.conversation-stream-header{display:flex;align-items:center;gap:9px;min-height:52px;padding:13px 18px;border-bottom:1px solid rgba(157,184,219,.16);color:#e6edff;font-size:13px;font-weight:800}
+.conversation-stream-header small{margin-left:auto;color:#8e9bb5;font-size:10px;font-weight:500;text-align:right}
+.conversation-online{width:8px;height:8px;flex:none;border-radius:50%;background:#81e5be;box-shadow:0 0 0 4px rgba(129,229,190,.1)}
+.conversation-feed{display:flex;flex-direction:column;gap:17px;min-height:260px;max-height:500px;overflow:auto;overscroll-behavior:contain;padding:20px 19px;scrollbar-color:rgba(128,151,192,.45) transparent}
+.conversation-feed:empty::before{content:"원본 메시지를 판단하면 여기에 첫 결과와 후속 상담이 표시됩니다.";padding:30px 10px;margin:auto 0;text-align:center;color:#9eacc4;font-size:13px;line-height:1.8}
+.conversation-bubble{max-width:94%;width:fit-content;padding:15px 17px;border:1px solid rgba(152,173,210,.22);border-radius:16px 16px 16px 5px;background:linear-gradient(135deg,rgba(29,42,64,.85),rgba(19,30,49,.87));box-shadow:0 9px 22px rgba(0,0,0,.1)}
+.conversation-user{align-self:flex-end;border-radius:16px 16px 5px 16px;background:linear-gradient(130deg,rgba(68,76,124,.58),rgba(35,46,86,.69));border-color:rgba(131,152,236,.35)}
+.conversation-assistant{align-self:flex-start}
+.conversation-bubble-label{font-weight:800;font-size:11px;color:#b6caff;margin:0 0 8px}
+.conversation-user .conversation-bubble-label{color:#d6d5ff}
+.conversation-bubble-text{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font-size:13px;line-height:1.8;margin:0;color:#eaf0fb}
+.conversation-bubble-meta{font-size:10px;color:#a3b2c7;margin:12px 0 0;line-height:1.6}
+.conversation-steps{padding-left:22px;margin:12px 0 4px}
+.conversation-steps li{font-size:12px;line-height:1.75;color:#dbe4f3;margin:0 0 7px}
+.conversation-sources{margin:15px 0 0;font-size:11px;line-height:1.7;color:#a8c4e9}
+.conversation-sources a{color:#a9dfff;text-decoration:underline;text-underline-offset:3px;margin-right:10px}
+.conversation-sources a:hover{color:#e7f7ff}
+.conversation-notice{font-size:11px;line-height:1.7;padding:13px 18px;margin:0;color:#bdcbe1;border-top:1px solid rgba(154,174,221,.16);background:rgba(40,48,70,.13)}
+.conversation-compose{padding:22px}
+.conversation-eyebrow{color:#afc4ff;font-size:10px;letter-spacing:.17em;font-weight:800;margin:0 0 12px}
+.conversation-help{color:#aebed2;font-size:12px;line-height:1.8;margin:0 0 18px}
+.conversation-choices{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:23px}
+.conversation-choices button{min-height:39px;padding:8px 11px;margin:0;border:1px solid rgba(167,188,224,.27);background:rgba(27,41,64,.7);color:#e1eaf9;font-size:11px;font-weight:700;border-radius:10px}
+.conversation-choices button:hover:not(:disabled){background:rgba(74,100,166,.35);border-color:rgba(140,175,255,.6)}
+.conversation-choices button:disabled{opacity:.44}
+.conversation-compose .field-label{display:block;margin:0 0 10px;color:#dde8fa;font-size:12px;font-weight:750}
+#followupText{display:block;width:100%;min-height:84px;max-height:175px;resize:vertical;padding:13px 14px;color:#f1f6ff;background:rgba(5,12,23,.75);border:1px solid rgba(168,191,225,.36);border-radius:12px;font:inherit;font-size:12px;line-height:1.75}
+#followupText::placeholder{color:#9cacc3}
+.conversation-send-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+.conversation-send-row p{font-size:10px;max-width:185px;line-height:1.6;color:#9cabc0;margin:0}
+.conversation-submit{flex:none;padding:10px 17px;min-height:44px;border-radius:10px;white-space:nowrap;font-size:12px}
+.conversation-legal{border-top:1px solid rgba(160,184,220,.14);padding-top:13px;margin:18px 0 0;font-size:11px;line-height:1.8;color:#a3b5c9}
+.guided-chat button:focus-visible,.guided-chat textarea:focus-visible,.conversation-sources a:focus-visible{outline:3px solid #b9eaff;outline-offset:3px}
+@media(max-width:980px){
+  .conversation-workspace{grid-template-columns:1fr}
+  .conversation-feed{min-height:190px;max-height:470px}
+  .conversation-compose{padding:19px}
+}
+@media(max-width:640px){
+  .guided-chat{padding:18px 13px;border-radius:18px}
+  .conversation-heading{flex-direction:column;gap:12px;margin-bottom:17px}
+  .conversation-pill{font-size:9px}
+  .conversation-stream-header{flex-wrap:wrap}
+  .conversation-stream-header small{flex-basis:100%;margin-left:18px;text-align:left}
+  .conversation-feed{padding:16px 12px;gap:13px;max-height:380px}
+  .conversation-bubble{max-width:96%;padding:13px}
+  .conversation-send-row{flex-direction:column;align-items:stretch}
+  .conversation-send-row p{max-width:none}
+  .conversation-submit{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.conversation-feed{scroll-behavior:auto}}

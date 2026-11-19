@@ -12,6 +12,7 @@ from prototype.server import Handler as SecureHandler
 from .store import Arena,Conflict
 from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
+from .conversation import GuidanceError, guide
 from urllib.error import URLError
 
 class Handler(SecureHandler):
@@ -39,7 +40,7 @@ class Handler(SecureHandler):
             try:return self.out(200,self.server.arena.read(parse_qs(u.query).get('session_id',[''])[0]))
             except Conflict as e:return self.out(404,{'error':str(e)})
             except ValueError:return self.out(400,{'error':'INVALID_REQUEST'})
-        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js'}
+        names={'/':'index.html','/main.js':'main.js','/style.css':'style.css','/visual.js':'visual.js','/secondary.js':'secondary.js','/ambient3d.js':'ambient3d.js','/research.js':'research.js','/chat.js':'chat.js'}
         if u.path not in names:return self.out(404,{'error':'NOT_FOUND'})
         data=(Path(__file__).parent/'web'/names[u.path]).read_bytes()
         self.send_response(200);self.headers_safe('text/javascript; charset=utf-8' if u.path.endswith('.js') else 'text/css; charset=utf-8' if u.path.endswith('.css') else 'text/html; charset=utf-8')
@@ -67,6 +68,13 @@ class Handler(SecureHandler):
                     if set(body)!={'text','synthetic_only','mode','consent_external'}:raise ValueError('EXTERNAL_CONSENT_FIELD_REQUIRED')
                     return self.out(200,self.server.jev_shadow.check(body['text'],synthetic_only=body['synthetic_only'],consent_external=body['consent_external']))
                 raise ValueError('UNKNOWN_SECONDARY_MODE')
+            if self.path=='/api/conversation/followup':
+                if set(body)!={'session_id','version','scenario','synthetic_only'}:raise ValueError('FOLLOWUP_CONTRACT_FIELDS')
+                if type(body['session_id']) is not str:raise ValueError('INVALID_CONVERSATION_SESSION')
+                # This is not a model call, nor a state transition. A coherent
+                # saved snapshot/version is the only authority for the banner.
+                state=self.server.arena.read(body['session_id'])
+                return self.out(200,guide(state,**body))
             if self.path=='/api/start':
                 if body:raise ValueError('START_TAKES_NO_ARGS')
                 return self.out(200,self.server.arena.start())
@@ -80,6 +88,7 @@ class Handler(SecureHandler):
                 except (ValueError,TypeError,UnicodeError):return self.out(502,{'mode':'GENERATION_UNAVAILABLE','error':'INVALID_GENERATION_RESPONSE'})
             if self.path=='/api/evaluate':return self._infer_once(lambda: self.server.arena.evaluate(**body))
             return self.out(404,{'error':'NOT_FOUND'})
+        except GuidanceError as e:return self.out(e.status,{'error':e.code})
         except SecondaryError as e:return self.out(e.status,{'error':e.code})
         except Conflict as e:return self.out(409,{'error':str(e)})
         except bridge.ContractError:return self.out(503,{'error':'EXECUTION_CONTRACT_UNAVAILABLE'})
