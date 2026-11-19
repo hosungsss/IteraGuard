@@ -96,3 +96,8 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 ## 회계팀 확인 절차 카드 · 2026-11-20 KST
 
 소스 기준 `f7654eb`의 기존 신호등 화면에서 회계성 요청에 조로가 고른 절차를 표시한다. 신호등·요청 행동과 절차 조회는 각각 평가하고, 절차가 보류되거나 실패해도 기존 결과를 반환한다. 로컬 조로와 브라우저에서 FIN-01·FIN-02의 구분을 확인했다. 등록 계좌 `000-0000-0000`은 가상 예시다.
+
+
+## PointerHead를 활용한 조회 확장 구상 · 2026-11-20 KST
+
+회계 확인 절차가 적용된 main 00bc93b를 기준으로, 위험 등급·공개 사례 ID·사내 매뉴얼 ID를 한 요청에서 함께 읽는 구조를 [README](README.md#확장-아이디어--pointerhead를-검색-엔진으로-활용)에 기록했다. 합성 요청 한 건에서 세 응답을 확인했다.
