@@ -163,3 +163,8 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 ## 2026-11-20 KST · 신호등 고감도 교차 확인
 
 `/api/signal`과 `/api/signal/benchmark`의 기본으로 `high-recall`을 선택한다. 기존 문맥 보정 뒤 초록·회색에서만 고위험 행동과 빨강·주황 합을 확인한다. 정상 탐지율은 정상 라벨 중 경보가 없는 초록·회색의 비율로 표시한다. 앞선 고정 CSV의 실제 조로 실행과 집계 기준은 [성능검증 기록](docs/SIGNAL_BENCHMARK_UI_20261120.md)에 있다. 이전 질문을 비교할 때는 `--signal-profile baseline`으로 실행한다. 변경을 되돌릴 때는 해당 커밋을 되돌린다.
+
+
+## 2026-11-20 KST · README 현행화
+
+`main` `d283fad` 기준으로 첫 화면의 신호등·원문 강조, 상세 Arena 및 551건 재측정 흐름을 정리했다. 기존 질문·고감도 질문·교차 확인의 탐지율과 정상 경보의 변화를 [README](README.md)에 반영했다. 로컬 모델 설정과 CSV 재현 절차를 담았다.

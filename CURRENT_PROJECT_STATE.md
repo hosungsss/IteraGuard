@@ -1,4 +1,8 @@
-# IteraGuard — Current project state (2026-11-19 KST)
+# IteraGuard — Current project state (2026-11-20 KST)
+
+기준 `main` `d283fad`. 메인 `/`는 `high-recall` 신호등, 요청 행동, 원문 구절 강조 및 551건 성능검증을 제공합니다. `/arena`는 별도의 확인 업무·세션 경로입니다. 실제 로컬 Zoro 재측정 결과는 피싱 탐지율 84.0% (42/50), 정상 탐지율 84.8% (425/501)입니다. 버전과 실행 방법은 [README](README.md), 실측과 범위는 [성능검증 기록](docs/SIGNAL_BENCHMARK_UI_20261120.md)에 있습니다.
+
+## 이전 작업 기록
 
 Bounded client recovery candidate: transient transport retry with saved-state reconciliation, exact request identity reuse, max two retries, visible recovery status. No semantic policy correction, automatic model startup, auth bypass, or hosted deployment. See docs/AUTO_RECOVERY_KO.md.
 
