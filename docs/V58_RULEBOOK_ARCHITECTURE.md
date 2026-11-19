@@ -41,3 +41,7 @@ No payment, refund, credential collection, SMS, banking change, account freeze o
 
 ## Rollback
 Rulebook can be unused or reverted without replacing existing Arena. Restore database snapshots separately; do not wipe open tasks.
+
+
+### Arbitrary local domain configuration in CLI
+The CLI supports --book-file path/to/approved_local_book.json, bounded to 64 KiB and strict JSON duplicate-key/nonfinite rejection. New industry models require a matching typed answer JSON and an independent validation plan. The two presets are templates only; introducing custom questions without checking semantic equivalence and customer harm cannot justify an effectiveness claim. The CLI is not a live model adapter or an authorized executor.
