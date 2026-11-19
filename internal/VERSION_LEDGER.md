@@ -224,3 +224,6 @@ Verification evidence: CI and main read-back after merge, not guessed; full brow
 
 ## 2026-11-19 · 메인 결과 내 조로 신호등
 기준 main 636f56b. 메인 판단 버튼에서 기존 Arena 평가 뒤 단일 문항 신호등 요청을 실행합니다. 신호등·근거·다음 행동을 같은 결과 카드에서 볼 수 있습니다. 기존 판단 정책과 저장소 스키마는 그대로입니다.
+
+## 2026-11-20 · 메인 결과를 신호등과 요청 행동으로 간소화
+기준 main 20652f0. signal.html과 signal.js가 메인 폼을 담당합니다. 사용자가 준 q_action.json을 configs/zoro_action_choices.json으로 가져와 행동 후보 20개를 사용합니다. 정확한 원문과 q_action, q_signal만 로컬 Zoro 요청에 담고, 등급과 행동의 응답을 동일 카드에 표시합니다. 독립 정확도 평가는 미검증입니다.

@@ -33,3 +33,73 @@ test('timeout warns to read saved state before retrying',async()=>{
   await assert.rejects(vm.runInContext("api('/api/evaluate', {})",context),/저장 상태를 먼저/);
   assert.ok(cleared);
 });
+
+function bootSignalHome(fetch) {
+  const elements = Object.fromEntries([
+    'signalForm', 'text', 'run', 'inlineSignal', 'inlineSignalGrade', 'inlineRequestedAction',
+    'signalStatus', 'charCount', 'sampleNotice'
+  ].map(id => {
+    const listeners = {};
+    return [id, {
+      textContent: '', value: '', hidden: id === 'inlineSignal', disabled: false, dataset: {},
+      addEventListener(type, callback) { listeners[type] = callback; },
+      setAttribute() {}, removeAttribute() {}, focus() {},
+      trigger(type) { return (listeners[type] || this['on' + type])?.({preventDefault() {}}); }
+    }];
+  }));
+  const document = {
+    body: {dataset: {}},
+    getElementById: id => elements[id]
+  };
+  const context = vm.createContext({document, fetch, AbortController, setTimeout, clearTimeout});
+  const code = fs.readFileSync(path.join(root, 'arena/web/signal.js'), 'utf8');
+  vm.runInContext(code, context);
+  return elements;
+}
+
+function signalReply(status, body) {
+  return {
+    ok: status === 200, status,
+    headers: {get: () => 'application/json'},
+    json: async () => body
+  };
+}
+
+test('the home form sends one request and shows its grade and requested action', async () => {
+  const requests = [];
+  const ui = bootSignalHome(async (url, config) => {
+    requests.push([url, config.method, JSON.parse(config.body)]);
+    return signalReply(200, {
+      grade: 'red',
+      requested_action: {id: 'share_auth_secret', label: '비밀번호·인증번호 알려주기'}
+    });
+  });
+  assert.deepEqual(requests, []);
+  const original = ' 가상 문자\n인증번호를 알려주세요. ';
+  ui.text.value = original;
+  ui.text.trigger('input');
+  await ui.signalForm.trigger('submit');
+  assert.deepEqual(requests, [['/api/signal', 'POST', {text: original, synthetic_only: true}]]);
+  assert.equal(ui.inlineSignal.hidden, false);
+  assert.equal(ui.inlineSignal.dataset.grade, 'red');
+  assert.match(ui.inlineSignalGrade.textContent, /빨강/);
+  assert.equal(ui.inlineRequestedAction.textContent, '비밀번호·인증번호 알려주기');
+  ui.text.value = '다음 가상 문자';
+  ui.text.trigger('input');
+  assert.equal(ui.inlineSignal.hidden, true);
+});
+
+test('a failed signal request cannot leave the previous result visible', async () => {
+  let response = signalReply(200, {
+    grade: 'green',
+    requested_action: {id: 'none', label: '요청 없음'}
+  });
+  const ui = bootSignalHome(async () => response);
+  ui.text.value = '가상 일반 안내';
+  await ui.signalForm.trigger('submit');
+  assert.match(ui.inlineSignalGrade.textContent, /초록/);
+  response = signalReply(503, {error: 'SIGNAL_MODEL_UNAVAILABLE'});
+  await ui.signalForm.trigger('submit');
+  assert.ok(ui.inlineSignal.hidden || !ui.inlineSignalGrade.textContent.includes('초록'));
+  assert.equal(ui.run.disabled, false);
+});
