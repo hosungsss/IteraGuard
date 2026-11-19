@@ -214,8 +214,9 @@ body[data-flash="1"] .verdict{animation:arrive .7s cubic-bezier(.2,.8,.2,1)}
 
 /* V5.9 additive visual depth: atmospheric projected 3D, never on top of controls. */
 .ambient-3d{position:fixed;inset:0;display:block;z-index:0;pointer-events:none;opacity:.64;filter:blur(2.6px);mix-blend-mode:screen;transform:translateZ(0)}
-.topbar,.runtime-notices,main,.sheet,.scrim{position:relative;z-index:1}
-.sheet{z-index:11}.scrim{z-index:10}
+/* Preserve existing sticky header and fixed modal layering. */
+.topbar,.runtime-notices,main{z-index:1}
+.topbar{z-index:20}.sheet{z-index:31}.scrim{z-index:30}
 .reference-panel,.secondary-lab{margin:23px 0 30px;padding:clamp(20px,3vw,30px);border:1px solid rgba(174,194,226,.17);border-radius:22px}
 .reference-panel h2,.secondary-lab h2{font-size:clamp(19px,2.6vw,26px)}
 .reference-list{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 11px}
