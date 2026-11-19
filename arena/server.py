@@ -13,7 +13,7 @@ from .store import Arena,Conflict
 from .generation_client import compare
 from .secondary import JevShadow, SecondaryError, capabilities, indicators
 from .conversation import GuidanceError, guide
-from .signal import evaluate_signal
+from .signal import PROFILES, evaluate_signal
 from .link_review import LinkReviewer
 from urllib.error import URLError
 
@@ -72,7 +72,8 @@ class Handler(SecureHandler):
                 if set(body)!={'text','synthetic_only'} or body['synthetic_only'] is not True:
                     return self.out(400,{'error':'SYNTHETIC_ONLY_REQUIRED'})
                 try:
-                    return self._infer_once(lambda: evaluate_signal(self.server.arena.client,body['text']))
+                    profile = getattr(self.server, 'signal_profile', 'baseline')
+                    return self._infer_once(lambda: evaluate_signal(self.server.arena.client, body['text'], profile=profile))
                 except (bridge.ModelUnavailable,bridge.ContractError):
                     return self.out(503,{'error':'SIGNAL_MODEL_UNAVAILABLE'})
             if self.path=='/api/secondary/check':
@@ -116,11 +117,14 @@ def main():
     if not sys.flags.utf8_mode:
         os.execv(sys.executable,[sys.executable,'-X','utf8','-m','arena.server',*sys.argv[1:]])
     p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8769);p.add_argument('--db',default='runs/arena.sqlite3')
-    p.add_argument('--policy',choices=['legacy','dra'],default='legacy');a=p.parse_args()
+    p.add_argument('--policy',choices=['legacy','dra'],default='legacy')
+    p.add_argument('--signal-profile', choices=PROFILES, default='baseline')
+    a=p.parse_args()
     from integration import v51
     arena=Arena(a.db,policy_id=a.policy,profile_id=v51.selected_profile(a.policy))
     with ThreadingHTTPServer(('127.0.0.1',a.port),Handler) as server:
         server.arena=arena
+        server.signal_profile=a.signal_profile
         server.jev_shadow=JevShadow()
         server.link_reviewer=LinkReviewer()
         print(f'http://127.0.0.1:{a.port} - SYNTHETIC ONLY / model identity UNATTESTED',flush=True)

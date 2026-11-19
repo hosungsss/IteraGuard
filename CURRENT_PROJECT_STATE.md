@@ -75,3 +75,6 @@ Actual provider credentials, actual Zoro checkpoint/head, hardware inference, pr
 
 
 2026-11-20 KST · 문자 신호등 결과 카드에 네 색의 Zoro 선택 점수를 표시하고, 메인 성능검증에서 551건의 저장 결과와 원본 CSV 지문 확인을 제공한다. 증거와 테스트는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 있다.
+
+
+2026-11-20 KST | Signal prompt comparison on 1af8d50. Server-selected baseline, short and verify profiles, identical two-question output contract. New paired local evaluator checks pinned valid/test CSVs and authored counterexamples; validation-only score threshold is offline. Local Python 431/431 across default and supplemental runs, Node 143/143, 2538 controlled HTTP calls. Baseline is still the default. Real candidate inference NOT_RUN (no configured model here). Reproduction and rollback: docs/SIGNAL_PAIRED_EVALUATION_KO.md.

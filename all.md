@@ -14,3 +14,6 @@
 
 
 2026-11-20 KST | Integrated audit candidate from 7f48096 with main 695afc8 (PR #29). Two typed questions now use four internal review perspectives. Existing response keys, choice IDs, context reconciliation and score provenance retained. Separate optional link observations and explicit follow-up self-reports. Requirements, counterexamples, settings and rollback: docs/SIGNAL_REVIEW_PERSPECTIVES_KO.md. Live checkpoint effect, comprehension and provider quality unmeasured.
+
+
+2026-11-20 KST | Signal prompt comparison on 1af8d50. Server-selected baseline, short and verify profiles, identical two-question output contract. New paired local evaluator checks pinned valid/test CSVs and authored counterexamples; validation-only score threshold is offline. Local Python 431/431 across default and supplemental runs, Node 143/143, 2538 controlled HTTP calls. Baseline is still the default. Real candidate inference NOT_RUN (no configured model here). Reproduction and rollback: docs/SIGNAL_PAIRED_EVALUATION_KO.md.

@@ -247,3 +247,6 @@ Local integration verification: Python 424 passed, 2 skipped / 426; Node 138/138
 
 ## 2026-11-20 KST · 신호등 네 색 선택 점수와 성능검증
 기준 main 0f2aeaa. 기존 조로 응답의 네 선택 점수를 막대와 퍼센트로 표시하고, 551건의 저장 성적과 원본 CSV 지문 검증을 추가했다. 모델·정책·계약 버전은 유지한다. 로컬 Python 424 통과·2 건너뜀, Node 143 통과. 로컬 브라우저에서 실제 모델 결과와 측정 표를 확인했다. 증거와 실행 범위는 docs/SIGNAL_BENCHMARK_UI_20261120.md에 있다.
+
+
+2026-11-20 KST | Signal prompt comparison on 1af8d50. Server-selected baseline, short and verify profiles, identical two-question output contract. New paired local evaluator checks pinned valid/test CSVs and authored counterexamples; validation-only score threshold is offline. Local Python 431/431 across default and supplemental runs, Node 143/143, 2538 controlled HTTP calls. Baseline is still the default. Real candidate inference NOT_RUN (no configured model here). Reproduction and rollback: docs/SIGNAL_PAIRED_EVALUATION_KO.md.
